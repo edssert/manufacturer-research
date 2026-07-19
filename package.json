@@ -1,0 +1,12 @@
+{
+  "name": "manufacturer-research",
+  "version": "1.8.0",
+  "private": true,
+  "description": "L-Acoustics · d&b audiotechnik · Meyer Sound 스피커/앰프/DSP/소프트웨어 사양 비교 및 앰프 매칭 리서치 도구",
+  "scripts": {
+    "test": "node public/tests/amp.test.mjs && node public/tests/class-audit.mjs && node public/tests/smoke.test.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  }
+}

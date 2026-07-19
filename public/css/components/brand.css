@@ -1,0 +1,541 @@
+/* ============================================================
+   brand.css — 브랜드 탭 (카드가 아닌 전체 폭 스택 페이지) + 연혁 타임라인
+   BEM 블록: .brand-list, .brand-page, .timeline
+   마크업 생성: js/domains/brand/brand.view.js
+   --mfr 변수: 브랜드 색상이 섹션별 인라인으로 주입됨
+   ============================================================ */
+
+/* ---------- 블록: brand-switch (브랜드 전환 셀렉터) ----------
+   [사용자 요청] 브랜드를 전부 나열하지 않고 한 번에 하나만 보여주며,
+   전환 UI 는 박스(버튼 배경/테두리) 없이 텍스트 + 하단 언더라인만
+   쓰는 깔끔한 형태로 — 상단 도메인 탭(nav.css .topnav__tab)과 같은
+   시각 언어를 재사용한다. */
+.brand-switch {
+  display: flex;
+  gap: 28px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 32px;
+}
+.brand-switch__tab {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  letter-spacing: .02em;
+  padding: 4px 0 14px;
+  cursor: pointer;
+  transition: color .15s;
+}
+.brand-switch__tab:hover { color: var(--ink-2); }
+.brand-switch__tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.brand-switch__tab--active { color: var(--mfr, var(--ink)); }
+.brand-switch__tab--active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 2px;
+  background: var(--mfr, var(--accent));
+  border-radius: 2px 2px 0 0;
+}
+
+/* ---------- 블록: brand-switch__actions (우측 버튼 그룹 래퍼) ----------
+   [버그 수정] sort-btn 이 hidden↔visible 로 전환될 때마다 "margin-left:auto
+   를 어느 버튼이 갖는지"에 따라 두 버튼의 오른쪽 정렬이 흔들리는 문제가
+   있었다(비교 모드 진입 시 sort-btn 이 나타나면서 정렬 기준이 바뀜) —
+   sort-btn/compare-btn 을 별도 래퍼로 묶고, 이 래퍼 하나에만
+   margin-left:auto 를 줘서 내부에 버튼이 몇 개든(1개든 2개든) 항상 그룹
+   전체가 오른쪽 끝에 고정되도록 한다. */
+.brand-switch__actions {
+  margin-left: auto;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------- 블록: brand-switch__sort-btn (비교 다이어그램 연도 축 방향 토글) ----------
+   [사용자 요청] 비교 모드의 연도 축을 "과거→최근"(기본) 또는 "최근→과거"로
+   전환하는 버튼. 비교 버튼 바로 왼쪽에 둔다 — 비교 버튼처럼 "모드 전환"
+   성격이라 같은 텍스트+테두리 스타일을 공유하되, 상시 강조되는 비교
+   버튼과 구분되도록 활성(강조) 색상은 쓰지 않는다(항상 중립 톤). */
+.brand-switch__sort-btn {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-2);
+  font-family: var(--sans);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+.brand-switch__sort-btn:hover { color: var(--ink); border-color: var(--ink-2); }
+.brand-switch__sort-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- 블록: brand-switch__compare-btn (비교 모드 토글) ----------
+   [사용자 요청] 브랜드 최대 3개를 골라 연혁을 나란히 비교하는 기능의
+   진입점. 기존 브랜드 탭들과 같은 줄, 맨 오른쪽에 배치하고 활성화 시
+   테두리+배경으로 확실히 구분되게 한다(탭들과 달리 "모드 전환" 성격이라
+   언더라인만으론 상태가 잘 안 보여 별도 스타일 사용). */
+.brand-switch__compare-btn {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-2);
+  font-family: var(--sans);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.brand-switch__compare-btn:hover { color: var(--ink); border-color: var(--ink-2); }
+.brand-switch__compare-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.brand-switch__compare-btn--active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+/* ---------- 블록: brand-compare-picker (비교할 브랜드 선택 체크박스) ----------
+   [버그 수정] .brand-compare-picker{display:flex} 는 [hidden]{display:none}
+   보다 명시도가 높아, JS 에서 picker.hidden=true 를 줘도 실제로는 계속
+   display:flex 로 보여 비교 모드를 꺼도 체크박스 목록이 사라지지 않았다
+   — hidden 속성이 있을 때는 반드시 display:none 이 이기도록 명시적으로
+   못박는다. */
+.brand-compare-picker {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: -14px 0 28px;
+}
+.brand-compare-picker[hidden] { display: none; }
+.brand-compare-picker__item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.brand-compare-picker__item input[type="checkbox"] {
+  accent-color: var(--mfr, var(--accent));
+  width: 15px; height: 15px;
+  cursor: pointer;
+}
+.brand-compare-picker__item--disabled { opacity: .4; cursor: not-allowed; }
+.brand-compare-picker__item--disabled input { cursor: not-allowed; }
+
+/* [사용자 요청, 최종 방식] 브랜드마다 연혁(timeline) 항목 수가 달라
+   (L-Acoustics 9개, d&b 7개, Meyer Sound 5개) 브랜드 전환 시 페이지 높이가
+   들쭉날쭉해 하단 app-footer 위치가 흔들려 보였다 — min-height 추정치로
+   맞춰보려 했으나(620px→900px) 브랜드별 텍스트 줄바꿈까지 감안한 정확한
+   값을 CSS 만으로 알 수 없어 부정확했다. 대신 footer 를 뷰포트 최하단에
+   고정하는 sticky footer 패턴으로 전환(css/base.css body 의 flex 레이아웃
+   참고) — 콘텐츠가 짧으면 footer 가 항상 뷰포트 바닥에 붙어 있어 브랜드를
+   바꿔도 "움직이는" 것처럼 보이지 않는다(콘텐츠가 뷰포트보다 길면 기존과
+   동일하게 콘텐츠 바로 아래에 위치). */
+
+/* ---------- 블록: brand-page (선택된 브랜드 1개의 전체 섹션) ---------- */
+.brand-page { padding: 8px 0 44px; }
+
+.brand-page__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.brand-page__logo {
+  height: 44px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  flex: none;
+}
+.brand-page__title { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.brand-page__eyebrow {
+  font-size: var(--fs-xs);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--mfr, var(--muted));
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.brand-page__dot { width: 8px; height: 8px; border-radius: 2px; background: var(--mfr, var(--muted)); flex: none; }
+.brand-page__name {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  line-height: 1.1;
+  margin: 0;
+  overflow-wrap: break-word; /* [레이아웃 안정성] 긴 브랜드명 강제 개행 허용 */
+}
+.brand-page__meta { font-size: var(--fs-md); color: var(--ink-2); display: flex; gap: 16px; flex-wrap: wrap; }
+.brand-page__meta span { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.brand-page__meta b { color: var(--ink); font-weight: 700; }
+
+/* 본문: 좌(연혁 타임라인) / 우(개요+주요 제품) 2열 */
+.brand-page__body {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .brand-page__body { grid-template-columns: 1fr; }
+}
+
+/* ---------- 블록: brand-page__history-head (History 라벨 + 정렬 토글) ----------
+   [사용자 요청] 비교 모드처럼 일반 브랜드 페이지의 연혁도 과거순/최신순을
+   선택할 수 있어야 한다 — section-label(History) 옆에 작은 토글 버튼을
+   둔다. section-label 자체의 margin-bottom(10px)을 이 래퍼가 대신
+   가지므로 라벨 자신의 margin 은 0으로 상쇄한다. */
+.brand-page__history-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.brand-page__history-head .section-label { margin-bottom: 0; }
+.brand-page__sort-btn {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-2);
+  font-family: var(--sans);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+.brand-page__sort-btn:hover { color: var(--ink); border-color: var(--ink-2); }
+.brand-page__sort-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.brand-page__notes { font-size: 14px; line-height: 1.7; color: var(--ink-2); }
+.brand-page__notable { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+.brand-page__notable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: var(--fs-md);
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+.brand-page__notable-item::before {
+  content: "";
+  flex: none;
+  width: 6px; height: 6px;
+  border-radius: 1px;
+  background: var(--mfr, var(--accent));
+  margin-top: 6px;
+}
+
+/* ---------- 블록: timeline (점-선 연결 세로 타임라인) ---------- */
+/* [버그 수정, 근본 원인] absolute 요소의 left 는 가장 가까운 positioned
+   조상의 "패딩 포함 박스(border box)" 기준이다. .timeline 이
+   position:relative + padding-left 를 가지면, .timeline::before 의
+   left:0 은 패딩이 시작되기 전(.timeline 테두리 맨 왼쪽)이다. 반면 그
+   자식(.timeline__item, .timeline__year--dot)은 일반 흐름 요소라 부모의
+   padding 적용을 그대로 받아 padding-left 만큼 오른쪽으로 밀려서
+   시작한다 — 즉 "left:0"이라는 같은 이름이 실제로는 서로 다른 화면
+   좌표를 가리켰던 것이 세로선-원이 계속 어긋난 원인이었다.
+   [해결, 단순화] 원과 텍스트 위치를 각각 따로 계산하는 대신, "원(과
+   세로선)의 중심 좌표"(--dot-center)를 딱 하나만 선언하고 세로선/원 모두
+   이 값만 참조하게 만든다. 텍스트 시작점(padding-left)은 --dot-center 와
+   무관하게 "원 오른쪽 가장자리 + 여백"으로 별도 계산하므로, 텍스트 간격을
+   조정해도 원-선 정렬에는 전혀 영향을 주지 않는다. */
+.timeline {
+  --dot-d: 9px; /* 원 지름 */
+  --dot-center: 6px; /* 원(과 세로선)의 중심 위치 — .timeline 왼쪽 끝부터 */
+  /* [사용자 요청] 연도·설명 텍스트가 원과 너무 붙어 보인다 — 텍스트
+     시작점(padding-left)을 원 중심(--dot-center)보다 더 오른쪽으로 밀어
+     원과 텍스트 사이에 확실한 간격(--text-gap)을 둔다. */
+  --text-gap: 20px; /* 원 오른쪽 가장자리 ~ 텍스트 시작 사이 여백 */
+  position: relative;
+  padding-left: calc(var(--dot-center) + var(--dot-d) / 2 + var(--text-gap));
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: var(--dot-center); top: var(--line-top, 0px);
+  width: 2px;
+  height: var(--line-h, 0px);
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, var(--mfr, var(--accent)) 0%, var(--line-2) 100%);
+}
+/* [버그 수정] bottom:6px 고정값은 마지막 항목 텍스트 길이가 가변이라
+   마지막 원 아래로 계속 삐져나왔고, 이를 사각형으로 덮어 가리려던 시도는
+   그 사각형이 텍스트 영역과 겹쳐 글자를 가리는 문제로 이어졌다 — bottom
+   고정값 대신 height 를 자바스크립트(js/domains/brand/brand.controller.js
+   sizeTimelineLines)가 "첫 원 중심 ~ 마지막 원 중심" 실제 픽셀 거리로
+   계산해 --line-h CSS 변수로 지정한다(각 원의 정확한 세로 위치는 텍스트
+   줄바꿈에 따라 달라지므로 순수 CSS로는 계산 불가). */
+/* [사용자 요청] 원-원 사이 세로 간격이 설명 줄 수에 따라 달라지지 않고
+   항상 "1줄 설명 기준 간격"으로 동일해야 한다 — padding-bottom 고정값은
+   "텍스트 블록 끝 이후의 여백"이라 2줄이면 그만큼 항목 전체 높이가 커져
+   원 간격도 함께 늘어나는 문제가 있었다. 대신 항목 자체의 최소 높이를
+   자바스크립트(sizeTimelineLines)가 "1줄 항목의 실제 렌더 높이"를 실측해
+   --item-min-h 로 모든 항목에 동일하게 강제한다 — 2줄 항목은 이 최소
+   높이보다 실제 콘텐츠가 커도 넘치는 부분은 자연스럽게 보이도록 둔다. */
+.timeline__item { position: relative; min-height: var(--item-min-h, 0px); }
+.timeline__item:last-child { min-height: 0; }
+/* [버그 수정] 원(::before)이 "연도 줄(.timeline__year)의 세로 정중앙"에
+   오도록, 항목 전체가 아니라 .timeline__year 자신에 붙인다 — top:50%+
+   translateY(-50%) 로 그 줄의 실제 렌더 높이(폰트·line-height 변화에도
+   항상 정확)를 기준으로 삼는다. sizeTimelineLines() 도 이 기준(연도 줄의
+   세로 중앙)으로 실측해야 세로선과 원이 항상 일치한다. */
+.timeline__year--dot {
+  position: relative;
+}
+.timeline__year--dot::before {
+  content: "";
+  position: absolute;
+  /* .timeline__year--dot 은 .timeline 의 padding-left 안쪽에 있는 자식
+     이므로 이 요소 기준 left:0 은 .timeline 좌표계로 "padding-left 지점"
+     과 같다. 원의 중심은 padding-left 지점이 아니라 --dot-center 지점에
+     있어야 하므로, 그 차이(= 원 반지름 + 텍스트 여백, 부호 반대)만큼
+     왼쪽으로 당긴다. */
+  left: calc(-1 * (var(--dot-d) / 2 + var(--text-gap)));
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--dot-d); height: var(--dot-d);
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--mfr, var(--accent));
+}
+.timeline__year {
+  font-size: var(--fs-md);
+  font-weight: 800;
+  color: var(--mfr, var(--accent));
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .02em;
+  margin-bottom: 3px;
+}
+.timeline__event { font-size: var(--fs-md); color: var(--ink-2); line-height: 1.55; }
+/* [사용자 요청] 연혁 이벤트 텍스트가 길어 줄바꿈이 필요할 때, 콤마로 나뉜
+   사건 하나하나(js/domains/brand/brand.view.js eventHTML())가 쪼개지지
+   않고 통째로 다음 줄로 넘어가도록 한다.
+   [버그 수정] white-space:nowrap 은 일반 브랜드 페이지(폭 넓음)에서는
+   문제없었지만, 브랜드 비교 모드(.brand-compare__label-text, 컬럼 폭이
+   좁고 브랜드 선택 수에 따라 더 좁아짐)에서는 조각 하나("John & Helen
+   Meyer가 캘리포니아 San Leandro에서 창업(2월 13일),")가 컬럼 폭보다
+   길면 nowrap 이 그 조각의 내부 줄바꿈까지 막아버려, 조각 전체가 옆
+   컬럼을 침범해 넘쳐버렸다. 원하는 동작은 "조각과 조각 사이에서는 항상
+   끊기되, 조각 자체가 폭보다 길면 그 조각 내부에서는 자연스럽게 줄바꿈
+   되는" 것 — display:inline-block 으로 바꾸면 각 조각이 하나의 박스로
+   취급되어(옆 조각과 절대 안 섞임, 박스째로 다음 줄에 안 들어가면 박스
+   전체가 넘어감) 조각 경계는 그대로 지키면서, max-width:100% 로 박스
+   자신이 부모보다 커지지 않게 제한해 내부 텍스트는 일반적인 word-wrap
+   (기본값 white-space:normal)이 그대로 적용되도록 한다. */
+.brand-event-part {
+  display: inline-block;
+  vertical-align: top;
+}
+/* [사용자 요청] 괄호로 묶인 부분(예: "(2월 13일)")은 그 앞 단어와 줄이
+   갈라지는 건 괜찮지만, 괄호 안 내용 자체는 중간에서 끊기면 안 된다 —
+   콤마 조각(.brand-event-part)과 별개로 한 번 더 최소 단위로 감싼다.
+   괄호 안은 보통 짧아 폭 초과 걱정이 적으므로 순수 nowrap 이면 충분하다. */
+.brand-event-parens { white-space: nowrap; }
+
+/* ---------- 블록: brand-compare (연도 축 기반 비교 다이어그램) ----------
+   [사용자 요청] 브랜드 최대 3개를 골라 연혁을 "실제 연도에 비례한 세로
+   위치"로 나란히 비교. 좌측에 공통 연도 눈금, 우측에 브랜드별 컬럼(cols)을
+   두고, 컬럼 내부의 각 점(point)은 브랜드마다 다른 X 위치가 아니라 전부
+   같은 세로 스케일을 공유하는 절대(top:%) 위치로 찍는다 — 그래야 "어느
+   브랜드가 더 일찍 설립됐는지"가 원의 높이만 봐도 바로 비교된다. top%
+   계산은 js/domains/brand/brand.view.js compareHTML()의 yearToPct() 가 담당.
+
+   [구조, 전면 재설계] 예전엔 axis(좌측 눈금 숫자)/gridlines(가로 점선)를
+   서로 다른 DOM 레이어로 나눠 같은 top% 를 각자 계산해 그렸다 — 레이어마다
+   부모의 padding/border, 소수점 반올림이 미묘하게 달라 픽셀 단위로 어긋나는
+   근본 문제가 있었다. 지금은 "가로선 하나 = DOM 요소 하나"로 통합한다:
+   .brand-compare__rules 안에 .brand-compare__rule 을 연도 눈금 개수만큼
+   두고, 그 한 요소 안에서 왼쪽 연도 숫자(::before, --y 로 내용 주입)와
+   오른쪽 점선(border-top)을 함께 그린다. 같은 요소이므로 숫자와 선의 top
+   좌표가 어긋날 수 없다. 이 레이어는 .brand-compare 전체 폭(left:0;
+   right:0)을 가로지르며, 컬럼 트랙은 padding-left 로 눈금 폭만큼 밀려있다. */
+.brand-compare {
+  --compare-head-h: 44px; /* 컬럼 헤더(브랜드명 줄) 고정 높이 — 브랜드 추가/개명에도 안정적 */
+  --compare-axis-w: 56px; /* 좌측 연도 눈금 폭 */
+  position: relative;
+  min-height: calc(var(--compare-head-h) + var(--compare-track-h, 1400px));
+}
+
+.brand-compare__empty { padding: 40px 0; }
+
+/* 가로선 레이어: 전체 폭(0~100%)을 가로지르는 하나의 좌표계.
+   top:var(--compare-head-h) 에서 시작해 height:var(--compare-track-h) 만큼
+   차지 — 컬럼 트랙(.brand-compare__cols)과 정확히 같은 오프셋/높이를 쓴다. */
+.brand-compare__rules {
+  position: absolute;
+  left: 0; right: 0; top: var(--compare-head-h);
+  height: var(--compare-track-h, 1400px);
+  z-index: 0;
+}
+.brand-compare__rule {
+  position: absolute;
+  left: 0; right: 0;
+  transform: translateY(-50%);
+  padding-left: var(--compare-axis-w);
+  border-top: 1px dashed var(--line);
+}
+.brand-compare__rule::before {
+  content: attr(data-year);
+  position: absolute;
+  left: 0; top: -1px;
+  /* [사용자 요청] 좌측 축 연도 숫자가 가로 점선과 겹쳐 보인다 — 컬럼 안의
+     원(dot)은 작은 도형이라 선과 중앙 정렬돼도 자연스럽지만, 텍스트는
+     글자 자체가 선을 가로질러 보여 가독성이 떨어진다. 숫자를 선 위로
+     4px 띄운다(선의 세로 중앙 대신 선 바로 위에 앉힌다). */
+  transform: translateY(calc(-100% - 4px));
+  width: calc(var(--compare-axis-w) - 18px);
+  text-align: right;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.brand-compare__cols {
+  position: relative;
+  z-index: 1;
+  padding-left: var(--compare-axis-w);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 0 24px;
+}
+
+.brand-compare__col { position: relative; display: flex; flex-direction: column; min-width: 0; }
+/* [사용자 요청, 재설계] "브랜드 이름 아래 밑줄이 다음 브랜드까지 안 끊기고
+   이어지되, 브랜드 색은 유지해야 한다" — 회색 이음선 레이어(head-rule)를
+   완전히 삭제했다. 대신 각 컬럼의 브랜드색 밑줄 자체를 컬럼 폭보다 gap의
+   절반(12px)만큼 오른쪽으로 늘려(right: -12px) 다음 컬럼과 맞닿게 한다.
+   마지막 컬럼은 늘어난 부분이 컨테이너 밖으로 나가지만 overflow 로 잘려
+   보이지 않는다. 이렇게 하면 선이 끊기지 않으면서도 각 구간은 항상 그
+   구간을 그린 컬럼의 브랜드색을 유지한다(중립색 이음선이 없으므로 색이
+   섞이지 않는다). */
+.brand-compare__col-head {
+  position: relative;
+  height: var(--compare-head-h);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  color: var(--mfr, var(--ink));
+  padding-bottom: 10px;
+  overflow: hidden; /* 브랜드명이 길어 고정 헤더 높이를 넘기면 잘라낸다 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.brand-compare__col-head::after {
+  content: "";
+  position: absolute;
+  left: 0; right: -12px; bottom: 0;
+  border-top: 2px solid var(--mfr, var(--line));
+}
+/* 실제 연도 축과 나란히 정렬되도록, rules 와 같은 높이를 공유하는 트랙 위에
+   각 이벤트를 top:% 절대 위치로 배치한다. */
+.brand-compare__track {
+  position: relative;
+  height: var(--compare-track-h, 1400px);
+  border-left: 2px solid var(--line-2);
+}
+
+/* [원칙 확정, 최종 재설계] 원(dot)은 "실제 연도 위치"(top:%)를 지켜야
+   하고, 그 옆에 연도, 그 옆에 내용이 온다. 내용이 2줄 이상으로 줄바꿈돼도
+   그 "첫 줄"이 원·연도와 같은 높이에 정렬돼야 한다.
+
+   [버그 재수정 히스토리] translateY(-50%) 로 point 전체를 "콘텐츠 전체
+   높이의 절반"만큼 끌어올리는 방식을 썼었다 — 1줄일 땐 그 절반이 곧
+   첫(유일한) 줄의 중앙과 같아 문제가 없었지만, 2줄이 되면 콘텐츠 전체
+   높이가 커지면서 "전체 높이의 절반"이 더 이상 "첫 줄의 중앙"이 아니게
+   된다(첫 줄과 둘째 줄 사이 경계 쪽으로 밀림 → 첫 줄이 원보다 위로 뜸).
+   grid-template-rows 로 row 높이를 1줄로 강제 고정하는 방법, label-text에
+   align-self:start/center + margin-top 보정을 주는 방법도 각각 시도했지만
+   — 전자는 sizeCompareTrack() 의 겹침 방지 실측(getBoundingClientRect)을
+   무력화시키고, 후자는 margin 이 align-self 계산에 포함되는 박스 자체에
+   들어가 버려 1줄 케이스를 오히려 깨뜨렸다.
+
+   [최종 해법] "콘텐츠 높이 전체의 절반"이 아니라 "첫 줄 높이의 절반"만큼만
+   고정 오프셋으로 끌어올린다 — 이 값은 몇 줄이든 항상 동일(폰트 크기가
+   고정이므로)하므로 translateY(-50%) 대신 margin-top: 음수 고정값을 쓴다.
+   point 는 이제 "그 자신의 top:0"이 곧 첫 줄의 시작(상단)이 되도록 흐름에
+   놓이고, 내부 요소들은 모두 align-self:start(=point 상단에 맞춤)로 통일—
+   dot/b/label-text 모두 같은 기준(point 상단 = 첫 줄 상단)을 공유하므로
+   줄바꿈 여부와 무관하게 항상 정확히 정렬된다. */
+.brand-compare__point {
+  /* [버그 수정] label-text/b 의 실제 폰트 크기(--compare-label-fs)와 반드시
+     같은 값을 참조해야 한다 — 폰트 크기가 바뀌면 1줄 높이도 바뀌므로,
+     여기서 다른 값(예: 전역 --fs-sm)을 쓰면 원-텍스트 정렬이 다시 어긋난다. */
+  --line-h: calc(var(--compare-label-fs, 11px) * 1.4); /* label-text/b 의 1줄 높이(line-height 1.4 기준) */
+  z-index: 1;
+  position: absolute;
+  left: -5px; right: 0;
+  margin-top: calc(var(--line-h) / -2); /* "첫 줄 높이의 절반"만큼만 끌어올림 — 줄바꿈 수와 무관하게 고정 */
+  display: grid;
+  grid-template-columns: 9px 34px 1fr;
+  align-items: start;
+  column-gap: 6px;
+  min-width: 0;
+}
+.brand-compare__dot {
+  align-self: start;
+  margin-top: calc((var(--line-h) - 9px) / 2); /* 원(9px)을 첫 줄 텍스트의 세로 중앙에 맞춤 */
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--mfr, var(--accent));
+  box-shadow: 0 0 0 3px var(--panel);
+}
+.brand-compare__point--founding .brand-compare__dot {
+  background: var(--mfr, var(--accent));
+  width: 11px; height: 11px;
+  margin-top: calc((var(--line-h) - 11px) / 2);
+  justify-self: center;
+}
+.brand-compare__label {
+  display: contents; /* b, label-text 를 point 의 grid 컬럼에 직접 배치 */
+}
+/* [사용자 요청] 비교 모드는 브랜드 선택 수(최대 3개)에 따라 컬럼 폭이
+   좁아져, 콤마 조각(.brand-event-part) 하나가 컬럼 폭과 거의 딱 맞아
+   떨어지는 경계 상황이 생긴다 — 실측 결과 실제로 공간이 빠듯해서
+   불필요한 지점까지 줄바꿈되는 경우가 있었다(버그가 아니라 여유 부족).
+   --fs-sm 은 다른 컴포넌트와 공유하는 전역 토큰이라 여기서 직접 줄이면
+   영향 범위가 넓어지므로, 비교 모드 라벨 전용 크기(--compare-label-fs)를
+   따로 둬서 살짝만(12px→11px) 줄여 여유를 확보한다. */
+.brand-compare__label b {
+  align-self: start;
+  font-size: var(--compare-label-fs, 11px);
+  color: var(--mfr, var(--accent));
+  font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+}
+.brand-compare__label-text {
+  align-self: start;
+  font-size: var(--compare-label-fs, 11px);
+  color: var(--ink-2);
+  line-height: 1.4;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.brand-compare__point--founding .brand-compare__label b,
+.brand-compare__point--founding .brand-compare__label-text { font-weight: 700; color: var(--ink); }
+
+@media (max-width: 900px) {
+  .brand-compare { --compare-axis-w: 40px; }
+  .brand-compare__cols { grid-template-columns: 1fr; gap: 40px; }
+  .brand-compare__col-head::after { right: 0; } /* 세로 스택에서는 다음 컬럼과 안 붙어있으므로 늘릴 필요 없음 */
+}

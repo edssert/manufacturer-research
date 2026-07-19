@@ -1,0 +1,79 @@
+/* ============================================================
+   base.css — 리셋 + 전역 규칙
+   개별 컴포넌트 스타일은 넣지 않는다 (components/ 참조).
+   ============================================================ */
+* { box-sizing: border-box; }
+
+/* [1-4] 브라우저 네이티브 UI(select 드롭다운·search ×버튼·스크롤바)를
+   다크로 렌더링 — 밝은 네이티브 위젯이 다크 UI 를 깨는 문제 방지 */
+:root { color-scheme: dark; }
+
+html, body { margin: 0; padding: 0; }
+
+/* [레이아웃 안정성] 탭마다 콘텐츠 높이가 달라 세로 스크롤바가 생겼다
+   사라졌다 하는데, 스크롤바 유무는 뷰포트의 실제 사용 가능 폭에 영향을
+   준다 — 스크롤바가 없을 땐 폭이 넓어져 중앙 정렬된 max-width 컨테이너
+   (.app-footer, .content-wrap 등)가 몇 px 오른쪽으로 밀리고, 스크롤바가
+   생기면 다시 왼쪽으로 당겨지는 식으로 탭 전환마다 사이트 전체가 좌우로
+   미세하게 흔들려 보였다. 스크롤바 자리를 항상 고정 확보해(콘텐츠가
+   짧아 스크롤이 필요 없을 때도 빈 여백으로 유지) 이 흔들림을 없앤다. */
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll; /* [폴백] scrollbar-gutter 미지원 브라우저에서도 스크롤바를 항상 표시해 폭 흔들림 방지 */
+}
+
+/* [사용자 요청] sticky footer 패턴 — Brand 탭처럼 탭마다(또는 같은 탭 안
+   브랜드 전환처럼) 콘텐츠 높이가 들쭉날쭉하면 app-footer 가 콘텐츠 바로
+   아래 붙는 기본 흐름에서는 위치가 눈에 띄게 흔들린다. body 를 세로 flex
+   컨테이너로 만들고 <main id="domain-views">(flex:1 0 auto, 아래 참고)가
+   남는 공간을 모두 차지하도록 해 footer 를 항상 뷰포트 하단에 고정한다
+   (콘텐츠가 뷰포트보다 길면 기존과 동일하게 콘텐츠 바로 아래 위치). */
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(255, 176, 32, .05), transparent 60%),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* [레이아웃 안정성] 한국어 단어 중간 줄바꿈 방지 + 긴 영문 토큰은 강제 개행.
+     텍스트 길이가 달라져도 어절 단위로만 줄이 바뀌어 UI가 자연스럽게 유지된다. */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* header/topnav 는 내용 크기만큼(flex:none 이 기본), #domain-views 가
+   남는 세로 공간을 모두 차지해 footer 를 뷰포트 하단으로 밀어낸다. */
+#domain-views { flex: 1 0 auto; }
+
+a { color: inherit; }
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+/* 앱 푸터 */
+.app-footer {
+  flex: none;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+  color: var(--muted); /* muted-2 는 텍스트 사용 금지(1-2) — 승격 */
+  font-size: var(--fs-xs);
+  letter-spacing: .02em;
+  font-weight: 500;
+}
+
+/* 접근성: 시스템의 모션 최소화 설정을 존중 */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* [사용자 요청] 라이트/다크 모드·사진 숨기기와 같은 패턴의 수동 전역
+   토글(js/ui/motion-toggle.js) — 시스템 설정과 무관하게 사용자가 직접
+   사이트 전반의 애니메이션/트랜지션을 끌 수 있다. 위 prefers-reduced-motion
+   과 동일한 처리를 body 클래스로도 트리거한다. */
+body.reduce-motion * { animation: none !important; transition: none !important; }

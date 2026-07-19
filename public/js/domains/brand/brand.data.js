@@ -1,0 +1,83 @@
+export const BRANDS = [
+  {
+    "id": "brand-la",
+    "mfr": "la",
+    "name": "L-Acoustics",
+    "logo": "public/assets/img/brand/logo-la.webp",
+    "founded": 1984,
+    "country": "France",
+    "hq": "Marcoussis (Paris 남부)",
+    "founder": "Dr. Christian Heil",
+    "notable": ["V-DOSC (1992, 세계 최초 라인소스 어레이)", "Wavefront Sculpture Technology (WST)", "K1/K2/Kara 등 K 시리즈 라인어레이", "L-ISA 이머시브 하이퍼리얼 사운드", "Soundvision 3D 시뮬레이션 소프트웨어"],
+    "notes": "1984년 소립자물리학 박사 Christian Heil이 파리 남부에서 설립한 프랑스 음향 전문기업(초기명 C.HEIL.TEA). 1992년 V-DOSC와 Wavefront Sculpture Technology(WST) 이론으로 세계 최초의 라인소스 어레이 시대를 열었다. 2024년 창립 40주년을 맞았으며 미국(LA, 2026년 신설된 내슈빌 아메리카 지역 본사)·영국·싱가포르·독일 등에 지사를 두고, 공식 발표 기준 전 세계 1,000명 이상의 임직원이 근무한다. 현재 창업자 Christian Heil은 Founder & President로 재직 중이며, Hervé Guillaume·Laurent Vaissié 공동 CEO 체제로 운영된다.",
+    "timeline": [
+      { "year": 1984, "event": "Christian Heil이 프랑스에서 C.HEIL.TEA(현 L-Acoustics) 설립" },
+      { "year": 1992, "event": "WST 이론 정립 및 V-DOSC 출시 — 세계 최초의 라인소스 어레이" },
+      { "year": 1995, "event": "ARCS 출시 — 최초의 정지향성(constant-curvature) 라인소스 어레이" },
+      { "year": 1999, "event": "Marcoussis 인근에 첫 본사(R&D·생산 거점) 개설" },
+      { "year": 2004, "event": "Soundvision 출시 — 최초의 3D 음향 시스템 시뮬레이션 소프트웨어" },
+      { "year": 2007, "event": "최초의 앰프 컨트롤러(Amplified Controllers) 라인 출시 — 음향 증폭 시스템 표준화" },
+      { "year": 2009, "event": "글로벌 렌탈 네트워크 구축" },
+      { "year": 2010, "event": "Kara 출시 — 컴팩트 WST 라인소스 인클로저" },
+      { "year": 2011, "event": "K1 데뷔 — 대형 투어링/스타디움용 라인어레이의 새 기준 제시" },
+      { "year": 2012, "event": "설치(Fixed Installation) 시장 진출 — 극장·아레나 전용 제품군 출시" },
+      { "year": 2014, "event": "K2 출시(Prolight+Sound International Press Award 수상), Panflex 기술 공개, 직원 200명 돌파, 영국 지사 개설" },
+      { "year": 2016, "event": "L-ISA 이머시브 하이퍼리얼 사운드 기술 최초 공개" },
+      { "year": 2018, "event": "AVB 네트워크 오디오 프로토콜 채택, 제조 역량 강화를 위한 그룹 파트너십 확대" },
+      { "year": 2020, "event": "싱가포르 APAC 허브 및 Marcoussis 신규 물류창고 개설, Fast Company 혁신기업 선정" },
+      { "year": 2023, "event": "L 시리즈 출시(PULS 기술 탑재), Fast Company 혁신기업 재선정" },
+      { "year": 2024, "event": "창립 40주년, 전 세계 임직원 1,000명 돌파, 가정·업무공간용 공간음향 기술 HYRISS 출시" },
+      { "year": 2026, "event": "내슈빌 야즈(Nashville Yards)에 아메리카 지역 본사 신설(HYRISS 쇼룸·Creative Studio 포함)" }
+    ]
+  },
+  {
+    "id": "brand-db",
+    "mfr": "db",
+    "name": "d&b audiotechnik",
+    "logo": "public/assets/img/brand/logo-db.webp",
+    "founded": 1981,
+    "country": "Germany",
+    "hq": "Backnang (Stuttgart 인근)",
+    "founder": "Jürgen Daubert, Rolf Belz",
+    "notable": ["F1/F2/B1 PA 시스템 (1985)", "J-Series 라인어레이", "GSL/KSL/XSL 라인어레이 3부작", "d&b Soundscape (DS100 + En-Scene/En-Space)", "R1 리모트 제어 소프트웨어 및 ArrayCalc 시뮬레이션"],
+    "notes": "1981년 4월 18일 독일 Korb의 차고에서 Jürgen Daubert와 Rolf Belz가 창업(사명은 두 사람 이니셜에서 유래). 1989년 옛 방적공장 부지인 Backnang으로 이전해 지금까지 본사 겸 생산 거점으로 쓰고 있다. 1985년 F1/F2/B1으로 표준화된 완제품 PA 시스템을 출시하며 커스텀 제작 방식에서 벗어났고, 이후 J-Series(2006)·GSL/KSL/XSL 3부작(2018~2021)·d&b Soundscape(2017) 등으로 라이브·설치 시장을 선도했다. 소유권은 Odewald & Compagnie·Cobepa(2011~2016) → Ardian(2016~2023) → Providence Equity Partners(2023~현재)로 이어졌다. 공식 발표 기준 전 세계 800명 이상의 임직원과 80개국 이상의 유통 파트너를 두고 있으며, 2025년 9월 CEO 교체가 발표되어 2026년 1월 1일부로 Jaakko Kaivonen이 신임 CEO로 취임했다(전임 Amnon Harman은 감독이사회로 이동).",
+    "timeline": [
+      { "year": 1981, "event": "Jürgen Daubert와 Rolf Belz가 독일 Korb의 차고에서 창업(4월 18일 사업자 등록)" },
+      { "year": 1985, "event": "F1/F2/B1 PA 시스템 출시 — 표준화된 완제품 라이브 음향 시스템의 시작" },
+      { "year": 1989, "event": "Backnang의 옛 방적공장 부지로 본사 이전" },
+      { "year": 2006, "event": "J-Series 출시 — 경량화된 투어링 라인어레이로 업계 표준화" },
+      { "year": 2011, "event": "Odewald & Compagnie와 Cobepa가 d&b audiotechnik 인수" },
+      { "year": 2016, "event": "Ardian이 기존 경영진과 함께 Odewald·Cobepa로부터 재인수" },
+      { "year": 2017, "event": "d&b Soundscape 출시 — DS100 Signal Engine 기반 En-Scene/En-Space" },
+      { "year": 2018, "event": "GSL 시스템(SL-Series) 출시 — 플래그십 라인어레이 공개" },
+      { "year": 2019, "event": "KSL 시스템 출시 — SL 트릴로지의 두 번째" },
+      { "year": 2021, "event": "XSL 시스템 공개(SL 트릴로지 완성), d&b solutions GmbH & Co. KG 출범" },
+      { "year": 2023, "event": "Providence Equity Partners가 Ardian으로부터 d&b Group 지분 인수" },
+      { "year": 2024, "event": "두바이에 중동 지사 신설" },
+      { "year": 2026, "event": "Jaakko Kaivonen 신임 CEO 취임(1월 1일부)" }
+    ]
+  },
+  {
+    "id": "brand-my",
+    "mfr": "my",
+    "name": "Meyer Sound",
+    "logo": "public/assets/img/brand/logo-my.webp",
+    "founded": 1979,
+    "country": "United States",
+    "hq": "Berkeley, California",
+    "founder": "John & Helen Meyer",
+    "notable": ["세계 최초 전용 라우드스피커 프로세서", "Source Independent Measurement(SIM)", "트라페조이드(사다리꼴) 캐비닛 — 커브 어레이 구현", "셀프파워드 대형 라우드스피커(MSL-4 등)", "Constellation 전자음향 건축 시스템", "카디오이드 서브우퍼"],
+    "notes": "1979년 2월 13일 John Meyer와 Helen Meyer 부부가 캘리포니아 San Leandro에서 창업 후 Berkeley로 이전했다. John Meyer는 1967년부터 버클리에서 하이파이 커스텀 설치 작업을 했고, 1973년에는 스위스 몽트뢰(Montreux) 소재 Institute for Advanced Musical Studies 음향연구실 책임자로 근무한 경력이 있다(파리 IRCAM과는 별개 기관). 세계 최초의 전용 라우드스피커 프로세서(1979), 트라페조이드형 캐비닛(1980, 커브 어레이 구현), Source Independent Measurement 측정 기법(1984), 셀프파워드 대형 스피커(1994 MSL-4), Constellation 전자음향 건축 시스템(2006) 등으로 업계 표준을 다수 확립했다. 창업자 부부는 2025년 기준으로도 각각 CEO·EVP로 경영에 참여 중이며, 공식 발표 기준 100건 이상의 특허를 보유하고 있다.",
+    "timeline": [
+      { "year": 1979, "event": "John & Helen Meyer가 캘리포니아 San Leandro에서 창업(2월 13일), 세계 최초 전용 라우드스피커 프로세서 도입" },
+      { "year": 1980, "event": "UPA-1 출시 — 트라페조이드(사다리꼴) 캐비닛 최초 적용, 커브 어레이 구현의 시초" },
+      { "year": 1984, "event": "Source Independent Measurement(SIM) 시스템 도입" },
+      { "year": 1989, "event": "HD-1 High Definition Audio Monitor 출시 — 풀 셀프파워드 스튜디오 모니터" },
+      { "year": 1994, "event": "MSL-4 출시 — 셀프파워드 대형 음향보강 스피커 시대 개막" },
+      { "year": 2006, "event": "Constellation 전자음향 건축 시스템 출시" },
+      { "year": 2009, "event": "D-Mitri 디지털 오디오 플랫폼 출시" },
+      { "year": 2016, "event": "Galileo GALAXY 네트워크 오디오 프로세서 InfoComm에서 공개" },
+      { "year": 2024, "event": "창립 45주년, 신규 로고 공개 및 PANTHER 라인어레이 등 강조" }
+    ]
+  }
+];

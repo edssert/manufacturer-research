@@ -1,0 +1,139 @@
+/* ============================================================
+   tokens.css — 디자인 토큰 (CSS 변수)
+   모든 색상·서체·라운딩 값은 여기서만 정의한다.
+   다른 CSS 파일과 JS(schema의 color 필드)는 var(--이름)로만 참조.
+
+   [사용자 요청] 라이트모드 토글 — [data-theme] 속성을 <html> 에 붙여
+   테마를 전환한다(js/ui/theme.js). :root 는 다크(기본값), [data-theme="light"]
+   는 같은 변수 이름에 라이트 값을 재정의 — 다른 CSS 파일은 수정 없이
+   변수만 다시 계산된다. --bg-rgb 는 모달 오버레이 등에서 rgba(...)로
+   투명도를 줘야 하는 곳에 쓰는 채널 값(하드코딩 rgba 제거용).
+   ============================================================ */
+:root {
+  /* 배경/패널 (어두운 순 → 밝은 순) */
+  --bg: #0E1116;
+  --bg-rgb: 14, 17, 22;
+  --panel: #161A21;
+  --panel-2: #1E232B;
+  --panel-3: #252B34;
+
+  /* 경계선 */
+  --line: #2A313B;
+  --line-2: #343C47;
+
+  /* 텍스트 (진한 순 → 흐린 순) */
+  --ink: #EAEDF1;
+  --ink-2: #B9C0CA;
+  --muted: #868F9C;
+  --muted-2: #5E6672;   /* 텍스트 사용 금지(대비 3.3:1) — 비활성 보더·장식 전용 (1-2) */
+
+  /* 포인트 컬러 (앰버) */
+  --accent: #FFB020;
+  --accent-ink: #0E1116;          /* 포인트 배경 위 텍스트색 */
+  --accent-dim: rgba(255, 176, 32, .14);
+  --accent-line: rgba(255, 176, 32, .40);
+
+  /* [사용자 요청] 게이지 바(spl-meter) 그라디언트 시작색 — 다크 배경에서는
+     짙은 브라운(#8a5a00)이 자연스럽지만 라이트모드에서는 탁해 보여 변수로
+     분리(css/components/card.css .spl-meter__fill 참고). Rack 전용
+     청록 계열도 동일 이유로 분리. */
+  --gauge-amber-start: #8a5a00;
+  --gauge-amber-end: var(--accent);
+  --gauge-rack-start: #0d5f66;
+  --gauge-rack-end: #2dd4bf;
+
+  /* 제조사 식별 컬러 — speakers.schema.js / amplifiers.schema.js 의 MFR 맵에서 참조.
+     값은 브랜드 자산의 원색이 아니라 다크 배경(--bg) 대비를 확보한 파생 톤. */
+  /* [사용자 요청, 재수정] Amplifier Matching 표의 모델명 색상(match-table
+     __cell--model, 전역 --accent 를 그대로 씀)과 동일한 톤으로 통일 —
+     L-Acoustics 색이 전역 accent(#FFB020)와 같아진다는 점을 사용자에게
+     확인 후 반영(다른 브랜드색 --db/--my 와는 여전히 구분됨).
+     라이트모드 --la 는 건드리지 않음. */
+  --la: #FFB020;   /* L-Acoustics — 전역 accent 와 동일 톤 */
+  --db: #F2F4F6;   /* d&b audiotechnik — 로고(흰 배경·검정 심볼)의 화이트, 대비 17:1 */
+  --my: #5B7FBE;   /* Meyer Sound — 공식 로고 블루 추출값, 대비 4.7:1 (AA 통과) */
+
+  /* 도메인 식별 컬러 */
+  --dsp: #8B7FE8;
+  --sw: #3FBF8F;
+  --brand: #F0A63A;
+
+  /* 타입 스케일 — 5단 고정 (1-2). 10~20px 사이 ad hoc 크기를 여기로 수렴.
+     최소 텍스트 크기 하한은 11px (--fs-xs). */
+  --fs-xs: 11px;   /* 배지·카운트·각주 (기존 10/10.5/11px → 여기로) */
+  --fs-sm: 12px;   /* 보조 텍스트·eyebrow (기존 12/12.5px) */
+  --fs-md: 13px;   /* 본문·컨트롤 (기존 13px, body 15px은 유지) */
+  --fs-lg: 16px;   /* 그룹 제목·섹션 라벨 */
+  --fs-xl: 20px;   /* 카드 모델명·모달 제목 */
+
+  /* 공통 형태 */
+  --radius: 12px;
+  --sans: 'Pretendard', 'Pretendard Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* [사용자 요청] 카드/모달 사진 영역 배경 — 제품 사진이 대부분 투명
+     배경이라 "스튜디오 조명" 느낌의 라디얼 그라디언트를 깔아준다.
+     라이트모드 전환 시에도 함께 바뀌도록 하드코딩 색 대신 변수로 분리.
+     --card-media-start 는 modal__media-wrap 처럼 그라디언트 끝점이
+     var(--panel) 등 다른 값인 곳에서 시작색만 재사용하기 위한 값. */
+  --card-media-start: #262c36;
+  --card-media-bg: radial-gradient(circle at 50% 38%, var(--card-media-start), #14181e 80%);
+}
+
+/* ---------- 라이트 테마 ---------- */
+[data-theme="light"] {
+  /* 배경/패널 (밝은 순 → 약간 어두운 순 — 다크와 반대 방향이지만 변수
+     이름의 "카드/패널이 배경보다 한 단계 튀는" 관계는 동일하게 유지) */
+  --bg: #F5F6F8;
+  --bg-rgb: 245, 246, 248;
+  --panel: #FFFFFF;
+  --panel-2: #EEF0F3;
+  --panel-3: #E4E7EB;
+
+  /* 경계선 */
+  --line: #DDE1E6;
+  --line-2: #CBD1D8;
+
+  /* 텍스트 (진한 순 → 흐린 순) */
+  --ink: #1A1D22;
+  --ink-2: #454C56;
+  --muted: #6B7280;
+  --muted-2: #9AA1AB;
+
+  /* 포인트 컬러 — 라이트 배경에서도 대비를 유지하도록 살짝 더 짙게 */
+  --accent: #C97A00;
+  --accent-ink: #FFFFFF;
+  --accent-dim: rgba(201, 122, 0, .12);
+  --accent-line: rgba(201, 122, 0, .35);
+
+  /* [사용자 요청] 라이트모드에서 게이지 바가 다크와 똑같아 안 어울림 —
+     다크의 짙은 브라운/청록 시작색은 밝은 트랙 배경 위에서 탁해 보이므로
+     더 밝고 채도 있는 톤으로 재조정. */
+  --gauge-amber-start: #F0B75E;
+  --gauge-amber-end: var(--accent);
+  --gauge-rack-start: #5FBFC2;
+  --gauge-rack-end: #0E8A8F;
+
+  /* 제조사 식별 컬러 — 흰 배경 대비 기준으로 재조정(다크용 --db 흰색은
+     라이트에서 안 보이므로 짙은 톤으로 교체, 나머지는 대비 확보 위해 소폭 진하게) */
+  /* [사용자 요청, 재수정] 다크모드 --la(#FFB020, 전역 accent 와 동일 톤)를
+     라이트모드에도 일단 그대로 반영 — [경고] 대비 bg 1.69:1 / panel 1.83:1
+     로 WCAG 최소 기준(4.5:1)에 크게 못 미쳐 흰 배경에서 거의 안 보일
+     정도로 낮음. 라이트모드에서 실제로 확인 후 조정 필요할 수 있음. */
+  --la: #FFB020;
+  --db: #2B2F36;
+  --my: #3E5C94;
+
+  /* 도메인 식별 컬러 */
+  --dsp: #6C5CD6;
+  --sw: #1F9A6E;
+  --brand: #B97A1E;
+
+  /* 상단바 상단 미세 하이라이트 — 다크에서는 흰빛(밝은 쪽으로), 라이트에서는
+     검정(그림자 쪽으로) 방향을 반전해야 같은 "위가 살짝 도드라지는" 느낌이 유지됨 */
+  --topbar-sheen: rgba(0, 0, 0, .025);
+
+  /* [사용자 요청] 라이트모드에서 카드/모달 사진 배경도 밝게 — 다크의
+     어두운 스튜디오 톤 대신 패널 계열의 옅은 그라디언트로 전환. */
+  --card-media-start: #E9EBEF;
+  --card-media-bg: radial-gradient(circle at 50% 38%, var(--card-media-start), #D8DCE2 80%);
+}

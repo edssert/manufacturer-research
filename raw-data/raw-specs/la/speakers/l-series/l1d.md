@@ -1,0 +1,14 @@
+> **역재구성본** — 원문 미보관, `js/domains/speakers/data/la/l-series.data.js`에서 역재구성. README.md 참고.
+
+# L1D (L-Acoustics, L Series)
+
+- Type: Progressive Ultra-Dense Line Source, 16-channel active
+- Coverage: H 70°/110°/55°·35°/35°·55°
+- Frequency response: -10dB 35Hz–20kHz
+- Max SPL: 155 dB
+- Transducers: LC 2×18″, LF 4×15″, MF 8×8″, HF 6×(4″+2.5″) Coaxial
+- Connectors: 37-point male connector (32 points used)
+- Dimensions: 1500 x 1167 x 750 mm / 59.1 x 45.9 x 29.5 in
+- Weight: 239 kg
+- IP Rating: 미확인
+- Amp matching: 미확인
