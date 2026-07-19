@@ -1,0 +1,155 @@
+/* ============================================================
+   split-view.css — 나란히 비교 Split View
+   BEM 블록: .split-view (모달 내부에 생성되는 2분할 컨테이너)
+   동작 제어: js/ui/split-view.js
+
+   [레이아웃 철학 — 개정] 이전 버전은 pane1/pane2 를 서로 다른 고정 폭
+   (--pane1-w/--pane2-w)으로 박아 넣고, 하나의 .modal 카드 껍데기(배경·
+   테두리·그림자·강조선) 안에 세로 구분선으로만 나눈 "반쪽짜리 패널"
+   두 개였다. [사용자 요청] 이제는 "카드 1개짜리 모달을 그대로 옆에
+   나란히 열어놓은" 느낌 — 두 pane 이 각각 완전한 카드(자체 배경/테두리/
+   그림자/둥근모서리/제조사 강조선)를 갖는다. 스크롤도 카드마다 독립적으로
+   움직인다(.modal-overlay 자체 스크롤은 Split View 동안 꺼두고 —
+   modal.css 참고 — 대신 각 pane 이 overflow-y: auto 로 자기 안에서만
+   스크롤).
+   [사용자 요청 — 2차 개정] "카드 1개만 열린 단일 모달이 처음부터 Split
+   View 의 pane1 자리에 가 있어야 한다"는 요구로, pane 폭은 단일 모달과
+   같은 고정폭으로 통일했다.
+   [사용자 요청 — 3차 개정] "카드 4개씩 보이는 그리드 화면의 좌우 여백에
+   맞춰 달라"는 요구로, 그 고정폭을 카드 그리드 컨테이너(layout.css
+   .content-wrap: max-width 1320px, padding 24px → 콘텐츠 폭 1272px)를
+   기준으로 재계산했다: pane 폭 628px × 2 + gap 16px = 1272px. 이제
+   .modal-overlay(modal.css)가 이 1272px 트랙을 화면 중앙에 고정하고, 그
+   안에서 단일 모달(628px)이든 Split View(1272px, 두 카드가 트랙을 꽉
+   채움)든 항상 왼쪽부터 배치되므로 카드 그리드의 좌우 여백과 정확히
+   일치하고, 왼쪽 카드 위치도 절대 움직이지 않는다.
+   ============================================================ */
+
+:root {
+  /* 628px 근거: 카드 그리드 컨테이너 콘텐츠 폭 1272px(위 설명 참고)을
+     카드 2장 + gap 16px 으로 균등 분배한 값. min: 화면이 좁아 flex-shrink
+     로 줄어들 때 표/긴 텍스트가 심하게 찌그러지지 않는 최소한의 폭 — 두
+     카드가 이 폭조차 못 들어가면 860px 이하 반응형(세로 스택)이 대신
+     처리한다. */
+  --pane-min-w: 480px;
+  --pane-max-w: 628px;
+  --pane-gap: 16px;
+}
+
+/* ---------- 블록: split-view ---------- */
+.split-view {
+  display: flex;
+  align-items: stretch;
+  gap: var(--pane-gap);
+  /* 부모(.modal--split, modal.css)가 이제 명시적 고정 폭(1272px)을 가지므로
+     100%로 그 폭을 그대로 받아 두 pane 에 균등 분배한다. */
+  width: 100%;
+  height: 100%;
+}
+
+/* [카드화] 각 pane 이 독립된 카드 껍데기를 갖는다 — modal.css 의 .modal
+   기본 스타일(배경/테두리/그림자/강조선/둥근모서리)을 그대로 재현한다.
+   [사용자 요청] 단일 모달(.modal, width:628px)과 정확히 같은 폭으로 시작
+   위치를 통일하기 위해, flex-grow 로 남는 공간을 나눠 갖는 대신
+   flex-basis 를 628px 로 고정(flex: 0 1 628px)한다 — 화면이 좁아 628px
+   두 장이 다 안 들어갈 때만 flex-shrink 로 줄어들고, 화면이 아무리
+   넓어도 카드가 628px 이상으로 늘어나 벌어지지 않는다(늘어나면 단일
+   모달일 때의 628px 위치와 달라져 보임). 높이는 부모(.split-view, 100%)
+   를 채워 내부 스크롤의 기준이 되게 한다. */
+.split-view__pane {
+  flex: 0 1 var(--pane-max-w);
+  min-width: var(--pane-min-w);
+  min-height: 0; /* [레이아웃 안정성] flex 자식이 내용 높이만큼 늘어나지 않고 overflow 스크롤을 쓰려면 필수 */
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--line-2);
+  border-top: 3px solid var(--mfr, var(--accent));
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .5);
+  /* [독립 스크롤] 카드마다 자기 안에서만 스크롤 — 옆 카드나 배경 페이지로
+     스크롤이 전파되지 않도록 overscroll-behavior 도 함께 막는다. */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+/* [사용자 요청] 사진 확대 전용 pane(js/ui/split-view.js openMediaSplitPane)
+   은 사진 한 장 + 뷰 전환 버튼만 있어 세로 스크롤이 필요한 만큼 콘텐츠가
+   길어질 일이 없다 — 기본 overflow-y:auto 를 꺼서 스크롤바가 아예 뜨지
+   않게 한다. */
+.split-view__pane--media {
+  overflow-y: hidden;
+}
+
+/* [버그 수정] 이전에는 pane 안 이미지 영역을 140px/110px 로 축소하면서
+   margin-bottom:16px/border-radius:10px 도 함께 얹었는데, 크기를 단일
+   모달과 통일(위 이력 참고)한 뒤에도 이 margin-bottom 이 남아 있어 Split
+   View 에서만 System Elements 위 여백이 단일 모달보다 16px 더 넓어 보였다.
+   .modal__media-wrap 은 이제 modal.css 의 단일 모달 규칙을 그대로 써야
+   하므로 pane 전용 오버라이드 자체를 없앤다. */
+
+/* 표가 좁아지는 min-width 근처 폭에서는 Links/ch·Max/amp 열을 접어
+   Amplifier·Mode·Preset·Max SPL 4개 핵심 정보만 온전히 보여준다. */
+@media (max-width: 1200px) {
+  .split-view__pane .match-table__cell { padding: 8px 6px; font-size: var(--fs-xs); }
+  .split-view__pane .match-table__row--head .match-table__cell { font-size: 8px; letter-spacing: .02em; }
+  .split-view__pane .spec-table__key { font-size: 8.5px; }
+  .split-view__pane .spec-table__value { font-size: var(--fs-sm); }
+  .split-view__pane .match-table__row { grid-template-columns: 1.3fr .8fr 1fr 0 0 .8fr; }
+  .split-view__pane .match-table__cell:nth-child(4),
+  .split-view__pane .match-table__cell:nth-child(5) { padding: 0; overflow: hidden; border-left: none; }
+}
+
+/* 변경자: pane2 진입 애니메이션 — 카드가 옆에서 살짝 확대되며 페이드인. */
+.split-view__pane--enter {
+  animation: split-in .22s ease both;
+}
+@keyframes split-in {
+  from { opacity: 0; transform: scale(.98); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* 변경자: pane2 "교체" 애니메이션 — Split View 가 이미 열려있는 상태에서
+   내용만 바뀌는 경우(예: pane1 에서 다른 앰프를 클릭). 짧고 즉각적인
+   페이드만 준다. */
+.split-view__pane--swap {
+  animation: split-swap .12s ease both;
+}
+@keyframes split-swap {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* [사용자 요청] 사진 확대 pane 전용 퇴장 애니메이션 — split-in 의 역방향
+   (축소하며 페이드아웃). closeSplitPane2(js/ui/split-view.js) 가 X 클릭
+   시 이 클래스를 붙이고, animationend 시점에 실제로 DOM 에서 제거한다. */
+.split-view__pane--exit {
+  animation: split-out .18s ease both;
+}
+@keyframes split-out {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: scale(.98); }
+}
+
+/* ---------- 반응형: 좁은 화면에서는 세로 스택 ----------
+   세로 스택에서는 두 카드가 폭이 아니라 높이로 쌓이므로, 폭을 100%로
+   되돌리고 각 카드 높이는 뷰포트의 절반씩(최대) 배분해 둘 다 스크롤
+   가능하게 한다. */
+@media (max-width: 860px) {
+  /* [버그 수정] height 를 명시해야 .split-view(height:100%) → .split-view__pane
+     체인이 유효해진다 — max-height 만으로는 무효(modal.css 참고).
+     [정렬] 이 구간에서는 데스크톱의 "카드 그리드 좌우 여백 정렬"(1272px
+     트랙, modal.css .modal-overlay)이 더 이상 의미가 없다 — 카드가 세로로
+     쌓이므로 폭 기준 왼쪽 정렬을 유지할 이유가 없고, 트랙 폭(예:
+     min(1272px, 100vw-48px))보다 좁은 600px 카드를 왼쪽 정렬해두면 오히려
+     화면 중앙에서 왼쪽으로 치우쳐 보인다. grid-template-columns 를 100%로
+     무력화해 트랙 자체를 화면 폭에 맞추고, justify-items 도 중앙정렬로
+     되돌려 순수하게 화면 중앙에 카드가 오게 한다. */
+  .modal-overlay:has(.modal--split) { grid-template-columns: 100%; justify-items: center; }
+  .modal--split { width: 100%; max-width: 600px; height: calc(100vh - 40px); max-height: calc(100vh - 40px); }
+  .split-view { flex-direction: column; }
+  .split-view__pane {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-height: calc((100vh - 40px - var(--pane-gap)) / 2);
+  }
+}

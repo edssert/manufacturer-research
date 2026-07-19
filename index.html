@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Manufacturer Research</title>
+
+<!-- 메타 일괄 (8-1) + 네이티브 렌더링 톤 (1-4) -->
+<meta name="description" content="L-Acoustics · d&b audiotechnik · Meyer Sound 스피커/앰프/DSP/소프트웨어 사양 비교 및 앰프 매칭 리서치 도구" />
+<meta name="theme-color" content="#0E1116" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Manufacturer Research" />
+<meta property="og:description" content="L-Acoustics · d&b audiotechnik · Meyer Sound 스피커/앰프/DSP/소프트웨어 사양 비교 및 앰프 매칭 리서치 도구" />
+<meta property="og:locale" content="ko_KR" />
+<!-- favicon: 로고 사이글(레벨바 4개)을 인라인 SVG 로 — 별도 자산 없이 탭에서도 아이덴티티 유지 (1-4) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231E232B' stroke='%23343C47'/%3E%3Cg fill='%23FFB020'%3E%3Crect x='5' y='18' width='4' height='8' rx='1'/%3E%3Crect x='11' y='9' width='4' height='17' rx='1'/%3E%3Crect x='17' y='14' width='4' height='12' rx='1'/%3E%3Crect x='23' y='6' width='4' height='20' rx='1'/%3E%3C/g%3E%3C/svg%3E" />
+
+<!-- [사용자 요청] 라이트모드 토글 — 테마 CSS 가 로드되기 전에 저장된 선호를
+     즉시 적용해 깜빡임(FOUC)을 방지한다. 기본값은 항상 dark(사용자 확인) —
+     저장된 값이 없으면 아무 속성도 안 붙여 :root(다크) 그대로 사용. -->
+<script>(function(){try{var t=localStorage.getItem("mr-theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script>
+
+<!-- [사용자 요청] 카드 사진 숨기기 토글 — body 클래스가 CSS 로드 전에 붙어야
+     사진이 잠깐 보였다 사라지는 깜빡임을 피할 수 있다(라이트모드와 동일 이유).
+     body 는 아직 파싱 전이라 DOMContentLoaded 를 기다려 클래스를 붙인다. -->
+<script>(function(){try{if(localStorage.getItem("mr-hide-media")==="1"){document.addEventListener("DOMContentLoaded",function(){document.body.classList.add("hide-media");});}}catch(e){}})();</script>
+
+<!-- [성능] 본문 폰트 선로딩 — CSS 파싱을 기다리지 않고 곧바로 받아
+     FOUT(폰트 교체 깜빡임) 구간을 줄인다. 가장 많이 쓰이는 두 웨이트만. -->
+<link rel="preload" href="public/assets/fonts/Pretendard-Regular.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="public/assets/fonts/Pretendard-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+
+<!-- CSS 로드 순서: 토큰(변수) → 폰트 → 리셋 → 레이아웃 → 컴포넌트 -->
+<!-- [v1.8 재배치] css/js/assets/tests 가 public/ 하위로 이동, index.html 은 루트 유지 -->
+<link rel="stylesheet" href="public/css/tokens.css" />
+<link rel="stylesheet" href="public/css/fonts.css" />
+<link rel="stylesheet" href="public/css/base.css" />
+<link rel="stylesheet" href="public/css/layout.css" />
+<link rel="stylesheet" href="public/css/nav.css" />
+<link rel="stylesheet" href="public/css/components/controls.css" />
+<link rel="stylesheet" href="public/css/components/card.css" />
+<link rel="stylesheet" href="public/css/components/spec-table.css" />
+<link rel="stylesheet" href="public/css/components/modal.css" />
+<link rel="stylesheet" href="public/css/components/split-view.css" />
+<link rel="stylesheet" href="public/css/components/brand.css" />
+<!-- [사용자 요청] Test 탭(카드/모달 클래스명 라벨링) 전용 스타일 -->
+<link rel="stylesheet" href="public/css/components/test-annotate.css" />
+</head>
+<body>
+
+<!-- 상단바: 로고 + 부제(브랜드 목록, JS 주입) + 범례/카운트 -->
+<header class="topbar" id="topbar">
+  <div class="topbar__inner">
+    <div class="topbar__brand">
+      <div class="topbar__sigil"><div class="topbar__sigil-bars"><i></i><i></i><i></i><i></i></div></div>
+      <div>
+        <h1 class="topbar__title">Manufacturer <span>//</span> Research</h1>
+        <div class="topbar__subtitle" id="brand-subtitle"></div>
+      </div>
+    </div>
+    <div class="topbar__meta">
+      <div class="legend" id="legend"></div>
+      <div class="topbar__count" id="count"></div>
+    </div>
+  </div>
+</header>
+<!-- [사용자 요청] 사진 숨기기/다크모드 토글은 도메인 탭 바(topnav) 오른쪽
+     끝으로 이동 — 마크업은 js/ui/nav.js renderNav()가 생성한다. -->
+
+<!-- 도메인 탭 (js/ui/nav.js 가 렌더링) -->
+<nav class="topnav" id="topnav" role="tablist"></nav>
+
+<!-- 도메인별 뷰 컨테이너: 각 controller 가 자기 뷰를 1회 빌드 후 hidden 토글 -->
+<main id="domain-views">
+  <div id="view-speakers" hidden></div>
+  <div id="view-amplifiers" hidden></div>
+  <div id="view-dsps" hidden></div>
+  <div id="view-software" hidden></div>
+  <div id="view-accessories" hidden></div>
+  <div id="view-brand" hidden></div>
+  <!-- [사용자 요청] 카드/모달 클래스명 라벨링 개발용 탭 -->
+  <div id="view-test" hidden></div>
+</main>
+
+<footer class="app-footer">Manufacturer // Research &nbsp;·&nbsp; Speakers · Amplifiers · DSPs · Software · Accessories</footer>
+
+<!-- 카드형 상세 모달 (js/ui/modal.js 가 제어) -->
+<div class="modal-overlay" id="modalbg" role="dialog" aria-modal="true"><div class="modal" id="modal"></div></div>
+
+<script type="module" src="public/js/main.js"></script>
+</body>
+</html>
