@@ -128,7 +128,21 @@ export const DB_CL_SERIES = [
       "amp-db-d90"
     ]
   },
-  "watt": 400
+  "watt": 400,
+  "mechanicalSafety": {
+    "flownRows": [
+      { "config": "flown", "accessory": "Z5820 CCL Flying frame", "safeLimit": null, "maxLimit": "24 cabinets (500 kg SWL total system weight incl. rigging components)" }
+    ],
+    "stackedRows": [],
+    "notes": [
+      { "text": "3-point rigging system, 최대 24대 수직 라인 어레이(전용 Flying frame). Safe_Limit 열은 확보한 리깅 매뉴얼(p.5)에 없어 null — Maximum SWL 상한만 명시." }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": null,
+    "source": "CCL Rigging manual v1.3 en p.5; AE/SPS"
+  },
+  "presets": null,
+  "cardioidCapability": "Built-in (원문 자체가 \"compact cardioid line array loudspeaker\"로 자기 서술, GSL과 달리 저음역 카디오이드 수렴 대역 조건은 원문에 별도 명시 없음)"
 },
 {
   "id": "spk-db-ccl12",
@@ -256,7 +270,21 @@ export const DB_CL_SERIES = [
       "amp-db-d90"
     ]
   },
-  "watt": 400
+  "watt": 400,
+  "mechanicalSafety": {
+    "flownRows": [
+      { "config": "flown", "accessory": "Z5820 CCL Flying frame", "safeLimit": null, "maxLimit": "24 cabinets (500 kg SWL total system weight incl. rigging components)" }
+    ],
+    "stackedRows": [],
+    "notes": [
+      { "text": "3-point rigging system, 최대 24대 수직 라인 어레이(전용 Flying frame). CCL8과 리깅 액세서리·SWL 공용. Safe_Limit 열은 원문에 없어 null." }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": null,
+    "source": "CCL Rigging manual v1.3 en p.5; AE/SPS"
+  },
+  "presets": null,
+  "cardioidCapability": "Built-in (CCL8과 동일 근거, \"compact cardioid line array loudspeaker\" 자기 서술)"
 },
 {
   "id": "spk-db-ccl-sub",
@@ -365,6 +393,9 @@ export const DB_CL_SERIES = [
       "amp-db-d90"
     ]
   },
-  "watt": 500
+  "watt": 500,
+  "mechanicalSafety": null,
+  "presets": null,
+  "cardioidCapability": null
 }
 ];

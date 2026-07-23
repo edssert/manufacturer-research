@@ -74,7 +74,23 @@ export const DB_SL_SERIES = [
       "amp-db-d90"
     ]
   },
-  "watt": 1600
+  "watt": 1600,
+  "mechanicalSafety": {
+    "flownRows": [
+      { "config": "flown (any splay config, up to 10 cabinets)", "accessory": "Z5701 GSL Flying frame + Z5702 GSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "10 cabinets (800 kg system weight)" },
+      { "config": "flown (general, ArrayCalc verification required)", "accessory": "Z5701 GSL Flying frame + Z5702 GSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "24 cabinets (2000 kg SWL total system weight incl. rigging)" },
+      { "config": "SUB column (SL-SUB)", "accessory": "Z5701 GSL Flying frame + Z5702 GSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "14 cabinets" }
+    ],
+    "stackedRows": [],
+    "notes": [
+      { "text": "Safe_Limit(안전 한도) 열은 원문 리깅 매뉴얼에 없어 null — SWL 기준 Maximum_Limit(상한)만 명시. 10대(800kg) 이하는 모든 splay 각도에서 무조건 안전, 그 이상 최대 24대는 d&b ArrayCalc 시뮬레이션 검증 필요." }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": "6 Beaufort(비행 비권장 상한); 8 Beaufort 초과 시 반드시 하강·고정",
+    "source": "GSL/KSL Rigging manual v1.16 en Ch.1.3, 1.5"
+  },
+  "presets": null,
+  "cardioidCapability": "Built-in (단일 인클로저, 150Hz 이하 카디오이드 지향성 수렴)"
 },
 {
   "id": "spk-db-gsl12",
@@ -148,7 +164,23 @@ export const DB_SL_SERIES = [
       "amp-db-d90"
     ]
   },
-  "watt": 1600
+  "watt": 1600,
+  "mechanicalSafety": {
+    "flownRows": [
+      { "config": "flown (any splay config, up to 10 cabinets)", "accessory": "Z5701 GSL Flying frame + Z5702 GSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "10 cabinets (800 kg system weight)" },
+      { "config": "flown (general, ArrayCalc verification required)", "accessory": "Z5701 GSL Flying frame + Z5702 GSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "24 cabinets (2000 kg SWL total system weight incl. rigging)" },
+      { "config": "SUB column (SL-SUB)", "accessory": "Z5701 GSL Flying frame + Z5702 GSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "14 cabinets" }
+    ],
+    "stackedRows": [],
+    "notes": [
+      { "text": "Safe_Limit(안전 한도) 열은 원문 리깅 매뉴얼에 없어 null — SWL 기준 Maximum_Limit(상한)만 명시. 10대(800kg) 이하는 모든 splay 각도에서 무조건 안전, 그 이상 최대 24대는 d&b ArrayCalc 시뮬레이션 검증 필요. GSL12는 GSL8과 동일 중량·공용 리깅." }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": "6 Beaufort(비행 비권장 상한); 8 Beaufort 초과 시 반드시 하강·고정",
+    "source": "GSL/KSL Rigging manual v1.16 en Ch.1.3, 1.5"
+  },
+  "presets": null,
+  "cardioidCapability": "Built-in (단일 인클로저, 150Hz 이하 카디오이드 지향성 수렴)"
 },
 {
   "id": "spk-db-ksl8",
@@ -251,7 +283,23 @@ export const DB_SL_SERIES = [
       "amp-db-d90"
     ]
   },
-  "watt": 700
+  "watt": 700,
+  "mechanicalSafety": {
+    "flownRows": [
+      { "config": "flown (any splay config, up to 10 cabinets)", "accessory": "Z5722 KSL Flying frame + Z5723 KSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "10 cabinets (685 kg system weight)" },
+      { "config": "flown (general, ArrayCalc verification required)", "accessory": "Z5722 KSL Flying frame + Z5723 KSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "24 cabinets (1500 kg SWL total system weight incl. rigging)" },
+      { "config": "SUB column (KSL-SUB)", "accessory": "Z5722 KSL Flying frame + Z5723 KSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "16 cabinets" }
+    ],
+    "stackedRows": [],
+    "notes": [
+      { "text": "Safe_Limit(안전 한도) 열은 원문 리깅 매뉴얼에 없어 null — SWL 기준 Maximum_Limit(상한)만 명시. 10대(685kg) 이하는 모든 splay 각도에서 무조건 안전, 그 이상 최대 24대는 d&b ArrayCalc 검증 필요." }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": "6 Beaufort(비행 비권장 상한); 8 Beaufort 초과 시 반드시 하강·고정",
+    "source": "GSL/KSL Rigging manual v1.16 en Ch.1.3, 1.5"
+  },
+  "presets": null,
+  "cardioidCapability": "Built-in (단일 인클로저, 150Hz 이하 카디오이드 지향성 수렴 — GSL과 동일 메커니즘)"
 },
 {
   "id": "spk-db-ksl12",
@@ -354,7 +402,23 @@ export const DB_SL_SERIES = [
       "amp-db-d90"
     ]
   },
-  "watt": 700
+  "watt": 700,
+  "mechanicalSafety": {
+    "flownRows": [
+      { "config": "flown (any splay config, up to 10 cabinets)", "accessory": "Z5722 KSL Flying frame + Z5723 KSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "10 cabinets (685 kg system weight)" },
+      { "config": "flown (general, ArrayCalc verification required)", "accessory": "Z5722 KSL Flying frame + Z5723 KSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "24 cabinets (1500 kg SWL total system weight incl. rigging)" },
+      { "config": "SUB column (KSL-SUB)", "accessory": "Z5722 KSL Flying frame + Z5723 KSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "16 cabinets" }
+    ],
+    "stackedRows": [],
+    "notes": [
+      { "text": "Safe_Limit(안전 한도) 열은 원문 리깅 매뉴얼에 없어 null — SWL 기준 Maximum_Limit(상한)만 명시. KSL8과 리깅 액세서리·하중 정격 공용." }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": "6 Beaufort(비행 비권장 상한); 8 Beaufort 초과 시 반드시 하강·고정",
+    "source": "GSL/KSL Rigging manual v1.16 en Ch.1.3, 1.5"
+  },
+  "presets": null,
+  "cardioidCapability": "Built-in (KSL8과 동일 근거)"
 },
 {
   "id": "spk-db-xsl8",
@@ -461,7 +525,23 @@ export const DB_SL_SERIES = [
       "amp-db-d90"
     ]
   },
-  "watt": 700
+  "watt": 700,
+  "mechanicalSafety": {
+    "flownRows": [
+      { "config": "flown, compression and/or tension mode", "accessory": "Z5771 XSL Flying frame + Z5772 XSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "24 cabinets (1000 kg SWL total system weight incl. rigging)" },
+      { "config": "flown, tension mode only", "accessory": "XSL Top mounting frame", "safeLimit": null, "maxLimit": "12 cabinets" },
+      { "config": "SUB column (XSL-SUB, mixed)", "accessory": "Z5783 XSL-SUB Adapter frame", "safeLimit": null, "maxLimit": "1000 kg SWL total system weight incl. rigging (혼합 배열, XSL-TOP 아래 XSL-SUB)" }
+    ],
+    "stackedRows": [],
+    "notes": [
+      { "text": "Safe_Limit(안전 한도) 열은 원문 리깅 매뉴얼에 없어 null — SWL 기준 Maximum_Limit(상한)만 명시. XSL은 Compression/Tension 이원 리깅 모드 지원(Flying frame 24대 겸용, Top mounting frame은 tension 전용 12대)." }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": "6 Beaufort(비행 비권장 상한); 8 Beaufort 초과 시 반드시 하강·고정",
+    "source": "XSL Rigging manual v1.5 en Ch.1.3, 1.3.1"
+  },
+  "presets": null,
+  "cardioidCapability": "Built-in (단일 인클로저, 카디오이드 기법을 저음역에서 사용 — 구체적 수렴 대역 조건은 XSL 원문에 명시 없음, GSL/KSL과 다른 근거 수준)"
 },
 {
   "id": "spk-db-xsl12",
@@ -568,6 +648,22 @@ export const DB_SL_SERIES = [
       "amp-db-d90"
     ]
   },
-  "watt": 700
+  "watt": 700,
+  "mechanicalSafety": {
+    "flownRows": [
+      { "config": "flown, compression and/or tension mode", "accessory": "Z5771 XSL Flying frame + Z5772 XSL Load beam + Z5707 SL Aiming plate", "safeLimit": null, "maxLimit": "24 cabinets (1000 kg SWL total system weight incl. rigging)" },
+      { "config": "flown, tension mode only", "accessory": "XSL Top mounting frame", "safeLimit": null, "maxLimit": "12 cabinets" },
+      { "config": "SUB column (XSL-SUB, mixed)", "accessory": "Z5783 XSL-SUB Adapter frame", "safeLimit": null, "maxLimit": "1000 kg SWL total system weight incl. rigging (혼합 배열, XSL-TOP 아래 XSL-SUB)" }
+    ],
+    "stackedRows": [],
+    "notes": [
+      { "text": "Safe_Limit(안전 한도) 열은 원문 리깅 매뉴얼에 없어 null — SWL 기준 Maximum_Limit(상한)만 명시. XSL8과 리깅 액세서리·하중 정격 공용." }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": "6 Beaufort(비행 비권장 상한); 8 Beaufort 초과 시 반드시 하강·고정",
+    "source": "XSL Rigging manual v1.5 en Ch.1.3, 1.3.1"
+  },
+  "presets": null,
+  "cardioidCapability": "Built-in (XSL8과 동일 근거)"
 }
 ];

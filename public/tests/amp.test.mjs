@@ -16,8 +16,9 @@ const log = (name, cond, extra = "") => {
 };
 
 // [2026-07 현행화] L-Acoustics 7개(LA1.16i/LA2Xi/LA12X/LA4X/LA7.16/
-// LA-RAK III/LA-RAK II AVB) + d&b 1개(D90) = 8개.
-log("Test1 (8 amplifiers loaded)", AMPLIFIERS.length === 8, `(${AMPLIFIERS.length})`);
+// LA-RAK III/LA-RAK II AVB) + d&b 10개(D90 + 파싱스킬 이관 9종: 10D/25D/
+// 30D/40D/5D/5DM/D25/D40/D80) = 17개.
+log("Test1 (17 amplifiers loaded)", AMPLIFIERS.length === 17, `(${AMPLIFIERS.length})`);
 
 // Test2: every amp id is unique
 const ids = AMPLIFIERS.map(a => a.id);
@@ -49,10 +50,10 @@ AMPLIFIERS.forEach(a => {
 log("Test4 (all amp speakerIds resolve)", allResolve2);
 
 // Test5: resolveAmpIdForModel merged-model fallback — " / " 병기 문자열은
-// 첫 토큰으로 해석한다. [2026-07 현행화] D40 데이터가 삭제돼 기존 케이스
-// ("D40 / ...")는 null 이 정상 — 존재하는 모델(D90)을 첫 토큰으로 검증.
+// 첫 토큰으로 해석한다. 존재하는 모델(D90)을 첫 토큰으로 검증.
 log("Test5 (merged model resolves via first token)", resolveAmpIdForModel("db", "D90 / D40") === "amp-db-d90", `(got: ${resolveAmpIdForModel("db", "D90 / D40")})`);
-log("Test5b (missing model resolves to null)", resolveAmpIdForModel("db", "D40 / D80") === null);
+// D6/D12 는 앱 앰프 도메인에 없는 d&b 구형 앰프(스킬 원문 미확보) — 미존재 첫 토큰 케이스
+log("Test5b (missing model resolves to null)", resolveAmpIdForModel("db", "D6 / D12") === null);
 
 // Test6: resolveAmpIdForModel normal case
 log("Test6 (normal model resolves)", resolveAmpIdForModel("la", "LA1.16i") === "amp-la-la1dot16i");
@@ -72,11 +73,11 @@ SPEAKERS.forEach(s => {
 });
 log("Test7 (relations symmetric, 미입력 앰프 제외)", symmetric);
 
-// Test8: amp filter/search — 검색어 정규화 포함. 현재 d&b 앰프는 D90 1개.
+// Test8: amp filter/search — 검색어 정규화 포함. 현재 d&b 앰프는 10개(D90 + 이관 9종).
 const state = createState();
 state.q = "d&b";
 let view = AMPLIFIERS.filter(a => passes(a, state, amplifiersSchema));
-log("Test8 (search 'd&b' amps)", view.length === 1 && view.every(a => a.mfr === "db"), `(${view.length} results)`);
+log("Test8 (search 'd&b' amps)", view.length === 10 && view.every(a => a.mfr === "db"), `(${view.length} results)`);
 // Test8b: 검색어 정규화 — 구분자 표기 변형이 같은 결과를 낸다.
 const s2 = createState(); s2.q = "la 12x";
 const v2 = AMPLIFIERS.filter(a => passes(a, s2, amplifiersSchema));

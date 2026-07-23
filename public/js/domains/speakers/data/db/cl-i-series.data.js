@@ -129,7 +129,21 @@ export const DB_CL_I_SERIES = [
       ]
     },
     "watt": 400,
-    "notes": "CCL8의 설치 버전 — 음향·드라이버는 CCL8과 동일, 중량 17.6→18.1kg, 고정 설치 리깅, 권장 앰프 25D/40D."
+    "notes": "CCL8의 설치 버전 — 음향·드라이버는 CCL8과 동일, 중량 17.6→18.1kg, 고정 설치 리깅, 권장 앰프 25D/40D.",
+    "mechanicalSafety": {
+      "flownRows": [
+        { "config": "flown", "accessory": "Z5826 CCLi Flying frame", "safeLimit": null, "maxLimit": "24 cabinets (500 kg SWL total system weight incl. rigging components)" }
+      ],
+      "stackedRows": [],
+      "notes": [
+        { "text": "설치형 전용 Flying frame(Z5826, 투어링 CCL의 Z5820과 별개). Maximum_Limit 24대(500kg SWL)는 CCLi Rigging manual SWL과 Z5826의 CCL 대응 정격 근거로 CCL과 동일 채택 — AE 문장에 24대 수치가 직접 명시되지 않아 CCL8보다 근거 신뢰도 약간 낮음(원문 명시). Safe_Limit 열은 원문에 없어 null." }
+      ],
+      "safetyFactor": null,
+      "maxWindLoad": null,
+      "source": "CCLi Rigging manual p.5; AE/SPS"
+    },
+    "presets": null,
+    "cardioidCapability": "Built-in (CCL8과 동일 근거, \"compact cardioid line array loudspeaker\" 자기 서술)"
   },
   {
     "id": "spk-db-ccli12",
@@ -258,6 +272,20 @@ export const DB_CL_I_SERIES = [
       ]
     },
     "watt": 400,
-    "notes": "CCL12의 설치 버전 — CCLi8과 동일 패턴."
+    "notes": "CCL12의 설치 버전 — CCLi8과 동일 패턴.",
+    "mechanicalSafety": {
+      "flownRows": [
+        { "config": "flown", "accessory": "Z5826 CCLi Flying frame", "safeLimit": null, "maxLimit": "24 cabinets (500 kg SWL total system weight incl. rigging components)" }
+      ],
+      "stackedRows": [],
+      "notes": [
+        { "text": "설치형 전용 Flying frame(Z5826). CCLi8과 리깅 액세서리·SWL 공용. 24대 수치는 AE 문장에 직접 명시되지 않고 CCLi Rigging manual SWL·Z5820/CCL 대응 정격 근거로 채택. Safe_Limit 열은 원문에 없어 null." }
+      ],
+      "safetyFactor": null,
+      "maxWindLoad": null,
+      "source": "CCLi Rigging manual p.5; AE/SPS"
+    },
+    "presets": null,
+    "cardioidCapability": "Built-in (CCL8/CCLi8과 동일 근거)"
   }
 ];

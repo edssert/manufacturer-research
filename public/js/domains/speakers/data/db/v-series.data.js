@@ -137,7 +137,37 @@ export const DB_V_SERIES = [
   "relations": {
     "ampIds": []
   },
-  "watt": 500
+  "watt": 500,
+  "mechanicalSafety": {
+    "flownRows": [
+      {
+        "config": "flown (V8/V12 array, no ArrayCalc check required, any splay config)",
+        "accessory": "Z5380 V Flying frame",
+        "safeLimit": "10 V8/V12 cabinets (340 kg / 750 lb total system weight)",
+        "maxLimit": null
+      },
+      {
+        "config": "flown (V8/V12 array, general — ArrayCalc load verification required)",
+        "accessory": "Z5380 V Flying frame",
+        "safeLimit": null,
+        "maxLimit": "24 V-TOP cabinets (Z5380 frame SWL 860 kg / 1896 lb)"
+      }
+    ],
+    "stackedRows": null,
+    "safetyFactor": null,
+    "maxWindLoad": "6 Beaufort(비행 비권장 상한); 8 Beaufort 초과 시 반드시 하강·고정",
+    "notes": [
+      {
+        "text": "Safe limit=배치 변수와 무관하게 항상 충족하는 최대 캐비닛 수, Maximum limit=ArrayCalc 하중 검증을 전제로 도달 가능한 최대 수(Z5380 프레임 SWL 860 kg / 1896 lb 기준)."
+      },
+      {
+        "text": "그라운드스택 구성은 OM/Rigging manual에 존재하나 원문 세부 페이지 미열람으로 대수 상한 미확인 — 이 표에는 플라잉 구성만 반영. Safety factor는 매뉴얼에 명시 비율 수치 없어 null."
+      }
+    ],
+    "source": "V-Series Rigging manual v1.12 (Chapter 1.3 Load capacity/System safety p.4, Chapter 1.3.1 Wind loads p.4); OM Chapter 2.1 p.6"
+  },
+  "presets": null,
+  "cardioidCapability": "No"
 },
 {
   "id": "spk-db-v12",
@@ -255,7 +285,37 @@ export const DB_V_SERIES = [
   "relations": {
     "ampIds": []
   },
-  "watt": 500
+  "watt": 500,
+  "mechanicalSafety": {
+    "flownRows": [
+      {
+        "config": "flown (V8/V12 array, no ArrayCalc check required, any splay config)",
+        "accessory": "Z5380 V Flying frame",
+        "safeLimit": "10 V8/V12 cabinets (340 kg / 750 lb total system weight)",
+        "maxLimit": null
+      },
+      {
+        "config": "flown (V8/V12 array, general — ArrayCalc load verification required)",
+        "accessory": "Z5380 V Flying frame",
+        "safeLimit": null,
+        "maxLimit": "24 V-TOP cabinets (Z5380 frame SWL 860 kg / 1896 lb)"
+      }
+    ],
+    "stackedRows": null,
+    "safetyFactor": null,
+    "maxWindLoad": "6 Beaufort(비행 비권장 상한); 8 Beaufort 초과 시 반드시 하강·고정",
+    "notes": [
+      {
+        "text": "Safe limit=배치 변수와 무관하게 항상 충족하는 최대 캐비닛 수, Maximum limit=ArrayCalc 하중 검증을 전제로 도달 가능한 최대 수(Z5380 프레임 SWL 860 kg / 1896 lb 기준)."
+      },
+      {
+        "text": "그라운드스택 구성은 OM/Rigging manual에 존재하나 원문 세부 페이지 미열람으로 대수 상한 미확인 — 이 표에는 플라잉 구성만 반영. Safety factor는 매뉴얼에 명시 비율 수치 없어 null."
+      }
+    ],
+    "source": "V-Series Rigging manual v1.12 (Chapter 1.3 Load capacity/System safety p.4, Chapter 1.3.1 Wind loads p.4); OM Chapter 2.1 p.6"
+  },
+  "presets": null,
+  "cardioidCapability": "No"
 },
 {
   "id": "spk-db-vi8",
@@ -334,7 +394,43 @@ export const DB_V_SERIES = [
   "relations": {
     "ampIds": []
   },
-  "watt": 500
+  "watt": 500,
+  "mechanicalSafety": {
+    "flownRows": [
+      {
+        "config": "flown (small array)",
+        "accessory": "Z5387.000 Vi Mounting frame top",
+        "safeLimit": null,
+        "maxLimit": "4 Vi-TOP cabinets (141 kg / 311 lb SWL)"
+      },
+      {
+        "config": "flown (larger array, exceeds Vi Mounting frame capacity, no ArrayCalc check required, any splay config)",
+        "accessory": "Z5380 V Flying frame (shared with V8/V12)",
+        "safeLimit": "10 Vi8/Vi12 cabinets (340 kg / 750 lb total system weight)",
+        "maxLimit": null
+      },
+      {
+        "config": "flown (larger array, general — ArrayCalc verification required)",
+        "accessory": "Z5380 V Flying frame (shared with V8/V12)",
+        "safeLimit": null,
+        "maxLimit": "24 Vi-TOP cabinets (Z5380 frame SWL 860 kg / 1896 lb)"
+      }
+    ],
+    "stackedRows": null,
+    "safetyFactor": null,
+    "maxWindLoad": null,
+    "notes": [
+      {
+        "text": "대형 어레이가 Vi Mounting frame 용량을 초과하면 Z5380 V Flying frame(V8/V12 공용)을 사용해야 하며 그 상한 수치가 Vi8/Vi12에도 그대로 적용됨이 원문에 명시됨."
+      },
+      {
+        "text": "Max wind load: Vi Rigging manual은 정성적 경고만 있고 6/8 Beaufort 구체 수치 기준 없음 — null. Safety factor: 명시 비율 수치 없음 — null."
+      }
+    ],
+    "source": "Vi Rigging manual v1.4 (Chapter 1.3 Load capacity/System safety p.4, Chapter 2.1 Mounting and flying frames p.7-9); OM Chapter 2.1 p.5"
+  },
+  "presets": null,
+  "cardioidCapability": "No"
 },
 {
   "id": "spk-db-vi12",
@@ -413,6 +509,42 @@ export const DB_V_SERIES = [
   "relations": {
     "ampIds": []
   },
-  "watt": 500
+  "watt": 500,
+  "mechanicalSafety": {
+    "flownRows": [
+      {
+        "config": "flown (small array)",
+        "accessory": "Z5387.000 Vi Mounting frame top",
+        "safeLimit": null,
+        "maxLimit": "4 Vi-TOP cabinets (141 kg / 311 lb SWL)"
+      },
+      {
+        "config": "flown (larger array, exceeds Vi Mounting frame capacity, no ArrayCalc check required, any splay config)",
+        "accessory": "Z5380 V Flying frame (shared with V8/V12)",
+        "safeLimit": "10 Vi8/Vi12 cabinets (340 kg / 750 lb total system weight)",
+        "maxLimit": null
+      },
+      {
+        "config": "flown (larger array, general — ArrayCalc verification required)",
+        "accessory": "Z5380 V Flying frame (shared with V8/V12)",
+        "safeLimit": null,
+        "maxLimit": "24 Vi-TOP cabinets (Z5380 frame SWL 860 kg / 1896 lb)"
+      }
+    ],
+    "stackedRows": null,
+    "safetyFactor": null,
+    "maxWindLoad": null,
+    "notes": [
+      {
+        "text": "대형 어레이가 Vi Mounting frame 용량을 초과하면 Z5380 V Flying frame(V8/V12 공용)을 사용해야 하며 그 상한 수치가 Vi8/Vi12에도 그대로 적용됨이 원문에 명시됨."
+      },
+      {
+        "text": "Max wind load: Vi Rigging manual은 정성적 경고만 있고 6/8 Beaufort 구체 수치 기준 없음 — null. Safety factor: 명시 비율 수치 없음 — null."
+      }
+    ],
+    "source": "Vi Rigging manual v1.4 (Chapter 1.3 Load capacity/System safety p.4, Chapter 2.1 Mounting and flying frames p.7-9); OM Chapter 2.1 p.5"
+  },
+  "presets": null,
+  "cardioidCapability": "No"
 }
 ];
