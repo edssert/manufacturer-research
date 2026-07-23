@@ -35,7 +35,7 @@ export const LA_L_SERIES = [
     // 아닌, 전용 LC 드라이버군 내장 + standard array + 프리셋 선택으로
     // 성립). 원문: L2_OM_EN_5.0.pdf "L2 and L2D each feature four low
     // cardioid (LC) loudspeakers on the sides...".
-    "cardioidCapability": "Built-in per-element (전용 LC 드라이버군 + 프리셋 선택, 반전 유닛 불필요)",
+    "cardioidCapability": "Integrated",
     "weight": 158,
     "transducers": "LC: 4 × 12″ · LF: 8 × 10″ · HF: 8 × 3″",
     "connectors": "37-point male connector (32 points used)",
@@ -159,7 +159,7 @@ export const LA_L_SERIES = [
     // [upload/L2D_v1.6.md 마스터 스키마 반영] Cardioid_Capability — L2와
     // 동일 근거(공용 매뉴얼 챕터, "L2 and L2D each feature four low
     // cardioid (LC) loudspeakers on the sides...").
-    "cardioidCapability": "Built-in per-element (전용 LC 드라이버군 + 프리셋 선택, 반전 유닛 불필요)",
+    "cardioidCapability": "Integrated",
     "weight": 149,
     "transducers": "LC: 4 × 12″ · LF: 8 × 10″ · HF: 8 × 3″",
     "connectors": "37-point male connector (32 points used)",

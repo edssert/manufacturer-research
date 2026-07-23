@@ -143,7 +143,7 @@ export const DB_CL_I_SERIES = [
       "source": "CCLi Rigging manual p.5; AE/SPS"
     },
     "presets": null,
-    "cardioidCapability": "Built-in (CCL8과 동일 근거, \"compact cardioid line array loudspeaker\" 자기 서술)"
+    "cardioidCapability": "Integrated"
   },
   {
     "id": "spk-db-ccli12",
@@ -286,6 +286,6 @@ export const DB_CL_I_SERIES = [
       "source": "CCLi Rigging manual p.5; AE/SPS"
     },
     "presets": null,
-    "cardioidCapability": "Built-in (CCL8/CCLi8과 동일 근거)"
+    "cardioidCapability": "Integrated"
   }
 ];

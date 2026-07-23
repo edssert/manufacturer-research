@@ -90,7 +90,7 @@ export const DB_SL_SERIES = [
     "source": "GSL/KSL Rigging manual v1.16 en Ch.1.3, 1.5"
   },
   "presets": null,
-  "cardioidCapability": "Built-in (단일 인클로저, 150Hz 이하 카디오이드 지향성 수렴)"
+  "cardioidCapability": "Integrated"
 },
 {
   "id": "spk-db-gsl12",
@@ -180,7 +180,7 @@ export const DB_SL_SERIES = [
     "source": "GSL/KSL Rigging manual v1.16 en Ch.1.3, 1.5"
   },
   "presets": null,
-  "cardioidCapability": "Built-in (단일 인클로저, 150Hz 이하 카디오이드 지향성 수렴)"
+  "cardioidCapability": "Integrated"
 },
 {
   "id": "spk-db-ksl8",
@@ -299,7 +299,7 @@ export const DB_SL_SERIES = [
     "source": "GSL/KSL Rigging manual v1.16 en Ch.1.3, 1.5"
   },
   "presets": null,
-  "cardioidCapability": "Built-in (단일 인클로저, 150Hz 이하 카디오이드 지향성 수렴 — GSL과 동일 메커니즘)"
+  "cardioidCapability": "Integrated"
 },
 {
   "id": "spk-db-ksl12",
@@ -418,7 +418,7 @@ export const DB_SL_SERIES = [
     "source": "GSL/KSL Rigging manual v1.16 en Ch.1.3, 1.5"
   },
   "presets": null,
-  "cardioidCapability": "Built-in (KSL8과 동일 근거)"
+  "cardioidCapability": "Integrated"
 },
 {
   "id": "spk-db-xsl8",
@@ -541,7 +541,7 @@ export const DB_SL_SERIES = [
     "source": "XSL Rigging manual v1.5 en Ch.1.3, 1.3.1"
   },
   "presets": null,
-  "cardioidCapability": "Built-in (단일 인클로저, 카디오이드 기법을 저음역에서 사용 — 구체적 수렴 대역 조건은 XSL 원문에 명시 없음, GSL/KSL과 다른 근거 수준)"
+  "cardioidCapability": "Integrated"
 },
 {
   "id": "spk-db-xsl12",
@@ -664,6 +664,6 @@ export const DB_SL_SERIES = [
     "source": "XSL Rigging manual v1.5 en Ch.1.3, 1.3.1"
   },
   "presets": null,
-  "cardioidCapability": "Built-in (XSL8과 동일 근거)"
+  "cardioidCapability": "Integrated"
 }
 ];

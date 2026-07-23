@@ -142,7 +142,7 @@ export const DB_CL_SERIES = [
     "source": "CCL Rigging manual v1.3 en p.5; AE/SPS"
   },
   "presets": null,
-  "cardioidCapability": "Built-in (원문 자체가 \"compact cardioid line array loudspeaker\"로 자기 서술, GSL과 달리 저음역 카디오이드 수렴 대역 조건은 원문에 별도 명시 없음)"
+  "cardioidCapability": "Integrated"
 },
 {
   "id": "spk-db-ccl12",
@@ -284,7 +284,7 @@ export const DB_CL_SERIES = [
     "source": "CCL Rigging manual v1.3 en p.5; AE/SPS"
   },
   "presets": null,
-  "cardioidCapability": "Built-in (CCL8과 동일 근거, \"compact cardioid line array loudspeaker\" 자기 서술)"
+  "cardioidCapability": "Integrated"
 },
 {
   "id": "spk-db-ccl-sub",

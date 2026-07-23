@@ -122,7 +122,7 @@ export const DB_SL_I_SERIES = [
       "source": "KSLi Rigging manual v1.1 en Ch.1.4, 1.4.1"
     },
     "presets": null,
-    "cardioidCapability": "Built-in (KSL8과 동일 근거)"
+    "cardioidCapability": "Integrated"
   },
   {
     "id": "spk-db-ksli12",
@@ -242,7 +242,7 @@ export const DB_SL_I_SERIES = [
       "source": "KSLi Rigging manual v1.1 en Ch.1.4, 1.4.1"
     },
     "presets": null,
-    "cardioidCapability": "Built-in (KSLi8과 동일 근거)"
+    "cardioidCapability": "Integrated"
   },
   {
     "id": "spk-db-xsli8",
@@ -366,7 +366,7 @@ export const DB_SL_I_SERIES = [
       "source": "XSLi Rigging manual v1.2 en Ch.1.4, 1.4.1"
     },
     "presets": null,
-    "cardioidCapability": "Built-in (XSL8과 동일 근거)"
+    "cardioidCapability": "Integrated"
   },
   {
     "id": "spk-db-xsli12",
@@ -490,7 +490,7 @@ export const DB_SL_I_SERIES = [
       "source": "XSLi Rigging manual v1.2 en Ch.1.4, 1.4.1"
     },
     "presets": null,
-    "cardioidCapability": "Built-in (XSLi8과 동일 근거)"
+    "cardioidCapability": "Integrated"
   },
   {
     "id": "spk-db-xsli8-svs",
@@ -601,7 +601,7 @@ export const DB_SL_I_SERIES = [
     "notes": "XSL8 계열의 SVS(설치 특화) 버전 — 음향은 XSL8과 동일. 차이: 경량화(37kg)·소형화(280×503mm), IP55, 권장 앰프 40D(대안 D80/30D). 앰프 매칭은 앱 앰프 인벤토리 정합을 위해 XSL8 것을 승계.",
     "mechanicalSafety": null,
     "presets": null,
-    "cardioidCapability": "Built-in (XSLi8과 동일 근거, 정성적 서술만)"
+    "cardioidCapability": "Integrated"
   },
   {
     "id": "spk-db-xsli12-svs",
@@ -712,6 +712,6 @@ export const DB_SL_I_SERIES = [
     "notes": "XSL12 계열의 SVS 버전 — XSLi8 SVS와 동일 패턴.",
     "mechanicalSafety": null,
     "presets": null,
-    "cardioidCapability": "Built-in (XSLi8-SVS와 동일 근거)"
+    "cardioidCapability": "Integrated"
   }
 ];
