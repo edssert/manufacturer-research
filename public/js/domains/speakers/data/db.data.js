@@ -5,10 +5,14 @@ import { DB_CL_SERIES } from "./db/cl-series.data.js";
 import { DB_V_SERIES } from "./db/v-series.data.js";
 import { DB_T_SERIES } from "./db/t-series.data.js";
 import { DB_AL_SERIES } from "./db/al-series.data.js";
+import { DB_SL_I_SERIES } from "./db/sl-i-series.data.js";
+import { DB_CL_I_SERIES } from "./db/cl-i-series.data.js";
 
 export const DB_SPEAKERS = [
   ...DB_SL_SERIES,
+  ...DB_SL_I_SERIES,
   ...DB_CL_SERIES,
+  ...DB_CL_I_SERIES,
   ...DB_V_SERIES,
   ...DB_T_SERIES,
   ...DB_AL_SERIES,
