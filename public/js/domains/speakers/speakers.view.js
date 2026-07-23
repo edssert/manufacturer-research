@@ -610,6 +610,11 @@ export function ampMatchingHTML(d, resolveAmpId) {
         byPreset.forEach(p => flat.push({ mode: c.mode, preset: p.preset, perCh: c.perCh, total: c.total, spl: p.spl }));
       } else if (!c.splByPreset && c.spl != null) {
         flat.push({ mode: c.mode, preset: null, perCh: c.perCh, total: c.total, spl: c.spl });
+      } else if (!c.splByPreset) {
+        // SPL 미게재 설정(d&b 등 — 원본이 per-config SPL 을 제공하지 않는
+        // 브랜드)도 앰프·모드·Links/ch·Max/amp 매칭 정보는 유효하므로 행을
+        // 표시한다(SPL 열만 "—"). 이게 없으면 d&b 스피커는 매칭표가 빈다.
+        flat.push({ mode: c.mode, preset: null, perCh: c.perCh, total: c.total, spl: null });
       }
     });
     if (!flat.length) return;
@@ -619,8 +624,8 @@ export function ampMatchingHTML(d, resolveAmpId) {
     const rest = sorted.slice(1);
     const groupId = `spk-amp-${gi}`;
     const toggleBtn = rest.length ? `<button type="button" class="match-table__toggle-btn" data-toggle-group="${groupId}" aria-expanded="false" aria-label="설정 ${rest.length}개 더 보기">+${rest.length}</button>` : "";
-    rows += `<div class="match-table__row${clickableClass}"${clickableAttr}><div class="match-table__cell match-table__cell--model" title="${esc(a.model)}"><span class="match-table__model-name">${esc(a.model)}</span>${toggleBtn}</div><div class="match-table__cell match-table__cell--mode">${rep.mode ? esc(rep.mode) : "—"}</div><div class="match-table__cell match-table__cell--preset" title="${rep.preset ? esc(rep.preset) : ""}">${rep.preset ? esc(rep.preset) : "—"}</div><div class="match-table__cell">${rep.perCh != null ? rep.perCh : "—"}</div><div class="match-table__cell">${rep.total != null ? rep.total : "—"}</div><div class="match-table__cell">${rep.spl + " dB"}</div></div>`;
-    rows += rest.map(r => `<div class="match-table__row match-table__row--sub" data-toggle-member="${groupId}" hidden><div class="match-table__cell match-table__cell--model"></div><div class="match-table__cell match-table__cell--mode">${r.mode ? esc(r.mode) : "—"}</div><div class="match-table__cell match-table__cell--preset" title="${r.preset ? esc(r.preset) : ""}">${r.preset ? esc(r.preset) : "—"}</div><div class="match-table__cell">${r.perCh != null ? r.perCh : "—"}</div><div class="match-table__cell">${r.total != null ? r.total : "—"}</div><div class="match-table__cell">${r.spl + " dB"}</div></div>`).join("");
+    rows += `<div class="match-table__row${clickableClass}"${clickableAttr}><div class="match-table__cell match-table__cell--model" title="${esc(a.model)}"><span class="match-table__model-name">${esc(a.model)}</span>${toggleBtn}</div><div class="match-table__cell match-table__cell--mode">${rep.mode ? esc(rep.mode) : "—"}</div><div class="match-table__cell match-table__cell--preset" title="${rep.preset ? esc(rep.preset) : ""}">${rep.preset ? esc(rep.preset) : "—"}</div><div class="match-table__cell">${rep.perCh != null ? rep.perCh : "—"}</div><div class="match-table__cell">${rep.total != null ? rep.total : "—"}</div><div class="match-table__cell">${rep.spl != null ? rep.spl + " dB" : "—"}</div></div>`;
+    rows += rest.map(r => `<div class="match-table__row match-table__row--sub" data-toggle-member="${groupId}" hidden><div class="match-table__cell match-table__cell--model"></div><div class="match-table__cell match-table__cell--mode">${r.mode ? esc(r.mode) : "—"}</div><div class="match-table__cell match-table__cell--preset" title="${r.preset ? esc(r.preset) : ""}">${r.preset ? esc(r.preset) : "—"}</div><div class="match-table__cell">${r.perCh != null ? r.perCh : "—"}</div><div class="match-table__cell">${r.total != null ? r.total : "—"}</div><div class="match-table__cell">${r.spl != null ? r.spl + " dB" : "—"}</div></div>`).join("");
   });
   return `<div class="match-table match-table--toggleable"><div class="match-table__row match-table__row--head"><div class="match-table__cell">Amplifier</div><div class="match-table__cell">Mode</div><div class="match-table__cell">Preset</div><div class="match-table__cell">Links/ch</div><div class="match-table__cell">Max/amp</div><div class="match-table__cell">Max SPL</div></div><div class="match-table__body">${rows}</div></div>`;
 }
