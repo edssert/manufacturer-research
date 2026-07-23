@@ -110,7 +110,44 @@ export const DB_AL_SERIES = [
   "relations": {
     "ampIds": []
   },
-  "watt": 400
+  "watt": 400,
+  "mechanicalSafety": {
+    "flownRows": [
+      {
+        "config": "flown",
+        "accessory": "Z5455 AL Flying frame",
+        "safeLimit": null,
+        "maxLimit": "4"
+      },
+      {
+        "config": "horizontal cluster",
+        "accessory": "Z5456 AL Flying adapter",
+        "safeLimit": null,
+        "maxLimit": "4"
+      }
+    ],
+    "stackedRows": [
+      {
+        "config": "ground-stacked",
+        "accessory": "Z5458 AL Base plate",
+        "safeLimit": null,
+        "maxLimit": "3"
+      }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": null,
+    "notes": [
+      {
+        "text": "up to four loudspeakers flown via Z5455 AL Flying frame; horizontal cluster of up to four via Z5456 AL Flying adapter; stacked maximum three via Z5458 AL Base plate (Z5458은 d&b 서브우퍼 V-SUB/V-GSUB 위에도 배치 가능)."
+      },
+      {
+        "text": "이 제품 OM에는 K1/KS28류의 전용 Mechanical safety 챕터(safe limit/maximum limit 이원 구조·2006/42/EC 안전계수)가 없어 safe limit·safety factor·max wind load 모두 null."
+      }
+    ],
+    "source": "SPS; OM p.5 A-Series rigging components"
+  },
+  "presets": null,
+  "cardioidCapability": "No"
 },
 {
   "id": "spk-db-al90",
@@ -203,7 +240,44 @@ export const DB_AL_SERIES = [
   "relations": {
     "ampIds": []
   },
-  "watt": 400
+  "watt": 400,
+  "mechanicalSafety": {
+    "flownRows": [
+      {
+        "config": "flown",
+        "accessory": "Z5455 AL Flying frame",
+        "safeLimit": null,
+        "maxLimit": "4"
+      },
+      {
+        "config": "horizontal cluster",
+        "accessory": "Z5456 AL Flying adapter",
+        "safeLimit": null,
+        "maxLimit": "4"
+      }
+    ],
+    "stackedRows": [
+      {
+        "config": "ground-stacked",
+        "accessory": "Z5458 AL Base plate",
+        "safeLimit": null,
+        "maxLimit": "3"
+      }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": null,
+    "notes": [
+      {
+        "text": "up to four loudspeakers flown via Z5455 AL Flying frame; horizontal cluster of up to four via Z5456 AL Flying adapter; stacked maximum three via Z5458 AL Base plate (Z5458은 d&b 서브우퍼 V-SUB/V-GSUB 위에도 배치 가능)."
+      },
+      {
+        "text": "이 제품 OM에는 K1/KS28류의 전용 Mechanical safety 챕터(safe limit/maximum limit 이원 구조·2006/42/EC 안전계수)가 없어 safe limit·safety factor·max wind load 모두 null."
+      }
+    ],
+    "source": "SPS; OM p.5 A-Series rigging components"
+  },
+  "presets": null,
+  "cardioidCapability": "No"
 },
 {
   "id": "spk-db-ali60",
@@ -297,6 +371,43 @@ export const DB_AL_SERIES = [
     "ampIds": []
   },
   "watt": 400,
+  "mechanicalSafety": {
+    "flownRows": [
+      {
+        "config": "flown",
+        "accessory": "Z5455 AL Flying frame",
+        "safeLimit": null,
+        "maxLimit": "4"
+      },
+      {
+        "config": "horizontal cluster",
+        "accessory": "Z5456 AL Flying adapter",
+        "safeLimit": null,
+        "maxLimit": "4"
+      }
+    ],
+    "stackedRows": [
+      {
+        "config": "ground-stacked",
+        "accessory": "Z5458 AL Base plate",
+        "safeLimit": null,
+        "maxLimit": "3"
+      }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": null,
+    "notes": [
+      {
+        "text": "flown up to four via Z5455 AL Flying frame; horizontal cluster of up to four via Z5456 AL Flying adapter; stacked maximum three via Z5458 AL Base plate — 베이스플레이트는 Vi-SUB/Vi-GSUB(설치용 서브우퍼) 위에도 배치 가능(원문 계열명 그대로 보존)."
+      },
+      {
+        "text": "전용 Mechanical safety 챕터 부재로 safe limit·safety factor·max wind load 모두 null."
+      }
+    ],
+    "source": "OM p.5 A-Series rigging components"
+  },
+  "presets": null,
+  "cardioidCapability": "No",
   "notes": "AL60 설치형 — 음향/캐비닛 동일. 차이: 커넥터가 NLT4 아닌 4극 Phoenix 전용, 핸들 서술 없음, 기본 마감 impact resistant black paint(방수 PCP 는 WR 옵션), EN54-24/ISO 7240-24 인증(WR/SWR/SVS 변형). 권장 앰프 30D(SPS), OM 표는 30D/40D 로 상충."
 },
 {
@@ -391,6 +502,43 @@ export const DB_AL_SERIES = [
     "ampIds": []
   },
   "watt": 400,
+  "mechanicalSafety": {
+    "flownRows": [
+      {
+        "config": "flown",
+        "accessory": "Z5455 AL Flying frame",
+        "safeLimit": null,
+        "maxLimit": "4"
+      },
+      {
+        "config": "horizontal cluster",
+        "accessory": "Z5456 AL Flying adapter",
+        "safeLimit": null,
+        "maxLimit": "4"
+      }
+    ],
+    "stackedRows": [
+      {
+        "config": "ground-stacked",
+        "accessory": "Z5458 AL Base plate",
+        "safeLimit": null,
+        "maxLimit": "3"
+      }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": null,
+    "notes": [
+      {
+        "text": "flown up to four via Z5455 AL Flying frame; horizontal cluster of up to four via Z5456 AL Flying adapter; stacked maximum three via Z5458 AL Base plate — 베이스플레이트는 Vi-SUB/Vi-GSUB(설치용 서브우퍼) 위에도 배치 가능(원문 계열명 그대로 보존)."
+      },
+      {
+        "text": "전용 Mechanical safety 챕터 부재로 safe limit·safety factor·max wind load 모두 null."
+      }
+    ],
+    "source": "OM p.5 A-Series rigging components"
+  },
+  "presets": null,
+  "cardioidCapability": "No",
   "notes": "AL90 설치형 — 음향/캐비닛 동일(무게 23 kg 은 SPS/OM 일치값 채택, AE 원문은 22/20 kg 중복 오류). 차이: 4극 Phoenix 전용 커넥터, 핸들 서술 없음, 기본 마감 black paint(PCP 는 WR 옵션), EN54-24 인증. 권장 앰프 30D(SPS), OM 표는 30D/40D 로 상충."
 }
 ];

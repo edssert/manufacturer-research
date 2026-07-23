@@ -106,7 +106,23 @@ export const DB_SL_I_SERIES = [
       ]
     },
     "watt": 700,
-    "notes": "KSL8의 설치(install) 버전 — 음향·드라이버·크로스오버·앰프 매칭은 KSL8과 동일. 차이: 고정 설치 전용 Mounting frame(투어링 Flying frame과 별개), 깊이 597→572mm, 중량 58→57kg, IP 등급 미표기(실내 설치 지향)."
+    "notes": "KSL8의 설치(install) 버전 — 음향·드라이버·크로스오버·앰프 매칭은 KSL8과 동일. 차이: 고정 설치 전용 Mounting frame(투어링 Flying frame과 별개), 깊이 597→572mm, 중량 58→57kg, IP 등급 미표기(실내 설치 지향).",
+    "mechanicalSafety": {
+      "flownRows": [
+        { "config": "fixed install (TOP only)", "accessory": "Z5743 KSLi-TOP Mounting frame", "safeLimit": null, "maxLimit": "10 cabinets (650 kg SWL total system weight incl. rigging)" },
+        { "config": "SUB column (KSLi-SUB)", "accessory": "Z5744 KSLi-SUB Mounting frame", "safeLimit": null, "maxLimit": "6 cabinets (550 kg SWL total system weight incl. rigging)" },
+        { "config": "mixed (TOP below SUB)", "accessory": "Z5744 KSLi-SUB Mounting frame + Z5745 KSLi-SUB Mounting adapter", "safeLimit": null, "maxLimit": "6 x KSLi-TOP below 2 x KSLi-SUB (600 kg SWL total system weight incl. rigging)" }
+      ],
+      "stackedRows": [],
+      "notes": [
+        { "text": "설치(install) 전용 리깅 — 투어링 KSL과 다른 Mounting frame 사용(각자 md 근거). flownRows는 고정 설치 마운팅 구성(그라운드스택 아님). Safe_Limit 열은 원문에 없어 null." }
+      ],
+      "safetyFactor": null,
+      "maxWindLoad": "not suspended by hoisting chains/steel wire ropes; must be firmly attached to onsite roof construction (fixed outdoor installations)",
+      "source": "KSLi Rigging manual v1.1 en Ch.1.4, 1.4.1"
+    },
+    "presets": null,
+    "cardioidCapability": "Built-in (KSL8과 동일 근거)"
   },
   {
     "id": "spk-db-ksli12",
@@ -210,7 +226,23 @@ export const DB_SL_I_SERIES = [
       ]
     },
     "watt": 700,
-    "notes": "KSL12의 설치 버전 — 음향은 KSL12와 동일, 물리 스펙만 상이(KSLi8과 동일 패턴)."
+    "notes": "KSL12의 설치 버전 — 음향은 KSL12와 동일, 물리 스펙만 상이(KSLi8과 동일 패턴).",
+    "mechanicalSafety": {
+      "flownRows": [
+        { "config": "fixed install (TOP only)", "accessory": "Z5743 KSLi-TOP Mounting frame", "safeLimit": null, "maxLimit": "10 cabinets (650 kg SWL total system weight incl. rigging)" },
+        { "config": "SUB column (KSLi-SUB)", "accessory": "Z5744 KSLi-SUB Mounting frame", "safeLimit": null, "maxLimit": "6 cabinets (550 kg SWL total system weight incl. rigging)" },
+        { "config": "mixed (TOP below SUB)", "accessory": "Z5744 KSLi-SUB Mounting frame + Z5745 KSLi-SUB Mounting adapter", "safeLimit": null, "maxLimit": "6 x KSLi-TOP below 2 x KSLi-SUB (600 kg SWL total system weight incl. rigging)" }
+      ],
+      "stackedRows": [],
+      "notes": [
+        { "text": "설치(install) 전용 리깅 — KSLi8과 리깅 액세서리·하중 정격 공용. flownRows는 고정 설치 마운팅 구성. Safe_Limit 열은 원문에 없어 null." }
+      ],
+      "safetyFactor": null,
+      "maxWindLoad": "not suspended by hoisting chains/steel wire ropes; must be firmly attached to onsite roof construction (fixed outdoor installations)",
+      "source": "KSLi Rigging manual v1.1 en Ch.1.4, 1.4.1"
+    },
+    "presets": null,
+    "cardioidCapability": "Built-in (KSLi8과 동일 근거)"
   },
   {
     "id": "spk-db-xsli8",
@@ -318,7 +350,23 @@ export const DB_SL_I_SERIES = [
       ]
     },
     "watt": 700,
-    "notes": "XSL8의 설치 버전 — 음향·드라이버·치수는 XSL8과 동일, IP 등급 미표기(설치 지향), 고정 설치 리깅."
+    "notes": "XSL8의 설치 버전 — 음향·드라이버·치수는 XSL8과 동일, IP 등급 미표기(설치 지향), 고정 설치 리깅.",
+    "mechanicalSafety": {
+      "flownRows": [
+        { "config": "fixed install (TOP only, tension mode)", "accessory": "Z5787.000 XSLi Top mounting frame", "safeLimit": null, "maxLimit": "12 cabinets (500 kg SWL total system weight incl. rigging)" },
+        { "config": "SUB column (XSLi-SUB)", "accessory": "Z5788 XSLi-SUB Mounting frame", "safeLimit": null, "maxLimit": "7 cabinets (500 kg SWL total system weight incl. rigging)" },
+        { "config": "mixed (TOP below SUB)", "accessory": "Z5788 XSLi-SUB Mounting frame + Z5780 XSLi-SUB Adapter frame", "safeLimit": null, "maxLimit": "500 kg SWL total system weight incl. rigging (혼합 배열, XSLi-TOP 아래 XSLi-SUB)" }
+      ],
+      "stackedRows": [],
+      "notes": [
+        { "text": "설치(install) 전용 리깅 — 투어링 XSL과 다른 Mounting frame 사용(각자 md 근거). flownRows는 고정 설치 마운팅 구성. Safe_Limit 열은 원문에 없어 null." }
+      ],
+      "safetyFactor": null,
+      "maxWindLoad": "not suspended by hoisting chains/steel wire ropes; must be firmly attached to onsite roof construction (fixed outdoor installations)",
+      "source": "XSLi Rigging manual v1.2 en Ch.1.4, 1.4.1"
+    },
+    "presets": null,
+    "cardioidCapability": "Built-in (XSL8과 동일 근거)"
   },
   {
     "id": "spk-db-xsli12",
@@ -426,7 +474,23 @@ export const DB_SL_I_SERIES = [
       ]
     },
     "watt": 700,
-    "notes": "XSL12의 설치 버전 — XSLi8과 동일 패턴."
+    "notes": "XSL12의 설치 버전 — XSLi8과 동일 패턴.",
+    "mechanicalSafety": {
+      "flownRows": [
+        { "config": "fixed install (TOP only, tension mode)", "accessory": "Z5787.000 XSLi Top mounting frame", "safeLimit": null, "maxLimit": "12 cabinets (500 kg SWL total system weight incl. rigging)" },
+        { "config": "SUB column (XSLi-SUB)", "accessory": "Z5788 XSLi-SUB Mounting frame", "safeLimit": null, "maxLimit": "7 cabinets (500 kg SWL total system weight incl. rigging)" },
+        { "config": "mixed (TOP below SUB)", "accessory": "Z5788 XSLi-SUB Mounting frame + Z5780 XSLi-SUB Adapter frame", "safeLimit": null, "maxLimit": "500 kg SWL total system weight incl. rigging (혼합 배열, XSLi-TOP 아래 XSLi-SUB)" }
+      ],
+      "stackedRows": [],
+      "notes": [
+        { "text": "설치(install) 전용 리깅 — XSLi8과 리깅 액세서리·하중 정격 공용. flownRows는 고정 설치 마운팅 구성. Safe_Limit 열은 원문에 없어 null." }
+      ],
+      "safetyFactor": null,
+      "maxWindLoad": "not suspended by hoisting chains/steel wire ropes; must be firmly attached to onsite roof construction (fixed outdoor installations)",
+      "source": "XSLi Rigging manual v1.2 en Ch.1.4, 1.4.1"
+    },
+    "presets": null,
+    "cardioidCapability": "Built-in (XSLi8과 동일 근거)"
   },
   {
     "id": "spk-db-xsli8-svs",
@@ -534,7 +598,10 @@ export const DB_SL_I_SERIES = [
       ]
     },
     "watt": 700,
-    "notes": "XSL8 계열의 SVS(설치 특화) 버전 — 음향은 XSL8과 동일. 차이: 경량화(37kg)·소형화(280×503mm), IP55, 권장 앰프 40D(대안 D80/30D). 앰프 매칭은 앱 앰프 인벤토리 정합을 위해 XSL8 것을 승계."
+    "notes": "XSL8 계열의 SVS(설치 특화) 버전 — 음향은 XSL8과 동일. 차이: 경량화(37kg)·소형화(280×503mm), IP55, 권장 앰프 40D(대안 D80/30D). 앰프 매칭은 앱 앰프 인벤토리 정합을 위해 XSL8 것을 승계.",
+    "mechanicalSafety": null,
+    "presets": null,
+    "cardioidCapability": "Built-in (XSLi8과 동일 근거, 정성적 서술만)"
   },
   {
     "id": "spk-db-xsli12-svs",
@@ -642,6 +709,9 @@ export const DB_SL_I_SERIES = [
       ]
     },
     "watt": 700,
-    "notes": "XSL12 계열의 SVS 버전 — XSLi8 SVS와 동일 패턴."
+    "notes": "XSL12 계열의 SVS 버전 — XSLi8 SVS와 동일 패턴.",
+    "mechanicalSafety": null,
+    "presets": null,
+    "cardioidCapability": "Built-in (XSLi8-SVS와 동일 근거)"
   }
 ];

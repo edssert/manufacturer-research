@@ -929,12 +929,14 @@ function notesToggleBlockHTML(notes, source, toggleId, speakerId) {
 function mechanicalSafetyHTML(d) {
   const ms = d.mechanicalSafety;
   if (!ms) return "";
+  // 값이 없는 셀은 "null" 문자열 대신 "—"로 (원문 Safe/Max limit 미기재가 흔함).
+  const cell = v => v != null ? wrapBreakable(v) : "—";
   const rowsHTML = rows => (rows || []).map(r => `
     <div class="match-table__row match-table__row--static">
-      <div class="match-table__cell match-table__cell--model">${wrapBreakable(r.config)}</div>
-      <div class="match-table__cell">${wrapBreakable(r.accessory)}</div>
-      <div class="match-table__cell">${wrapBreakable(r.safeLimit)}</div>
-      <div class="match-table__cell">${wrapBreakable(r.maxLimit)}</div>
+      <div class="match-table__cell match-table__cell--model">${cell(r.config)}</div>
+      <div class="match-table__cell">${cell(r.accessory)}</div>
+      <div class="match-table__cell">${cell(r.safeLimit)}</div>
+      <div class="match-table__cell">${cell(r.maxLimit)}</div>
     </div>`).join("");
   const tableHTML = (title, rowsArr) => rowsArr && rowsArr.length
     ? `<div class="section-label section-label--sub">${esc(title)}</div>

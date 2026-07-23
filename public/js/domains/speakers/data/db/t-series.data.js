@@ -133,7 +133,50 @@ export const DB_T_SERIES = [
   "relations": {
     "ampIds": []
   },
-  "watt": 200
+  "watt": 200,
+  "mechanicalSafety": {
+    "flownRows": [
+      {
+        "config": "flown (T10 array, no ArrayCalc check required, any splay config)",
+        "accessory": "Z5370 T Flying frame",
+        "safeLimit": "10 T10 cabinets (110 kg / 242 lb total system weight)",
+        "maxLimit": null
+      },
+      {
+        "config": "flown (T10 array, general — ArrayCalc load verification required above 110 kg)",
+        "accessory": "Z5370 T Flying frame",
+        "safeLimit": null,
+        "maxLimit": "20 T10 cabinets maximum (Z5370 frame SWL 250 kg / 550 lb)"
+      }
+    ],
+    "stackedRows": [
+      {
+        "config": "ground stack (T10 only, Flying frame as ground support)",
+        "accessory": "Z5370 T Flying frame",
+        "safeLimit": null,
+        "maxLimit": "6 T10 cabinets"
+      },
+      {
+        "config": "ground stack (T-SUB/T10 mixed, Flying frame as ground support)",
+        "accessory": "Z5370 T Flying frame",
+        "safeLimit": null,
+        "maxLimit": "3 T10 cabinets on top of max 2 T-SUB cabinets"
+      }
+    ],
+    "safetyFactor": null,
+    "maxWindLoad": "6 Beaufort(비행 비권장 상한); 8 Beaufort 초과 시 반드시 하강·고정",
+    "notes": [
+      {
+        "text": "Flown 최대 상한은 전용 T-Series Rigging manual의 \"Limitation\"(20대)을 채택. AE Datasheet는 24대로 표기해 문서 간 상충이나, 더 상세·특화된 리깅 매뉴얼을 우선함."
+      },
+      {
+        "text": "Safety factor: Rigging manual 전문(44p)에 명시적 비율 수치 없음 — null."
+      }
+    ],
+    "source": "T-Series Rigging manual v1.2 (Chapter 1.1.1 p.4, 4.1.1 p.20, 4.2.1 p.32, 4.2.2 p.34, Chapter 6 Wind loads p.40)"
+  },
+  "presets": null,
+  "cardioidCapability": "No"
 },
 {
   "id": "spk-db-ti10l",
@@ -254,7 +297,37 @@ export const DB_T_SERIES = [
   "relations": {
     "ampIds": []
   },
-  "watt": 200
+  "watt": 200,
+  "mechanicalSafety": {
+    "flownRows": [
+      {
+        "config": "line array (Z5373 T Cluster bracket, flown or high-stand mounted)",
+        "accessory": "Z5373 T Cluster bracket",
+        "safeLimit": null,
+        "maxLimit": "3 Ti10L cabinets"
+      },
+      {
+        "config": "line array (Z5370 T Flying frame, general)",
+        "accessory": "Z5370 T Flying frame",
+        "safeLimit": null,
+        "maxLimit": null
+      }
+    ],
+    "stackedRows": null,
+    "safetyFactor": null,
+    "maxWindLoad": null,
+    "notes": [
+      {
+        "text": "Z5370 T Flying frame 사용 시 절차는 T-Series Rigging manual을 준용하나, EC Declaration이 Ti10L(Z0551)을 열거하지 않아 T10의 수치 상한(10/20대)을 그대로 전재하지 않고 미확인(null) 유지 — 확정 상한은 Z5373 Cluster bracket 3대뿐."
+      },
+      {
+        "text": "Safety factor / max wind load: EC Declaration에 Ti10L 미포함으로 직접 적용을 보류 — null."
+      }
+    ],
+    "source": "OM Chapter 2.1 p.5, Chapter 3 Ti10L Rigging procedure p.11"
+  },
+  "presets": null,
+  "cardioidCapability": "No"
 },
 {
   "id": "spk-db-ti10p",
@@ -357,6 +430,9 @@ export const DB_T_SERIES = [
   "relations": {
     "ampIds": []
   },
-  "watt": 200
+  "watt": 200,
+  "mechanicalSafety": null,
+  "presets": null,
+  "cardioidCapability": "No"
 }
 ];
