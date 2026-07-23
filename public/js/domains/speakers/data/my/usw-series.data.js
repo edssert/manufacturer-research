@@ -42,7 +42,7 @@ export const MY_USW_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "35 Hz",
         "hi": "140 Hz"
       },
@@ -95,7 +95,7 @@ export const MY_USW_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "35 Hz",
         "hi": "140 Hz"
       },
@@ -148,7 +148,7 @@ export const MY_USW_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "-10 dB",
         "lo": "20 Hz",
         "hi": "125 Hz"
       },
@@ -201,7 +201,7 @@ export const MY_USW_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "30 Hz",
         "hi": "140 Hz"
       },

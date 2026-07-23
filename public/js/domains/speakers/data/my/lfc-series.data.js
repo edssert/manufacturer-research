@@ -42,7 +42,7 @@ export const MY_LFC_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "35 Hz",
         "hi": "125 Hz"
       },
@@ -95,7 +95,7 @@ export const MY_LFC_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "30 Hz",
         "hi": "125 Hz"
       },
@@ -146,7 +146,7 @@ export const MY_LFC_SERIES = [
     "cov": null,
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "30 Hz",
         "hi": "125 Hz"
       }
@@ -189,7 +189,7 @@ export const MY_LFC_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "30 Hz",
         "hi": "125 Hz"
       },
@@ -242,7 +242,7 @@ export const MY_LFC_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "13 Hz",
         "hi": "35 Hz"
       },
