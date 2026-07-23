@@ -29,9 +29,14 @@ export const THROWCAT_ORDER = ["Long Throw", "Medium Throw", "Short Throw"];
 // Meyer Sound 도 동일한 이유(모든 시리즈 throwCat: null)로 알파벳순
 // (LEOPARD<LINA<PANTHER<TIGRA)으로 밀렸었다 — 사용자 요청으로 체급(무게) 큰
 // 순서로 명시 지정: PANTHER(68kg) > TIGRA(54kg) > LEOPARD(34kg) > LINA(19.5kg).
+// 정렬은 제조사(mk) 그룹 안에서만 비교되므로 값은 제조사별 상대 순서만 의미가
+// 있다. d&b: 대형 라인어레이(SL) → V → T → 컬럼(CL) → 증강(AL). Meyer: 라인어레이
+// 4종을 체급 순(PANTHER>TIGRA>LEOPARD>LINA)으로 둔 뒤 서브우퍼 계열(MM/LFC/USW/
+// Cinema)을 뒤에 배치.
 export const SERIES_ORDER_OVERRIDE = {
-  "SL Series": 0, "CL Series": 1,
-  "PANTHER Series": 2, "TIGRA Series": 3, "LEOPARD Series": 4, "LINA Series": 5,
+  "SL Series": 0, "V Series": 1, "T Series": 2, "CL Series": 3, "AL Series": 4,
+  "PANTHER Series": 5, "TIGRA Series": 6, "LEOPARD Series": 7, "LINA Series": 8,
+  "MM Series": 9, "LFC Series": 10, "USW Series": 11, "Cinema Series": 12,
 };
 export const WAY_ORDER = ["2-way", "3-way", "16-channel", "N/A"];
 export const NETWORK_ORDER = ["Active", "Passive", "Hybrid"];
