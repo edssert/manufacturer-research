@@ -396,6 +396,6 @@ export const DB_CL_SERIES = [
   "watt": 500,
   "mechanicalSafety": null,
   "presets": null,
-  "cardioidCapability": null
+  "cardioidCapability": "No"
 }
 ];

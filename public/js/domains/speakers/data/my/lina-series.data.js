@@ -11,6 +11,7 @@ export const MY_LINA_SERIES = [
     "mfr": "Meyer Sound",
     "mk": "my",
     "name": "LINA",
+    "cardioidCapability": "No",
     "series": "LINA Series",
     "throwCat": null,
     "type": "Line Array",

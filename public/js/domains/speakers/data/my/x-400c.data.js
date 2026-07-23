@@ -17,6 +17,7 @@ export const MY_X400C = [
     "mfr": "Meyer Sound",
     "mk": "my",
     "name": "X-400C",
+    "cardioidCapability": "No",
     "series": "Cinema Series",
     "throwCat": null,
     "type": "Subwoofer",

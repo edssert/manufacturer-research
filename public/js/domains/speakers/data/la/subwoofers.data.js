@@ -712,6 +712,7 @@ export const LA_SUBWOOFERS = [
     "mfr": "L-Acoustics",
     "mk": "la",
     "name": "SB18 IIi",
+    "cardioidCapability": "Array + preset",
     "series": "Subwoofers",
     "throwCat": null,
     "type": "Subwoofer",
