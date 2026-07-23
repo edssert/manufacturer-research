@@ -29,7 +29,7 @@ export const LA_SUBWOOFERS = [
     // [upload/CS1_v1.3.md 마스터 스키마 반영] Cardioid_Capability — 원문:
     // CS1_OM_EN_2.0.pdf p.13 "Polar pattern"(전방 SB 2발 + 측면 SC 2발
     // 내장 배치로 단일 인클로저 자체가 카디오이드 성형).
-    "cardioidCapability": "Integrated cardioid (전방 SB 2개 + 측면 SC 2개 드라이버 내장 배치)",
+    "cardioidCapability": "Integrated",
     "weight": 180,
     // [수정] transducers/connectors/lowQty — 마스터 스키마(CS1_OM_EN_2.0.pdf
     // p.87 "CS1 specifications")로 대조한 결과 기존 값이 부정확했다:
@@ -153,7 +153,7 @@ export const LA_SUBWOOFERS = [
       }
     ],
     // [upload/KS28_v1.9.md 마스터 스키마 반영] Cardioid_Capability.
-    "cardioidCapability": "Array-based only (4대 어레이 중 1대 반전 배치 필요)",
+    "cardioidCapability": "Array + preset",
     "weight": 79,
     "transducers": "LF: 2 × 18″",
     "connectors": "4-point speakON",
@@ -282,7 +282,7 @@ export const LA_SUBWOOFERS = [
       }
     ],
     // [upload/KS21_v1.5.md 마스터 스키마 반영] Cardioid_Capability.
-    "cardioidCapability": "Array-based only (4대 어레이 중 1대 반전 배치 필요)",
+    "cardioidCapability": "Array + preset",
     "weight": 49,
     "transducers": "LF: 1 × 21″",
     "connectors": "4-point speakON",
@@ -443,7 +443,7 @@ export const LA_SUBWOOFERS = [
       }
     ],
     // [upload/KS21i_v1.4.md 마스터 스키마 반영] Cardioid_Capability.
-    "cardioidCapability": "Array-based only (4대 어레이 중 1대 반전 배치 필요)",
+    "cardioidCapability": "Array + preset",
     "weight": 46,
     "transducers": "LF: 1 × 21″ neodymium",
     "connectors": "4-point terminal block with push-in connection",
@@ -587,7 +587,7 @@ export const LA_SUBWOOFERS = [
       }
     ],
     // [upload/SB18_v1.3.md 마스터 스키마 반영] Cardioid_Capability.
-    "cardioidCapability": "Array-based only (4대 어레이 중 1대 반전 배치 필요)",
+    "cardioidCapability": "Array + preset",
     "weight": 52,
     "transducers": "LF: 1 × 18″",
     "connectors": "4-point speakON",
@@ -881,7 +881,7 @@ export const LA_SUBWOOFERS = [
       }
     ],
     // [upload/SB15m_v1.4.md 마스터 스키마 반영] Cardioid_Capability.
-    "cardioidCapability": "Array-based only (4대 어레이 중 1대 반전 배치 필요)",
+    "cardioidCapability": "Array + preset",
     "weight": 36,
     "transducers": "LF: 1 × 15″",
     "connectors": "4-point speakON",
