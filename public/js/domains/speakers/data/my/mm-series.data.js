@@ -34,7 +34,7 @@ export const MY_MM_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "33 Hz",
         "hi": "228 Hz"
       },
@@ -87,7 +87,7 @@ export const MY_MM_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "33 Hz",
         "hi": "228 Hz"
       },
@@ -140,7 +140,7 @@ export const MY_MM_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "33 Hz",
         "hi": "228 Hz"
       },

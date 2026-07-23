@@ -30,7 +30,7 @@ export const MY_LEOPARD_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "55 Hz",
         "hi": "18 kHz"
       },
@@ -84,7 +84,7 @@ export const MY_LEOPARD_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "55 Hz",
         "hi": "18 kHz"
       },

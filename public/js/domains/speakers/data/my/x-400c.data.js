@@ -32,7 +32,7 @@ export const MY_X400C = [
     "cov": null,
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "20 Hz",
         "hi": "200 Hz"
       },

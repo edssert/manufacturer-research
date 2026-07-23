@@ -28,7 +28,7 @@ export const MY_LINA_SERIES = [
     },
     "freqs": [
       {
-        "db": "Operating Range",
+        "db": "dB 미표기",
         "lo": "65 Hz",
         "hi": "18 kHz"
       },
