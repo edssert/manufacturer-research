@@ -211,7 +211,7 @@ export const LA_SUBWOOFERS = [
     "views": [
       { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-ks28.png" },
       { "label": "Perspective", "src": "public/assets/img/speakers/la/subwoofers/spk-la-ks28-perspective.png" },
-      { "label": "Array (4×KS28)", "src": "public/assets/img/speakers/la/subwoofers/spk-la-ks28-array.png" }
+      { "label": "4×KS28", "src": "public/assets/img/speakers/la/subwoofers/spk-la-ks28-array.png" }
     ],
     "relations": {
       "ampIds": []
@@ -677,7 +677,7 @@ export const LA_SUBWOOFERS = [
     "views": [
       { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18.png" },
       { "label": "Horizontal", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-horizontal.png" },
-      { "label": "Array (3×SB18)", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-array.png" }
+      { "label": "3×SB18", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-array.png" }
     ],
     "relations": {
       "ampIds": []
@@ -825,9 +825,9 @@ export const LA_SUBWOOFERS = [
     "img": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii.png",
     "views": [
       { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii.png" },
-      { "label": "Array (3×SB18 IIi + 9×Kara IIi)", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii-array.png" },
-      { "label": "Array (4×SB18 IIi + Kara IIi)", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii-array2.png" },
-      { "label": "Cardioid (4×SB18 IIi)", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii-cardioid.png" }
+      { "label": "3×SB18 IIi + 9×Kara IIi + KARAIIi-BUMP", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii-array.png" },
+      { "label": "4×SB18 IIi + KARAIIi-BUMP", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii-array2.png" },
+      { "label": "4×SB18 IIi + KARAIIi-BUMP (Cardioid)", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii-array3.png" }
     ],
     "notes": "SB18(i/m)과 함께 [SB18_100] 프리셋 계열을 공유하는 후속 모델. L-Acoustics preset_guide_EN.pdf(v29.0) drive capacity 표에 'SB18(i/m) / SB18 IIi'로 병기되어 동일한 앰프 매칭 값을 사용. 물리 스펙은 공식 스펙시트(SB18_IIi_AE_EN.docx, 2026-07-10 확보)로 채움.",
     "relations": {
