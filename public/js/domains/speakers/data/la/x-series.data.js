@@ -116,7 +116,11 @@ export const LA_X_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/6), LA2Xi(SE1/2), LA4X(1/2), LA7.16(1/8)",
-    "img": "public/assets/img/speakers/la/x-series/spk-la-x15-hiq.webp",
+    "img": "public/assets/img/speakers/la/x-series/spk-la-x15-hiq.png",
+    "views": [
+      { "label": "Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x15-hiq.png" },
+      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x15-hiq-white-front.png" }
+    ],
     "relations": {
       "ampIds": []
     },
@@ -300,7 +304,11 @@ export const LA_X_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/14)",
-    "img": "public/assets/img/speakers/la/x-series/spk-la-x12.webp",
+    "img": "public/assets/img/speakers/la/x-series/spk-la-x12.png",
+    "views": [
+      { "label": "Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x12.png" },
+      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x12-white-front.png" }
+    ],
     "relations": {
       "ampIds": []
     },
@@ -502,7 +510,11 @@ export const LA_X_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE2/8), LA4X(2/8), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/x-series/spk-la-x8.webp",
+    "img": "public/assets/img/speakers/la/x-series/spk-la-x8.png",
+    "views": [
+      { "label": "Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x8.png" },
+      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x8-white-front.png" }
+    ],
     "relations": {
       "ampIds": []
     },
@@ -728,20 +740,10 @@ export const LA_X_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE2/8), LA4X(2/8), LA7.16(1/16), LA1.16i(SE2/30, BTL1/8)",
-    "img": "public/assets/img/speakers/la/x-series/spk-la-x8i.webp",
+    "img": "public/assets/img/speakers/la/x-series/spk-la-x8i.png",
     "views": [
-      {
-        "label": "Front (Black)",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x8i.webp"
-      },
-      {
-        "label": "Rear (White)",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x8i-white-rear.webp"
-      },
-      {
-        "label": "Front (White)",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x8i-white-front.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x8i.png" },
+      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x8i-white-front.png" }
     ],
     "relations": {
       "ampIds": []
@@ -973,20 +975,10 @@ export const LA_X_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE2/8), LA4X(2/8), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/x-series/spk-la-x6i.webp",
+    "img": "public/assets/img/speakers/la/x-series/spk-la-x6i.png",
     "views": [
-      {
-        "label": "Front (Black)",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x6i.webp"
-      },
-      {
-        "label": "Rear (White)",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x6i-white-rear.webp"
-      },
-      {
-        "label": "Front (White)",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x6i-white-front.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x6i.png" },
+      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x6i-white-front.png" }
     ],
     "relations": {
       "ampIds": []
@@ -1173,7 +1165,12 @@ export const LA_X_SERIES = [
       }
     ],
     "ampRaw": "LA12X(6/24), LA2Xi(SE4/16), LA4X(4/16), LA7.16(3/48)",
-    "img": "public/assets/img/speakers/la/x-series/spk-la-5xt.webp",
+    "img": "public/assets/img/speakers/la/x-series/spk-la-5xt.png",
+    "views": [
+      { "label": "Front", "src": "public/assets/img/speakers/la/x-series/spk-la-5xt.png" },
+      { "label": "Rear", "src": "public/assets/img/speakers/la/x-series/spk-la-5xt-rear.png" },
+      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-5xt-white-front.png" }
+    ],
     "relations": {
       "ampIds": []
     },
@@ -1380,20 +1377,11 @@ export const LA_X_SERIES = [
       }
     ],
     "ampRaw": "LA12X(6/24), LA2Xi(SE4/16), LA4X(4/16), LA7.16(4/64)",
-    "img": "public/assets/img/speakers/la/x-series/spk-la-x4i.webp",
+    "img": "public/assets/img/speakers/la/x-series/spk-la-x4i.png",
     "views": [
-      {
-        "label": "Front (Black)",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x4i.webp"
-      },
-      {
-        "label": "Front (White)",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x4i-white-front.webp"
-      },
-      {
-        "label": "Install (In-Situ)",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x4i-insitu.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x4i.png" },
+      { "label": "Rear", "src": "public/assets/img/speakers/la/x-series/spk-la-x4i-rear.png" },
+      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x4i-white-front.png" }
     ],
     "relations": {
       "ampIds": []
