@@ -66,7 +66,7 @@ export const MY_USW_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-112p.png",
     "relations": {
       "ampIds": []
     },
@@ -120,7 +120,7 @@ export const MY_USW_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-112xp.png",
     "relations": {
       "ampIds": []
     },
@@ -174,7 +174,7 @@ export const MY_USW_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-121p.png",
     "relations": {
       "ampIds": []
     },
@@ -228,7 +228,7 @@ export const MY_USW_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-210p.png",
     "relations": {
       "ampIds": []
     },

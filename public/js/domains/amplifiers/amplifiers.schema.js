@@ -19,11 +19,26 @@ export const AMP_MK_ORDER = ["la", "db", "my"];
 // → LA-RAK II AVB (랙은 개별 앰프를 담은 시스템이라 라인업 맨 뒤). 목록에
 // 없는 모델(다른 제조사 등)은 이 뒤에 알파벳순으로 이어진다.
 export const MODEL_ORDER = ["LA7.16", "LA1.16i", "LA12X", "LA4X", "LA2Xi", "LA-RAK III", "LA-RAK II AVB"];
+// [사용자 요청] d&b 앰프도 알파벳순 대신 플래그십/출력 내림차순으로 고정한다.
+// 섹션(투어링/설치, controller.ampTypeOf 참조)이 먼저 갈리므로 여기서는 각
+// 섹션 안에서의 순서만 담당한다: 투어링 D90→D80→D40→D25, 설치 40D→25D→30D
+// →10D→5DM→5D (모두 4Ω 총출력 기준. 설치의 25D>30D 는 실제 출력·전압·네트워크
+// 우위 반영 — 모델 번호와 무관).
+export const DB_MODEL_ORDER = ["D90", "D80", "D40", "D25", "40D", "25D", "30D", "10D", "5DM", "5D"];
 // 위 순서 배열 기반 comparator — "model" sorter 와 기본("type") 그룹 정렬
 // (amplifiers.controller.js 의 groupBy.sortWithinGroup) 양쪽에서 재사용해,
-// 정렬 모드를 바꿔도 L-Acoustics 모델 순서가 항상 일관되게 유지되도록 한다.
+// 정렬 모드를 바꿔도 L-Acoustics/d&b 모델 순서가 항상 일관되게 유지되도록 한다.
+// 두 목록 모두에 없는 모델(예: Meyer)은 이 뒤에 알파벳순으로 이어진다.
 export function compareModel(a, b) {
-  const ia = MODEL_ORDER.indexOf(a.model), ib = MODEL_ORDER.indexOf(b.model);
+  // LA 라인업 순서를 우선 적용하고, 없으면 d&b 순서, 둘 다 없으면 알파벳순.
+  const rank = (m) => {
+    const il = MODEL_ORDER.indexOf(m);
+    if (il !== -1) return il;
+    const id = DB_MODEL_ORDER.indexOf(m);
+    if (id !== -1) return MODEL_ORDER.length + id;
+    return -1;
+  };
+  const ia = rank(a.model), ib = rank(b.model);
   if (ia !== -1 || ib !== -1) {
     if (ia === -1) return 1;
     if (ib === -1) return -1;

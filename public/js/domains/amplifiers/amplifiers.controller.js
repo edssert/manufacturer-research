@@ -114,7 +114,11 @@ function resetAmplifiers() {
  * 앰프(d&b D80/D90 등 기존 단순 스키마)는 랙형 투어링 앰프이므로 기본값
  * "Amplifier"로 묶는다("Rack"은 파워/네트워크까지 통합된 별도 장비 분류라
  * 이 데이터에는 아직 해당 사항 없음). */
-const ampTypeOf = a => a.type || "Amplifier";
+// [사용자 요청] 섹션 분류: Rack(LA-RAK 등 랙 시스템)은 개별 앰프와 성격이
+// 달라 usage 와 무관하게 항상 "Rack" 섹션으로 따로 뺀다. 그 외 개별 앰프는
+// 시장(usage: Touring/Installation)으로 나누고, usage 가 없으면 type,
+// 그것도 없으면 기본값. type 은 Type 필터 칩으로도 계속 살아 있다.
+const ampTypeOf = a => a.type === "Rack" ? "Rack" : (a.usage || a.type || "Amplifier");
 
 /** 현재 상태로 결과 그리드 렌더링 (제조사/타입 정렬 시 제조사>타입 그룹핑) */
 function renderAmplifiers() {
@@ -131,7 +135,14 @@ function renderAmplifiers() {
       order: AMP_MK_ORDER,
       getKey: d => d.mfr,
       subGroupKey: d => ampTypeOf(d),
-      subGroupOrder: (sgA, sgB) => sgA.localeCompare(sgB),
+      // 섹션 표시 순서: 플래그십인 Touring 을 Installation 보다 위로(LA·d&b
+      // 공통). type 폴백 키(Amplified Controller/Rack)도 순서에 두어 안전.
+      // 목록에 없는 키는 뒤에 알파벳순.
+      subGroupOrder: (sgA, sgB) => {
+        const ORDER = ["Amplified Controller", "Touring", "Installation", "Rack"];
+        const ia = ORDER.indexOf(sgA), ib = ORDER.indexOf(sgB);
+        return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib) || sgA.localeCompare(sgB);
+      },
       sortWithinGroup: compareModel,
       headHTML: (mfr, type, group) => {
         return `<span class="card-group__badge card-group__badge--name" style="border-color:${AMP_MFR[mfr].color}55;color:${AMP_MFR[mfr].color}">${esc(AMP_MFR[mfr].name)}</span><span class="card-group__title">${esc(type)}</span><span class="card-group__count">${group.length} ea</span>`;

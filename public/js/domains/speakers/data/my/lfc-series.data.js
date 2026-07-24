@@ -66,7 +66,7 @@ export const MY_LFC_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/lfc-series/spk-my-750-lfc.png",
     "relations": {
       "ampIds": []
     },
@@ -120,7 +120,7 @@ export const MY_LFC_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/lfc-series/spk-my-900-lfc.png",
     "relations": {
       "ampIds": []
     },
@@ -162,7 +162,7 @@ export const MY_LFC_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/lfc-series/spk-my-1800-lfc.png",
     "relations": {
       "ampIds": []
     },
@@ -216,7 +216,7 @@ export const MY_LFC_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/lfc-series/spk-my-2100-lfc.png",
     "relations": {
       "ampIds": []
     },
@@ -270,7 +270,7 @@ export const MY_LFC_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/lfc-series/spk-my-vlfc.png",
     "relations": {
       "ampIds": []
     },

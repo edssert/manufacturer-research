@@ -119,7 +119,7 @@ export const DB_CL_I_SERIES = [
       }
     ],
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/db/cl/spk-db-ccli8.png",
     "relations": {
       "ampIds": [
         "amp-db-40d",
@@ -262,7 +262,7 @@ export const DB_CL_I_SERIES = [
       }
     ],
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/db/cl/spk-db-ccli12.png",
     "relations": {
       "ampIds": [
         "amp-db-40d",

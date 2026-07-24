@@ -97,7 +97,7 @@ export const DB_SL_I_SERIES = [
       }
     ],
     "ampRaw": "D40(AP1/2-Line2/4), D80(AP1/2-Line2/4), D90(AP1/2-Line2/4)",
-    "img": null,
+    "img": "public/assets/img/speakers/db/sl/spk-db-ksli8.png",
     "relations": {
       "ampIds": [
         "amp-db-d40",
@@ -217,7 +217,7 @@ export const DB_SL_I_SERIES = [
       }
     ],
     "ampRaw": "D40(AP1/2-Line2/4), D80(AP1/2-Line2/4), D90(AP1/2-Line2/4)",
-    "img": null,
+    "img": "public/assets/img/speakers/db/sl/spk-db-ksli12.png",
     "relations": {
       "ampIds": [
         "amp-db-d40",
@@ -341,7 +341,7 @@ export const DB_SL_I_SERIES = [
       }
     ],
     "ampRaw": "D40(AP1/2-Line2/4), D80(AP1/2-Line2/4), D90(AP1/2-Line2/4)",
-    "img": null,
+    "img": "public/assets/img/speakers/db/sl/spk-db-xsli8.png",
     "relations": {
       "ampIds": [
         "amp-db-d40",
@@ -465,7 +465,7 @@ export const DB_SL_I_SERIES = [
       }
     ],
     "ampRaw": "D40(AP1/2-Line2/4), D80(AP1/2-Line2/4), D90(AP1/2-Line2/4)",
-    "img": null,
+    "img": "public/assets/img/speakers/db/sl/spk-db-xsli12.png",
     "relations": {
       "ampIds": [
         "amp-db-d40",
@@ -589,7 +589,7 @@ export const DB_SL_I_SERIES = [
       }
     ],
     "ampRaw": "D40(AP1/2-Line2/4), D80(AP1/2-Line2/4), D90(AP1/2-Line2/4)",
-    "img": null,
+    "img": "public/assets/img/speakers/db/sl/spk-db-xsli8-svs.png",
     "relations": {
       "ampIds": [
         "amp-db-d40",
@@ -700,7 +700,7 @@ export const DB_SL_I_SERIES = [
       }
     ],
     "ampRaw": "D40(AP1/2-Line2/4), D80(AP1/2-Line2/4), D90(AP1/2-Line2/4)",
-    "img": null,
+    "img": "public/assets/img/speakers/db/sl/spk-db-xsli12-svs.png",
     "relations": {
       "ampIds": [
         "amp-db-d40",

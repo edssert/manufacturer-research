@@ -119,7 +119,7 @@ export const DB_CL_SERIES = [
     }
   ],
   "ampRaw": null,
-  "img": "public/assets/img/speakers/db/cl/spk-db-ccl8.webp",
+  "img": "public/assets/img/speakers/db/cl/spk-db-ccl8.png",
   "relations": {
     "ampIds": [
       "amp-db-40d",
@@ -261,7 +261,7 @@ export const DB_CL_SERIES = [
     }
   ],
   "ampRaw": null,
-  "img": "public/assets/img/speakers/db/cl/spk-db-ccl12.webp",
+  "img": "public/assets/img/speakers/db/cl/spk-db-ccl12.png",
   "relations": {
     "ampIds": [
       "amp-db-40d",
@@ -384,7 +384,7 @@ export const DB_CL_SERIES = [
     }
   ],
   "ampRaw": null,
-  "img": "public/assets/img/speakers/db/cl/spk-db-ccl-sub.webp",
+  "img": "public/assets/img/speakers/db/cl/spk-db-ccl-sub.png",
   "relations": {
     "ampIds": [
       "amp-db-40d",

@@ -58,7 +58,7 @@ export const MY_MM_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/mm-series/spk-my-mm-10ac.png",
     "relations": {
       "ampIds": []
     },
@@ -112,7 +112,7 @@ export const MY_MM_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/mm-series/spk-my-mm-10acx.png",
     "relations": {
       "ampIds": []
     },
@@ -166,7 +166,7 @@ export const MY_MM_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/mm-series/spk-my-mm-10xp.png",
     "relations": {
       "ampIds": []
     },

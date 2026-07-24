@@ -38,11 +38,11 @@ export const MY_PANTHER_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/panther-series/spk-my-panther.webp",
+    "img": "public/assets/img/speakers/my/panther-series/spk-my-panther.png",
     "views": [
       {
         "label": "Front",
-        "src": "public/assets/img/speakers/my/panther-series/spk-my-panther.webp"
+        "src": "public/assets/img/speakers/my/panther-series/spk-my-panther.png"
       }
     ],
     "relations": {
@@ -82,11 +82,11 @@ export const MY_PANTHER_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/panther-series/spk-my-panther.webp",
+    "img": "public/assets/img/speakers/my/panther-series/spk-my-panther.png",
     "views": [
       {
         "label": "Front",
-        "src": "public/assets/img/speakers/my/panther-series/spk-my-panther.webp"
+        "src": "public/assets/img/speakers/my/panther-series/spk-my-panther.png"
       }
     ],
     "relations": {
@@ -126,11 +126,11 @@ export const MY_PANTHER_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/panther-series/spk-my-panther.webp",
+    "img": "public/assets/img/speakers/my/panther-series/spk-my-panther.png",
     "views": [
       {
         "label": "Front",
-        "src": "public/assets/img/speakers/my/panther-series/spk-my-panther.webp"
+        "src": "public/assets/img/speakers/my/panther-series/spk-my-panther.png"
       }
     ],
     "relations": {

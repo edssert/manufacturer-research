@@ -133,7 +133,7 @@ export const DB_V_SERIES = [
     }
   ],
   "ampRaw": "D80(AP1/4-Line2/8), D40(AP1/4-Line2/8), D20(AP1/4-Line2/8), D12(AP1/2-Line2/4)",
-  "img": null,
+  "img": "public/assets/img/speakers/db/v/spk-db-v8.png",
   "relations": {
     "ampIds": []
   },
@@ -281,7 +281,7 @@ export const DB_V_SERIES = [
     }
   ],
   "ampRaw": "D80(AP1/4-Line2/8), D40(AP1/4-Line2/8), D20(AP1/4-Line2/8), D12(AP1/2-Line2/4)",
-  "img": null,
+  "img": "public/assets/img/speakers/db/v/spk-db-v12.png",
   "relations": {
     "ampIds": []
   },
@@ -390,7 +390,7 @@ export const DB_V_SERIES = [
   ],
   "ampRaw": "40D(2/8), 30D(2/8)",
   "notes": "V8의 설치용(installation) 버전 — 음향 스펙 동일, NL4 M 커넥터·후면 그립만(측면 손잡이 없음)·전용 Vi Mounting frame 사용",
-  "img": null,
+  "img": "public/assets/img/speakers/db/v/spk-db-vi8.png",
   "relations": {
     "ampIds": []
   },
@@ -505,7 +505,7 @@ export const DB_V_SERIES = [
   ],
   "ampRaw": "40D(2/8), 30D(2/8)",
   "notes": "V12의 설치용(installation) 버전 — 음향 스펙 동일, NL4 M 커넥터·후면 그립만(측면 손잡이 없음)·전용 Vi Mounting frame 사용",
-  "img": null,
+  "img": "public/assets/img/speakers/db/v/spk-db-vi12.png",
   "relations": {
     "ampIds": []
   },

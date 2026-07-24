@@ -49,11 +49,11 @@ export const MY_LEOPARD_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/leopard-series/spk-my-leopard.webp",
+    "img": "public/assets/img/speakers/my/leopard-series/spk-my-leopard.png",
     "views": [
       {
         "label": "Front",
-        "src": "public/assets/img/speakers/my/leopard-series/spk-my-leopard.webp"
+        "src": "public/assets/img/speakers/my/leopard-series/spk-my-leopard.png"
       }
     ],
     "relations": {
@@ -104,11 +104,11 @@ export const MY_LEOPARD_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/leopard-series/spk-my-leopard.webp",
+    "img": "public/assets/img/speakers/my/leopard-series/spk-my-leopard.png",
     "views": [
       {
         "label": "Front",
-        "src": "public/assets/img/speakers/my/leopard-series/spk-my-leopard.webp"
+        "src": "public/assets/img/speakers/my/leopard-series/spk-my-leopard.png"
       }
     ],
     "relations": {

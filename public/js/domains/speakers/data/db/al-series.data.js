@@ -106,7 +106,7 @@ export const DB_AL_SERIES = [
     }
   ],
   "ampRaw": "D20 (recommended), D80, 30D — PS/Out/In 2/ch, AP 1/ch",
-  "img": null,
+  "img": "public/assets/img/speakers/db/a/spk-db-al60.png",
   "relations": {
     "ampIds": []
   },
@@ -236,7 +236,7 @@ export const DB_AL_SERIES = [
     }
   ],
   "ampRaw": "D20 (recommended), D80, 30D — PS/Out/In 2/ch, AP 1/ch",
-  "img": null,
+  "img": "public/assets/img/speakers/db/a/spk-db-al90.png",
   "relations": {
     "ampIds": []
   },
@@ -366,7 +366,7 @@ export const DB_AL_SERIES = [
     }
   ],
   "ampRaw": "30D (recommended), D20, D80 (SPS 기준; OM 표는 30D/40D) — PS/Out/In 2/ch, AP 1/ch",
-  "img": null,
+  "img": "public/assets/img/speakers/db/a/spk-db-ali60.png",
   "relations": {
     "ampIds": []
   },
@@ -497,7 +497,7 @@ export const DB_AL_SERIES = [
     }
   ],
   "ampRaw": "30D (recommended), D20, D80 (SPS 기준; OM 표는 30D/40D) — PS/Out/In 2/ch, AP 1/ch",
-  "img": null,
+  "img": "public/assets/img/speakers/db/a/spk-db-ali90.png",
   "relations": {
     "ampIds": []
   },

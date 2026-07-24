@@ -17,9 +17,9 @@ export const LA_AMPLIFIERS = [
     "mfr": "la",
     "model": "LA1.16i",
     "views": [
-      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la1dot16i-front.webp" },
-      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la1dot16i-rear.webp" },
-      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la1dot16i-isometric.webp" }
+      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la1dot16i-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la1dot16i-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la1dot16i-isometric.png" }
     ],
     "channels": 16,
     "powerClass": "High-efficiency Class D",
@@ -31,7 +31,7 @@ export const LA_AMPLIFIERS = [
     ],
     "notes": "New AES67 compatible Amplified Controller. Fixed Install, MILAN-Certified Redundancy. Multi-channel amplified controller for install.",
     "type": "Amplified Controller",
-    "usage": "Fixed Install",
+    "usage": "Installation",
     "architecture": "16 x 16 with bridge mode",
     "ipRating": "IP20",
     "rackUnit": 1,
@@ -140,9 +140,9 @@ export const LA_AMPLIFIERS = [
     "mfr": "la",
     "model": "LA2Xi",
     "views": [
-      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la2xi-front.webp" },
-      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la2xi-rear.webp" },
-      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la2xi-isometric.webp" }
+      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la2xi-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la2xi-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la2xi-isometric.png" }
     ],
     "channels": 4,
     "powerClass": "High-efficiency Class D",
@@ -154,7 +154,7 @@ export const LA_AMPLIFIERS = [
     ],
     "notes": "New AES67 compatible Amplified Controller. Fixed Install, MILAN-Certified Redundancy. Amplified controller for install.",
     "type": "Amplified Controller",
-    "usage": "Fixed Install",
+    "usage": "Installation",
     "architecture": "4 x 4 with bridge modes",
     "ipRating": "IP2x",
     "rackUnit": 1,
@@ -253,9 +253,9 @@ export const LA_AMPLIFIERS = [
     "mfr": "la",
     "model": "LA12X",
     "views": [
-      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la12x-front.webp" },
-      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la12x-rear.webp" },
-      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la12x-isometric.webp" }
+      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la12x-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la12x-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la12x-isometric.png" }
     ],
     "channels": 4,
     "powerClass": "Class D",
@@ -266,7 +266,7 @@ export const LA_AMPLIFIERS = [
     ],
     "notes": "Amplified Controller. MILAN-Certified Redundancy.",
     "type": "Amplified Controller",
-    "usage": null,
+    "usage": "Touring",
     "architecture": "4 x 4",
     "ipRating": "IP20",
     "rackUnit": 2,
@@ -364,9 +364,9 @@ export const LA_AMPLIFIERS = [
     "mfr": "la",
     "model": "LA4X",
     "views": [
-      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la4x-front.webp" },
-      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la4x-rear.webp" },
-      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la4x-isometric.webp" }
+      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la4x-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la4x-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la4x-isometric.png" }
     ],
     "channels": 4,
     "powerClass": "Class D",
@@ -377,7 +377,7 @@ export const LA_AMPLIFIERS = [
     ],
     "notes": "Amplified Controller. MILAN-Certified.",
     "type": "Amplified Controller",
-    "usage": null,
+    "usage": "Touring",
     "architecture": "4 x 4",
     "ipRating": "IP30",
     "rackUnit": 2,
@@ -474,9 +474,9 @@ export const LA_AMPLIFIERS = [
     "mfr": "la",
     "model": "LA7.16",
     "views": [
-      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la7dot16-front.webp" },
-      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la7dot16-rear.webp" },
-      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la7dot16-isometric.webp" }
+      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la7dot16-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la7dot16-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la7dot16-isometric.png" }
     ],
     "channels": 16,
     "powerClass": "High-efficiency Class D",
@@ -487,7 +487,7 @@ export const LA_AMPLIFIERS = [
     ],
     "notes": "Amplified Controller. MILAN-Certified Redundancy. Multi-channel amplified controller.",
     "type": "Amplified Controller",
-    "usage": null,
+    "usage": "Touring",
     "architecture": "16 x 16",
     "ipRating": null,
     "rackUnit": 2,
@@ -593,9 +593,9 @@ export const LA_AMPLIFIERS = [
     "mfr": "la",
     "model": "LA-RAK III",
     "views": [
-      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la-rak-iii-front.webp" },
-      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la-rak-iii-rear.webp" },
-      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la-rak-iii-isometric.webp" }
+      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la-rak-iii-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/la/amp-la-la-rak-iii-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la-rak-iii-isometric.png" }
     ],
     "channels": 48,
     "powerClass": "High-efficiency Class D",
@@ -701,7 +701,10 @@ export const LA_AMPLIFIERS = [
     "id": "amp-la-la-rak-ii-avb",
     "mfr": "la",
     "model": "LA-RAK II AVB",
-    "views": [],
+    "views": [
+      { "label": "Front", "src": "public/assets/img/amplifiers/la/amp-la-la-rak-ii-avb-front.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/la/amp-la-la-rak-ii-avb-isometric.png" }
+    ],
     "channels": 12,
     "powerClass": "Class D",
     "connectivity": [

@@ -14,9 +14,9 @@ export const DB_AMPLIFIERS = [
     "mfr": "db",
     "model": "D90",
     "views": [
-      { "label": "Front", "src": "public/assets/img/amplifiers/db/amp-db-d90-front.webp" },
-      { "label": "Rear", "src": "public/assets/img/amplifiers/db/amp-db-d90-rear.webp" },
-      { "label": "Isometric", "src": "public/assets/img/amplifiers/db/amp-db-d90-isometric.webp" }
+      { "label": "Front", "src": "public/assets/img/amplifiers/db/amp-db-d90-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/db/amp-db-d90-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/db/amp-db-d90-isometric.png" }
     ],
     "channels": 4,
     "powerClass": "Class D",
@@ -27,7 +27,7 @@ export const DB_AMPLIFIERS = [
     ],
     "notes": "Mobile specific four channel amplifier. All current d&b loudspeaker setup.",
     "type": null,
-    "usage": null,
+    "usage": "Touring",
     "architecture": null,
     "ipRating": null,
     "rackUnit": 2,
@@ -116,7 +116,11 @@ export const DB_AMPLIFIERS = [
     "id": "amp-db-10d",
     "mfr": "db",
     "model": "10D",
-    "views": [],
+    "views": [
+      { "label": "Front", "src": "public/assets/img/amplifiers/db/amp-db-10d-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/db/amp-db-10d-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/db/amp-db-10d-isometric.png" }
+    ],
     "channels": 4,
     "powerClass": "Class D",
     "connectivity": [
@@ -125,7 +129,7 @@ export const DB_AMPLIFIERS = [
     ],
     "notes": "4-channel Class D installation amplifier with integrated DSP (next generation).",
     "type": null,
-    "usage": null,
+    "usage": "Installation",
     "architecture": null,
     "ipRating": null,
     "rackUnit": 2,
@@ -212,7 +216,11 @@ export const DB_AMPLIFIERS = [
     "id": "amp-db-25d",
     "mfr": "db",
     "model": "25D",
-    "views": [],
+    "views": [
+      { "label": "Front", "src": "public/assets/img/amplifiers/db/amp-db-25d-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/db/amp-db-25d-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/db/amp-db-25d-isometric.png" }
+    ],
     "channels": 4,
     "powerClass": "Class D",
     "connectivity": [
@@ -222,7 +230,7 @@ export const DB_AMPLIFIERS = [
     ],
     "notes": "4-channel Class D installation amplifier with integrated DSP, Milan-AVB networked.",
     "type": null,
-    "usage": null,
+    "usage": "Installation",
     "architecture": null,
     "ipRating": null,
     "rackUnit": 2,
@@ -318,7 +326,11 @@ export const DB_AMPLIFIERS = [
     "id": "amp-db-30d",
     "mfr": "db",
     "model": "30D",
-    "views": [],
+    "views": [
+      { "label": "Front", "src": "public/assets/img/amplifiers/db/amp-db-30d-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/db/amp-db-30d-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/db/amp-db-30d-isometric.png" }
+    ],
     "channels": 4,
     "powerClass": "Class D",
     "connectivity": [
@@ -327,7 +339,7 @@ export const DB_AMPLIFIERS = [
     ],
     "notes": "4-channel Class D installation amplifier with integrated DSP (next generation), higher output variant of 10D.",
     "type": null,
-    "usage": null,
+    "usage": "Installation",
     "architecture": null,
     "ipRating": null,
     "rackUnit": 2,
@@ -414,7 +426,10 @@ export const DB_AMPLIFIERS = [
     "id": "amp-db-40d",
     "mfr": "db",
     "model": "40D",
-    "views": [],
+    "views": [
+      { "label": "Front", "src": "public/assets/img/amplifiers/db/amp-db-40d-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/db/amp-db-40d-rear.png" }
+    ],
     "channels": 4,
     "powerClass": "Class D",
     "connectivity": [
@@ -424,7 +439,7 @@ export const DB_AMPLIFIERS = [
     ],
     "notes": "4-channel Class D installation amplifier with integrated DSP, Milan-networked high-voltage variant.",
     "type": null,
-    "usage": null,
+    "usage": "Installation",
     "architecture": null,
     "ipRating": null,
     "rackUnit": 2,
@@ -520,7 +535,11 @@ export const DB_AMPLIFIERS = [
     "id": "amp-db-5d",
     "mfr": "db",
     "model": "5D",
-    "views": [],
+    "views": [
+      { "label": "Front", "src": "public/assets/img/amplifiers/db/amp-db-5d-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/db/amp-db-5d-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/db/amp-db-5d-isometric.png" }
+    ],
     "channels": 4,
     "powerClass": "Class D",
     "connectivity": [
@@ -529,7 +548,7 @@ export const DB_AMPLIFIERS = [
     ],
     "notes": "4-channel Class D installation amplifier with integrated DSP, Dante-native, 9.5\" half-rack.",
     "type": null,
-    "usage": null,
+    "usage": "Installation",
     "architecture": null,
     "ipRating": null,
     "rackUnit": 1,
@@ -613,7 +632,11 @@ export const DB_AMPLIFIERS = [
     "id": "amp-db-5dm",
     "mfr": "db",
     "model": "5DM",
-    "views": [],
+    "views": [
+      { "label": "Front", "src": "public/assets/img/amplifiers/db/amp-db-5dm-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/db/amp-db-5dm-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/db/amp-db-5dm-isometric.png" }
+    ],
     "channels": 4,
     "powerClass": "Class D",
     "connectivity": [
@@ -622,7 +645,7 @@ export const DB_AMPLIFIERS = [
     ],
     "notes": "4-channel Class D installation amplifier with integrated DSP, Milan-native, 9.5\" half-rack (preliminary).",
     "type": null,
-    "usage": null,
+    "usage": "Installation",
     "architecture": null,
     "ipRating": null,
     "rackUnit": 1,
@@ -706,7 +729,11 @@ export const DB_AMPLIFIERS = [
     "id": "amp-db-d25",
     "mfr": "db",
     "model": "D25",
-    "views": [],
+    "views": [
+      { "label": "Front", "src": "public/assets/img/amplifiers/db/amp-db-d25-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/db/amp-db-d25-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/db/amp-db-d25-isometric.png" }
+    ],
     "channels": 4,
     "powerClass": "Class D",
     "connectivity": [
@@ -716,7 +743,7 @@ export const DB_AMPLIFIERS = [
     ],
     "notes": "4-channel Class D amplifier with integrated DSP, mobile/touring specific.",
     "type": null,
-    "usage": null,
+    "usage": "Touring",
     "architecture": null,
     "ipRating": null,
     "rackUnit": 2,
@@ -803,7 +830,11 @@ export const DB_AMPLIFIERS = [
     "id": "amp-db-d40",
     "mfr": "db",
     "model": "D40",
-    "views": [],
+    "views": [
+      { "label": "Front", "src": "public/assets/img/amplifiers/db/amp-db-d40-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/db/amp-db-d40-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/db/amp-db-d40-isometric.png" }
+    ],
     "channels": 4,
     "powerClass": "Class D",
     "connectivity": [
@@ -813,7 +844,7 @@ export const DB_AMPLIFIERS = [
     ],
     "notes": "4-channel Class D amplifier with integrated DSP, mobile/touring specific, high voltage/high power variant.",
     "type": null,
-    "usage": null,
+    "usage": "Touring",
     "architecture": null,
     "ipRating": null,
     "rackUnit": 2,
@@ -900,7 +931,11 @@ export const DB_AMPLIFIERS = [
     "id": "amp-db-d80",
     "mfr": "db",
     "model": "D80",
-    "views": [],
+    "views": [
+      { "label": "Front", "src": "public/assets/img/amplifiers/db/amp-db-d80-front.png" },
+      { "label": "Rear", "src": "public/assets/img/amplifiers/db/amp-db-d80-rear.png" },
+      { "label": "Isometric", "src": "public/assets/img/amplifiers/db/amp-db-d80-isometric.png" }
+    ],
     "channels": 4,
     "powerClass": "Class D",
     "connectivity": [
@@ -909,7 +944,7 @@ export const DB_AMPLIFIERS = [
     ],
     "notes": "4-channel Class D amplifier with integrated DSP (touring), CAN-Bus/OCA control.",
     "type": null,
-    "usage": null,
+    "usage": "Touring",
     "architecture": null,
     "ipRating": null,
     "rackUnit": 2,

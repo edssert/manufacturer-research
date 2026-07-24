@@ -56,7 +56,7 @@ export const MY_X400C = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": null,
+    "img": "public/assets/img/speakers/my/x-400c/spk-my-x-400c.png",
     "relations": {
       "ampIds": []
     },

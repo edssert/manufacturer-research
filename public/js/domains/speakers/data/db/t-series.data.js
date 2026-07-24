@@ -129,7 +129,7 @@ export const DB_T_SERIES = [
   ],
   "ampRaw": "D80(4/16), D40(4/16), D12(4/8), D20(4/16), D6(4/8)",
   "notes": "라인어레이/포인트소스 겸용 — 회전형 웨이브가이드+어쿠스틱 렌즈를 공구 없이 90° 전환 (라인소스 수평 105° / 포인트소스 90°×35°)",
-  "img": null,
+  "img": "public/assets/img/speakers/db/t/spk-db-t10.png",
   "relations": {
     "ampIds": []
   },
@@ -293,7 +293,7 @@ export const DB_T_SERIES = [
   ],
   "ampRaw": "30D(4/16), 10D(4/16), D80(4/16), D20(4/16), D12(4/8), D6(4/8)",
   "notes": "T10의 설치용 라인소스 버전(음향 동일, NL4 M 커넥터, 훅·고정볼트식 어레이 리깅 포함) — 스탠드얼론 사용 시 혼 회전으로 포인트소스(90°×35°) 지향도 가능",
-  "img": null,
+  "img": "public/assets/img/speakers/db/t/spk-db-ti10l.png",
   "relations": {
     "ampIds": []
   },
@@ -426,7 +426,7 @@ export const DB_T_SERIES = [
   ],
   "ampRaw": "30D(4/16), 10D(4/16), D80(4/16), D20(4/16), D12(4/8), D6(4/8)",
   "notes": "T10의 설치용 포인트소스 버전(음향 동일, NL4 M 커넥터, 어레이 리깅 없음 — 스탠드얼론 전용) — 혼 회전으로 라인소스(105°) 지향도 가능",
-  "img": null,
+  "img": "public/assets/img/speakers/db/t/spk-db-ti10p.png",
   "relations": {
     "ampIds": []
   },
