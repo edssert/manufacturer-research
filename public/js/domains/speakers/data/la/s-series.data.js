@@ -213,16 +213,11 @@ export const LA_S_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/s-series/spk-la-soka.webp",
+    "img": "public/assets/img/speakers/la/s-series/spk-la-soka.png",
     "views": [
-      {
-        "label": "Front (Black)",
-        "src": "public/assets/img/speakers/la/s-series/spk-la-soka.webp"
-      },
-      {
-        "label": "Front (White)",
-        "src": "public/assets/img/speakers/la/s-series/spk-la-soka-white-front.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/s-series/spk-la-soka.png" },
+      { "label": "On-wall", "src": "public/assets/img/speakers/la/s-series/spk-la-soka-on-wall.png" },
+      { "label": "Range", "src": "public/assets/img/speakers/la/s-series/spk-la-soka-range.png" }
     ],
     "relations": {
       "ampIds": []
@@ -494,16 +489,9 @@ export const LA_S_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/s-series/spk-la-soka-inwall.webp",
+    "img": "public/assets/img/speakers/la/s-series/spk-la-soka-inwall.png",
     "views": [
-      {
-        "label": "Install (In-Wall)",
-        "src": "public/assets/img/speakers/la/s-series/spk-la-soka-inwall.webp"
-      },
-      {
-        "label": "Install (In-Situ)",
-        "src": "public/assets/img/speakers/la/s-series/spk-la-soka-inwall-insitu.webp"
-      }
+      { "label": "In-wall", "src": "public/assets/img/speakers/la/s-series/spk-la-soka-inwall.png" }
     ],
     "notes": "Soka의 벽매립(in-wall) 설치용 버전 — L-Acoustics 정식 제품명은 \"Sokar\"(Sokar owner's manual EN version 1.0 기준). 음향 스펙(SPL/대역폭/커버리지/앰프 매칭)은 Soka와 동일하나, 매입형이라 전면 그릴 등 일부 부품이 빠져 오히려 더 가볍다(9.4kg → 8.7kg, upload/Sokar_v1.3.md로 정정). 치수는 엔클로저 기준으로 Soka와 동일.",
     "relations": {
@@ -680,16 +668,12 @@ export const LA_S_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/10)",
-    "img": "public/assets/img/speakers/la/s-series/spk-la-syva.webp",
+    "img": "public/assets/img/speakers/la/s-series/spk-la-syva.png",
     "views": [
-      {
-        "label": "Front",
-        "src": "public/assets/img/speakers/la/s-series/spk-la-syva.webp"
-      },
-      {
-        "label": "With Syva Low",
-        "src": "public/assets/img/speakers/la/s-series/spk-la-syva-syva-low-combo.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/s-series/spk-la-syva.png" },
+      { "label": "White Front", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-white-front.png" },
+      { "label": "Syva + Syva Low", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-stack.png" },
+      { "label": "System", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-system.png" }
     ],
     "relations": {
       "ampIds": []
@@ -846,16 +830,11 @@ export const LA_S_SERIES = [
       }
     ],
     "ampRaw": "LA12X(2/6), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/8)",
-    "img": "public/assets/img/speakers/la/s-series/spk-la-syva-low.webp",
+    "img": "public/assets/img/speakers/la/s-series/spk-la-syva-low.png",
     "views": [
-      {
-        "label": "Front",
-        "src": "public/assets/img/speakers/la/s-series/spk-la-syva-low.webp"
-      },
-      {
-        "label": "With Syva",
-        "src": "public/assets/img/speakers/la/s-series/spk-la-syva-syva-low-combo.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-low.png" },
+      { "label": "Syva + Syva Low", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-stack.png" },
+      { "label": "System", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-system.png" }
     ],
     "relations": {
       "ampIds": []
@@ -1047,7 +1026,11 @@ export const LA_S_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/s-series/spk-la-syva-sub.webp",
+    "img": "public/assets/img/speakers/la/s-series/spk-la-syva-sub.png",
+    "views": [
+      { "label": "Front", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-sub.png" },
+      { "label": "System", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-system.png" }
+    ],
     "relations": {
       "ampIds": []
     },
