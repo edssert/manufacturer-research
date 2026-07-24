@@ -1,1 +1,6 @@
 node_modules/
+
+# Visual ZIP 원본은 git이 아니라 OneDrive 03.Resources에 보관 (용량 큼)
+# → C:\Users\User\OneDrive\00.Workspace\03.Resources\L-Acoustics-Visual-ZIPs
+raw-data/**/*.zip
+_imgwork/
