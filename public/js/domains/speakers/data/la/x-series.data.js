@@ -119,7 +119,8 @@ export const LA_X_SERIES = [
     "img": "public/assets/img/speakers/la/x-series/spk-la-x15-hiq.png",
     "views": [
       { "label": "Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x15-hiq.png" },
-      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x15-hiq-white-front.png" }
+      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x15-hiq-white-front.png" },
+      { "label": "Detail", "src": "public/assets/img/speakers/la/x-series/spk-la-x15-hiq-detail.png" }
     ],
     "relations": {
       "ampIds": []
@@ -1169,7 +1170,8 @@ export const LA_X_SERIES = [
     "views": [
       { "label": "Front", "src": "public/assets/img/speakers/la/x-series/spk-la-5xt.png" },
       { "label": "Rear", "src": "public/assets/img/speakers/la/x-series/spk-la-5xt-rear.png" },
-      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-5xt-white-front.png" }
+      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-5xt-white-front.png" },
+      { "label": "5XT-SEALPLATE", "src": "public/assets/img/speakers/la/x-series/spk-la-5xt-sealplate.png" }
     ],
     "relations": {
       "ampIds": []
@@ -1381,7 +1383,8 @@ export const LA_X_SERIES = [
     "views": [
       { "label": "Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x4i.png" },
       { "label": "Rear", "src": "public/assets/img/speakers/la/x-series/spk-la-x4i-rear.png" },
-      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x4i-white-front.png" }
+      { "label": "White Front", "src": "public/assets/img/speakers/la/x-series/spk-la-x4i-white-front.png" },
+      { "label": "X-U4i", "src": "public/assets/img/speakers/la/x-series/spk-la-x4i-bracket.png" }
     ],
     "relations": {
       "ampIds": []
