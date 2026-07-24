@@ -60,24 +60,11 @@ export const LA_L_SERIES = [
       }
     ],
     "ampRaw": "LA7.16(1/1)",
-    "img": "public/assets/img/speakers/la/l-series/spk-la-l2-front.webp",
+    "img": "public/assets/img/speakers/la/l-series/spk-la-l2.png",
     "views": [
-      {
-        "label": "Front",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l2-front.webp"
-      },
-      {
-        "label": "Rear",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l2-rear.webp"
-      },
-      {
-        "label": "Array",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l2-array.webp"
-      },
-      {
-        "label": "On Chariot",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l2-chariot.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/l-series/spk-la-l2.png" },
+      { "label": "Line", "src": "public/assets/img/speakers/la/l-series/spk-la-l2-line.png" },
+      { "label": "Chariot", "src": "public/assets/img/speakers/la/l-series/spk-la-l2-chariot.png" }
     ],
     "cardHoverView": "Array",
     "relations": {
@@ -184,24 +171,9 @@ export const LA_L_SERIES = [
       }
     ],
     "ampRaw": "LA7.16(1/1)",
-    "img": "public/assets/img/speakers/la/l-series/spk-la-l2d-front.webp",
+    "img": "public/assets/img/speakers/la/l-series/spk-la-l2d.png",
     "views": [
-      {
-        "label": "Front",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l2d-front.webp"
-      },
-      {
-        "label": "Rear",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l2d-rear.webp"
-      },
-      {
-        "label": "Array",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l2-array.webp"
-      },
-      {
-        "label": "On Chariot",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l2-chariot.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/l-series/spk-la-l2d.png" }
     ],
     "cardHoverView": "Rear",
     "relations": {
@@ -281,19 +253,19 @@ export const LA_L_SERIES = [
     "dims": "1500 x 1005 x 750 mm / 59.1 x 39.6 x 29.5 in",
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/la/l-series/spk-la-l1.webp",
+    "img": "public/assets/img/speakers/la/l-series/spk-la-l1.png",
     "views": [
       {
         "label": "Front",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1.webp"
+        "src": "public/assets/img/speakers/la/l-series/spk-la-l1.png"
       },
       {
         "label": "Rear",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1-rear.webp"
+        "src": "public/assets/img/speakers/la/l-series/spk-la-l1-rear.png"
       },
       {
         "label": "Array (L1x2 + L1Dx1 + CS1x1)",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1-array.webp"
+        "src": "public/assets/img/speakers/la/l-series/spk-la-l1-array.png"
       }
     ],
     "cardHoverView": "Array (L1x2 + L1Dx1 + CS1x1)",
@@ -337,20 +309,20 @@ export const LA_L_SERIES = [
     "dims": "1500 x 1167 x 750 mm / 59.1 x 45.9 x 29.5 in",
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/la/l-series/spk-la-l1d.webp",
-    "imgBack": "public/assets/img/speakers/la/l-series/spk-la-l1d-rear.webp",
+    "img": "public/assets/img/speakers/la/l-series/spk-la-l1d.png",
+    "imgBack": "public/assets/img/speakers/la/l-series/spk-la-l1d-rear.png",
     "views": [
       {
         "label": "Front",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1d.webp"
+        "src": "public/assets/img/speakers/la/l-series/spk-la-l1d.png"
       },
       {
         "label": "Rear",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1d-rear.webp"
+        "src": "public/assets/img/speakers/la/l-series/spk-la-l1d-rear.png"
       },
       {
         "label": "Array (L1x2 + L1Dx1 + CS1x1)",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1-array.webp"
+        "src": "public/assets/img/speakers/la/l-series/spk-la-l1-array.png"
       }
     ],
     "cardHoverView": "Rear",
