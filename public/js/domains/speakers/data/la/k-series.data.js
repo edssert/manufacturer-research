@@ -77,20 +77,10 @@ export const LA_K_SERIES = [
       }
     ],
     "ampRaw": "LA12X(2/2)",
-    "img": "public/assets/img/speakers/la/k-series/spk-la-k1-horizontal.webp",
+    "img": "public/assets/img/speakers/la/k-series/spk-la-k1.png",
     "views": [
-      {
-        "label": "Horizontal",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k1-horizontal.webp"
-      },
-      {
-        "label": "Vertical",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k1-vertical.webp"
-      },
-      {
-        "label": "Array (8x + K1-BUMP)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k1-array2.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/k-series/spk-la-k1.png" },
+      { "label": "Horizontal", "src": "public/assets/img/speakers/la/k-series/spk-la-k1-horizontal.png" }
     ],
     // [사용자 요청] 모달 내 뷰 순서(Horizontal/Vertical/Array)는 그대로
     // 유지하되, 카드 목록에서 마우스를 올렸을 때(hover)만 Vertical 대신
@@ -401,28 +391,10 @@ export const LA_K_SERIES = [
     "ampRaw": "LA12X(3/3), LA4X(1/1), LA7.16(1/4)",
     // [사용자 요청] 기존 Front(spk-la-k2.webp)/Array(spk-la-k2-array.webp)
     // 사진 삭제. 메인 이미지를 Horizontal 로 교체.
-    "img": "public/assets/img/speakers/la/k-series/spk-la-k2-horizontal.webp",
+    "img": "public/assets/img/speakers/la/k-series/spk-la-k2-vertical.png",
     "views": [
-      {
-        "label": "Horizontal",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k2-horizontal.webp"
-      },
-      {
-        "label": "Vertical",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k2-vertical.webp"
-      },
-      {
-        "label": "Array (12x + K2-BUMP + K2-BAR)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k2-array2.webp"
-      },
-      {
-        "label": "On Chariot (4x + K2-JACK)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k2-chariot.webp"
-      },
-      {
-        "label": "Panflex Detail",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k2-panflex-detail.webp"
-      }
+      { "label": "Vertical", "src": "public/assets/img/speakers/la/k-series/spk-la-k2-vertical.png" },
+      { "label": "Horizontal", "src": "public/assets/img/speakers/la/k-series/spk-la-k2-horizontal.png" }
     ],
     // [사용자 요청] 모달 뷰 전환 토글에서 Horizontal/Vertical/Panflex
     // Detail 3개를 세로로 쌓은 그룹으로 묶는다(speakers.view.js
@@ -631,28 +603,9 @@ export const LA_K_SERIES = [
     // (실 파일도 spk-la-k3-horizontal.webp로 리네임), 단독 Array 사진
     // (spk-la-k3-array.webp)은 삭제. 순서: Horizontal/Vertical/
     // Array(12x+K3-BUMP+K3-BAR)/Rigging/With KS28.
-    "img": "public/assets/img/speakers/la/k-series/spk-la-k3-horizontal.webp",
+    "img": "public/assets/img/speakers/la/k-series/spk-la-k3.png",
     "views": [
-      {
-        "label": "Horizontal",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k3-horizontal.webp"
-      },
-      {
-        "label": "Vertical",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k3-vertical.webp"
-      },
-      {
-        "label": "Array (12x + K3-BUMP + K3-BAR)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k3-array2.webp"
-      },
-      {
-        "label": "Rigging (8x + K3-RIGBAR)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k3-rigbar.webp"
-      },
-      {
-        "label": "With KS28 (4x + K3-TILT)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k3-ks28-tilt.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/k-series/spk-la-k3.png" }
     ],
     // [사용자 요청] 카드 hover 대상을 Array(12x + K3-BUMP + K3-BAR)로 지정
     // (K1/K2 와 동일한 cardHoverView 패턴, speakers.view.js cardHTML 참고).
@@ -831,24 +784,10 @@ export const LA_K_SERIES = [
     "ampRaw": "LA12X(3/6), LA4X(1/2), LA7.16(1/8)",
     // [사용자 요청] 기존 Front(spk-la-k3i.webp)/단독 Array(spk-la-k3i-array.webp)
     // 사진 삭제. 순서: Horizontal/Vertical/Array White/Array Black.
-    "img": "public/assets/img/speakers/la/k-series/spk-la-k3i-horizontal.webp",
+    "img": "public/assets/img/speakers/la/k-series/spk-la-k3i.png",
     "views": [
-      {
-        "label": "Horizontal",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k3i-horizontal.webp"
-      },
-      {
-        "label": "Vertical",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k3i-vertical.webp"
-      },
-      {
-        "label": "Array White RAL (8x + K3i-BUMP + K3i-SCREENS)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k3i-array-white.webp"
-      },
-      {
-        "label": "Array Black (8x + K3i-BUMP + K3i-BAR)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k3i-array-black.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/k-series/spk-la-k3i.png" },
+      { "label": "Perspective", "src": "public/assets/img/speakers/la/k-series/spk-la-k3i-perspective.png" }
     ],
     // [사용자 요청] 카드 hover 대상을 Array White RAL로 지정
     // (K1/K2/K3 와 동일한 cardHoverView 패턴, speakers.view.js cardHTML 참고).
@@ -1046,28 +985,9 @@ export const LA_K_SERIES = [
     // 개명(실 파일도 spk-la-kara-ii-horizontal.webp로 리네임), 단독 Array
     // 사진(spk-la-kara-ii-array.webp)은 삭제. 순서: Horizontal/Vertical/
     // Vertical(Panflex)/Array(12x+M-BUMP+M-BAR)/With SB18.
-    "img": "public/assets/img/speakers/la/k-series/spk-la-kara-ii-horizontal.webp",
+    "img": "public/assets/img/speakers/la/k-series/spk-la-kara-ii.png",
     "views": [
-      {
-        "label": "Horizontal",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kara-ii-horizontal.webp"
-      },
-      {
-        "label": "Vertical",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kara-ii-vertical.webp"
-      },
-      {
-        "label": "Vertical (Panflex)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kara-ii-vertical-panflex.webp"
-      },
-      {
-        "label": "Array (12x + M-BUMP + M-BAR)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kara-ii-array2.webp"
-      },
-      {
-        "label": "With SB18 (3x SB18 + 9x Kara II)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kara-ii-sb18.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/k-series/spk-la-kara-ii.png" }
     ],
     // [사용자 요청] 카드 hover 대상을 Array(12x + M-BUMP + M-BAR)로 지정
     // (K1/K2/K3/K3i 와 동일한 cardHoverView 패턴, speakers.view.js cardHTML 참고).
@@ -1281,32 +1201,9 @@ export const LA_K_SERIES = [
     // (8x + KARAIIi-BUMP)"로 재라벨링, 기존 "Array (8x+KARAIIi-BUMP+M-BARi)"
     // 는 "Array Black"으로 재라벨링. 순서: Horizontal/Vertical/
     // Vertical(Panflex)/Array White/Array Black/With SB18.
-    "img": "public/assets/img/speakers/la/k-series/spk-la-kara-iii-horizontal.webp",
+    "img": "public/assets/img/speakers/la/k-series/spk-la-kara-iii.png",
     "views": [
-      {
-        "label": "Horizontal",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kara-iii-horizontal.webp"
-      },
-      {
-        "label": "Vertical",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kara-iii-vertical.webp"
-      },
-      {
-        "label": "Vertical (Panflex)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kara-iii-vertical-panflex.webp"
-      },
-      {
-        "label": "Array White (8x + KARAIIi-BUMP)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kara-iii-array.webp"
-      },
-      {
-        "label": "Array Black (8x + KARAIIi-BUMP + M-BARi)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kara-iii-array2.webp"
-      },
-      {
-        "label": "With SB18 IIi (3x SB18 IIi + 9x Kara IIi + KARAIIi-BUMP)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kara-iii-sb18-iii.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/k-series/spk-la-kara-iii.png" }
     ],
     // [사용자 요청] 카드 hover 대상을 Array White로 지정
     // (K1/K2/K3/K3i/Kara II 와 동일한 cardHoverView 패턴, speakers.view.js cardHTML 참고).
@@ -1544,24 +1441,10 @@ export const LA_K_SERIES = [
       }
     ],
     "ampRaw": "LA12X(6/24), LA2Xi(BTL2/4), LA2Xi(SE2/8), LA4X(2/8), LA7.16(2/32), LA1.16i(BTL2/10)",
-    "img": "public/assets/img/speakers/la/k-series/spk-la-kiva-ii.webp",
+    "img": "public/assets/img/speakers/la/k-series/spk-la-kiva-ii.png",
     "views": [
-      {
-        "label": "Front",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kiva-ii.webp"
-      },
-      {
-        "label": "Array",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kiva-ii-array.webp"
-      },
-      {
-        "label": "Vertical (Front)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kiva-ii-vertical-front.webp"
-      },
-      {
-        "label": "Vertical (Rear)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-kiva-ii-vertical-rear.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/k-series/spk-la-kiva-ii.png" },
+      { "label": "Rear", "src": "public/assets/img/speakers/la/k-series/spk-la-kiva-ii-rear.png" }
     ],
     "relations": {
       "ampIds": []
@@ -1692,28 +1575,10 @@ export const LA_K_SERIES = [
       }
     ],
     "ampRaw": "LA12X(1/4)",
-    "img": "public/assets/img/speakers/la/k-series/spk-la-k1-sb.webp",
+    "img": "public/assets/img/speakers/la/k-series/spk-la-k1-sb.png",
     "views": [
-      {
-        "label": "Front",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k1-sb.webp"
-      },
-      {
-        "label": "Array",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k1-sb-array.webp"
-      },
-      {
-        "label": "Array (8x + K1-BUMP)",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k1-sb-array2.webp"
-      },
-      {
-        "label": "Horizontal",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k1-sb-horizontal.webp"
-      },
-      {
-        "label": "Vertical",
-        "src": "public/assets/img/speakers/la/k-series/spk-la-k1-sb-vertical.webp"
-      }
+      { "label": "Front", "src": "public/assets/img/speakers/la/k-series/spk-la-k1-sb.png" },
+      { "label": "Perspective", "src": "public/assets/img/speakers/la/k-series/spk-la-k1-sb-perspective.png" }
     ],
     "relations": {
       "ampIds": []

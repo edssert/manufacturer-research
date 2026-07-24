@@ -130,10 +130,10 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE2/8), LA4X(2/8), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a10-focus.png",
+    "img": "public/assets/img/speakers/la/a-series/spk-la-a10-focus-side.png",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-focus.png" },
-      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-focus-side.png" }
+      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-focus-side.png" },
+      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-focus.png" }
     ],
     "relations": {
       "ampIds": []
@@ -487,10 +487,10 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE2/8), LA4X(2/8), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a10-wide.png",
+    "img": "public/assets/img/speakers/la/a-series/spk-la-a10-wide-side.png",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-wide.png" },
-      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-wide-side.png" }
+      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-wide-side.png" },
+      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-wide.png" }
     ],
     "relations": {
       "ampIds": []
@@ -844,10 +844,10 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/10)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a15-focus.png",
+    "img": "public/assets/img/speakers/la/a-series/spk-la-a15-focus-side.png",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-focus.png" },
-      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-focus-side.png" }
+      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-focus-side.png" },
+      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-focus.png" }
     ],
     "relations": {
       "ampIds": []
@@ -1205,10 +1205,10 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/10)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a15-wide.png",
+    "img": "public/assets/img/speakers/la/a-series/spk-la-a15-wide-side.png",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-wide.png" },
-      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-wide-side.png" }
+      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-wide-side.png" },
+      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-wide.png" }
     ],
     "relations": {
       "ampIds": []
