@@ -1558,19 +1558,19 @@ export const LA_X_SERIES = [
       }
     ],
     "ampRaw": "LA12X(6/24), LA2Xi(SE4/16), LA4X(4/16), LA7.16(4/64)",
-    "img": "public/assets/img/speakers/la/x-series/spk-la-x4r.webp",
+    "img": "public/assets/img/speakers/la/x-series/spk-la-x4r.png",
     "views": [
       {
         "label": "Front",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x4r.webp"
+        "src": "public/assets/img/speakers/la/x-series/spk-la-x4r.png"
       },
       {
         "label": "Install (In-Tile)",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x4r-intile.webp"
+        "src": "public/assets/img/speakers/la/x-series/spk-la-x4r-intile.png"
       },
       {
         "label": "Install (In-Wall)",
-        "src": "public/assets/img/speakers/la/x-series/spk-la-x4r-inwall.webp"
+        "src": "public/assets/img/speakers/la/x-series/spk-la-x4r-inwall.png"
       }
     ],
     "relations": {
