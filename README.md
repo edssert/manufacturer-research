@@ -51,8 +51,14 @@ raw-data/raw-images/  원본 사진 아카이브
    폴더 `<모델>/` 로 묶는다(원본 없는 역재구성 md 는 폴더화하지 않음).
    폴더 이동 시 다른 파일 주석의 경로 문자열도 함께 갱신.
 2. **원본 이미지 아카이빙 (필수)** — 제품 사진 원본 수신 시
-   `raw-data/raw-images/<제조사>/<카테고리>/<시리즈>/` 에 원본 그대로 보관.
-   웹 표시용은 webp 변환 후 `public/assets/img/…` 에 배치.
+   `raw-data/raw-images/<제조사>/<카테고리>/<시리즈>/<모델>/` 에 원본 그대로
+   보관하되 **출처별 하위폴더로 구분**한다: `visuals-zip/`(제조사 공식 ZIP
+   압축해제본) · `web-overview/`(제품페이지 렌더) · `processed/`(누끼 가공
+   중간본). 상세·판별기준은 `raw-data/raw-images/la/speakers/README.md`.
+   용량 큰 ZIP 원본은 git 아닌 OneDrive `03.Resources\L-Acoustics-Visual-ZIPs\`
+   에 보관(`.gitignore` 로 `raw-data/**/*.zip` 제외). 웹 표시용은 **공식
+   원본 기반 투명 PNG(누끼·그림자 제거)** 로 `public/assets/img/…` 에 배치
+   (구 webp 대체 완료).
 3. **출처 기록 + 교차검증 필수** — 스펙 수치는 출처를 md 에 남기고, 출처
    간 불일치는 확정 근거를 기록한다.
 4. **데이터만 추가하면 UI 는 자동** — 카드/필터/모달은 data.js 를 읽어
