@@ -83,7 +83,7 @@ export const LA_K_SERIES = [
       { "label": "Front", "src": "public/assets/img/speakers/la/k-series/spk-la-k1.png" },
       { "label": "8×K1 + K1-BUMP", "src": "public/assets/img/speakers/la/k-series/spk-la-k1-array.png" }
     ],
-    // [사용자 요청] 모달 내 뷰 순서(Horizontal/Vertical/Array)는 그대로
+    // 모달 내 뷰 순서(Horizontal/Vertical/Array)는 그대로
     // 유지하되, 카드 목록에서 마우스를 올렸을 때(hover)만 Vertical 대신
     // Array 뷰가 보이도록 지정. speakers.view.js cardHTML 참고.
     "cardHoverView": "Array (8x + K1-BUMP)",
@@ -106,11 +106,11 @@ export const LA_K_SERIES = [
       { "band": "MF", "watt": 497 },
       { "band": "HF", "watt": 199 }
     ],
-    // [사용자 요청] 모달 최하단에 프리셋 구성 섹션 추가. 원문:
+    // 모달 최하단에 프리셋 구성 섹션 추가. 원문:
     // raw-data/raw-specs/la/references/presets/k-series/k1.md
     // (출처: preset_guide_EN.pdf p.49-50, owner's manual EN v29.0;
     // 교차검증/보강: K1_OM_EN.pdf owner's manual EN v4.0 p.34-45).
-    // [사용자 요청 — OM v4.0 반영] ratio(권장 매칭 비율)와 minLine(최소
+    // [OM v4.0 반영] ratio(권장 매칭 비율)와 minLine(최소
     // 라인 길이, 명시된 구성에만 존재)을 행마다 추가 — OM에서 preset_guide
     // 원문에는 없던 신규 정보. [재검토] 이 표(rows) 자체에는 표시하지
     // 않고, 렌더링(speakers.view.js presetGuideHTML)이 ratio/minLine이
@@ -129,7 +129,7 @@ export const LA_K_SERIES = [
         { "config": "K1 + Kara II (downfill)", "preset": "[K1] + [KARAIIDOWNK1]", "acoustic": "35 Hz - 20 kHz, extends vertical coverage to closer audience", "acousticShort": "35 Hz - 20 kHz, downfill", "ratio": "up to 6 Kara II" },
         { "config": "K1 + K2 (downfill)", "preset": "[K1] + [K2 110]", "acoustic": "35 Hz - 20 kHz, same horizontal coverage as K1 for optimal downfill", "acousticShort": "35 Hz - 20 kHz, downfill" }
       ],
-      // [사용자 요청 — 가독성 개선, 웹 검색 교차검증] 기존 각주 4개는
+      // [가독성 개선, 웹 검색 교차검증] 기존 각주 4개는
       // 문장 안에 서로 다른 성격의 정보(구성 규칙/호환성 경고/라우팅
       // 표)가 축약된 채 섞여 있어 이해하기 어려웠다(특히 "+ 극성" 표기가
       // 무슨 뜻인지 불명확했음, 사용자 지적). L-Acoustics K1 공식
@@ -145,7 +145,7 @@ export const LA_K_SERIES = [
       //    나머지 값(IN A/0dB/0ms/정상 극성/ON)은 위와 동일하다 — 즉
       //    "라인소스냐 서브냐"만 다르고 나머지 파라미터 값 자체는
       //    프리셋 종류와 무관하게 항상 같다는 것을 명확히 했다.
-      // [사용자 요청 — 가독성 2차 개선] notes 를 단순 문자열 배열 대신
+      // [가독성 2차 개선] notes 를 단순 문자열 배열 대신
       // { text, subs? } 객체 배열로 바꿔 항목 안에서도 하위 글머리 기호
       // (2단계 불렛)를 쓸 수 있게 한다 — Downfill 옵션(라인별 3가지)과
       // 출력 라우팅(프리셋 그룹별 2가지)처럼 한 항목 안에 여러 갈래
@@ -154,7 +154,7 @@ export const LA_K_SERIES = [
       // 항목(카디오이드/호환성 주의)은 기존처럼 단일 문장 그대로 둔다.
       // 렌더링은 speakers.view.js presetGuideHTML 이 subs 유무를 보고
       // 중첩 <ul> 을 추가로 그린다.
-      // [사용자 요청 — 참고 사항 3분할, 최종] 표가 3개(메인/Matching
+      // [참고 사항 3분할, 최종] 표가 3개(메인/Matching
       // Ratio/Delay Defaults)로 늘어나 각 표 바로 아래 그 표에 해당하는
       // 참고 사항만 두도록 재배치했다(전에는 5개 항목이 전부 메인 표
       // 밑 하나에 뭉쳐 있어 Matching Ratio/Delay Defaults 표와 내용이
@@ -190,7 +190,7 @@ export const LA_K_SERIES = [
         }
       ],
       "ratioSource": "K1_OM_EN.pdf (K1 owner's manual EN version 4.0) p.35-45; preset_guide_EN.pdf p.49-50 (owner's manual EN v29.0)",
-      // [사용자 요청 — 극성 오류 수정, 최종] pdfplumber 텍스트 추출로는
+      // [극성 오류 수정, 최종] pdfplumber 텍스트 추출로는
       // 원문 표의 극성 아이콘(회색 [+]/빨간 [-] 배지, 텍스트 레이어에
       // 없음)이 누락되어 "전부 극성 정상(+)"으로 잘못 옮겨졌었다 —
       // 사용자 지적으로 PyMuPDF 로 p.37/38/40/42 를 실제 이미지 렌더링해
@@ -200,11 +200,11 @@ export const LA_K_SERIES = [
       //   에서는 +, [K1SB_100_NC](노이즈 컨트롤 카디오이드) 조합에서는 -
       // - KS28: 모든 조합(단독/K1-SB 병용 불문)에서 항상 -
       // - CS1: 모든 조합(단독/K1-SB 병용 불문)에서 항상 -
-      // [사용자 요청 — 극성 표기 간소화] +(정상)는 기본값이라 당연하므로
+      // [극성 표기 간소화] +(정상)는 기본값이라 당연하므로
       // 표시를 생략하고, −(반전)만 "(−)"로 표기 — 렌더링(presetGuideHTML)
       // 이 이 문자열 안의 "−" 기호만 빨간색으로 강조한다(괄호 자체는
       // 일반 색 그대로, polarity-flip span은 "−"만 감쌈).
-      // [사용자 요청 — 표 구분 기능으로 교체] 텍스트 문자 "|"로 이어붙이는
+      // [표 구분 기능으로 교체] 텍스트 문자 "|"로 이어붙이는
       // 대신, values를 문자열 배열(items)로 구조화해 렌더링이 각 항목을
       // 별도 span으로 나누고 그 사이에 실제 CSS border-left 세로 구분선을
       // 그린다(위아래 표 가로선과 끊겨 보이는 짧은 구분선, 사용자가 요청한
@@ -224,7 +224,7 @@ export const LA_K_SERIES = [
           { "combo": "[K1] + [CS1_60] / [CS1_60_S]", "items": ["K1 = 7.5 ms", "CS1 = 0 ms (−)"] },
           { "combo": "[K1] + [K1SB_X] + [CS1_60] / [CS1_60_S]", "items": ["K1 = 7.5 ms", "K1-SB = 7.5 ms", "CS1 = 0 ms (−)"] }
         ],
-        // [사용자 요청 — notes 문구 정정] 첫 항목이 "딜레이 + 극성
+        // [notes 문구 정정] 첫 항목이 "딜레이 + 극성
         // 기본값"이라고 적어 마치 "극성은 항상 +"라는 뜻으로 읽힐 수
         // 있었다 — 실제로는 아래 두 번째 항목에서 설명하듯 조합에 따라
         // −(반전)인 경우도 있으므로, 첫 항목은 "딜레이 및 극성 기본값
@@ -240,7 +240,7 @@ export const LA_K_SERIES = [
       },
       "source": "preset_guide_EN.pdf p.49-50 (owner's manual EN v29.0); K1_OM_EN.pdf (owner's manual EN v4.0) p.16, 34-45"
     },
-    // [사용자 요청] K1 owner's manual "Mechanical safety"(p.31-33) 중 K1
+    // K1 owner's manual "Mechanical safety"(p.31-33) 중 K1
     // 자체에 해당하는 부분만 발췌 — K1-SB/KS28/CS1의 리깅 한계 표는
     // 각자 제품 데이터에 정리할 항목이라 여기서는 제외(원문 전체는
     // raw-data/raw-specs/la/speakers/k-series/k1/k1.md 출처 3 참고).
@@ -390,7 +390,7 @@ export const LA_K_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/3), LA4X(1/1), LA7.16(1/4)",
-    // [사용자 요청] 기존 Front(spk-la-k2.webp)/Array(spk-la-k2-array.webp)
+    // 기존 Front(spk-la-k2.webp)/Array(spk-la-k2-array.webp)
     // 사진 삭제. 메인 이미지를 Horizontal 로 교체.
     "img": "public/assets/img/speakers/la/k-series/spk-la-k2-horizontal.png",
     "views": [
@@ -400,12 +400,12 @@ export const LA_K_SERIES = [
       { "label": "4×K2 + K2-CHARIOT + 2×K2-JACK", "src": "public/assets/img/speakers/la/k-series/spk-la-k2-array2.png" },
       { "label": "8×K2 + K2-BUMP", "src": "public/assets/img/speakers/la/k-series/spk-la-k2-array3.png" }
     ],
-    // [사용자 요청] 모달 뷰 전환 토글에서 Horizontal/Vertical/Panflex
+    // 모달 뷰 전환 토글에서 Horizontal/Vertical/Panflex
     // Detail 3개를 세로로 쌓은 그룹으로 묶는다(speakers.view.js
     // modalBodyHTML STACK_LABELS 참고). 기본값(Vertical (Panflex))과
     // 라벨이 달라 개별 지정이 필요.
     "viewStackLabels": ["Horizontal", "Vertical", "Panflex Detail"],
-    // [사용자 요청] 카드 hover 대상을 Array(12x + K2-BUMP + K2-BAR)로 지정
+    // 카드 hover 대상을 Array(12x + K2-BUMP + K2-BAR)로 지정
     // (K1 과 동일한 cardHoverView 패턴, speakers.view.js cardHTML 참고).
     "cardHoverView": "Array (12x + K2-BUMP + K2-BAR)",
     "relations": {
@@ -603,7 +603,7 @@ export const LA_K_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/6), LA4X(1/2), LA7.16(1/8)",
-    // [사용자 요청] 기존 Front 사진(spk-la-k3.webp)을 Horizontal로 개명
+    // 기존 Front 사진(spk-la-k3.webp)을 Horizontal로 개명
     // (실 파일도 spk-la-k3-horizontal.webp로 리네임), 단독 Array 사진
     // (spk-la-k3-array.webp)은 삭제. 순서: Horizontal/Vertical/
     // Array(12x+K3-BUMP+K3-BAR)/Rigging/With KS28.
@@ -616,7 +616,7 @@ export const LA_K_SERIES = [
       { "label": "8×K3 + 2×K3-RIGBAR", "src": "public/assets/img/speakers/la/k-series/spk-la-k3-array4.png" },
       { "label": "8×K3 + K3-BUMP", "src": "public/assets/img/speakers/la/k-series/spk-la-k3-array5.png" }
     ],
-    // [사용자 요청] 카드 hover 대상을 Array(12x + K3-BUMP + K3-BAR)로 지정
+    // 카드 hover 대상을 Array(12x + K3-BUMP + K3-BAR)로 지정
     // (K1/K2 와 동일한 cardHoverView 패턴, speakers.view.js cardHTML 참고).
     "cardHoverView": "Array (12x + K3-BUMP + K3-BAR)",
     "relations": {
@@ -791,7 +791,7 @@ export const LA_K_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/6), LA4X(1/2), LA7.16(1/8)",
-    // [사용자 요청] 기존 Front(spk-la-k3i.webp)/단독 Array(spk-la-k3i-array.webp)
+    // 기존 Front(spk-la-k3i.webp)/단독 Array(spk-la-k3i-array.webp)
     // 사진 삭제. 순서: Horizontal/Vertical/Array White/Array Black.
     "img": "public/assets/img/speakers/la/k-series/spk-la-k3i-horizontal.png",
     "views": [
@@ -802,7 +802,7 @@ export const LA_K_SERIES = [
       { "label": "8×K3i + K3i-BUMP + K3i-SCREENS (White RAL)", "src": "public/assets/img/speakers/la/k-series/spk-la-k3i-array2.png" },
       { "label": "8×K3i + K3i-BUMP (White RAL)", "src": "public/assets/img/speakers/la/k-series/spk-la-k3i-array3.png" }
     ],
-    // [사용자 요청] 카드 hover 대상을 Array White RAL로 지정
+    // 카드 hover 대상을 Array White RAL로 지정
     // (K1/K2/K3 와 동일한 cardHoverView 패턴, speakers.view.js cardHTML 참고).
     "cardHoverView": "Array White RAL (8x + K3i-BUMP + K3i-SCREENS)",
     "notes": "K3의 설치용(install) 버전. 전용 인클로저로 K3와 치수/무게가 다름(K3i_AE_EN.docx 원문 확보, raw-data/raw-specs/la/speakers/k-series/k3i/k3i.md 참고).",
@@ -994,7 +994,7 @@ export const LA_K_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/6), LA2Xi(SE2/4), LA4X(2/4), LA7.16(1/8)",
-    // [사용자 요청] 기존 Front 사진(spk-la-kara-ii.webp)을 Horizontal로
+    // 기존 Front 사진(spk-la-kara-ii.webp)을 Horizontal로
     // 개명(실 파일도 spk-la-kara-ii-horizontal.webp로 리네임), 단독 Array
     // 사진(spk-la-kara-ii-array.webp)은 삭제. 순서: Horizontal/Vertical/
     // Vertical(Panflex)/Array(12x+M-BUMP+M-BAR)/With SB18.
@@ -1005,7 +1005,7 @@ export const LA_K_SERIES = [
       { "label": "3×SB18 + 9×Kara II", "src": "public/assets/img/speakers/la/k-series/spk-la-kara-ii-array2.png" },
       { "label": "8×Kara II + M-BUMP", "src": "public/assets/img/speakers/la/k-series/spk-la-kara-ii-array3.png" }
     ],
-    // [사용자 요청] 카드 hover 대상을 Array(12x + M-BUMP + M-BAR)로 지정
+    // 카드 hover 대상을 Array(12x + M-BUMP + M-BAR)로 지정
     // (K1/K2/K3/K3i 와 동일한 cardHoverView 패턴, speakers.view.js cardHTML 참고).
     "cardHoverView": "Array (12x + M-BUMP + M-BAR)",
     "relations": {
@@ -1211,7 +1211,7 @@ export const LA_K_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/6), LA2Xi(SE2/4), LA4X(2/4), LA7.16(1/8)",
-    // [사용자 요청] 기존 Front 사진(spk-la-kara-iii.webp)을 Horizontal로
+    // 기존 Front 사진(spk-la-kara-iii.webp)을 Horizontal로
     // 개명(실 파일도 spk-la-kara-iii-horizontal.webp로 리네임). 기존 단독
     // Array 사진(spk-la-kara-iii-array.webp)은 삭제하지 않고 "Array White
     // (8x + KARAIIi-BUMP)"로 재라벨링, 기존 "Array (8x+KARAIIi-BUMP+M-BARi)"
@@ -1224,7 +1224,7 @@ export const LA_K_SERIES = [
       { "label": "8×Kara IIi + KARAIIi-BUMP + M-BARi", "src": "public/assets/img/speakers/la/k-series/spk-la-kara-iii-array2.png" },
       { "label": "8×Kara IIi + KARAIIi-BUMP (White RAL)", "src": "public/assets/img/speakers/la/k-series/spk-la-kara-iii-array3.png" }
     ],
-    // [사용자 요청] 카드 hover 대상을 Array White로 지정
+    // 카드 hover 대상을 Array White로 지정
     // (K1/K2/K3/K3i/Kara II 와 동일한 cardHoverView 패턴, speakers.view.js cardHTML 참고).
     "cardHoverView": "Array White (8x + KARAIIi-BUMP)",
     "notes": "Kara II의 설치용(install) 버전. 전용 인클로저로 Kara II와 치수/무게가 다름(Kara_IIi_AE_EN.docx 원문 확보, raw-data/raw-specs/la/speakers/k-series/kara-iii/kara-iii.md 참고). Depth 치수는 출처 간 미세 불일치(409mm vs 403mm)가 있어 docx 값을 채택했다(각주 참고).",

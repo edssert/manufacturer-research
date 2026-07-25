@@ -1,7 +1,6 @@
 // Meyer Sound ULTRA-X 스피커 데이터 (10개 모델).
 // X20/X22/X23 과 각 XP 변형, X40/X42, X80/X82 — 같은 제품군 안에서 외형이
 // 동일해 보이는 변형끼리도 제조사 카탈로그 카드가 모델별로 따로 있어 각각 받았다.
-//
 // 스펙 조사 전 — 제조사 공식 이미지만 등록된 상태다(pending: true).
 // 스펙 필드는 전부 null/빈 배열로 두고, 파생 태그(wayCount/network/
 // lowUnitConfig)는 speakers.schema.js 의 normalize* 가 pending 항목을

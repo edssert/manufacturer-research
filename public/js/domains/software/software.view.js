@@ -35,7 +35,7 @@ export function cardHTML(s) {
       <div class="card__name">${esc(s.name)}</div>
       <div class="card__config">${s.pending ? '<span class="hint-text">스펙 조사 전 — 이미지만 등록됨</span>' : esc(s.notes || "")}</div>
       <div class="card__stats">
-        <!-- [사용자 요청] 카드 강조 값을 전역 accent 대신 제조사 색으로 -->
+        <!-- 카드 강조 값을 전역 accent 대신 제조사 색으로 -->
         <div class="stat-grid">
           <div class="stat-grid__cell"><span class="stat-grid__key">Price</span><span class="stat-grid__value stat-grid__value--mfr">${esc(s.price || "—")}</span></div>
           <div class="stat-grid__cell"><span class="stat-grid__key">Platform</span><span class="stat-grid__value">${esc(s.platform || "—")}</span></div>

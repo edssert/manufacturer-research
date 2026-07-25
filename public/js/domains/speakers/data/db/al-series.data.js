@@ -2,7 +2,6 @@
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
 // 원본: audio-spec-parsing-skill 마스터 스키마 AL60/AL90/ALi60/ALi90 v1.0 md.
-//
 // [type 판단 근거] 마스터 스키마 Product_Category 는 "augmented array
 // loudspeaker"(d&b 신규 마케팅 용어)이나 Product_Type 은 "Line array
 // loudspeaker" 관례를 유지 — TYPE_ORDER(speakers.schema.js) 기존 어휘 중

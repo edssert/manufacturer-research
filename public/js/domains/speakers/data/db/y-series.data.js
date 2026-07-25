@@ -1,5 +1,4 @@
 // d&b audiotechnik Y 스피커(투어링) 데이터 (6개 모델).
-//
 // 스펙 조사 전 — 제조사 공식 이미지만 등록된 상태다(pending: true).
 // 스펙 필드는 전부 null/빈 배열로 두고, 파생 태그(wayCount/network/
 // lowUnitConfig)는 speakers.schema.js 의 normalize* 가 pending 항목을

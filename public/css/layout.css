@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* ---------- 블록: topbar (헤더) ----------
-   [사용자 요청] 예전에는 스크롤하면 걷혀 올라갔는데, 항상 보이도록 상단 고정으로
+   예전에는 스크롤하면 걷혀 올라갔는데, 항상 보이도록 상단 고정으로
    바꿨다. 쌓임 순서는 위에서부터 topbar(42) > topnav(41) > controls(40) —
    아래 바가 스크롤로 올라올 때 위 바 밑으로 파고들게 한다. */
 .topbar {
@@ -23,7 +23,7 @@
   height: 2px;
   background: linear-gradient(90deg, var(--accent), transparent 45%);
 }
-/* [사용자 요청 — 밀도] 헤더가 세로로 컸다(원래 18/16 패딩 + 34px 로고 = 약
+/* [밀도] 헤더가 세로로 컸다(원래 18/16 패딩 + 34px 로고 = 약
    68px). 두 차례에 걸쳐 조여 지금은 패딩 7/6, 로고 26px, 제목 16px 이다.
    여기서 바 높이를 결정하는 건 패딩이 아니라 제목+부제 두 줄 묶음이라,
    글자 크기와 그 사이 간격(margin-top)을 같이 줄여야 실제로 낮아진다. */
@@ -72,7 +72,7 @@
 .topbar__title { font-size: 16px; font-weight: 800; margin: 0; letter-spacing: .3px; line-height: 1.1; }
 .topbar__title span { color: var(--accent); }
 .topbar__subtitle {
-  /* [사용자 요청] 제조사 나열은 제목을 받쳐 주는 라벨이라 더 작게 — 11px
+  /* 제조사 나열은 제목을 받쳐 주는 라벨이라 더 작게 — 11px
      (--fs-xs) → 10px. tokens.css 가 정한 "최소 11px" 하한보다 작지만, 대문자
      변환 + .14em 자간이라 실제 읽히는 크기는 그 이상이고, 여기서 정보를
      읽기보다 "어떤 브랜드를 다루는 앱인지" 훑는 용도라 예외로 둔다. */
@@ -94,7 +94,7 @@
 .topbar__count b { color: var(--accent); font-weight: 700; }
 
 /* ---------- 블록: theme-toggle (라이트/다크 전환 버튼) ----------
-   [사용자 요청] 도메인 탭 바(topnav) 오른쪽 끝에 배치(js/ui/nav.js
+   도메인 탭 바(topnav) 오른쪽 끝에 배치(js/ui/nav.js
    renderNav 참고, 처음엔 상단바에 있었으나 탭 전환 중에도 계속 보이도록
    이동). 해/달 두 아이콘을 겹쳐두고 [aria-pressed] 로 표시만 전환 —
    실제 테마 적용은 js/ui/theme.js 가 <html data-theme> 를 토글해서
@@ -119,7 +119,7 @@
 .theme-toggle[aria-pressed="true"] .theme-toggle__icon--moon { display: block; }
 
 /* ---------- 블록: media-toggle (카드 사진 숨기기 버튼) ----------
-   [사용자 요청] 모든 탭의 카드 사진(card__media)을 한 번에 숨기는 전역
+   모든 탭의 카드 사진(card__media)을 한 번에 숨기는 전역
    토글 — theme-toggle 과 동일하게 topnav 오른쪽 끝에 배치(js/ui/nav.js
    renderNav 참고). 실제 숨김 처리는 body.hide-media 상태에서
    css/components/card.css 의 .card__media 규칙이 담당, 이 버튼은
@@ -144,7 +144,7 @@
 .media-toggle[aria-pressed="true"] .media-toggle__icon--off { display: block; }
 
 /* ---------- 블록: motion-toggle (전체 애니메이션/트랜지션 켜기·끄기) ----------
-   [사용자 요청] theme-toggle/media-toggle 과 동일 패턴 — 사진 확대 pane
+   theme-toggle/media-toggle 과 동일 패턴 — 사진 확대 pane
    접힘, 카드 hover 크로스페이드 등 사이트 전반의 모션을 한 번에 끄는
    전역 토글. 실제 처리는 body.reduce-motion 상태에서 css/base.css 의
    전역 규칙(모든 transition/animation 을 0s 로 강제)이 담당, 이 버튼은

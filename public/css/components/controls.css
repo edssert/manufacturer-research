@@ -6,7 +6,7 @@
    ============================================================ */
 
 /* ---------- 블록: controls (상단 고정 컨트롤 바) ----------
-   [사용자 요청] topnav(도메인 탭)도 상단 고정이라, 이 바는 스크롤 시
+   topnav(도메인 탭)도 상단 고정이라, 이 바는 스크롤 시
    그 아래(topnav 높이만큼 내려온 지점)에 이어 붙어야 한다 — --topnav-h
    (main.js 가 실측해 설정)만큼 top 을 내림. z-index 는 topnav(41)보다
    아래(40)로 둬 쌓임 순서를 유지. */
@@ -19,7 +19,7 @@
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
-/* [사용자 요청 — 밀도/높이 통일] 세로 여백 대신 --bar-h 로 높이를 잡는다 —
+/* [밀도/높이 통일] 세로 여백 대신 --bar-h 로 높이를 잡는다 —
    최상단 로고 바·탭 바와 같은 높이(40px)가 되고, 그 안에서 컨트롤(30px)이
    가운데 정렬돼 위아래 여백이 5px 씩만 남는다. */
 .controls__inner { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
@@ -33,7 +33,7 @@
 .controls__tools { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 
 /* ---------- 블록: search-box (검색 입력) ----------
-   [사용자 요청] 한때 정렬/필터초기화/필터 버튼과 같은 줄에서 폭을 나눠
+   한때 정렬/필터초기화/필터 버튼과 같은 줄에서 폭을 나눠
    쓰기 위해 flex: 0 1 340px 로 줄였었는데, 사진/다크모드 토글이 topnav
    쪽으로 옮겨가면서(js/ui/nav.js) 이 줄의 공간 압박이 사라져 다시 남는
    폭을 전부 차지하도록 원복. */
@@ -45,7 +45,7 @@
   color: var(--muted);
   pointer-events: none;
 }
-/* [사용자 요청 — 밀도] 세로 패딩 11px + 14px 글자로 47px 짜리 큰 입력이었다 —
+/* [밀도] 세로 패딩 11px + 14px 글자로 47px 짜리 큰 입력이었다 —
    높이는 --control-h 로 고정하고 좌우 패딩만 준다. 글자도 컨트롤 스케일
    (--fs-md 13px)로 내려 정렬 셀렉트·버튼과 같은 급으로 맞췄다. */
 .search-box__input {
@@ -124,7 +124,7 @@
 .btn--primary:hover { color: var(--accent-ink); filter: brightness(1.06); }
 
 /* ---------- 블록: filter-panel (칩/슬라이더 필터 패널) ----------
-   [사용자 요청] 예전에는 컨트롤 바 안에 그대로 끼어 있어서, 필터를 열면 아래
+   예전에는 컨트롤 바 안에 그대로 끼어 있어서, 필터를 열면 아래
    카드가 통째로 밀려 내려갔다 — 열고 닫을 때마다 보던 카드 위치가 흔들린다.
    컨트롤 바(sticky, 위치 지정 요소)에 absolute 로 매달아 카드 "위에" 반투명
    오버레이로 덮게 바꿨다. 레이아웃을 차지하지 않으므로 카드는 그대로 있고,
@@ -209,7 +209,7 @@
 .chip:disabled .chip__count,
 .chip[disabled] .chip__count { color: var(--muted); }
 
-/* [사용자 요청] 액세서리 카드 안의 길이 칩(케이블 길이 변형 나열)은 필터
+/* 액세서리 카드 안의 길이 칩(케이블 길이 변형 나열)은 필터
    패널의 큰 칩과 같은 자리에 여러 개 들어가야 하므로 더 작게 — accessories
    .view.js lengthChipsHTML() 이 chip-group--compact 를 씀. */
 .chip-group--compact { gap: 5px; }

@@ -12,7 +12,7 @@ import { updateChipDisabledStates } from "./filters.js";
 import { buildSectionNav } from "./section-nav.js";
 
 /**
- * [사용자 요청] 그룹(제조사>타입/시리즈) 섹션을 접었다 펼 수 있게 — 모든
+ * 그룹(제조사>타입/시리즈) 섹션을 접었다 펼 수 있게 — 모든
  * 탭(Speaker/Amplifier/Accessories 등)이 이 renderGrid() 하나를 공유하므로
  * 여기 한 곳에 구현하면 전 탭에 자동 적용된다. renderGrid 는 필터/정렬이
  * 바뀔 때마다 resultsEl.innerHTML 을 통째로 새로 그리는 구조라 접힘 상태를
@@ -84,7 +84,7 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
         // 서브그룹 내부 카드 순서 제어 — 예: Subwoofer 타입(K1-SB 등)을 뒤로.
         if (groupBy.sortWithinGroup) g = [...g].sort(groupBy.sortWithinGroup);
         const headHTML = groupBy.headHTML(gk, sg, g);
-        // [사용자 요청] 그룹 헤더를 토글 버튼으로 — groupKey 는 이 그룹의
+        // 그룹 헤더를 토글 버튼으로 — groupKey 는 이 그룹의
         // 접힘 상태를 collapsedGroups 에서 조회/기록하는 고유 키.
         const groupKey = `${gk}::${sg ?? ""}`;
         const isCollapsed = collapsedGroups.has(groupKey);
@@ -107,7 +107,7 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
       head.setAttribute("aria-expanded", String(!collapsed));
       if (collapsed) collapsedGroups.add(key); else collapsedGroups.delete(key);
     };
-    // [사용자 요청] 버튼을 따로 보여주는 대신, 아무 그룹 헤더든 Ctrl/Cmd 를
+    // 버튼을 따로 보여주는 대신, 아무 그룹 헤더든 Ctrl/Cmd 를
     // 누른 채 클릭하면 전체 펼치기/접기가 되게 한다 — 모달의 섹션 토글
     // Ctrl+클릭(js/ui/modal.js wireSectionToggle)과 동일한 패턴. 클릭한
     // 헤더 자신의 "다음 상태"를 기준으로 나머지 전체를 맞춘다.

@@ -5,7 +5,7 @@
  * 제조사 표시 정보(MFR 맵: 이름/색상/축약형)가 모두 여기에 모여 있다.
  * UI 나 데이터 파일이 아닌 "규칙"을 바꿀 때 수정하는 파일.
  *
- * [사용자 요청] 리깅 툴/케이블/케이스 등 부속품을 정리하는 신규 탭.
+ * 리깅 툴/케이블/케이스 등 부속품을 정리하는 신규 탭.
  * 다른 도메인(DSP/Software)처럼 상호 연동 관계는 없는 단순 카탈로그라
  * relations 필드가 없다. Type 은 정해진 목록이 아니라 자유 텍스트로 두고
  * (사용자 확인) 데이터가 쌓이면 값에 따라 필터 칩이 자동 생성된다.
@@ -30,7 +30,6 @@ export const accessoriesSchema = {
     { key: "type", label: "Type", labelFor: (v) => v },
   ],
   rangeFields: [],
-  defaultSort: "name",
   sorters: {
     name: (a, b) => a.name.localeCompare(b.name),
     type: (a, b) => (a.type || "").localeCompare(b.type || "") || a.name.localeCompare(b.name),

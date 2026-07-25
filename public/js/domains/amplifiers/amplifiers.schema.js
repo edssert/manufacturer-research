@@ -14,12 +14,12 @@ export const AMP_MFR = {
 };
 export const AMP_MK_ORDER = ["la", "db", "my"];
 
-// [사용자 요청] 기본("model") 정렬은 알파벳순 대신 L-Acoustics 라인업 표시
+// 기본("model") 정렬은 알파벳순 대신 L-Acoustics 라인업 표시
 // 순서를 명시 고정한다: LA7.16 → LA1.16i → LA12X → LA4X → LA2Xi → LA-RAK III
 // → LA-RAK II AVB (랙은 개별 앰프를 담은 시스템이라 라인업 맨 뒤). 목록에
 // 없는 모델(다른 제조사 등)은 이 뒤에 알파벳순으로 이어진다.
 export const MODEL_ORDER = ["LA7.16", "LA1.16i", "LA12X", "LA4X", "LA2Xi", "LA-RAK III", "LA-RAK II AVB"];
-// [사용자 요청] d&b 앰프도 알파벳순 대신 플래그십/출력 내림차순으로 고정한다.
+// d&b 앰프도 알파벳순 대신 플래그십/출력 내림차순으로 고정한다.
 // 섹션(투어링/설치, controller.ampTypeOf 참조)이 먼저 갈리므로 여기서는 각
 // 섹션 안에서의 순서만 담당한다: 투어링 D90→D80→D40→D25, 설치 40D→25D→30D
 // →10D→5DM→5D (모두 4Ω 총출력 기준. 설치의 25D>30D 는 실제 출력·전압·네트워크
@@ -61,12 +61,11 @@ export const amplifiersSchema = {
     // 값이 없는 앰프(기존 d&b 등 단순 스키마)는 filter-engine 이 null 값을
     // 옵션에서 자동으로 제외하므로 이 칩 자체가 나타나지 않는다.
     { key: "usage", label: "Usage" },
-    // [사용자 요청] LA-RAK III(투어링 랙) 추가로 "Amplified Controller"(개별
+    // LA-RAK III(투어링 랙) 추가로 "Amplified Controller"(개별
     // 앰프)와 "Rack"(랙 시스템)을 구분해 걸러볼 수 있는 Type 칩을 노출.
     { key: "type", label: "Type" },
   ],
   rangeFields: [],
-  defaultSort: "model",
   sorters: {
     model: compareModel,
     channels: (a, b) => (b.channels || 0) - (a.channels || 0) || compareModel(a, b),

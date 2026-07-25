@@ -22,7 +22,7 @@ html {
   overflow-y: scroll; /* [폴백] scrollbar-gutter 미지원 브라우저에서도 스크롤바를 항상 표시해 폭 흔들림 방지 */
 }
 
-/* [사용자 요청] sticky footer 패턴 — Brand 탭처럼 탭마다(또는 같은 탭 안
+/* sticky footer 패턴 — Brand 탭처럼 탭마다(또는 같은 탭 안
    브랜드 전환처럼) 콘텐츠 높이가 들쭉날쭉하면 app-footer 가 콘텐츠 바로
    아래 붙는 기본 흐름에서는 위치가 눈에 띄게 흔들린다. body 를 세로 flex
    컨테이너로 만들고 <main id="domain-views">(flex:1 0 auto, 아래 참고)가
@@ -72,7 +72,7 @@ a { color: inherit; }
   * { animation: none !important; transition: none !important; }
 }
 
-/* [사용자 요청] 라이트/다크 모드·사진 숨기기와 같은 패턴의 수동 전역
+/* 라이트/다크 모드·사진 숨기기와 같은 패턴의 수동 전역
    토글(js/ui/motion-toggle.js) — 시스템 설정과 무관하게 사용자가 직접
    사이트 전반의 애니메이션/트랜지션을 끌 수 있다. 위 prefers-reduced-motion
    과 동일한 처리를 body 클래스로도 트리거한다. */

@@ -1,7 +1,7 @@
 ﻿/**
  * @module domains/brand/controller
  * Brand 탭 컨트롤러 — 카드/모달 없이, 한 번에 브랜드 하나의 전체 페이지
- * 섹션만 보여준다. [사용자 요청] 브랜드를 전부 세로로 나열하던 이전 방식
+ * 섹션만 보여준다. 브랜드를 전부 세로로 나열하던 이전 방식
  * 대신, 상단의 텍스트+언더라인 셀렉터(박스 없음)로 브랜드를 전환하는
  * 방식으로 변경 — 브랜드가 3개뿐이라 검색/정렬 컨트롤은 실익이 적어 제거.
  *
@@ -24,9 +24,9 @@ let activeMk = null;
 let compareMode = false;
 /** 비교 모드에서 선택된 브랜드 mfr 코드 목록(최대 3개) */
 let compareMks = [];
-/** [사용자 요청] 비교 다이어그램 연도 축 방향 — false: 위=과거/아래=최근(기본), true: 위=최근/아래=과거 */
+/** 비교 다이어그램 연도 축 방향 — false: 위=과거/아래=최근(기본), true: 위=최근/아래=과거 */
 let compareDescending = false;
-/** [사용자 요청] 일반 브랜드 페이지(비교 모드 아님)의 연혁 타임라인 정렬 방향 — false: 과거→최근(기본), true: 최근→과거 */
+/** 일반 브랜드 페이지(비교 모드 아님)의 연혁 타임라인 정렬 방향 — false: 과거→최근(기본), true: 최근→과거 */
 let historyDescending = false;
 
 /** 탭 활성화: 최초 1회 UI 빌드 후 렌더 */
@@ -73,7 +73,7 @@ function buildBrandUI(wrap) {
 
   wrap.querySelectorAll(".brand-switch__tab").forEach(tab => {
     tab.addEventListener("click", () => {
-      // [사용자 요청] 비교 모드를 나갈 땐(탭 클릭으로 벗어나는 경우 포함)
+      // 비교 모드를 나갈 땐(탭 클릭으로 벗어나는 경우 포함)
       // 선택 상태를 초기화한다 — 다음에 비교 모드로 다시 들어오면 항상
       // 아무것도 체크 안 된 기본 상태에서 시작해야 한다.
       if (compareMode) compareMks = [];
@@ -86,14 +86,14 @@ function buildBrandUI(wrap) {
   $("#brand-compare-btn").addEventListener("click", () => {
     compareMode = !compareMode;
     if (!compareMode) {
-      // [사용자 요청] 비교 모드를 끄면 선택된 브랜드 체크 상태를 초기화한다
+      // 비교 모드를 끄면 선택된 브랜드 체크 상태를 초기화한다
       // — 다시 켰을 때 항상 빈 상태(아무 체크 없음)로 시작해야 한다.
       compareMks = [];
     }
     renderBrand();
   });
 
-  // [사용자 요청] 비교 다이어그램의 연도 축 방향(과거→현재 / 현재→과거)을
+  // 비교 다이어그램의 연도 축 방향(과거→현재 / 현재→과거)을
   // 전환하는 토글. 비교 모드일 때만 의미가 있으므로 브랜드 비교 버튼 옆에
   // 두되, 비교 모드가 아닐 때는 숨긴다(renderBrand 에서 hidden 갱신).
   $("#brand-compare-sort-btn").addEventListener("click", () => {
@@ -107,7 +107,7 @@ function renderComparePicker() {
   const picker = $("#brand-compare-picker");
   picker.hidden = !compareMode;
   if (!compareMode) {
-    // [버그 수정] hidden 만으로 감춰도 이전에 그려진 체크박스 마크업이
+    // hidden 만으로 감춰도 이전에 그려진 체크박스 마크업이
     // DOM 에 그대로 남아있었다(CSS 명시도 문제로 실제로 화면에 계속
     // 보이기까지 했다 — brand.css picker[hidden] 규칙으로 별도 수정).
     // 비교 모드를 나갈 땐 내용 자체도 비워 다음 진입 시 항상 깨끗하게
@@ -154,7 +154,7 @@ function renderBrand() {
 
   renderComparePicker();
 
-  // [사용자 요청] 정렬 방향 토글은 비교 모드에서만 의미가 있다.
+  // 정렬 방향 토글은 비교 모드에서만 의미가 있다.
   sortBtn.hidden = !compareMode;
   sortBtn.textContent = compareDescending ? "최근 → 과거" : "과거 → 최근";
 
@@ -171,7 +171,7 @@ function renderBrand() {
   $("#count").innerHTML = b ? `<b>1</b> / ${BRANDS.length} brands` : `<b>0</b> / ${BRANDS.length} brands`;
   resultsEl.innerHTML = b ? brandPageHTML(b, historyDescending) : "";
   refreshNavCounts();
-  // [사용자 요청] 비교 모드처럼 일반 브랜드 페이지의 연혁도 정렬 방향을
+  // 비교 모드처럼 일반 브랜드 페이지의 연혁도 정렬 방향을
   // 토글할 수 있어야 한다. resultsEl.innerHTML 을 매번 새로 그리므로
   // 버튼도 매번 새로 생기고, 이벤트도 매번 다시 붙여야 한다.
   const historySortBtn = $("#brand-history-sort-btn");
@@ -185,18 +185,18 @@ function renderBrand() {
 }
 
 /**
- * [사용자 요청] 연혁 타임라인 세로선이 마지막 원 아래로 삐져나오지 않고
+ * 연혁 타임라인 세로선이 마지막 원 아래로 삐져나오지 않고
  * 정확히 "첫 원 중심 ~ 마지막 원 중심"까지만 이어지도록, 실제 렌더된 원
  * 위치를 측정해 .timeline::before 의 높이를 인라인 스타일(--line-h)로
  * 지정한다. 각 항목의 텍스트 줄바꿈에 따라 원 사이 간격이 달라 순수 CSS
  * (고정 bottom 값)로는 마지막 원에서 정확히 끊을 수 없었다 — 그렇다고
  * 사각형으로 덮어 가리면 텍스트와 겹치는 문제가 있어(실제로 겪음), 대신
  * 선 자체의 길이를 원 위치 기준으로 정확히 계산한다.
- * [버그 수정] 원은 .timeline__year(연도 줄) 세로 정중앙에 붙어 있으므로,
+ * 원은 .timeline__year(연도 줄) 세로 정중앙에 붙어 있으므로,
  * 항목(item) 자체의 top 에 고정 오프셋(9px)을 더하는 대신 .timeline__year
  * 요소의 실제 렌더 높이를 실측해 그 중앙을 원 위치로 계산해야
  * 폰트/줄간격이 달라도 세로선(::before)과 원이 항상 일치한다.
- * [사용자 요청] 원-원 간격이 설명 줄 수와 무관하게 항상 "1줄 설명 기준
+ * 원-원 간격이 설명 줄 수와 무관하게 항상 "1줄 설명 기준
  * 간격"으로 동일해야 한다 — 이를 위해 먼저 모든 항목의 min-height 를
  * 초기화(0)한 상태에서 "실제 필요 높이가 가장 작은 항목"(대개 1줄)의
  * 높이를 기준값으로 잡아 --item-min-h 로 전체에 적용한 다음, 그 상태
@@ -302,7 +302,7 @@ function sizeCompareTrack(root, selected, descending = false) {
         const pct = descending ? 100 - rawPct : rawPct;
         return {
           year: axisMin + (pct / 100) * axisSpan,
-          // [버그 수정] .brand-compare__label 은 CSS 에서 display:contents 로
+          // .brand-compare__label 은 CSS 에서 display:contents 로
           // 렌더되어(grid 부모의 컬럼에 자식을 직접 배치하기 위함) 자기 자신은
           // getBoundingClientRect() 높이가 항상 0으로 측정된다 — 그 결과 겹침
           // 방지 계산이 무력화돼 모든 라벨이 최소 간격으로 뭉쳐 찍히는 버그가

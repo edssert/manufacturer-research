@@ -8,6 +8,7 @@
  * 상태 저장: 각 도메인의 state 객체 (core/state.js 참조)
  */
 import { $, esc, uniq } from "../core/dom.js";
+import { resolvePath as resolve } from "../core/filter-engine.js";
 
 /**
  * 토글형 칩 버튼 1개를 생성한다.
@@ -34,7 +35,7 @@ function chipEl(label, val, set, sub, onchange) {
 }
 
 /**
- * [v1.8 리팩토링] 5개 도메인 컨트롤러(speakers/amplifiers/dsps/software/
+ * 5개 도메인 컨트롤러(speakers/amplifiers/dsps/software/
  * accessories)에 동일하게 반복되던 검색바+정렬+필터토글 컨트롤 바 마크업을
  * 공통 헬퍼로 추출한 것 — id 접두사·placeholder·정렬 옵션만 도메인별로
  * 다르고 나머지 구조(controls__inner/search-box/controls__tools/
@@ -215,14 +216,4 @@ export function updateChipDisabledStates(panelEl, data, state, schema, passesFn)
       c.setAttribute("aria-disabled", String(disable));
     });
   });
-}
-
-/**
- * "a.b.c" 형태의 경로 문자열로 중첩 객체 값을 읽는다.
- * @param {Object} obj 대상 객체
- * @param {string} path 점 표기 경로
- * @returns {*}
- */
-function resolve(obj, path) {
-  return path.split(".").reduce((o, k) => (o == null ? o : o[k]), obj);
 }

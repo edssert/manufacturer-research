@@ -1,6 +1,5 @@
 // d&b audiotechnik Ui 스피커(설치형) 데이터 (2개 모델).
 // U 시리즈 설치형은 서브우퍼(Bi10/Bi10N)만 별도 모델로 존재한다.
-//
 // 스펙 조사 전 — 제조사 공식 이미지만 등록된 상태다(pending: true).
 // 스펙 필드는 전부 null/빈 배열로 두고, 파생 태그(wayCount/network/
 // lowUnitConfig)는 speakers.schema.js 의 normalize* 가 pending 항목을

@@ -1,11 +1,9 @@
 // d&b audiotechnik T 스피커 데이터 (3개 모델: T10, Ti10L, Ti10P).
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
-//
 // 소스(마스터 스키마 v1.1, audio-spec-parsing-skill):
 //   C:\Dev\audio-spec-parsing-skill\speakers\db\T10_v1.1.md / Ti10L_v1.1.md / Ti10P_v1.1.md
 //   (사본: raw-data/raw-specs/db/speakers/t-series/)
-//
 // 내린 판단:
 // - type: T10은 회전형 웨이브가이드로 라인어레이/포인트소스 겸용(원문 이중 Product_Type) —
 //   주 용도인 "Line Array"로 분류하고 notes에 겸용 명시. Ti10L=Line source 버전(어레이 리깅 포함) →

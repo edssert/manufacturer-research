@@ -10,7 +10,6 @@
  *   customSearchMatch: (item, q) => boolean,    // 추가 검색 규칙 (선택)
  *   chipFields: [{ key:"mk", label:"Manufacturer", order:[], labelFor:(v)=>... }],
  *   rangeFields: [{ key:"spl", label:"Max SPL", unit:"dB SPL", step:1 }],
- *   defaultSort: "series",
  *   sorters: { series: (a,b)=>..., spl: (a,b)=>... }
  * }
  */

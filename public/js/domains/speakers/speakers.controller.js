@@ -8,16 +8,12 @@
  *   speakers.schema.js — 필터/정렬/파생 필드 정의
  *   speakers.view.js   — 카드/모달 마크업 (순수 함수)
  */
-import { createState, resetState } from "../../core/state.js";
-import { $, esc, debounce } from "../../core/dom.js";
-import { buildFilters, wireFilterToggle, controlsBarHTML } from "../../ui/filters.js";
-import { renderGrid } from "../../ui/card-grid.js";
+import { esc } from "../../core/dom.js";
+import { createDomainTab } from "../../ui/domain-tab.js";
 import { openModalWith } from "../../ui/modal.js";
-import { openSplitPane, replaceSplitPane1 } from "../../ui/split-view.js";
-import { registerDomain, setItemRoute, replaceItemRoute } from "../../core/router.js";
-import { refreshNavCounts } from "../../ui/nav.js";
-import { renderLegend } from "../../ui/legend.js";
-import { registerSpeakers, resolveAmpIdForModel, findAmplifierById, findSpeakerById, findSpeakersMatchingAmp, findAmpConfigsBySpeaker, findAccessoriesForSpeaker, findAccessoryById } from "../../relationships/cross-ref.js";
+import { openSplitPane, replaceSplitPane1, wireChipPanes } from "../../ui/split-view.js";
+import { setItemRoute, replaceItemRoute } from "../../core/router.js";
+import { registerSpeakers, resolveAmpIdForModel, findAmplifierById, findSpeakerById, findSpeakersMatchingAmp, findAmpConfigsBySpeaker, findAccessoriesForSpeaker } from "../../relationships/cross-ref.js";
 
 import { SPEAKERS } from "./speakers.data.js";
 import { speakersSchema, MFR, MK_ORDER, normalizeCrossover, normalizeLowUnitConfig, normalizeAngleRanges, THROWCAT_ORDER, SERIES_ORDER_OVERRIDE } from "./speakers.schema.js";
@@ -29,12 +25,10 @@ import { cardHTML as speakerCardHTML, modalBodyHTML as speakerModalBodyHTML, set
 import { AMP_MFR } from "../amplifiers/amplifiers.schema.js";
 import { modalBodyHTML as ampModalBodyHTML } from "../amplifiers/amplifiers.view.js";
 
-// [사용자 요청] 스피커 모달 안에서도 System Elements(리깅/프로텍션 등
+// 스피커 모달 안에서도 System Elements(리깅/프로텍션 등
 // 액세서리) 칩을 클릭하면 Split View pane 2 에 액세서리 상세를 띄운다 —
-// amplifiers.controller.js 의 wireAmpModalAccessoryClicks 와 동일한 패턴.
-// 액세서리의 "순수 뷰 함수"와 색상 맵만 import.
-import { ACC_MFR } from "../accessories/accessories.schema.js";
-import { modalBodyHTML as accessoryModalBodyHTML } from "../accessories/accessories.view.js";
+// "액세서리를 pane 으로 여는 법"은 액세서리 도메인이 panePropsFor 로 제공한다.
+import { panePropsFor as accessoryPaneProps } from "../accessories/accessories.view.js";
 
 // 파생 필드(wayCount/network/lowUnitConfig/hRange/vRange/splayRange)를 UI 가
 // 읽기 전에 생성하고, cross-ref 레지스트리에 스피커 데이터를 등록한다
@@ -44,76 +38,9 @@ normalizeLowUnitConfig(SPEAKERS);
 normalizeAngleRanges(SPEAKERS);
 registerSpeakers(SPEAKERS);
 
-const speakersState = createState();
-speakersState.sort = "series";
-
-/** 탭 활성화: 최초 1회 UI 빌드 후 렌더 (이후엔 hidden 만 해제) */
-function mountSpeakers() {
-  renderLegend(SPEAKERS, MK_ORDER, MFR, d => d.mk);
-  const wrap = $("#view-speakers");
-  wrap.hidden = false;
-  if (!wrap.dataset.built) {
-    wrap.dataset.built = "1";
-    buildSpeakersUI(wrap);
-  }
-  renderSpeakers();
-}
-
-/** 탭 비활성화: 뷰 숨김 (상태/DOM 유지) */
-function unmountSpeakers() { $("#view-speakers").hidden = true; }
-
-/**
- * 검색/정렬/필터 컨트롤 바 + 결과 영역의 골격을 1회 빌드하고 이벤트를 연결한다.
- * @param {HTMLElement} wrap #view-speakers 컨테이너
- */
-function buildSpeakersUI(wrap) {
-  const splVals = SPEAKERS.map(d => d.spl).filter(x => x != null);
-  setSplRange(Math.floor(Math.min(...splVals)), Math.ceil(Math.max(...splVals)));
-
-  wrap.innerHTML = controlsBarHTML("spk", "스피커 이름 검색  ·  e.g.  K2 / KS28 / GSL12 / Syva", [
-    { value: "series", label: "정렬 · 시리즈" },
-    { value: "spl", label: "정렬 · 음압 높은순" },
-    { value: "inch-desc", label: "정렬 · 드라이버 큰순" },
-    { value: "inch-asc", label: "정렬 · 드라이버 작은순" },
-    { value: "name", label: "정렬 · 이름순" },
-  ]) + `
-    <div class="content-wrap">
-      <div id="spk-results"></div>
-    </div>`;
-
-  buildFilters($("#spk-filters"), SPEAKERS, speakersState, speakersSchema, renderSpeakers);
-  wireFilterToggle($("#spk-filter-toggle"), $("#spk-filters"));
-
-  // [성능] 타이핑마다 그리드 전체를 재생성하지 않도록 렌더만 디바운스
-  // (상태 갱신은 즉시 — 다른 코드가 state.q 를 읽어도 항상 최신값).
-  const debouncedRender = debounce(renderSpeakers);
-  $("#spk-q").addEventListener("input", e => { speakersState.q = e.target.value.trim(); debouncedRender(); });
-  $("#spk-sort").addEventListener("change", e => { speakersState.sort = e.target.value; renderSpeakers(); });
-  $("#spk-reset").onclick = resetSpeakers;
-}
-
-/** 검색어/칩/정렬을 초기화하고 필터 패널을 재빌드한 뒤 다시 렌더링 */
-function resetSpeakers() {
-  resetState(speakersState, speakersSchema);
-  $("#spk-q").value = "";
-  $("#spk-sort").value = "series";
-  document.querySelectorAll("#spk-filters .chip").forEach(c => c.setAttribute("aria-pressed", "false"));
-  buildFilters($("#spk-filters"), SPEAKERS, speakersState, speakersSchema, renderSpeakers);
-  renderSpeakers();
-}
-
-/** 현재 상태로 결과 그리드를 렌더링 (시리즈 정렬 시 제조사>시리즈 그룹핑) */
-function renderSpeakers() {
-  renderGrid({
-    resultsEl: $("#spk-results"),
-    countEl: $("#count"),
-    filterPanelEl: $("#spk-filters"),
-    data: SPEAKERS,
-    state: speakersState,
-    schema: speakersSchema,
-    cardHTML: speakerCardHTML,
-    onOpen: openSpeakerModal,
-    groupBy: speakersState.sort === "series" ? {
+/** 시리즈 정렬일 때만 제조사>시리즈 2단 그룹핑, 그 외에는 평면 그리드 */
+function speakersGroupBy(state) {
+  return state.sort === "series" ? {
       order: MK_ORDER,
       getKey: d => d.mk,
       subGroupKey: d => d.series,
@@ -158,9 +85,7 @@ function renderSpeakers() {
         const gt = group[0].throwCat ? esc(group[0].throwCat) + ' · ' + esc(series) : esc(series);
         return `<span class="card-group__badge card-group__badge--name" style="border-color:${MFR[mk].color}55;color:${MFR[mk].color}">${esc(MFR[mk].name)}</span><span class="card-group__title">${gt}</span><span class="card-group__count">${group.length} ea</span>`;
       }
-    } : null,
-  });
-  refreshNavCounts();
+    } : null;
 }
 
 /**
@@ -174,33 +99,10 @@ function openSpeakerModal(id) {
   const { color, head, body } = speakerModalBodyHTML(d, resolveAmpIdForModel, findAccessoriesForSpeaker(d.id));
   openModalWith(color, head, body);
   wireSpeakerModalAmpClicks();
-  wireSpeakerModalAccessoryClicks();
+  // System Elements 칩 → pane 2 에 액세서리 상세(같은 칩 재클릭이면 닫힘).
+  wireChipPanes("accessory-id", accessoryPaneProps);
   setItemRoute(id);
   return true;
-}
-
-/**
- * 스피커 모달 안의 System Elements 칩(연관 액세서리) 클릭 → Split View
- * pane 2 에 액세서리 상세. amplifiers.controller.js
- * wireAmpModalAccessoryClicks 와 동일한 패턴(같은 액세서리를 다시 클릭하면
- * paneId 일치로 pane 2 가 닫힌다).
- */
-function wireSpeakerModalAccessoryClicks() {
-  document.querySelectorAll("#modal [data-accessory-id]").forEach(chip => {
-    chip.addEventListener("click", () => {
-      const aid = chip.dataset.accessoryId;
-      const acc = findAccessoryById(aid);
-      if (!acc) return;
-      const M = ACC_MFR[acc.mfr];
-      const { head, body } = accessoryModalBodyHTML(acc);
-      openSplitPane({
-        headHTML: head,
-        paneColor: M.color,
-        bodyHTML: body,
-        paneId: aid,
-      });
-    });
-  });
 }
 
 /**
@@ -214,7 +116,7 @@ function wireSpeakerModalAmpClicks() {
       const amp = findAmplifierById(ampId);
       if (!amp) return;
       const M = AMP_MFR[amp.mfr];
-      // [사용자 요청] pane 2(앰프)의 Configurations 섹션이 펼쳐진 상태에서
+      // pane 2(앰프)의 Configurations 섹션이 펼쳐진 상태에서
       // 다른 앰프로 바꿔도(pane 1 의 Amplifier Matching 행 클릭) 그 펼침
       // 상태가 유지되어야 한다 — openSplitPane 은 기존 pane 2 를 통째로
       // remove() 하고 새로 만들기 때문에(위 openSplitPane 주석 참고), 교체
@@ -227,7 +129,7 @@ function wireSpeakerModalAmpClicks() {
       // pane1(스피커 모달)과 동일한 .modal__head 구조라 X 버튼 위치·제목
       // 표기 방식이 좌우 pane 모두 통일된다.
       // 공통 인터랙션(뷰 전환·줌·+N 토글)은 openSplitPane 이 배선하고,
-      // 도메인 고유 배선(스피커 칩 클릭)만 onMounted 로 넘긴다. [0-1]
+      // 도메인 고유 배선(스피커 칩 클릭)만 onMounted 로 넘긴다.
       openSplitPane({
         headHTML: head,
         paneColor: M.color,
@@ -277,5 +179,28 @@ function wireSplitPaneSpeakerChips(pane2El) {
 
 /** Speakers 도메인을 라우터에 등록 — main.js 가 호출하는 유일한 공개 API */
 export function initSpeakersDomain() {
-  registerDomain("speakers", { label: "Speaker", mount: mountSpeakers, unmount: unmountSpeakers, count: () => SPEAKERS.length, openItem: openSpeakerModal });
+  createDomainTab({
+    key: "speakers",
+    label: "Speaker",
+    idPrefix: "spk",
+    searchPlaceholder: "스피커 이름 검색  ·  e.g.  K2 / KS28 / GSL12 / Syva",
+    sortOptions: [
+      { value: "series", label: "정렬 · 시리즈" },
+      { value: "spl", label: "정렬 · 음압 높은순" },
+      { value: "inch-desc", label: "정렬 · 드라이버 큰순" },
+      { value: "inch-asc", label: "정렬 · 드라이버 작은순" },
+      { value: "name", label: "정렬 · 이름순" },
+    ],
+    data: SPEAKERS,
+    schema: speakersSchema,
+    cardHTML: speakerCardHTML,
+    openItem: openSpeakerModal,
+    groupBy: speakersGroupBy,
+    legend: { order: MK_ORDER, mfrMap: MFR, keyOf: d => d.mk },
+    // 카드 SPL 게이지 스케일 — 전체 스피커의 min/max 로 한 번만 설정.
+    onBuild: () => {
+      const splVals = SPEAKERS.map(d => d.spl).filter(x => x != null);
+      setSplRange(Math.floor(Math.min(...splVals)), Math.ceil(Math.max(...splVals)));
+    },
+  });
 }

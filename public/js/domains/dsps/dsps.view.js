@@ -22,7 +22,7 @@ export function cardHTML(d) {
       <div class="card__name">${esc(d.model)}</div>
       <div class="card__config">${esc(d.network || "")}</div>
       <div class="card__stats">
-        <!-- [사용자 요청] 카드 강조 값을 전역 accent 대신 제조사 색으로 -->
+        <!-- 카드 강조 값을 전역 accent 대신 제조사 색으로 -->
         <div class="stat-grid">
           <div class="stat-grid__cell"><span class="stat-grid__key">Inputs</span><span class="stat-grid__value stat-grid__value--mfr">${io ? io.inputs : "—"}</span></div>
           <div class="stat-grid__cell"><span class="stat-grid__key">Outputs</span><span class="stat-grid__value stat-grid__value--mfr">${io ? io.outputs : "—"}</span></div>

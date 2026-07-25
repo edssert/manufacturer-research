@@ -1,7 +1,6 @@
 // d&b audiotechnik E 스피커 데이터 (10개 모델).
 // B4-SUB 는 d&b 공식 사이트에서 E/T 두 시리즈에 함께 실려 있는데, 여기(E)에만 두고
 // T 시리즈에는 중복 등록하지 않는다 — 같은 제품이 두 카드로 보이는 것을 피한다.
-//
 // 스펙 조사 전 — 제조사 공식 이미지만 등록된 상태다(pending: true).
 // 스펙 필드는 전부 null/빈 배열로 두고, 파생 태그(wayCount/network/
 // lowUnitConfig)는 speakers.schema.js 의 normalize* 가 pending 항목을

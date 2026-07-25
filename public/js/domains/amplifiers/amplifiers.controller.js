@@ -7,16 +7,12 @@
  *   amplifiers.schema.js — 필터/정렬 정의
  *   amplifiers.view.js   — 카드/모달 마크업 (순수 함수)
  */
-import { createState, resetState } from "../../core/state.js";
-import { $, esc, debounce } from "../../core/dom.js";
-import { buildFilters, wireFilterToggle, controlsBarHTML } from "../../ui/filters.js";
-import { renderGrid } from "../../ui/card-grid.js";
+import { esc } from "../../core/dom.js";
+import { createDomainTab } from "../../ui/domain-tab.js";
 import { openModalWith } from "../../ui/modal.js";
-import { openSplitPane, replaceSplitPane1 } from "../../ui/split-view.js";
-import { registerDomain, setItemRoute, replaceItemRoute } from "../../core/router.js";
-import { refreshNavCounts } from "../../ui/nav.js";
-import { renderLegend } from "../../ui/legend.js";
-import { registerAmplifiers, resolveAmpIdForModel, findSpeakerById, findSpeakersMatchingAmp, findAmpConfigsBySpeaker, findAccessoryById } from "../../relationships/cross-ref.js";
+import { replaceSplitPane1, wireChipPanes } from "../../ui/split-view.js";
+import { setItemRoute, replaceItemRoute } from "../../core/router.js";
+import { registerAmplifiers, resolveAmpIdForModel, findSpeakerById, findSpeakersMatchingAmp, findAmpConfigsBySpeaker, accessoriesByIds } from "../../relationships/cross-ref.js";
 
 import { AMPLIFIERS } from "./amplifiers.data.js";
 import { amplifiersSchema, AMP_MFR, AMP_MK_ORDER, compareModel } from "./amplifiers.schema.js";
@@ -29,9 +25,8 @@ import { modalBodyHTML as speakerModalBodyHTML } from "../speakers/speakers.view
 
 // Rack 타입 앰프(LA-RAK III 등) 모달 안에서 System Elements 칩을 클릭하면
 // Split View pane 2 에 액세서리(리깅/케이블) 상세를 띄운다 — 스피커와
-// 동일한 패턴. 액세서리의 "순수 뷰 함수"와 색상 맵만 import.
-import { ACC_MFR } from "../accessories/accessories.schema.js";
-import { modalBodyHTML as accessoryModalBodyHTML } from "../accessories/accessories.view.js";
+// 동일한 패턴. "액세서리를 pane 으로 여는 법"은 액세서리 도메인이 제공한다.
+import { panePropsFor as accessoryPaneProps } from "../accessories/accessories.view.js";
 
 // cross-ref 레지스트리에 앰프 데이터 등록 (모듈 로드 시 1회)
 registerAmplifiers(AMPLIFIERS);
@@ -46,92 +41,30 @@ function syncMatchedSpeakerIds() {
   AMPLIFIERS.forEach(a => { a.relations.speakerIds = findSpeakersMatchingAmp(a.id); });
 }
 
-const ampState = createState();
-ampState.sort = "type";
-
-/** 탭 활성화: 최초 1회 UI 빌드 후 렌더 */
-function mountAmplifiers() {
-  renderLegend(AMPLIFIERS, AMP_MK_ORDER, AMP_MFR);
-  syncMatchedSpeakerIds();
-  const wrap = $("#view-amplifiers");
-  wrap.hidden = false;
-  if (!wrap.dataset.built) {
-    wrap.dataset.built = "1";
-    buildAmplifiersUI(wrap);
-  }
-  renderAmplifiers();
-}
-
-/** 탭 비활성화: 뷰 숨김 */
-function unmountAmplifiers() { $("#view-amplifiers").hidden = true; }
-
 /**
- * 컨트롤 바 + 결과 영역 골격을 1회 빌드하고 이벤트를 연결한다.
- * @param {HTMLElement} wrap #view-amplifiers 컨테이너
+ * 카드 Watt 게이지 스케일 — 최초 빌드 때 1회.
+ * Rack 앰프(8Ω/2.7Ω 기준 총량, 수만 W 대)와 일반 앰프(4Ω 기준,
+ * 최대 17,600W)는 절대치 자릿수가 달라 같은 스케일을 쓰면 일반 앰프 바가 전부
+ * 짧아 보인다 — type:"Rack" 기준으로 스케일을 분리한다.
  */
-function buildAmplifiersUI(wrap) {
-  // [사용자 요청] 스피커 탭의 SPL 게이지(setSplRange)와 동일한 패턴 —
-  // 전체 앰프의 Total Watt 값 min/max 로 카드 게이지 스케일을 설정.
-  // [사용자 요청, 2차] Rack 앰프(8Ω/2.7Ω 기준 총량, 수만 W 대)와 일반 앰프
-  // (4Ω 기준, 최대 17,600W)는 절대치 자릿수가 달라 같은 스케일을 쓰면 일반
-  // 앰프 바가 전부 짧아 보인다 — type:"Rack" 기준으로 스케일을 분리.
+function setWattScales() {
   const standaloneVals = AMPLIFIERS.filter(a => a.type !== "Rack").map(totalWatt4Ohm).filter(x => x != null);
   const rackVals = AMPLIFIERS.filter(a => a.type === "Rack").map(totalWatt4Ohm).filter(x => x != null);
   if (standaloneVals.length) setWattRange(Math.floor(Math.min(...standaloneVals)), Math.ceil(Math.max(...standaloneVals)));
   if (rackVals.length) setRackWattRange(Math.floor(Math.min(...rackVals)), Math.ceil(Math.max(...rackVals)));
-  wrap.innerHTML = controlsBarHTML("amp", "앰프 모델 검색  ·  e.g.  LA12X / D90", [
-    { value: "type", label: "정렬 · 제조사/타입별" },
-    { value: "model", label: "정렬 · 이름순" },
-    { value: "channels", label: "정렬 · 채널 많은순" },
-    { value: "speakerCount", label: "정렬 · 매칭 스피커 많은순" },
-  ]) + `
-    <div class="content-wrap">
-      <div id="amp-results"></div>
-    </div>`;
-
-  buildFilters($("#amp-filters"), AMPLIFIERS, ampState, amplifiersSchema, renderAmplifiers);
-  wireFilterToggle($("#amp-filter-toggle"), $("#amp-filters"));
-
-  // [성능] 타이핑마다 그리드 전체를 재생성하지 않도록 렌더만 디바운스.
-  const debouncedRender = debounce(renderAmplifiers);
-  $("#amp-q").addEventListener("input", e => { ampState.q = e.target.value.trim(); debouncedRender(); });
-  $("#amp-sort").addEventListener("change", e => { ampState.sort = e.target.value; renderAmplifiers(); });
-  $("#amp-reset").onclick = resetAmplifiers;
 }
 
-/** 검색어/칩/정렬 초기화 후 재렌더링 */
-function resetAmplifiers() {
-  resetState(ampState, amplifiersSchema);
-  $("#amp-q").value = "";
-  $("#amp-sort").value = "type";
-  document.querySelectorAll("#amp-filters .chip").forEach(c => c.setAttribute("aria-pressed", "false"));
-  buildFilters($("#amp-filters"), AMPLIFIERS, ampState, amplifiersSchema, renderAmplifiers);
-  renderAmplifiers();
-}
-
-/** 앰프에 시리즈 개념이 없어 스피커의 series 필드를 대신할 분류 필드가
- * 없다 — 대신 `type`(예: "Amplified Controller")을 쓰되, 이 필드가 없는
- * 앰프(d&b D80/D90 등 기존 단순 스키마)는 랙형 투어링 앰프이므로 기본값
- * "Amplifier"로 묶는다("Rack"은 파워/네트워크까지 통합된 별도 장비 분류라
- * 이 데이터에는 아직 해당 사항 없음). */
-// [사용자 요청] 섹션 분류: Rack(LA-RAK 등 랙 시스템)은 개별 앰프와 성격이
-// 달라 usage 와 무관하게 항상 "Rack" 섹션으로 따로 뺀다. 그 외 개별 앰프는
-// 시장(usage: Touring/Installation)으로 나누고, usage 가 없으면 type,
-// 그것도 없으면 기본값. type 은 Type 필터 칩으로도 계속 살아 있다.
+/**
+ * 섹션 분류 키 — 앰프에는 스피커의 series 에 대응하는 필드가 없다.
+ * Rack(LA-RAK 등)은 개별 앰프와 성격이 달라 usage 와 무관하게 따로 빼고,
+ * 나머지는 시장(usage: Touring/Installation) → type → 기본값 순으로 폴백한다.
+ * type 자체는 Type 필터 칩으로도 계속 쓰인다.
+ */
 const ampTypeOf = a => a.type === "Rack" ? "Rack" : (a.usage || a.type || "Amplifier");
 
-/** 현재 상태로 결과 그리드 렌더링 (제조사/타입 정렬 시 제조사>타입 그룹핑) */
-function renderAmplifiers() {
-  renderGrid({
-    resultsEl: $("#amp-results"),
-    countEl: $("#count"),
-    filterPanelEl: $("#amp-filters"),
-    data: AMPLIFIERS,
-    state: ampState,
-    schema: amplifiersSchema,
-    cardHTML: ampCardHTML,
-    onOpen: openAmpModal,
-    groupBy: ampState.sort === "type" ? {
+/** 제조사/타입 정렬일 때만 제조사>타입 2단 그룹핑, 그 외에는 평면 그리드 */
+function amplifiersGroupBy(state) {
+  return state.sort === "type" ? {
       order: AMP_MK_ORDER,
       getKey: d => d.mfr,
       subGroupKey: d => ampTypeOf(d),
@@ -147,21 +80,7 @@ function renderAmplifiers() {
       headHTML: (mfr, type, group) => {
         return `<span class="card-group__badge card-group__badge--name" style="border-color:${AMP_MFR[mfr].color}55;color:${AMP_MFR[mfr].color}">${esc(AMP_MFR[mfr].name)}</span><span class="card-group__title">${esc(type)}</span><span class="card-group__count">${group.length} ea</span>`;
       }
-    } : null,
-  });
-  refreshNavCounts();
-}
-
-/**
- * Rack 타입 앰프(a.rack.relatedAccessoryIds)의 id 목록을 실제 액세서리
- * {id, name, type} 객체 배열로 조회한다 — cross-ref.findAccessoryById() 로
- * 하나씩 조회하고, 존재하지 않는 id(데이터 오타 등)는 조용히 걸러낸다.
- * @param {Object} a 앰프 레코드
- * @returns {{id:string, name:string, type:string}[]}
- */
-function relatedAccessoriesOf(a) {
-  const ids = (a.rack && a.rack.relatedAccessoryIds) || [];
-  return ids.map(findAccessoryById).filter(Boolean).map(acc => ({ id: acc.id, name: acc.name, type: acc.type }));
+    } : null;
 }
 
 /**
@@ -172,10 +91,11 @@ function relatedAccessoriesOf(a) {
 function openAmpModal(id) {
   const a = AMPLIFIERS.find(x => x.id === id);
   if (!a) return false;
-  const { color, head, body } = ampModalBodyHTML(a, (sid) => { const s = findSpeakerById(sid); return s ? s.name : sid; }, findSpeakersMatchingAmp(a.id), findAmpConfigsBySpeaker(a.id), relatedAccessoriesOf(a));
+  const { color, head, body } = ampModalBodyHTML(a, (sid) => { const s = findSpeakerById(sid); return s ? s.name : sid; }, findSpeakersMatchingAmp(a.id), findAmpConfigsBySpeaker(a.id), accessoriesByIds(a.rack && a.rack.relatedAccessoryIds));
   openModalWith(color, head, body);
-  wireAmpModalSpeakerClicks(a);
-  wireAmpModalAccessoryClicks(a);
+  wireAmpModalSpeakerClicks();
+  // Rack 앰프의 System Elements 칩 → pane 2 에 액세서리 상세.
+  wireChipPanes("accessory-id", accessoryPaneProps);
   // Configurations +N 토글 배선은 openModalWith → wirePaneInteractions 로
   // 이동 (pane 2 에서도 동작해야 하므로 공통화 — 개선사항 0-1).
   setItemRoute(id);
@@ -189,57 +109,22 @@ function openAmpModal(id) {
  * pane 2 안에서 또 다른 스피커를 클릭하면 pane 2 가 교체되고, 이미 pane 2
  * 에 열려있는 것과 같은 스피커를 다시 클릭하면(paneId 일치) 대신 닫힌다 —
  * X 버튼까지 마우스를 옮기지 않아도 됨.
- * @param {Object} amp 현재 모달의 앰프 레코드
  */
-function wireAmpModalSpeakerClicks(amp) {
-  document.querySelectorAll("#modal [data-speaker-id]").forEach(chip => {
-    chip.addEventListener("click", (e) => {
-      // [사용자 요청] Configurations 표에서 병합된 행(예: "K3(i)")의 이름을
-      // "K3"/"(i)" 두 파트로 나눠 각각 다른 스피커 상세로 이동할 수 있게
-      // 했다 — 이름 파트(.match-table__model-name-part)도 부모 행
-      // (.match-table__row--clickable)도 둘 다 [data-speaker-id] 를 갖고
-      // 있어 이 querySelectorAll 이 둘 다 선택한다. 파트를 클릭했을 때
-      // 버블링으로 부모 행의 리스너까지 실행되면 방금 연 파트별 상세가
-      // 곧바로 행의 대표 id 상세로 덮어써지므로 전파를 막는다.
-      e.stopPropagation();
-      const sid = chip.dataset.speakerId;
-      if (!sid || sid === "null") return; // "i" 삽입 케이스의 공통 텍스트 파트(id 없음)
-      const s = findSpeakerById(sid);
-      if (!s) return;
-      const M = MFR[s.mk];
-      const { head, body } = speakerModalBodyHTML(s, resolveAmpIdForModel);
-      openSplitPane({
-        headHTML: head,
-        paneColor: M.color,
-        bodyHTML: body,
-        paneId: sid,
-        onMounted: wireSplitPaneAmpRows,
-      });
-    });
-  });
-}
-
-/**
- * Rack 타입 앰프 모달 안의 System Elements 칩(연관 액세서리) 클릭 →
- * Split View pane 2 에 액세서리 상세. wireAmpModalSpeakerClicks 와 동일한
- * 패턴(같은 액세서리를 다시 클릭하면 paneId 일치로 pane 2 가 닫힌다).
- * @param {Object} amp 현재 모달의 앰프 레코드 (미사용이나 시그니처 통일)
- */
-function wireAmpModalAccessoryClicks(amp) {
-  document.querySelectorAll("#modal [data-accessory-id]").forEach(chip => {
-    chip.addEventListener("click", () => {
-      const aid = chip.dataset.accessoryId;
-      const acc = findAccessoryById(aid);
-      if (!acc) return;
-      const M = ACC_MFR[acc.mfr];
-      const { head, body } = accessoryModalBodyHTML(acc);
-      openSplitPane({
-        headHTML: head,
-        paneColor: M.color,
-        bodyHTML: body,
-        paneId: aid,
-      });
-    });
+function wireAmpModalSpeakerClicks() {
+  wireChipPanes("speaker-id", sid => {
+    // "K3(i)" 처럼 병합된 행의 공통 텍스트 파트는 id 가 없다(전파는 이미
+    // wireChipPanes 가 막았으므로 여기서는 그냥 열지 않으면 된다).
+    if (!sid || sid === "null") return null;
+    const s = findSpeakerById(sid);
+    if (!s) return null;
+    const { head, body } = speakerModalBodyHTML(s, resolveAmpIdForModel);
+    return {
+      headHTML: head,
+      paneColor: MFR[s.mk].color,
+      bodyHTML: body,
+      paneId: sid,
+      onMounted: wireSplitPaneAmpRows,
+    };
   });
 }
 
@@ -261,7 +146,7 @@ function wireSplitPaneAmpRows(pane2El) {
         headHTML: head,
         paneColor: M.color,
         bodyHTML: body,
-        onMounted: () => wireAmpModalSpeakerClicks(a),
+        onMounted: wireAmpModalSpeakerClicks,
       });
       // [모달 라우팅] pane1 이 이 앰프로 교체됐음을 URL item 단에 반영
       // (pane2 상태는 유지, 히스토리 엔트리 추가 없음).
@@ -272,5 +157,24 @@ function wireSplitPaneAmpRows(pane2El) {
 
 /** Amplifiers 도메인을 라우터에 등록 — main.js 가 호출하는 유일한 공개 API */
 export function initAmplifiersDomain() {
-  registerDomain("amplifiers", { label: "Amplifier", mount: mountAmplifiers, unmount: unmountAmplifiers, count: () => AMPLIFIERS.length, openItem: openAmpModal });
+  createDomainTab({
+    key: "amplifiers",
+    label: "Amplifier",
+    idPrefix: "amp",
+    searchPlaceholder: "앰프 모델 검색  ·  e.g.  LA12X / D90",
+    sortOptions: [
+      { value: "type", label: "정렬 · 제조사/타입별" },
+      { value: "model", label: "정렬 · 이름순" },
+      { value: "channels", label: "정렬 · 채널 많은순" },
+      { value: "speakerCount", label: "정렬 · 매칭 스피커 많은순" },
+    ],
+    data: AMPLIFIERS,
+    schema: amplifiersSchema,
+    cardHTML: ampCardHTML,
+    openItem: openAmpModal,
+    groupBy: amplifiersGroupBy,
+    legend: { order: AMP_MK_ORDER, mfrMap: AMP_MFR },
+    onMount: syncMatchedSpeakerIds,
+    onBuild: setWattScales,
+  });
 }

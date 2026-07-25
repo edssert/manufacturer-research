@@ -1,7 +1,6 @@
 // Meyer Sound UP 계열 포인트소스 데이터 (6개 모델).
 // UPM/UPQ/UP-4slim 를 하나의 UP 시리즈로 묶었다 — 제조사가 이 셋을 모두
 // 'UP' 접두 포인트소스로 명명하고 같은 Point Source 분류에 싣는다.
-//
 // 스펙 조사 전 — 제조사 공식 이미지만 등록된 상태다(pending: true).
 // 스펙 필드는 전부 null/빈 배열로 두고, 파생 태그(wayCount/network/
 // lowUnitConfig)는 speakers.schema.js 의 normalize* 가 pending 항목을

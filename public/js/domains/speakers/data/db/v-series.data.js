@@ -1,11 +1,9 @@
 // d&b audiotechnik V 스피커 데이터 (4개 모델: V8, V12, Vi8, Vi12).
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
-//
 // 소스(마스터 스키마 v1.1, audio-spec-parsing-skill):
 //   C:\Dev\audio-spec-parsing-skill\speakers\db\V8_v1.1.md / V12_v1.1.md / Vi8_v1.1.md / Vi12_v1.1.md
 //   (사본: raw-data/raw-specs/db/speakers/v-series/)
-//
 // 내린 판단:
 // - spl=142: 원문 "Max. sound pressure (1m, free field)" 상위 앰프군 조건 채택
 //   (V8/V12: with D80/D40 142dB, D20/D12 조건은 139dB · Vi8/Vi12: with 40D 142dB, 30D 조건은 139dB).

@@ -10,23 +10,23 @@ import { esc } from "../../core/dom.js";
 import { BRAND_MFR } from "./brand.schema.js";
 
 /**
- * [사용자 요청] "무조건 줄바꿈"이 아니라, 텍스트가 길어 브라우저가 어차피
+ * "무조건 줄바꿈"이 아니라, 텍스트가 길어 브라우저가 어차피
  * 줄바꿈을 해야 할 때 그 지점이 단어 중간이 아니라 의미 단위(콤마로
  * 나열된 사건, em dash 앞뒤)에서 끊기도록 유도한다.
- * [버그 수정] 처음엔 <wbr>(줄바꿈 가능 지점 힌트)을 각 콤마 뒤에 넣었는데,
+ * 처음엔 <wbr>(줄바꿈 가능 지점 힌트)을 각 콤마 뒤에 넣었는데,
  * <wbr> 은 "가능한 한 폭을 최대로 채우고 가장 뒤에 있는 후보에서 끊는"
  * 표준 동작이라 — 예를 들어 "..., Panflex 기술 공개, 직원 200명 돌파,
  * 영국 지사 개설" 에서 원했던 지점(Panflex 조각 뒤)이 아니라 폭이 허락하는
  * 한 더 뒤(직원 200명 돌파, 뒤)에서 끊겨버렸다. 원하는 동작은 "각 조각
  * (콤마로 나뉜 사건 하나하나)을 쪼갤 수 없는 하나의 단위로 보고, 그 조각
  * 전체가 남은 폭에 안 들어가면 조각째로 통째로 다음 줄로 넘기는" 것이다.
- * [버그 수정, 2차] 콤마 조각을 white-space:nowrap 으로 감쌌더니 브랜드
+ * 콤마 조각을 white-space:nowrap 으로 감쌌더니 브랜드
  * 비교 모드(컬럼 폭이 좁음)에서 조각 하나가 컬럼 폭보다 길면 nowrap 이
  * 내부 줄바꿈까지 막아 조각째로 옆 컬럼을 침범했다 — CSS 쪽에서
  * display:inline-block + max-width:100% 로 바꿔 "조각 경계는 지키되
  * 조각 내부는 자연스럽게 wrap 되도록" 해결했다(css/components/brand.css
  * .brand-event-part 참고).
- * [사용자 요청] 괄호로 묶인 부분(예: "(2월 13일)")은 그 앞 단어와는 줄이
+ * 괄호로 묶인 부분(예: "(2월 13일)")은 그 앞 단어와는 줄이
  * 갈라져도 되지만, 괄호 안 내용 자체는 쪼개지면 안 된다 — 콤마 조각과
  * 별개로, 괄호 부분만 한 번 더 별도의 최소 단위(nowrap 지원 컴포넌트)로
  * 감싼다.
@@ -54,7 +54,7 @@ function eventHTML(event) {
 
 /**
  * 연혁 타임라인 HTML.
- * [사용자 요청] 비교 모드처럼 일반 브랜드 페이지의 연혁도 과거순/최신순을
+ * 비교 모드처럼 일반 브랜드 페이지의 연혁도 과거순/최신순을
  * 선택해서 볼 수 있어야 한다 — descending 이 true 면 최신 연도가 먼저
  * (배열 순서상 위) 오도록 정렬만 뒤집는다. 세로선/원 좌표 계산(CSS, JS
  * sizeTimelineLines)은 "배열의 첫 항목 ~ 마지막 항목"을 기준으로 실측하는
@@ -66,7 +66,7 @@ function eventHTML(event) {
 function timelineHTML(timeline, descending = false) {
   if (!timeline || !timeline.length) return '<span class="hint-text">등록된 연혁이 없습니다.</span>';
   const sorted = [...timeline].sort((a, b) => descending ? b.year - a.year : a.year - b.year);
-  // [버그 수정] 원(::before)이 "이 항목의 연도 줄(.timeline__year) 세로
+  // 원(::before)이 "이 항목의 연도 줄(.timeline__year) 세로
   // 중앙"에 오도록, 원을 .timeline__year 자신에 붙인다(항목 전체 top
   // 기준 고정 오프셋 대신, 연도 줄 요소를 기준으로 top:50%/translateY로
   // 배치 — 폰트·줄간격이 바뀌어도 항상 그 줄의 정중앙에 맞게).
@@ -127,7 +127,7 @@ export function pageHTML(b, descending = false) {
  * 세로축 = 연도이며, 창립연도(founded)를 포함한 모든 timeline 이벤트의
  * 최소/최대 연도로 축 범위를 잡는다 — 그래야 "어느 브랜드가 먼저
  * 설립됐는지"가 원의 세로 위치만으로 바로 비교된다.
- * [사용자 요청] 기본은 위=과거/아래=최근이지만, 반대로 위=최근/아래=과거로
+ * 기본은 위=과거/아래=최근이지만, 반대로 위=최근/아래=과거로
  * 보고 싶을 때도 있다 — descending 이 true 면 축 방향만 뒤집는다(눈금·연도
  * 값 자체는 그대로, top% 계산만 100에서 뺀 값으로 반전).
  * @param {Array<Object>} brands 선택된 브랜드 레코드 배열(0~3개)
@@ -147,13 +147,13 @@ export function compareHTML(brands, descending = false) {
   const minYear = Math.min(...years);
   const maxYear = Math.max(...years);
 
-  // [사용자 요청] "무조건 10년 단위(예: 1970)로 축을 내림하면 실제
+  // "무조건 10년 단위(예: 1970)로 축을 내림하면 실제
   // 최솟값(1979)과 차이만큼 위쪽이 텅 비어 보인다" — 기본 눈금은
   // 10년 단위(1980/1990/2000...)를 그대로 쓰되, 축의 "시작"(위쪽) 끝점은
   // 딱 떨어지는 10년 단위가 아니라 데이터 실제 최솟/최댓값 기준으로 1년치
   // 여백을 두고, "끝"(아래쪽)만 10년 단위로 반올림한다 — 그래야 시작점이
   // 브랜드명 바로 아래에 답답하게 붙지 않는다.
-  // [사용자 요청, descending] 축을 뒤집으면(위=최근/아래=과거) "시작"이
+  // 축을 뒤집으면(위=최근/아래=과거) "시작"이
   // 최근 쪽이 되므로, 여백을 두는 쪽과 10년 단위로 반올림하는 쪽도 함께
   // 뒤바뀌어야 한다 — 즉 위쪽(시작)엔 항상 실제 데이터값+1년 여백을,
   // 아래쪽(끝)엔 항상 10년 단위 반올림을 적용한다(방향과 무관하게
@@ -184,7 +184,7 @@ export function compareHTML(brands, descending = false) {
 
   const columnsHTML = brands.map(b => {
     const M = BRAND_MFR[b.mfr], color = M.color;
-    // [버그 수정] timeline에 창립연도와 같은 해의 이벤트가 이미 있으면
+    // timeline에 창립연도와 같은 해의 이벤트가 이미 있으면
     // "OO 설립" 포인트를 별도로 더 만들지 않는다 — 안 그러면 같은 top%에
     // 점 두 개가 겹쳐 라벨 텍스트가 뒤섞여 보였다(예: L-Acoustics 1984).
     const hasFoundingYearEvent = (b.timeline || []).some(t => t.year === b.founded);

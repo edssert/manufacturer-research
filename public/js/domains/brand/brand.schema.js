@@ -21,7 +21,6 @@ export const brandSchema = {
     { key: "country", label: "Country", labelFor: (v) => v },
   ],
   rangeFields: [],
-  defaultSort: "founded",
   sorters: {
     founded: (a, b) => a.founded - b.founded,
     name: (a, b) => a.name.localeCompare(b.name),

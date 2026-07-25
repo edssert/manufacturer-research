@@ -1,7 +1,6 @@
 // d&b audiotechnik 앰프 데이터.
 // 필드 스키마 설명은 amplifiers.schema.js 참조.
-//
-// [사용자 요청] 기존 D80/D90/D40/40D(레거시 단순 스키마 — channels/
+// 기존 D80/D90/D40/40D(레거시 단순 스키마 — channels/
 // powerClass/connectivity/configs/notes/relations 만 있던 자리표시 데이터)를
 // 전부 지우고, d&b 공식 제품 페이지 스펙을 근거로 D90 하나만 L-Acoustics
 // LA1.16i 와 동일한 상세 필드 구조(mains/io/output/dsp/ecosystem/features/

@@ -17,15 +17,15 @@
 }
 
 /* ---------- 블록: card-group (시리즈/제조사 그룹 섹션) ---------- */
-/* [사용자 요청] 시리즈 그룹이 끝나고 다음 그룹 헤더로 넘어갈 때 간격이
+/* 시리즈 그룹이 끝나고 다음 그룹 헤더로 넘어갈 때 간격이
    좁아 구분이 잘 안 보였다 — margin-bottom을 늘려 그룹 사이 여백을 더
    준다(다음 그룹 헤더 자체의 위 여백 margin: 6px 0 14px 과 합쳐져 시각적
    구분이 뚜렷해짐). */
 .card-group { margin-bottom: 48px; }
-/* [사용자 요청] 소프트웨어 탭은 섹션 축을 제조사가 아니라 분류로 바꿨다 —
+/* 소프트웨어 탭은 섹션 축을 제조사가 아니라 분류로 바꿨다 —
    그 섹션에 어느 브랜드가 들어 있는지를 헤더에 색 마커로 표시한다
    (js/domains/software/software.controller.js headHTML).
-   [사용자 요청] 원형 점은 색이 어두운 브랜드(Meyer #5B7FBE)일수록 작아
+   원형 점은 색이 어두운 브랜드(Meyer #5B7FBE)일수록 작아
    보였다 — 어두운 배경에서 밝은 도형이 커 보이는 현상(irradiation). 상단바
    범례(.legend__dot, layout.css)와 같은 9px 라운드 사각형으로 통일해 모양·
    크기 인지를 맞춘다. flex: 0 0 auto 는 헤더(flex)에서 찌그러지는 것 방지. */
@@ -37,7 +37,7 @@
   border-radius: 2px;
   display: inline-block;
 }
-/* [사용자 요청] 그룹 헤더를 <button> 으로 바꿔 클릭 시 섹션을 접었다 펼 수
+/* 그룹 헤더를 <button> 으로 바꿔 클릭 시 섹션을 접었다 펼 수
    있게 함(js/ui/card-grid.js renderGrid 참고) — 버튼 기본 스타일(배경/
    테두리/폰트) 리셋 후 기존 flex 레이아웃 유지, 전체 폭 클릭 가능하도록
    width:100% + 커서 포인터 추가. */
@@ -131,9 +131,9 @@
 .card__media {
   position: relative;
   height: 132px;
-  /* [사용자 요청] 라이트모드에서도 함께 바뀌도록 변수화(css/tokens.css
+  /* 라이트모드에서도 함께 바뀌도록 변수화(css/tokens.css
      --card-media-bg 참고) — 값 자체는 기존 다크 스튜디오 톤 그대로.
-     [사용자 요청 — 트랜지션 동기화] whitebg 카드의 배경(아래 :has 규칙)이
+     [트랜지션 동기화] whitebg 카드의 배경(아래 :has 규칙)이
      즉시 스냅되고 이미지(opacity .25s)만 서서히 페이드돼 속도가 어긋나
      보였다 — background 를 color/image 로 분리해 background-color 만
      .2s 트랜지션되게 한다. 이전 세션들에서 그라디언트↔단색 전환을 이
@@ -149,7 +149,7 @@
   display: grid;
   place-items: center;
   border-bottom: 1px solid var(--line);
-  /* [버그 수정] whitebg2(SP-Y1 등) 이미지에 transform: scale 을 추가로
+  /* whitebg2(SP-Y1 등) 이미지에 transform: scale 을 추가로
      걸면(card.css 아래 .card__img--whitebg2 참고) 이미 object-fit:cover
      로 박스를 꽉 채운 이미지가 그 이상으로 확대되어 카드 정보 영역까지
      삐져나왔다(사용자 확인) — 사진 영역 박스 자체가 클리핑을 담당하도록
@@ -169,7 +169,7 @@
    조합(0,0,2)이라 특이도가 .card__img--wide 단일 클래스(0,0,1)보다 높다
    — 그래서 max-width:100% 를 줘도 계속 80%가 이겨서 좌우 여백이 남았다.
    .card__media 를 접두어로 붙여 특이도를 맞추고 나서야 실제로 오버라이드된다. */
-/* [사용자 요청] K1 은 다른 K시리즈 카드에 맞춰 재크롭한 뒤에도 원본
+/* K1 은 다른 K시리즈 카드에 맞춰 재크롭한 뒤에도 원본
    자체(캔버스 대비 콘텐츠 비율)가 크지 않아 상대적으로 작아 보인다 —
    이 카드만 예외로 이미지를 조금 더 키운다. */
 .card[data-id="spk-la-k1"] .card__media img {
@@ -180,7 +180,7 @@
   width: 96%;
   max-width: 96%;
 }
-/* [사용자 요청 — 최종 해결] whitebg 다이어그램(DO3WFILL/SP-Y1 Signal
+/* [최종 해결] whitebg 다이어그램(DO3WFILL/SP-Y1 Signal
    Flow 등)은 원본 이미지 파일 자체를 가공했다 — 다이어그램을 132px
    높이에 맞춰 리사이즈한 뒤, 원본의 흰 배경색을 좌우로 넓게 확장한
    900px 폭 이미지로 다시 저장했다(raw-data/raw-images 원본은 그대로,
@@ -199,7 +199,7 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
-  /* [사용자 요청] DO3WFILL 등 whitebg(2 아닌 기본) 카드도 1.4배 확대 +
+  /* DO3WFILL 등 whitebg(2 아닌 기본) 카드도 1.4배 확대 +
      아래로 1% 이동 — whitebg2(SP-Y1)는 아래 전용 규칙이 이 transform 을
      다시 덮어쓴다. */
   transform: scale(1.4) translateY(1%);
@@ -209,14 +209,14 @@
   background-image: none;
   background-color: #fff;
 }
-/* [사용자 요청 — 재조정] SP-Y1 Signal Flow 는 DO3WFILL과 같은 whitebg
+/* [재조정] SP-Y1 Signal Flow 는 DO3WFILL과 같은 whitebg
    규칙을 공유하지만 카드에서 조금 더 확대 + 위/왼쪽으로 각 3% 이동이
    필요해, 별도 마커(whitebg2, data.js/view.js 에서 카드/모달 공용으로
    추가)로 구분해 이 카드에만 적용한다. */
 .card__media img.card__img--whitebg2 {
   transform: scale(2.0) translate(-1%, 3%);
 }
-/* [사용자 요청] 상단바 media-toggle 버튼으로 모든 탭의 카드 사진을 한 번에
+/* 상단바 media-toggle 버튼으로 모든 탭의 카드 사진을 한 번에
    숨긴다 — 영역 자체를 접어(display:none) 사진이 차지하던 132px 만큼
    카드가 압축되게 한다(js/ui/media-toggle.js, index.html #media-toggle
    참고). 모든 도메인 카드가 .card__media 를 공유하므로 이 규칙 하나로
@@ -235,7 +235,7 @@
   position: absolute;
   inset: 0;
   margin: auto;
-  /* [사용자 요청] 배경(.card__media background-color) 트랜지션과 같은
+  /* 배경(.card__media background-color) 트랜지션과 같은
      .2s 로 맞춰 whitebg 카드에서 배경↔이미지 전환 속도가 어긋나 보이지
      않게 한다(일반 카드의 Front↔Rear 크로스페이드에도 동일 적용). */
   transition: opacity .2s ease;
@@ -260,9 +260,6 @@
   font-weight: 600;
   backdrop-filter: blur(4px);
 }
-/* [사용자 요청] 액세서리 카드에서 길이 변형 개수("+N")를 type 배지와
-   겹치지 않게 반대쪽(좌상단)에 표시 — accessories.view.js cardHTML 참고. */
-.card__type-badge--length { top: 9px; right: auto; left: 9px; }
 
 .card__body {
   padding: 13px 16px 14px;
@@ -277,7 +274,7 @@
    (amplifiers.view.js cardHTML 참고). */
 .card__body--amp { min-height: 33px; }
 .card__name {
-  /* [사용자 요청] 이름+태그를 항상 한 줄(nowrap)로 유지하기로 하면서
+  /* 이름+태그를 항상 한 줄(nowrap)로 유지하기로 하면서
      "LEOPARD-M80"처럼 길고 태그도 3개인 조합은 --fs-xl(20px) 그대로면
      이름이 심하게 말줄임돼 가독성이 떨어진다 — 모달 제목과 공유하는
      --fs-xl 토큰 자체는 건드리지 않고, 카드 모델명 전용으로 한 단계
@@ -293,7 +290,7 @@
   text-overflow: ellipsis;
   min-width: 0;
 }
-/* [사용자 요청] Type 태그("Constant Curvature Line" 등 긴 라벨)가 이름과
+/* Type 태그("Constant Curvature Line" 등 긴 라벨)가 이름과
    같은 줄에 있으면 태그 폭만큼 이름이 압박당해 말줄임(...)이 너무 쉽게
    발생한다(A 시리즈에서 발견 — "A15 F...", "A15i..." 처럼 잘림). 태그를
    이름 줄에서 아예 빼고 card__config 줄(로우 배지 + 대역 요약)의 우측
@@ -321,7 +318,7 @@
   min-width: 0;
   overflow: hidden;
 }
-/* [사용자 요청] 앰프 카드는 태그가 최대 4개(AES3/Milan-AVB/AES67/analog
+/* 앰프 카드는 태그가 최대 4개(AES3/Milan-AVB/AES67/analog
    등)까지 붙어 스피커 카드(보통 1~2개)보다 한 줄에 들어가야 할 텍스트가
    많다 — 태그 자체를 더 작게(패딩·폰트 축소) 만들어 이름과 같은 줄에
    들어갈 확률을 높인다. 스피커/앰프 공용 클래스라 두 도메인 모두 적용됨. */
@@ -353,7 +350,7 @@
   gap: 8px;
   min-height: 22px;
 }
-/* [사용자 요청, 2차 수정] 처음엔 Type 태그를 이 줄로 내렸는데 풀스펠링
+/* 처음엔 Type 태그를 이 줄로 내렸는데 풀스펠링
    Type 라벨("Progressive Ultra-Dense Line...")이 여기서 또 말줄임됐다 —
    위/아래 줄을 맞바꿔 이제 이 줄(로우 배지 옆, 우측 정렬)에는
    crossover 태그 그룹(active/passive/N-way — 여러 개, 각각 짧음)이 온다.
@@ -451,7 +448,7 @@
 }
 .spl-meter__fill {
   height: 100%;
-  /* [사용자 요청] 라이트모드에서도 함께 바뀌도록 변수화(css/tokens.css
+  /* 라이트모드에서도 함께 바뀌도록 변수화(css/tokens.css
      --gauge-amber-start/end 참고) — 다크는 기존 톤 그대로, 라이트는 더
      밝고 채도 있는 톤으로 재조정되어 있음. */
   background: linear-gradient(90deg, var(--gauge-amber-start), var(--gauge-amber-end));
@@ -466,7 +463,7 @@
   background: #fff;
   opacity: .85;
 }
-/* [사용자 요청] Rack 앰프(LA-RAK III/II AVB)는 8Ω/2.7Ω 기준 총량이라 일반
+/* Rack 앰프(LA-RAK III/II AVB)는 8Ω/2.7Ω 기준 총량이라 일반
    앰프(4Ω 기준)와 게이지 스케일 자체가 다르다(amplifiers.view.js
    WATT_RANGE_RACK 참고) — 색상을 다르게 해 "다른 기준의 게이지"임을
    시각적으로 구분(청록 계열, 기존 앰버/오렌지 계열과 대비). */
@@ -491,7 +488,7 @@
 }
 /* 변경자: 앰프 카드(configs 없는 앰프 — Architecture/Output). Channels 칸은
    Architecture 값에 이미 채널 수가 담겨 있어 제거했으므로(중복 정보 생략)
-   2열 구성이 됐다(amplifiers.view.js cardHTML 참고). [사용자 요청] 처음엔
+   2열 구성이 됐다(amplifiers.view.js cardHTML 참고). 처음엔
    Output 값이 더 길어 .7fr/1.3fr 이었는데, LA-RAK 계열처럼 Architecture 값
    자체가 긴 경우("16 x 16 with bridge mode", "12 channels of
    amplification")가 더 심하게 잘려서 1:1로 재조정. */
@@ -499,7 +496,6 @@
 /* 변경자: 액세서리 카드(Type/Compatible With 2열 — Lengths 는 칩으로 이미
    표시되어 stat-grid 에서 제외했으므로 2열 구성, accessories.view.js
    cardHTML 참고). Compatible With 값이 길 수 있어 amp-2col과 동일 비율. */
-.stat-grid--acc-2col { grid-template-columns: .7fr 1.3fr; }
 /* 변경자: 액세서리 카드 - Compatible With 값이 없는 항목(BOB32 등)은
    Type 칸만 전체 폭 1열로 표시 — "Breakout box"처럼 긴 Type 명이 좁은
    2열 폭에서 줄바꿈/말줄임되는 문제 해결(accessories.view.js cardHTML 참고). */
@@ -522,7 +518,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* [사용자 요청] Output 칸의 임피던스("4Ω")를 값(와트) 옆이 아니라 "OUTPUT"
+/* Output 칸의 임피던스("4Ω")를 값(와트) 옆이 아니라 "OUTPUT"
    라벨 텍스트 오른쪽에 작은 배지로 붙인다 — 값 줄에는 순수 와트 값만 남아
    더 넓은 폭을 온전히 쓸 수 있다(amplifiers.view.js outputParts 참고). */
 .stat-grid__key-badge {
@@ -550,9 +546,7 @@
   text-overflow: ellipsis;
 }
 .stat-grid__value small { color: var(--muted); font-weight: 500; font-size: var(--fs-xs); }
-/* 변경자: 포인트 컬러 강조 값 (앰프 모델명 등) */
-.stat-grid__value--accent { color: var(--accent); letter-spacing: .2px; }
-/* [사용자 요청] "Self-Powered"(파워드 스피커, speakers.view.js cardHTML
+/* "Self-Powered"(파워드 스피커, speakers.view.js cardHTML
    참고)는 전역 accent(앰버) 대신 카드의 제조사 색(--mfr, 카드 article에
    인라인 주입됨)을 따라가도록 별도 변경자 — d&b/Meyer 카드에서도 그
    브랜드색으로 보이게 한다. */
@@ -589,7 +583,7 @@
 }
 
 /* ---------- 블록: connection (커넥터 연결/변환 다이어그램) ----------
-   [사용자 요청] "CA-COM > 2 NL-2 + 1 NL4" 같은 텍스트 표기 대신, 입력
+   "CA-COM > 2 NL-2 + 1 NL4" 같은 텍스트 표기 대신, 입력
    커넥터 1개 → 출력 커넥터(1개 또는 여러 개)를 박스+화살표로 도식화한다.
    원래 이름은 "breakout"(분기)이었으나, DO(양끝 동일 커넥터, 분기 없음)
    처럼 분기가 아닌 단순 연결에도 재사용하면서 이름이 실제 쓰임과 안 맞아
@@ -600,12 +594,12 @@
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  /* [사용자 요청] 다이어그램과 바로 아래 스펙 테이블(Type/Available
+  /* 다이어그램과 바로 아래 스펙 테이블(Type/Available
      Lengths 등) 사이 간격이 너무 좁아 보였다 — 두 블록을 시각적으로
      분리하는 여백을 항상 확보(Used In 유무와 무관하게 적용). */
   margin-bottom: 16px;
 }
-/* [사용자 요청 — 순서 변경] General(spec-table) 바로 아래 연결 다이어그램이
+/* [순서 변경] General(spec-table) 바로 아래 연결 다이어그램이
    오도록 순서를 바꾼 뒤(accessories.view.js modalBodyHTML), 위쪽 여백이
    없어 표와 다이어그램이 붙어 보였다 — 다른 섹션 조합(.spec-table +
    .section-label 등, spec-table.css)과 동일한 20px 여백을 준다. */
@@ -627,19 +621,19 @@
 .connection__box--in { color: var(--ink); border-color: var(--mfr, var(--line-2)); }
 .connection__arrow { color: var(--muted); font-size: 15px; flex: none; }
 .connection__out { display: flex; flex-wrap: wrap; gap: 6px; }
-/* [사용자 요청] 카드(목록)는 모달보다 폭이 좁아, out 배지가 2개 이상이면
+/* 카드(목록)는 모달보다 폭이 좁아, out 배지가 2개 이상이면
    (DOE/DOM/DOMP-2 등 bidirectional 케이블처럼 in·out 라벨 길이가 같은
    경우) 줄바꿈되어 카드 높이가 들쭉날쭉해졌다 — card__body 안에서만
    다이어그램 폰트/패딩을 살짝 줄여 한 줄에 들어가도록 한다(모달은 폭이
    넉넉해 기존 크기 유지). */
 .card__body .connection {
   gap: 5px;
-  /* [사용자 요청] 모달용 margin-bottom(16px)을 카드에서 없앤다 — card__body
+  /* 모달용 margin-bottom(16px)을 카드에서 없앤다 — card__body
      가 이미 flex gap:11px 로 형제 블록(이름 줄/다이어그램/stats) 간격을
      통일해서 주고 있어, 여기 margin까지 더해지면 다이어그램 위(11px)보다
      아래가 훨씬 넓어 보였다. margin 제거로 위아래 모두 11px로 통일. */
   margin-bottom: 0;
-  /* [사용자 요청] gap 자체는 위아래 동일(11px)하지만 다이어그램 박스의
+  /* gap 자체는 위아래 동일(11px)하지만 다이어그램 박스의
      border(1px)+padding 때문에 위쪽이 시각적으로 더 넓어 보였다 —
      음수 margin-top으로 시각 보정(1px로는 부족해 3px로 확대). */
   margin-top: -3px;
@@ -652,7 +646,7 @@
 .card__body .connection__out { gap: 4px; }
 .card__body .connection__arrow { font-size: 11px; }
 .card__body .connection__count { font-size: 9.5px; }
-/* [사용자 요청] 액세서리 모달에서 Used In(연관 앰프/스피커) 섹션 바로
+/* 액세서리 모달에서 Used In(연관 앰프/스피커) 섹션 바로
    아래 연결 다이어그램이 오면 경계가 흐릿해 보였다 — 위쪽에 여백 +
    구분선을 추가해 두 섹션을 시각적으로 분리한다(modal__notes--after-toggle
    과 동일한 패턴, accessories.view.js connectionDiagramHTML 참고). */
@@ -661,7 +655,7 @@
   padding-top: 18px;
   border-top: 1px solid var(--line);
 }
-/* [사용자 요청] BOB32(NL4 x 8)처럼 같은 커넥터가 여럿이면 박스를 개수만큼
+/* BOB32(NL4 x 8)처럼 같은 커넥터가 여럿이면 박스를 개수만큼
    늘어놓지 않고 "라벨 x N"으로 압축(accessories.view.js collapseConnOut) —
    개수(x N) 부분만 라벨보다 옅은 톤으로 구분. */
 .connection__count { color: var(--muted); font-weight: 600; margin-left: 4px; }

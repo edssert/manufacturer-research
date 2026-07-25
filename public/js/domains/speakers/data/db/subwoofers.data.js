@@ -1,7 +1,6 @@
 // d&b audiotechnik 독립 서브우퍼 데이터 (1개 모델).
 // B22 는 특정 문자 시리즈에 속하지 않아 d&b 공식 사이트도 별도 'Subwoofers'
 // 분류로 싣는다 — 앱에서도 같은 이름의 독립 시리즈로 둔다.
-//
 // 스펙 조사 전 — 제조사 공식 이미지만 등록된 상태다(pending: true).
 // 스펙 필드는 전부 null/빈 배열로 두고, 파생 태그(wayCount/network/
 // lowUnitConfig)는 speakers.schema.js 의 normalize* 가 pending 항목을

@@ -5,8 +5,7 @@
 // (l-acoustics.com/products/ 카탈로그 목록, "System Elements" 전량 — 타입별 분리).
 // price/weight/material 은 카탈로그 목록 페이지에 없어 미확인(null) —
 // 개별 제품 페이지 확인 시 보강.
-//
-// [사용자 요청] 같은 케이블의 길이만 다른 변형(예: SP25/SP10/SP5/SP.7)은
+// 같은 케이블의 길이만 다른 변형(예: SP25/SP10/SP5/SP.7)은
 // 카드를 따로 만들지 않고 1개 레코드로 통합해 `lengths` 배열(칩 목록)로
 // 보여준다 — DOE(2/45/100m), DOM CROSS LINK(30/45m), SP(0.7/5/10/25m),
 // DO(0.7/5/10/25m) 4개 계열을 통합. 나머지 단일 길이 품목은 그대로 유지.
@@ -37,13 +36,13 @@ export const LA_ACCESSORIES = [
       { "id": "acc-la-doe45", "value": "45m" },
       { "id": "acc-la-doe2", "value": "2m" }
     ],
-    // [사용자 요청] DOE는 양끝 모두 CAT6A etherCON 커넥터가 2개씩(Dual) 있는
+    // DOE는 양끝 모두 CAT6A etherCON 커넥터가 2개씩(Dual) 있는
     // 대칭 케이블 — 분기(in→out)가 아니라 양방향 연결이라 bidirectional:
     // true로 표시하면 connectionDiagramHTML이 화살표를 →가 아닌 ↔로 렌더링.
     "connection": { "in": "etherCON CAT6A x2", "out": ["etherCON CAT6A x2"], "bidirectional": true }
   },
   {
-    // [사용자 요청, 웹 검색으로 조사] DOM(CROSS LINK, 30/45m)과 DOM2(AMP
+    // DOM(CROSS LINK, 30/45m)과 DOM2(AMP
     // LINK, 2m)는 원문 카탈로그 notes가 다르지만(링크 타입 명칭만 다름),
     // 검색 결과(Fairlight/Bekafun/Solotech 등 유통사 페이지 교차 확인)로
     // 둘 다 동일한 19핀 CA-COM Female 커넥터를 쓰는 같은 케이블 계열임을
@@ -97,7 +96,7 @@ export const LA_ACCESSORIES = [
     "mfr": "la", "name": "SP", "type": "Cables", "price": null, "weight": null, "material": null, "compatibleWith": null,
     "notes": "Speaker cable: 4 x 4mm² NL4",
     "img": "public/assets/img/accessories/la/acc-la-sp.webp",
-    // [사용자 요청] DOE와 동일 패턴 — 양끝 동일 NL4 커넥터인 대칭 케이블.
+    // DOE와 동일 패턴 — 양끝 동일 NL4 커넥터인 대칭 케이블.
     "connection": { "in": "NL4", "out": ["NL4"], "bidirectional": true },
     "lengths": [
       { "id": "acc-la-sp25", "value": "25m" },
@@ -138,7 +137,7 @@ export const LA_ACCESSORIES = [
       { "label": "Front", "src": "public/assets/img/accessories/la/acc-la-do-full.webp" },
       { "label": "Connector", "src": "public/assets/img/accessories/la/acc-la-do.webp" }
     ],
-    // [사용자 요청] DO는 breakout(분기)이 아니라 양끝이 CA-COM 8핀 커넥터인
+    // DO는 breakout(분기)이 아니라 양끝이 CA-COM 8핀 커넥터인
     // 일반 스피커케이블 — connectionDiagramHTML을 그대로 재사용해
     // "CA-COM → CA-COM"을 시각적으로 표시.
     // [웹 검색 확인, cables.md 각주 참고] 양끝이 동일 성별이 아니라 한쪽
@@ -159,7 +158,7 @@ export const LA_ACCESSORIES = [
       { "label": "Spec", "src": "public/assets/img/accessories/la/acc-la-dofill-la8-spec.webp" }
     ],
     "lengths": [{ "id": "acc-la-dofill-la8", "value": "3.5m" }],
-    // [사용자 요청] "CA-COM > 2 NL-4" 같은 커넥터 변환 표기를 텍스트로만
+    // "CA-COM > 2 NL-4" 같은 커넥터 변환 표기를 텍스트로만
     // 두지 않고 입력→출력 다이어그램으로 시각화 — connection: { in, out[] }.
     // [웹 검색 확인] CA-COM 쪽은 8핀 Male(locking ring)로 확인 — M 표기
     // 반영. NL4 쪽 성별은 명시된 출처를 못 찾아 미기재.
@@ -196,7 +195,7 @@ export const LA_ACCESSORIES = [
     "mfr": "la", "name": "SC32", "type": "Cables", "price": null, "weight": null, "material": null, "compatibleWith": null,
     "notes": "Speaker cable: 32 x 1.5mm²",
     "img": "public/assets/img/accessories/la/acc-la-sc32.webp",
-    // [사용자 요청] 양끝 37핀 커넥터, 웹 검색으로 확인한 male & female
+    // 양끝 37핀 커넥터, 웹 검색으로 확인한 male & female
     // 구성을 사진상 실제 구분 없이 그대로 반영 — SC32(M) → SC32(F).
     "connection": { "in": "SC32 (M)", "out": ["SC32 (F)"] },
     "lengths": [

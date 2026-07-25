@@ -28,7 +28,6 @@ export const dspsSchema = {
     { key: "network", label: "Network", labelFor: (v) => v },
   ],
   rangeFields: [],
-  defaultSort: "model",
   sorters: {
     model: (a, b) => a.model.localeCompare(b.model),
     io: (a, b) => (b.ioSummary?.total || 0) - (a.ioSummary?.total || 0) || a.model.localeCompare(b.model),

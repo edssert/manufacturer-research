@@ -33,7 +33,7 @@ export const LA_SUBWOOFERS = [
     "weight": 180,
     // [수정] transducers/connectors/lowQty — 마스터 스키마(CS1_OM_EN_2.0.pdf
     // p.87 "CS1 specifications")로 대조한 결과 기존 값이 부정확했다:
-    // [사용자 확인] "LC"는 오기가 아니라 제조사(CS1_OM_EN_2.0.pdf) 표기
+    // "LC"는 오기가 아니라 제조사(CS1_OM_EN_2.0.pdf) 표기
     // 그대로 — LC(측면 SC 채널)/LF(전방 SB 채널)로 역할이 구분되어
     // 하나로 뭉쳐 표기하지 않는다. 커넥터 명칭은 원문 다이어그램/핀아웃표
     // 기준 "PA-COM"(스펙 표의 "CA-COM" 3회 표기는 문서 내 오기로 판단,

@@ -10,7 +10,7 @@ import { AMP_MFR } from "./amplifiers.schema.js";
 /* ── Total Watt 게이지 스케일 — speakers.view.js 의 SPL_RANGE/setSplRange/
    splPct 와 동일한 패턴을 재사용해 스피커 탭의 SPL 바와 같은 시각 언어로
    앰프의 총 출력을 카드에서 한눈에 비교할 수 있게 한다(사용자 요청).
-   [사용자 요청, 2차] Rack 앰프(LA-RAK III/II AVB)는 채널당 4Ω 정격이 없어
+   Rack 앰프(LA-RAK III/II AVB)는 채널당 4Ω 정격이 없어
    8Ω/2.7Ω 기준 총량(62,400W/40,000W)을 대신 쓰는데, 이 값이 일반 앰프의
    4Ω 기준 값(최대 17,600W)보다 훨씬 커서 같은 스케일이면 일반 앰프 바가
    전부 짧아 보인다 — Rack 과 일반 앰프(Standalone)를 별도 스케일로 분리. */
@@ -34,7 +34,7 @@ export function setRackWattRange(lo, hi) { WATT_RANGE_RACK.lo = lo; WATT_RANGE_R
 
 /**
  * 와트 값 → 게이지 채움 비율(%) (최소 4% 보장으로 항상 보이게).
- * [사용자 요청] 처음엔 min-max 상대비교(최저~최고 구간을 0~100%로 매핑)
+ * 처음엔 min-max 상대비교(최저~최고 구간을 0~100%로 매핑)
  * 였는데, LA2Xi(2560W)처럼 그룹 내 최저값에 가까운 앰프는 실제로는 결코
  * 작지 않은 출력인데도 게이지가 거의 안 찬 것처럼 보였다 — Rack 그룹에서
  * 먼저 적용한 것과 동일하게, 0 을 기준선으로 한 절대비교(v/hi)로 통일해
@@ -64,7 +64,7 @@ export function totalWatt4Ohm(a) {
     const m = String(raw).match(/(\d+(?:\.\d+)?)\s*x\s*(\d+(?:\.\d+)?)/i);
     if (m) return parseFloat(m[1]) * parseFloat(m[2]);
   }
-  // [사용자 요청] LA-RAK III/LA-RAK II AVB 처럼 채널당 4Ω 정격 자체가 없고
+  // LA-RAK III/LA-RAK II AVB 처럼 채널당 4Ω 정격 자체가 없고
   // powerTotal 원문이 이미 총합("Up to 62,400 W at 8 ohms")으로만 주어지는
   // 앰프는 위 계산이 불가능해 와트 바가 "—"로 비어 있었다 — powerTotal 의
   // 총 와트 숫자를 대신 읽어 게이지에 쓴다(기준 임피던스는 카드 Output
@@ -110,7 +110,7 @@ function output4OhmLabel(a) {
 /**
  * output4OhmLabel/powerTotal 문자열을 {value, impedance} 로 분리한다.
  * "16 x 1100 W(4Ω)" → {value:"16 x 1100 W", impedance:"4Ω"}.
- * [사용자 요청] LA-RAK III 처럼 4Ω/8Ω 채널당 데이터가 없어 powerTotal
+ * LA-RAK III 처럼 4Ω/8Ω 채널당 데이터가 없어 powerTotal
  * 원문("Up to 62,400 W at 8 ohms")으로 폴백하는 경우, 괄호 형식이 아니라
  * "at N ohms" 형식이라 기존 정규식이 임피던스를 못 잡았다 — 이 형식도
  * 함께 파싱해 "62,400 W" + "8Ω" 배지로 동일하게 분리한다.
@@ -123,13 +123,13 @@ function outputParts(a) {
   const paren = String(label).match(/^(.*?)\(([^)]+)\)\s*$/);
   if (paren) return { value: paren[1], impedance: paren[2] };
   const atOhms = String(label).match(/^(?:up to\s+)?(.*?)\s+at\s+([\d.]+)\s*ohms?\s*$/i);
-  // [사용자 요청] "Up to " 접두사는 다른 앰프들도 이미 최고치 기준으로만
+  // "Up to " 접두사는 다른 앰프들도 이미 최고치 기준으로만
   // 값을 표기하고 있어(예: LA12X "4 x 3300 W") 중복이므로 카드에서 생략.
   if (atOhms) return { value: atOhms[1], impedance: `${atOhms[2]}Ω` };
   return { value: label, impedance: null };
 }
 
-// [v1.8 리팩토링] getViews()는 speakers.view.js 와 동일한 로직이라
+// getViews()는 speakers.view.js 와 동일한 로직이라
 // js/core/dom.js 공통 유틸로 추출됨 — 위 import 참고. views 도 img 도 없으면
 // 빈 배열(카드에 ⚡ 아이콘 표시, 모달엔 미디어 영역 자체가 생략됨).
 
@@ -154,7 +154,7 @@ function ampTagsHTML(a, wrapClass, tagClass) {
 }
 
 /**
- * 카드 전용 축약 모델명. [사용자 요청] "LA-RAK II AVB"가 태그 3개와 함께
+ * 카드 전용 축약 모델명. "LA-RAK II AVB"가 태그 3개와 함께
  * 좁은 카드 폭에서 심하게 말줄임돼("LA-RAK II A...") 알아보기 어려웠다 —
  * 실제 데이터(a.model)는 그대로 두고 카드 표시에서만 " AVB" 접미사를
  * 생략한다(연결 프로토콜은 이름 옆 태그에 이미 "Milan-AVB"로 나와 있어
@@ -167,7 +167,7 @@ function cardModelLabel(model) {
 }
 
 /**
- * 카드 전용 축약 Architecture 값. [사용자 요청] "4 x 4 with bridge modes"
+ * 카드 전용 축약 Architecture 값. "4 x 4 with bridge modes"
  * (부가 설명), "3 x LA7.16 (48 channels of amplification)"(괄호 부연) 처럼
  * 핵심 수치 뒤에 설명이 붙으면 좁은 stat-grid 칸에서 잘린다 — 핵심
  * 수치("4 x 4", "3 x LA7.16")는 그대로 두고 이 부가 설명만 카드에서
@@ -200,14 +200,14 @@ export function cardHTML(a) {
   const hasConfigs = a.configs && a.configs.length;
   const maxTotal = hasConfigs ? a.configs.reduce((m, c) => (c.total != null && c.total > m ? c.total : m), 0) : 0;
   const modes = hasConfigs ? [...new Set(a.configs.map(c => c.mode).filter(Boolean))] : [];
-  // [사용자 요청] Usage 칸은 "Installation only" 처럼 긴 값이 stat-grid
+  // Usage 칸은 "Installation only" 처럼 긴 값이 stat-grid
   // (1.5fr 열)에서 말줄임(...)으로 잘리는 문제가 있었고, Usage 정보 자체가
   // Type 태그(모달 General 섹션)로도 확인 가능해 카드에서는 Architecture
   // (예: "4 x 4")로 교체 — configs 없는 앰프(LA12X/LA4X/LA7.16 등)의 카드
   // 요약을 Architecture/Output 2칸으로 구성. Channels 는 Architecture
   // 값("4 x 4"의 앞 숫자 = 입력 채널 수)에 이미 담긴 정보라 중복이므로
   // 제거(CLAUDE.md "중복 정보 생략" 원칙).
-  // [사용자 요청] 카드 강조 값(Max Total / Architecture)을 전역 accent
+  // 카드 강조 값(Max Total / Architecture)을 전역 accent
   // (앰버) 대신 제조사 색(--mfr)으로 — speakers 탭과 동일한 원칙.
   const statsBlock = hasConfigs
     ? `<div class="stat-grid">
@@ -239,15 +239,15 @@ export function cardHTML(a) {
         : `<img class="card__img card__img--wide" loading="lazy" src="${views[0].src}" alt="${esc(a.model)}">`)
     : `<div class="card__noimg">⚡</div>`;
   const nameTags = ampTagsHTML(a, "card__name-tags", "card__name-tag");
-  // [사용자 요청] 스피커 탭의 SPL 바(spl-meter)와 동일한 시각 언어로, 4Ω
+  // 스피커 탭의 SPL 바(spl-meter)와 동일한 시각 언어로, 4Ω
   // 기준 Total Watt 값을 게이지로 보여준다. 값이 없는 앰프(파싱 실패 등)는
   // 스피커 카드가 "spl == null" 일 때와 동일하게 게이지를 0%로, 값 자리에
   // "—"만 표시(레이아웃은 유지, 값만 비움).
-  // [사용자 요청] configs 없는 앰프(hasConfigs=false)는 아래 stat-grid
+  // configs 없는 앰프(hasConfigs=false)는 아래 stat-grid
   // Output 칸에 임피던스 배지가 이미 있어 "@4Ω"가 중복 정보다 — 이 경우만
   // 생략. Output 칸 자체가 없는 hasConfigs 앰프(D90 등)는 와트 미터가
   // 유일한 임피던스 표시라 유지(CLAUDE.md "중복 정보 생략" 원칙).
-  // [사용자 요청, 2차] Rack 앰프(LA-RAK III/II AVB)는 8Ω/2.7Ω 기준 총량이라
+  // Rack 앰프(LA-RAK III/II AVB)는 8Ω/2.7Ω 기준 총량이라
   // 일반 앰프의 4Ω 기준 값과 절대치가 섞여 있으면 비교가 왜곡된다 — 별도
   // 스케일(rackWattPct/WATT_RANGE_RACK)을 쓰고, spl-meter--rack 변경자로
   // 바 색상도 다르게(card.css) 해서 "이건 다른 기준"임을 시각적으로 구분.
@@ -270,7 +270,7 @@ export function cardHTML(a) {
 }
 
 /**
- * 사양 표 행 1개 HTML. [사용자 요청] d&b(D90)와 L-Acoustics 앰프가 서로
+ * 사양 표 행 1개 HTML. d&b(D90)와 L-Acoustics 앰프가 서로
  * 다른 필드를 채워둔 상태라, 값이 없으면 행 자체를 생략하던 이전 방식으로는
  * 브랜드마다 모달 섹션 구성(어떤 행이 보이는지)이 달라 보였다 — 이제 값이
  * 없어도 행 자체는 항상 렌더링하고 값 자리에 "—"만 넣어, 두 브랜드의 모달
@@ -331,7 +331,7 @@ function configsBySpeakerTableHTML(rows) {
     bySid.get(r.speakerId).rows.push(r);
   });
 
-  // [사용자 요청] "K3"/"K3i"(i버전), "SB18"/"SB18 IIi"(리비전+i버전),
+  // "K3"/"K3i"(i버전), "SB18"/"SB18 IIi"(리비전+i버전),
   // "Soka"/"Soka inWall"(설치 변형), "A10 Focus"/"A10i Focus"(i가 모델
   // 코드와 서픽스 사이 중간에 삽입되는 A시리즈 패턴), "SB10r"/"SB10i"
   // (마지막 글자만 r↔i로 다른 패턴) 처럼 이름이 유사하고 설정 데이터
@@ -382,8 +382,7 @@ function configsBySpeakerTableHTML(rows) {
     if (consumed.has(i)) return;
     // 이 그룹과 병합 가능한 파트너(이름이 접두사 관계이거나 "i" 삽입
     // 관계, 또는 끝글자 r↔i 치환 관계 + 설정 데이터 동일)를 찾는다.
-    //
-    // [버그 수정 — 오탐 방지] 전체 스피커 이름을 전수 검증한 결과, 순수
+    // [오탐 방지] 전체 스피커 이름을 전수 검증한 결과, 순수
     // startsWith 접두사 조건만으로는 "K1"↔"K1-SB"(라인어레이 vs 전용
     // 서브우퍼), "L1"↔"L1D", "L2"↔"L2D", "Syva"↔"Syva Low"/"Syva Sub"
     // 처럼 실제로는 전혀 다른 별개 제품인데 우연히 접두사 관계라는 이유로
@@ -412,7 +411,7 @@ function configsBySpeakerTableHTML(rows) {
     const g2 = groups[j];
     // 짧은 쪽을 기본형(대표 id·표시 이름의 앞부분)으로 삼는다.
     const [shortG, longG] = g.speakerName.length <= g2.speakerName.length ? [g, g2] : [g2, g];
-    // [사용자 요청] 병합된 행도 두 스피커(기본형/변형) 각각의 상세로
+    // 병합된 행도 두 스피커(기본형/변형) 각각의 상세로
     // 들어갈 수 있어야 한다 — 이름 표기를 "기본 파트"(클릭 시 shortG로
     // 이동)와 "변형 파트"(클릭 시 longG로 이동) 두 조각으로 나눠서
     // 반환한다. nameParts 는 렌더링 시 각각 별도의 data-speaker-id 를
@@ -458,10 +457,10 @@ function configsBySpeakerTableHTML(rows) {
     const rest = sorted.slice(1);
     const groupId = `amp-cfg-${gi}`;
     const toggleBtn = rest.length ? `<button type="button" class="match-table__toggle-btn" data-toggle-group="${groupId}" aria-expanded="false" aria-label="설정 ${rest.length}개 더 보기">+${rest.length}</button>` : "";
-    // [버그 수정] rep.speakerName 은 개별 매칭 row 의 원본 이름(병합 전
+    // rep.speakerName 은 개별 매칭 row 의 원본 이름(병합 전
     // "K3"/"K3i")이라 병합된 그룹에서는 신뢰할 수 없다 — 병합 로직이
     // 설정한 그룹 레벨 이름(g.nameParts)을 대신 쓴다.
-    // [사용자 요청] 병합된 행에서 기본형/i버전 각각의 상세로 들어갈 수
+    // 병합된 행에서 기본형/i버전 각각의 상세로 들어갈 수
     // 있어야 한다 — g.nameParts 가 있으면(=병합된 그룹) 이름을 파트별로
     // 나눠 각자 다른 data-speaker-id 를 가진 span 으로 렌더링한다. 행
     // 전체의 data-speaker-id(mode/preset 등 나머지 셀 클릭용)는 대표
@@ -545,7 +544,7 @@ function rackRowsHTML(items) {
  * 동일한 패턴 — 실제 조회(cross-ref.findAccessoryById)는 controller 가
  * 미리 수행해 {id, name, type} 배열로 넘겨준다(view.js 는 cross-ref 를
  * 직접 참조하지 않는 순수 함수 원칙 유지).
- * [사용자 요청] 모달 최상단(General 위)에 배치하고, Configurations 섹션과
+ * 모달 최상단(General 위)에 배치하고, Configurations 섹션과
  * 동일한 접기/펼치기 토글(section-label--toggle, data-section-toggle)을
  * 적용한다 — 클릭 배선은 js/ui/modal.js 의 공통 섹션 토글 배선이
  * 도메인 무관하게 처리하므로 마크업만 그 패턴에 맞추면 된다.
@@ -794,7 +793,7 @@ export function modalBodyHTML(a, resolveSpeakerName, speakerIds, configsBySpeake
     { label: "AES In", value: dsp.sampleRateAesIn },
     { label: "Network In", value: dsp.sampleRateNetworkIn },
   ]);
-  // [사용자 요청] 값이 하나도 없어도 "Sample Rate"/"Latency" 행 자체는
+  // 값이 하나도 없어도 "Sample Rate"/"Latency" 행 자체는
   // 항상 렌더링(brandconsistency) — specRow 와 동일하게 "—"로 표시.
   const dspRows = [
     specRow("Engine", dsp.engine),

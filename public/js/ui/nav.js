@@ -4,14 +4,13 @@
  * 탭 목록은 라우터에 등록된 도메인(registerDomain)에서 자동 생성되므로
  * 새 도메인을 추가해도 이 파일은 수정할 필요가 없다.
  *
- * [사용자 요청] 사진 숨기기/다크모드/모션(애니메이션·트랜지션) 토글도 이
+ * 사진 숨기기/다크모드/모션(애니메이션·트랜지션) 토글도 이
  * 탭 바 오른쪽 끝에 함께 렌더링한다 — 각 도메인 컨트롤 바(검색/필터)는
  * 도메인마다 따로 렌더링돼 전역 토글을 두기에 부적합하지만, 이 탭 바는
  * 모든 도메인이 공유하는 유일한 상시 표시 영역이라 여기 한 곳에 두면 탭을
  * 넘나들어도 위치가 흔들리지 않는다. 버튼 자체의 상태/이벤트는 여전히
- * js/ui/media-toggle.js, js/ui/theme.js, js/ui/motion-toggle.js 가 담당
- * (main.js가 initMediaToggle/initTheme/initMotionToggle 호출) — 이 파일은
- * 마크업만 제공.
+ * js/ui/toggle.js 가 담당(main.js가 initTheme/initMediaToggle/
+ * initMotionToggle 호출) — 이 파일은 마크업만 제공.
  *
  * 관련 CSS: css/nav.css (.topnav)
  */

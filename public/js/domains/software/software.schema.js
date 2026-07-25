@@ -50,7 +50,6 @@ export const softwareSchema = {
     { key: "platform", label: "Platform", labelFor: (v) => v },
   ],
   rangeFields: [],
-  defaultSort: "name",
   sorters: {
     name: (a, b) => a.name.localeCompare(b.name),
     // 분류별 보기 — 섹션 순서는 groupBy.order 가 잡고, 여기선 섹션 내부 순서만.

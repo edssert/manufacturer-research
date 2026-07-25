@@ -3,7 +3,7 @@
    BEM 블록: .topnav
    마크업 생성: js/ui/nav.js
    ============================================================ */
-/* [사용자 요청] topbar(로고/토글 바)는 스크롤 시 고정하지 않지만, 도메인
+/* topbar(로고/토글 바)는 스크롤 시 고정하지 않지만, 도메인
    탭(topnav)은 계속 보이도록 상단 고정 — topbar 가 고정이 아니므로 topnav
    는 뷰포트 맨 위(top:0)에 붙는다. z-index 는 그 아래 controls(40)보다
    위(41)로 둬 controls 가 스크롤로 올라올 때 topnav 밑으로 파고들지
@@ -16,7 +16,7 @@
   border-bottom: 1px solid var(--line);
   background: var(--panel);
 }
-/* [사용자 요청] 사진/다크모드 토글을 topbar 에서 이 탭 바 오른쪽 끝으로
+/* 사진/다크모드 토글을 topbar 에서 이 탭 바 오른쪽 끝으로
    이동(js/ui/nav.js renderNav 참고) — .topnav__row 가 탭 목록
    (topnav__inner, 가로 스크롤 가능)과 토글 그룹(topnav__tools, 고정 폭)을
    양끝 정렬한다. 토글이 탭 스크롤에 딸려 들어가지 않도록 별도 flex
@@ -78,7 +78,7 @@
 /* 상태 변경자: 활성 탭 */
 .topnav__tab--active { color: var(--accent); }
 .topnav__tab--active .topnav__tab-count { color: var(--accent-ink); background: var(--accent); }
-/* [사용자 요청] 활성 밑줄 2px → 1.5px. 바 높이를 조인 뒤로는 같은 두께가
+/* 활성 밑줄 2px → 1.5px. 바 높이를 조인 뒤로는 같은 두께가
    상대적으로 더 두꺼워 보였다 — 탭 글자보다 선이 먼저 눈에 들어오지 않는
    정도로 낮춘다. */
 .topnav__tab--active::after {

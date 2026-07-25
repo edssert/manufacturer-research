@@ -12,14 +12,6 @@
 export const $ = (s, root = document) => root.querySelector(s);
 
 /**
- * querySelectorAll 단축 헬퍼 (배열 반환).
- * @param {string} s CSS 셀렉터
- * @param {ParentNode} [root=document] 탐색 루트
- * @returns {Element[]}
- */
-export const $all = (s, root = document) => [...root.querySelectorAll(s)];
-
-/**
  * HTML 이스케이프 — 템플릿 문자열에 데이터 값을 넣기 전 반드시 통과시킬 것.
  * @param {*} s 원본 값 (null/undefined 는 빈 문자열)
  * @returns {string}
@@ -51,7 +43,7 @@ export function debounce(fn, ms = 120) {
 
 /**
  * 레코드의 제품 이미지 뷰 목록을 반환한다 — [{label, src}, ...].
- * [v1.8 리팩토링] speakers.view.js / amplifiers.view.js 에 동일하게 존재하던
+ * speakers.view.js / amplifiers.view.js 에 동일하게 존재하던
  * getViews() 중복을 공통 유틸로 추출 — 두 파일에서 이 함수를 그대로 import 해
  * 쓴다(로직 변경 없음).
  * 두 가지 데이터 형태를 지원한다:

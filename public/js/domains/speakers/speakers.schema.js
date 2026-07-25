@@ -15,7 +15,7 @@ export const MFR = {
 };
 export const MK_ORDER = ["la", "db", "my"];
 export const TYPE_ORDER = ["Line Array", "Progressive Ultra-Dense Line Source", "Constant Curvature Line", "Point", "Colinear", "Subwoofer"];
-// [사용자 요청] Type 태그가 card__config 줄(전용 한 줄, 공간 여유)로 옮겨간
+// Type 태그가 card__config 줄(전용 한 줄, 공간 여유)로 옮겨간
 // 뒤로는 축약할 필요가 없어져 풀스펠링을 그대로 쓴다 — 매핑은 빈 상태로 유지
 // (필요해지면 TYPE_BADGE_LABEL[v] || v 폴백 그대로 재사용 가능).
 export const TYPE_BADGE_LABEL = {};
@@ -201,7 +201,6 @@ export const speakersSchema = {
     { key: "hRange", label: "Horizontal", unit: "°", step: 5, isRange: true },
     { key: "vRange", label: "Vertical", unit: "°", step: 5, isRange: true },
   ],
-  defaultSort: "series",
   sorters: {
     spl: (a, b) => (b.spl || 0) - (a.spl || 0) || a.name.localeCompare(b.name),
     "inch-desc": (a, b) => (b.lowInch || 0) - (a.lowInch || 0) || a.name.localeCompare(b.name),

@@ -38,7 +38,7 @@ export function speakerMatchesQuery(d, q) {
   return d.name.toLowerCase().includes(s) || d.series.toLowerCase().includes(s) || MFR[d.mk].name.toLowerCase().includes(s);
 }
 
-// [v1.8 리팩토링] getViews()는 amplifiers.view.js 와 동일한 로직이라
+// getViews()는 amplifiers.view.js 와 동일한 로직이라
 // js/core/dom.js 공통 유틸로 추출됨 — 위 import 참고. 카드 호버 크로스페이드·
 // 모달 Front/Rear 버튼 모두 이 함수 하나로 개수를 신경 쓰지 않고 동작한다 —
 // 새 스피커에 뷰를 추가할 때 데이터에 views 배열만 채우면 된다.
@@ -106,16 +106,16 @@ function transducerBandsRow(raw) {
 export function cardHTML(d) {
   const M = MFR[d.mk], color = M.color;
   const p = primaryOf(d);
-  // [사용자 요청] "N개 앰프·모드 옵션 · 탭하여 전체 보기" 힌트 줄 제거 —
+  // "N개 앰프·모드 옵션 · 탭하여 전체 보기" 힌트 줄 제거 —
   // 카드 높이를 앰프 탭과 통일하는 기준으로 삼기 위해 삭제. 옵션 전체 목록은
   // 모달에서 여전히 확인 가능(정보 유실 없음).
-  // [사용자 요청] Meyer Sound PANTHER/LEOPARD/TIGRA/LINA 처럼 자체 DSP 앰프를
+  // Meyer Sound PANTHER/LEOPARD/TIGRA/LINA 처럼 자체 DSP 앰프를
   // 내장한(파워드) 스피커는 외부 앰프 매칭 자체가 없는 게 정상 스펙이라,
   // 데이터 미입력을 뜻하는 "— 미지정"으로 보이면 오해를 준다 — d.selfPowered
   // 플래그가 있으면 "Self-Powered"로 명시한다(영어 표기, 사용자 요청).
   const ampBlock = p ? `
     <div class="stat-grid">
-      <!-- [사용자 요청] Amp 모델명(D40/D80 등)도 Self-Powered 와 동일하게
+      <!-- Amp 모델명(D40/D80 등)도 Self-Powered 와 동일하게
            전역 accent 대신 제조사 색을 따라간다(stat-grid__value--mfr,
            card.css 참고) — d&b/Meyer 카드에서 그 브랜드색으로 표시. -->
       <div class="stat-grid__cell"><span class="stat-grid__key">Amp</span><span class="stat-grid__value stat-grid__value--mfr">${esc(p.model)}</span></div>
@@ -123,7 +123,7 @@ export function cardHTML(d) {
       <div class="stat-grid__cell"><span class="stat-grid__key">Links / ch</span><span class="stat-grid__value">${p.perCh}</span></div>
     </div>`
     : d.selfPowered
-      // [사용자 요청] Self-Powered 는 전역 accent(앰버) 대신 제조사 색
+      // Self-Powered 는 전역 accent(앰버) 대신 제조사 색
       // (stat-grid__value--mfr, card.css 참고)을 따라간다 — d&b/Meyer
       // 카드에서도 그 브랜드색으로 보여야 자연스럽다는 요청.
       ? `<div class="stat-grid"><div class="stat-grid__cell"><span class="stat-grid__key">Amp</span><span class="stat-grid__value stat-grid__value--mfr">Self-Powered</span></div></div>`
@@ -132,7 +132,7 @@ export function cardHTML(d) {
   // 뷰로 크로스페이드를 적용한다(카드는 좁아 세 번째 이상은 모달에서만 확인).
   // 두 이미지를 겹쳐 쌓고 CSS(:hover)로 opacity 를 전환하므로 JS 상태 없이
   // 동작하며, 뷰가 1개뿐인 모델은 기존과 동일하게 이미지 1장만 렌더링된다.
-  // [사용자 요청 — K1] 모달 안 뷰 순서(Horizontal/Vertical/Array...)는
+  // [K1] 모달 안 뷰 순서(Horizontal/Vertical/Array...)는
   // 그대로 두되, 카드 hover 대상만 개별적으로 다른 뷰를 쓰고 싶은 모델을
   // 위해 d.cardHoverView(뷰 label 문자열)를 두면 그 label 의 뷰를 hover
   // 대상으로 쓴다. 없으면 기존과 동일하게 views[1](두 번째 뷰)을 쓴다.
@@ -239,7 +239,7 @@ function cardTagsHTML(d) {
     ...sorted,
     ...(wayTag && !sorted.includes(wayTag) ? [wayTag] : []),
   ];
-  // [사용자 요청] 처음엔 Type 태그를 config 줄로 내렸는데, "Progressive
+  // 처음엔 Type 태그를 config 줄로 내렸는데, "Progressive
   // Ultra-Dense Line..."처럼 풀스펠링 Type 라벨이 오히려 config 줄(로우
   // 배지와 폭을 다투는 좁은 줄)에서 말줄임됐다 — 위/아래 줄을 맞바꿔
   // Type 태그(길지만 1개)는 이름 옆 줄(card__name-tags, 이름이 필요시
@@ -356,7 +356,7 @@ function parseDims(raw) {
  * @returns {Object[]} 행 객체 1개(셋 다 없으면 빈 배열)
  */
 /**
- * [사용자 요청] d&b/L-Acoustics 는 connectors 가 대부분 단일 커넥터 타입
+ * d&b/L-Acoustics 는 connectors 가 대부분 단일 커넥터 타입
  * 문자열("4-point speakON")인 반면, Meyer Sound 는 "Analog: ... · Digital:
  * ... · AC: ..." 처럼 여러 인터페이스를 한 줄에 압축해 넣어 다른 브랜드보다
  * 훨씬 길어 보이는 문제가 있었다. " · " 로 구분된 "라벨: 값" 쌍 패턴이
@@ -394,11 +394,11 @@ function paComPinoutRow(pinout) {
 }
 
 /**
- * [사용자 요청] "IP55 (Neutrik TOP 커넥터 체결 시)"처럼 IP Rating 값에 조건부
+ * "IP55 (Neutrik TOP 커넥터 체결 시)"처럼 IP Rating 값에 조건부
  * 설명이 괄호로 붙으면, IP Rating 은 Dimensions/Weight 와 한 행(3열,
  * spec-table__tri)을 공유하는 좁은 칸이라 줄바꿈이 지저분해진다 — 괄호
  * 안 내용을 분리해 셀에는 위첨자 번호만 남기고, 실제 설명은 모달 하단
- * footnote 로 옮긴다. [사용자 요청, 2차] 각주가 여러 개 쌓일 수 있어 "*"
+ * footnote 로 옮긴다. 각주가 여러 개 쌓일 수 있어 "*"
  * 대신 번호를 쓴다 — 어떤 값이 어떤 각주를 가리키는지 구분되도록.
  * @param {string} val d.ip 원본 문자열
  * @returns {{display: string, note: string|null}}
@@ -534,7 +534,7 @@ function coverageRows(cov) {
   const r = [];
   if (cov.h) r.push(specRow("Horizontal", cov.h));
   if (cov.v && !hasSplay) r.push(specRow("Vertical", cov.v));
-  // [사용자 요청] L2(splayList 없음, Horizontal+Vertical 이 이미 한 행에
+  // L2(splayList 없음, Horizontal+Vertical 이 이미 한 행에
   // half+half 로 나란히 배치됨)와 동일한 패턴으로, Splay 가 있는 스피커도
   // Horizontal 과 같은 행에 오도록 --full 을 제거(half). 각도 값이 많아
   // 길어지는 경우는 spec-table__value 의 기존 word-break 규칙이 자연스럽게
@@ -549,7 +549,7 @@ function freqRow(freqs) {
   if (!freqs || !freqs.length) return null;
   // 배지(-3 dB/-6 dB/-10 dB)와 값(Hz 범위)을 각각 별도 grid 열에 배치해
   // 배지 폭·값 시작 위치가 항목마다 다르지 않고 세로로 정렬되게 한다.
-  // [버그 수정] freq-badge 는 원래 "-3 dB"/"-10 dB" 처럼 항상 짧은 라벨을
+  // freq-badge 는 원래 "-3 dB"/"-10 dB" 처럼 항상 짧은 라벨을
   // 전제로 48px 고정 폭을 쓰는데, Meyer Sound PANTHER/LEOPARD/TIGRA/LINA
   // 데이터에서 "Operating Range"/"Phase ±45°" 처럼 긴 라벨을 쓰면서 텍스트가
   // 배지 폭을 넘쳐 옆 값과 겹쳐 보였다. 6자를 넘는 라벨은 자동 폭
@@ -581,7 +581,7 @@ function freqRow(freqs) {
  */
 export function ampMatchingHTML(d, resolveAmpId) {
   if (!d.amps || !d.amps.length) {
-    // [사용자 요청] Meyer Sound 처럼 자체 DSP 앰프 내장형(파워드) 스피커는
+    // Meyer Sound 처럼 자체 DSP 앰프 내장형(파워드) 스피커는
     // 외부 앰프 매칭이 원래 없는 게 정상 스펙이므로, "데이터 미입력"으로
     // 오해되는 기본 문구 대신 명시적으로 안내한다(카드의 Amp 칸과 동일한
     // d.selfPowered 플래그 재사용).
@@ -636,7 +636,7 @@ export function ampMatchingHTML(d, resolveAmpId) {
  * amplifiers.view.js systemElementsHTML(Rack 앰프용)과 동일한 패턴 — 실제
  * 조회(cross-ref.findAccessoriesForSpeaker)는 controller 가 미리 수행해
  * {id, name, type} 배열로 넘겨준다(view.js 는 cross-ref 를 직접 참조하지
- * 않는 순수 함수 원칙 유지). [사용자 요청] K1 등 리깅/프로텍션 부속품이
+ * 않는 순수 함수 원칙 유지). K1 등 리깅/프로텍션 부속품이
  * 많은 스피커에서 "이 스피커에 필요한 System Elements"를 한눈에 보여준다.
  * @param {{id:string, name:string, type:string}[]} accessories
  * @returns {string} 섹션 마크업 (없으면 "")
@@ -675,12 +675,12 @@ function systemElementsHTML(accessories) {
 // 공백을 줄바꿈 불가능한 &nbsp;로 바꿔 "구(phrase)" 단위로만 묶어서
 // 흐르게 하고, 그 구 사이(콤마/플러스 뒤, 괄호 앞)에만 <wbr>(줄바꿈
 // "가능 지점"만 표시, 글자는 그대로)을 넣어 그 지점에서만 줄바꿈이
-// 일어나게 한다. [사용자 요청] "K1-SB (beside/behind)"처럼 콤마/플러스
+// 일어나게 한다. "K1-SB (beside/behind)"처럼 콤마/플러스
 // 없는 문구가 폭을 넘으면 anywhere 폴백이 단어 중간에서 잘랐다 — 괄호 앞
 // 공백도 break 지점으로 추가해 "K1-SB"까지는 항상 붙어있게 한다.
 function wrapBreakable(text) {
   const MARK = "\u0001"; // 원문에 나올 수 없는 마커 -- 최종적으로 "<wbr> "로 치환
-  // [버그 수정] "+ "(플러스+공백)를 "+"+MARK 로 바꾸면 원문의 공백 문자
+  // "+ "(플러스+공백)를 "+"+MARK 로 바꾸면 원문의 공백 문자
   // 자체가 사라지고 그 자리에 MARK(추후 <wbr>로 치환, 그 자체는 공백을
   // 만들지 않음)만 남아 "K1 +K1-SB"처럼 붙어 보였다 — 공백을 지우지 않고
   // 그대로 둔 채 MARK 를 끼워 넣어, 최종적으로 <wbr> 다음에 (줄바꿈이
@@ -689,7 +689,7 @@ function wrapBreakable(text) {
     .replace(/, /g, ", " + MARK)
     .replace(/\+ /g, "+ " + MARK)
     .replace(/ \(/g, " " + MARK + "(")
-    // [사용자 요청 — 각주 긴 문장 대응] 표 셀 라벨용이던 이 함수가 Preset
+    // [각주 긴 문장 대응] 표 셀 라벨용이던 이 함수가 Preset
     // Guide 각주(notes)의 문장형 텍스트에도 쓰이게 되면서, 마침표/콜론/긴
     // 대시 뒤에도 break 지점을 추가한다 — 대부분 절·문장의 경계라 다음
     // 단어와 붙어 넘어가면 오히려 읽는 흐름이 끊겨 보였다(사용자 확인).
@@ -701,7 +701,7 @@ function wrapBreakable(text) {
     .split(MARK).join("<wbr>");
 }
 
-// [사용자 요청] Loudspeaker Configuration/Preset 열에서 "+" 뒤와 "(" 앞
+// Loudspeaker Configuration/Preset 열에서 "+" 뒤와 "(" 앞
 // 공백이 있다 없다 뒤섞여 보였다("K1 + K1-SB (on top)"처럼) — 표시상으로만
 // 그 두 지점의 공백을 없애 "K1 +K1-SB(on top)"처럼 붙는 쪽으로 통일한다.
 // raw-data 원문(r.config/r.preset)은 건드리지 않고 렌더링 직전에만 적용.
@@ -715,7 +715,7 @@ function tightenConfigText(text) {
   return String(text).replace(/ \+ /g, "​+​").replace(/ \(/g, "​(");
 }
 
-// [사용자 요청] 참고 사항의 "출처: xxx.pdf pNN" 표기를 실제 원본 PDF로
+// 참고 사항의 "출처: xxx.pdf pNN" 표기를 실제 원본 PDF로
 // 바로 이동하는 링크로 바꾼다 — 단, 원본 PDF 파일이 실제로 저장소에
 // 보관된 제품만(대부분 "역재구성본"이라 원본이 없음). 현재는 K1만
 // 해당(K1_OM_EN.pdf, preset_guide_EN.pdf 원본 보관 확인됨). 다른 제품이
@@ -752,7 +752,7 @@ function linkifySource(source, speakerId) {
 function presetGuideHTML(d) {
   const p = d.presets;
   if (!p || !Array.isArray(p.rows) || !p.rows.length) return "";
-  // [사용자 요청] Acoustic Properties 열은 원문이 길어 줄바꿈이 잦았다 —
+  // Acoustic Properties 열은 원문이 길어 줄바꿈이 잦았다 —
   // 셀에는 한 줄로 들어가는 축약문(acousticShort, 원문에서 "reinforced LF
   // contour" 같은 반복 상투구를 빼고 행마다 다른 부분+수치만 남긴 것)을
   // 보여주고, 원문 전체는 마우스를 올렸을 때만 커스텀 팝오버로 보여준다
@@ -771,7 +771,7 @@ function presetGuideHTML(d) {
       <div class="match-table__cell">${acousticCell}</div>
     </div>`;
   }).join("");
-  // [사용자 요청 — 2차 가독성 개선] notes 항목이 { text, subs? } 객체로
+  // [2차 가독성 개선] notes 항목이 { text, subs? } 객체로
   // 바뀌어(k-series.data.js 참고) subs 가 있으면 항목 안에 중첩 <ul>
   // (하위 글머리 기호, footnote--sublist)을 추가로 그린다 — Downfill/출력
   // 라우팅처럼 한 항목 안에 여러 갈래가 나열될 때 문장으로 줄줄이 잇는
@@ -784,7 +784,7 @@ function presetGuideHTML(d) {
       : "";
     return `<li>${wrapBreakable(item.text)}${subsHTML}</li>`;
   };
-  // [사용자 요청 — 3개 하위 표 통일 구조] Preset Guide 안의 표 3개(메인/
+  // [3개 하위 표 통일 구조] Preset Guide 안의 표 3개(메인/
   // Matching Ratio/Delay Defaults) 모두 펼치는 즉시 바로 보이고(표 자체는
   // 더 이상 토글하지 않음), 표마다 그 밑에 "참고 사항" 토글을 하나씩 붙여
   // 총 3개의 참고 사항 토글이 생기는 구조로 통일한다(전에는 메인 표만
@@ -805,10 +805,10 @@ function presetGuideHTML(d) {
   };
   const mainNotesHTML = notesBlockHTML(p.notes, p.source, "spk-preset-guide-notes");
 
-  // [사용자 요청] System Elements/Configurations 와 동일한 섹션 통째
+  // System Elements/Configurations 와 동일한 섹션 통째
   // 접기/펼치기 패턴(wireSectionToggle, ui/modal.js) — 기본 접힘 상태로
   // 시작해 모달을 열자마자 긴 표가 화면을 차지하지 않게 한다.
-  // [사용자 요청 — 섹션 분리] Matching Ratio/Delay Defaults 는 원래 이
+  // [섹션 분리] Matching Ratio/Delay Defaults 는 원래 이
   // 함수 안 하위 토글이었으나, Preset Guide 를 열면 여전히 표가 너무
   // 많아 보인다는 지적으로 matchingRatioHTML/delayDefaultsHTML 이라는
   // 별도 함수로 빼서 Mechanical Safety 와 동급(섹션 레벨) 토글로
@@ -827,7 +827,7 @@ function presetGuideHTML(d) {
     </div>`;
 }
 
-// [사용자 요청 — 섹션 분리] Preset Guide 안에 있던 "Matching Ratio & Minimum
+// [섹션 분리] Preset Guide 안에 있던 "Matching Ratio & Minimum
 // Line Length" 하위 토글을 Preset Guide/Mechanical Safety 와 동급인 최상위
 // 섹션 토글로 승격 — Preset Guide 를 열었을 때 정보량이 너무 많다는 지적.
 // notesBlockHTML 은 presetGuideHTML 안의 클로저라 재사용할 수 없어 동일한
@@ -858,18 +858,18 @@ function matchingRatioHTML(d) {
     </div>`;
 }
 
-// [사용자 요청 — 섹션 분리] Preset Guide 안에 있던 "Delay Defaults" 하위
+// [섹션 분리] Preset Guide 안에 있던 "Delay Defaults" 하위
 // 토글을 matchingRatioHTML 과 동일한 이유로 최상위 섹션 토글로 승격.
 function delayDefaultsHTML(d) {
   const p = d.presets;
   const dd = p && p.delayDefaults;
   if (!dd || !Array.isArray(dd.rows) || !dd.rows.length) return "";
-  // [사용자 요청] 극성 정상(+)은 기본값이라 표시를 생략하고(k-series.data.js
+  // 극성 정상(+)은 기본값이라 표시를 생략하고(k-series.data.js
   // 참고), 반전인 경우만 데이터에 "(−)" 로 표기된다 — wrapBreakable로
   // &nbsp;/<wbr> 처리를 마친 뒤 그 안의 "−" 기호만(괄호는 일반 색 그대로
   // 두고) 빨간 글씨 span으로 감싼다(순서 중요: wrapBreakable이 먼저
   // 끝나야 태그가 깨지지 않는다).
-  // [사용자 요청 — 표 구분 기능] r.items(문자열 배열, K1/K1-SB/KS28 등
+  // [표 구분 기능] r.items(문자열 배열, K1/K1-SB/KS28 등
   // 엘리먼트별 값)을 각각 .delay-item span으로 감싸 나열 — CSS
   // (spec-table.css .delay-item + .delay-item)가 border-left로 위아래
   // 표 가로선과는 끊긴 짧은 세로 구분선을 그린다(텍스트 "|" 문자 대신
@@ -899,7 +899,7 @@ function delayDefaultsHTML(d) {
     </div>`;
 }
 
-// [사용자 요청 — 섹션 분리] presetGuideHTML 안의 notesBlockHTML 과 동일한
+// [섹션 분리] presetGuideHTML 안의 notesBlockHTML 과 동일한
 // "참고 사항" 하위 토글을 matchingRatioHTML/delayDefaultsHTML 이 각자
 // 클로저 없이도 쓸 수 있도록 모듈 레벨 헬퍼로 뽑아낸 버전 — noteItemHTML
 // 렌더링 로직도 presetGuideHTML 것과 동일하게 맞춘다.
@@ -923,7 +923,7 @@ function notesToggleBlockHTML(notes, source, toggleId, speakerId) {
       </div>`;
 }
 
-// [사용자 요청] Preset Guide와 동급(섹션 레벨) 토글로 "Mechanical Safety"
+// Preset Guide와 동급(섹션 레벨) 토글로 "Mechanical Safety"
 // 섹션 추가 — 오너 매뉴얼 "Mechanical safety" 중 그 제품 자체(K1)에
 // 해당하는 부분만(k-series.data.js mechanicalSafety, K1-SB/KS28/CS1 등
 // 다른 제품의 리깅 한계 표는 제외) 표로 정리. Flown/Stacked 두 표는 항상
@@ -1035,25 +1035,25 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
   // 사이에 경계선/색 전환 없이 하나로 이어지게 한다.
   const views = getViews(d);
   const viewSlug = label => label.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  // [사용자 요청] 스택 그룹(Horizontal/Vertical/... 세로로 쌓인 칸)이 몇
+  // 스택 그룹(Horizontal/Vertical/... 세로로 쌓인 칸)이 몇
   // 줄인지에 따라 옆(가로로 나열된) 버튼들의 줄 수를 맞춰야 자연스럽다 —
   // STACK_LABELS/stackViews 는 뒤에서 계산되지만 그 개수가 아래
   // parenBodyHTML(줄바꿈 여부 결정)에 필요해 먼저 끌어올려 계산한다.
   const STACK_LABELS = d.viewStackLabels || ["Horizontal", "Vertical", "Vertical (Panflex)"];
   const stackCount = views.filter(v => STACK_LABELS.includes(v.label)).length;
-  // [사용자 요청] "Array White (8x + KARAIIi-BUMP)"처럼 괄호 부가설명이
+  // "Array White (8x + KARAIIi-BUMP)"처럼 괄호 부가설명이
   // 붙은 뷰 라벨은 괄호가 줄 중간(2번째 줄 시작)과 끝(3번째 줄 끝)에
   // 걸쳐 보여 미관상 어색했다 — 괄호 자체를 없애고 안의 내용만 별도 줄에
   // 작고 연한 배지 텍스트(.modal__view-btn-sub)로 보여준다("Array White"
   // / "8x + KARAIIi-BUMP", 괄호 없이). 괄호 안이 여러 단어일 때만 이렇게
   // 분리하고, "Vertical (Panflex)"처럼 한 단어뿐이라 이미 한 줄에 들어가는
   // 라벨은 원문 그대로 괄호까지 포함해 한 줄에 붙여둔다(굳이 뗄 필요 없음).
-  // [사용자 요청] "8x + KARAIIi-BUMP"를 브라우저 기본 word-wrap 에 맡기면
+  // "8x + KARAIIi-BUMP"를 브라우저 기본 word-wrap 에 맡기면
   // "KARAIIi-BUMP"처럼 하이픈이 든 한 "단어"를 하이픈 지점에서 쪼개
   // "KARAIIi-" / "BUMP"로 잘랐다 — 하이픈이 든 각 토큰(모델명, 예:
   // KARAIIi-BUMP)만 white-space: nowrap 인 span 으로 개별 포장해 그 토큰
   // 내부에서는 쪼개지지 않게 한다.
-  // [사용자 요청 — 줄 수를 스택과 맞춤] 처음엔 폭이 넉넉하면(K1 등, 스택
+  // [줄 수를 스택과 맞춤] 처음엔 폭이 넉넉하면(K1 등, 스택
   // 2개 이하) <wbr>(공간 부족할 때만 허용)로 자연스럽게 뒀는데, K2처럼
   // 스택이 3개(Horizontal/Vertical/Panflex Detail = 3줄)인 모델은 옆의
   // Array/On Chariot 버튼도 폭에 여유가 있어 한 줄로 붙어버려 스택과 줄
@@ -1078,7 +1078,7 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
       ? `${esc(label.slice(0, i))}<span class="modal__view-btn-sub">${parenBodyHTML(paren)}</span>`
       : esc(label);
   };
-  // [사용자 요청] "Vertical (Panflex)"처럼 괄호 안이 한 단어뿐인 라벨은
+  // "Vertical (Panflex)"처럼 괄호 안이 한 단어뿐인 라벨은
   // <br> 강제분기 없이 한 줄 텍스트 그대로지만, 버튼 폭이 좁으면(스택 칸이
   // Horizontal/Vertical 같은 짧은 라벨 기준으로 좁게 잡혀서) 브라우저가
   // 여전히 공백에서 자동 줄바꿈해버려 "Vertical" / "(Panflex)"로 갈라져
@@ -1099,7 +1099,7 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
   const firstLabel = views[0]?.label;
   const viewBtnHTML = v =>
     `<button type="button" class="modal__view-btn${isNowrapLabel(v.label) ? " modal__view-btn--nowrap" : ""}${v.label === firstLabel ? " is-active" : ""}" data-view-switch="${viewSlug(v.label)}">${viewBtnLabelHTML(v.label)}</button>`;
-  // [사용자 요청 — Kara IIi 등 뷰가 6개까지 늘어난 모델] 버튼이 많아지자
+  // [Kara IIi 등 뷰가 6개까지 늘어난 모델] 버튼이 많아지자
   // 한 줄에 다 안 들어가 "Array White (8x + KARAIIi-BUMP)"처럼 긴 라벨이
   // 여러 줄로 꺾여 줄 수가 들쭉날쭉해 보였다 — 라벨이 짧고 항상 함께
   // 다니는 "앵글" 계열 뷰만 별도로 세로로 쌓은 그룹
@@ -1165,7 +1165,7 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
     // 생략된다(specRow 의 null 처리).
     specRow("Cardioid Capability", d.cardioidCapability),
   ];
-  // [사용자 요청] 기존 Physical(Dimensions/Weight/IP Rating) + Connectivity
+  // 기존 Physical(Dimensions/Weight/IP Rating) + Connectivity
   // (Connectors) 2섹션을 "General" 하나로 통합 — 분리했을 때 각 섹션에 항목이
   // 1~2개뿐이라 나눌 실익이 적고, 합친 뒤에는 "Physical"이라는 이름이
   // Connectors 까지 아우르기엔 어울리지 않아 더 포괄적인 이름으로 변경.
