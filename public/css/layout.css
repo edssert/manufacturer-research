@@ -3,11 +3,18 @@
    BEM 블록: .topbar, .legend, .content-wrap
    ============================================================ */
 
-/* ---------- 블록: topbar (헤더) ---------- */
+/* ---------- 블록: topbar (헤더) ----------
+   [사용자 요청] 예전에는 스크롤하면 걷혀 올라갔는데, 항상 보이도록 상단 고정으로
+   바꿨다. 쌓임 순서는 위에서부터 topbar(42) > topnav(41) > controls(40) —
+   아래 바가 스크롤로 올라올 때 위 바 밑으로 파고들게 한다. */
 .topbar {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 42;
   border-bottom: 1px solid var(--line);
-  background: linear-gradient(180deg, var(--topbar-sheen, rgba(255, 255, 255, .02)), transparent);
+  /* 고정이 되면서 배경이 불투명해야 한다 — 기존 sheen 그라디언트는 반투명이라
+     그대로 두면 아래 카드가 비쳐 보인다. panel 을 바닥에 깔고 그 위에 얹는다. */
+  background: linear-gradient(180deg, var(--topbar-sheen, rgba(255, 255, 255, .02)), transparent), var(--panel);
 }
 .topbar::before {
   content: "";
@@ -16,26 +23,33 @@
   height: 2px;
   background: linear-gradient(90deg, var(--accent), transparent 45%);
 }
+/* [사용자 요청 — 밀도] 헤더가 세로로 컸다(원래 18/16 패딩 + 34px 로고 = 약
+   68px). 두 차례에 걸쳐 조여 지금은 패딩 7/6, 로고 26px, 제목 16px 이다.
+   여기서 바 높이를 결정하는 건 패딩이 아니라 제목+부제 두 줄 묶음이라,
+   글자 크기와 그 사이 간격(margin-top)을 같이 줄여야 실제로 낮아진다. */
 .topbar__inner {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 18px 24px 16px;
+  /* 세로 여백 대신 --bar-h 로 높이를 잡아 탭 바·검색 바와 같은 높이가 되게 한다.
+     min-height 라 좁은 화면에서 줄바꿈이 나면 알아서 늘어난다. */
+  min-height: var(--bar-inner-h);
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 .topbar__brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 11px;
   min-width: 0; /* [레이아웃 안정성] flex 자식 축소 허용 → 제목이 길어도 옆 요소를 밀지 않음 */
 }
 
 /* 로고 사각형 안의 오디오 레벨 바 애니메이션 */
 .topbar__sigil {
-  width: 34px; height: 34px;
+  width: 26px; height: 26px;
   flex: none;
   border: 1px solid var(--line-2);
   border-radius: 8px;
@@ -44,7 +58,7 @@
   background: var(--panel-2);
   overflow: hidden;
 }
-.topbar__sigil-bars { display: flex; align-items: flex-end; gap: 2px; height: 16px; }
+.topbar__sigil-bars { display: flex; align-items: flex-end; gap: 2px; height: 12px; }
 .topbar__sigil-bars i { width: 3px; background: var(--accent); border-radius: 1px; animation: lvl 1.7s ease-in-out infinite; }
 .topbar__sigil-bars i:nth-child(1) { height: 40%;  animation-delay: 0s; }
 .topbar__sigil-bars i:nth-child(2) { height: 85%;  animation-delay: .18s; }
@@ -55,14 +69,19 @@
   50%      { transform: scaleY(1);   opacity: 1; }
 }
 
-.topbar__title { font-size: 19px; font-weight: 800; margin: 0; letter-spacing: .4px; line-height: 1.1; }
+.topbar__title { font-size: 16px; font-weight: 800; margin: 0; letter-spacing: .3px; line-height: 1.1; }
 .topbar__title span { color: var(--accent); }
 .topbar__subtitle {
-  font-size: var(--fs-xs);
+  /* [사용자 요청] 제조사 나열은 제목을 받쳐 주는 라벨이라 더 작게 — 11px
+     (--fs-xs) → 10px. tokens.css 가 정한 "최소 11px" 하한보다 작지만, 대문자
+     변환 + .14em 자간이라 실제 읽히는 크기는 그 이상이고, 여기서 정보를
+     읽기보다 "어떤 브랜드를 다루는 앱인지" 훑는 용도라 예외로 둔다. */
+  font-size: 10px;
   color: var(--muted);
   letter-spacing: .14em;
   text-transform: uppercase;
-  margin-top: 3px;
+  margin-top: 1px;
+  line-height: 1.2;
   font-weight: 600;
   /* [레이아웃 안정성] 브랜드가 늘어나도 한 줄 유지 + 말줄임 */
   white-space: nowrap;
@@ -70,7 +89,7 @@
   text-overflow: ellipsis;
   max-width: 420px;
 }
-.topbar__meta { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.topbar__meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .topbar__count { font-size: var(--fs-sm); color: var(--muted); white-space: nowrap; font-weight: 500; }
 .topbar__count b { color: var(--accent); font-weight: 700; }
 
@@ -171,7 +190,7 @@
 
 /* ---------- 반응형: 모바일 ---------- */
 @media (max-width: 720px) {
-  .topbar__inner { padding: 14px 16px 12px; }
+  .topbar__inner { padding: 0 16px; }
   .content-wrap { padding: 16px 16px 60px; }
   .topbar__title { font-size: var(--fs-lg); }
   .topbar__subtitle { max-width: 220px; }

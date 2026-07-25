@@ -5,18 +5,33 @@
    양옆에 여백이 생긴다 — 레일은 position:fixed 로 띄우되 본문과 겹치지
    않도록 여백이 확보되는 폭에서만 표시한다.
    ============================================================ */
+/* [사용자 보고 — 확대 시 가림 / 위치] 예전에는 top:50% + translateY(-50%) 로
+   화면 세로 중앙에 뒀는데 두 가지가 문제였다:
+   1) 브라우저를 확대하면 뷰포트가 CSS px 기준으로 좁아져 topnav(z 41) +
+      controls(z 40) 가 차지하는 비율이 커지고, 레일 상단이 그 바 밑으로
+      들어가 가려졌다(레일은 z-index 20).
+   2) 중앙 정렬이라 레일이 화면 아래쪽에 떠 보였다.
+   위/아래를 절대 좌표로 묶는다 — top 은 JS 가 실측한 sticky 바 높이
+   (--rail-top, section-nav.js applyRailBounds), bottom 은 고정 여백. 배율과
+   무관하게 항상 바 아래에서만 논다.
+   [사용자 요청 — 최종] 띠 안 세로 가운데 정렬은 되돌렸다. 가운데로 두면 탭마다
+   섹션 수가 달라 목록 길이가 달라지는데(스피커 30개 ↔ 앰프 몇 개), 그때마다
+   레일이 위아래로 옮겨 앉아서 탭을 바꿀 때마다 눈이 따라다녀야 했다. 상단
+   고정이면 어느 탭에서든 시작점이 같아 시선이 그대로 머문다. */
 .section-nav {
   position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
+  top: var(--rail-top, 96px);
+  bottom: 16px;
   /* 본문 좌측 여백의 중앙에 놓는다: (100vw - 1320px) / 2 안쪽 */
   left: calc((100vw - 1320px) / 2 - 208px);
   width: 192px;
-  max-height: 70vh;
   overflow-y: auto;
   z-index: 20;
   display: none;
   scrollbar-width: thin;
+  /* 박스가 sticky 바 아래 전체를 덮으므로, 목록이 짧을 때 남는 빈 영역이 본문
+     옆 클릭/드래그를 가로채지 않도록 박스는 이벤트를 통과시키고 목록만 받는다. */
+  pointer-events: none;
 }
 
 /* 레일(192) + 간격(16)이 양쪽에 들어갈 만큼 넓을 때만 노출 */
@@ -29,6 +44,27 @@
   margin: 0;
   padding: 0;
   border-left: 1px solid var(--line);
+  /* 레일 박스는 pointer-events:none — 실제 목록만 마우스를 받는다(위 참고). */
+  pointer-events: auto;
+  /* 표시 막대(--marker)의 기준 상자 */
+  position: relative;
+}
+
+/* [사용자 요청] 활성 표시가 섹션마다 한 칸씩 툭툭 건너뛰는 대신 스크롤을 따라
+   연속으로 미끄러지게 한다. 위치·높이는 JS(section-nav.js placeMarker)가
+   현재 섹션과 다음 섹션 사이를 소수로 보간해 매 프레임 넣는다 — 그래서 여기엔
+   transition 을 두지 않는다(스크롤에 1:1 로 붙어야 하고, 트랜지션을 걸면
+   오히려 한 박자 늦게 따라온다). */
+.section-nav__marker {
+  position: absolute;
+  top: 0;
+  left: -1px;              /* 목록 좌측 경계선(1px) 위에 겹쳐 그린다 */
+  width: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s;
 }
 
 .section-nav__link {
@@ -36,7 +72,9 @@
   flex-wrap: wrap;
   align-items: baseline;
   gap: 2px 6px;
-  padding: 7px 10px 7px 12px;
+  /* [사용자 요청 — 호버 사용감] 세로 7px → 9px. 12.5px 글자 기준 행 높이가
+     33px 밖에 안 돼 호버로 짚기가 빡빡했다. */
+  padding: 9px 10px 9px 12px;
   margin-left: -1px;
   border-left: 2px solid transparent;
   color: var(--text-dim);
@@ -50,10 +88,12 @@
 
 /* [사용자 요청] 지금 보고 있는 "정확한 위치" 하나만 굵게 강조한다 — 상위
    제조사 링크를 항상 굵게 두면 활성 항목과 강조가 겹쳐 어디를 보고 있는지
-   흐려진다. 계층은 굵기가 아니라 들여쓰기로 드러낸다. */
+   흐려진다. 계층은 굵기가 아니라 들여쓰기로 드러낸다.
+   좌측 accent 선은 여기서 그리지 않는다 — 스크롤을 따라 미끄러지는
+   .section-nav__marker 가 그 역할을 넘겨받았다(선까지 여기서 켜면 칸 단위로
+   튀는 표시와 미끄러지는 표시가 겹쳐 보인다). */
 .section-nav__link--active {
   color: var(--text);
-  border-left-color: var(--accent);
   font-weight: 600;
 }
 
@@ -63,54 +103,116 @@
   overflow-wrap: anywhere;
 }
 
-/* ---------- 제조사별 보기: 제조사만 보이고 하위 분류는 호버로 펼침 ----------
-   [사용자 요청] 제조사별 보기에서는 목록이 제조사 > 분류로 잘게 나뉘어
-   길어진다 — 제조사만 내놓고 하위 분류는 마우스를 올렸을 때(또는 그 그룹
-   안의 섹션을 보고 있을 때) 펼친다.
-   grid-template-rows 0fr→1fr 은 내용 높이를 몰라도 auto 높이로 부드럽게
-   전개된다(max-height 어림값 불필요). 모션 토글이 켜지면 base.css 의
-   전역 규칙이 이 transition 도 함께 끈다. */
+/* ---------- 제조사별 보기: 다이얼(초점 기준 거리 그라데이션) ----------
+   [사용자 요청 — 전면 교체] 예전에는 제조사만 내놓고 하위 분류를 호버로
+   펼쳤는데, 섹션이 30개로 늘면서 문제가 겹쳤다: 펼칠 때 레일 높이가 변해
+   깜빡였고, 여러 그룹이 동시에 펼쳐지면 스크롤바가 생겼고, 접혀 있는 동안은
+   지금 보는 위치를 알 수 없었다.
+   접기/펼치기를 아예 없애고 다이얼로 바꾼다 — 모든 섹션을 항상 내놓되 초점
+   (지금 보고 있는 섹션, 마우스가 레일 위에 있으면 커서 아래 항목)에서 멀어질
+   수록 글자와 여백이 작아지고 흐려진다. 초점만 옮겨 다니므로 목록 전체 높이는
+   거의 일정하고, 따라서 스크롤바도 생기지 않는다.
+   거리(--d, 0~4)는 JS(section-nav.js applyDial)가 각 링크에 넣는다. */
+/* 제조사 묶음 사이에만 숨 쉴 틈을 준다 — 다이얼이 크기로 위계를 만들기
+   때문에 구분선까지 넣으면 과하다. */
+.section-nav__group + .section-nav__group { margin-top: 10px; }
+
 /* 제조사(상위) 링크는 굵기로 구분하지 않는다 — 굵기는 활성 표시 전용. */
 .section-nav__link--group { letter-spacing: .01em; }
 
-/* [사용자 요청] 스크롤 중 활성 섹션이 바뀔 때마다 그룹이 접혔다 펼쳐지면
-   레일 높이가 출렁여 "움찔"거린다 — 펼침은 호버(및 키보드 포커스)와
-   자동펼침(--expanded)만 좌우하고, 활성 그룹은 레이아웃을 건드리지 않는
-   강조로만 표시한다. */
+/* 지금 보고 있는 섹션이 속한 제조사는 헤더를 또렷하게 — 다이얼로 축소된
+   먼 항목들 사이에서 "어느 브랜드 안에 있는지"를 한눈에 준다. */
+.section-nav__group--active > .section-nav__link--group { color: var(--text); }
+
+/* [사용자 요청] 브랜드 단위 접기 — 앱이 자동으로 접었다 폈다 하는 방식은
+   빼기로 했고(별로였음), 대신 사용자가 직접 접을 수 있는 버튼을 둔다.
+   기본은 펼침이고, 접어 둔 상태는 필터/정렬/탭 전환으로 레일이 다시 만들어져도
+   유지된다(section-nav.js collapsedBrands). */
+.section-nav__group-head { display: flex; align-items: center; }
+.section-nav__group-head .section-nav__link--group { flex: 1; min-width: 0; }
+
+.section-nav__fold {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 20px; height: 20px;
+  margin-right: 4px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  opacity: 0;                    /* 평소엔 숨기고 그룹에 마우스가 오면 드러낸다 */
+  transition: opacity .15s, color .15s, background-color .15s;
+}
+.section-nav__group:hover .section-nav__fold,
+.section-nav__fold:focus-visible,
+/* 접어 둔 그룹은 다시 펼 수단이 보여야 하므로 항상 노출한다. */
+.section-nav__group--collapsed .section-nav__fold { opacity: 1; }
+.section-nav__fold:hover { color: var(--accent); background: var(--panel-3); }
+.section-nav__fold svg { transition: transform .2s ease; }
+.section-nav__group--collapsed .section-nav__fold svg { transform: rotate(-90deg); }
+
 .section-nav__sub-wrap {
   display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows .22s ease;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows .24s ease;
 }
-.section-nav__group:hover .section-nav__sub-wrap,
-.section-nav__group:focus-within .section-nav__sub-wrap,
-.section-nav--expanded .section-nav__sub-wrap { grid-template-rows: 1fr; }
+.section-nav__group--collapsed .section-nav__sub-wrap { grid-template-rows: 0fr; }
 
-/* 측정 중에는 애니메이션을 꺼 중간 높이가 잡히지 않게 한다(applyAutoExpand). */
-.section-nav--measuring .section-nav__sub-wrap { transition: none; }
-
-/* 접혀 있을 때만 상위 제조사에 위치 힌트를 남긴다 — 펼쳐져 있으면 활성
-   항목 자체가 보이므로 상위까지 강조하면 "정확한 위치"가 흐려진다.
-   굵기는 쓰지 않고 좌측 선만(활성 항목과 구분되게 옅게). */
-.section-nav__group--active > .section-nav__link--group {
-  border-left-color: color-mix(in srgb, var(--accent) 45%, transparent);
-}
-.section-nav--expanded .section-nav__group--active > .section-nav__link--group,
-.section-nav__group--active:hover > .section-nav__link--group,
-.section-nav__group--active:focus-within > .section-nav__link--group {
-  border-left-color: transparent;
-}
+/* 접힌 그룹이 지금 보고 있는 브랜드일 때의 위치 표시는 따로 그리지 않는다 —
+   표시 막대(.section-nav__marker)가 그 그룹의 헤더로 옮겨 붙는다
+   (section-nav.js markerAnchor). 여기서 좌측선까지 켜면 표시가 둘이 된다. */
 
 .section-nav__sub {
-  overflow: hidden;
+  overflow: hidden;   /* 0fr 로 접힐 때 내용이 삐져나오지 않게 */
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.section-nav__link--sub {
+/* 다이얼 본체 — 거리(--d)에 비례해 글자·여백·불투명도를 함께 줄인다.
+   셋을 같이 줄여야 "멀어질수록 물러난다"는 인상이 생기고, 행 높이까지
+   줄어들어 전체 목록이 짧게 유지된다.
+   [사용자 요청 — 3차 조정, 현재] 기울기를 크게 낮췄다. 한때 거리 4 에서
+   8.3px 까지 떨어뜨렸다가(너무 작음) 11px 로 올렸는데, 그래도 목록이 스크롤에
+   따라 출렁여 읽기를 방해했다 — "기능이 있다는 정도"로만 남기고 사용감은
+   건드리지 않는 게 목표다.
+   글자 1.5px, 불투명도 0.28 폭 안에서만 움직인다: 13 / 12.6 / 12.2 / 11.8 /
+   11.5 px. 위치는 여전히 활성 표시(굵기·accent 좌측선)가 확실히 알려주고,
+   다이얼은 그 주변을 부드럽게 감싸는 미적 장치로만 둔다. */
+.section-nav__link--sub { padding-left: 24px; }
+
+.section-nav__link--dial {
+  --d: 4;
+  /* 행 높이를 고정한다(세로 여백 + px 단위 line-height) — 다이얼이 세로 여백이나
+     line-height 까지 건드리면 초점이 흐르는 내내 각 줄의 높이가 변해 목록 전체가
+     위아래로 출렁이고, 그 위를 달리는 표시 막대도 같이 흔들린다. 크기 변화는
+     글자와 불투명도로만 낸다. */
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 24px;
-  font-size: 12px;
+  line-height: 17px;
+  font-size: max(11.5px, calc(13px - var(--d) * .4px));
+  opacity: max(.72, calc(1 - var(--d) * .07));
+  /* 글자·불투명도에는 트랜지션을 걸지 않는다 — JS 가 매 프레임 소수 --d 를
+     직접 넣으므로, 트랜지션이 겹치면 한 박자 늦게 뭉개져 따라온다. */
+  transition: color .18s, border-color .18s;
+}
+
+/* 초점(거리 0)이 곧 활성 항목일 때는 위 --active 규칙(굵기·accent 좌측선)이
+   함께 걸려 "지금 여기"가 크기 말고도 드러난다. 마우스로 초점을 옮긴 경우는
+   :hover 색상 변화가 그 역할을 한다. */
+
+/* [사용자 요청] 모션 토글을 끄면 다이얼을 아예 재우고 균일한 목록으로 둔다.
+   base.css 의 전역 규칙이 transition 을 이미 죽이지만, 그것만으로는 오히려
+   더 나쁘다 — 부드럽게 변하던 크기가 스크롤·호버마다 즉시 튀어 버린다.
+   모션에 민감한 사용자에게는 글자 크기가 계속 요동치는 것 자체가 문제이므로
+   거리 계산 결과(--d)를 무시하고 전부 같은 크기로 고정한다. 값은 다이얼
+   범위(13~11.5px / 6~4px)의 중간이라 목록 전체 높이가 켜져 있을 때와 거의
+   같게 유지된다.
+   활성 표시(굵기·accent 좌측선)는 움직임이 아니라 정적 상태라 그대로 둔다. */
+body.reduce-motion .section-nav__link--dial {
+  font-size: 12.3px;
+  opacity: 1;
 }

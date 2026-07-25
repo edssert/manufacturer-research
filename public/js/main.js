@@ -23,6 +23,7 @@ import { initTheme } from "./ui/theme.js";
 import { initMediaToggle } from "./ui/media-toggle.js";
 import { initMotionToggle } from "./ui/motion-toggle.js";
 import { initStickyHeader } from "./ui/sticky-header.js";
+import { initWheelBoost } from "./ui/wheel-boost.js";
 import { $ } from "./core/dom.js";
 
 import { initSpeakersDomain } from "./domains/speakers/speakers.controller.js";
@@ -122,3 +123,8 @@ if (subtitleEl) subtitleEl.textContent = getBrandNames().join(" · ");
 // [사용자 요청] topnav(도메인 탭) 상단 고정 — 실제 렌더링된 높이를 측정해
 // controls(검색/필터 바)가 그 바로 아래 이어 붙도록 한다.
 initStickyHeader($("#topnav"));
+
+// [사용자 요청] 마우스 휠 한 칸당 이동 거리를 늘린다(브라우저 기본이 답답하다는
+// 지적). 트랙패드·모달 등 손대면 안 되는 경우는 모듈이 알아서 비켜간다 —
+// 되돌리려면 이 줄만 지우면 된다.
+initWheelBoost();

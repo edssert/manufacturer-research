@@ -12,15 +12,25 @@
    아래(40)로 둬 쌓임 순서를 유지. */
 .controls {
   position: sticky;
-  top: var(--topnav-h, 45px);
+  /* topbar + topnav 두 고정 바 아래에 이어 붙는다(둘 다 sticky-header.js 실측). */
+  top: calc(var(--topbar-h, 41px) + var(--topnav-h, 41px));
   z-index: 40;
   background: rgba(var(--bg-rgb), .9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
-.controls__inner { max-width: 1320px; margin: 0 auto; padding: 14px 24px; }
-.controls__row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-.controls__tools { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+/* [사용자 요청 — 밀도/높이 통일] 세로 여백 대신 --bar-h 로 높이를 잡는다 —
+   최상단 로고 바·탭 바와 같은 높이(40px)가 되고, 그 안에서 컨트롤(30px)이
+   가운데 정렬돼 위아래 여백이 5px 씩만 남는다. */
+.controls__inner { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
+.controls__row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: var(--bar-inner-h);
+}
+.controls__tools { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 
 /* ---------- 블록: search-box (검색 입력) ----------
    [사용자 요청] 한때 정렬/필터초기화/필터 버튼과 같은 줄에서 폭을 나눠
@@ -30,20 +40,24 @@
 .search-box { position: relative; flex: 1; min-width: 220px; }
 .search-box__icon {
   position: absolute;
-  left: 13px; top: 50%;
+  left: 11px; top: 50%;
   transform: translateY(-50%);
   color: var(--muted);
   pointer-events: none;
 }
+/* [사용자 요청 — 밀도] 세로 패딩 11px + 14px 글자로 47px 짜리 큰 입력이었다 —
+   높이는 --control-h 로 고정하고 좌우 패딩만 준다. 글자도 컨트롤 스케일
+   (--fs-md 13px)로 내려 정렬 셀렉트·버튼과 같은 급으로 맞췄다. */
 .search-box__input {
   width: 100%;
+  height: var(--control-h);
   background: var(--panel);
   border: 1px solid var(--line-2);
   color: var(--ink);
-  border-radius: 10px;
-  padding: 11px 14px 11px 40px;
+  border-radius: 8px;
+  padding: 0 12px 0 34px;
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: var(--fs-md);
   font-weight: 500;
   outline: none;
   transition: border-color .15s, box-shadow .15s;
@@ -56,8 +70,9 @@
   background: var(--panel);
   border: 1px solid var(--line-2);
   color: var(--ink-2);
-  border-radius: 9px;
-  padding: 10px 32px 10px 12px;
+  border-radius: 8px;
+  height: var(--control-h);
+  padding: 0 30px 0 11px;
   font-family: var(--sans);
   font-size: var(--fs-sm);
   font-weight: 500;
@@ -75,19 +90,24 @@
   background: transparent;
   border: 1px solid var(--line-2);
   color: var(--muted);
-  border-radius: 9px;
-  padding: 10px 13px;
+  border-radius: 8px;
+  /* 검색 입력·정렬 셀렉트와 같은 높이(--control-h) — 좌우 패딩만 준다. */
+  height: var(--control-h);
+  padding: 0 12px;
   font-size: var(--fs-sm);
   font-weight: 500;
   cursor: pointer;
   transition: .15s;
   font-family: var(--sans);
   white-space: nowrap; /* [레이아웃 안정성] 버튼 라벨 개행 방지 */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 .btn:hover { border-color: var(--accent-line); color: var(--accent); }
 
-/* 변경자: 필터 접기/펼치기 토글 (화살표 아이콘 회전) */
-.btn--toggle { display: inline-flex; align-items: center; gap: 6px; }
+/* 변경자: 필터 접기/펼치기 토글 (화살표 아이콘 회전)
+   inline-flex/정렬/gap 은 .btn 공통으로 올라가 여기서는 아이콘 회전만 남는다. */
 .btn--toggle svg { transition: transform .18s; }
 .btn--toggle[aria-expanded="false"] svg { transform: rotate(-90deg); }
 
@@ -97,23 +117,49 @@
   border-color: var(--accent);
   color: var(--accent-ink);
   font-weight: 700;
-  padding: 9px 16px;
+  /* 높이는 .btn 공통(--control-h) — 좌우만 조금 넉넉하게. */
+  padding: 0 16px;
   border-radius: 8px;
 }
 .btn--primary:hover { color: var(--accent-ink); filter: brightness(1.06); }
 
-/* ---------- 블록: filter-panel (칩/슬라이더 필터 패널) ---------- */
+/* ---------- 블록: filter-panel (칩/슬라이더 필터 패널) ----------
+   [사용자 요청] 예전에는 컨트롤 바 안에 그대로 끼어 있어서, 필터를 열면 아래
+   카드가 통째로 밀려 내려갔다 — 열고 닫을 때마다 보던 카드 위치가 흔들린다.
+   컨트롤 바(sticky, 위치 지정 요소)에 absolute 로 매달아 카드 "위에" 반투명
+   오버레이로 덮게 바꿨다. 레이아웃을 차지하지 않으므로 카드는 그대로 있고,
+   기존 max-height 트랜지션을 그대로 써서 내려오는 느낌은 유지한다.
+   좌우 패딩은 controls__inner 와 같은 기준선(최대 1320px + 24px)에 맞춘다 —
+   패널 배경은 바처럼 화면 끝까지 가되 내용은 본문과 정렬된다. */
 .filter-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   gap: 9px;
   overflow: hidden;
   max-height: 600px;
-  transition: max-height .22s ease, opacity .18s ease, margin-top .18s ease;
+  padding: 12px max(24px, calc((100% - 1320px) / 2 + 24px));
+  background: rgba(var(--bg-rgb), .93);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 12px 24px -12px rgba(0, 0, 0, .45);
+  transition: max-height .22s ease, opacity .18s ease, padding .22s ease;
   opacity: 1;
-  margin-top: 12px;
 }
-.filter-panel--collapsed { max-height: 0; opacity: 0; margin-top: 0; }
+/* 접혔을 때는 세로 패딩까지 0 으로 접어야 그림자/경계선이 바 밑에 남지 않고,
+   pointer-events 를 꺼야 보이지 않는 패널이 카드 클릭을 가로채지 않는다. */
+.filter-panel--collapsed {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom-color: transparent;
+  box-shadow: none;
+  pointer-events: none;
+}
 .filter-panel__row { display: flex; align-items: center; gap: 10px; min-height: 34px; }
 .filter-panel__label {
   flex: none;
