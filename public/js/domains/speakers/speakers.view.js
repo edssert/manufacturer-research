@@ -608,12 +608,9 @@ function tightenConfigText(text) {
   return String(text).replace(/ \+ /g, "​+​").replace(/ \(/g, "​(");
 }
 
-// 참고 사항의 "출처: xxx.pdf pNN" 표기를 실제 원본 PDF로
-// 바로 이동하는 링크로 바꾼다 — 단, 원본 PDF 파일이 실제로 저장소에
-// 보관된 제품만(대부분 "역재구성본"이라 원본이 없음). 현재는 K1만
-// 해당(K1_OM_EN.pdf, preset_guide_EN.pdf 원본 보관 확인됨). 다른 제품이
-// 추가되면 이 맵에 { speakerId: { "파일명.pdf": "상대경로" } } 을 추가하면
-// 된다.
+// "출처: xxx.pdf pNN" 표기를 원본 PDF 링크로 바꾼다.
+// **원본 PDF 가 실제로 저장소에 보관된 제품만 여기 등록한다** — 스펙 대부분은
+// 역재구성본이라 원본 파일이 없고, 없는 경로로 링크를 걸면 깨진 링크가 된다.
 const PDF_SOURCE_LINKS = {
   "spk-la-k1": {
     "K1_OM_EN.pdf": "raw-data/raw-specs/la/speakers/k-series/k1/K1_OM_EN.pdf",
@@ -644,8 +641,10 @@ function linkifySource(source, speakerId) {
 
 /**
  * "Preset Guide" 섹션 — 제조사 프리셋 설계 가이드 원문에서 정리한 구성별
- * 프리셋/음향 특성 표 + 보충 노트. d.presets 가 없으면 섹션째 생략(현재 K1만
- * 데이터 있음). 원문: raw-data/raw-specs/<mk>/references/presets/...
+ * 프리셋/음향 특성 표 + 보충 노트. d.presets 가 없으면 섹션째 생략된다.
+ * 현재 이 데이터는 L-Acoustics 제품에만 있다(d&b·Meyer 는 presets: null) —
+ * 원문 자체가 제조사별로 있고 없고가 갈린다.
+ * 원문: raw-data/raw-specs/<mk>/references/presets/...
  * @param {Object} d 스피커 레코드
  * @returns {string} 섹션 마크업 (없으면 "")
  */
