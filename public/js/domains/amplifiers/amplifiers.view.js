@@ -34,27 +34,24 @@ export function setRackWattRange(lo, hi) { WATT_RANGE_RACK.lo = lo; WATT_RANGE_R
 
 /**
  * 와트 값 → 게이지 채움 비율(%) (최소 4% 보장으로 항상 보이게).
- * 처음엔 min-max 상대비교(최저~최고 구간을 0~100%로 매핑)
- * 였는데, LA2Xi(2560W)처럼 그룹 내 최저값에 가까운 앰프는 실제로는 결코
- * 작지 않은 출력인데도 게이지가 거의 안 찬 것처럼 보였다 — Rack 그룹에서
- * 먼저 적용한 것과 동일하게, 0 을 기준선으로 한 절대비교(v/hi)로 통일해
- * 값의 실제 크기(비율)가 그대로 드러나게 한다. hi 는 여전히 그룹별 최고
- * 총 와트(setWattRange/setRackWattRange, 데이터 갱신 시 자동 재계산)를 쓰므로
- * 새 앰프가 추가돼도 스케일이 알아서 맞춰진다.
+ *
+ * **min-max 상대비교가 아니라 0 기준 절대비교(v/hi)다.** 최저~최고를 0~100%
+ * 로 매핑하면 LA2Xi(2560W)처럼 그룹 내 최저값에 가까운 앰프가 결코 작지 않은
+ * 출력인데도 게이지가 텅 빈 것처럼 보인다. hi 는 그룹별 최고 총 와트라 새
+ * 앰프가 추가되면 스케일이 자동으로 맞춰진다.
  */
 const wattPctFrom0 = (v, range) => Math.max(4, Math.min(100, (v / (range.hi || 1)) * 100));
 const wattPct = v => wattPctFrom0(v, WATT_RANGE);
 const rackWattPct = v => wattPctFrom0(v, WATT_RANGE_RACK);
 
 /**
- * "N x W" 형식의 채널당 정격 문자열(예: "16 x 160 W", "4 x 1000 W")에서
- * 4Ω 기준 총 와트를 얻는다. output.power4ohms 를 우선 쓰고, 없으면
- * powerByOhm 배열에서 "4 Ω" 항목을 찾아 대신 쓴다.
- * [주의] 이 값은 제조사 스펙시트의 "채널당 정격 × 채널 수" 단순 곱셈이라,
- * 파워서플라이 정격 등에 따라 실제로 모든 채널을 동시에 그 값으로 구동
- * 가능한지는 보장하지 않는다 — 카드/게이지 모두 참고용 비교 지표로만
- * 쓴다는 전제. (검증된 공식 Total 값이 별도로 있는 앰프가 확인되면
- * output.powerTotal 을 우선 쓰도록 재조정할 것.)
+ * "N x W" 형식의 채널당 정격("16 x 160 W")에서 4Ω 기준 총 와트를 얻는다.
+ * output.power4ohms 우선, 없으면 powerByOhm 의 "4 Ω" 항목.
+ *
+ * **주의: 단순 곱셈(채널당 정격 × 채널 수)이라 실제로 모든 채널을 동시에 그
+ * 값으로 구동 가능한지는 보장하지 않는다**(파워서플라이 정격 등). 카드·게이지
+ * 모두 참고용 비교 지표라는 전제. 검증된 공식 Total 값을 가진 앰프가 확인되면
+ * output.powerTotal 을 우선하도록 바꿀 것.
  * @param {Object} a 앰프 레코드
  * @returns {number|null} 4Ω 기준 채널당×채널수 총 와트
  */
@@ -64,11 +61,9 @@ export function totalWatt4Ohm(a) {
     const m = String(raw).match(/(\d+(?:\.\d+)?)\s*x\s*(\d+(?:\.\d+)?)/i);
     if (m) return parseFloat(m[1]) * parseFloat(m[2]);
   }
-  // LA-RAK III/LA-RAK II AVB 처럼 채널당 4Ω 정격 자체가 없고
-  // powerTotal 원문이 이미 총합("Up to 62,400 W at 8 ohms")으로만 주어지는
-  // 앰프는 위 계산이 불가능해 와트 바가 "—"로 비어 있었다 — powerTotal 의
-  // 총 와트 숫자를 대신 읽어 게이지에 쓴다(기준 임피던스는 카드 Output
-  // 칸의 배지로 이미 표시되므로, 게이지는 임피던스 무관 총량 참고 지표).
+  // LA-RAK 계열은 채널당 정격이 없고 powerTotal 이 총합("Up to 62,400 W at 8
+  // ohms")으로만 주어져 위 계산이 안 된다 — 그 숫자를 대신 쓴다. 기준
+  // 임피던스는 카드 Output 배지가 표시하므로 게이지는 총량 참고 지표로 둔다.
   const total = a.output && a.output.powerTotal;
   if (total) {
     const m = String(total).replace(/,/g, "").match(/(\d+(?:\.\d+)?)\s*W/i);
@@ -95,10 +90,9 @@ function output4OhmRaw(a) {
 }
 
 /**
- * 카드 Output 칸에 표시할 "4Ω 기준" 채널당 스펙 표기를 만든다. output.
- * powerTotal(예: LA12X "4 x 3300 W(2.7Ω)")은 앰프마다 표기 임피던스가
- * 2.7Ω/4Ω/8Ω 등으로 제각각이라 카드에서 서로 비교하기 어려웠다 — 항상
- * 4Ω 값(output4OhmRaw)으로 통일해 "N x W(4Ω)" 형식으로 반환한다.
+ * 카드 Output 칸의 "4Ω 기준" 채널당 스펙 표기.
+ * powerTotal 은 앰프마다 표기 임피던스가 2.7Ω/4Ω/8Ω 로 제각각이라 카드에서
+ * 비교가 안 된다 — 항상 4Ω 값으로 통일한다.
  * @param {Object} a 앰프 레코드
  * @returns {string|null} 예: "4 x 3300 W(4Ω)" — 4Ω 데이터가 없으면 null
  */
@@ -108,12 +102,9 @@ function output4OhmLabel(a) {
 }
 
 /**
- * output4OhmLabel/powerTotal 문자열을 {value, impedance} 로 분리한다.
- * "16 x 1100 W(4Ω)" → {value:"16 x 1100 W", impedance:"4Ω"}.
- * LA-RAK III 처럼 4Ω/8Ω 채널당 데이터가 없어 powerTotal
- * 원문("Up to 62,400 W at 8 ohms")으로 폴백하는 경우, 괄호 형식이 아니라
- * "at N ohms" 형식이라 기존 정규식이 임피던스를 못 잡았다 — 이 형식도
- * 함께 파싱해 "62,400 W" + "8Ω" 배지로 동일하게 분리한다.
+ * 출력 문자열을 {value, impedance} 로 분리한다.
+ * 두 형식을 모두 파싱한다 — 괄호형("16 x 1100 W(4Ω)")과, powerTotal 로 폴백할
+ * 때 나오는 "at N ohms" 형("Up to 62,400 W at 8 ohms").
  * @param {Object} a 앰프 레코드
  * @returns {{value:string, impedance:string|null}}
  */
@@ -123,25 +114,17 @@ function outputParts(a) {
   const paren = String(label).match(/^(.*?)\(([^)]+)\)\s*$/);
   if (paren) return { value: paren[1], impedance: paren[2] };
   const atOhms = String(label).match(/^(?:up to\s+)?(.*?)\s+at\s+([\d.]+)\s*ohms?\s*$/i);
-  // "Up to " 접두사는 다른 앰프들도 이미 최고치 기준으로만
-  // 값을 표기하고 있어(예: LA12X "4 x 3300 W") 중복이므로 카드에서 생략.
+  // "Up to " 접두사는 생략 — 다른 앰프도 이미 최고치 기준 표기라 중복이다.
   if (atOhms) return { value: atOhms[1], impedance: `${atOhms[2]}Ω` };
   return { value: label, impedance: null };
 }
 
-// getViews()는 speakers.view.js 와 동일한 로직이라
-// js/core/dom.js 공통 유틸로 추출됨 — 위 import 참고. views 도 img 도 없으면
-// 빈 배열(카드에 ⚡ 아이콘 표시, 모달엔 미디어 영역 자체가 생략됨).
-
 /**
- * 이름 옆에 나란히 보여줄 Connectivity 태그 목록 HTML — 스피커
- * 카드(speakers.view.js titleTagsHTML)와 동일한 위치·역할. 스피커 카드는
- * name-row(이름+태그) 아래 config(로우드라이버 배지)·spl-meter 까지 있어
- * 세로 구성이 4단이었는데, 앰프 카드는 eyebrow+name+stats 3단뿐이라 카드
- * 높이가 서로 달랐다 — 이 태그 줄을 추가해 세로 리듬을 맞춘다(사용자 요청).
- * Type("Amplified Controller" 등)은 eyebrow 옆에 넣지 않은 이유와 별개로
- * 카드에서는 제외 — 이름이 이미 타입을 암시하고(예: LA1.16i) 태그 줄이
- * 길어지는 걸 사용자가 원치 않아 Connectivity 만 남김.
+ * 이름 옆 Connectivity 태그 — 스피커 카드의 titleTagsHTML 과 같은 자리·역할.
+ * 스피커 카드가 4단(이름+태그 / 로우 배지 / SPL 게이지 / stats)인데 앰프는
+ * 3단뿐이라 카드 높이가 어긋났고, 이 줄이 그 리듬을 맞춘다.
+ * Type 은 카드에서 제외한다 — 이름이 이미 타입을 암시하고(LA1.16i) 태그 줄만
+ * 길어진다.
  * @param {Object} a 앰프 레코드
  * @param {string} wrapClass 감싸는 div 클래스
  * @param {string} tagClass 태그 span 클래스
@@ -154,11 +137,10 @@ function ampTagsHTML(a, wrapClass, tagClass) {
 }
 
 /**
- * 카드 전용 축약 모델명. "LA-RAK II AVB"가 태그 3개와 함께
- * 좁은 카드 폭에서 심하게 말줄임돼("LA-RAK II A...") 알아보기 어려웠다 —
- * 실제 데이터(a.model)는 그대로 두고 카드 표시에서만 " AVB" 접미사를
- * 생략한다(연결 프로토콜은 이름 옆 태그에 이미 "Milan-AVB"로 나와 있어
- * 정보 손실 없음). 모달 제목 등 다른 곳은 영향받지 않음.
+ * 카드 전용 축약 모델명 — " AVB" 접미사를 뗀다.
+ * "LA-RAK II AVB"는 태그 3개와 함께 좁은 카드에서 "LA-RAK II A..." 로 잘린다.
+ * 프로토콜은 이름 옆 태그에 "Milan-AVB"로 이미 있어 정보 손실이 없다.
+ * a.model 원본과 모달 제목은 영향받지 않는다.
  * @param {string} model 앰프 model 값
  * @returns {string}
  */
@@ -167,12 +149,9 @@ function cardModelLabel(model) {
 }
 
 /**
- * 카드 전용 축약 Architecture 값. "4 x 4 with bridge modes"
- * (부가 설명), "3 x LA7.16 (48 channels of amplification)"(괄호 부연) 처럼
- * 핵심 수치 뒤에 설명이 붙으면 좁은 stat-grid 칸에서 잘린다 — 핵심
- * 수치("4 x 4", "3 x LA7.16")는 그대로 두고 이 부가 설명만 카드에서
- * 생략한다(모달 상세 스펙 표는 원본 a.architecture 값을 그대로 사용해
- * 정보 손실 없음).
+ * 카드 전용 축약 Architecture — 핵심 수치("4 x 4") 뒤의 부가 설명을 뗀다.
+ * "with bridge modes"·"(48 channels of amplification)" 이 붙으면 좁은
+ * stat-grid 칸에서 잘린다. 모달 표는 원본을 그대로 쓴다.
  * @param {string} architecture a.architecture 값
  * @returns {string}
  */
@@ -183,15 +162,14 @@ function cardArchitectureLabel(architecture) {
 }
 
 /**
- * 앰프 카드 1장의 HTML 을 생성한다.
- * [정보 우선순위] speakers.view.js cardHTML 과 동일한 원칙 — "이 앰프로
- * 무엇을 할 수 있는가"(실사용 스펙)를 최우선으로 보여준다. "몇 개 스피커와
- * 호환되는가"(Speakers 개수)는 매칭 정보가 갱신될 때마다 바뀌는 부가 지표라
- * 카드 첫 화면보다는 모달 상세에 더 어울린다 — 대신 이 앰프 자체의 스펙인
- * 채널 수(Channels)를 카드에 노출한다.
- * configs(스피커 매칭 설정)가 비어 있는 앰프(예: 신규 등록되어 아직 매칭
- * 정보가 없는 LA1.16i)는 Max Total/Modes 대신 usage/type 같은 일반 스펙을
- * 보여줘 카드가 빈 값으로 허전해 보이지 않게 한다.
+ * 앰프 카드 1장.
+ *
+ * 정보 우선순위는 "이 앰프로 무엇을 할 수 있는가"(실사용 스펙) — 스피커 카드와
+ * 같은 원칙이다. "몇 개 스피커와 호환되는가"는 매칭 데이터가 갱신될 때마다
+ * 바뀌는 부가 지표라 카드가 아니라 모달에 둔다. 대신 앰프 자체 스펙인 채널
+ * 수를 노출한다.
+ * configs 가 빈 앰프(매칭 미입력)는 Max Total/Modes 대신 일반 스펙을 보여줘
+ * 카드가 빈 값으로 남지 않게 한다.
  * @param {Object} a 앰프 레코드
  * @returns {string} .card 마크업
  */
@@ -200,15 +178,10 @@ export function cardHTML(a) {
   const hasConfigs = a.configs && a.configs.length;
   const maxTotal = hasConfigs ? a.configs.reduce((m, c) => (c.total != null && c.total > m ? c.total : m), 0) : 0;
   const modes = hasConfigs ? [...new Set(a.configs.map(c => c.mode).filter(Boolean))] : [];
-  // Usage 칸은 "Installation only" 처럼 긴 값이 stat-grid
-  // (1.5fr 열)에서 말줄임(...)으로 잘리는 문제가 있었고, Usage 정보 자체가
-  // Type 태그(모달 General 섹션)로도 확인 가능해 카드에서는 Architecture
-  // (예: "4 x 4")로 교체 — configs 없는 앰프(LA12X/LA4X/LA7.16 등)의 카드
-  // 요약을 Architecture/Output 2칸으로 구성. Channels 는 Architecture
-  // 값("4 x 4"의 앞 숫자 = 입력 채널 수)에 이미 담긴 정보라 중복이므로
-  // 제거(CLAUDE.md "중복 정보 생략" 원칙).
-  // 카드 강조 값(Max Total / Architecture)을 전역 accent
-  // (앰버) 대신 제조사 색(--mfr)으로 — speakers 탭과 동일한 원칙.
+  // configs 없는 앰프의 요약은 Architecture/Output 2칸이다. Usage 는 값이 길어
+  // 말줄임되고 모달 Type 태그로도 확인되므로 뺐고, Channels 는 Architecture
+  // 앞 숫자에 이미 담겨 중복이라 뺐다.
+  // 강조 값은 전역 accent 가 아니라 제조사 색(--mfr) — speakers 탭과 같은 원칙.
   const statsBlock = hasConfigs
     ? `<div class="stat-grid">
           <div class="stat-grid__cell"><span class="stat-grid__key">Max Total</span><span class="stat-grid__value stat-grid__value--mfr">${maxTotal || "—"}</span></div>
@@ -222,16 +195,11 @@ export function cardHTML(a) {
           <div class="stat-grid__cell"><span class="stat-grid__key">Output${out.impedance ? `<span class="stat-grid__key-badge">${esc(out.impedance)}</span>` : ""}</span><span class="stat-grid__value">${esc(out.value)}</span></div>
         </div>`;
       })();
-  // 1U 랩마운트 앰프는 실물 비율이 매우 가로로 긴 편(예: LA1.16i 약
-  // 10.6:1)이라 card__media 의 기본 max-width 80% 제약을 그대로 쓰면
-  // max-height(106px)보다 max-width 쪽이 먼저 걸려 실제 렌더 높이가
-  // 지나치게 얇아진다(세로 여백만 다른 카드와 맞으면 되고, 가로는 최대한
-  // 채워도 된다는 요청 반영) — card__img--wide 변경자로 이 카드에서만
-  // max-width 를 넓혀(94%) 세로 크기(다른 카드와 통일된 리듬)는 유지한
-  // 채 가로로 최대한 크게 보이게 한다.
-  // [Front/Rear 호버 전환] views 가 2개 이상이면 speakers.view.js 와 동일한
-  // 패턴으로 Front/Rear 두 장을 함께 렌더링한다 — 평소엔 Front, 카드에
-  // 마우스를 올리면 Rear 로 크로스페이드(card.css 의 --front/--back 규칙).
+  // 1U 랙마운트 앰프는 실물이 매우 가로로 길어(LA1.16i 약 10.6:1) 기본
+  // max-width 80% 를 쓰면 max-height 보다 폭 제약이 먼저 걸려 렌더 높이가
+  // 지나치게 얇아진다 — card__img--wide 로 폭만 94% 로 넓혀 세로 리듬은
+  // 다른 카드와 맞춘 채 가로로 크게 보이게 한다.
+  // 뷰가 2개 이상이면 스피커 카드와 같은 호버 크로스페이드.
   const views = getViews(a);
   const media = views.length
     ? (views.length > 1
@@ -239,18 +207,14 @@ export function cardHTML(a) {
         : `<img class="card__img card__img--wide" loading="lazy" src="${views[0].src}" alt="${esc(a.model)}">`)
     : `<div class="card__noimg">⚡</div>`;
   const nameTags = ampTagsHTML(a, "card__name-tags", "card__name-tag");
-  // 스피커 탭의 SPL 바(spl-meter)와 동일한 시각 언어로, 4Ω
-  // 기준 Total Watt 값을 게이지로 보여준다. 값이 없는 앰프(파싱 실패 등)는
-  // 스피커 카드가 "spl == null" 일 때와 동일하게 게이지를 0%로, 값 자리에
-  // "—"만 표시(레이아웃은 유지, 값만 비움).
-  // configs 없는 앰프(hasConfigs=false)는 아래 stat-grid
-  // Output 칸에 임피던스 배지가 이미 있어 "@4Ω"가 중복 정보다 — 이 경우만
-  // 생략. Output 칸 자체가 없는 hasConfigs 앰프(D90 등)는 와트 미터가
-  // 유일한 임피던스 표시라 유지(CLAUDE.md "중복 정보 생략" 원칙).
-  // Rack 앰프(LA-RAK III/II AVB)는 8Ω/2.7Ω 기준 총량이라
-  // 일반 앰프의 4Ω 기준 값과 절대치가 섞여 있으면 비교가 왜곡된다 — 별도
-  // 스케일(rackWattPct/WATT_RANGE_RACK)을 쓰고, spl-meter--rack 변경자로
-  // 바 색상도 다르게(card.css) 해서 "이건 다른 기준"임을 시각적으로 구분.
+  // 스피커 탭의 SPL 바와 같은 시각 언어로 4Ω 기준 Total Watt 게이지를 그린다.
+  // 값이 없으면 게이지 0% + "—"(레이아웃은 유지).
+  // "@4Ω" 표기는 hasConfigs 일 때만 — configs 없는 앰프는 아래 Output 칸에
+  // 임피던스 배지가 이미 있어 중복이고, Output 칸이 없는 앰프(D90)는 이 미터가
+  // 유일한 임피던스 표시라 필요하다.
+  // Rack 앰프는 8Ω/2.7Ω 기준 총량이라 4Ω 기준값과 섞이면 비교가 왜곡된다 —
+  // 별도 스케일(WATT_RANGE_RACK)을 쓰고 --rack 변경자로 바 색도 달리해 "다른
+  // 기준"임을 드러낸다.
   const isRack = a.type === "Rack";
   const watt4 = totalWatt4Ohm(a);
   const wattPercent = watt4 == null ? 0 : (isRack ? rackWattPct(watt4) : wattPct(watt4));
@@ -270,14 +234,11 @@ export function cardHTML(a) {
 }
 
 /**
- * 사양 표 행 1개 HTML. d&b(D90)와 L-Acoustics 앰프가 서로
- * 다른 필드를 채워둔 상태라, 값이 없으면 행 자체를 생략하던 이전 방식으로는
- * 브랜드마다 모달 섹션 구성(어떤 행이 보이는지)이 달라 보였다 — 이제 값이
- * 없어도 행 자체는 항상 렌더링하고 값 자리에 "—"만 넣어, 두 브랜드의 모달
- * 양식(섹션·행 구성)이 데이터 유무와 무관하게 항상 동일하게 보이도록 한다.
- * (detailSection 은 "rows 가 전부 빈 문자열일 때만 섹션 생략"이므로, 이제
- * 행이 항상 채워지는 이상 필드가 하나도 없는 극단적 경우가 아니면 섹션도
- * 항상 나타난다.)
+ * 사양 표 행 1개.
+ *
+ * **값이 없어도 행을 생략하지 않고 "—" 를 넣는다** — 스피커 쪽 specRow 와
+ * 반대다. d&b 와 L-Acoustics 가 서로 다른 필드를 채워둬서, 생략하면 브랜드마다
+ * 모달의 행 구성이 달라 보인다. 양식을 데이터 유무와 무관하게 고정한다.
  * @param {string} label 항목명
  * @param {*} val 값 (없으면 "—" 로 표시)
  * @param {boolean} [full] true 면 2열 전체 폭 사용
@@ -300,23 +261,15 @@ function configsTableHTML(configs) {
 }
 
 /**
- * 앰프 설정 표를 스피커 기준으로 렌더링 — 왼쪽 열이 앰프 모델명이 아니라
- * "이 앰프로 어떤 스피커를 어떤 모드/프리셋으로 몇 대까지 구동해 몇 dB 를
- * 내는지"의 스피커 이름이 되는 버전. 스피커 모달의 Amplifier Matching 표
- * (ampMatchingHTML)와 동일한 6열(Speaker·Mode·Preset·Links/ch·Max/amp·
- * Max SPL) 구조를 그대로 재사용해 SPL 정보도 빠짐없이 보여준다. LA1.16i
- * 처럼 앰프 자체 configs 필드가 비어있어도 cross-ref.findAmpConfigsBySpeaker()
- * 가 스피커 쪽 매칭 데이터(splByPreset 포함)에서 역으로 구성해주므로 그대로
- * 쓴다.
+ * 설정 표를 스피커 기준으로 렌더링 — 왼쪽 열이 앰프 모델이 아니라 "이 앰프로
+ * 어떤 스피커를 어떤 모드/프리셋으로 몇 대까지 구동해 몇 dB 를 내는지"의 스피커
+ * 이름이다. 스피커 모달의 Amplifier Matching 과 같은 6열 구조를 재사용한다.
+ * 앰프 자체 configs 가 비어도 cross-ref 가 스피커 쪽 데이터에서 역으로 구성해
+ * 준다(LA1.16i).
  *
- * 스피커 1개당 모드×프리셋 조합이 여러 행 나올 수 있어(예: SE/BTL × 3개
- * 프리셋 = 6행) 스피커 이름이 여러 번 반복되어 표가 길고 복잡해 보이는
- * 문제를, 스피커별로 대표 행(Max/amp 가 가장 큰 설정) 1개만 기본 표시하고
- * 나머지 행은 별도의 펼치기 버튼(▸)으로 열리는 접기/펼치기 구조로
- * 해결한다(스피커 이름 반복 없이 요약 → 필요할 때만 모드/프리셋별 상세).
- * 클릭 영역을 명확히 분리: 스피커 이름(모델 셀)을 클릭하면 항상 Split
- * View 로 이동하고, 별도의 ▸ 토글 버튼을 클릭하면 나머지 설정 행이
- * 펼쳐진다 — 두 동작이 같은 셀에서 겹치지 않게 버튼을 분리된 요소로 둔다.
+ * 스피커 1개당 모드×프리셋 조합이 여러 행 나올 수 있어(SE/BTL × 프리셋 3 = 6행)
+ * 대표 행(Max/amp 최대) 1개만 표시하고 나머지는 ▸ 로 펼친다. 클릭 영역은 분리
+ * 한다 — 이름 셀은 pane2 이동, ▸ 버튼은 펼치기만.
  * @param {{speakerId:string, speakerName:string, mode:string, preset:string|null, perCh:number|null, total:number|null, spl:number|null}[]} rows
  * @returns {string}
  */
@@ -331,25 +284,16 @@ function configsBySpeakerTableHTML(rows) {
     bySid.get(r.speakerId).rows.push(r);
   });
 
-  // "K3"/"K3i"(i버전), "SB18"/"SB18 IIi"(리비전+i버전),
-  // "Soka"/"Soka inWall"(설치 변형), "A10 Focus"/"A10i Focus"(i가 모델
-  // 코드와 서픽스 사이 중간에 삽입되는 A시리즈 패턴), "SB10r"/"SB10i"
-  // (마지막 글자만 r↔i로 다른 패턴) 처럼 이름이 유사하고 설정 데이터
-  // (mode/preset/perCh/total/spl 조합 전체)가 완전히 동일하면 한 행으로
-  // 합쳐 "SB18(IIi)"/"A10(i) Focus"/"SB10(r/i)" 식으로 표기한다.
-  // [주의] r/i 페어는 실제로는 i버전에만 LA1.16i 매칭 항목이 추가로 있어
-  // amps 구성이 다른 경우가 많다 — 그래서 이름 패턴만 추가하고 병합
-  // 여부는 기존과 동일하게 rowsSignature 완전 일치 조건에 맡긴다(사용자
-  // 확인: "일단 완전 일치할때만 병합해줘"). 데이터가 다르면 자동으로
-  // 병합되지 않고 별개 행으로 남는다.
-  // 이름 유사성은 세 가지 패턴을 모두 잡는다:
-  //  1) 접두사 관계(startsWith) — 짧은 이름이 긴 이름의 앞부분과 일치
-  //     (SB18 → SB18 IIi, Soka → Soka inWall, K3 → K3i)
-  //  2) "i" 중간 삽입 관계 — 한쪽에서 "i" 문자 하나만 제거하면 다른 쪽과
-  //     완전히 같아짐 (A10 Focus → A10i Focus, 접두사 관계가 아님: "i"가
-  //     문자열 끝이 아니라 "A10"과 " Focus" 사이에 끼어 있기 때문)
-  //  3) 끝글자 r↔i 치환 관계 — 길이가 같고 마지막 한 글자만 "r"과 "i"로
-  //     다름 (SB10r ↔ SB10i, SB6r ↔ SB6i, X4r ↔ X4i)
+  // 이름이 유사한 변형 모델은 한 행으로 합쳐 "SB18(IIi)"/"A10(i) Focus"/
+  // "SB10(r/i)" 식으로 표기한다. 이름 유사성 패턴 세 가지:
+  //  1) 접두사 — 짧은 이름이 긴 이름의 앞부분 (SB18 → SB18 IIi, K3 → K3i,
+  //     Soka → Soka inWall)
+  //  2) "i" 중간 삽입 — "i" 하나만 빼면 같아짐 (A10 Focus → A10i Focus).
+  //     "i"가 끝이 아니라 중간에 끼어 접두사 관계가 아니다.
+  //  3) 끝글자 r↔i — 길이가 같고 마지막 글자만 다름 (SB10r ↔ SB10i, X4r ↔ X4i)
+  // **병합 조건은 이름이 아니라 rowsSignature 완전 일치다.** 이름 패턴은 후보를
+  // 좁힐 뿐이다 — 특히 r/i 페어는 i버전에만 LA1.16i 매칭이 추가돼 데이터가 다른
+  // 경우가 많고, 그러면 병합되지 않고 별개 행으로 남는 게 맞다.
   const rowsSignature = g => [...g.rows]
     .sort((a, b) => (b.total || 0) - (a.total || 0))
     .map(r => `${r.mode || ""}|${r.preset || ""}|${r.perCh ?? ""}|${r.total ?? ""}|${r.spl ?? ""}`)
@@ -411,11 +355,8 @@ function configsBySpeakerTableHTML(rows) {
     const g2 = groups[j];
     // 짧은 쪽을 기본형(대표 id·표시 이름의 앞부분)으로 삼는다.
     const [shortG, longG] = g.speakerName.length <= g2.speakerName.length ? [g, g2] : [g2, g];
-    // 병합된 행도 두 스피커(기본형/변형) 각각의 상세로
-    // 들어갈 수 있어야 한다 — 이름 표기를 "기본 파트"(클릭 시 shortG로
-    // 이동)와 "변형 파트"(클릭 시 longG로 이동) 두 조각으로 나눠서
-    // 반환한다. nameParts 는 렌더링 시 각각 별도의 data-speaker-id 를
-    // 가진 요소로 만든다.
+    // 병합된 행에서도 기본형/변형 각각의 상세로 들어갈 수 있어야 하므로 이름을
+    // 파트로 쪼갠다 — 각 파트는 렌더링 시 서로 다른 data-speaker-id 를 갖는다.
     let nameParts;
     if (longG.speakerName.startsWith(shortG.speakerName)) {
       // 접두사 관계: 뒤에 붙는 나머지를 그대로 괄호로 표기 (K3 → K3(i))
@@ -424,19 +365,15 @@ function configsBySpeakerTableHTML(rows) {
         ? [{ text: shortG.speakerName, id: shortG.speakerId }, { text: `(${suffix})`, id: longG.speakerId }]
         : [{ text: shortG.speakerName, id: shortG.speakerId }];
     } else if (isTrailingRIVariant(shortG.speakerName, longG.speakerName)) {
-      // 끝글자 r↔i 치환 관계: 마지막 글자를 떼고 "(r/i)"로 합쳐 표기
-      // (SB10r + SB10i → SB10(r/i)) — 어느 쪽이 shortG/longG 인지는
-      // 알파벳순(r < i 순서 무관)이라 실제 접미사 문자로 판별한다.
+      // 끝글자 r↔i: "SB10r + SB10i → SB10(r/i)". 길이가 같아 shortG/longG 로는
+      // 어느 쪽이 r 인지 알 수 없으므로 실제 접미사 문자로 판별한다.
       const base = shortG.speakerName.slice(0, -1);
       const rId = shortG.speakerName.slice(-1).toLowerCase() === "r" ? shortG.speakerId : longG.speakerId;
       const iId = shortG.speakerName.slice(-1).toLowerCase() === "i" ? shortG.speakerId : longG.speakerId;
       nameParts = [{ text: base, id: null }, { text: "(r", id: rId }, { text: "/i)", id: iId }];
     } else {
-      // "i" 중간 삽입 관계: 삽입 지점에 "(i)"를 끼워 넣는다
-      // (A10 Focus + A10i Focus → A10(i) Focus). 앞뒤로 잘린 기본형
-      // 텍스트("A10", " Focus")는 한 덩어리로 묶어 기본형(shortG)
-      // 클릭 영역 하나로 취급 — 따로 나누면 같은 speakerId 인데
-      // 클릭 영역만 둘로 쪼개져 어색하다.
+      // "i" 중간 삽입: "A10 Focus + A10i Focus → A10(i) Focus". 앞뒤로 잘린
+      // 기본형 텍스트는 같은 speakerId 라 group 으로 묶어 클릭 영역 하나로 쓴다.
       const insertAt = findSingleIInsertionIndex(shortG.speakerName, longG.speakerName);
       const before = shortG.speakerName.slice(0, insertAt);
       const after = shortG.speakerName.slice(insertAt);
@@ -457,13 +394,9 @@ function configsBySpeakerTableHTML(rows) {
     const rest = sorted.slice(1);
     const groupId = `amp-cfg-${gi}`;
     const toggleBtn = rest.length ? `<button type="button" class="match-table__toggle-btn" data-toggle-group="${groupId}" aria-expanded="false" aria-label="설정 ${rest.length}개 더 보기">+${rest.length}</button>` : "";
-    // rep.speakerName 은 개별 매칭 row 의 원본 이름(병합 전
-    // "K3"/"K3i")이라 병합된 그룹에서는 신뢰할 수 없다 — 병합 로직이
-    // 설정한 그룹 레벨 이름(g.nameParts)을 대신 쓴다.
-    // 병합된 행에서 기본형/i버전 각각의 상세로 들어갈 수
-    // 있어야 한다 — g.nameParts 가 있으면(=병합된 그룹) 이름을 파트별로
-    // 나눠 각자 다른 data-speaker-id 를 가진 span 으로 렌더링한다. 행
-    // 전체의 data-speaker-id(mode/preset 등 나머지 셀 클릭용)는 대표
+    // rep.speakerName 은 병합 전 원본 이름이라 병합된 그룹에서는 못 쓴다 —
+    // 그룹 레벨 이름(g.nameParts)이 있으면 파트별로 다른 data-speaker-id 를
+    // 가진 span 으로 렌더링한다. 행 전체의 data-speaker-id(나머지 셀용)는 대표
     // (g.speakerId, 기본형)로 유지 — 이름 span 자체는 이벤트 버블링으로
     // 행 클릭 핸들러도 같이 타므로, controller 에서 이름 span 클릭 시
     // 그 span 의 data-speaker-id 를 우선 사용하도록 처리해야 한다.
@@ -539,15 +472,11 @@ function rackRowsHTML(items) {
 }
 
 /**
- * 랙과 연결된 System Elements(액세서리) 목록을 Type(Rigging/Cables 등)별로
- * 묶어 클릭 가능한 칩으로 렌더링한다. 스피커 모달의 Matched Speakers 칩과
- * 동일한 패턴 — 실제 조회(cross-ref.findAccessoryById)는 controller 가
- * 미리 수행해 {id, name, type} 배열로 넘겨준다(view.js 는 cross-ref 를
- * 직접 참조하지 않는 순수 함수 원칙 유지).
- * 모달 최상단(General 위)에 배치하고, Configurations 섹션과
- * 동일한 접기/펼치기 토글(section-label--toggle, data-section-toggle)을
- * 적용한다 — 클릭 배선은 js/ui/modal.js 의 공통 섹션 토글 배선이
- * 도메인 무관하게 처리하므로 마크업만 그 패턴에 맞추면 된다.
+ * 랙의 System Elements(액세서리)를 Type 별로 묶어 클릭 가능한 칩으로 렌더링.
+ * 조회는 controller 가 미리 해 {id, name, type} 배열로 넘긴다 — view 는
+ * cross-ref 를 직접 참조하지 않는 순수 함수를 유지한다.
+ * 모달 최상단(General 위)에 접힌 토글로 둔다 — 클릭 배선은 공통
+ * wireSectionToggle 이 처리하므로 마크업만 그 패턴에 맞추면 된다.
  * @param {{id:string, name:string, type:string}[]} accessories
  * @returns {string} 섹션 마크업 (없으면 "")
  */
@@ -570,16 +499,11 @@ function systemElementsHTML(accessories) {
 }
 
 /**
- * Rack 타입 앰프(LA-RAK III 등) 전용 모달 body — 개별 앰프(Amplified
- * Controller)와는 데이터 우선순위가 근본적으로 달라 별도 함수로 분리했다.
- * 랙은 "이 랙 안에 무엇이 들어있는가(Content)"가 가장 먼저 알아야 할
- * 정보이고, 그다음 배전(오디오/전원)·케이블·물리 스펙·리깅 순으로 실사용
- * 우선순위를 매겼다 — 개별 앰프 모달의 DSP/Ecosystem 같은 섹션은 랙
- * 자체에는 해당 없어(a.dsp/a.io 가 null) 등장하지 않는다.
- * 섹션 순서: System Elements(연관 액세서리, 접힌 토글, 클릭 시 Split View)
- *   → General(개요) → Content(구성품, 최우선 — "무엇이 들어있나")
- *   → Power Distribution → Audio Distribution → Network → Cables
- *   → Physical(무게/치수/재질) → Rigging & Handling → Notes & Protection.
+ * Rack 타입 앰프(LA-RAK III 등) 전용 모달 body.
+ *
+ * 개별 앰프와 데이터 우선순위가 근본적으로 달라 별도 함수다 — 랙은 "안에 무엇이
+ * 들어있는가"(Content)가 최우선이고 그다음이 배전·케이블·물리·리깅이다. 개별
+ * 앰프의 DSP/Ecosystem 섹션은 랙에 해당 없어(a.dsp/a.io 가 null) 등장하지 않는다.
  * @param {Object} a 앰프 레코드 (a.type === "Rack")
  * @param {string} media 이미지 마크업 (modalBodyHTML 에서 공통 생성해 전달)
  * @param {Object} physicalRowsExtra 물리 스펙 spec-table 행 문자열 (weight/dims 포함, modalBodyHTML 과 공유)
@@ -626,23 +550,18 @@ function rackBodyHTML(a, media, physicalRowsExtra, relatedAccessories) {
  * controller 가 담당 (앰프 → 스피커 방향).
  * @param {Object} a 앰프 레코드
  * @param {Function|null} resolveSpeakerName (speakerId) => 표시 이름
- * @param {string[]} [speakerIds] 이 앰프를 매칭하는 스피커 id 목록. 미지정 시
- *   a.relations.speakerIds 로 폴백(레거시 정적 필드 — 현재는 비어있는 경우가
- *   많으므로 controller 가 cross-ref.findSpeakersMatchingAmp() 로 동적 계산해
- *   넘겨주는 것을 권장).
- * @param {Object[]} [configsBySpeaker] cross-ref.findAmpConfigsBySpeaker() 로
- *   구한 스피커 기준 설정 행. a.configs(앰프 자체 필드)가 비어있을 때
- *   Configurations 표를 이걸로 대체 렌더링한다(LA1.16i 등).
- * @param {{id:string, name:string, type:string}[]} [relatedAccessories] Rack
- *   타입 앰프(a.rack.relatedAccessoryIds)의 System Elements 조회 결과.
- *   controller 가 cross-ref.findAccessoryById() 로 미리 조회해 전달한다.
+ * @param {string[]} [speakerIds] 매칭 스피커 id 목록. 미지정 시
+ *   a.relations.speakerIds 로 폴백하지만 그 정적 필드는 대부분 비어 있다 —
+ *   controller 가 cross-ref.findSpeakersMatchingAmp() 로 계산해 넘길 것.
+ * @param {Object[]} [configsBySpeaker] 스피커 기준 설정 행
+ *   (cross-ref.findAmpConfigsBySpeaker). a.configs 가 비었을 때 Configurations
+ *   표를 이걸로 대체한다.
+ * @param {{id:string, name:string, type:string}[]} [relatedAccessories]
+ *   Rack 앰프의 System Elements — controller 가 미리 조회해 전달.
  * @returns {{color: string, head: string, body: string}}
  */
 export function modalBodyHTML(a, resolveSpeakerName, speakerIds, configsBySpeaker, relatedAccessories) {
   const M = AMP_MFR[a.mfr], color = M.color;
-  // 뷰가 2개 이상(Front/Rear/Isometric 등)인 앰프만 전환 버튼을 노출한다
-  // — speakers.view.js modalBodyHTML 의 동일 로직 재사용(getViews, 버튼
-  // 클릭 연결은 js/ui/modal.js 의 wireViewSwitch 가 도메인 무관하게 처리).
   const views = getViews(a);
   const viewSlug = label => label.toLowerCase().replace(/[^a-z0-9]+/g, "-");
   // 1U 랩마운트 앰프(LA1.16i 등)는 실물 비율이 매우 가로로 길어 기본
@@ -677,30 +596,16 @@ export function modalBodyHTML(a, resolveSpeakerName, speakerIds, configsBySpeake
   const eco = a.ecosystem || {};
   const note = a.note || {};
 
-  // [정보 재구성] speakers.view.js modalBodyHTML 과 동일한 원칙 — 실사용에
-  // 필요한 핵심 스펙을 최상단 spec-table 하나에 압축하고, 섹션을 잘게
-  // 쪼개 스크롤을 늘리지 않는다. 기존에는 General/Mains/I·O/Output/DSP/
-  // Ecosystem 이 6개 섹션으로 나뉘어 있었는데:
-  //   - output.channels 는 General 의 Channels 와 항상 같은 값이라 중복
-  //     이었으므로 제거(CLAUDE.md "중복 정보 생략" 원칙).
-  //   - Connectivity(대역폭 연결 방식)는 I·O 스펙과 성격이 같아 General
-  //     에서 빼내 I/O 섹션으로 합쳤다.
-  //   - Power Supply/External DSP Backup 은 전원 관련 스펙이라 Mains
-  //     섹션으로 합쳤다.
-  //   - I/O 와 Output 은 "입력 쪽/출력 쪽"으로 나뉘어 있었지만 실사용
-  //     관점에서는 "이 앰프의 연결·출력 스펙"으로 함께 보는 게 자연스러워
-  //     하나의 Connections & Output 섹션으로 합쳤다.
-  //   - IP 등급/랙유닛/무게/냉각/동작온도는 "이 앰프가 무엇인가"보다는
-  //     설치 시에나 참고하는 물리적 스펙이라 General 에서 빼내 맨 아래
-  //     Physical 섹션으로 내렸다.
-  // 그 결과 General(개요) → Matched Speakers/Configurations(가장 자주
-  // 쓰는 정보) → Mains → Connections & Output → DSP → Ecosystem → Features
-  // → Notes & Protection → Physical(부가 정보) 순으로, 중요도 높은 정보가
-  // 위로, 설치용 참고 스펙은 맨 아래로 정리됐다.
-  // General 은 "이 앰프가 무엇인가"(채널·파워클래스·타입·용도)만 남기고,
-  // 설치/물리 스펙(IP 등급·랙유닛·무게·냉각·동작온도)은 실사용 의사결정
-  // (구동 가능한 스피커/모드 확인)에는 덜 중요한 부가 정보라 Physical
-  // 섹션으로 분리해 아래쪽으로 뺀다.
+  // 섹션 순서는 실사용 중요도순이다 — General(이 앰프가 무엇인가) → Matched
+  // Speakers·Configurations(가장 자주 보는 정보) → Mains → Connections &
+  // Output → DSP → Ecosystem → Features → Notes → Physical(설치용 참고).
+  // 묶는 기준 세 가지:
+  //   - General 은 "무엇인가"(채널·파워클래스·타입·용도)만. IP 등급·랙유닛·
+  //     무게·냉각·동작온도는 설치 때나 보는 스펙이라 Physical 로 내린다.
+  //   - 입력/출력을 나누지 않고 Connections & Output 하나로 — 실사용에선
+  //     "이 앰프의 연결·출력 스펙"으로 함께 본다. Connectivity 도 여기로.
+  //   - Power Supply·External DSP Backup 은 전원 스펙이라 Mains 로.
+  // output.channels 는 General 의 Channels 와 같은 값이라 쓰지 않는다.
   const generalRows = [
     specRow("Channels", a.channels != null ? a.channels + "ch" : null),
     specRow("Power Class", a.powerClass),
@@ -819,18 +724,11 @@ export function modalBodyHTML(a, resolveSpeakerName, speakerIds, configsBySpeake
     specRow("Interface", note.interface, true),
   ].join("");
 
-  // Matched Speakers/Configurations 는 Split View 로 스피커 상세를 오가며
-  // 가장 자주 쓰이는 핵심 정보라, 상세 스펙(Mains/I·O/Output/DSP/...)보다
-  // 먼저 General 섹션 바로 아래에 배치한다 — 모달을 열자마자 스크롤 없이
-  // 바로 매칭 스피커 칩을 보고 클릭할 수 있게.
-  // a.notes(자유 서술문, 예: "설치용(install-only) 16채널 앰프 컨트롤러...")는
-  // 카드에서는 뺐다(스피커 카드의 card__config 처럼 짧은 스펙 요약이 아니라
-  // 문장형이라 카드 첫 화면에는 어울리지 않음) — 정보 자체는 유실하지 않고
-  // 모달 상세 첫 줄(General 표 바로 위)에 노출한다.
-  // [Rack 타입 분기] LA-RAK III 등 "랙 시스템"은 개별 앰프와 데이터
-  // 우선순위가 근본적으로 다르다(DSP/샘플레이트 등은 해당 없고, 대신
-  // "무엇이 들어있는가/배전/케이블/리깅"이 핵심) — rackBodyHTML 로 완전히
-  // 별도 렌더링하고, head/media(이미지 전환 등)만 공통 로직을 재사용한다.
+  // Matched Speakers·Configurations 는 General 바로 아래 — pane2 로 스피커를
+  // 오가며 가장 자주 쓰는 정보라 스크롤 없이 바로 닿아야 한다.
+  // a.notes(문장형 서술)는 카드가 아니라 여기 General 표 위에 둔다.
+  // Rack 은 데이터 우선순위가 근본적으로 달라 body 를 통째로 별도 렌더링하고
+  // head/media 만 공유한다.
   if (a.type === "Rack") {
     return { color, head, body: rackBodyHTML(a, media, physicalRows, relatedAccessories) };
   }
