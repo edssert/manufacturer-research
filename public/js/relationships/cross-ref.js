@@ -148,8 +148,8 @@ export function findSpeakersMatchingAmp(ampId) {
 
 /**
  * 앰프 모달의 "Configurations" 표를 스피커 쪽 데이터에서 역으로 구성한다.
- * 앰프 자체 필드(a.configs)는 미입력이 많은데 같은 정보가 스피커의
- * amps[].configs 에 이미 있으므로 중복 입력 없이 재사용한다. 행 기준은 앰프
+ * 매칭 데이터는 스피커 레코드(amps[].configs)에만 입력한다 — 앰프 쪽에도 같은
+ * 사실을 적으면 두 값이 어긋나므로 출처를 하나로 둔다. 행 기준은 앰프
  * 모델이 아니라 스피커 — "이 앰프로 어떤 스피커를 어떤 모드/프리셋으로 몇 대
  * 구동해 몇 dB 를 내는지"를 보여주기 위함.
  * @param {string} ampId 앰프 id

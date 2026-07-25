@@ -175,26 +175,15 @@ function cardArchitectureLabel(architecture) {
  */
 export function cardHTML(a) {
   const M = AMP_MFR[a.mfr], color = M.color;
-  const hasConfigs = a.configs && a.configs.length;
-  const maxTotal = hasConfigs ? a.configs.reduce((m, c) => (c.total != null && c.total > m ? c.total : m), 0) : 0;
-  const modes = hasConfigs ? [...new Set(a.configs.map(c => c.mode).filter(Boolean))] : [];
-  // configs 없는 앰프의 요약은 Architecture/Output 2칸이다. Usage 는 값이 길어
-  // 말줄임되고 모달 Type 태그로도 확인되므로 뺐고, Channels 는 Architecture
-  // 앞 숫자에 이미 담겨 중복이라 뺐다.
+  // 카드 요약은 Architecture/Output 2칸. Usage 는 값이 길어 말줄임되고 모달
+  // Type 태그로도 확인되므로 뺐고, Channels 는 Architecture 앞 숫자에 이미
+  // 담겨 중복이라 뺐다.
   // 강조 값은 전역 accent 가 아니라 제조사 색(--mfr) — speakers 탭과 같은 원칙.
-  const statsBlock = hasConfigs
-    ? `<div class="stat-grid">
-          <div class="stat-grid__cell"><span class="stat-grid__key">Max Total</span><span class="stat-grid__value stat-grid__value--mfr">${maxTotal || "—"}</span></div>
-          <div class="stat-grid__cell"><span class="stat-grid__key">Modes</span><span class="stat-grid__value">${modes.length ? modes.join(" · ") : "—"}</span></div>
-          <div class="stat-grid__cell"><span class="stat-grid__key">Channels</span><span class="stat-grid__value">${a.channels || "—"}</span></div>
-        </div>`
-    : (() => {
-        const out = outputParts(a);
-        return `<div class="stat-grid stat-grid--amp-2col">
-          <div class="stat-grid__cell"><span class="stat-grid__key">Architecture</span><span class="stat-grid__value stat-grid__value--mfr">${a.architecture ? esc(cardArchitectureLabel(a.architecture)) : "—"}</span></div>
-          <div class="stat-grid__cell"><span class="stat-grid__key">Output${out.impedance ? `<span class="stat-grid__key-badge">${esc(out.impedance)}</span>` : ""}</span><span class="stat-grid__value">${esc(out.value)}</span></div>
-        </div>`;
-      })();
+  const out = outputParts(a);
+  const statsBlock = `<div class="stat-grid stat-grid--amp-2col">
+      <div class="stat-grid__cell"><span class="stat-grid__key">Architecture</span><span class="stat-grid__value stat-grid__value--mfr">${a.architecture ? esc(cardArchitectureLabel(a.architecture)) : "—"}</span></div>
+      <div class="stat-grid__cell"><span class="stat-grid__key">Output${out.impedance ? `<span class="stat-grid__key-badge">${esc(out.impedance)}</span>` : ""}</span><span class="stat-grid__value">${esc(out.value)}</span></div>
+    </div>`;
   // 1U 랙마운트 앰프는 실물이 매우 가로로 길어(LA1.16i 약 10.6:1) 기본
   // max-width 80% 를 쓰면 max-height 보다 폭 제약이 먼저 걸려 렌더 높이가
   // 지나치게 얇아진다 — card__img--wide 로 폭만 94% 로 넓혀 세로 리듬은
@@ -209,16 +198,14 @@ export function cardHTML(a) {
   const nameTags = ampTagsHTML(a, "card__name-tags", "card__name-tag");
   // 스피커 탭의 SPL 바와 같은 시각 언어로 4Ω 기준 Total Watt 게이지를 그린다.
   // 값이 없으면 게이지 0% + "—"(레이아웃은 유지).
-  // "@4Ω" 표기는 hasConfigs 일 때만 — configs 없는 앰프는 아래 Output 칸에
-  // 임피던스 배지가 이미 있어 중복이고, Output 칸이 없는 앰프(D90)는 이 미터가
-  // 유일한 임피던스 표시라 필요하다.
+  // 미터에는 임피던스를 안 붙인다 — 바로 아래 Output 칸의 배지가 이미 표시한다.
   // Rack 앰프는 8Ω/2.7Ω 기준 총량이라 4Ω 기준값과 섞이면 비교가 왜곡된다 —
   // 별도 스케일(WATT_RANGE_RACK)을 쓰고 --rack 변경자로 바 색도 달리해 "다른
   // 기준"임을 드러낸다.
   const isRack = a.type === "Rack";
   const watt4 = totalWatt4Ohm(a);
   const wattPercent = watt4 == null ? 0 : (isRack ? rackWattPct(watt4) : wattPct(watt4));
-  const wattMeter = `<div class="spl-meter${isRack ? " spl-meter--rack" : ""}"><div class="spl-meter__track"><div class="spl-meter__fill" style="width:${wattPercent}%"></div></div><div class="spl-meter__value">${watt4 != null ? watt4 : "—"}<small>W${hasConfigs ? " @4Ω" : ""}</small></div></div>`;
+  const wattMeter = `<div class="spl-meter${isRack ? " spl-meter--rack" : ""}"><div class="spl-meter__track"><div class="spl-meter__fill" style="width:${wattPercent}%"></div></div><div class="spl-meter__value">${watt4 != null ? watt4 : "—"}<small>W</small></div></div>`;
   return `<article class="card" style="--mfr:${color}" tabindex="0" data-id="${a.id}" role="button" aria-label="${esc(a.model)} 상세">
     <div class="card__media">${media}</div>
     <div class="card__body card__body--amp">
@@ -246,18 +233,6 @@ export function cardHTML(a) {
 function specRow(label, val, full) {
   const hasVal = val != null && String(val).trim() !== "";
   return `<div class="spec-table__cell${full ? ' spec-table__cell--full' : ''}"><div class="spec-table__key">${esc(label)}</div><div class="spec-table__value${hasVal ? '' : ' spec-table__value--na'}">${hasVal ? esc(val) : "—"}</div></div>`;
-}
-
-/**
- * 앰프 설정(모드별 Links/Max) 3열 표 HTML. 앰프 자체 필드(a.configs)를 쓴다
- * — d&b 등 기존 앰프처럼 "모델 고정, 모드만 다른" 데이터에 적합.
- * @param {Object[]} configs 앰프의 configs 배열
- * @returns {string}
- */
-function configsTableHTML(configs) {
-  if (!configs || !configs.length) return `<div class="data-empty-note">설정 데이터가 없습니다.</div>`;
-  const rows = configs.map(c => `<div class="match-table__row"><div class="match-table__cell match-table__cell--mode">${c.mode ? esc(c.mode) : "—"}</div><div class="match-table__cell">${c.perCh != null ? c.perCh : "—"}</div><div class="match-table__cell">${c.total != null ? c.total : "—"}</div></div>`).join("");
-  return `<div class="match-table match-table--cols-3"><div class="match-table__row match-table__row--head"><div class="match-table__cell">Mode</div><div class="match-table__cell">Links/ch</div><div class="match-table__cell">Max/amp</div></div><div class="match-table__body">${rows}</div></div>`;
 }
 
 /**
@@ -553,9 +528,9 @@ function rackBodyHTML(a, media, physicalRowsExtra, relatedAccessories) {
  * @param {string[]} [speakerIds] 매칭 스피커 id 목록. 미지정 시
  *   a.relations.speakerIds 로 폴백하지만 그 정적 필드는 대부분 비어 있다 —
  *   controller 가 cross-ref.findSpeakersMatchingAmp() 로 계산해 넘길 것.
- * @param {Object[]} [configsBySpeaker] 스피커 기준 설정 행
- *   (cross-ref.findAmpConfigsBySpeaker). a.configs 가 비었을 때 Configurations
- *   표를 이걸로 대체한다.
+ * @param {Object[]} [configsBySpeaker] Configurations 표의 원본 행
+ *   (cross-ref.findAmpConfigsBySpeaker 가 스피커 쪽 데이터에서 역산). 매칭
+ *   데이터는 스피커 레코드에만 입력하므로 이게 유일한 출처다.
  * @param {{id:string, name:string, type:string}[]} [relatedAccessories]
  *   Rack 앰프의 System Elements — controller 가 미리 조회해 전달.
  * @returns {{color: string, head: string, body: string}}
@@ -740,7 +715,7 @@ export function modalBodyHTML(a, resolveSpeakerName, speakerIds, configsBySpeake
       </div>
       <button type="button" class="section-label section-label--toggle" style="margin-top:20px" data-section-toggle="amp-configs" aria-expanded="false">Configurations<span class="section-label__arrow">▸</span></button>
       <div data-section-toggle-body="amp-configs" hidden>
-        ${a.configs && a.configs.length ? configsTableHTML(a.configs) : configsBySpeakerTableHTML(configsBySpeaker || [])}
+        ${configsBySpeakerTableHTML(configsBySpeaker || [])}
       </div>
       ${detailSection("Power", mainsRows)}
       ${detailSection("Connections & Output", ioRows)}

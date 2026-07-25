@@ -106,7 +106,6 @@ export const DB_AMPLIFIERS = [
     // 어느 쪽에도 동일하게 표기하고, 깊이(depth)만 512mm/20.2in 로 환산.
     "dimensions": { "mm": "2 RU x 19\" x 512 mm", "in": "2 RU x 19\" x 20.2\"" },
     "gpio": null,
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -206,7 +205,6 @@ export const DB_AMPLIFIERS = [
     },
     "dimensions": { "mm": "2 RU x 19\" x 435 mm", "in": null },
     "gpio": "5x opto-coupled GPIO (configurable per-pin as GPI/GPO), 6-pin Phoenix Euroblock; external 24 VDC required",
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -316,7 +314,6 @@ export const DB_AMPLIFIERS = [
     },
     "dimensions": { "mm": "2 RU x 19\" x 465 mm", "in": "2 RU x 19\" x 18.3\"" },
     "gpio": "8x opto-coupled GPI (9-pin Phoenix Euroblock) + 4x GPO Low-Side-Switch-Relay (5-pin Phoenix Euroblock); external 24 VDC/150 W required",
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -416,7 +413,6 @@ export const DB_AMPLIFIERS = [
     },
     "dimensions": { "mm": "2 RU x 19\" x 435 mm", "in": null },
     "gpio": "5x opto-coupled GPIO (configurable per-pin as GPI/GPO), 6-pin Phoenix Euroblock; external 24 VDC required",
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -525,7 +521,6 @@ export const DB_AMPLIFIERS = [
     },
     "dimensions": { "mm": "2 RU x 19\" x 465 mm", "in": "2 RU x 19\" x 18.3\"" },
     "gpio": "8x GPI opto-coupled (9-pin Phoenix Euroblock) + 4x GPO Low-Side-Switch-Relay (5-pin Phoenix Euroblock); external 24 VDC/150 W required",
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -622,7 +617,6 @@ export const DB_AMPLIFIERS = [
     },
     "dimensions": { "mm": "1 RU x 9.5\" x 405 mm (435 mm with rack ears)", "in": "1 RU x 9.5\" x 16\"" },
     "gpio": "4x GPI (level/edge triggering, VCA functionality via 10 kOhm potentiometer), 6-pin Euroblock; onboard 12 VDC/50 mA",
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -719,7 +713,6 @@ export const DB_AMPLIFIERS = [
     },
     "dimensions": { "mm": "1 RU x 9.5\" x 405 mm (435 mm with rack ears)", "in": "1 RU x 9.5\" x 16\"" },
     "gpio": "4x GPI (level/edge triggering, VCA functionality via 10 kOhm potentiometer), 6-pin Euroblock; onboard 12 VDC/50 mA",
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -820,7 +813,6 @@ export const DB_AMPLIFIERS = [
     },
     "dimensions": { "mm": "2 RU x 19\" x 512 mm", "in": "2 RU x 19\" x 20.2\"" },
     "gpio": "None (GPIO not available)",
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -921,7 +913,6 @@ export const DB_AMPLIFIERS = [
     },
     "dimensions": { "mm": "2 RU x 19\" x 512 mm", "in": "2 RU x 19\" x 20.2\"" },
     "gpio": "None (GPIO not available)",
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -1021,7 +1012,6 @@ export const DB_AMPLIFIERS = [
     },
     "dimensions": { "mm": "2 RU x 19\" x 530.5 mm", "in": null },
     "gpio": "None (GPIO not available)",
-    "configs": [],
     "relations": {
       "speakerIds": []
     }

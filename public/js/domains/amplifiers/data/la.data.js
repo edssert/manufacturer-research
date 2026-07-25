@@ -122,7 +122,6 @@ export const LA_AMPLIFIERS = [
     },
     "gpio": "3 in/out on 12 point terminal block",
     "dimensions": null,
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -242,7 +241,6 @@ export const LA_AMPLIFIERS = [
     },
     "gpio": "4 in/out on 10 point terminal block",
     "dimensions": { "mm": "483 x 44.45 (1U) x 265 mm", "in": "19 x 1.75 (1U) x 10.4 in" },
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -353,7 +351,6 @@ export const LA_AMPLIFIERS = [
     },
     "gpio": null,
     "dimensions": null,
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -463,7 +460,6 @@ export const LA_AMPLIFIERS = [
     },
     "gpio": null,
     "dimensions": null,
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -572,7 +568,6 @@ export const LA_AMPLIFIERS = [
     },
     "gpio": "3 in/out on 12 point terminal block",
     "dimensions": null,
-    "configs": [],
     "relations": {
       "speakerIds": []
     }
@@ -644,7 +639,6 @@ export const LA_AMPLIFIERS = [
     "interfaceInfo": null,
     "gpio": null,
     "dimensions": null,
-    "configs": [],
     "relations": {
       "speakerIds": []
     },
@@ -752,7 +746,6 @@ export const LA_AMPLIFIERS = [
     "interfaceInfo": null,
     "gpio": null,
     "dimensions": null,
-    "configs": [],
     "relations": {
       "speakerIds": []
     },
