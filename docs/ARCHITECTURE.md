@@ -31,16 +31,19 @@ public/
       filter-engine.js  검색(정규화)·칩·범위 필터 판정 + 정렬
       dom.js            $, esc, uniq, debounce, getViews 유틸
     ui/                 공용 UI 프리미티브
+      domain-tab.js     카드 목록형 탭의 공통 뼈대(mount/build/reset/render)
       modal.js          모달 수명주기(열기/닫기/모바일 스택)
       pane-interactions.js  pane 내부 배선(뷰 전환·단위 토글·사진 확대·
-                        섹션 토글·커스텀 스크롤바) — v1.8 에서 modal.js 분리
+                        섹션 토글·커스텀 스크롤바)
       split-view.js     나란히 보기(pane1/pane2) + 사진 확대 pane
+                        + wireChipPanes(연관 항목 칩 → pane2 공통 배선)
       card-grid.js      필터→정렬→그룹핑→카드 그리드 렌더러
       filters.js        칩/범위 슬라이더 필터 패널 빌더
-      nav.js legend.js theme.js media-toggle.js motion-toggle.js sticky-header.js
+      toggle.js         라이트모드·사진 숨기기·모션 끄기 토글
+      nav.js legend.js sticky-header.js section-nav.js
     relationships/cross-ref.js  도메인 간 역참조(스피커↔앰프↔액세서리)
-    domains/<이름>/     도메인 = speakers·amplifiers·dsps·software·accessories·brand·test
-      <이름>.controller.js  mount/unmount/render/모달 열기 + 라우터 등록
+    domains/<이름>/     도메인 = speakers·amplifiers·dsps·software·accessories·brand
+      <이름>.controller.js  탭 설정(createDomainTab) + 모달 열기·연관 항목 배선
       <이름>.schema.js      검색·필터·정렬 규칙 선언 (filter-engine 이 소비)
       <이름>.view.js        카드/모달 마크업 순수 함수
       <이름>.data.js        데이터 배럴 (data/ 하위 시리즈별 파일 재수출)
@@ -49,6 +52,11 @@ public/
 원칙: **controller 만 상태를 가진다.** view 는 순수 함수, schema 는 선언,
 core/ui 는 도메인 지식 없음. 새 도메인(탭) 추가 = 폴더 4파일 생성 +
 main.js 에 init 호출 1줄 + index.html 에 `<div id="view-…" hidden>` 1줄.
+카드 목록형 탭이면 controller 는 `createDomainTab({...})` 설정 한 덩어리와
+모달 열기 함수만 있으면 된다(ui/domain-tab.js 참고).
+
+기본 정렬의 출처는 `sortOptions[0].value` 하나다 — 정렬 select 가 화면에
+보여주는 값과 state.sort 가 어긋날 수 없게 하기 위함.
 
 ## 3. 데이터 흐름
 

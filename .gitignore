@@ -5,3 +5,4 @@ node_modules/
 raw-data/raw-images/
 raw-data/**/*.zip
 _imgwork/
+.serena/
