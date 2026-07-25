@@ -10,8 +10,12 @@
  */
 import { readFileSync } from "fs";
 import { join, dirname } from "path";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url";
 import { JSDOM } from "jsdom";
+
+// [Node 20+ / Windows] await import() 에 윈도우 절대경로("C:\...")를 그대로 넘기면
+// ERR_UNSUPPORTED_ESM_URL_SCHEME 로 죽는다 — file:// URL 로 변환해서 넘긴다.
+const imp = (p) => import(pathToFileURL(p).href);
 
 // [v1.8 재배치] tests/ 가 public/tests/ 로 이동하면서 index.html(루트 유지)까지
 // 두 단계 위로 올라가야 한다 — 프로젝트 ROOT = public/tests/../.. .
@@ -31,10 +35,16 @@ global.history = dom.window.history;
 // [테스트 환경 보강] jsdom 은 matchMedia 를 구현하지 않는다 —
 // isMobileLayout(ui/modal.js)이 호출하므로 데스크탑(false) 스텁을 제공.
 dom.window.matchMedia = () => ({ matches: false, addListener() {}, removeListener() {}, addEventListener() {}, removeEventListener() {} });
+// [테스트 환경 보강] jsdom 은 IntersectionObserver 도 구현하지 않는다 —
+// 좌측 섹션 내비(ui/section-nav.js)가 스크롤스파이에 쓰므로 no-op 스텁 제공.
+dom.window.IntersectionObserver = globalThis.IntersectionObserver = class {
+  constructor(cb) { this.cb = cb; }
+  observe() {} unobserve() {} disconnect() {}
+};
 
 // main.js import → 모든 도메인 등록 + 기본 탭(speakers) 마운트까지 실행됨
-await import(join(ROOT, "public/js/main.js"));
-const { navigateTo } = await import(join(ROOT, "public/js/core/router.js"));
+await imp(join(ROOT, "public/js/main.js"));
+const { navigateTo } = await imp(join(ROOT, "public/js/core/router.js"));
 
 // ── 부팅 상태 검증 ──
 check("Speakers 탭이 기본으로 마운트됨", document.querySelector("#view-speakers").hidden === false);
