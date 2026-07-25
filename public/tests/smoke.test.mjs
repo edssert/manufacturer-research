@@ -48,8 +48,7 @@ const { navigateTo } = await imp(join(ROOT, "public/js/core/router.js"));
 
 // ── 부팅 상태 검증 ──
 check("Speakers 탭이 기본으로 마운트됨", document.querySelector("#view-speakers").hidden === false);
-// [2026-07 현행화] Accessories·Test 탭 추가로 7개.
-check("탭 7개 렌더링", document.querySelectorAll(".topnav__tab").length === 7);
+check("탭 6개 렌더링", document.querySelectorAll(".topnav__tab").length === 6);
 check("활성 탭 변경자 적용", document.querySelector(".topnav__tab--active") !== null);
 check("스피커 카드 렌더링(> 40장)", document.querySelectorAll("#spk-results .card").length > 40);
 check("카드 그룹(시리즈) 헤더 존재", document.querySelectorAll("#spk-results .card-group__head").length > 5);
@@ -84,7 +83,7 @@ if (ampRow) {
 }
 
 // ── 나머지 탭 전환 ──
-for (const key of ["amplifiers", "dsps", "software", "brand", "speakers"]) {
+for (const key of ["amplifiers", "dsps", "software", "accessories", "brand", "speakers"]) {
   let ok = true;
   try { navigateTo(key); } catch (e) { ok = false; console.log("   에러:", e.message); }
   check(`탭 전환: ${key}`, ok && document.querySelector(`#view-${key === "speakers" ? "speakers" : key}`).hidden === false);
@@ -93,6 +92,46 @@ check("앰프 카드 렌더링", document.querySelectorAll("#amp-results .card")
 // [2026-07 현행화] 브랜드 탭은 브랜드 스위치 방식 — 한 번에 1개 페이지만 렌더링.
 check("브랜드 페이지 렌더링", document.querySelectorAll("#brand-results .brand-page").length === 1);
 check("타임라인 렌더링", document.querySelectorAll("#brand-results .timeline__item").length > 5);
+
+// ── 컨트롤 바 배선(칩 필터 · 필터 초기화 · 정렬) ──
+// [v1.8 통합] 다섯 탭이 이 배선을 ui/domain-tab.js 하나로 공유하므로
+// (이전에는 컨트롤러마다 같은 코드를 복사해 뒀다) 한 탭에서 확인하면 된다.
+navigateTo("speakers");
+const totalCards = document.querySelectorAll("#spk-results .card").length;
+const firstChip = document.querySelector("#spk-filters .chip");
+firstChip.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
+check("칩 클릭 → 선택 표시", firstChip.getAttribute("aria-pressed") === "true");
+check("칩 클릭 → 결과 필터링", document.querySelectorAll("#spk-results .card").length < totalCards);
+document.querySelector("#spk-reset").dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
+check("필터 초기화 → 전체 결과 복귀", document.querySelectorAll("#spk-results .card").length === totalCards);
+check("필터 초기화 → 칩 선택 해제", [...document.querySelectorAll("#spk-filters .chip")].every(c => c.getAttribute("aria-pressed") !== "true"));
+const sortSel = document.querySelector("#spk-sort");
+sortSel.value = "name";
+sortSel.dispatchEvent(new dom.window.Event("change", { bubbles: true }));
+check("정렬 변경 → 재렌더링(이름순은 그룹 없음)", document.querySelectorAll("#spk-results .card-group").length === 0);
+// [버그 수정 검증] 빈 결과 화면의 "필터 초기화" 버튼(ui/card-grid.js)이 쓰는
+// schema.onReset 은 예전에 아무도 대입하지 않아 눌러도 무반응이었다.
+const { speakersSchema } = await imp(join(ROOT, "public/js/domains/speakers/speakers.schema.js"));
+check("빈 결과 화면 초기화 버튼 연결됨", typeof speakersSchema.onReset === "function");
+
+// ── 연관 항목 칩 → Split View pane 2 ──
+// [v1.8 통합] 스피커·앰프·액세서리·DSP·소프트웨어 다섯 도메인이 이 배선을
+// ui/split-view.js wireChipPanes 하나로 공유한다(이전에는 컨트롤러마다
+// 같은 함수를 복사해 뒀다) — 액세서리 모달로 한 번 실제로 눌러 보면
+// "칩 클릭 → 레코드 조회 → pane 2 오픈" 경로 전체가 살아있는지 확인된다.
+navigateTo("accessories");
+let relChip = null;
+for (const card of document.querySelectorAll("#acc-results .card[data-id]")) {
+  card.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
+  relChip = document.querySelector("#modal [data-speaker-id], #modal [data-amp-id], #modal [data-accessory-id]");
+  if (relChip) break;
+}
+check("액세서리 모달에 연관 항목 칩 존재", relChip !== null);
+if (relChip) {
+  relChip.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
+  check("연관 항목 칩 클릭 → pane 2 열림", document.querySelectorAll("#modal .split-view__pane").length === 2);
+  check("pane 2 에 상세 내용 렌더링", document.querySelector("#modal .split-view__pane:nth-child(2) .modal__title") !== null);
+}
 
 console.log(`\n결과: ${pass} PASS / ${failCount} FAIL`);
 process.exit(failCount ? 1 : 0);
