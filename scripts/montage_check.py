@@ -21,7 +21,11 @@
 from PIL import Image, ImageDraw
 import glob, os, sys
 
-SRC_DIR = os.path.dirname(os.path.abspath(__file__))
+# 대상은 이 스크립트가 있는 폴더가 아니라 가공본 이미지 폴더다
+# (스크립트는 scripts/, 이미지는 public/assets/img/).
+SRC_DIR = os.path.normpath(
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public", "assets", "img")
+)
 
 
 def build_montage(out_path, thumb=150, cols=6):

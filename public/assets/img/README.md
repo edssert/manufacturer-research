@@ -46,23 +46,24 @@ data.js 안의 `img` 필드는 이 경로를 루트 기준 상대경로로 그�
 2. **배경을 완전히 투명 처리(누끼)한다.** PNG/WebP + 알파 채널 필수.
    흰색/회색 배경이 남아있으면 카드에서 사각형 프레임처럼 도드라져 보입니다.
 3. **워터마크·로고·수상 배지 등 제품 자체가 아닌 요소를 제거한다.**
-   `normalize_images.py`의 `remove_region()` 함수로 특정 영역만 지울 수
-   있습니다.
+   `scripts/normalize_images.py`의 `remove_region()` 함수로 특정 영역만
+   지울 수 있습니다.
 4. **여백을 정규화한다.** 아래 스크립트로 전체 이미지(하위 폴더 재귀 포함)의
    상하좌우 여백을 동일 비율(기본 8%)로 통일합니다.
 
    ```bash
-   cd assets/img
-   pip install Pillow --break-system-packages   # 최초 1회만
-   cp -r . /path/to/backup/img_backup            # 적용 전 백업 권장
-   python3 normalize_images.py dry               # 미리보기
-   python3 normalize_images.py apply              # 실제 적용
+   # 스크립트는 scripts/ 에 있고, 대상 폴더(public/assets/img)는 스크립트가
+   # 스스로 찾는다 — 어느 위치에서 실행해도 된다.
+   pip install Pillow --break-system-packages          # 최초 1회만
+   cp -r public/assets/img /path/to/backup/img_backup  # 적용 전 백업 권장
+   python3 scripts/normalize_images.py dry             # 미리보기
+   python3 scripts/normalize_images.py apply           # 실제 적용
    ```
 
 5. **예외 케이스는 자동 처리에서 제외한다.** 매입형(in-wall/in-ceiling)
    스피커처럼 흰 마운팅 프레임이 제품 사진 자체에 포함된 경우, 알파
    bounding box가 프레임까지 "제품"으로 오인해 여백이 트리밍되지
-   않습니다. 이런 파일명은 `normalize_images.py`의 `EXCLUDE` 집합에
+   않습니다. 이런 파일명은 `scripts/normalize_images.py`의 `EXCLUDE` 집합에
    추가하고 필요시 수동으로 크롭합니다. (현재:
    `assets/img/speakers/la/subwoofers/spk-la-sb6r.webp`,
    `assets/img/speakers/la/subwoofers/spk-la-sb10r.webp`)
@@ -70,7 +71,7 @@ data.js 안의 `img` 필드는 이 경로를 루트 기준 상대경로로 그�
    만듭니다. 라벨은 `mk/series/파일명` 형태로 표시됩니다.
 
    ```bash
-   python3 montage_check.py check.png
+   python3 scripts/montage_check.py check.png
    ```
 
    생성된 PNG를 열어 다른 이미지 대비 유난히 크거나 작은 것, 흰 배경과

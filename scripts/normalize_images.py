@@ -50,7 +50,10 @@ assets/img/speakers/la/k-series/ 아래에 이미지가 있다. 이 스크립트
 from PIL import Image
 import os, glob, sys, json
 
-SRC_DIR = os.path.dirname(os.path.abspath(__file__))
+# 대상은 이 스크립트가 있는 폴더가 아니라 가공본 이미지 폴더다
+# (스크립트는 scripts/, 이미지는 public/assets/img/).
+SRC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public", "assets", "img")
+SRC_DIR = os.path.normpath(SRC_DIR)
 MARGIN_PCT = 0.08  # 제품 bbox 기준 상하좌우 여백 비율 (프로젝트 표준값)
 
 # 자동 정규화에서 제외할 파일 (매입형 등 흰 마운팅 프레임이 제품 사진에
