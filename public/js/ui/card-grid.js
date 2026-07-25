@@ -109,7 +109,7 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
     };
     // 버튼을 따로 보여주는 대신, 아무 그룹 헤더든 Ctrl/Cmd 를
     // 누른 채 클릭하면 전체 펼치기/접기가 되게 한다 — 모달의 섹션 토글
-    // Ctrl+클릭(js/ui/modal.js wireSectionToggle)과 동일한 패턴. 클릭한
+    // Ctrl+클릭(ui/pane-interactions.js wireSectionToggle)과 동일한 패턴. 클릭한
     // 헤더 자신의 "다음 상태"를 기준으로 나머지 전체를 맞춘다.
     resultsEl.querySelectorAll(".card-group[data-group-key]").forEach(section => {
       const head = section.querySelector(".card-group__head");

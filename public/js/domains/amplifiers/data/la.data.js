@@ -685,7 +685,7 @@ export const LA_AMPLIFIERS = [
       // [System Elements 연결] l-acoustics.com/products/la-rak-iii/ 제품
       // 페이지의 "System Elements" 목록을 사용자가 채팅으로 제공한 그대로
       // 전량 반영(리깅 3 + 케이블 다수 — 원문:
-      // raw-data/raw-specs/la/accessories/system-elements.md 참고).
+      // raw-data/raw-specs/la/accessories/ 의 rigging.md·cables.md 참고).
       // accessories.data.js 는 길이만 다른 변형을 lengths 배열로 통합해
       // 최상위 레코드 1개로 관리하므로(예: DOE2/45/100 → acc-la-doe),
       // findAccessoryById() 가 최상위 id 로만 조회 가능한 점에 맞춰 여기도

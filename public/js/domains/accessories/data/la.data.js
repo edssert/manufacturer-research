@@ -131,8 +131,8 @@ export const LA_ACCESSORIES = [
     "notes": "Speaker cable: 8 x 4mm² CA-COM",
     // [사용자 제공 사진] 신규 업로드한 케이블 전체 사진(L-ACOUSTICS 각인,
     // 8x4mm² 표기 확인됨)을 메인(Front)으로, 기존 CA-COM 커넥터 단품
-    // 사진을 두번째로 — 원본: raw-data/raw-images/la/accessories/cables/
-    // DO_01.png(신규), CA-COM_Photoroom.png(기존).
+    // 사진을 두번째로 — 원본(DO_01.png / CA-COM_Photoroom.png)은 채팅 업로드본
+    // 이라 MR-Raw-Assets 에 보관돼 있지 않다. 재가공하려면 원본을 다시 받아야 한다.
     "views": [
       { "label": "Front", "src": "public/assets/img/accessories/la/acc-la-do-full.webp" },
       { "label": "Connector", "src": "public/assets/img/accessories/la/acc-la-do.webp" }
@@ -219,8 +219,8 @@ export const LA_ACCESSORIES = [
     "compatibleWith": null, "notes": "Breakout box: SC32 to 2 x CA-COM + 8 x NL4",
     "img": "public/assets/img/accessories/la/acc-la-bob32-front.webp",
     // [사용자 제공 사진] 01 = Front(CA-COM/NL4 출력쪽), 02 = Rear(SC32 입력쪽).
-    // 원본: raw-data/raw-images/la/accessories/cables/BOB32_CA-COM_01.png,
-    // BOB32_SC32_02.png.
+    // 원본: MR-Raw-Assets/la/accessories/web/cables/bob32/overview/
+    // BOB32_CA-COM_01.png, BOB32_SC32_02.png (OneDrive).
     "views": [
       { "label": "Front", "src": "public/assets/img/accessories/la/acc-la-bob32-front.webp" },
       { "label": "Rear", "src": "public/assets/img/accessories/la/acc-la-bob32-rear.webp" }

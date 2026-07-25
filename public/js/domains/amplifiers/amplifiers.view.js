@@ -613,10 +613,9 @@ export function modalBodyHTML(a, resolveSpeakerName, speakerIds, configsBySpeake
     specRow("Usage", a.usage),
   ].join("");
 
-  // Weight/Dimensions — speakers.view.js weightDimsIpRow 와 동일한 kg/lb,
-  // mm/in 토글 패턴(사용자 요청: 스피커와 통일감). 버튼 클릭 배선은
-  // js/ui/modal.js 의 wireDimsUnitSwitch/wireWeightUnitSwitch 가 도메인
-  // 구분 없이 data-attribute 로 공통 처리하므로 마크업만 맞추면 된다.
+  // Weight/Dimensions — speakers.view.js weightDimsIpRow 와 같은 kg/lb·mm/in
+  // 토글 패턴. 버튼 배선은 ui/pane-interactions.js 의 wireDimsUnitSwitch/
+  // wireWeightUnitSwitch 가 data-attribute 로 공통 처리하므로 마크업만 맞추면 된다.
   const weightLbCalc = a.weight != null ? (a.weightLb != null ? a.weightLb : Math.round(a.weight * 2.20462)) : null;
   const weightCell = a.weight != null ? `<div class="spec-table__key-row">
         <div class="spec-table__key">Weight</div>

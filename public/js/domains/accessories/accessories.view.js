@@ -255,7 +255,7 @@ export function modalBodyHTML(a, usedByAmps, usedBySpeakers, related) {
     </div>`;
   // 뷰가 2개 이상(Front/Rear 등)인 액세서리만 전환 버튼을 노출한다 —
   // speakers/amplifiers modalBodyHTML 의 동일 로직 재사용(getViews, 버튼
-  // 클릭 연결은 js/ui/modal.js 의 wireViewSwitch 가 도메인 무관하게 처리).
+  // 클릭 연결은 ui/pane-interactions.js 의 wireViewSwitch 가 도메인 무관 처리).
   const views = getViews(a);
   const viewSlug = label => label.toLowerCase().replace(/[^a-z0-9]+/g, "-");
   // K1-BUMP 처럼 사진 자체가 없는 액세서리는 예전엔 media

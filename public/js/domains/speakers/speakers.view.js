@@ -95,9 +95,10 @@ export function cardHTML(d) {
   const M = MFR[d.mk], color = M.color;
   const p = primaryOf(d);
   // 앰프 칸의 세 상태 구분이 중요하다: 매칭 있음 / Self-Powered / 미지정.
-  // Meyer PANTHER·LEOPARD·TIGRA·LINA 처럼 DSP 앰프를 내장한 모델은 외부 앰프
-  // 매칭이 없는 게 정상 스펙이라, 데이터 미입력을 뜻하는 "— 미지정"으로 보이면
-  // 오해를 준다 — d.selfPowered 가 있으면 "Self-Powered"로 명시한다.
+  // Meyer 파워드 라인(PANTHER·LEOPARD·TIGRA·LINA·MM·LFC·USW·Cinema 전 시리즈)
+  // 처럼 DSP 앰프를 내장한 모델은 외부 앰프 매칭이 없는 게 정상 스펙이라, 데이터
+  // 미입력을 뜻하는 "— 미지정"으로 보이면 오해를 준다 — d.selfPowered 가 있으면
+  // "Self-Powered"로 명시한다.
   // 값 색은 전역 accent 가 아니라 제조사 색(stat-grid__value--mfr).
   const ampBlock = p ? `
     <div class="stat-grid">
@@ -774,14 +775,13 @@ function notesToggleBlockHTML(notes, source, toggleId, speakerId) {
       </div>`;
 }
 
-// Preset Guide와 동급(섹션 레벨) 토글로 "Mechanical Safety"
-// 섹션 추가 — 오너 매뉴얼 "Mechanical safety" 중 그 제품 자체(K1)에
-// 해당하는 부분만(k-series.data.js mechanicalSafety, K1-SB/KS28/CS1 등
-// 다른 제품의 리깅 한계 표는 제외) 표로 정리. Flown/Stacked 두 표는 항상
-// 바로 보이고(matchingRatioHTML/delayDefaultsHTML 같은 별도 섹션 토글과는
-// 달리 이 안에서는 하위 구분만 함, section-label--sub), 경고문+참고 사항은
-// 표 아래 별도 토글로 접어둔다 — 텍스트 설명이 길어도 참고 사항 토글 뒤에
-// 가려지므로 누락 없이 전부 옮겨 담는다.
+/**
+ * "Mechanical Safety" 섹션 — 오너 매뉴얼의 리깅 한계 표.
+ * **각 레코드에는 그 제품 자신의 한계만 담는다** — 매뉴얼 한 권이 여러 제품의
+ * 표를 함께 싣는 경우가 많은데, 그걸 다 옮기면 다른 제품 수치가 이 제품 것으로
+ * 읽힌다. Flown/Stacked 두 표는 이 섹션을 열면 바로 보이고(하위 구분만),
+ * 경고문·참고 사항은 그 아래 별도 토글로 접는다.
+ */
 function mechanicalSafetyHTML(d) {
   const ms = d.mechanicalSafety;
   if (!ms) return "";
