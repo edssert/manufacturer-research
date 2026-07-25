@@ -1,6 +1,7 @@
 node_modules/
 
-# Visual ZIP 원본은 git이 아니라 OneDrive 03.Resources에 보관 (용량 큼)
-# → C:\Users\User\OneDrive\00.Workspace\03.Resources\L-Acoustics-Visual-ZIPs
+# 제품 사진 원본은 git이 아니라 OneDrive에 보관한다 (repo에는 public/assets/ 의
+# 최종 가공본만 둔다) → C:\Users\User\OneDrive\00.Workspace\03.Resources\MR-Raw-Assets
+raw-data/raw-images/
 raw-data/**/*.zip
 _imgwork/

@@ -22,8 +22,11 @@ docx 안에 Focus/Wide 두 제품이 함께 수록)는 그 md들과 원본을 �
 둔다. 폴더로 옮긴 뒤에는 다른 파일(data.js 등)의 개발 주석에 적힌 경로
 문자열도 실제 이동한 경로로 함께 갱신한다.
 
-## 원본 이미지 아카이빙 (필수)
-제품 사진 원본 수신 시: `raw-data/raw-images/<mk>/speakers/<series>/`에 원본 그대로 보관한다.
+## 원본 이미지는 repo 밖에 보관 (필수)
+제품 사진 원본은 git에 커밋하지 않는다. 보관처는 OneDrive
+`C:\Users\User\OneDrive\00.Workspace\03.Resources\MR-Raw-Assets\` 하나이며,
+구조와 수집 방법은 그 폴더의 `README.md`를 따른다. repo에는
+`public/assets/img/…`의 최종 가공본(투명 PNG)만 둔다.
 
 ## Changelog/데이터 파싱은 이 프로젝트 담당 아님 (필수)
 버전 변경 이력(changelog) 업데이트와 원본 스펙(PDF/docx 등) 파싱 작업은

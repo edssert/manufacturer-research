@@ -37,8 +37,11 @@ public/css/           tokens → … → components 순 로드
 public/assets/        웹폰트·제품 이미지(webp)
 public/tests/         node 테스트 3종
 raw-data/raw-specs/   제조사 원문 스펙 보관(md + 원본 pdf/docx)
-raw-data/raw-images/  원본 사진 아카이브
 ```
+
+제품 사진 **원본은 repo에 두지 않는다** — OneDrive
+`03.Resources\MR-Raw-Assets\` 에만 보관하고, repo 에는 `public/assets/` 의
+최종 가공본(투명 PNG)만 둔다.
 
 상세 구조·데이터 흐름·URL 라우팅 설계는 `docs/ARCHITECTURE.md` 참고.
 
@@ -50,15 +53,13 @@ raw-data/raw-images/  원본 사진 아카이브
    `data.js` 에 구조화 반영. md 옆에 원본 파일이 함께 있으면 제품 전용
    폴더 `<모델>/` 로 묶는다(원본 없는 역재구성 md 는 폴더화하지 않음).
    폴더 이동 시 다른 파일 주석의 경로 문자열도 함께 갱신.
-2. **원본 이미지 아카이빙 (필수)** — 제품 사진 원본 수신 시
-   `raw-data/raw-images/<제조사>/<카테고리>/<시리즈>/<모델>/` 에 원본 그대로
-   보관하되 **출처별 하위폴더로 구분**한다: `visuals-zip/`(제조사 공식 ZIP
-   압축해제본) · `web-overview/`(제품페이지 렌더) · `processed/`(누끼 가공
-   중간본). 상세·판별기준은 `raw-data/raw-images/la/speakers/README.md`.
-   용량 큰 ZIP 원본은 git 아닌 OneDrive `03.Resources\L-Acoustics-Visual-ZIPs\`
-   에 보관(`.gitignore` 로 `raw-data/**/*.zip` 제외). 웹 표시용은 **공식
-   원본 기반 투명 PNG(누끼·그림자 제거)** 로 `public/assets/img/…` 에 배치
-   (구 webp 대체 완료).
+2. **원본 이미지는 repo 밖(OneDrive)에 보관 (필수)** — 제품 사진 원본은
+   git 에 넣지 않는다. 보관처는 OneDrive
+   `03.Resources\MR-Raw-Assets\<제조사>\…` 하나이며, 출처별로
+   `doc-center-zips/`(문서센터 ZIP 원본) · `doc-center-extracted/`(그
+   압축해제본) · `web/`(사이트 대표사진·오버뷰 뷰) 로 나눈다. 구조·수집
+   방법·판별기준은 그 폴더의 `README.md`. repo 에는 **최종 가공본(투명 PNG,
+   누끼·그림자 제거)** 만 `public/assets/img/…` 에 둔다.
 3. **출처 기록 + 교차검증 필수** — 스펙 수치는 출처를 md 에 남기고, 출처
    간 불일치는 확정 근거를 기록한다.
 4. **데이터만 추가하면 UI 는 자동** — 카드/필터/모달은 data.js 를 읽어
