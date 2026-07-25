@@ -57,7 +57,12 @@ export function passes(item, state, schema, except) {
     const set = state.chipFilters[cf.key];
     if (set && set.size) {
       const v = resolvePath(item, cf.key);
-      if (!set.has(String(v))) return false;
+      // 값이 배열이면 "하나라도 선택된 칩과 겹치면 통과" — 한 항목이 여러
+      // 분류에 동시에 속하는 경우(예: 소프트웨어 type). 스칼라면 기존과 동일.
+      const hit = Array.isArray(v)
+        ? v.some(x => set.has(String(x)))
+        : set.has(String(v));
+      if (!hit) return false;
     }
   }
   // 3) 범위 필터 (값이 null 인 항목은 통과 — 데이터 미입력을 배제하지 않음)

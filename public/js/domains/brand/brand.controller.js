@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @module domains/brand/controller
  * Brand 탭 컨트롤러 — 카드/모달 없이, 한 번에 브랜드 하나의 전체 페이지
  * 섹션만 보여준다. [사용자 요청] 브랜드를 전부 세로로 나열하던 이전 방식
@@ -14,6 +14,7 @@ import { $, esc } from "../../core/dom.js";
 import { registerDomain } from "../../core/router.js";
 import { refreshNavCounts } from "../../ui/nav.js";
 import { renderLegend } from "../../ui/legend.js";
+import { clearSectionNav } from "../../ui/section-nav.js";
 
 import { BRANDS } from "./brand.data.js";
 import { BRAND_MFR, BRAND_MK_ORDER } from "./brand.schema.js";
@@ -30,6 +31,9 @@ let historyDescending = false;
 
 /** 탭 활성화: 최초 1회 UI 빌드 후 렌더 */
 function mountBrand() {
+  // 이 탭은 renderGrid(섹션 그리드)를 쓰지 않으므로 좌측 섹션 레일을 비운다 —
+  // 그리드 탭들은 renderGrid 가 매 렌더마다 알아서 다시 채운다.
+  clearSectionNav();
   renderLegend(BRANDS, BRAND_MK_ORDER, BRAND_MFR, d => d.mfr);
   const wrap = $("#view-brand");
   wrap.hidden = false;

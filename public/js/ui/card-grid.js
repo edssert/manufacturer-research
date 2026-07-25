@@ -9,6 +9,7 @@
 import { $, esc, uniq } from "../core/dom.js";
 import { passes, sortItems } from "../core/filter-engine.js";
 import { updateChipDisabledStates } from "./filters.js";
+import { buildSectionNav } from "./section-nav.js";
 
 /**
  * [사용자 요청] 그룹(제조사>타입/시리즈) 섹션을 접었다 펼 수 있게 — 모든
@@ -54,15 +55,22 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
       <button class="btn btn--primary" id="reset2">필터 초기화</button>
     </div>`;
     resultsEl.querySelector("#reset2").onclick = schema.onReset;
+    buildSectionNav(null);
     return;
   }
 
   // ── 그룹형(제조사 > 시리즈) 또는 평면 그리드 렌더링 ──
   if (groupBy) {
     let html = "";
-    const groupOrder = groupBy.order ? groupBy.order.filter(k => view.some(d => groupBy.getKey(d) === k)) : uniq(view.map(groupBy.getKey));
+    // getKey 가 배열을 반환하면 그 항목은 여러 그룹에 동시에 속한다 — 기능이
+    // 겹치는 제품을 두 섹션에 모두 노출하기 위함(예: 소프트웨어 type).
+    const keysOf = d => { const k = groupBy.getKey(d); return Array.isArray(k) ? k : [k]; };
+    const inGroup = (d, gk) => keysOf(d).some(k => k === gk);
+    const groupOrder = groupBy.order
+      ? groupBy.order.filter(k => view.some(d => inGroup(d, k)))
+      : uniq(view.flatMap(keysOf));
     groupOrder.forEach(gk => {
-      const items = view.filter(d => groupBy.getKey(d) === gk);
+      const items = view.filter(d => inGroup(d, gk));
       if (!items.length) return;
       let sub = groupBy.subGroupKey
         ? uniq(items.map(groupBy.subGroupKey))
@@ -130,4 +138,8 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
   if (filterPanelEl) {
     updateChipDisabledStates(filterPanelEl, data, state, schema, (d, except) => passes(d, state, schema, except));
   }
+
+  // ── 좌측 섹션 내비게이션(스크롤스파이) 재구성 ──
+  // 이 함수가 결과 영역을 통째로 다시 그리므로 매 렌더마다 갱신해야 한다.
+  buildSectionNav(resultsEl);
 }

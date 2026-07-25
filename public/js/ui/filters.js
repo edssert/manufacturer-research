@@ -90,13 +90,20 @@ export function buildFilters(panelEl, data, state, schema, onChange) {
     row.innerHTML = `<div class="filter-panel__label">${esc(cf.label)}</div><div class="chip-group" id="f-${cf.key}"></div>`;
     panelEl.appendChild(row);
     const chipsEl = row.querySelector(".chip-group");
+    // 값이 배열이면 원소 각각을 개별 칩 값으로 본다 — 한 항목이 여러 분류에
+    // 동시에 속하는 경우(예: 소프트웨어 type). 스칼라면 기존과 동일.
+    const has = (d, v) => {
+      const x = resolve(d, cf.key);
+      return Array.isArray(x) ? x.some(e => String(e) === String(v)) : String(x) === String(v);
+    };
     // cf.order 가 있으면 그 순서대로, 없으면 데이터에서 발견한 값을 정렬해 사용
     const values = cf.order
-      ? cf.order.filter(v => data.some(d => String(resolve(d, cf.key)) === String(v)))
-      : uniq(data.map(d => resolve(d, cf.key))).filter(v => v != null).sort();
+      ? cf.order.filter(v => data.some(d => has(d, v)))
+      : uniq(data.flatMap(d => { const x = resolve(d, cf.key); return Array.isArray(x) ? x : [x]; }))
+          .filter(v => v != null).sort();
     values.forEach(v => {
       const label = cf.labelFor ? cf.labelFor(v) : String(v);
-      const count = data.filter(d => String(resolve(d, cf.key)) === String(v)).length;
+      const count = data.filter(d => has(d, v)).length;
       chipsEl.appendChild(chipEl(label, String(v), state.chipFilters[cf.key], count, onChange));
     });
   });

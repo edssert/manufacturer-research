@@ -1,0 +1,116 @@
+/* ============================================================
+   블록: section-nav (화면 왼쪽 섹션 내비게이션 · 스크롤스파이)
+   JS: js/ui/section-nav.js
+   본문(.content-wrap max-width 1320px)은 가운데 정렬이라 넓은 화면에서만
+   양옆에 여백이 생긴다 — 레일은 position:fixed 로 띄우되 본문과 겹치지
+   않도록 여백이 확보되는 폭에서만 표시한다.
+   ============================================================ */
+.section-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  /* 본문 좌측 여백의 중앙에 놓는다: (100vw - 1320px) / 2 안쪽 */
+  left: calc((100vw - 1320px) / 2 - 208px);
+  width: 192px;
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 20;
+  display: none;
+  scrollbar-width: thin;
+}
+
+/* 레일(192) + 간격(16)이 양쪽에 들어갈 만큼 넓을 때만 노출 */
+@media (min-width: 1760px) {
+  .section-nav:not([hidden]) { display: block; }
+}
+
+.section-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid var(--line);
+}
+
+.section-nav__link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 6px;
+  padding: 7px 10px 7px 12px;
+  margin-left: -1px;
+  border-left: 2px solid transparent;
+  color: var(--text-dim);
+  font-size: 12.5px;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: color .18s, border-color .18s;
+}
+
+.section-nav__link:hover { color: var(--text); }
+
+/* [사용자 요청] 지금 보고 있는 "정확한 위치" 하나만 굵게 강조한다 — 상위
+   제조사 링크를 항상 굵게 두면 활성 항목과 강조가 겹쳐 어디를 보고 있는지
+   흐려진다. 계층은 굵기가 아니라 들여쓰기로 드러낸다. */
+.section-nav__link--active {
+  color: var(--text);
+  border-left-color: var(--accent);
+  font-weight: 600;
+}
+
+/* [사용자 요청] 말줄임 대신 여러 줄로 흘려 섹션 이름을 온전히 보여준다. */
+.section-nav__title {
+  flex: 1 1 100%;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- 제조사별 보기: 제조사만 보이고 하위 분류는 호버로 펼침 ----------
+   [사용자 요청] 제조사별 보기에서는 목록이 제조사 > 분류로 잘게 나뉘어
+   길어진다 — 제조사만 내놓고 하위 분류는 마우스를 올렸을 때(또는 그 그룹
+   안의 섹션을 보고 있을 때) 펼친다.
+   grid-template-rows 0fr→1fr 은 내용 높이를 몰라도 auto 높이로 부드럽게
+   전개된다(max-height 어림값 불필요). 모션 토글이 켜지면 base.css 의
+   전역 규칙이 이 transition 도 함께 끈다. */
+/* 제조사(상위) 링크는 굵기로 구분하지 않는다 — 굵기는 활성 표시 전용. */
+.section-nav__link--group { letter-spacing: .01em; }
+
+/* [사용자 요청] 스크롤 중 활성 섹션이 바뀔 때마다 그룹이 접혔다 펼쳐지면
+   레일 높이가 출렁여 "움찔"거린다 — 펼침은 호버(및 키보드 포커스)와
+   자동펼침(--expanded)만 좌우하고, 활성 그룹은 레이아웃을 건드리지 않는
+   강조로만 표시한다. */
+.section-nav__sub-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .22s ease;
+}
+.section-nav__group:hover .section-nav__sub-wrap,
+.section-nav__group:focus-within .section-nav__sub-wrap,
+.section-nav--expanded .section-nav__sub-wrap { grid-template-rows: 1fr; }
+
+/* 측정 중에는 애니메이션을 꺼 중간 높이가 잡히지 않게 한다(applyAutoExpand). */
+.section-nav--measuring .section-nav__sub-wrap { transition: none; }
+
+/* 접혀 있을 때만 상위 제조사에 위치 힌트를 남긴다 — 펼쳐져 있으면 활성
+   항목 자체가 보이므로 상위까지 강조하면 "정확한 위치"가 흐려진다.
+   굵기는 쓰지 않고 좌측 선만(활성 항목과 구분되게 옅게). */
+.section-nav__group--active > .section-nav__link--group {
+  border-left-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.section-nav--expanded .section-nav__group--active > .section-nav__link--group,
+.section-nav__group--active:hover > .section-nav__link--group,
+.section-nav__group--active:focus-within > .section-nav__link--group {
+  border-left-color: transparent;
+}
+
+.section-nav__sub {
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section-nav__link--sub {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 24px;
+  font-size: 12px;
+}

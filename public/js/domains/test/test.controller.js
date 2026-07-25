@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @module domains/test/controller
  * [사용자 요청] "카드/모달의 각 부분이 실제로 어떤 클래스명/명칭에 대응하는지"
  * 확인하기 위한 개발용 라벨링 탭. 실제 제품 데이터 대신 더미 플레이스홀더
@@ -10,6 +10,7 @@
 import { $ } from "../../core/dom.js";
 import { registerDomain } from "../../core/router.js";
 import { openModalWith } from "../../ui/modal.js";
+import { clearSectionNav } from "../../ui/section-nav.js";
 import { cardHTML as speakerCardHTML, modalBodyHTML as speakerModalBodyHTML } from "../speakers/speakers.view.js";
 
 // 더미 샘플 레코드: 실제 제품 데이터가 아니라 "이 값이 화면 어디에
@@ -74,6 +75,8 @@ function tag(text, pos) {
 }
 
 function mountTest() {
+  // renderGrid 를 쓰지 않는 탭이므로 좌측 섹션 레일을 비운다(brand 와 동일).
+  clearSectionNav();
   const wrap = $("#view-test");
   wrap.hidden = false;
   if (!wrap.dataset.built) {
