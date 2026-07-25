@@ -22,12 +22,11 @@ import { ACCESSORIES } from "./accessories.data.js";
 import { accessoriesSchema, ACC_MK_ORDER, ACC_MFR } from "./accessories.schema.js";
 import { cardHTML as accCardHTML, modalBodyHTML as accModalBodyHTML, panePropsFor as accessoryPaneProps } from "./accessories.view.js";
 
-// 액세서리 모달에서도 "이 부속품을 어떤 랙 앰프가 쓰는지"
-// 역방향으로 보여주기 위해 앰프 모달 함수를 재사용 — 순수 뷰 함수와 색상
-// 맵만 import(amplifiers.controller.js 미참조, 순환 의존 방지는 speakers/
-// amplifiers 가 서로를 참조하는 기존 패턴과 동일). 앰프 레코드 자체는
-// cross-ref.findAmplifierById() 로 조회하고 amplifiers.data.js 는 직접
-// import 하지 않는다(다른 도메인 데이터 모듈을 직접 참조하지 않는 원칙).
+// 액세서리 모달에서 "이 부속품을 어떤 랙 앰프가 쓰는지"를 역방향으로 보여주기
+// 위해 앰프 모달 함수를 재사용한다. 순수 뷰 함수와 색상 맵만 가져오고
+// controller 는 참조하지 않는다(순환 의존 방지 — speakers/amplifiers 가 서로를
+// 참조하는 기존 패턴과 동일). 앰프 레코드 조회도 cross-ref.findAmplifierById()
+// 를 거친다 — 다른 도메인의 데이터 모듈을 직접 import 하지 않는다는 원칙.
 import { AMP_MFR } from "../amplifiers/amplifiers.schema.js";
 import { modalBodyHTML as amplifierModalBodyHTML } from "../amplifiers/amplifiers.view.js";
 

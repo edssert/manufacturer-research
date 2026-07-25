@@ -45,25 +45,28 @@ const wattPct = v => wattPctFrom0(v, WATT_RANGE);
 const rackWattPct = v => wattPctFrom0(v, WATT_RANGE_RACK);
 
 /**
- * "N x W" 형식의 채널당 정격("16 x 160 W")에서 4Ω 기준 총 와트를 얻는다.
- * output.power4ohms 우선, 없으면 powerByOhm 의 "4 Ω" 항목.
+ * 카드 와트 게이지에 표시할 총 와트.
  *
- * **주의: 단순 곱셈(채널당 정격 × 채널 수)이라 실제로 모든 채널을 동시에 그
- * 값으로 구동 가능한지는 보장하지 않는다**(파워서플라이 정격 등). 카드·게이지
- * 모두 참고용 비교 지표라는 전제. 검증된 공식 Total 값을 가진 앰프가 확인되면
- * output.powerTotal 을 우선하도록 바꿀 것.
+ * **기준 임피던스가 앰프마다 다르다** — 이름에 4Ω 를 넣지 않은 이유다.
+ * 대부분은 4Ω 채널당 정격("16 x 160 W")을 채널 수와 곱한 값이지만, 채널당
+ * 정격이 없는 LA-RAK 계열은 제조사 총합 원문(8Ω·2.7Ω 기준)을 그대로 쓴다.
+ * 그래서 이 값에 "@4Ω" 같은 라벨을 붙이면 랙에서 틀린 표기가 된다 — 기준
+ * 임피던스는 카드 Output 칸의 배지가 각 앰프의 실제 값으로 보여준다.
+ * 랙과 일반 앰프는 게이지 스케일도 분리돼 서로 비교되지 않는다.
+ *
+ * **주의: 단순 곱셈이라 모든 채널을 동시에 그 값으로 구동 가능한지는 보장하지
+ * 않는다**(파워서플라이 정격 등). 참고용 비교 지표라는 전제. 검증된 공식 Total
+ * 값을 가진 앰프가 확인되면 output.powerTotal 을 우선하도록 바꿀 것.
  * @param {Object} a 앰프 레코드
- * @returns {number|null} 4Ω 기준 채널당×채널수 총 와트
+ * @returns {number|null} 게이지용 총 와트 (기준 임피던스는 앰프마다 다름)
  */
-export function totalWatt4Ohm(a) {
+export function gaugeTotalWatt(a) {
   const raw = output4OhmRaw(a);
   if (raw) {
     const m = String(raw).match(/(\d+(?:\.\d+)?)\s*x\s*(\d+(?:\.\d+)?)/i);
     if (m) return parseFloat(m[1]) * parseFloat(m[2]);
   }
-  // LA-RAK 계열은 채널당 정격이 없고 powerTotal 이 총합("Up to 62,400 W at 8
-  // ohms")으로만 주어져 위 계산이 안 된다 — 그 숫자를 대신 쓴다. 기준
-  // 임피던스는 카드 Output 배지가 표시하므로 게이지는 총량 참고 지표로 둔다.
+  // LA-RAK 계열 폴백 — 총합 원문("Up to 62,400 W at 8 ohms")의 숫자를 쓴다.
   const total = a.output && a.output.powerTotal;
   if (total) {
     const m = String(total).replace(/,/g, "").match(/(\d+(?:\.\d+)?)\s*W/i);
@@ -74,7 +77,7 @@ export function totalWatt4Ohm(a) {
 
 /**
  * output.power4ohms(없으면 powerByOhm 의 "4 Ω" 항목)에서 원본 문자열을
- * 그대로 읽는다 — totalWatt4Ohm(게이지용 숫자)과 output4OhmLabel(카드
+ * 그대로 읽는다 — gaugeTotalWatt(게이지용 숫자)과 output4OhmLabel(카드
  * 표기용 문자열)이 같은 원본을 공유하도록 분리한 헬퍼.
  * @param {Object} a 앰프 레코드
  * @returns {string|null}
@@ -168,8 +171,6 @@ function cardArchitectureLabel(architecture) {
  * 같은 원칙이다. "몇 개 스피커와 호환되는가"는 매칭 데이터가 갱신될 때마다
  * 바뀌는 부가 지표라 카드가 아니라 모달에 둔다. 대신 앰프 자체 스펙인 채널
  * 수를 노출한다.
- * configs 가 빈 앰프(매칭 미입력)는 Max Total/Modes 대신 일반 스펙을 보여줘
- * 카드가 빈 값으로 남지 않게 한다.
  * @param {Object} a 앰프 레코드
  * @returns {string} .card 마크업
  */
@@ -203,7 +204,7 @@ export function cardHTML(a) {
   // 별도 스케일(WATT_RANGE_RACK)을 쓰고 --rack 변경자로 바 색도 달리해 "다른
   // 기준"임을 드러낸다.
   const isRack = a.type === "Rack";
-  const watt4 = totalWatt4Ohm(a);
+  const watt4 = gaugeTotalWatt(a);
   const wattPercent = watt4 == null ? 0 : (isRack ? rackWattPct(watt4) : wattPct(watt4));
   const wattMeter = `<div class="spl-meter${isRack ? " spl-meter--rack" : ""}"><div class="spl-meter__track"><div class="spl-meter__fill" style="width:${wattPercent}%"></div></div><div class="spl-meter__value">${watt4 != null ? watt4 : "—"}<small>W</small></div></div>`;
   return `<article class="card" style="--mfr:${color}" tabindex="0" data-id="${a.id}" role="button" aria-label="${esc(a.model)} 상세">

@@ -16,7 +16,7 @@ import { registerAmplifiers, resolveAmpIdForModel, findSpeakerById, findSpeakers
 
 import { AMPLIFIERS } from "./amplifiers.data.js";
 import { amplifiersSchema, AMP_MFR, AMP_MK_ORDER, compareModel } from "./amplifiers.schema.js";
-import { cardHTML as ampCardHTML, modalBodyHTML as ampModalBodyHTML, setWattRange, setRackWattRange, totalWatt4Ohm } from "./amplifiers.view.js";
+import { cardHTML as ampCardHTML, modalBodyHTML as ampModalBodyHTML, setWattRange, setRackWattRange, gaugeTotalWatt } from "./amplifiers.view.js";
 
 // 앰프 모달 안에서 스피커 칩을 클릭하면 Split View pane 2 에 스피커 상세를
 // 띄운다. 스피커의 "순수 뷰 함수"와 색상 맵만 import (controller 미참조).
@@ -48,8 +48,8 @@ function syncMatchedSpeakerIds() {
  * 짧아 보인다 — type:"Rack" 기준으로 스케일을 분리한다.
  */
 function setWattScales() {
-  const standaloneVals = AMPLIFIERS.filter(a => a.type !== "Rack").map(totalWatt4Ohm).filter(x => x != null);
-  const rackVals = AMPLIFIERS.filter(a => a.type === "Rack").map(totalWatt4Ohm).filter(x => x != null);
+  const standaloneVals = AMPLIFIERS.filter(a => a.type !== "Rack").map(gaugeTotalWatt).filter(x => x != null);
+  const rackVals = AMPLIFIERS.filter(a => a.type === "Rack").map(gaugeTotalWatt).filter(x => x != null);
   if (standaloneVals.length) setWattRange(Math.floor(Math.min(...standaloneVals)), Math.ceil(Math.max(...standaloneVals)));
   if (rackVals.length) setRackWattRange(Math.floor(Math.min(...rackVals)), Math.ceil(Math.max(...rackVals)));
 }
