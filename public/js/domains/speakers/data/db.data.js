@@ -7,13 +7,33 @@ import { DB_T_SERIES } from "./db/t-series.data.js";
 import { DB_AL_SERIES } from "./db/al-series.data.js";
 import { DB_SL_I_SERIES } from "./db/sl-i-series.data.js";
 import { DB_CL_I_SERIES } from "./db/cl-i-series.data.js";
+import { DB_Y_SERIES } from "./db/y-series.data.js";
+import { DB_Y_I_SERIES } from "./db/y-i-series.data.js";
+import { DB_E_SERIES } from "./db/e-series.data.js";
+import { DB_U_SERIES } from "./db/u-series.data.js";
+import { DB_U_I_SERIES } from "./db/u-i-series.data.js";
+import { DB_XS_SERIES } from "./db/xs-series.data.js";
+import { DB_XS_I_SERIES } from "./db/xs-i-series.data.js";
+import { DB_XC_SERIES } from "./db/xc-series.data.js";
+import { DB_MONITORS } from "./db/monitors.data.js";
+import { DB_SUBWOOFERS } from "./db/subwoofers.data.js";
 
 export const DB_SPEAKERS = [
   ...DB_SL_SERIES,
   ...DB_SL_I_SERIES,
+  ...DB_V_SERIES,
+  ...DB_Y_SERIES,
+  ...DB_Y_I_SERIES,
+  ...DB_T_SERIES,
   ...DB_CL_SERIES,
   ...DB_CL_I_SERIES,
-  ...DB_V_SERIES,
-  ...DB_T_SERIES,
   ...DB_AL_SERIES,
+  ...DB_XS_SERIES,
+  ...DB_XS_I_SERIES,
+  ...DB_XC_SERIES,
+  ...DB_E_SERIES,
+  ...DB_U_SERIES,
+  ...DB_U_I_SERIES,
+  ...DB_MONITORS,
+  ...DB_SUBWOOFERS,
 ];

@@ -31,12 +31,23 @@ export const THROWCAT_ORDER = ["Long Throw", "Medium Throw", "Short Throw"];
 // 순서로 명시 지정: PANTHER(68kg) > TIGRA(54kg) > LEOPARD(34kg) > LINA(19.5kg).
 // 정렬은 제조사(mk) 그룹 안에서만 비교되므로 값은 제조사별 상대 순서만 의미가
 // 있다. d&b: 대형 라인어레이(SL) → V → T → 컬럼(CL) → 증강(AL). Meyer: 라인어레이
-// 4종을 체급 순(PANTHER>TIGRA>LEOPARD>LINA)으로 둔 뒤 서브우퍼 계열(MM/LFC/USW/
-// Cinema)을 뒤에 배치.
+// 4종을 체급 순(PANTHER>TIGRA>LEOPARD>LINA)으로 둔 뒤 포인트소스·모니터
+// (ULTRA-X/UP/Ashby/MJF), 그다음 서브우퍼 계열(MM/LFC/USW/Cinema)을 배치.
+// 값은 제조사 그룹 안에서만 비교되므로 제조사별로 번호 블록을 나눠 둔다
+// (d&b 0번대 / Meyer 100번대) — 서로 다른 제조사끼리 번호가 겹쳐도 정렬에는
+// 영향이 없지만, 블록을 분리해 둬야 시리즈를 추가할 때 남의 번호를 건드리지
+// 않는다. d&b 는 라인어레이 체급 순(SL>V>Y>T) 뒤에 컬럼·설치형·모니터·서브를 둔다.
 export const SERIES_ORDER_OVERRIDE = {
-  "SL Series": 0, "V Series": 1, "T Series": 2, "CL Series": 3, "AL Series": 4,
-  "PANTHER Series": 5, "TIGRA Series": 6, "LEOPARD Series": 7, "LINA Series": 8,
-  "MM Series": 9, "LFC Series": 10, "USW Series": 11, "Cinema Series": 12,
+  "SL Series": 0, "V Series": 1, "Y Series": 2, "T Series": 3, "CL Series": 4,
+  "AL Series": 5, "xS Series": 6, "xC Series": 7, "E Series": 8, "U Series": 9,
+  "Monitors": 10,
+  // "Subwoofers"(d&b B22, L-Acoustics KS/SB 계열)는 일부러 넣지 않는다 —
+  // 시리즈명이 두 제조사에 공통이라 여기 넣으면 L-Acoustics 쪽 "Subwoofers"
+  // 까지 override 를 받아 맨 앞으로 튀어나온다(override 있는 쪽이 항상 우선).
+  // 빼 두면 throwCat 없는 시리즈로 취급돼 양쪽 모두 자연히 맨 뒤로 간다.
+  "PANTHER Series": 100, "TIGRA Series": 101, "LEOPARD Series": 102, "LINA Series": 103,
+  "ULTRA-X Series": 104, "UP Series": 105, "Ashby Series": 106, "MJF Series": 107,
+  "MM Series": 108, "LFC Series": 109, "USW Series": 110, "Cinema Series": 111,
 };
 export const WAY_ORDER = ["2-way", "3-way", "16-channel", "N/A"];
 export const NETWORK_ORDER = ["Active", "Passive", "Hybrid"];
@@ -54,6 +65,11 @@ export const LOW_UNIT_CONFIG_ORDER = ["Single", "Dual", "Multi"];
 // (the generic filter engine only knows how to read flat fields, not parse strings).
 export function normalizeCrossover(speakers) {
   speakers.forEach(d => {
+    // 스펙 조사 전(pending, 이미지만 등록됨) 항목은 crossover 가 비어 있는데,
+    // 아래 기본값이 network 를 "Passive" 로 단정해 버려 조사도 안 한 제품이
+    // Network 칩 필터에 Passive 로 잡히는 문제가 있다 — 파생 태그를 아예
+    // 남기지 않아 칩 수집(filter-engine 이 null 은 건너뜀) 대상에서 빠지게 한다.
+    if (d.pending) { d.wayCount = null; d.network = null; return; }
     const cx = (d.crossover || "").toLowerCase();
     let wayCount = "N/A";
     if (cx.includes("16-channel")) wayCount = "16-channel";
@@ -77,6 +93,7 @@ export function normalizeCrossover(speakers) {
 // same pattern/timing as normalizeCrossover (called once at load time).
 export function normalizeLowUnitConfig(speakers) {
   speakers.forEach(d => {
+    if (d.pending) { d.lowUnitConfig = null; return; }  // normalizeCrossover 와 같은 이유
     const q = d.lowQty;
     let cfg = "N/A";
     if (q === 1) cfg = "Single";

@@ -167,7 +167,7 @@ export function cardHTML(d) {
         <div class="card__name">${esc(d.name)}</div>
         ${nameRowHTML}
       </div>
-      <div class="card__config">${cfg}${configRowHTML}</div>
+      <div class="card__config">${d.pending ? '<span class="hint-text">스펙 조사 전 — 이미지만 등록됨</span>' : `${cfg}${configRowHTML}`}</div>
       <div class="spl-meter"><div class="spl-meter__track"><div class="spl-meter__fill" style="width:${d.spl != null ? splPct(d.spl) : 0}%"></div></div><div class="spl-meter__value">${d.spl != null ? d.spl : "—"}<small>dB SPL</small></div></div>
       <div class="card__stats">${ampBlock}</div>
     </div>
@@ -1178,8 +1178,14 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
   const footnoteHTML = footnotes.length
     ? `<div class="footnote">${footnotes.map((n, i) => `<div>${i + 1}. ${esc(n)}</div>`).join("")}</div>`
     : "";
+  // 스펙 조사 전(이미지만 등록된) 제품은 표가 전부 "—" 로만 채워져 오해를
+  // 부르므로, software 도메인과 동일한 안내 문구를 표 위에 먼저 둔다.
+  const pendingNote = d.pending
+    ? `<p class="hint-text" style="margin-bottom:12px">스펙 조사 전입니다 — 현재는 제조사 홈페이지 이미지만 등록돼 있습니다.</p>`
+    : "";
   const body = `${media}
     <div class="modal__body" id="modal-body-main">
+      ${pendingNote}
       ${systemElementsHTML(relatedAccessories)}
       ${specSectionHTML("Acoustical", acousticalRows)}
       ${specSectionHTML("General", generalRows)}

@@ -397,5 +397,43 @@ export const DB_CL_SERIES = [
   "mechanicalSafety": null,
   "presets": null,
   "cardioidCapability": "No"
+},
+// ── 아래부터는 스펙 조사 전(pending) — 제조사 공식 이미지만 등록된 항목이다.
+// 스펙 필드는 전부 null/빈 배열이며 파생 태그(wayCount/network/lowUnitConfig)는
+// normalize* 가 pending 을 건너뛰어 생성되지 않는다. 조사가 끝나면 이 주석 위쪽
+// 항목들과 같은 형태로 값을 채우고 pending 플래그를 지운다.
+{
+  "id": "spk-db-b12-sub",
+  "mfr": "d&b audiotechnik",
+  "mk": "db",
+  "name": "B12-SUB",
+  "series": "CL Series",
+  "throwCat": null,
+  "type": null,
+  "throw": null,
+  "lowInch": null,
+  "lowQty": null,
+  "crossover": null,
+  "crossoverTags": [],
+  "spl": null,
+  "cov": null,
+  "freqs": [],
+  "weight": null,
+  "transducers": null,
+  "connectors": null,
+  "ip": null,
+  "dims": null,
+  "amps": [],
+  "ampRaw": null,
+  "notes": null,
+  "img": "public/assets/img/speakers/db/cl/spk-db-b12-sub.png",
+  "relations": {
+    "ampIds": []
+  },
+  "watt": null,
+  "mechanicalSafety": null,
+  "presets": null,
+  "cardioidCapability": null,
+  "pending": true
 }
 ];

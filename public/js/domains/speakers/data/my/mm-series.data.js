@@ -173,5 +173,76 @@ export const MY_MM_SERIES = [
     "watt": 440,
     "wattByBand": null,
     "notes": "Self-powered miniature subwoofer — 앰프/DSP 는 유닛에 내장(single-channel, 440 W peak)하되 전원은 외부 48 V DC 로 공급받는 DC-powered variant. 외부 Meyer Sound MPS IntelligentDC 파워서플라이(MPS-488HP/MPS-482HP)가 전원+오디오를 단일 5핀 케이블로 공급 — 외장 '앰프'가 아니라 외장 '전원'이므로 self-powered 분류 유지(원문 근거). UL 2043(공조 공간 사용 적합) 인증은 XP 모델 전용. Max SPL 실측값은 원문에 없음 — Linear Peak SPL 최댓값 채택: 118.5 dB (M-noise, crest factor > 11 dB) / 117.5 dB (Pink noise) / 120.5 dB (B-noise). 3개 모델 중 최경량(12.11 kg)."
+  },
+  // ── 아래부터는 스펙 조사 전(pending) — 제조사 공식 이미지만 등록된 항목이다.
+  // MM-4XP/MM-4XPD 는 제조사 분류상 Point Source 지만, 앱에서는 이미 있는
+  // MM(MicroMonitor) 명명 계열로 묶어 같은 MM Series 에 둔다.
+  {
+    "id": "spk-my-mm-4xp",
+    "mfr": "Meyer Sound",
+    "mk": "my",
+    "name": "MM-4XP",
+    "cardioidCapability": null,
+    "series": "MM Series",
+    "throwCat": null,
+    "type": null,
+    "throw": null,
+    "lowInch": null,
+    "lowQty": null,
+    "crossover": null,
+    "crossoverTags": [],
+    "spl": null,
+    "cov": null,
+    "freqs": [],
+    "weight": null,
+    "transducers": null,
+    "connectors": null,
+    "ip": null,
+    "dims": null,
+    "amps": [],
+    "selfPowered": null,
+    "ampRaw": null,
+    "img": "public/assets/img/speakers/my/mm-series/spk-my-mm-4xp.png",
+    "relations": {
+      "ampIds": []
+    },
+    "watt": null,
+    "wattByBand": null,
+    "notes": null,
+    "pending": true
+  },
+  {
+    "id": "spk-my-mm-4xpd",
+    "mfr": "Meyer Sound",
+    "mk": "my",
+    "name": "MM-4XPD",
+    "cardioidCapability": null,
+    "series": "MM Series",
+    "throwCat": null,
+    "type": null,
+    "throw": null,
+    "lowInch": null,
+    "lowQty": null,
+    "crossover": null,
+    "crossoverTags": [],
+    "spl": null,
+    "cov": null,
+    "freqs": [],
+    "weight": null,
+    "transducers": null,
+    "connectors": null,
+    "ip": null,
+    "dims": null,
+    "amps": [],
+    "selfPowered": null,
+    "ampRaw": null,
+    "img": "public/assets/img/speakers/my/mm-series/spk-my-mm-4xpd.png",
+    "relations": {
+      "ampIds": []
+    },
+    "watt": null,
+    "wattByBand": null,
+    "notes": null,
+    "pending": true
   }
 ];

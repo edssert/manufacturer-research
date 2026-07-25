@@ -75,8 +75,19 @@ raw-data/raw-specs/   제조사 원문 스펙 보관(md + 원본 pdf/docx)
 - 검색 비교는 반드시 `normalizeSearchText()` 를 양쪽에 적용.
 - URL 상태(카드/Split View)는 `core/router.js` 의 route API 로만 조작.
 
-## 알려진 공백 (2026-07-15 기준)
+## 알려진 공백 (2026-07-25 기준)
 
+- **스펙 조사 전(`pending: true`) 항목** — 제조사 공식 이미지만 등록된 상태다:
+  d&b 107 종 중 79 종, Meyer 43 종 중 22 종. 스펙 필드는 전부 null/빈 배열이고,
+  파생 태그(`wayCount`/`network`/`lowUnitConfig`)는 `speakers.schema.js` 의
+  normalize\* 가 pending 항목을 건너뛰어 생성하지 않는다 — 조사도 안 한 제품이
+  Passive 등으로 잘못 분류되는 것을 막기 위함. 조사가 끝나면 값을 채우고
+  pending 플래그를 지운다.
+  - d&b: Heritage(xA-Series) 6 종은 단종 계열이라 의도적으로 제외.
+  - Meyer: 원본을 `MR-Raw-Assets/my/speakers/web` 로 한정해 등록했다. 그 폴더에
+    이미지가 없는 **MM-4XP 계열 일부·Astrya·Bluehorn·Acheron·Amie·HMS·
+    ULTRA-REFLEX 는 미등록** — 매니페스트에는 있으나 실제 파일이 없다.
+    Constellation·Libra 는 라우드스피커가 아니라 제외(능동음향 시스템/음향 패널).
 - d&b D40/D80/40D 앰프 데이터 미입력(D90 만 존재), D90 의 스피커 매칭
   (`relations.speakerIds`) 의도적 공백 — 확정 자료 수신 시 채운다
   (amp.test 의 KNOWN_MISSING 목록도 함께 갱신할 것).
