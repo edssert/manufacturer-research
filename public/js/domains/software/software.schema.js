@@ -14,6 +14,27 @@ export const SW_MFR = {
 };
 export const SW_MK_ORDER = ["la", "db", "my"];
 
+/**
+ * 분류(섹션) 표시 순서 — 워크플로 순서(설계 → 제어 → 공간음향 → 처리기술).
+ * 분류 근거는 볼트 노트 "음향 소프트웨어 기능 분류" 참고.
+ */
+export const SW_TYPE_ORDER = [
+  "Design & Simulation",
+  "Control & Monitoring",
+  "Spatial Audio",
+  "Signal Processing",
+];
+
+/**
+ * 소프트웨어의 대표 분류(배열의 첫 값). 카드 배지·정렬처럼 하나만 써야 하는
+ * 곳에서 쓴다. 데이터가 스칼라여도 안전하게 동작한다.
+ * @param {Object} s 소프트웨어 레코드
+ * @returns {string}
+ */
+export function primaryType(s) {
+  return Array.isArray(s.type) ? (s.type[0] ?? "") : (s.type ?? "");
+}
+
 export const softwareSchema = {
   unitLabel: "software",
   emptyTitle: "일치하는 소프트웨어가 없습니다",
@@ -23,6 +44,8 @@ export const softwareSchema = {
   customSearchMatch: (item, q) => normalizeSearchText(SW_MFR[item.mfr].name).includes(q),
   chipFields: [
     { key: "mfr", label: "Manufacturer", order: SW_MK_ORDER, labelFor: (v) => SW_MFR[v].name },
+    // type 은 배열 — 기능이 겹치는 제품은 두 개 이상의 분류에 동시에 속한다.
+    // filter-engine/ui/filters 가 배열을 "하나라도 겹치면 통과"로 처리한다.
     { key: "type", label: "Type", labelFor: (v) => v },
     { key: "platform", label: "Platform", labelFor: (v) => v },
   ],
@@ -30,6 +53,14 @@ export const softwareSchema = {
   defaultSort: "name",
   sorters: {
     name: (a, b) => a.name.localeCompare(b.name),
-    type: (a, b) => a.type.localeCompare(b.type) || a.name.localeCompare(b.name),
+    // 분류별 보기 — 섹션 순서는 groupBy.order 가 잡고, 여기선 섹션 내부 순서만.
+    type: (a, b) =>
+      SW_TYPE_ORDER.indexOf(primaryType(a)) - SW_TYPE_ORDER.indexOf(primaryType(b)) ||
+      a.name.localeCompare(b.name),
+    // 제조사별 보기
+    mfr: (a, b) =>
+      SW_MK_ORDER.indexOf(a.mfr) - SW_MK_ORDER.indexOf(b.mfr) ||
+      SW_TYPE_ORDER.indexOf(primaryType(a)) - SW_TYPE_ORDER.indexOf(primaryType(b)) ||
+      a.name.localeCompare(b.name),
   },
 };

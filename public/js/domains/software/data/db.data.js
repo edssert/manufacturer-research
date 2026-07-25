@@ -1,31 +1,78 @@
+﻿// 이미지 출처: dbaudio.com 제품 페이지. 원본은 OneDrive
+// MR-Raw-Assets/db/software/web/<slug>/ 에 보관하며, 제품당 여러 장인 경우
+// 대표사진으로 지정된 것을 앱 자산으로 채택했다(R1 은 r1-1).
+// 전 항목 스펙 조사 전 — 규칙은 la.data.js 주석 참고.
 export const DB_SOFTWARE = [
   {
     "id": "sw-db-r1",
     "mfr": "db",
     "name": "R1 Remote Control",
-    "type": "Control & Tuning",
-    "platform": "Windows/macOS",
-    "price": "Free",
-    "notes": "d&b 앰프를 OCA/AES70(Open Control Architecture) 프로토콜로 제어하는 원격 제어 소프트웨어. DS100 Signal Engine과 통합된 운영 개념으로 파라미터 그룹핑(리모트뷰)과 스냅샷 저장을 지원. 매트릭스 전 기능은 OSC로도 제어 가능.",
-    "relations": {
-      "dspIds": [
-        "dsp-db-ds100",
-        "dsp-db-ds10"
-      ]
-    }
+    "type": ["Control & Monitoring"],
+    "platform": null,
+    "price": null,
+    "img": "public/assets/img/software/db/sw-db-r1.png",
+    "pending": true,
+    "notes": null,
+    "relations": { "dspIds": [] }
   },
   {
     "id": "sw-db-artshow",
     "mfr": "db",
     "name": "ArrayCalc",
-    "type": "Design & Simulation",
-    "platform": "Windows",
-    "price": "Free",
-    "notes": "d&b 라인어레이·포인트소스 시스템 설계 소프트웨어. 리깅 계산, SPL 예측, 프리셋 생성을 지원하며 설계 결과를 R1으로 전달해 현장 튜닝 워크플로를 연결.",
-    "relations": {
-      "dspIds": [
-        "dsp-db-ds100"
-      ]
-    }
+    "type": ["Design & Simulation"],
+    "platform": null,
+    "price": null,
+    "img": "public/assets/img/software/db/sw-db-arraycalc.png",
+    "pending": true,
+    "notes": null,
+    "relations": { "dspIds": [] }
+  },
+  {
+    "id": "sw-db-noizcalc",
+    "mfr": "db",
+    "name": "NoizCalc",
+    "type": ["Design & Simulation"],
+    "platform": null,
+    "price": null,
+    "img": "public/assets/img/software/db/sw-db-noizcalc.png",
+    "pending": true,
+    "notes": null,
+    "relations": { "dspIds": [] }
+  },
+  {
+    "id": "sw-db-create-control",
+    "mfr": "db",
+    "name": "Create.Control",
+    "type": ["Spatial Audio", "Control & Monitoring"],
+    "platform": null,
+    "price": null,
+    "img": "public/assets/img/software/db/sw-db-create-control.png",
+    "pending": true,
+    "notes": null,
+    "relations": { "dspIds": [] }
+  },
+  {
+    "id": "sw-db-en-scene",
+    "mfr": "db",
+    "name": "En-Scene",
+    "type": ["Spatial Audio"],
+    "platform": null,
+    "price": null,
+    "img": "public/assets/img/software/db/sw-db-en-scene.jpg",
+    "pending": true,
+    "notes": null,
+    "relations": { "dspIds": [] }
+  },
+  {
+    "id": "sw-db-en-space",
+    "mfr": "db",
+    "name": "En-Space",
+    "type": ["Spatial Audio"],
+    "platform": null,
+    "price": null,
+    "img": "public/assets/img/software/db/sw-db-en-space.jpg",
+    "pending": true,
+    "notes": null,
+    "relations": { "dspIds": [] }
   }
 ];
