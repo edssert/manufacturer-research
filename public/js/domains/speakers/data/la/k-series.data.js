@@ -1,4 +1,4 @@
-// L-Acoustics K Series 스피커 데이터 (6개 모델).
+// L-Acoustics K Series 스피커 데이터 (8개 모델).
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
 export const LA_K_SERIES = [

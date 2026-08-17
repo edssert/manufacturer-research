@@ -66,7 +66,7 @@
      max-width 도 함께 둔다. */
   width: 628px;
   max-width: 100%;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, .5);
+  box-shadow: var(--shadow-modal);
   border-top: 3px solid var(--mfr, var(--accent));
 }
 /* [Split View 여닫을 때 상하로 흔들리던 문제] animation 을
@@ -304,12 +304,7 @@
 .modal__head--has-back .eyebrow,
 .modal__head--has-back .modal__head-row { padding-left: 30px; }
 
-/* 제품 이미지 영역 — 고정 높이로 이미지 크기와 무관하게 동일 레이아웃.
-   확대(hover zoom) 시 이미지가 토글 바 영역까지 자연스럽게
-   퍼져 보이는 것 자체는 의도된 동작 — 대신 토글 버튼은 항상 그 위에 떠서
-   클릭 가능해야 한다(아래 .modal__view-switch 의 z-index 참고). 클리핑
-   (overflow:hidden)은 사진+토글 바 전체를 감싸는 부모 .modal__media-wrap
-   이 담당한다. */
+/* 제품 이미지 영역은 뷰 선택기와 분리된 고정 높이를 유지한다. */
 .modal__media {
   position: relative;
   height: 190px;
@@ -350,17 +345,9 @@
      레이아웃 계산과 무관하게 항상 박스 안에서만 그려지도록 한다(사진이
      이미 max-height: 100%로 축소되므로 정상 케이스에서는 아무 변화 없음). */
   overflow: hidden;
-  /* [뷰 전환 버튼 추가] 하단 .modal__view-switch(position:absolute) 의
-     기준 부모가 되어야 하므로 relative 필요 — 단, .modal__media-wrap 의
-     그라디언트 배경/구분선은 확대 pane 에 어울리지 않아 가져오지 않는다. */
+  /* 확대 pane의 이미지 배치 기준을 제공한다. */
   position: relative;
 }
-/* .modal__view-switch 는 마크업상 .media-split-pane__body 의
-   자손이 아니라 형제(.media-split-pane__body-wrap 안에 나란히 위치)라
-   ":hover 자손" 선택자로는 걸리지 않아 버튼에 마우스를 올려도 opacity 가
-   돌아오지 않았다 — 래퍼(body-wrap) 전체에 :hover 를 걸어 사진 영역이든
-   토글 바 자신이든 마우스가 그 안에 있으면 항상 또렷해지게 한다. */
-.media-split-pane__body-wrap:hover .modal__view-switch { opacity: 1; }
 .media-split-pane__img {
   /* 확대 pane 좌우 여백 통일 — 가로로 넓은 앰프 렌더는
      폭이 먼저 꽉 차 좌우 여백이 0이 되고, 세로로 긴 스피커 사진은
@@ -445,33 +432,19 @@
 .modal__media img[data-view="panflex-detail"] {
   object-position: left top;
 }
-/* [Front/Rear 전환] imgBack 이 있는 모델만 modalBodyHTML 이 이 마크업을
-   생성한다(speakers.view.js 참조). 그라디언트는 사진 영역+토글 바를 함께
-   감싸는 .modal__media-wrap 하나에 쭉 이어서 깐다 — "사진 배경 위에 토글
-   버튼이 얹혀 있는" 느낌: 그라디언트는 wrap 맨 아래(다음 섹션인
-   Acoustical 과 구분되는 선)까지 끊기지 않고 이어지고, 토글 버튼 자체는
-   투명(.modal__view-btn)이라 그 위에 배경이 그대로 비쳐 보인다. 구분선도
-   사진↔토글 사이가 아니라 wrap 전체의 맨 아래에만 둔다. 두 <img data-view>
-   는 같은 grid 셀에 겹쳐 있고, 버튼 클릭 시 pane-interactions.js의
-   wireViewSwitch가
-   hidden 속성을 토글해 표시 이미지를 바꾼다. */
+/* 여러 제품 뷰는 같은 grid 셀에 겹치며 선택 상태에 따라 하나만 표시된다. */
 .modal__media-wrap {
   position: relative;
-  /* 라이트모드에서도 함께 바뀌도록 변수화(css/tokens.css
-     --card-media-start 참고, card__media 와 같은 톤 계열) */
+  /* 카드 이미지와 같은 제품 스테이지 토큰을 공유한다. */
   background: radial-gradient(circle at 50% 38%, var(--card-media-start), var(--panel) 88%);
   border-bottom: 1px solid var(--line);
-  /* [확대 시 토글 바] 클리핑은 사진 박스(.modal__media)가 아니라 wrap
-     전체가 담당해 확대 이미지가 토글 바 영역까지 자연스럽게 이어진다.
-     토글 버튼은 아래
-     .modal__view-switch 의 z-index 로 항상 이미지 위에 떠서 가려지지
-     않고 클릭 가능하다. */
+  /* 이미지와 가로 스크롤 선택기 모두 이 제품 면 안에서 잘린다. */
   overflow: hidden;
   /* 사진 클릭 → 오른쪽에 확대 pane 이 열리는 동안 이 높이도
      함께 트랜지션되어 접히듯 사라진다(아래 --collapsing 변경자 참고).
      max-height 트랜지션은 시작값이 auto 면 동작하지 않으므로, 사진
      영역(190px)+토글 바가 절대 넘지 않을 넉넉한 고정값을 기본으로 둔다. */
-  max-height: 260px;
+  max-height: 340px;
   /* 접히는 속도가 너무 빨라 보여 늦췄다(펼쳐질 때/복원 시는
      기존 속도 유지 — 아래 --collapsing 규칙에서 접힐 때만 duration을
      따로 늘린다). */
@@ -493,11 +466,6 @@
   border-bottom-color: transparent;
   transition: max-height .35s ease, opacity .3s ease;
 }
-/* 토글 바(.modal__view-switch)는 평소 옅게(opacity .35)
-   깔려 있다가, 사진 영역에 마우스를 올렸을 때만 또렷해져(opacity 1)
-   버튼을 누르기 쉬워진다 — 평상시엔 사진을 최대한 가리지 않으면서도
-   지금 활성 뷰가 무엇인지는 흐릿하게나마 계속 보여준다. */
-.modal__media-wrap:hover .modal__view-switch { opacity: 1; }
 /* [흰 배경] whitebg 뷰가 보이는 동안 배경을 흰색으로 고정한다. 좌우를
    흰색으로 확장한 배포 이미지와 배경색이 같아 이음매가 생기지 않는다. */
 .modal__media-wrap:has(img.modal__img--whitebg:not([hidden])) {
@@ -539,26 +507,42 @@
   transform: scale(3) translateY(5%);
 }
 
+/* 흰 제품 스테이지는 상세·확대 pane에서도 동일한 면과 컨트롤 대비를 유지한다. */
+.modal__media-wrap.product-media--white,
+.media-split-pane__body-wrap.product-media--white {
+  background: var(--product-media-surface);
+  color: var(--product-media-ink);
+  border-bottom-color: var(--product-media-line);
+}
+.product-media--white .modal__media img { filter: none; }
+.product-media--white .modal__view-switch {
+  opacity: 1;
+  background: var(--product-media-surface);
+}
+.product-media--white .modal__view-btn { color: var(--product-media-ink); }
+.product-media--white .modal__view-btn:hover { color: var(--product-media-ink-strong); }
+.product-media--white .modal__view-btn.is-active {
+  color: var(--product-media-accent);
+  border-color: var(--product-media-accent);
+  background: color-mix(in srgb, var(--product-media-accent) 9%, transparent);
+}
+
 .modal__view-switch {
-  /* 뷰가 많은 스피커(K2 등)는 토글 줄이 3줄까지 늘어나
-     .modal__media-wrap 전체 높이가 커져, 사진 영역 높이가 앰프 모달
-     (토글 없음, 항상 190px 고정)과 서로 달라 보였다 — 토글 바를
-     position: absolute 로 사진 위에 겹쳐서 얹어 wrap 자체의 레이아웃
-     높이에 더 이상 영향을 주지 않게 한다.
-     [2차] 그런데 3줄짜리 토글바가 항상 떠 있으니 사진 하단
-     절반 가까이 가려 보였다 — 평소엔 옅게(opacity) 깔아둬서 지금 활성
-     뷰가 뭔지는 알 수 있게 하되, .modal__media-wrap 에 마우스를 올렸을
-     때만 또렷하게 보이도록(hover, 아래 :hover 규칙 참고) 바꿔 평상시
-     사진 가림을 최소화한다. */
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1; /* 확대된 이미지 위에 항상 떠서 버튼이 가려지지 않게 */
+  /* 다중 뷰 선택기는 제품 사진과 분리된 독립 행으로 유지한다. */
+  position: relative;
+  z-index: 1;
+  flex: none;
   display: flex;
-  justify-content: center;
-  opacity: .12;
-  transition: opacity .15s ease;
+  justify-content: flex-start;
+  min-height: 48px;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+  border-top: 1px solid var(--line);
+  background: var(--panel);
+  scrollbar-width: thin;
+  opacity: 1;
   /* 스택 칸(Horizontal/Vertical/...)의 줄 수가 모델마다
      2개(K1)/3개(K2, Kara IIi) 등으로 달라 옆(가로로 나열된) 버튼과의
      높이를 고정 px 값으로는 맞출 수 없었다 — align-items: stretch 로
@@ -567,7 +551,7 @@
      채우게 한다. 스택이 몇 개든 항상 자동으로 정확히 일치. */
   align-items: stretch;
   gap: 2px;
-  padding: 0 8px 10px;
+  padding: 8px;
 }
 /* [Kara IIi 등 뷰 6개까지 늘어난 모델] Horizontal/Vertical/
    Vertical (Panflex)는 항상 함께 다니는 "앵글" 계열이라 라벨이 짧다 —
@@ -582,6 +566,7 @@
 .modal__view-switch--grouped { align-items: center; }
 .modal__view-switch-stack {
   display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
   gap: 2px;
   justify-content: center;
@@ -595,7 +580,13 @@
    height: 100% 를 지우고 align-items: stretch(부모 기본 동작, 명시 불요)
    에 맡기면 flex item 은 형제 중 가장 큰 높이(보통 스택 칸)로 자동
    늘어난다. */
-.modal__view-switch > .modal__view-btn { display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; }
+.modal__view-switch > .modal__view-btn {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
 .modal__view-btn {
   appearance: none;
   border: 1px solid transparent; /* [레이아웃 안정성] active 시 border 가 생겨도 크기가 안 흔들리게 기본에도 투명 border 확보 */

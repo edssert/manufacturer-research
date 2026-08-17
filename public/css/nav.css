@@ -16,8 +16,8 @@
   border-bottom: 1px solid var(--line);
   background: var(--panel);
 }
-/* 사진/다크모드 토글을 topbar 에서 이 탭 바 오른쪽 끝으로
-   이동(js/ui/nav.js renderNav 참고) — .topnav__row 가 탭 목록
+/* 사진/모션 토글을 이 탭 바 오른쪽 끝에 고정한다(js/ui/nav.js 참고).
+   .topnav__row 가 탭 목록
    (topnav__inner, 가로 스크롤 가능)과 토글 그룹(topnav__tools, 고정 폭)을
    양끝 정렬한다. 토글이 탭 스크롤에 딸려 들어가지 않도록 별도 flex
    아이템으로 분리. */

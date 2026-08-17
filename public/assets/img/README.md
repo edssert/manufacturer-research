@@ -43,10 +43,11 @@ data.js 안의 `img` 필드는 저장소/배포 루트 기준 상대경로를 �
    추가한다면 이미지는 `public/assets/img/speakers/la/k-series/`에 넣고, data.js의
    `img` 필드도 같은 경로로 채웁니다. 새 시리즈/브랜드라면 규칙에 맞는
    새 폴더를 만듭니다.
-2. **가능하면 배경을 완전히 투명 처리(누끼)한다.** PNG/WebP의 알파 채널을
-   사용합니다. JPEG는 투명도를 지원하지 않으므로 불투명 사진 원본을 유지해야
-   할 때만 사용합니다.
-   흰색/회색 배경이 남아있으면 카드에서 사각형 프레임처럼 도드라져 보입니다.
+2. **대표 제품 렌더는 투명 배경을 우선한다.** PNG/WebP의 알파 채널을
+   사용합니다. 앱은 제품 사진에 순백색 스테이지를 제공하므로, 원본이 이미
+   깨끗한 흰 배경이면 무리하게 누끼를 다시 만들지 않아도 됩니다. 비백색
+   배경이나 가장자리 이음매가 보이는 제품 사진만 수동 검수 대상으로
+   분류합니다. 설치 사진과 소프트웨어 화면은 불투명 원본을 유지합니다.
 3. **워터마크·로고·수상 배지 등 제품 자체가 아닌 요소를 제거한다.**
    `scripts/normalize_images.py`의 `remove_region()` 함수로 특정 영역만
    지울 수 있습니다.
@@ -71,15 +72,18 @@ data.js 안의 `img` 필드는 저장소/배포 루트 기준 상대경로를 �
    때만 시작합니다. 파일이 하나라도 바뀌었으면 전체 적용 전에 중단되므로
    새 dry-run을 만들어 다시 검토해야 합니다.
 
-   알파 채널이 없거나 투명 여백 없이 프레임 전체가 불투명한 이미지는 제품
-   경계를 자동 판별할 수 없습니다. dry-run은 이를 `manual-review-*`로 표시하고
-   `apply` 대상에서 제외합니다.
+   dry-run은 이미지를 `transparent-cutout`, `white-background`,
+   `opaque-original`로 분류합니다. 투명 제품 렌더만 정규화 후보가 되며,
+   흰 배경 자산과 사진·스크린샷은 원본을 보존하고 `apply` 대상에서
+   제외합니다. 투명 제품이 캔버스 가장자리에 닿아도 투명 픽셀 비율이 정책
+   기준을 넘으면 후보로 유지하고 manifest의 `touchesCanvasEdge`로 표시합니다.
 
 5. **예외 케이스는 자동 처리에서 제외한다.** 매입형(in-wall/in-ceiling)
    스피커처럼 흰 마운팅 프레임이 제품 사진 자체에 포함된 경우, 알파
    bounding box가 프레임까지 "제품"으로 오인해 여백이 트리밍되지
    않습니다. 이런 파일명은 `scripts/normalize_images.py`의 `EXCLUDE` 집합에
    추가하고 필요시 수동으로 크롭합니다. (현재:
+   `public/assets/img/speakers/la/k-series/spk-la-k1-sb-horizontal.png`,
    `public/assets/img/speakers/la/subwoofers/spk-la-sb6r.png`,
    `public/assets/img/speakers/la/subwoofers/spk-la-sb10r.png`)
 6. **전체 점검.** 아래로 하위 폴더 전체를 훑어 썸네일 격자 이미지를

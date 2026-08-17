@@ -27,7 +27,14 @@
   "normalization": {
     "defaultMode": "dry",
     "applyRequiresManifestReview": true,
-    "formats": [".png", ".jpg", ".jpeg", ".webp"]
+    "formats": [".png", ".jpg", ".jpeg", ".webp"],
+    "preserveOriginals": true,
+    "presentationSurface": "#FFFFFF",
+    "transparentPixelThreshold": 0.001,
+    "whiteBorderThreshold": 0.9,
+    "opaquePhotosAreCutoutCandidates": false,
+    "officialShadowCompositionIsPreserved": true,
+    "sourcedAssetsRequireHashManifest": true
   },
   "knownExactDuplicates": {
     "reviewStatus": "semantic-review-required",

@@ -102,6 +102,23 @@ function openCardContaining(cardSelector, detailSelector) {
   return { card: null, detail: null };
 }
 
+// L-Acoustics K Series만 카드→상세→확대까지 흰 제품 스테이지를 이어받는다.
+navigateTo("speakers");
+const kSeriesCard = document.querySelector('#spk-results .card[data-id="spk-la-k3"]');
+check(
+  "K Series 카드가 흰 제품 스테이지를 사용함",
+  kSeriesCard?.querySelector(".card__media")?.classList.contains("product-media--white"),
+);
+if (kSeriesCard) click(kSeriesCard);
+const kSeriesModalMedia = document.querySelector("#modal .modal__media-wrap");
+check("K Series 상세가 흰 제품 스테이지를 사용함", kSeriesModalMedia?.classList.contains("product-media--white"));
+if (kSeriesModalMedia) click(kSeriesModalMedia.querySelector(".modal__media"));
+check(
+  "K Series 이미지 확대가 흰 제품 스테이지를 이어받음",
+  document.querySelector("#modal .media-split-pane__body-wrap")?.classList.contains("product-media--white"),
+);
+closeModal();
+
 // 라우트의 값은 CSS selector에 직접 보간하지 않고 속성값으로 비교해야 한다.
 navigateTo("speakers");
 const speakerWithAmp = openCardContaining("#spk-results .card[data-id]", "#modal [data-amp-id]");

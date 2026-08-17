@@ -19,7 +19,7 @@ import { renderNav } from "./ui/nav.js";
 import { initModal, closeModal, isMobileLayout } from "./ui/modal.js";
 import { closeSplitView } from "./ui/split-view.js";
 import { initRelationNavigation, openDetailPane } from "./ui/relation-navigation.js";
-import { initTheme, initMediaToggle, initMotionToggle } from "./ui/toggle.js";
+import { initMediaToggle, initMotionToggle } from "./ui/toggle.js";
 import { initStickyHeader } from "./ui/sticky-header.js";
 import { $ } from "./core/dom.js";
 
@@ -83,9 +83,8 @@ initSoftwareDomain();
 initBrandDomain();
 
 // 토글 버튼들은 renderNav() 가 그리는 topnav__tools 안에 있으므로 반드시
-// renderNav 이후에 연결해야 한다(그 전이면 #theme-toggle 등이 아직 null).
+// renderNav 이후에 연결해야 한다(그 전이면 전역 토글 버튼이 아직 없다).
 renderNav($("#topnav"));
-initTheme($("#theme-toggle"));
 initMediaToggle($("#media-toggle"));
 initMotionToggle($("#motion-toggle"));
 initRouter("speakers");

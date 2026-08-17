@@ -58,8 +58,9 @@ import { setPane2Route, clearPane2Route } from "../core/router.js";
  *   인덱스가 아니라 slug 인 이유: 스택 그룹이 있는 카드(K2 등)는 뷰 버튼의
  *   DOM 순서가 views 배열 순서와 다를 수 있다.
  * @param {string} [sourceId] pane2 항목 이미지면 해당 항목 id
+ * @param {boolean} [useWhiteSurface] 원본 상세이 흰 제품 이미지 스테이지를 쓰는지
  */
-function openMediaSplitPane(views, startIndex, paneColor, onViewChange, sourceId) {
+function openMediaSplitPane(views, startIndex, paneColor, onViewChange, sourceId, useWhiteSurface = false) {
   const modalEl = getModalEl();
   const currentMobilePane = isMobileLayout() ? parsePaneSpec(getCurrentMobilePaneRoute()) : null;
   const effectiveSourceId = sourceId || (currentMobilePane?.kind === "entity" ? currentMobilePane.entityId : "");
@@ -107,7 +108,7 @@ function openMediaSplitPane(views, startIndex, paneColor, onViewChange, sourceId
     paneColor: paneColor || "transparent",
     // data-lightbox="off" 필수 — 이 pane 자신도 .modal__media 라서 없으면
     // 사진 클릭이 openMediaSplitPane 을 재귀 호출해 화면이 깜빡인다.
-    bodyHTML: `<div class="media-split-pane__body-wrap">
+    bodyHTML: `<div class="media-split-pane__body-wrap${useWhiteSurface ? " product-media--white" : ""}">
         <div class="modal__media media-split-pane__body" data-lightbox="off">${imgsHTML}</div>
         ${switchHTML}
       </div>`,

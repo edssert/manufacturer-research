@@ -108,31 +108,29 @@
 /* --mfr 변수는 카드 생성 시 인라인으로 주입됨 (제조사 색) */
 .card {
   position: relative;
-  background: var(--panel);
+  background: var(--surface-raised);
   border: 1px solid var(--line);
-  border-left: 3px solid var(--mfr, var(--line-2));
   border-radius: var(--radius);
   cursor: pointer;
-  transition: border-color .15s, transform .12s, background .15s;
+  box-shadow: var(--shadow-card);
+  transition: border-color .15s, transform .12s, box-shadow .15s;
   display: flex;
   flex-direction: column;
   overflow: hidden; /* [레이아웃 안정성] 내부 요소가 카드 밖으로 넘치지 않음 */
   min-width: 0;
 }
 .card:hover {
-  background: var(--panel-2);
   border-color: var(--line-2);
-  border-left-color: var(--mfr, var(--line-2));
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card-hover);
 }
 .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-/* 카드 상단 이미지 영역 — 고정 높이(132px)로 이미지 유무와 무관하게 동일한 카드 리듬 유지 */
+/* 카드 상단 이미지 영역은 제품 식별이 먼저 되도록 정보 영역보다 넉넉히 둔다. */
 .card__media {
   position: relative;
-  height: 132px;
-  /* 라이트모드에서도 함께 바뀌도록 변수화(css/tokens.css
-     --card-media-bg 참고) — 값 자체는 기존 다크 스튜디오 톤 그대로.
+  height: 150px;
+  /* 제품 이미지 면은 토큰으로 관리해 카드와 같은 색 체계를 공유한다.
      [트랜지션 동기화] whitebg 카드의 배경(아래 :has 규칙)이
      즉시 스냅되고 이미지(opacity .25s)만 서서히 페이드돼 속도가 어긋나
      보였다 — background 를 color/image 로 분리해 background-color 만
@@ -154,11 +152,18 @@
   overflow: hidden;
 }
 .card__media img {
-  max-height: 106px;
-  max-width: 80%;
+  max-height: 120px;
+  max-width: 84%;
   object-fit: contain;
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, .55));
+  filter: drop-shadow(0 7px 14px rgba(28, 30, 27, .20));
 }
+/* K Series 1차 적용: 원본 투명도·내장 그림자가 달라도 같은 흰 면에 놓인다. */
+.card__media.product-media--white {
+  background-color: var(--product-media-surface);
+  background-image: none;
+  border-bottom-color: var(--product-media-line);
+}
+.card__media.product-media--white img { filter: none; }
 /* 변경자: 실물 비율이 극단적으로 가로로 긴 이미지(1U 랩마운트 앰프 등,
    예: LA1.16i 약 10.6:1).
    [진짜 원인] .card__media img { max-width: 80% } 규칙은 태그+클래스
@@ -383,14 +388,14 @@
      구성 — --mfr 은 카드마다 동적으로 주입되는 변수라 rgba 사전 정의가
      불가능하므로, 배경은 고정 패널색을 쓰고 텍스트/보더만 강조색을 입힌다. */
   background: var(--panel-3);
-  border: 1px solid var(--mfr, var(--line-2));
+  border: 1px solid var(--line-2);
   flex: none;
   white-space: nowrap;
 }
 .card__low-badge b {
   font-size: 1em;
   font-weight: 700;
-  color: var(--mfr, var(--accent));
+  color: var(--ink);
   font-variant-numeric: tabular-nums;
   letter-spacing: .1px;
 }
@@ -398,7 +403,7 @@
   font-size: .68em;
   font-weight: 700;
   letter-spacing: .06em;
-  color: var(--mfr, var(--accent));
+  color: var(--muted);
   opacity: .7;
 }
 .card__low-extra {
@@ -423,7 +428,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.eyebrow__brand { color: var(--mfr, var(--ink)); text-transform: none; }
+.eyebrow__brand { color: var(--ink-2); text-transform: none; }
 
 /* ---------- 블록: spl-meter (최대 음압 게이지) ---------- */
 .spl-meter { display: flex; align-items: center; gap: 11px; }
@@ -438,10 +443,8 @@
 }
 .spl-meter__fill {
   height: 100%;
-  /* 라이트모드에서도 함께 바뀌도록 변수화(css/tokens.css
-     --gauge-amber-start/end 참고) — 다크는 기존 톤 그대로, 라이트는 더
-     밝고 채도 있는 톤으로 재조정되어 있음. */
-  background: linear-gradient(90deg, var(--gauge-amber-start), var(--gauge-amber-end));
+  /* 게이지 색은 공통 토큰의 시작·끝 색으로 관리한다. */
+  background: linear-gradient(90deg, var(--gauge-spl-start), var(--gauge-spl-end));
   border-radius: 4px 3px 3px 4px;
   position: relative;
 }
@@ -540,7 +543,7 @@
    참고)는 전역 accent(앰버) 대신 카드의 제조사 색(--mfr, 카드 article에
    인라인 주입됨)을 따라가도록 별도 변경자 — d&b/Meyer 카드에서도 그
    브랜드색으로 보이게 한다. */
-.stat-grid__value--mfr { color: var(--mfr, var(--accent)); letter-spacing: .2px; }
+.stat-grid__value--mfr { color: var(--ink); letter-spacing: .2px; }
 /* 변경자: 데이터 없음 */
 .stat-grid__value--na { color: var(--muted); } /* 1-2 승격 */
 

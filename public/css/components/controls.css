@@ -34,7 +34,7 @@
 
 /* ---------- 블록: search-box (검색 입력) ----------
    한때 정렬/필터초기화/필터 버튼과 같은 줄에서 폭을 나눠
-   쓰기 위해 flex: 0 1 340px 로 줄였었는데, 사진/다크모드 토글이 topnav
+   쓰기 위해 flex: 0 1 340px 로 줄였었는데, 사진/모션 토글이 topnav
    쪽으로 옮겨가면서(js/ui/nav.js) 이 줄의 공간 압박이 사라져 다시 남는
    폭을 전부 차지하도록 원복. */
 .search-box { position: relative; flex: 1; min-width: 220px; }

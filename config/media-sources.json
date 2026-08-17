@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "runtimePath": "public/assets/img/speakers/la/k-series/spk-la-k1-sb-horizontal.png",
+      "productId": "spk-la-k1-sb",
+      "role": "primary",
+      "sourceType": "official-product-page",
+      "sourcePage": "https://www.l-acoustics.com/products/k1-SB/",
+      "sourceAsset": "https://www.l-acoustics.com/wp-content/uploads/2021/04/3DR_K1-SB_Perspective_01-800x400-1.png",
+      "officialVisualArchive": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/K1-SB/EN/Product%20Visuals/K1-SB_Visuals.zip",
+      "retrievedAt": "2026-08-17",
+      "sha256": "34db6e1826a8cf143a45c2b77e17a4649e116f0cdec438ee200609e98526731d",
+      "bytes": 152618,
+      "dimensions": [800, 400],
+      "backgroundTreatment": "official-alpha-with-floor-shadow"
+    }
+  ]
+}

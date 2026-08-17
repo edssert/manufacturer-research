@@ -11,6 +11,11 @@ import { MFR, TYPE_BADGE_LABEL } from "./speakers.schema.js";
 /* ── SPL 게이지 스케일 (전체 데이터의 min/max 로 컨트롤러가 설정) ── */
 const SPL_RANGE = { lo: 0, hi: 0 };
 
+/** L-Acoustics K Series는 원본 배경 상태와 무관하게 흰 제품 스테이지를 쓴다. */
+function productMediaClass(d) {
+  return d.mk === "la" && d.series === "K Series" ? " product-media--white" : "";
+}
+
 /**
  * SPL 게이지의 표시 범위를 설정한다 — speakers.controller.js 가 빌드 시 호출.
  * @param {number} lo 데이터 최저 SPL
@@ -148,6 +153,7 @@ export function cardHTML(d) {
   // d.cardHoverView 로 호버 대상 뷰를 개별 지정할 수 있다(K1 처럼 모달의 뷰
   // 순서는 그대로 두면서 카드만 다른 뷰를 쓰고 싶을 때). 없으면 views[1].
   const views = getViews(d);
+  const mediaClass = productMediaClass(d);
   const hoverView = (d.cardHoverView && views.find(v => v.label === d.cardHoverView)) || views[1];
   const media = views.length
     ? views.length > 1 && hoverView
@@ -163,7 +169,7 @@ export function cardHTML(d) {
   const cfg = `${lowBadge}${extra > 0 ? `<span class="card__low-extra">+${extra}개 대역</span>` : ""}`;
   const { nameRowHTML, configRowHTML } = cardTagsHTML(d);
   return `<article class="card" style="--mfr:${color}" tabindex="0" data-id="${d.id}" role="button" aria-label="${esc(d.name)} 상세">
-    <div class="card__media">${media}</div>
+    <div class="card__media${mediaClass}">${media}</div>
     <div class="card__body">
       <div class="eyebrow"><span class="eyebrow__brand">${esc(M.short)}</span> · ${d.throwCat ? esc(d.throwCat) + " · " : ""}${esc(d.series)}</div>
       <div class="card__name-row">
@@ -938,6 +944,7 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
   // 레이아웃이 모든 스피커에서 통일된다. 버튼은 views 길이만큼 동적으로
   // 생성되므로 데이터에 뷰를 추가하면 버튼도 자동으로 늘어난다.
   const views = getViews(d);
+  const mediaClass = productMediaClass(d);
   const viewSlug = label => label.toLowerCase().replace(/[^a-z0-9]+/g, "-");
   // 세로로 쌓인 스택 칸의 줄 수에 옆 버튼들의 줄 수를 맞춰야 자연스럽다.
   // stackViews 는 뒤에서 만들지만 개수가 parenBodyHTML(줄바꿈 판단)에 필요해
@@ -1011,7 +1018,7 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
         ${views.map(viewBtnHTML).join("")}
       </div>`;
   const media = views.length
-    ? `<div class="modal__media-wrap">
+    ? `<div class="modal__media-wrap${mediaClass}">
         <div class="modal__media">
           ${views.map((v, i) => `<img class="modal__img" data-view="${viewSlug(v.label)}" data-view-label="${esc(v.label)}" src="${v.src}" alt="${esc(d.name)} ${esc(v.label)}" loading="lazy" decoding="async"${i === 0 ? "" : " hidden"}>`).join("")}
         </div>

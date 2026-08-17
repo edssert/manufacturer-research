@@ -36,9 +36,13 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SRC_DIR = PROJECT_ROOT / "public" / "assets" / "img"
 SUPPORTED_SUFFIXES = frozenset({".png", ".jpg", ".jpeg", ".webp"})
 MARGIN_PCT = 0.08
+TRANSPARENT_PIXEL_THRESHOLD = 0.001
+WHITE_BORDER_THRESHOLD = 0.90
+WHITE_CHANNEL_MIN = 245
 
 # Alpha bbox가 제품 외 프레임까지 포함하는 것으로 확인된 파일이다.
 EXCLUDE = frozenset({
+    "spk-la-k1-sb-horizontal.png",
     "spk-la-sb6r.png",
     "spk-la-sb10r.png",
 })
@@ -58,6 +62,45 @@ def sha256(data: bytes) -> str:
 
 def has_alpha(image: Image.Image) -> bool:
     return "A" in image.getbands() or "transparency" in image.info
+
+
+def surface_profile(image: Image.Image) -> dict[str, Any]:
+    """배경 유형을 분류할 수 있는 투명도와 테두리 통계를 반환한다."""
+    rgba = ImageOps.exif_transpose(image).convert("RGBA")
+    width, height = rgba.size
+    total = width * height
+    alpha_histogram = rgba.getchannel("A").histogram()
+    transparent = sum(alpha_histogram[:250])
+    def flattened(region: Image.Image) -> list[tuple[int, int, int, int]]:
+        getter = getattr(region, "get_flattened_data", None)
+        return list(getter() if getter else region.getdata())
+
+    border_pixels = flattened(rgba.crop((0, 0, width, 1)))
+    if height > 1:
+        border_pixels.extend(flattened(rgba.crop((0, height - 1, width, height))))
+    if width > 1 and height > 2:
+        border_pixels.extend(flattened(rgba.crop((0, 1, 1, height - 1))))
+        border_pixels.extend(flattened(rgba.crop((width - 1, 1, width, height - 1))))
+    border_total = len(border_pixels)
+    border_white = sum(
+        alpha >= 250 and min(red, green, blue) >= WHITE_CHANNEL_MIN
+        for red, green, blue, alpha in border_pixels
+    )
+
+    transparent_ratio = transparent / total if total else 0.0
+    white_border_ratio = border_white / border_total if border_total else 0.0
+    if transparent_ratio >= TRANSPARENT_PIXEL_THRESHOLD:
+        classification = "transparent-cutout"
+    elif white_border_ratio >= WHITE_BORDER_THRESHOLD:
+        classification = "white-background"
+    else:
+        classification = "opaque-original"
+
+    return {
+        "classification": classification,
+        "transparentPixelRatio": round(transparent_ratio, 6),
+        "whiteBorderRatio": round(white_border_ratio, 6),
+    }
 
 
 def normalized_canvas(image: Image.Image, margin_pct: float = MARGIN_PCT) -> tuple[Image.Image | None, tuple[int, int, int, int] | None]:
@@ -111,12 +154,14 @@ def inspect_image(path: Path, margin_pct: float = MARGIN_PCT) -> tuple[dict[str,
         original_size = oriented.size
         original_alpha = has_alpha(image)
         alpha_bbox = oriented.convert("RGBA").getchannel("A").getbbox()
+        profile = surface_profile(image)
         canvas, bbox = normalized_canvas(image, margin_pct)
 
     record: dict[str, Any] = {
         "file": relative,
         "format": path.suffix.lower().lstrip("."),
         "status": "ready",
+        "surface": profile,
         "original": {
             "bytes": len(source),
             "dimensions": list(original_size),
@@ -130,14 +175,20 @@ def inspect_image(path: Path, margin_pct: float = MARGIN_PCT) -> tuple[dict[str,
         return record, None
 
     record["bbox"] = list(bbox)
+    if profile["classification"] == "white-background":
+        record["status"] = "preserve-white-background"
+        record["output"] = None
+        return record, None
+    if profile["classification"] == "opaque-original":
+        record["status"] = "preserve-opaque-original"
+        record["output"] = None
+        return record, None
     if not original_alpha:
-        record["status"] = "manual-review-no-alpha"
+        record["status"] = "manual-review-alpha-metadata"
         record["output"] = None
         return record, None
-    if alpha_bbox == (0, 0, *original_size):
-        record["status"] = "manual-review-full-frame"
-        record["output"] = None
-        return record, None
+
+    record["touchesCanvasEdge"] = alpha_bbox == (0, 0, *original_size)
 
     encoded = encode_for_path(canvas, path)
     record["output"] = {
@@ -174,11 +225,16 @@ def remove_region(path: str | Path, box: tuple[int, int, int, int], save: bool =
 
 def write_manifest(path: Path, mode: str, records: list[dict[str, Any]]) -> None:
     payload = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "mode": mode,
         "sourceRoot": SRC_DIR.relative_to(PROJECT_ROOT).as_posix(),
         "marginPercent": MARGIN_PCT,
         "supportedExtensions": sorted(SUPPORTED_SUFFIXES),
+        "surfacePolicy": {
+            "transparentPixelThreshold": TRANSPARENT_PIXEL_THRESHOLD,
+            "whiteBorderThreshold": WHITE_BORDER_THRESHOLD,
+            "whiteChannelMinimum": WHITE_CHANNEL_MIN,
+        },
         "records": records,
     }
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -189,11 +245,16 @@ def validate_approved_manifest(path: Path, records: list[dict[str, Any]]) -> Non
     """dry-run 승인본과 현재 계산 결과가 완전히 같을 때만 apply를 허용한다."""
     approved = json.loads(path.read_text(encoding="utf-8"))
     expected_header = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "mode": "dry",
         "sourceRoot": SRC_DIR.relative_to(PROJECT_ROOT).as_posix(),
         "marginPercent": MARGIN_PCT,
         "supportedExtensions": sorted(SUPPORTED_SUFFIXES),
+        "surfacePolicy": {
+            "transparentPixelThreshold": TRANSPARENT_PIXEL_THRESHOLD,
+            "whiteBorderThreshold": WHITE_BORDER_THRESHOLD,
+            "whiteChannelMinimum": WHITE_CHANNEL_MIN,
+        },
     }
     for key, expected in expected_header.items():
         if approved.get(key) != expected:
@@ -260,6 +321,15 @@ def main() -> int:
         "ready": sum(record["status"] == "ready" for record in records),
         "excluded": sum(record["status"] == "excluded" for record in records),
         "manualReview": sum(record["status"].startswith("manual-review") for record in records),
+        "transparentCutouts": sum(
+            record["surface"]["classification"] == "transparent-cutout" for record in records
+        ),
+        "whiteBackgrounds": sum(
+            record["surface"]["classification"] == "white-background" for record in records
+        ),
+        "opaqueOriginals": sum(
+            record["surface"]["classification"] == "opaque-original" for record in records
+        ),
         "applied": applied,
         "inputBytes": sum(record["original"]["bytes"] for record in records),
         "projectedOutputBytes": sum(

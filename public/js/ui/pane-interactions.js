@@ -22,7 +22,7 @@ let mediaLightboxOpener = null;
 /**
  * split-view.js 가 앱 초기화 시 1회 호출해 실제 "사진 확대 pane 열기" 구현을
  * 등록한다.
- * @param {(views: {src: string, alt: string, label: string, slug: string}[], startIndex: number, paneColor: string, onViewChange?: (slug: string) => void, sourceId?: string) => void} opener
+ * @param {(views: {src: string, alt: string, label: string, slug: string}[], startIndex: number, paneColor: string, onViewChange?: (slug: string) => void, sourceId?: string, useWhiteSurface?: boolean) => void} opener
  */
 export function setMediaLightboxOpener(opener) {
   mediaLightboxOpener = opener;
@@ -277,10 +277,11 @@ function wireMediaLightbox(root) {
     // "<항목id>~media~<뷰>" 로 기록한다. pane1 사진이면 "media~<뷰>".
     const splitView = /** @type {HTMLElement|null} */ (root.closest(".split-view"));
     const sourceId = root.matches(".split-view__pane:nth-child(2)") ? splitView?.dataset.paneId || "" : "";
+    const useWhiteSurface = Boolean(media.closest(".product-media--white"));
     // 순서 주의: pane 오픈(DOM 재구성 포함)을 먼저 끝내고, 다음 프레임에
     // --collapsing 을 붙인다. 클래스를 먼저 붙이면 "접히기 전" 상태가 한 번도
     // 페인트되지 않아 트랜지션 없이 최종 모습으로 튄다.
-    mediaLightboxOpener(views, startIndex, paneColor, onViewChange, sourceId);
+    mediaLightboxOpener(views, startIndex, paneColor, onViewChange, sourceId, useWhiteSurface);
     if (wrap) {
       requestAnimationFrame(() => {
         wrap.classList.add("modal__media-wrap--collapsing");
