@@ -7,8 +7,16 @@
  * 관련 CSS: css/components/controls.css (.filter-panel, .chip, .range-slider)
  * 상태 저장: 각 도메인의 state 객체 (core/state.js 참조)
  */
-import { $, esc, uniq } from "../core/dom.js";
+import { esc, uniq } from "../core/dom.js";
 import { resolvePath as resolve } from "../core/filter-engine.js";
+
+/** 배열 필드는 원소 하나라도 일치하면 해당 칩 값을 가진 것으로 본다. */
+function hasFieldValue(item, key, value) {
+  const fieldValue = resolve(item, key);
+  return Array.isArray(fieldValue)
+    ? fieldValue.some(entry => String(entry) === String(value))
+    : String(fieldValue) === String(value);
+}
 
 /**
  * 토글형 칩 버튼 1개를 생성한다.
@@ -28,7 +36,7 @@ function chipEl(label, val, set, sub, onchange) {
   b.innerHTML = esc(label) + (sub != null ? ` <span class="chip__count">${sub}</span>` : "");
   b.onclick = () => {
     set.has(val) ? set.delete(val) : set.add(val);
-    b.setAttribute("aria-pressed", set.has(val));
+    b.setAttribute("aria-pressed", String(set.has(val)));
     onchange();
   };
   return b;
@@ -61,7 +69,7 @@ export function controlsBarHTML(idPrefix, searchPlaceholder, sortOptions) {
           <div class="controls__tools">
             <select class="select" id="${idPrefix}-sort">${optionsHTML}</select>
             <button class="btn" id="${idPrefix}-reset">필터 초기화</button>
-            <button class="btn btn--toggle" id="${idPrefix}-filter-toggle" type="button" aria-expanded="false">
+            <button class="btn btn--toggle" id="${idPrefix}-filter-toggle" type="button" aria-expanded="false" aria-controls="${idPrefix}-filters">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
               필터
             </button>
@@ -75,7 +83,7 @@ export function controlsBarHTML(idPrefix, searchPlaceholder, sortOptions) {
 /**
  * 필터 패널 전체(칩 행 + 범위 슬라이더 행)를 panelEl 안에 빌드한다.
  * @param {HTMLElement} panelEl 필터 패널 컨테이너 (.filter-panel)
- * @param {Object[]} data 필터 대상 전체(미필터) 데이터 배열
+ * @param {ReadonlyArray<Object>} data 필터 대상 전체(미필터) 데이터 배열
  * @param {Object} state 도메인 상태 객체 (core/state.js createState)
  * @param {Object} schema 도메인 스키마 (chipFields/rangeFields 정의)
  * @param {Function} onChange 필터 변경 시 호출할 콜백 (도메인의 render)
@@ -88,15 +96,12 @@ export function buildFilters(panelEl, data, state, schema, onChange) {
     if (!state.chipFilters[cf.key]) state.chipFilters[cf.key] = new Set();
     const row = document.createElement("div");
     row.className = "filter-panel__row";
-    row.innerHTML = `<div class="filter-panel__label">${esc(cf.label)}</div><div class="chip-group" id="f-${cf.key}"></div>`;
+    row.innerHTML = `<div class="filter-panel__label">${esc(cf.label)}</div><div class="chip-group" data-filter-key="${esc(cf.key)}"></div>`;
     panelEl.appendChild(row);
     const chipsEl = row.querySelector(".chip-group");
     // 값이 배열이면 원소 각각을 개별 칩 값으로 본다 — 한 항목이 여러 분류에
     // 동시에 속하는 경우(예: 소프트웨어 type). 스칼라면 기존과 동일.
-    const has = (d, v) => {
-      const x = resolve(d, cf.key);
-      return Array.isArray(x) ? x.some(e => String(e) === String(v)) : String(x) === String(v);
-    };
+    const has = (d, v) => hasFieldValue(d, cf.key, v);
     // cf.order 가 있으면 그 순서대로, 없으면 데이터에서 발견한 값을 정렬해 사용
     const values = cf.order
       ? cf.order.filter(v => data.some(d => has(d, v)))
@@ -128,11 +133,11 @@ export function buildFilters(panelEl, data, state, schema, onChange) {
     row.innerHTML = `<div class="filter-panel__label">${esc(rf.label)}</div>
       <div class="range-slider">
         <div class="range-slider__track-zone">
-          <div class="range-slider__rail"><div class="range-slider__fill" id="rf-${rf.key}-fill"></div></div>
-          <input type="range" class="range-slider__input" id="rf-${rf.key}-min" aria-label="min ${esc(rf.label)}">
-          <input type="range" class="range-slider__input" id="rf-${rf.key}-max" aria-label="max ${esc(rf.label)}">
+          <div class="range-slider__rail"><div class="range-slider__fill" data-range-fill></div></div>
+          <input type="range" class="range-slider__input" data-range-min aria-label="min ${esc(rf.label)}">
+          <input type="range" class="range-slider__input" data-range-max aria-label="max ${esc(rf.label)}">
         </div>
-        <div class="range-slider__readout"><b id="rf-${rf.key}-minv">–</b> – <b id="rf-${rf.key}-maxv">–</b><span>${esc(rf.unit || "")}</span></div>
+        <div class="range-slider__readout"><b data-range-min-value>–</b> – <b data-range-max-value>–</b><span>${esc(rf.unit || "")}</span></div>
       </div>`;
     panelEl.appendChild(row);
     wireRange(row, rf.key, lo, hi, state, onChange, step, rf.minGap);
@@ -152,22 +157,24 @@ export function buildFilters(panelEl, data, state, schema, onChange) {
  */
 function wireRange(row, key, lo, hi, state, onChange, step = 1, minGap) {
   const MINGAP = minGap != null ? minGap : step;
-  const mn = row.querySelector(`#rf-${key}-min`), mx = row.querySelector(`#rf-${key}-max`);
-  const fill = row.querySelector(`#rf-${key}-fill`);
-  const minv = row.querySelector(`#rf-${key}-minv`), maxv = row.querySelector(`#rf-${key}-maxv`);
-  mn.min = mx.min = lo; mn.max = mx.max = hi; mn.step = mx.step = step;
-  mn.value = lo; mx.value = hi;
+  const mn = /** @type {HTMLInputElement} */ (row.querySelector("[data-range-min]"));
+  const mx = /** @type {HTMLInputElement} */ (row.querySelector("[data-range-max]"));
+  const fill = /** @type {HTMLElement} */ (row.querySelector("[data-range-fill]"));
+  const minv = /** @type {HTMLElement} */ (row.querySelector("[data-range-min-value]"));
+  const maxv = /** @type {HTMLElement} */ (row.querySelector("[data-range-max-value]"));
+  mn.min = mx.min = String(lo); mn.max = mx.max = String(hi); mn.step = mx.step = String(step);
+  mn.value = String(lo); mx.value = String(hi);
   const upd = (e) => {
     let a = +mn.value, b = +mx.value;
     // 두 핸들이 MINGAP 미만으로 겹치지 않도록 조정
     if (b - a < MINGAP) {
-      if (e && e.target === mn) { a = b - MINGAP; if (a < lo) { a = lo; b = a + MINGAP; mx.value = b; } mn.value = a; }
-      else { b = a + MINGAP; if (b > hi) { b = hi; a = b - MINGAP; mn.value = a; } mx.value = b; }
+      if (e && e.target === mn) { a = b - MINGAP; if (a < lo) { a = lo; b = a + MINGAP; mx.value = String(b); } mn.value = String(a); }
+      else { b = a + MINGAP; if (b > hi) { b = hi; a = b - MINGAP; mn.value = String(a); } mx.value = String(b); }
     }
     state.range[key] = { lo: a, hi: b, min: lo, max: hi };
     const pa = (a - lo) / (hi - lo) * 100, pb = (b - lo) / (hi - lo) * 100;
     fill.style.left = pa + "%"; fill.style.width = (pb - pa) + "%";
-    minv.textContent = a; maxv.textContent = b;
+    minv.textContent = String(a); maxv.textContent = String(b);
     onChange();
   };
   mn.oninput = upd; mx.oninput = upd; upd();
@@ -185,12 +192,17 @@ export function wireFilterToggle(toggleBtn, panelEl) {
   if (!toggleBtn || !panelEl) return;
   // 기본 상태: 접힘. 버튼 마크업에 aria-expanded="true" 가 명시된 경우에만 펼침 유지.
   const startExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
-  toggleBtn.setAttribute("aria-expanded", String(startExpanded));
-  panelEl.classList.toggle("filter-panel--collapsed", !startExpanded);
+  const syncExpanded = expanded => {
+    toggleBtn.setAttribute("aria-expanded", String(expanded));
+    panelEl.classList.toggle("filter-panel--collapsed", !expanded);
+    panelEl.setAttribute("aria-hidden", String(!expanded));
+    // 접힌 패널은 시각적으로만 숨기지 않고 포커스 탐색에서도 제외해야 한다.
+    panelEl.toggleAttribute("inert", !expanded);
+  };
+  syncExpanded(startExpanded);
   toggleBtn.onclick = () => {
     const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
-    toggleBtn.setAttribute("aria-expanded", String(!expanded));
-    panelEl.classList.toggle("filter-panel--collapsed", expanded);
+    syncExpanded(!expanded);
   };
 }
 
@@ -198,19 +210,20 @@ export function wireFilterToggle(toggleBtn, panelEl) {
  * 현재 필터 조합에서 결과가 0이 되는 칩을 비활성화(disabled) 처리한다.
  * 렌더링 직후 card-grid.js 가 호출.
  * @param {HTMLElement} panelEl 필터 패널
- * @param {Object[]} data 전체 데이터
+ * @param {ReadonlyArray<Object>} data 전체 데이터
  * @param {Object} state 도메인 상태
  * @param {Object} schema 도메인 스키마
  * @param {Function} passesFn (item, exceptKey) => boolean — 해당 필드를 제외한 필터 통과 여부
  */
 export function updateChipDisabledStates(panelEl, data, state, schema, passesFn) {
   schema.chipFields.forEach(cf => {
-    const chipsEl = panelEl.querySelector(`#f-${cf.key}`);
+    const chipsEl = /** @type {HTMLElement[]} */ ([...panelEl.querySelectorAll(".chip-group[data-filter-key]")])
+      .find(el => el.dataset.filterKey === cf.key);
     if (!chipsEl) return;
-    chipsEl.querySelectorAll(".chip").forEach(c => {
+    /** @type {NodeListOf<HTMLButtonElement>} */ (chipsEl.querySelectorAll(".chip")).forEach(c => {
       const val = c.dataset.val;
       const active = c.getAttribute("aria-pressed") === "true";
-      const has = data.some(d => String(resolve(d, cf.key)) === val && passesFn(d, cf.key));
+      const has = data.some(d => hasFieldValue(d, cf.key, val) && passesFn(d, cf.key));
       const disable = !has && !active;
       c.disabled = disable;
       c.setAttribute("aria-disabled", String(disable));

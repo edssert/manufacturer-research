@@ -25,7 +25,7 @@ function updateStickyVars(topbarEl, topnavEl) {
  * @param {HTMLElement} topnavEl #topnav
  */
 export function initStickyHeader(topnavEl) {
-  const topbarEl = document.querySelector(".topbar");
+  const topbarEl = /** @type {HTMLElement|null} */ (document.querySelector(".topbar"));
   if (!topnavEl && !topbarEl) return;
   const update = () => updateStickyVars(topbarEl, topnavEl);
   update();

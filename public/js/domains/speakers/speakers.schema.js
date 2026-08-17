@@ -7,13 +7,10 @@
  */
 // This is the only place that knows Speakers have fields like "mk", "type", "lowInch", "spl".
 import { normalizeSearchText } from "../../core/filter-engine.js";
+import { MANUFACTURERS, MANUFACTURER_ORDER } from "../../core/manufacturers.js";
 
-export const MFR = {
-  la: { name: "L-Acoustics", color: "var(--la)", short: "L-ACOUSTICS" },
-  db: { name: "d&b audiotechnik", color: "var(--db)", short: "d&b" },
-  my: { name: "Meyer Sound", color: "var(--my)", short: "MEYER" },
-};
-export const MK_ORDER = ["la", "db", "my"];
+export const MFR = MANUFACTURERS;
+export const MK_ORDER = MANUFACTURER_ORDER;
 export const TYPE_ORDER = ["Line Array", "Progressive Ultra-Dense Line Source", "Constant Curvature Line", "Point", "Colinear", "Subwoofer"];
 // Type 태그가 card__config 줄(전용 한 줄, 공간 여유)로 옮겨간
 // 뒤로는 축약할 필요가 없어져 풀스펠링을 그대로 쓴다 — 매핑은 빈 상태로 유지
@@ -23,12 +20,10 @@ export const TYPE_BADGE_LABEL = {};
 // Standalone subwoofer series (no throwCat, e.g. L-Acoustics "Subwoofers") sort
 // after the throw-distance tiers; anything unrecognized falls back after that.
 export const THROWCAT_ORDER = ["Long Throw", "Medium Throw", "Short Throw"];
-// d&b 시리즈는 throwCat 이 없어(둘 다 null) THROWCAT_ORDER 로 순서가 갈리지
-// 않고 알파벳순("CL"<"SL")으로 밀렸었다 — 사용자 요청으로 SL 을 CL 보다
-// 먼저 오도록 명시 우선순위 지정(speakers.controller.js subGroupOrder 참고).
-// Meyer Sound 도 동일한 이유(모든 시리즈 throwCat: null)로 알파벳순
-// (LEOPARD<LINA<PANTHER<TIGRA)으로 밀렸었다 — 사용자 요청으로 체급(무게) 큰
-// 순서로 명시 지정: PANTHER(68kg) > TIGRA(54kg) > LEOPARD(34kg) > LINA(19.5kg).
+// d&b와 Meyer Sound 시리즈는 throwCat이 null이라 THROWCAT_ORDER를 적용할 수
+// 없다. d&b는 SL을 CL보다 먼저, Meyer Sound는 체급 순으로 PANTHER(68kg) >
+// TIGRA(54kg) > LEOPARD(34kg) > LINA(19.5kg)를 명시한다
+// (speakers.controller.js subGroupOrder 참고).
 // 정렬은 제조사(mk) 그룹 안에서만 비교되므로 값은 제조사별 상대 순서만 의미가
 // 있다. d&b: 대형 라인어레이(SL) → V → T → 컬럼(CL) → 증강(AL). Meyer: 라인어레이
 // 4종을 체급 순(PANTHER>TIGRA>LEOPARD>LINA)으로 둔 뒤 포인트소스·모니터
@@ -58,50 +53,30 @@ const WAY_LABEL = { "2-way": "2-Way", "3-way": "3-Way", "16-channel": "16-Channe
 // configuration, so this is exposed as its own chip filter (see lowUnitConfig below).
 export const LOW_UNIT_CONFIG_ORDER = ["Single", "Dual", "Multi"];
 
-// Derives { wayCount, network } from the raw `crossover` string (e.g. "3-way, active",
-// "2-way, passive", "passive", "3-way, active, passive", "16-channel, active").
-// Mutates each speaker in place — called once at load time in main.js before any
-// rendering happens, so downstream code can treat wayCount/network as plain fields
-// (the generic filter engine only knows how to read flat fields, not parse strings).
-export function normalizeCrossover(speakers) {
-  speakers.forEach(d => {
-    // 스펙 조사 전(pending, 이미지만 등록됨) 항목은 crossover 가 비어 있는데,
-    // 아래 기본값이 network 를 "Passive" 로 단정해 버려 조사도 안 한 제품이
-    // Network 칩 필터에 Passive 로 잡히는 문제가 있다 — 파생 태그를 아예
-    // 남기지 않아 칩 수집(filter-engine 이 null 은 건너뜀) 대상에서 빠지게 한다.
-    if (d.pending) { d.wayCount = null; d.network = null; return; }
-    const cx = (d.crossover || "").toLowerCase();
-    let wayCount = "N/A";
-    if (cx.includes("16-channel")) wayCount = "16-channel";
-    else if (cx.includes("3-way")) wayCount = "3-way";
-    else if (cx.includes("2-way")) wayCount = "2-way";
-    const hasActive = cx.includes("active");
-    const hasPassive = cx.includes("passive");
-    let network = "Passive";
-    if (hasActive && hasPassive) network = "Hybrid";
-    else if (hasActive) network = "Active";
-    else if (hasPassive) network = "Passive";
-    d.wayCount = wayCount;
-    d.network = network;
-  });
-  return speakers;
+function crossoverFields(speaker) {
+  // 조사 전 항목은 빈 crossover를 Passive로 오인하지 않도록 필터 파생값을
+  // 명시적으로 비운다.
+  if (speaker.pending) return { wayCount: null, network: null };
+  const crossover = (speaker.crossover || "").toLowerCase();
+  let wayCount = "N/A";
+  if (crossover.includes("16-channel")) wayCount = "16-channel";
+  else if (crossover.includes("3-way")) wayCount = "3-way";
+  else if (crossover.includes("2-way")) wayCount = "2-way";
+
+  const hasActive = crossover.includes("active");
+  const hasPassive = crossover.includes("passive");
+  let network = "Passive";
+  if (hasActive && hasPassive) network = "Hybrid";
+  else if (hasActive) network = "Active";
+  return { wayCount, network };
 }
 
-// Derives `lowUnitConfig` from `lowQty` (number of low-frequency drivers):
-// exactly 2 => "Dual" (the configuration Korean public-tender specs usually
-// gate on), 1 => "Single", 3+ => "Multi". Mutates each speaker in place,
-// same pattern/timing as normalizeCrossover (called once at load time).
-export function normalizeLowUnitConfig(speakers) {
-  speakers.forEach(d => {
-    if (d.pending) { d.lowUnitConfig = null; return; }  // normalizeCrossover 와 같은 이유
-    const q = d.lowQty;
-    let cfg = "N/A";
-    if (q === 1) cfg = "Single";
-    else if (q === 2) cfg = "Dual";
-    else if (q > 2) cfg = "Multi";
-    d.lowUnitConfig = cfg;
-  });
-  return speakers;
+function lowUnitConfigOf(speaker) {
+  if (speaker.pending) return null;
+  if (speaker.lowQty === 1) return "Single";
+  if (speaker.lowQty === 2) return "Dual";
+  if (speaker.lowQty > 2) return "Multi";
+  return "N/A";
 }
 
 // Parses a raw coverage-angle string (cov.h / cov.v) into a [min, max] range
@@ -150,23 +125,32 @@ export function parseAngleRange(raw) {
   return [Math.min(...values), Math.max(...values)];
 }
 
-// Derives range-filterable numeric fields from `cov` (coverage angle object)
-// and stores them as plain [min,max] arrays: `hRange`/`vRange` (horizontal /
-// vertical coverage angle) and `splayRange` (inter-element splay angle set).
-// Mutates each speaker in place, same load-time pattern as the other
-// normalize*() functions in this file.
-export function normalizeAngleRanges(speakers) {
-  speakers.forEach(d => {
-    const cov = d.cov;
-    d.hRange = cov ? parseAngleRange(cov.h) : null;
-    d.vRange = cov ? parseAngleRange(cov.v) : null;
-    if (cov && cov.splayList && cov.splayList.length) {
-      d.splayRange = [Math.min(...cov.splayList), Math.max(...cov.splayList)];
-    } else {
-      d.splayRange = null;
-    }
-  });
-  return speakers;
+function angleRangeFields(speaker) {
+  const coverage = speaker.cov;
+  return {
+    hRange: coverage ? parseAngleRange(coverage.h) : null,
+    vRange: coverage ? parseAngleRange(coverage.v) : null,
+    splayRange: coverage?.splayList?.length
+      ? [Math.min(...coverage.splayList), Math.max(...coverage.splayList)]
+      : null,
+  };
+}
+
+/**
+ * 원본 수집 레코드와 파생 UI 필드를 분리한 동결 catalog를 만든다. 중첩 사양은
+ * 읽기 전용으로 공유하고 최상위 객체만 새로 만들어 원본에 필터 상태가 섞이지
+ * 않게 한다.
+ * @param {Object[]} speakers
+ * @returns {readonly Object[]}
+ */
+export function createSpeakerCatalog(speakers) {
+  if (!Array.isArray(speakers)) throw new TypeError("speakers must be an array");
+  return Object.freeze(speakers.map(speaker => Object.freeze({
+    ...speaker,
+    ...crossoverFields(speaker),
+    lowUnitConfig: lowUnitConfigOf(speaker),
+    ...angleRangeFields(speaker),
+  })));
 }
 
 export const speakersSchema = {

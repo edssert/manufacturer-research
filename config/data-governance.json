@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "sourceRegistry": {
+    "canonical": {
+      "root": "raw-data/raw-specs",
+      "role": "canonical-source",
+      "acceptedForCoverage": true,
+      "auditSurface": "paths-and-filenames-only"
+    },
+    "legacyStaging": {
+      "root": "upload",
+      "role": "legacy-staging",
+      "acceptedForCoverage": false
+    }
+  },
+  "dataStatus": {
+    "field": "pending",
+    "pendingValue": true,
+    "defaultWhenAbsent": "complete",
+    "completeRequiresCanonicalSource": true,
+    "pendingMayLackCanonicalSource": true,
+    "missingCompleteSourcesMustBeListedAsKnownGaps": true
+  },
+  "sourceCoverage": {
+    "speakers": {
+      "mode": "record",
+      "directorySegments": ["speakers"],
+      "recordIdPrefix": "spk",
+      "recordScope": "complete",
+      "versionSuffixPattern": "[_-]v\\d+(?:\\.\\d+)*$",
+      "expectedRecordCount": 93,
+      "expectedDocumentCount": 93
+    },
+    "amplifiers": {
+      "mode": "record",
+      "directorySegments": ["amplifiers"],
+      "recordIdPrefix": "amp",
+      "recordScope": "all",
+      "versionSuffixPattern": "[_-]v\\d+(?:\\.\\d+)*$",
+      "expectedRecordCount": 17,
+      "expectedDocumentCount": 8
+    },
+    "dsps": {
+      "mode": "record",
+      "directorySegments": ["dsps"],
+      "recordIdPrefix": "dsp",
+      "recordScope": "all",
+      "versionSuffixPattern": "[_-]v\\d+(?:\\.\\d+)*$",
+      "expectedRecordCount": 4,
+      "expectedDocumentCount": 0
+    },
+    "software": {
+      "mode": "record",
+      "directorySegments": ["software"],
+      "recordIdPrefix": "sw",
+      "recordScope": "all",
+      "versionSuffixPattern": "[_-]v\\d+(?:\\.\\d+)*$",
+      "expectedRecordCount": 18,
+      "expectedDocumentCount": 0
+    },
+    "brand": {
+      "mode": "record",
+      "directorySegments": ["brand", "brands"],
+      "recordIdPrefix": "brand",
+      "recordScope": "all",
+      "versionSuffixPattern": "[_-]v\\d+(?:\\.\\d+)*$",
+      "expectedRecordCount": 3,
+      "expectedDocumentCount": 0
+    },
+    "accessories": {
+      "mode": "collection",
+      "directorySegments": ["accessories"],
+      "expectedRecordCount": 33,
+      "expectedDocumentCount": 3,
+      "expectedDocumentPaths": [
+        "la/accessories/cables.md",
+        "la/accessories/protections-transportations.md",
+        "la/accessories/rigging.md"
+      ]
+    }
+  },
+  "knownGaps": {
+    "missingCanonicalSourceRecordIds": {
+      "speakers": [],
+      "amplifiers": [
+        "amp-db-10d",
+        "amp-db-25d",
+        "amp-db-30d",
+        "amp-db-40d",
+        "amp-db-5d",
+        "amp-db-5dm",
+        "amp-db-d25",
+        "amp-db-d40",
+        "amp-db-d80"
+      ],
+      "dsps": ["dsp-la-p1", "dsp-db-ds100", "dsp-db-ds10", "dsp-my-galileo-galaxy"],
+      "software": [
+        "sw-la-soundvision",
+        "sw-la-network-manager",
+        "sw-la-soundvision-connect",
+        "sw-la-l-isa-controller",
+        "sw-la-l-isa-studio",
+        "sw-la-source-intelligence",
+        "sw-db-r1",
+        "sw-db-artshow",
+        "sw-db-noizcalc",
+        "sw-db-create-control",
+        "sw-db-en-scene",
+        "sw-db-en-space",
+        "sw-my-mapp3d",
+        "sw-my-compass",
+        "sw-my-compass-go",
+        "sw-my-cuestation",
+        "sw-my-nebra",
+        "sw-my-spacemap-go"
+      ],
+      "brand": ["brand-la", "brand-db", "brand-my"]
+    },
+    "unresolvedSpeakerAmplifierModels": {
+      "models": ["D6", "D12", "D20"],
+      "referenceRowCount": 17
+    },
+    "asymmetricRelations": {
+      "dspSoftware": [
+        { "dspId": "dsp-la-p1", "softwareId": "sw-la-network-manager" },
+        { "dspId": "dsp-la-p1", "softwareId": "sw-la-soundvision" },
+        { "dspId": "dsp-db-ds100", "softwareId": "sw-db-r1" },
+        { "dspId": "dsp-db-ds10", "softwareId": "sw-db-r1" },
+        { "dspId": "dsp-my-galileo-galaxy", "softwareId": "sw-my-compass" },
+        { "dspId": "dsp-my-galileo-galaxy", "softwareId": "sw-my-mapp3d" }
+      ],
+      "accessoryAccessory": []
+    }
+  }
+}

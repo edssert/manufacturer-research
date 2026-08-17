@@ -2,11 +2,10 @@
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
 // LEOPARD 는 PANTHER 와 마찬가지로 Meyer Sound 의 자체 DSP 앰프 내장형
-// (파워드) 라인어레이 — amps 는 빈 배열(사용자 확인, PANTHER 와 동일 패턴).
+// (파워드) 라인어레이이므로 외부 앰프 관계인 amps는 빈 배열이다.
 // 3채널 Class D 앰프(합산 3900W peak)와 RMS 네트워크(Galileo GALAXY 연동)
-// 스펙은 connectors 필드에 요약. 대표 이미지는 사용자가 업로드한 흰 배경
-// 앵글샷(leopard_portal-sq.jpg)의 배경을 제거해 반영 — 표준/M80 두 모델
-// 모두 외형이 동일(커버리지 각도만 다름)해 같은 사진을 공유한다(사용자 확인).
+// 스펙은 connectors 필드에 요약한다. 표준/M80 두 모델은 외형이 같고
+// 커버리지 각도만 다르므로 같은 투명 배경 이미지를 공유한다.
 export const MY_LEOPARD_SERIES = [
   {
     "id": "spk-my-leopard",

@@ -26,27 +26,24 @@ export const LA_SUBWOOFERS = [
         "hi": "?"
       }
     ],
-    // [upload/CS1_v1.3.md 마스터 스키마 반영] Cardioid_Capability — 원문:
+    // [지향성] Cardioid_Capability — 원문:
     // CS1_OM_EN_2.0.pdf p.13 "Polar pattern"(전방 SB 2발 + 측면 SC 2발
     // 내장 배치로 단일 인클로저 자체가 카디오이드 성형).
     "cardioidCapability": "Integrated",
     "weight": 180,
-    // [수정] transducers/connectors/lowQty — 마스터 스키마(CS1_OM_EN_2.0.pdf
-    // p.87 "CS1 specifications")로 대조한 결과 기존 값이 부정확했다:
-    // "LC"는 오기가 아니라 제조사(CS1_OM_EN_2.0.pdf) 표기
-    // 그대로 — LC(측면 SC 채널)/LF(전방 SB 채널)로 역할이 구분되어
-    // 하나로 뭉쳐 표기하지 않는다. 커넥터 명칭은 원문 다이어그램/핀아웃표
+    // [트랜스듀서] CS1_OM_EN_2.0.pdf p.87의 "LC" 표기는 LC(측면 SC 채널)와
+    // LF(전방 SB 채널)의 역할을 구분하므로 제조사 표기를 그대로 사용하고
+    // 하나로 뭉치지 않는다. 커넥터 명칭은 원문 다이어그램/핀아웃표
     // 기준 "PA-COM"(스펙 표의 "CA-COM" 3회 표기는 문서 내 오기로 판단,
     // K1/K2와 동일 8-point PA-COM 체계).
     "transducers": "LC: 2 × 21″ · LF: 2 × 21″",
     "connectors": "8-point PA-COM x2 (IN 1 + LINK 1)",
-    // [upload/CS1_v1.3.md 마스터 스키마 반영] PA-COM 8핀 그룹별 매핑.
+    // [커넥터] PA-COM 8핀 그룹별 매핑.
     // 원문: CS1_OM_EN_2.0.pdf p.15 "Connectors"(4채널 독립 구동).
     "paComPinout": { "ab": "LF1", "cd": "LF2", "ef": "LF3", "gh": "LF4" },
     "ip": "IP55",
-    // [수정] dims — 기존 값의 축이 W x D x H 순으로 뒤섞여 있었다.
-    // 마스터 스키마(도면 이미지 렌더링 확인)가 Width=1514/Height=1117/
-    // Depth=588mm로 축을 확정 — W x H x D 순으로 정정.
+    // [치수] 도면의 축 라벨에 따라 Width=1514, Height=1117, Depth=588mm를
+    // W x H x D 순서로 기록한다.
     "dims": "1514 x 1117 x 588 mm / 59.6 x 44 x 23.1 in",
     "amps": [
       {
@@ -80,8 +77,8 @@ export const LA_SUBWOOFERS = [
       "ampIds": []
     },
     "watt": null,
-    // [upload/CS1_v1.3.md 마스터 스키마 반영] Preset Guide/Mechanical
-    // Safety 신규 반영.
+    // [프리셋] Preset Guide/Mechanical
+    // Safety 필드를 관리.
     "presets": {
       "rows": [
         { "config": "CS1 as a subwoofer (cardioid)", "preset": "[CS1_60]", "acoustic": "25 Hz~ (cardioid)", "acousticShort": "25 Hz~, cardioid" },
@@ -146,15 +143,14 @@ export const LA_SUBWOOFERS = [
         "hi": "110 Hz"
       }
     ],
-    // [upload/KS28_v1.9.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "Array + preset",
     "weight": 79,
     "transducers": "LF: 2 × 18″",
     "connectors": "4-point speakON",
     "ip": "IP55",
-    // [수정] dims — 기존 값(1340 x 550 x 719mm)이 부정확했다. 마스터
-    // 스키마(KS28_AE_EN.docx "Dimensions (W, H, D)")가 Width=1340/
-    // Height=719/Depth=565mm로 축을 확정 — 정정.
+    // [치수] KS28_AE_EN.docx "Dimensions (W, H, D)"의 축 라벨에 따라
+    // Width=1340, Height=719, Depth=565mm를 사용한다.
     "dims": "1340 x 719 x 565 mm / 52.8 x 28.3 x 22.2 in",
     "amps": [
       {
@@ -217,7 +213,7 @@ export const LA_SUBWOOFERS = [
       "ampIds": []
     },
     "watt": 1181,
-    // [upload/KS28_v1.9.md 마스터 스키마 반영] Mechanical Safety 신규
+    // [기계 안전] Mechanical Safety 필드
     // 반영. KS28은 preset_guide_and_matching/delay_defaults가 원본에
     // KS28 관점 데이터 없이 전부 null(항상 2차 엘리먼트, 실값은 K1/K2/
     // K3/Kara II/Kiva II/L2/L2D 자신의 데이터에 이미 반영됨)이라 presets
@@ -270,15 +266,14 @@ export const LA_SUBWOOFERS = [
         "hi": "83 Hz"
       }
     ],
-    // [upload/KS21_v1.5.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "Array + preset",
     "weight": 49,
     "transducers": "LF: 1 × 21″",
     "connectors": "4-point speakON",
     "ip": "IP55",
-    // [수정] dims — 기존 값(764 x 571 x 601mm)이 부정확했다. 마스터
-    // 스키마(KS21_AE_EN.docx "Dimensions (W, H, D)")가 Width=762/
-    // Height=576/Depth=620mm로 축을 확정 — 정정.
+    // [치수] KS21_AE_EN.docx "Dimensions (W, H, D)"의 축 라벨에 따라
+    // Width=762, Height=576, Depth=620mm를 사용한다.
     "dims": "762 x 576 x 620 mm / 30 x 22.7 x 24.4 in",
     "amps": [
       {
@@ -373,8 +368,8 @@ export const LA_SUBWOOFERS = [
       "ampIds": []
     },
     "watt": 467,
-    // [upload/KS21_v1.5.md 마스터 스키마 반영] Preset Guide/Mechanical
-    // Safety 신규 반영. A10/A15와의 조합 delay_defaults는 KS21이 항상
+    // [프리셋] Preset Guide/Mechanical
+    // Safety 필드를 관리. A10/A15와의 조합 delay_defaults는 KS21이 항상
     // 2차 엘리먼트라 해당 라인소스 자신의 데이터에 이미 반영되어 있다.
     "presets": {
       "rows": [
@@ -436,7 +431,7 @@ export const LA_SUBWOOFERS = [
         "hi": "83 Hz"
       }
     ],
-    // [upload/KS21i_v1.4.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "Array + preset",
     "weight": 46,
     "transducers": "LF: 1 × 21″ neodymium",
@@ -535,7 +530,7 @@ export const LA_SUBWOOFERS = [
       "ampIds": []
     },
     "watt": 467,
-    // [upload/KS21i_v1.4.md 마스터 스키마 반영] Preset Guide 신규 반영.
+    // [프리셋] Preset Guide 필드를 관리.
     // Mechanical Safety 상세 표는 KS21i 자신의 원본에 없고 A10i/A15i
     // 파일에 이미 그 제품 관점으로 반영되어 있어 safetyFactor만 채운다.
     "presets": {
@@ -583,7 +578,7 @@ export const LA_SUBWOOFERS = [
         "hi": "110 Hz"
       }
     ],
-    // [upload/SB18_v1.3.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "Array + preset",
     "weight": 52,
     "transducers": "LF: 1 × 18″",
@@ -683,7 +678,7 @@ export const LA_SUBWOOFERS = [
       "ampIds": []
     },
     "watt": 387,
-    // [upload/SB18_v1.3.md 마스터 스키마 반영] Preset Guide 신규 반영.
+    // [프리셋] Preset Guide 필드를 관리.
     // Mechanical Safety는 SB18 자신의 리깅 매뉴얼에 구성별 표가 없어
     // Max_Wind_Load만 실값으로 확인된다(K1/K2/K3/Kara II와의 조합 딜레이는
     // 각 라인소스 자신의 데이터에 이미 반영됨, SB18은 항상 2차 엘리먼트).
@@ -869,7 +864,7 @@ export const LA_SUBWOOFERS = [
         "hi": "120 Hz"
       }
     ],
-    // [upload/SB15m_v1.4.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "Array + preset",
     "weight": 36,
     "transducers": "LF: 1 × 15″",
@@ -969,8 +964,8 @@ export const LA_SUBWOOFERS = [
       "ampIds": []
     },
     "watt": 608,
-    // [upload/SB15m_v1.4.md 마스터 스키마 반영] Preset Guide/Mechanical
-    // Safety 신규 반영. X8/X12와의 조합 delay_defaults는 SB15m이 항상
+    // [프리셋] Preset Guide/Mechanical
+    // Safety 필드를 관리. X8/X12와의 조합 delay_defaults는 SB15m이 항상
     // 2차 엘리먼트라 각 라인소스 자신의 데이터에 이미 반영되어 있다.
     "presets": {
       "rows": [
@@ -1025,15 +1020,14 @@ export const LA_SUBWOOFERS = [
         "hi": "70 Hz"
       }
     ],
-    // [upload/SB10r_v1.4.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 13,
     "transducers": "LF: 1 × 10″",
     "connectors": "4-point terminal block",
     "ip": "IP55",
-    // [수정] dims — 기존 값이 W/H 축을 뒤바꿔 표기했다. 마스터 스키마
-    // (SB10r_OM_EN.pdf 도면 이미지 렌더링 확인)가 Width=539/Height=547/
-    // Depth=169mm로 축을 확정 — 정정.
+    // [치수] SB10r_OM_EN.pdf 도면의 축 라벨에 따라 Width=539, Height=547,
+    // Depth=169mm를 사용한다.
     "dims": "539 x 547 x 169 mm / 21.2 x 21.5 x 6.7 in",
     "amps": [
       {
@@ -1144,8 +1138,8 @@ export const LA_SUBWOOFERS = [
       "ampIds": []
     },
     "watt": 146,
-    // [upload/SB10r_v1.4.md 마스터 스키마 반영] Preset Guide/Mechanical
-    // Safety 신규 반영. X-시리즈와의 조합 delay_defaults는 SB10r이 항상
+    // [프리셋] Preset Guide/Mechanical
+    // Safety 필드를 관리. X-시리즈와의 조합 delay_defaults는 SB10r이 항상
     // 2차 엘리먼트라 각 라인소스 자신의 데이터에 이미 반영되어 있다.
     "presets": {
       "rows": [
@@ -1197,7 +1191,7 @@ export const LA_SUBWOOFERS = [
         "hi": "70 Hz"
       }
     ],
-    // [upload/SB10i_v1.3.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 15,
     "transducers": "LF: 1 × 10″",
@@ -1380,8 +1374,8 @@ export const LA_SUBWOOFERS = [
       "ampIds": []
     },
     "watt": 146,
-    // [upload/SB10i_v1.3.md 마스터 스키마 반영] Preset Guide/Mechanical
-    // Safety 신규 반영. X-시리즈와의 조합 delay_defaults는 SB10i가 항상
+    // [프리셋] Preset Guide/Mechanical
+    // Safety 필드를 관리. X-시리즈와의 조합 delay_defaults는 SB10i가 항상
     // 2차 엘리먼트라 각 라인소스 자신의 데이터에 이미 반영되어 있다.
     "presets": {
       "rows": [
@@ -1436,7 +1430,7 @@ export const LA_SUBWOOFERS = [
         "hi": "107 Hz"
       }
     ],
-    // [upload/SB6r_v1.5.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 10.6,
     "transducers": "LF: 2 × 6.5″",
@@ -1551,7 +1545,7 @@ export const LA_SUBWOOFERS = [
       "ampIds": []
     },
     "watt": 85,
-    // [upload/SB6r_v1.5.md 마스터 스키마 반영] Preset Guide 신규 반영.
+    // [프리셋] Preset Guide 필드를 관리.
     // Mechanical Safety는 SB6r 자신의 원본에 표가 없어(SB6i와 동일 사유)
     // 추가하지 않았다. X6i/X4i와의 조합 delay_defaults도 SB6r이 항상
     // 2차 엘리먼트라 각 라인소스 자신의 데이터에 이미 반영되어 있다.
@@ -1596,7 +1590,7 @@ export const LA_SUBWOOFERS = [
         "hi": "107 Hz"
       }
     ],
-    // [upload/SB6i_v1.4.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 9,
     "transducers": "LF: 2 × 6.5″",
@@ -1737,7 +1731,7 @@ export const LA_SUBWOOFERS = [
       "ampIds": []
     },
     "watt": 85,
-    // [upload/SB6i_v1.4.md 마스터 스키마 반영] Preset Guide 신규 반영.
+    // [프리셋] Preset Guide 필드를 관리.
     // Mechanical Safety는 SB6i 자신의 원본에 안전계수/구성별 표가 없어
     // 추가하지 않았다. X6i/X4i와의 조합 delay_defaults도 SB6i가 항상
     // 2차 엘리먼트라 각 라인소스 자신의 데이터에 이미 반영되어 있다.

@@ -65,7 +65,7 @@ export function modalBodyHTML(d, resolveSoftwareName) {
     return `<button class="chip" data-software-id="${sid}" type="button">${esc(name)}</button>`;
   }).join("");
   const body = `
-    <div class="modal__body" id="modal-body-main">
+    <div class="modal__body">
       <div class="spec-table">
         ${specRow("I/O", io ? `${io.inputs} in / ${io.outputs} out` : null)}
         ${specRow("Category", d.category)}

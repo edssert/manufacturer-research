@@ -4,24 +4,18 @@
  *
  * 구성 요소:
  *   software.data.js   — 데이터 (브랜드별 파일의 배럴)
+ *   software.detail.js — 공통 상세 provider
  *   software.schema.js — 필터/정렬 정의
  *   software.view.js   — 카드/모달 마크업 (순수 함수)
  */
 import { esc } from "../../core/dom.js";
 import { createDomainTab } from "../../ui/domain-tab.js";
-import { openModalWith } from "../../ui/modal.js";
-import { wireChipPanes } from "../../ui/split-view.js";
-import { setItemRoute } from "../../core/router.js";
+import { openDetailModal } from "../../ui/relation-navigation.js";
 
 import { SOFTWARE } from "./software.data.js";
+import { initSoftwareDetailProvider } from "./software.detail.js";
 import { softwareSchema, SW_MFR, SW_MK_ORDER, SW_TYPE_ORDER, primaryType } from "./software.schema.js";
-import { cardHTML as swCardHTML, modalBodyHTML as swModalBodyHTML } from "./software.view.js";
-
-// 소프트웨어 모달 안의 DSP 칩 클릭 → Split View pane 2 에 DSP 상세.
-// DSP 의 "순수 뷰 함수"와 색상 맵만 import (controller 미참조).
-import { DSPS } from "../dsps/dsps.data.js";
-import { DSP_MFR } from "../dsps/dsps.schema.js";
-import { modalBodyHTML as dspModalBodyHTML } from "../dsps/dsps.view.js";
+import { cardHTML as swCardHTML } from "./software.view.js";
 
 // type 이 없는 소프트웨어(현재 데이터에는 없지만 향후 대비) 대비 폴백.
 const swTypeOf = s => primaryType(s) || "Software";
@@ -77,23 +71,12 @@ function swGroupBy(state) {
  * @returns {boolean} id 가 유효해 모달을 열었으면 true (라우터 딥링크 판정용)
  */
 function openSoftwareModal(id) {
-  const s = SOFTWARE.find(x => x.id === id);
-  if (!s) return false;
-  const { color, head, body } = swModalBodyHTML(s, (did) => { const d = DSPS.find(x => x.id === did); return d ? d.model : did; });
-  openModalWith(color, head, body);
-  // DSP 칩 → Split View pane 2 에 DSP 상세.
-  wireChipPanes("dsp-id", did => {
-    const d = DSPS.find(x => x.id === did);
-    if (!d) return null;
-    const { head, body } = dspModalBodyHTML(d, (sid) => { const s = SOFTWARE.find(x => x.id === sid); return s ? s.name : sid; });
-    return { headHTML: head, paneColor: DSP_MFR[d.mfr].color, bodyHTML: body };
-  });
-  setItemRoute(id);
-  return true;
+  return openDetailModal(id, "software");
 }
 
 /** Software 도메인을 라우터에 등록 — main.js 가 호출하는 유일한 공개 API */
 export function initSoftwareDomain() {
+  initSoftwareDetailProvider();
   createDomainTab({
     key: "software",
     label: "Software",

@@ -1,8 +1,25 @@
 node_modules/
 
-# 제품 사진 원본은 git이 아니라 OneDrive에 보관한다 (repo에는 public/assets/ 의
-# 최종 가공본만 둔다) → C:\Users\User\OneDrive\00.Workspace\03.Resources\MR-Raw-Assets
+# 로컬 개발 설정과 비밀 값
+/.claude/
+.env
+.env.*
+!.env.example
+.serena/
+
+# 언어·테스트·빌드 산출물
+__pycache__/
+*.py[cod]
+coverage/
+dist/
+playwright-report/
+test-results/
+blob-report/
+output/playwright/
+montage_check_output.png
+image-normalize-*.json
+
+# 제품 사진 원본은 repo 밖의 전용 보관소에 두고 최종 가공본만 추적한다.
 raw-data/raw-images/
 raw-data/**/*.zip
 _imgwork/
-.serena/

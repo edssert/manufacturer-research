@@ -1,10 +1,8 @@
 // d&b audiotechnik V 스피커 데이터 (4개 모델: V8, V12, Vi8, Vi12).
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
-// 소스(마스터 스키마 v1.1, audio-spec-parsing-skill):
-//   C:\Dev\audio-spec-parsing-skill\speakers\db\V8_v1.1.md / V12_v1.1.md / Vi8_v1.1.md / Vi12_v1.1.md
-//   (사본: raw-data/raw-specs/db/speakers/v-series/)
-// 내린 판단:
+// 기준 자료는 raw-data/raw-specs/db/speakers/v-series/에 둔다.
+// 데이터 정규화 판단:
 // - spl=142: 원문 "Max. sound pressure (1m, free field)" 상위 앰프군 조건 채택
 //   (V8/V12: with D80/D40 142dB, D20/D12 조건은 139dB · Vi8/Vi12: with 40D 142dB, 30D 조건은 139dB).
 // - amps.total = perCh(원문 "Cabinets per channel") × 앰프 채널 수 — cl-series.data.js와 동일 산법.
@@ -13,8 +11,8 @@
 //   D90은 V/Vi 원문 호환 앰프 목록(V: D80/D40/D20/D12, Vi: 40D/30D)에 없음 — 실존+호환 교집합이 공집합.
 // - crossover="3-way, passive": 단일 앰프 채널 완전 패시브(내장 패시브 크로스오버로 LF+MF+HF 결합) —
 //   SL 시리즈의 "active, passive" 하이브리드와 다름.
-// - dims 깊이 460mm: AE 원문의 406mm는 자체 인치값(18")과 환산 불일치하는 오기로 판단,
-//   OM 도면의 460mm(18")를 채택 — 마스터 스키마 v1.1의 판단 승계.
+// - dims 깊이 460mm: AE의 406mm는 병기된 18인치와 환산이 맞지 않으므로
+//   OM 도면과 일치하는 460mm(18")를 사용한다.
 // - throw/ip/img=null: 원문에 스로우 거리·IP 등급 없음, 이미지 미확보. freqs는 원문에 있는 -5dB 기준만
 //   (CUT 모드 응답 100Hz-18kHz는 컨트롤러 설정값이라 미기재).
 // - watt=500: RMS power handling overall (피크 10ms 2000W는 미기재 — sl/cl 파일의 watt와 동일 성격 유지).

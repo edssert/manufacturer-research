@@ -124,10 +124,9 @@
 .btn--primary:hover { color: var(--accent-ink); filter: brightness(1.06); }
 
 /* ---------- 블록: filter-panel (칩/슬라이더 필터 패널) ----------
-   예전에는 컨트롤 바 안에 그대로 끼어 있어서, 필터를 열면 아래
-   카드가 통째로 밀려 내려갔다 — 열고 닫을 때마다 보던 카드 위치가 흔들린다.
-   컨트롤 바(sticky, 위치 지정 요소)에 absolute 로 매달아 카드 "위에" 반투명
-   오버레이로 덮게 바꿨다. 레이아웃을 차지하지 않으므로 카드는 그대로 있고,
+   컨트롤 바(sticky, 위치 지정 요소)에 absolute로 매달아 카드 위에 반투명
+   오버레이로 덮는다. 패널이 레이아웃을 차지하지 않아 열고 닫아도 카드
+   위치가 움직이지 않으며,
    기존 max-height 트랜지션을 그대로 써서 내려오는 느낌은 유지한다.
    좌우 패딩은 controls__inner 와 같은 기준선(최대 1320px + 24px)에 맞춘다 —
    패널 배경은 바처럼 화면 끝까지 가되 내용은 본문과 정렬된다. */
@@ -211,7 +210,7 @@
 
 /* 액세서리 카드 안의 길이 칩(케이블 길이 변형 나열)은 필터
    패널의 큰 칩과 같은 자리에 여러 개 들어가야 하므로 더 작게 — accessories
-   .view.js lengthChipsHTML() 이 chip-group--compact 를 씀. */
+   accessories.view.js의 lengthChipsHTML()이 chip-group--compact를 쓴다. */
 .chip-group--compact { gap: 5px; }
 .chip-group--compact .chip { padding: 3px 9px; font-size: var(--fs-xs); }
 

@@ -1,7 +1,7 @@
 // L-Acoustics X Series 스피커 데이터 (8개 모델).
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
-// X8i: preset_guide_EN.pdf(v29.0) + 사용자 제공 공식 스펙 기반 신규 추가(2026-07-08).
+// 기준 자료는 raw-data/raw-specs/la/speakers/x-series/에 둔다.
 export const LA_X_SERIES = [
   {
     "id": "spk-la-x15-hiq",
@@ -42,7 +42,7 @@ export const LA_X_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/X15_HiQ_v1.3.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 21,
     "transducers": "LF: 1 × 15″ · HF: 1 × 3″",
@@ -130,8 +130,8 @@ export const LA_X_SERIES = [
       { "band": "LF", "watt": 322 },
       { "band": "HF", "watt": 62 }
     ],
-    // [upload/X15_HiQ_v1.3.md 마스터 스키마 반영] Preset Guide/Matching
-    // Ratio/Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching
+    // Ratio/Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "X15 HiQ standalone point source", "preset": "[X15]", "acoustic": "55 Hz - 20 kHz", "acousticShort": "55 Hz - 20 kHz" },
@@ -215,7 +215,7 @@ export const LA_X_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/X12_v1.5.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 20,
     "transducers": "LF: 1 × 12″ · HF: 1 × 3″",
@@ -314,8 +314,8 @@ export const LA_X_SERIES = [
       "ampIds": []
     },
     "watt": 331,
-    // [upload/X12_v1.5.md 마스터 스키마 반영] Preset Guide/Matching Ratio/
-    // Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching Ratio/
+    // Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "X12 standalone", "preset": "[X12]", "acoustic": "59 Hz - 20 kHz", "acousticShort": "59 Hz - 20 kHz" },
@@ -394,7 +394,7 @@ export const LA_X_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/X8_v1.5.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 12,
     "transducers": "LF: 1 × 8″ · HF: 1 × 1.5″",
@@ -520,8 +520,8 @@ export const LA_X_SERIES = [
       "ampIds": []
     },
     "watt": 211,
-    // [upload/X8_v1.5.md 마스터 스키마 반영] Preset Guide/Delay Defaults/
-    // Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Delay Defaults/
+    // Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "X8 point source", "preset": "[X8]", "acoustic": "60 Hz - 20 kHz", "acousticShort": "60 Hz - 20 kHz" },
@@ -596,7 +596,7 @@ export const LA_X_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/X8i_v1.5.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 11,
     "transducers": "LF: 1 × 8″ · HF: 1 × 1.5″",
@@ -749,12 +749,11 @@ export const LA_X_SERIES = [
     "relations": {
       "ampIds": []
     },
-    // [upload/X8i_v1.5.md 마스터 스키마 값 정정] 211W → 197W
-    // (X8i_OM_EN_2.0.pdf p.189 "X8i specifications" RMS_Power_Handling_Overall
-    // 기준 — 기존 211W는 X8(다른 제품)의 값과 혼동된 것으로 보임).
+    // [출력] X8i_OM_EN_2.0.pdf p.189의 RMS_Power_Handling_Overall인
+    // 197W를 사용한다.
     "watt": 197,
-    // [upload/X8i_v1.5.md 마스터 스키마 반영] Preset Guide/Matching Ratio/
-    // Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching Ratio/
+    // Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "X8i standalone (고SPL)", "preset": "[X8i]", "acoustic": "67 Hz - 20 kHz", "acousticShort": "67 Hz - 20 kHz" },
@@ -831,7 +830,7 @@ export const LA_X_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/X6i_v1.5.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 6.3,
     "transducers": "LF: 1 × 6.5″ · HF: 1 × 1.5″",
@@ -985,8 +984,8 @@ export const LA_X_SERIES = [
       "ampIds": []
     },
     "watt": 83,
-    // [upload/X6i_v1.5.md 마스터 스키마 반영] Preset Guide/Matching Ratio/
-    // Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching Ratio/
+    // Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "X6i standalone (고SPL)", "preset": "[X6i]", "acoustic": "69 Hz - 20 kHz", "acousticShort": "69 Hz - 20 kHz" },
@@ -1065,7 +1064,7 @@ export const LA_X_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/5XT_v1.3.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 3.5,
     "transducers": "LF: 1 × 5″ · HF: 1 × 1″",
@@ -1177,8 +1176,8 @@ export const LA_X_SERIES = [
       "ampIds": []
     },
     "watt": 66,
-    // [upload/5XT_v1.3.md 마스터 스키마 반영] Preset Guide/Delay Defaults/
-    // Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Delay Defaults/
+    // Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "5XT point source", "preset": "[5XT]", "acoustic": "95 Hz - 20 kHz", "acousticShort": "95 Hz - 20 kHz" },
@@ -1254,7 +1253,7 @@ export const LA_X_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/X4i_v1.5.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 1,
     "transducers": "LF: 1 × 4″ · HF: 1 × 1.4″",
@@ -1390,8 +1389,8 @@ export const LA_X_SERIES = [
       "ampIds": []
     },
     "watt": 42,
-    // [upload/X4i_v1.5.md 마스터 스키마 반영] Preset Guide/Matching Ratio/
-    // Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching Ratio/
+    // Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "X4i standalone (고SPL)", "preset": "[X4]", "acoustic": "120 Hz - 20 kHz", "acousticShort": "120 Hz - 20 kHz" },
@@ -1465,15 +1464,14 @@ export const LA_X_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/X4r_v1.5.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 1.6,
     "transducers": "LF: 1 × 4″ · HF: 1 × 1.4″",
     "connectors": "2-point screw terminal",
     "ip": "IP55",
-    // [값 정정] Depth 109mm → 99mm (X4r_OM_EN.pdf 도면 기준 — 109mm은
-    // 마운팅 브래킷 관련 부가 치수이며 실제 엔클로저 깊이가 아님, X4i와
-    // 동일한 99mm임을 upload/X4r_v1.5.md에서 확인).
+    // [치수] X4r_OM_EN.pdf 도면의 99mm가 실제 엔클로저 깊이다. 109mm는
+    // 마운팅 브래킷 관련 부가 치수이므로 dims에 사용하지 않는다.
     "dims": "116 x 116 x 99 mm / 4.6 x 4.6 x 3.9 in",
     "amps": [
       {
@@ -1577,8 +1575,8 @@ export const LA_X_SERIES = [
       "ampIds": []
     },
     "watt": 42,
-    // [upload/X4r_v1.5.md 마스터 스키마 반영] Preset Guide/Matching Ratio/
-    // Delay Defaults/Mechanical Safety 전체 신규 반영. X4i와 동일 아키텍처의
+    // [프리셋] Preset Guide/Matching Ratio/
+    // Delay Defaults/Mechanical Safety 필드를 함께 관리. X4i와 동일 아키텍처의
     // 매입형(recessed) 버전 — 원문 딜레이 표의 "X4i"/"SB6i"/"SB10i" 라벨은
     // X4r/SB6r/SB10r로 정정 채택.
     "presets": {

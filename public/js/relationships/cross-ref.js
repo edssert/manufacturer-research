@@ -1,178 +1,276 @@
 /**
  * @module relationships/cross-ref
- * 도메인 간 ID 해석 레지스트리.
- * 스피커 ↔ 앰프처럼 서로를 참조해야 하는 도메인들이 데이터 모듈을 직접
- * import 하지 않도록, 각 도메인이 로드 시 자기 데이터를 여기 등록하고
- * 상대 도메인은 find 함수로만 조회한다 (순환 의존 방지).
+ * 도메인 모듈 사이의 순환 import 없이 ID와 관계를 해석하는 레지스트리다.
+ * 관계의 원본은 각 레코드 한쪽에만 두고 역방향 표시는 지연 인덱스로 만든다.
  */
-let AMPLIFIERS = [];
-let SPEAKERS = [];
-let ACCESSORIES = [];
+import { EntityRegistry } from "./entity-registry.js";
 
-/**
- * 앰프 데이터 등록 — amplifiers.controller.js 가 로드 시 1회 호출.
- * @param {Object[]} list 전체 앰프 배열
- */
-export function registerAmplifiers(list) { AMPLIFIERS = list; }
+const amplifiers = new EntityRegistry("amplifier");
+const speakers = new EntityRegistry("speaker");
+const accessories = new EntityRegistry("accessory");
 
-/**
- * 스피커 데이터 등록 — speakers.controller.js 가 로드 시 1회 호출.
- * @param {Object[]} list 전체 스피커 배열
- */
-export function registerSpeakers(list) { SPEAKERS = list; }
+let ampModelIndex = null;
+let speakerRelationIndex = null;
+let accessoryUsageIndex = null;
 
-/**
- * 액세서리(System Elements) 데이터 등록 — accessories.controller.js 가
- * 로드 시 1회 호출. Rack 타입 앰프(LA-RAK III 등)가 자신의 케이블/리깅
- * 부속품을 id 로 참조할 때 조회한다(amp.rack.relatedAccessoryIds).
- * @param {Object[]} list 전체 액세서리 배열
- */
-export function registerAccessories(list) { ACCESSORIES = list; }
-
-/**
- * ID 로 앰프 레코드 조회.
- * @param {string} id 앰프 id (예: "amp-la-la12x")
- * @returns {Object|null}
- */
-export function findAmplifierById(id) {
-  return AMPLIFIERS.find(a => a.id === id) || null;
+function invalidateDerivedIndexes() {
+  ampModelIndex = null;
+  speakerRelationIndex = null;
+  accessoryUsageIndex = null;
 }
 
 /**
- * ID 로 스피커 레코드 조회.
- * @param {string} id 스피커 id (예: "spk-la-k2")
- * @returns {Object|null}
+ * 제조사와 모델의 경계를 보존하는 키를 만든다. 문자열 연결 구분자가 실제
+ * 필드에 들어와도 충돌하지 않도록 튜플을 직렬화한다.
  */
-export function findSpeakerById(id) {
-  return SPEAKERS.find(s => s.id === id) || null;
+function modelKey(mfr, model) {
+  return JSON.stringify([mfr, model]);
 }
 
-/**
- * ID 로 액세서리(System Elements) 레코드 조회.
- * @param {string} id 액세서리 id (예: "acc-la-pow2")
- * @returns {Object|null}
- */
-export function findAccessoryById(id) {
-  return ACCESSORIES.find(a => a.id === id) || null;
+function getAmpModelIndex() {
+  if (ampModelIndex) return ampModelIndex;
+
+  const next = new Map();
+  for (const amplifier of amplifiers.snapshot) {
+    if (typeof amplifier.mfr !== "string" || typeof amplifier.model !== "string") continue;
+    const key = modelKey(amplifier.mfr, amplifier.model);
+    if (!next.has(key)) next.set(key, amplifier.id);
+  }
+  ampModelIndex = next;
+  return ampModelIndex;
 }
 
-/**
- * id 목록을 액세서리 {id, name, type} 배열로 변환한다 — 존재하지 않는
- * id(데이터 오타 등)는 조용히 걸러낸다. 스피커/앰프/액세서리의 System
- * Elements·Related Accessories 조회가 전부 이 형태를 쓴다.
- * @param {string[]} ids 액세서리 id 목록
- * @returns {{id:string, name:string, type:string}[]}
- */
-export function accessoriesByIds(ids) {
-  return (ids || []).map(findAccessoryById).filter(Boolean).map(a => ({ id: a.id, name: a.name, type: a.type }));
-}
+function resolveAmpId(mfr, model) {
+  const index = getAmpModelIndex();
+  const direct = index.get(modelKey(mfr, model));
+  if (direct) return direct;
 
-/**
- * 이 액세서리를 System Elements 로 쓰는 Rack 앰프 목록 (역방향 조회 —
- * amp.rack.relatedAccessoryIds 를 반대로 훑는다).
- * @param {string} accessoryId 액세서리 id (예: "acc-la-pow2")
- * @returns {{id:string, name:string}[]}
- */
-export function findAmplifiersUsingAccessory(accessoryId) {
-  return AMPLIFIERS
-    .filter(a => a.rack && (a.rack.relatedAccessoryIds || []).includes(accessoryId))
-    .map(a => ({ id: a.id, name: a.model }));
-}
-
-/**
- * 이 스피커가 System Elements 로 쓰는 액세서리 목록
- * (speaker.relations.accessoryIds — 예: K1 의 K1-BUMP/K1-CHARIOT2).
- * @param {string} speakerId 스피커 id (예: "spk-la-k1")
- * @returns {{id:string, name:string, type:string}[]}
- */
-export function findAccessoriesForSpeaker(speakerId) {
-  const speaker = findSpeakerById(speakerId);
-  return accessoriesByIds(speaker && speaker.relations && speaker.relations.accessoryIds);
-}
-
-/**
- * 이 액세서리를 쓰는 스피커 목록 — findAmplifiersUsingAccessory 의 스피커 판.
- * @param {string} accessoryId 액세서리 id
- * @returns {{id:string, name:string}[]}
- */
-export function findSpeakersUsingAccessory(accessoryId) {
-  return SPEAKERS
-    .filter(s => (s.relations && s.relations.accessoryIds || []).includes(accessoryId))
-    .map(s => ({ id: s.id, name: s.name }));
-}
-
-/**
- * 짝을 이루는 다른 액세서리 목록 (예: K-BUMPFLIGHT ↔ K1-BUMP).
- * 짝 관계는 accessory.relatedAccessoryIds 에 양방향으로 기록해 둔다.
- * @param {string} accessoryId 액세서리 id
- * @returns {{id:string, name:string, type:string}[]}
- */
-export function findRelatedAccessories(accessoryId) {
-  const acc = findAccessoryById(accessoryId);
-  return accessoriesByIds(acc && acc.relatedAccessoryIds);
-}
-
-/**
- * 스피커의 제조사 키 + 원본 앰프 모델 문자열로 실제 앰프 id 를 찾는다.
- * 원본 데이터의 병합 표기("D40 / D80 / D90 / 40D")는 첫 모델로 해석한다.
- * @param {string} mk 제조사 키 ("la" | "db" | "my")
- * @param {string} model 스피커 데이터에 저장된 앰프 모델 문자열
- * @returns {string|null} 앰프 id, 못 찾으면 null
- */
-export function resolveAmpIdForModel(mk, model) {
-  const hit = AMPLIFIERS.find(a => a.mfr === mk && a.model === model);
-  if (hit) return hit.id;
-  if (model && model.includes(" / ")) {
-    const first = model.split(" / ")[0].trim();
-    const hit2 = AMPLIFIERS.find(a => a.mfr === mk && a.model === first);
-    if (hit2) return hit2.id;
+  if (typeof model === "string" && model.includes(" / ")) {
+    const firstModel = model.split(" / ")[0].trim();
+    return index.get(modelKey(mfr, firstModel)) || null;
   }
   return null;
 }
 
-/**
- * 이 앰프에 매칭되는 스피커 id 목록.
- * 앰프의 relations.speakerIds(정적 필드, 대부분 미입력)를 믿지 않고 스피커 쪽
- * amps[].model 을 역해석한다 — 스피커 매칭 표와 같은 판정이라 양방향 표시가
- * 어긋나지 않고, 스피커 데이터만 갱신해도 자동으로 최신이 된다.
- * @param {string} ampId 앰프 id (예: "amp-la-la1dot16i")
- * @returns {string[]} 매칭되는 스피커 id 배열
- */
-export function findSpeakersMatchingAmp(ampId) {
-  const amp = findAmplifierById(ampId);
-  if (!amp) return [];
-  return SPEAKERS
-    .filter(s => (s.amps || []).some(a => resolveAmpIdForModel(s.mk, a.model) === ampId))
-    .map(s => s.id);
+function appendToIndex(index, key, value) {
+  const values = index.get(key);
+  if (values) values.push(value);
+  else index.set(key, [value]);
+}
+
+function getSpeakerRelationIndex() {
+  if (speakerRelationIndex) return speakerRelationIndex;
+
+  const speakerIdsByAmpId = new Map();
+  const configsByAmpId = new Map();
+
+  for (const speaker of speakers.snapshot) {
+    const matchedAmpIds = new Set();
+    const ampRows = Array.isArray(speaker.amps) ? speaker.amps : [];
+
+    for (const ampRow of ampRows) {
+      const ampId = resolveAmpId(speaker.mk, ampRow && ampRow.model);
+      if (!ampId) continue;
+
+      if (!matchedAmpIds.has(ampId)) {
+        appendToIndex(speakerIdsByAmpId, ampId, speaker.id);
+        matchedAmpIds.add(ampId);
+      }
+
+      const configs = Array.isArray(ampRow.configs) ? ampRow.configs : [];
+      for (const config of configs) {
+        const presets = Array.isArray(config.splByPreset)
+          ? config.splByPreset.filter(preset => preset && preset.spl != null)
+          : [];
+
+        if (presets.length) {
+          for (const preset of presets) {
+            appendToIndex(
+              configsByAmpId,
+              ampId,
+              Object.freeze({
+                speakerId: speaker.id,
+                speakerName: speaker.name,
+                mode: config.mode || "",
+                preset: preset.preset,
+                perCh: config.perCh != null ? config.perCh : null,
+                total: config.total != null ? config.total : null,
+                spl: preset.spl,
+              }),
+            );
+          }
+        } else {
+          appendToIndex(
+            configsByAmpId,
+            ampId,
+            Object.freeze({
+              speakerId: speaker.id,
+              speakerName: speaker.name,
+              mode: config.mode || "",
+              preset: null,
+              perCh: config.perCh != null ? config.perCh : null,
+              total: config.total != null ? config.total : null,
+              spl: config.spl != null ? config.spl : null,
+            }),
+          );
+        }
+      }
+    }
+  }
+
+  for (const [ampId, ids] of speakerIdsByAmpId) {
+    speakerIdsByAmpId.set(ampId, Object.freeze(ids));
+  }
+  for (const [ampId, rows] of configsByAmpId) {
+    configsByAmpId.set(ampId, Object.freeze(rows));
+  }
+
+  speakerRelationIndex = { speakerIdsByAmpId, configsByAmpId };
+  return speakerRelationIndex;
+}
+
+function getAccessoryUsageIndex() {
+  if (accessoryUsageIndex) return accessoryUsageIndex;
+
+  const amplifierIdsByAccessoryId = new Map();
+  const speakerIdsByAccessoryId = new Map();
+
+  for (const amplifier of amplifiers.snapshot) {
+    const ids = Array.isArray(amplifier.rack && amplifier.rack.relatedAccessoryIds)
+      ? amplifier.rack.relatedAccessoryIds
+      : [];
+    for (const accessoryId of new Set(ids)) {
+      appendToIndex(amplifierIdsByAccessoryId, accessoryId, amplifier.id);
+    }
+  }
+
+  for (const speaker of speakers.snapshot) {
+    const ids = Array.isArray(speaker.relations && speaker.relations.accessoryIds)
+      ? speaker.relations.accessoryIds
+      : [];
+    for (const accessoryId of new Set(ids)) {
+      appendToIndex(speakerIdsByAccessoryId, accessoryId, speaker.id);
+    }
+  }
+
+  accessoryUsageIndex = { amplifierIdsByAccessoryId, speakerIdsByAccessoryId };
+  return accessoryUsageIndex;
+}
+
+/** @param {readonly Object[]} list 전체 앰프 배열 */
+export function registerAmplifiers(list) {
+  amplifiers.register(list);
+  invalidateDerivedIndexes();
+}
+
+/** @param {readonly Object[]} list 전체 스피커 배열 */
+export function registerSpeakers(list) {
+  speakers.register(list);
+  invalidateDerivedIndexes();
+}
+
+/** @param {readonly Object[]} list 전체 액세서리 배열 */
+export function registerAccessories(list) {
+  accessories.register(list);
+  invalidateDerivedIndexes();
+}
+
+/** @param {string} id @returns {Object|null} */
+export function findAmplifierById(id) {
+  return amplifiers.findById(id);
+}
+
+/** @param {string} id @returns {Object|null} */
+export function findSpeakerById(id) {
+  return speakers.findById(id);
+}
+
+/** @param {string} id @returns {Object|null} */
+export function findAccessoryById(id) {
+  return accessories.findById(id);
 }
 
 /**
- * 앰프 모달의 "Configurations" 표를 스피커 쪽 데이터에서 역으로 구성한다.
- * 매칭 데이터는 스피커 레코드(amps[].configs)에만 입력한다 — 앰프 쪽에도 같은
- * 사실을 적으면 두 값이 어긋나므로 출처를 하나로 둔다. 행 기준은 앰프
- * 모델이 아니라 스피커 — "이 앰프로 어떤 스피커를 어떤 모드/프리셋으로 몇 대
- * 구동해 몇 dB 를 내는지"를 보여주기 위함.
- * @param {string} ampId 앰프 id
+ * @param {string[]} ids
+ * @returns {{id:string, name:string, type:string}[]}
+ */
+export function accessoriesByIds(ids) {
+  return (ids || [])
+    .map(id => accessories.findById(id))
+    .filter(Boolean)
+    .map(accessory => ({ id: accessory.id, name: accessory.name, type: accessory.type }));
+}
+
+/**
+ * @param {string} accessoryId
+ * @returns {{id:string, name:string}[]}
+ */
+export function findAmplifiersUsingAccessory(accessoryId) {
+  const { amplifierIdsByAccessoryId } = getAccessoryUsageIndex();
+  return (amplifierIdsByAccessoryId.get(accessoryId) || []).map(id => {
+    const amplifier = amplifiers.findById(id);
+    return { id, name: amplifier.model };
+  });
+}
+
+/**
+ * @param {string} speakerId
+ * @returns {{id:string, name:string, type:string}[]}
+ */
+export function findAccessoriesForSpeaker(speakerId) {
+  const speaker = speakers.findById(speakerId);
+  return accessoriesByIds(speaker && speaker.relations && speaker.relations.accessoryIds);
+}
+
+/**
+ * @param {string} accessoryId
+ * @returns {{id:string, name:string}[]}
+ */
+export function findSpeakersUsingAccessory(accessoryId) {
+  const { speakerIdsByAccessoryId } = getAccessoryUsageIndex();
+  return (speakerIdsByAccessoryId.get(accessoryId) || []).map(id => {
+    const speaker = speakers.findById(id);
+    return { id, name: speaker.name };
+  });
+}
+
+/**
+ * @param {string} accessoryId
+ * @returns {{id:string, name:string, type:string}[]}
+ */
+export function findRelatedAccessories(accessoryId) {
+  const accessory = accessories.findById(accessoryId);
+  return accessoriesByIds(accessory && accessory.relatedAccessoryIds);
+}
+
+/**
+ * 원본 데이터의 병합 모델 표기는 첫 모델을 fallback으로 해석한다.
+ * @param {string} mfr 제조사 키
+ * @param {string} model 앰프 모델 또는 병합 모델 문자열
+ * @returns {string|null}
+ */
+export function resolveAmpIdForModel(mfr, model) {
+  return resolveAmpId(mfr, model);
+}
+
+/**
+ * 스피커의 amps[]가 앰프 관계의 단일 원본이다.
+ * @param {string} ampId
+ * @returns {string[]}
+ */
+export function findSpeakersMatchingAmp(ampId) {
+  if (!amplifiers.findById(ampId)) return [];
+  const { speakerIdsByAmpId } = getSpeakerRelationIndex();
+  return [...(speakerIdsByAmpId.get(ampId) || [])];
+}
+
+/**
+ * 스피커의 amps[].configs를 앰프 기준 행으로 투영한다.
+ * @param {string} ampId
  * @returns {{speakerId:string, speakerName:string, mode:string, preset:string|null, perCh:number|null, total:number|null, spl:number|null}[]}
  */
 export function findAmpConfigsBySpeaker(ampId) {
-  const amp = findAmplifierById(ampId);
-  if (!amp) return [];
-  const rows = [];
-  SPEAKERS.forEach(s => {
-    (s.amps || []).forEach(a => {
-      if (resolveAmpIdForModel(s.mk, a.model) !== ampId) return;
-      (a.configs || []).forEach(c => {
-        const byPreset = c.splByPreset ? c.splByPreset.filter(p => p.spl != null) : null;
-        if (byPreset && byPreset.length) {
-          byPreset.forEach(p => {
-            rows.push({ speakerId: s.id, speakerName: s.name, mode: c.mode || "", preset: p.preset, perCh: c.perCh != null ? c.perCh : null, total: c.total != null ? c.total : null, spl: p.spl });
-          });
-        } else {
-          rows.push({ speakerId: s.id, speakerName: s.name, mode: c.mode || "", preset: null, perCh: c.perCh != null ? c.perCh : null, total: c.total != null ? c.total : null, spl: c.spl != null ? c.spl : null });
-        }
-      });
-    });
-  });
-  return rows;
+  if (!amplifiers.findById(ampId)) return [];
+  const { configsByAmpId } = getSpeakerRelationIndex();
+  return (configsByAmpId.get(ampId) || []).map(row => ({ ...row }));
 }

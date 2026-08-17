@@ -1,0 +1,9 @@
+.claude/
+dist/
+docs/
+node_modules/
+raw-data/
+upload/
+package-lock.json
+public/assets/
+public/js/main.js

@@ -7,10 +7,34 @@
  * 관련 CSS: css/components/modal.css (.modal-overlay, .modal)
  * 닫기 경로: 배경 클릭 · ESC 키 · [data-modal-close] 버튼 클릭
  */
-import { clearItemRoute } from "../core/router.js";
+import { clearItemRoute, clearPane2Route, setPane2Route } from "../core/router.js";
 import { wirePaneInteractions, removeScrollbarTrack } from "./pane-interactions.js";
 
 let modalBgEl, modalEl;
+const DIALOG_TITLE_ID = "modal-dialog-title";
+const FOCUSABLE_SELECTOR = [
+  "a[href]",
+  "button:not([disabled])",
+  "input:not([disabled])",
+  "select:not([disabled])",
+  "textarea:not([disabled])",
+  "[contenteditable='true']",
+  "[tabindex]:not([tabindex='-1'])",
+].join(",");
+const FOCUS_TOKEN_ATTRIBUTES = [
+  "data-amp-id",
+  "data-speaker-id",
+  "data-accessory-id",
+  "data-software-id",
+  "data-dsp-id",
+  "data-view-switch",
+  "data-toggle-group",
+  "data-modal-close",
+  "data-modal-back",
+];
+let returnFocusEl = null;
+let inertBackground = [];
+let scrollLockState = null;
 
 // [모바일] Split View 대신 "전체 교체 + 뒤로가기"를 쓸 때 이전 화면을 쌓는
 // 스택 { color, headHTML, bodyHTML, onMounted }. onMounted 까지 함께 저장해야
@@ -19,6 +43,208 @@ let mobileStack = [];
 // 지금 렌더된 원본 콘텐츠 문자열. DOM 에서 outerHTML 로 역추출하면 그 사이
 // 추가된 뒤로가기 버튼 같은 부산물이 섞이므로 렌더에 쓴 문자열을 들고 있는다.
 let currentContent = null;
+
+/** 현재 모달과 Split View pane에 연결된 body 오버레이 트랙을 모두 정리한다. */
+function removeModalScrollbarTracks() {
+  if (!modalEl) return;
+  modalEl.querySelectorAll(".split-view__pane").forEach(removeScrollbarTrack);
+  removeScrollbarTrack(modalEl);
+}
+
+/** 모바일 화면 스택의 시각 상태와 라우터 pane2 상태를 함께 맞춘다. */
+function syncMobilePaneRoute(pane2Spec) {
+  if (pane2Spec) setPane2Route(pane2Spec);
+  else clearPane2Route();
+}
+
+function clearDetailMetadata() {
+  if (!modalEl) return;
+  delete modalEl.dataset.detailId;
+  delete modalEl.dataset.detailKind;
+}
+
+/** @returns {boolean} 오버레이가 사용자에게 열린 상태인지 여부 */
+function isModalOpen() {
+  return !!modalBgEl && modalBgEl.classList.contains("modal-overlay--open");
+}
+
+/** hidden/inert 조상 안의 요소에는 포커스를 돌려보내지 않는다. */
+function cannotReceiveFocus(el) {
+  if (!(el instanceof HTMLElement) || !el.isConnected || el.matches(":disabled")) return true;
+  for (let node = el; node && node !== document.body; node = node.parentElement) {
+    if (node.hidden || node.hasAttribute("inert") || node.getAttribute("aria-hidden") === "true") return true;
+  }
+  return false;
+}
+
+/** 실제 탭 순서에 참여할 수 있는 자손만 반환한다. */
+function focusableElements(root) {
+  if (!root) return [];
+  return [...root.querySelectorAll(FOCUSABLE_SELECTOR)].filter(el => el.tabIndex >= 0 && !cannotReceiveFocus(el));
+}
+
+function focusElement(el) {
+  if (cannotReceiveFocus(el)) return false;
+  try {
+    el.focus({ preventScroll: true });
+  } catch {
+    el.focus();
+  }
+  return document.activeElement === el;
+}
+
+/**
+ * 새 pane은 제목부터 읽게 하고, 제목이 없으면 닫기 버튼과 pane 자체 순으로
+ * 폴백한다. 제목의 tabindex=-1은 일반 탭 순서를 늘리지 않고 프로그램 방식
+ * 포커스만 허용한다.
+ * @param {HTMLElement} root
+ */
+export function focusModalRegion(root) {
+  if (!root) return;
+  const title = /** @type {HTMLElement|null} */ (root.querySelector(".modal__title"));
+  if (title) {
+    title.tabIndex = -1;
+    if (focusElement(title)) return;
+  }
+  const closeBtn = root.querySelector("[data-modal-close]");
+  if (focusElement(closeBtn)) return;
+  if (!root.hasAttribute("tabindex")) root.tabIndex = -1;
+  focusElement(root);
+}
+
+/**
+ * pane을 연 요소로 포커스를 복원하되, 그 요소가 교체되었으면 남은 pane의
+ * 제목으로 이동한다.
+ * @param {HTMLElement|null} target
+ * @param {HTMLElement|null} fallbackRoot
+ */
+export function restoreModalFocus(target, fallbackRoot = modalEl) {
+  if (focusElement(target)) return;
+  if (isModalOpen()) focusModalRegion(fallbackRoot);
+}
+
+/** 모바일 콘텐츠 재생성 뒤 같은 관계 행/버튼을 찾기 위한 안정적인 토큰. */
+function captureFocusToken(root) {
+  const active = document.activeElement;
+  if (!(active instanceof HTMLElement) || !root.contains(active)) return null;
+  if (active.id) return { kind: "id", value: active.id };
+  for (const name of FOCUS_TOKEN_ATTRIBUTES) {
+    if (active.hasAttribute(name)) return { kind: "attribute", name, value: active.getAttribute(name) };
+  }
+  const index = focusableElements(root).indexOf(active);
+  return index >= 0 ? { kind: "index", value: index } : null;
+}
+
+function resolveFocusToken(root, token) {
+  if (!root || !token) return null;
+  if (token.kind === "id") {
+    const candidate = document.getElementById(token.value);
+    return candidate && root.contains(candidate) ? candidate : null;
+  }
+  if (token.kind === "attribute") {
+    const candidates = [...root.querySelectorAll(`[${token.name}]`)].filter(
+      el => el.getAttribute(token.name) === token.value,
+    );
+    return candidates.find(el => el.tabIndex >= 0 && !cannotReceiveFocus(el)) || candidates[0] || null;
+  }
+  if (token.kind === "index") return focusableElements(root)[token.value] || null;
+  return null;
+}
+
+/** pane 1의 제목 하나만 dialog 이름으로 연결한다. */
+export function refreshModalLabel() {
+  if (!modalBgEl || !modalEl) return;
+  modalEl.querySelectorAll(`[id="${DIALOG_TITLE_ID}"]`).forEach(el => el.removeAttribute("id"));
+  const primaryPane = modalEl.querySelector(".split-view__pane:first-child") || modalEl;
+  const title =
+    primaryPane.querySelector(".modal__title") ||
+    primaryPane.querySelector(".modal__head .eyebrow") ||
+    primaryPane.querySelector(".modal__head");
+  if (!title) {
+    modalBgEl.removeAttribute("aria-labelledby");
+    return;
+  }
+  title.id = DIALOG_TITLE_ID;
+  modalBgEl.setAttribute("aria-labelledby", DIALOG_TITLE_ID);
+}
+
+function activateDialogSemantics() {
+  modalBgEl.setAttribute("role", "dialog");
+  modalBgEl.setAttribute("aria-modal", "true");
+  modalBgEl.setAttribute("aria-hidden", "false");
+  refreshModalLabel();
+}
+
+function deactivateDialogSemantics() {
+  if (!modalBgEl) return;
+  modalBgEl.setAttribute("aria-hidden", "true");
+  modalBgEl.removeAttribute("role");
+  modalBgEl.removeAttribute("aria-modal");
+  modalBgEl.removeAttribute("aria-labelledby");
+}
+
+/** 오버레이를 제외한 앱 영역을 보조기술과 키보드 탐색에서 함께 제외한다. */
+function inertBackgroundContent() {
+  if (inertBackground.length) return;
+  inertBackground = [...document.body.children]
+    .filter(el => el !== modalBgEl && !["SCRIPT", "STYLE", "TEMPLATE"].includes(el.tagName))
+    .map(el => ({
+      el,
+      hadInert: el.hasAttribute("inert"),
+      ariaHidden: el.getAttribute("aria-hidden"),
+    }));
+  inertBackground.forEach(({ el }) => {
+    el.setAttribute("inert", "");
+    el.setAttribute("aria-hidden", "true");
+  });
+}
+
+function restoreBackgroundContent() {
+  inertBackground.forEach(({ el, hadInert, ariaHidden }) => {
+    if (!hadInert) el.removeAttribute("inert");
+    if (ariaHidden == null) el.removeAttribute("aria-hidden");
+    else el.setAttribute("aria-hidden", ariaHidden);
+  });
+  inertBackground = [];
+}
+
+function lockBackgroundScroll() {
+  if (!scrollLockState) {
+    scrollLockState = {
+      html: document.documentElement.style.overflow,
+      body: document.body.style.overflow,
+    };
+  }
+  document.documentElement.style.overflow = "hidden";
+  document.body.style.overflow = "hidden";
+}
+
+function restoreBackgroundScroll() {
+  if (!scrollLockState) return;
+  document.documentElement.style.overflow = scrollLockState.html;
+  document.body.style.overflow = scrollLockState.body;
+  scrollLockState = null;
+}
+
+function trapModalFocus(event) {
+  const focusable = focusableElements(modalEl);
+  if (!focusable.length) {
+    event.preventDefault();
+    focusModalRegion(modalEl);
+    return;
+  }
+  const currentIndex = focusable.indexOf(document.activeElement);
+  const next = event.shiftKey
+    ? currentIndex <= 0
+      ? focusable[focusable.length - 1]
+      : null
+    : currentIndex === -1 || currentIndex === focusable.length - 1
+      ? focusable[0]
+      : null;
+  if (!next) return;
+  event.preventDefault();
+  focusElement(next);
+}
 
 /**
  * 모바일 브레이크포인트 판정 — split-view.css 의 세로 스택 전환 기준(860px)과
@@ -38,18 +264,30 @@ export function isMobileLayout() {
 export function initModal(bgId = "modalbg", modalId = "modal") {
   modalBgEl = document.getElementById(bgId);
   modalEl = document.getElementById(modalId);
+  deactivateDialogSemantics();
   // 배경 클릭은 pane2 → 모달 전체 순으로 한 단계씩 닫는다.
   modalBgEl.addEventListener("click", e => {
-    if (e.target !== modalBgEl) return;
+    if (e.target !== modalBgEl || !isModalOpen()) return;
     if (splitViewCloser && splitViewCloser()) return;
     closeModal();
   });
   // ESC 도 한 단계씩 — 라이트박스가 떠 있으면 그것만 닫는다.
   document.addEventListener("keydown", e => {
-    if (e.key !== "Escape") return;
-    const lightbox = document.querySelector(".media-lightbox");
-    if (lightbox) { lightbox.remove(); return; }
-    closeModal();
+    if (!isModalOpen()) return;
+    if (e.key === "Tab") {
+      trapModalFocus(e);
+      return;
+    }
+    if (e.key === "Escape") {
+      e.preventDefault();
+      const lightbox = document.querySelector(".media-lightbox");
+      if (lightbox) {
+        lightbox.remove();
+        return;
+      }
+      if (splitViewCloser && splitViewCloser()) return;
+      closeModal();
+    }
   });
   return { modalBgEl, modalEl };
 }
@@ -62,18 +300,25 @@ export function initModal(bgId = "modalbg", modalId = "modal") {
  * @param {string} [extraClass] 모달에 추가할 변경자 클래스 (선택)
  */
 export function openModalWith(color, headHTML, bodyHTML, extraClass) {
+  const wasOpen = isModalOpen();
+  if (!wasOpen) returnFocusEl = document.activeElement instanceof HTMLElement ? document.activeElement : null;
   // 완전히 새 모달을 여는 진입점 — 이전 카드의 뒤로가기 스택이 남아 있으면
   // 관계없는 "뒤로가기"가 뜨므로 비운다.
   mobileStack = [];
+  // 열린 Split View를 다른 딥링크 상세가 바로 교체할 수 있다. innerHTML로
+  // pane을 없애기 전에 body에 분리되어 있는 각 스크롤바 트랙부터 회수한다.
+  removeModalScrollbarTracks();
   modalEl.className = "modal modal--pop-in" + (extraClass ? " " + extraClass : "");
   modalEl.style.setProperty("--mfr", color);
+  clearDetailMetadata();
   modalEl.innerHTML = headHTML + bodyHTML;
-  currentContent = { color, headHTML, bodyHTML, onMounted: null };
+  currentContent = { color, headHTML, bodyHTML, onMounted: null, pane2Spec: "" };
   modalBgEl.classList.add("modal-overlay--open");
+  activateDialogSemantics();
+  if (!wasOpen) inertBackgroundContent();
   // 배경 스크롤 잠금 — html 도 함께 잠근다. base.css 가 html 에
   // overflow-y:scroll(스크롤바 자리 고정)을 걸어둬서 body 만으로는 안 막힌다.
-  document.documentElement.style.overflow = "hidden";
-  document.body.style.overflow = "hidden";
+  lockBackgroundScroll();
   // scrollTop 리셋은 오버레이를 연 *뒤에* — display:none 인 동안 대입하면
   // Chrome 이 다시 보이는 순간 이전 위치를 복원해 무효가 된다.
   modalEl.scrollTop = 0;
@@ -81,6 +326,7 @@ export function openModalWith(color, headHTML, bodyHTML, extraClass) {
   if (closeBtn) closeBtn.onclick = closeModal;
   wirePaneInteractions(modalEl);
   renderBackButton();
+  focusModalRegion(modalEl);
 }
 
 /**
@@ -91,17 +337,23 @@ export function openModalWith(color, headHTML, bodyHTML, extraClass) {
  * @param {string} headHTML 새 콘텐츠 헤더
  * @param {string} bodyHTML 새 콘텐츠 본문
  * @param {Function} [onMounted] 새 콘텐츠 DOM 이 붙은 직후 modalEl 을 인자로 호출
+ * @param {string} [pane2Spec=""] 이 화면을 나타내는 URL pane2 상태
  */
-export function pushMobileModal(color, headHTML, bodyHTML, onMounted) {
-  if (currentContent) mobileStack.push(currentContent);
+export function pushMobileModal(color, headHTML, bodyHTML, onMounted, pane2Spec = "") {
+  if (currentContent) {
+    mobileStack.push({ ...currentContent, focusToken: captureFocusToken(modalEl) });
+  }
   modalEl.style.setProperty("--mfr", color);
+  clearDetailMetadata();
   modalEl.innerHTML = headHTML + bodyHTML;
-  currentContent = { color, headHTML, bodyHTML, onMounted: onMounted || null };
+  currentContent = { color, headHTML, bodyHTML, onMounted: onMounted || null, pane2Spec };
   const closeBtn = modalEl.querySelector("[data-modal-close]");
   if (closeBtn) closeBtn.onclick = closeModal;
   wirePaneInteractions(modalEl);
   if (onMounted) onMounted(modalEl);
   renderBackButton();
+  refreshModalLabel();
+  focusModalRegion(modalEl);
 }
 
 /**
@@ -112,6 +364,7 @@ function popMobileModal() {
   const prev = mobileStack.pop();
   if (!prev) return;
   modalEl.style.setProperty("--mfr", prev.color);
+  clearDetailMetadata();
   modalEl.innerHTML = prev.headHTML + prev.bodyHTML;
   currentContent = prev;
   const closeBtn = modalEl.querySelector("[data-modal-close]");
@@ -119,6 +372,14 @@ function popMobileModal() {
   wirePaneInteractions(modalEl);
   if (prev.onMounted) prev.onMounted(modalEl);
   renderBackButton();
+  refreshModalLabel();
+  syncMobilePaneRoute(prev.pane2Spec);
+  restoreModalFocus(resolveFocusToken(modalEl, prev.focusToken), modalEl);
+}
+
+/** 모바일 media 경로가 현재 관계 상세의 entity 접두사를 보존하는 데 사용한다. */
+export function getCurrentMobilePaneRoute() {
+  return currentContent?.pane2Spec || "";
 }
 
 /**
@@ -165,9 +426,11 @@ export function setSplitViewCloser(closer) {
  * 남겨두면 다음에 열리는 모달과 뒤섞인다.
  */
 export function closeModal() {
+  const wasOpen = isModalOpen();
   modalBgEl.classList.remove("modal-overlay--open");
-  document.documentElement.style.overflow = "";
-  document.body.style.overflow = "";
+  deactivateDialogSemantics();
+  restoreBackgroundContent();
+  restoreBackgroundScroll();
   if (modalEl) {
     modalEl.classList.remove("modal--split");
     const splitView = modalEl.querySelector(".split-view");
@@ -190,6 +453,13 @@ export function closeModal() {
   // [모달 라우팅] 해시의 카드 id 를 지워 목록 상태(#speakers)로 되돌린다.
   // 뒤로가기로 닫힌 경우엔 라우터가 이미 비운 뒤라 no-op.
   clearItemRoute();
+  if (wasOpen) {
+    const target = returnFocusEl;
+    returnFocusEl = null;
+    if (!focusElement(target)) {
+      focusElement(document.querySelector('[role="tab"][aria-selected="true"]'));
+    }
+  }
 }
 
 /**

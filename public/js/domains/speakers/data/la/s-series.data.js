@@ -40,7 +40,7 @@ export const LA_S_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/Soka_v1.4.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 9.4,
     "transducers": "LF: 9 × 3.5″ · HF: 3 × 1″",
@@ -223,8 +223,8 @@ export const LA_S_SERIES = [
       "ampIds": []
     },
     "watt": 133,
-    // [upload/Soka_v1.4.md 마스터 스키마 반영] Preset Guide/Matching Ratio/
-    // Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching Ratio/
+    // Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "Soka colinear source", "preset": "[SOKA]", "acoustic": "100 Hz - 20 kHz", "acousticShort": "100 Hz - 20 kHz" },
@@ -310,14 +310,11 @@ export const LA_S_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/Sokar_v1.3.md 마스터 스키마 반영] Cardioid_Capability. 이 제품은
-    // upload 파일에서 "Sokar"(Soka의 매입형/recessed 파생형 정식 명칭)로
-    // 확인됨 — 표시명(Soka inWall)은 변경하지 않고 데이터만 반영.
+    // [제품명] 공식 명칭 Sokar는 Soka의 매입형 파생 모델이다. 앱에서는
+    // 제품군 관계가 드러나는 표시명 "Soka inWall"을 사용한다.
     "cardioidCapability": "No",
-    // [값 정정] 11.7kg → 8.7kg (Sokar_OM_EN.pdf p.38 "Sokar specifications"
-    // "Weight (net): 8.7 kg" 기준 — 매입형은 전면 그릴 등 일부 부품이 없어
-    // 표준형(9.4kg)보다 가벼움. 기존 11.7kg은 근거 문서 없이 "무게가 더
-    // 무거울 것"이라는 가정으로 작성된 값으로 보임).
+    // [무게] Sokar_OM_EN.pdf p.38의 순중량 8.7kg을 사용한다. 매입형은 전면
+    // 그릴 등 일부 부품이 없어 표준형(9.4kg)보다 가볍다.
     "weight": 8.7,
     "transducers": "LF: 9 × 3.5″ · HF: 3 × 1″",
     "connectors": "4-point screw terminal",
@@ -498,8 +495,8 @@ export const LA_S_SERIES = [
       "ampIds": []
     },
     "watt": 133,
-    // [upload/Sokar_v1.3.md 마스터 스키마 반영] Preset Guide/Matching Ratio/
-    // Delay Defaults/Mechanical Safety 전체 신규 반영 — Sokar 자신의 OM에서
+    // [프리셋] Preset Guide/Matching Ratio/
+    // Delay Defaults/Mechanical Safety 필드를 함께 관리 — Sokar 자신의 OM에서
     // 독립 확인된 값(Soka와 수치 동일, 라벨만 Sokar/SB6r/SB10r로 정정).
     "presets": {
       "rows": [
@@ -578,7 +575,7 @@ export const LA_S_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/Syva_v1.3.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 21,
     "transducers": "LF: 6 × 5″ · HF: 3 × 1.75″",
@@ -679,8 +676,8 @@ export const LA_S_SERIES = [
       "ampIds": []
     },
     "watt": 454,
-    // [upload/Syva_v1.3.md 마스터 스키마 반영] Preset Guide/Delay Defaults/
-    // Mechanical Safety 전체 신규 반영. Recommended_Ratio는 3제품 조합
+    // [프리셋] Preset Guide/Delay Defaults/
+    // Mechanical Safety 필드를 함께 관리. Recommended_Ratio는 3제품 조합
     // 2건에만 원문 명시(나머지는 원문에 비율 서술이 없어 미기재).
     "presets": {
       "rows": [
@@ -756,7 +753,7 @@ export const LA_S_SERIES = [
         "hi": "130 Hz"
       }
     ],
-    // [upload/Syva_Low_v1.2.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 29,
     "transducers": "LF: 2 × 12″",
@@ -840,8 +837,8 @@ export const LA_S_SERIES = [
       "ampIds": []
     },
     "watt": 894,
-    // [upload/Syva_Low_v1.2.md 마스터 스키마 반영] Preset Guide/Mechanical
-    // Safety 신규 반영. Syva Low는 항상 2차 엘리먼트(서브우퍼)로만 등장해
+    // [프리셋] Preset Guide/Mechanical
+    // Safety 필드를 관리. Syva Low는 항상 2차 엘리먼트(서브우퍼)로만 등장해
     // delay_defaults는 Syva 카드(spk-la-syva)에 이미 기록되어 있다.
     "presets": {
       "rows": [
@@ -896,7 +893,7 @@ export const LA_S_SERIES = [
         "hi": "120 Hz"
       }
     ],
-    // [upload/Syva_Sub_v1.2.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 27,
     "transducers": "LF: 1 × 12″",
@@ -1035,8 +1032,8 @@ export const LA_S_SERIES = [
       "ampIds": []
     },
     "watt": 250,
-    // [upload/Syva_Sub_v1.2.md 마스터 스키마 반영] Preset Guide/Mechanical
-    // Safety 신규 반영. Syva Sub도 항상 2차 엘리먼트로만 등장해
+    // [프리셋] Preset Guide/Mechanical
+    // Safety 필드를 관리. Syva Sub도 항상 2차 엘리먼트로만 등장해
     // delay_defaults는 Syva 카드(spk-la-syva)에 이미 기록되어 있다.
     "presets": {
       "rows": [

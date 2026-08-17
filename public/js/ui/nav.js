@@ -24,8 +24,8 @@ import { esc } from "../core/dom.js";
 export function renderNav(mountEl) {
   const domains = getDomains();
   mountEl.innerHTML = `<div class="topnav__row">
-    <div class="topnav__inner">${domains.map(([key, cfg]) => `
-      <button class="topnav__tab" data-key="${key}" role="tab" aria-selected="false">
+    <div class="topnav__inner" role="tablist" aria-label="제품 분류">${domains.map(([key, cfg]) => `
+      <button class="topnav__tab" id="nav-tab-${esc(key)}" data-key="${esc(key)}" role="tab" aria-controls="view-${esc(key)}" aria-selected="false" tabindex="-1">
         ${esc(cfg.label)}<span class="topnav__tab-count" id="navcount-${key}">${cfg.count ? cfg.count() : ""}</span>
       </button>`).join("")}</div>
     <div class="topnav__tools">
@@ -44,16 +44,30 @@ export function renderNav(mountEl) {
     </div>
   </div>`;
 
-  mountEl.querySelectorAll(".topnav__tab").forEach(btn => {
+  const tabs = /** @type {HTMLElement[]} */ ([...mountEl.querySelectorAll(".topnav__tab")]);
+  tabs.forEach((btn, index) => {
     btn.addEventListener("click", () => navigateTo(btn.dataset.key));
+    btn.addEventListener("keydown", event => {
+      let nextIndex = null;
+      if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+      else if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === "Home") nextIndex = 0;
+      else if (event.key === "End") nextIndex = tabs.length - 1;
+      if (nextIndex == null) return;
+      event.preventDefault();
+      const nextTab = tabs[nextIndex];
+      nextTab.focus();
+      navigateTo(nextTab.dataset.key);
+    });
   });
 
   /** 활성 탭 표시(변경자 클래스 + aria-selected)를 현재 라우트와 동기화 */
   const syncActive = (key) => {
-    mountEl.querySelectorAll(".topnav__tab").forEach(btn => {
+    tabs.forEach(btn => {
       const active = btn.dataset.key === key;
       btn.classList.toggle("topnav__tab--active", active);
       btn.setAttribute("aria-selected", String(active));
+      btn.tabIndex = active ? 0 : -1;
     });
   };
 

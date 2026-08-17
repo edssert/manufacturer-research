@@ -7,9 +7,9 @@
  * querySelector 단축 헬퍼.
  * @param {string} s CSS 셀렉터
  * @param {ParentNode} [root=document] 탐색 루트
- * @returns {Element|null}
+ * @returns {HTMLElement|null}
  */
-export const $ = (s, root = document) => root.querySelector(s);
+export const $ = (s, root = document) => /** @type {HTMLElement|null} */ (root.querySelector(s));
 
 /**
  * HTML 이스케이프 — 템플릿 문자열에 데이터 값을 넣기 전 반드시 통과시킬 것.

@@ -6,13 +6,10 @@
  * UI 나 데이터 파일이 아닌 "규칙"을 바꿀 때 수정하는 파일.
  */
 import { normalizeSearchText } from "../../core/filter-engine.js";
+import { MANUFACTURERS, MANUFACTURER_ORDER } from "../../core/manufacturers.js";
 
-export const AMP_MFR = {
-  la: { name: "L-Acoustics", color: "var(--la)", short: "L-ACOUSTICS" },
-  db: { name: "d&b audiotechnik", color: "var(--db)", short: "d&b" },
-  my: { name: "Meyer Sound", color: "var(--my)", short: "MEYER" },
-};
-export const AMP_MK_ORDER = ["la", "db", "my"];
+export const AMP_MFR = MANUFACTURERS;
+export const AMP_MK_ORDER = MANUFACTURER_ORDER;
 
 // 기본("model") 정렬은 알파벳순 대신 L-Acoustics 라인업 표시
 // 순서를 명시 고정한다: LA7.16 → LA1.16i → LA12X → LA4X → LA2Xi → LA-RAK III
@@ -57,8 +54,8 @@ export const amplifiersSchema = {
   chipFields: [
     { key: "mfr", label: "Manufacturer", order: AMP_MK_ORDER, labelFor: (v) => AMP_MFR[v].name },
     { key: "channels", label: "Channels", labelFor: (v) => v + "ch" },
-    // usage: "Installation only" / "Touring" 등 — LA1.16i 부터 도입된 필드(v1.1).
-    // 값이 없는 앰프(기존 d&b 등 단순 스키마)는 filter-engine 이 null 값을
+    // usage는 "Installation only" / "Touring"처럼 운용 환경을 나타내는
+    // 선택 필드다. 값이 없는 앰프는 filter-engine이 null 값을
     // 옵션에서 자동으로 제외하므로 이 칩 자체가 나타나지 않는다.
     { key: "usage", label: "Usage" },
     // LA-RAK III(투어링 랙) 추가로 "Amplified Controller"(개별
@@ -72,3 +69,30 @@ export const amplifiersSchema = {
     speakerCount: (a, b) => (b.relations.speakerIds.length - a.relations.speakerIds.length) || compareModel(a, b),
   },
 };
+
+/**
+ * 스피커가 소유한 amps[] 관계를 기준으로 speakerCount 정렬 스키마를 만든다.
+ * 정적 relations.speakerIds 는 원본 수집 데이터이므로 화면 파생값을 기록하는
+ * 저장소로 사용하지 않는다. 조회 함수는 정렬 시점마다 현재 레지스트리를 읽어
+ * 관계 인덱스가 갱신돼도 스키마를 다시 만들 필요가 없다.
+ * @param {(amplifierId:string) => string[]} findSpeakerIds 앰프별 스피커 ID 조회
+ * @returns {Object} amplifiersSchema 와 동일한 공개 계약을 갖는 스키마
+ */
+export function withDerivedSpeakerCount(findSpeakerIds) {
+  if (typeof findSpeakerIds !== "function") {
+    throw new TypeError("findSpeakerIds must be a function");
+  }
+
+  const speakerCount = amplifier => {
+    const ids = findSpeakerIds(amplifier.id);
+    return Array.isArray(ids) ? ids.length : 0;
+  };
+
+  return {
+    ...amplifiersSchema,
+    sorters: {
+      ...amplifiersSchema.sorters,
+      speakerCount: (a, b) => speakerCount(b) - speakerCount(a) || compareModel(a, b),
+    },
+  };
+}

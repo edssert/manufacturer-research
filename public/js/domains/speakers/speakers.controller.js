@@ -5,38 +5,17 @@
  *
  * 구성 요소:
  *   speakers.data.js   — 데이터 (시리즈별 파일의 배럴)
+ *   speakers.detail.js — runtime catalog와 공통 상세 provider
  *   speakers.schema.js — 필터/정렬/파생 필드 정의
  *   speakers.view.js   — 카드/모달 마크업 (순수 함수)
  */
 import { esc } from "../../core/dom.js";
 import { createDomainTab } from "../../ui/domain-tab.js";
-import { openModalWith } from "../../ui/modal.js";
-import { openSplitPane, replaceSplitPane1, wireChipPanes } from "../../ui/split-view.js";
-import { setItemRoute, replaceItemRoute } from "../../core/router.js";
-import { registerSpeakers, resolveAmpIdForModel, findAmplifierById, findSpeakerById, findSpeakersMatchingAmp, findAmpConfigsBySpeaker, findAccessoriesForSpeaker } from "../../relationships/cross-ref.js";
+import { openDetailModal } from "../../ui/relation-navigation.js";
 
-import { SPEAKERS } from "./speakers.data.js";
-import { speakersSchema, MFR, MK_ORDER, normalizeCrossover, normalizeLowUnitConfig, normalizeAngleRanges, THROWCAT_ORDER, SERIES_ORDER_OVERRIDE } from "./speakers.schema.js";
-import { cardHTML as speakerCardHTML, modalBodyHTML as speakerModalBodyHTML, setSplRange } from "./speakers.view.js";
-
-// 스피커 모달 안에서 앰프 행을 클릭하면 Split View pane 2 에 앰프 상세를 띄운다.
-// 이때 앰프의 "순수 뷰 함수"만 import — 앰프 controller 를 import 하지 않아
-// 컨트롤러 간 결합이 생기지 않는다.
-import { AMP_MFR } from "../amplifiers/amplifiers.schema.js";
-import { modalBodyHTML as ampModalBodyHTML } from "../amplifiers/amplifiers.view.js";
-
-// 스피커 모달 안에서도 System Elements(리깅/프로텍션 등
-// 액세서리) 칩을 클릭하면 Split View pane 2 에 액세서리 상세를 띄운다 —
-// "액세서리를 pane 으로 여는 법"은 액세서리 도메인이 panePropsFor 로 제공한다.
-import { panePropsFor as accessoryPaneProps } from "../accessories/accessories.view.js";
-
-// 파생 필드(wayCount/network/lowUnitConfig/hRange/vRange/splayRange)를 UI 가
-// 읽기 전에 생성하고, cross-ref 레지스트리에 스피커 데이터를 등록한다
-// (모듈 로드 시 1회).
-normalizeCrossover(SPEAKERS);
-normalizeLowUnitConfig(SPEAKERS);
-normalizeAngleRanges(SPEAKERS);
-registerSpeakers(SPEAKERS);
+import { SPEAKER_CATALOG, initSpeakerDetailProvider } from "./speakers.detail.js";
+import { speakersSchema, MFR, MK_ORDER, THROWCAT_ORDER, SERIES_ORDER_OVERRIDE } from "./speakers.schema.js";
+import { cardHTML as speakerCardHTML, setSplRange } from "./speakers.view.js";
 
 /** 시리즈 정렬일 때만 제조사>시리즈 2단 그룹핑, 그 외에는 평면 그리드 */
 function speakersGroupBy(state) {
@@ -46,16 +25,15 @@ function speakersGroupBy(state) {
       subGroupKey: d => d.series,
       // 시리즈는 throw 등급(Long → Medium → Short) 순으로 배치. throwCat 이
       // 없는 독립 서브우퍼 시리즈(예: L-Acoustics "Subwoofers")는 맨 뒤로.
-      // d&b CL/SL 처럼 throwCat 이 둘 다 없어(-1) 알파벳순으로 밀리던 경우는
-      // SERIES_ORDER_OVERRIDE 로 명시 우선순위를 먼저 확인(사용자 요청 —
-      // SL 을 CL 보다 먼저).
+      // d&b CL/SL처럼 throwCat이 둘 다 없으면 SERIES_ORDER_OVERRIDE를 먼저
+      // 적용해 SL을 CL보다 앞에 둔다.
       subGroupOrder: (sgA, sgB) => {
         const oa = SERIES_ORDER_OVERRIDE[sgA], ob = SERIES_ORDER_OVERRIDE[sgB];
         if (oa != null && ob != null) return oa - ob;
         if (oa != null) return -1;
         if (ob != null) return 1;
-        const itemA = SPEAKERS.find(d => d.series === sgA);
-        const itemB = SPEAKERS.find(d => d.series === sgB);
+        const itemA = SPEAKER_CATALOG.find(d => d.series === sgA);
+        const itemB = SPEAKER_CATALOG.find(d => d.series === sgB);
         const ia = itemA && itemA.throwCat ? THROWCAT_ORDER.indexOf(itemA.throwCat) : -1;
         const ib = itemB && itemB.throwCat ? THROWCAT_ORDER.indexOf(itemB.throwCat) : -1;
         const ra = ia === -1 ? THROWCAT_ORDER.length : ia;
@@ -65,9 +43,8 @@ function speakersGroupBy(state) {
       },
       // 시리즈 내부: Subwoofer 타입(K1-SB, CCL-SUB 등)은 항상 뒤로,
       // 나머지는 저역 드라이버 크기 큰 순 (동률이면 이름순).
-      // S Series 예외(사용자 요청): Soka(및 Soka inWall 등 Soka 계열)는
-      // lowInch 기준으로는 Syva 계열보다 앞서지만, Syva/Syva Low/Syva Sub
-      // 를 먼저 묶어 보여준 뒤 Soka 계열이 마지막에 오도록 명시적으로
+      // S Series에서 Soka 계열은 lowInch와 무관하게 Syva/Syva Low/Syva Sub
+      // 뒤에 오도록 명시적으로
       // 뒤로 보낸다. Soka 계열 내부는 이름순(Soka → Soka inWall)으로 자연
       // 정렬.
       sortWithinGroup: (a, b) => {
@@ -94,91 +71,12 @@ function speakersGroupBy(state) {
  * @returns {boolean} id 가 유효해 모달을 열었으면 true (라우터 딥링크 판정용)
  */
 function openSpeakerModal(id) {
-  const d = SPEAKERS.find(s => s.id === id);
-  if (!d) return false;
-  const { color, head, body } = speakerModalBodyHTML(d, resolveAmpIdForModel, findAccessoriesForSpeaker(d.id));
-  openModalWith(color, head, body);
-  wireSpeakerModalAmpClicks();
-  // System Elements 칩 → pane 2 에 액세서리 상세(같은 칩 재클릭이면 닫힘).
-  wireChipPanes("accessory-id", accessoryPaneProps);
-  setItemRoute(id);
-  return true;
-}
-
-/**
- * 방금 렌더된 스피커 모달 안의 앰프 행 클릭 → Split View pane 2 에 앰프 상세.
- * (스피커 → 앰프 방향)
- */
-function wireSpeakerModalAmpClicks() {
-  document.querySelectorAll("#modal .match-table__row[data-amp-id]").forEach(row => {
-    row.addEventListener("click", () => {
-      const ampId = row.dataset.ampId;
-      const amp = findAmplifierById(ampId);
-      if (!amp) return;
-      const M = AMP_MFR[amp.mfr];
-      // pane 2(앰프)의 Configurations 섹션이 펼쳐진 상태에서
-      // 다른 앰프로 바꿔도(pane 1 의 Amplifier Matching 행 클릭) 그 펼침
-      // 상태가 유지되어야 한다 — openSplitPane 은 기존 pane 2 를 통째로
-      // remove() 하고 새로 만들기 때문에(위 openSplitPane 주석 참고), 교체
-      // 전에 펼침 여부를 읽어뒀다가 onMounted 에서 새 pane 2 에 다시 적용한다.
-      const oldPane2 = document.querySelector("#modal .split-view__pane:nth-child(2)");
-      const wasConfigsExpanded = !!oldPane2 && oldPane2.querySelector('[data-section-toggle="amp-configs"]')?.getAttribute("aria-expanded") === "true";
-      const { head, body } = ampModalBodyHTML(amp, (sid) => { const s = findSpeakerById(sid); return s ? s.name : sid; }, findSpeakersMatchingAmp(ampId), findAmpConfigsBySpeaker(ampId));
-      // 같은 앰프 행을 다시 클릭하면(paneId 일치) pane 2 가 열려있지 않고
-      // 토글로 닫힌다 — X 버튼까지 마우스를 옮기지 않아도 됨. head 는
-      // pane1(스피커 모달)과 동일한 .modal__head 구조라 X 버튼 위치·제목
-      // 표기 방식이 좌우 pane 모두 통일된다.
-      // 공통 인터랙션(뷰 전환·줌·+N 토글)은 openSplitPane 이 배선하고,
-      // 도메인 고유 배선(스피커 칩 클릭)만 onMounted 로 넘긴다.
-      openSplitPane({
-        headHTML: head,
-        paneColor: M.color,
-        bodyHTML: body,
-        paneId: ampId,
-        onMounted: (pane2El) => {
-          wireSplitPaneSpeakerChips(pane2El);
-          if (wasConfigsExpanded) {
-            const btn = pane2El.querySelector('[data-section-toggle="amp-configs"]');
-            const bodyEl = pane2El.querySelector('[data-section-toggle-body="amp-configs"]');
-            if (btn && bodyEl) { btn.setAttribute("aria-expanded", "true"); bodyEl.hidden = false; }
-          }
-        },
-      });
-    });
-  });
-}
-
-/**
- * Split View pane 2(앰프 상세) 안의 스피커 클릭(Configurations 표 행) →
- * pane 1(왼쪽, 스피커 상세)을 그 스피커로 교체한다. pane 2(앰프)는 그대로
- * 유지 — amplifiers.controller.js 의 wireSplitPaneAmpRows(앰프 → 스피커
- * 방향의 미러) 와 동일한 패턴. 이전에는 openSpeakerModal() 을 호출해 Split
- * View 전체가 해제되고 스피커 단일 모달로 바뀌는 버그가 있었다.
- * @param {HTMLElement} pane2El openSplitPane onMounted 가 넘겨주는 pane 2 요소
- */
-function wireSplitPaneSpeakerChips(pane2El) {
-  pane2El.querySelectorAll(".match-table__row[data-speaker-id]").forEach(row => {
-    row.addEventListener("click", () => {
-      const sid = row.dataset.speakerId;
-      const s = findSpeakerById(sid);
-      if (!s) return;
-      const M = MFR[s.mk];
-      const { head, body } = speakerModalBodyHTML(s, resolveAmpIdForModel);
-      replaceSplitPane1({
-        headHTML: head,
-        paneColor: M.color,
-        bodyHTML: body,
-        onMounted: wireSpeakerModalAmpClicks,
-      });
-      // [모달 라우팅] pane1 이 이 스피커로 교체됐음을 URL item 단에 반영
-      // (pane2 상태는 유지, 히스토리 엔트리 추가 없음).
-      replaceItemRoute(sid);
-    });
-  });
+  return openDetailModal(id, "speaker");
 }
 
 /** Speakers 도메인을 라우터에 등록 — main.js 가 호출하는 유일한 공개 API */
 export function initSpeakersDomain() {
+  initSpeakerDetailProvider();
   createDomainTab({
     key: "speakers",
     label: "Speaker",
@@ -191,7 +89,7 @@ export function initSpeakersDomain() {
       { value: "inch-asc", label: "정렬 · 드라이버 작은순" },
       { value: "name", label: "정렬 · 이름순" },
     ],
-    data: SPEAKERS,
+    data: SPEAKER_CATALOG,
     schema: speakersSchema,
     cardHTML: speakerCardHTML,
     openItem: openSpeakerModal,
@@ -199,7 +97,7 @@ export function initSpeakersDomain() {
     legend: { order: MK_ORDER, mfrMap: MFR, keyOf: d => d.mk },
     // 카드 SPL 게이지 스케일 — 전체 스피커의 min/max 로 한 번만 설정.
     onBuild: () => {
-      const splVals = SPEAKERS.map(d => d.spl).filter(x => x != null);
+      const splVals = SPEAKER_CATALOG.map(d => d.spl).filter(x => x != null);
       setSplRange(Math.floor(Math.min(...splVals)), Math.ceil(Math.max(...splVals)));
     },
   });

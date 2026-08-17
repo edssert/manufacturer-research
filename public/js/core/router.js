@@ -17,31 +17,41 @@
  * 공유용 URL 반영이 목적이고, 뒤로가기 1회는 "모달 전체 닫기"로 동작한다.
  */
 
+import { formatHashRoute, parseHashRoute } from "./route-codec.js";
+
 /** @type {Map<string, {label: string, mount: Function, unmount: Function, count?: Function, openItem?: Function}>} */
 const registry = new Map();
 let activeKey = null;
-let activeItem = "";     // 현재 해시에 반영된 카드 상세(item) id ("" = 없음)
-let activePane2 = "";    // 현재 해시에 반영된 Split View pane2 상태 ("" = 없음)
+let activeItem = ""; // 현재 해시에 반영된 카드 상세(item) id ("" = 없음)
+let activePane2 = ""; // 현재 해시에 반영된 Split View pane2 상태 ("" = 없음)
 let onChangeCb = null;
-let onItemCloseCb = null;  // item 이 해시에서 사라질 때 호출 (main.js 가 closeModal 연결)
+let onItemCloseCb = null; // item 이 해시에서 사라질 때 호출 (main.js 가 closeModal 연결)
 let onPane2RestoreCb = null; // 딥링크의 pane2 상태 복원 담당 (main.js 가 등록)
-let onPane2CloseCb = null;   // 해시에서 pane2 가 사라질 때 호출 (main.js 가 closeSplitView 연결)
+let onPane2CloseCb = null; // 해시에서 pane2 가 사라질 때 호출 (main.js 가 closeSplitView 연결)
 
 /**
  * 현재 location.hash 를 { key, item, pane2 } 으로 파싱한다.
- * @returns {{key: string, item: string, pane2: string}}
+ * @returns {{key: string, item: string, pane2: string, valid: boolean}}
  */
 function parseHash() {
-  const [key = "", item = "", pane2 = ""] = location.hash.slice(1).split("/");
-  return { key, item: decodeURIComponent(item), pane2: decodeURIComponent(pane2) };
+  const route = parseHashRoute(location.hash);
+  if (route.valid) return route;
+  return { key: route.key, item: "", pane2: "", valid: false };
 }
 
 /** 현재 상태를 해시 문자열로 조립한다. */
 function buildHash() {
-  let h = `#${activeKey}`;
-  if (activeItem) h += `/${encodeURIComponent(activeItem)}`;
-  if (activeItem && activePane2) h += `/${encodeURIComponent(activePane2)}`;
-  return h;
+  return formatHashRoute({ key: activeKey, item: activeItem, pane2: activePane2 });
+}
+
+/** 활성 도메인 우선으로 등록 provider에서 item 상세를 연다. */
+function openRegisteredItem(key, item) {
+  const config = registry.get(key);
+  if (config?.openItem?.(item)) return true;
+  for (const [registeredKey, registeredConfig] of registry) {
+    if (registeredKey !== key && registeredConfig.openItem?.(item)) return true;
+  }
+  return false;
 }
 
 /**
@@ -115,7 +125,7 @@ export function navigateTo(key) {
   activeKey = key;
   // [모달 라우팅] 해시에는 "key/item" 2단이 올 수 있으므로 key 부분만 비교 —
   // 통짜 비교(slice(1) !== key)면 딥링크 진입 시 item 부분을 지워버린다.
-  if (parseHash().key !== key) location.hash = key;
+  if (parseHash().key !== key) location.hash = formatHashRoute({ key });
   if (prev && registry.get(prev).unmount) registry.get(prev).unmount();
   registry.get(key).mount();
   if (onChangeCb) onChangeCb(key, prev);
@@ -165,7 +175,7 @@ export function clearItemRoute() {
   if (!activeItem) return;
   activeItem = "";
   activePane2 = "";
-  history.replaceState(null, "", `#${activeKey}`);
+  history.replaceState(null, "", formatHashRoute({ key: activeKey }));
 }
 
 /**
@@ -201,33 +211,47 @@ function applyRoute(key, item, pane2) {
   navigateTo(key);
   if (item && item !== activeItem) {
     activeItem = item;
-    const cfg = registry.get(key);
-    let ok = cfg && cfg.openItem ? cfg.openItem(item) : false;
-    // [Split View pane1 교체 대응] Split View 안에서 pane1 이 다른 도메인
-    // 항목으로 교체된 URL(예: #amplifiers/<스피커id>/<앰프id>)은 활성
-    // 도메인의 openItem 으로는 id 를 못 찾는다 — 모달은 도메인과 무관한
-    // 전역 UI 이므로, 다른 도메인들의 openItem 에 차례로 위임해 복원한다.
-    if (!ok) {
-      for (const [k, c] of registry) {
-        if (k !== key && c.openItem && c.openItem(item)) { ok = true; break; }
-      }
+    // 새 item의 pane 상태는 빈 문자열까지 포함해 먼저 확정한다. openItem이
+    // 기존 Split View DOM을 교체하는 동안 setItemRoute가 같은 item이라 no-op
+    // 이어도 이전 item의 pane 상태가 라우터에 남지 않는다.
+    activePane2 = pane2;
+    if (!openRegisteredItem(key, item)) {
+      clearItemRoute();
+      return;
     }
-    if (!ok) { clearItemRoute(); return; } // 존재하지 않는 id — 해시만 원복
-    if (pane2) {
-      activePane2 = pane2;
-      if (onPane2RestoreCb) onPane2RestoreCb(pane2);
-    }
+    if (pane2 && onPane2RestoreCb) onPane2RestoreCb(pane2);
   } else if (!item && activeItem) {
     // 뒤로가기 등으로 item 이 사라짐 → 모달 닫기
     activeItem = "";
     activePane2 = "";
     if (onItemCloseCb) onItemCloseCb();
   } else if (item && item === activeItem && pane2 !== activePane2) {
-    // 같은 카드에서 pane2 상태만 바뀜 (URL 직접 수정 등)
+    // 같은 item의 URL pane 상태를 직접 바꾸면 현재 DOM도 URL 스냅샷에서
+    // 다시 만든다. 모바일 전체교체 스택과 데스크탑 split 어느 쪽이었든
+    // 이전 구조가 남지 않고 같은 복원 경로를 공유한다.
     activePane2 = pane2;
-    if (pane2) { if (onPane2RestoreCb) onPane2RestoreCb(pane2); }
-    else if (onPane2CloseCb) onPane2CloseCb();
+    if (!openRegisteredItem(key, item)) {
+      clearItemRoute();
+      return;
+    }
+    if (pane2) {
+      if (onPane2RestoreCb) onPane2RestoreCb(pane2);
+    } else if (onPane2CloseCb) onPane2CloseCb();
   }
+}
+
+/**
+ * breakpoint 전환처럼 URL은 그대로이고 표현 방식만 달라질 때 현재 스냅샷을
+ * 다시 렌더링한다. activeItem/activePane2는 바꾸지 않아 history도 보존한다.
+ */
+export function refreshActiveRoute() {
+  if (!activeKey || !activeItem) return false;
+  if (!openRegisteredItem(activeKey, activeItem)) {
+    clearItemRoute();
+    return false;
+  }
+  if (activePane2 && onPane2RestoreCb) onPane2RestoreCb(activePane2);
+  return true;
 }
 
 /**
@@ -237,10 +261,16 @@ function applyRoute(key, item, pane2) {
  */
 export function initRouter(defaultKey) {
   window.addEventListener("hashchange", () => {
-    const { key, item, pane2 } = parseHash();
+    const { key, item, pane2, valid } = parseHash();
+    if (!valid && registry.has(key)) {
+      history.replaceState(null, "", formatHashRoute({ key }));
+    }
     if (registry.has(key)) applyRoute(key, item, pane2);
   });
-  const { key, item, pane2 } = parseHash();
+  const { key, item, pane2, valid } = parseHash();
+  if (!valid && registry.has(key)) {
+    history.replaceState(null, "", formatHashRoute({ key }));
+  }
   if (registry.has(key)) applyRoute(key, item, pane2);
   else navigateTo(defaultKey);
 }

@@ -3,8 +3,8 @@
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
 // PANTHER/LEOPARD/TIGRA 와 마찬가지로 Meyer Sound 의 자체 DSP 앰프 내장형
 // (파워드) 라인어레이 — amps 는 빈 배열(동일 패턴). 3채널 Class D 내장 앰프
-// (1950W peak), RMS 네트워크(옵션)는 connectors 필드에 요약. 대표 이미지는
-// 사용자가 업로드한 흰 배경 앵글샷(lina_featured-sq.jpg)의 배경을 제거해 반영.
+// (1950W peak), RMS 네트워크(옵션)는 connectors 필드에 요약한다. 대표
+// 이미지는 제품 앵글샷의 배경을 제거한 투명 자산을 사용한다.
 export const MY_LINA_SERIES = [
   {
     "id": "spk-my-lina",

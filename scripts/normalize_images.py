@@ -1,134 +1,276 @@
 #!/usr/bin/env python3
+"""제품 이미지 여백을 분석하고 선택적으로 정규화한다.
+
+런타임 이미지 루트(`public/assets/img`)의 PNG, JPEG, WebP를 같은 규칙으로
+탐색한다. 기본 모드는 파일을 바꾸지 않는 ``dry``이며, 원본과 예상 출력의
+크기·해상도·알파 채널·SHA-256을 JSON Lines로 출력한다. ``apply``는 같은
+인코딩 형식으로 원본을 원자적으로 교체하므로 반드시 manifest를 검토한 뒤
+명시적으로 실행한다.
+
+사용법::
+
+    python scripts/normalize_images.py dry --manifest image-normalize-plan.json
+    python scripts/normalize_images.py apply \
+        --approved-manifest image-normalize-plan.json \
+        --manifest image-normalize-applied.json
+
+매입형 제품, 불투명 배경, 로고·워터마크가 포함된 사진은 알파 bounding box
+만으로 제품 경계를 판별할 수 없다. 그런 파일은 ``EXCLUDE``에 등록하고
+``scripts/montage_check.py`` 결과를 통해 수동 검수한다.
 """
-제품 이미지 여백 정규화 스크립트.
 
-목적
-----
-이 프로젝트의 카드(.card__media)·모달(.modal__media)은 이미지를
-object-fit: contain 으로 고정 높이 박스 안에 표시한다. 원본 제품 사진마다
-누끼(투명 배경) 주변 여백 비율이 제각각이면(예: 어떤 이미지는 상하 25%
-여백, 어떤 이미지는 0%) 같은 카드 높이 안에서 제품이 크게/작게 보이는
-불균형이 생긴다. 이 스크립트는 각 이미지의 "제품이 차지하는 실제 영역"
-(알파 채널 기준 bounding box)을 찾아 트리밍한 뒤, 지정한 비율의 여백만
-새로 붙여 모든 이미지의 시각적 밀도(프레임 대비 제품 크기)를 통일한다.
+from __future__ import annotations
 
-폴더 구조
---------
-이미지는 스펙 데이터 폴더(js/domains/{도메인}/data/{mk}/{series}.data.js)와
-1:1 대응되는 assets/img/{도메인}/{mk}/{series-slug}/파일명.webp 구조로
-정리되어 있다. 예: js/domains/speakers/data/la/k-series.data.js 의 항목들은
-assets/img/speakers/la/k-series/ 아래에 이미지가 있다. 이 스크립트는
-하위 폴더를 재귀적으로 탐색하므로 구조를 그대로 유지한 채 전체를 처리한다.
+import argparse
+import hashlib
+import io
+import json
+import os
+from pathlib import Path
+from typing import Any
 
-사용법
-------
-    cd assets/img
-    pip install Pillow --break-system-packages   # 최초 1회
-    python3 normalize_images.py dry              # 미리보기(실제 파일 변경 없음)
-    python3 normalize_images.py apply             # 실제 적용 (파일 덮어씀)
-
-적용 전 반드시 원본을 백업할 것:
-    cp -r assets/img /path/to/backup/img_backup   (또는 별도 backup 폴더)
-
-주의 — 자동 처리가 부적절한 이미지
-----------------------------------
-아래와 같은 경우 이 스크립트를 적용하면 오히려 왜곡되므로 제외하거나
-수동으로 처리해야 한다:
-
-1. 매입형(in-wall/in-ceiling) 스피커처럼 흰색 마운팅 프레임/벽 패널이
-   불투명 픽셀로 사진에 포함된 경우 — 알파 bbox가 벽 패널까지 "제품"으로
-   오인해 여백이 트리밍되지 않는다. (이 프로젝트의 spk-la-sb6r.webp,
-   spk-la-sb10r.webp 가 이런 케이스라 정규화 대상에서 제외했다.)
-2. 로고/수상 배지/워터마크가 박힌 이미지 — 정규화 전에 먼저 배지를
-   지우는 별도 편집이 필요하다 (아래 remove_region() 참고).
-3. 배경이 완전히 투명 처리되지 않은(누끼 미완성) 이미지 — 정규화 전에
-   먼저 배경을 투명화해야 한다.
-
-처리 후에는 반드시 assets/img/montage_check.py 로 전체 썸네일을 한 번에
-점검해 이상 케이스를 걸러낼 것.
-"""
-from PIL import Image
-import os, glob, sys, json
-
-# 대상은 이 스크립트가 있는 폴더가 아니라 가공본 이미지 폴더다
-# (스크립트는 scripts/, 이미지는 public/assets/img/).
-SRC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public", "assets", "img")
-SRC_DIR = os.path.normpath(SRC_DIR)
-MARGIN_PCT = 0.08  # 제품 bbox 기준 상하좌우 여백 비율 (프로젝트 표준값)
-
-# 자동 정규화에서 제외할 파일 (매입형 등 흰 마운팅 프레임이 제품 사진에
-# 포함되어 alpha bbox 가 왜곡되는 케이스). 새로 추가하는 이미지도 같은
-# 문제가 있으면 여기 추가하고 수동으로 처리한다.
-EXCLUDE = {
-    "spk-la-sb6r.webp",
-    "spk-la-sb10r.webp",
-}
+from PIL import Image, ImageOps
 
 
-def normalize(path, margin_pct=MARGIN_PCT, dry_run=True):
-    im = Image.open(path).convert("RGBA")
-    w, h = im.size
-    alpha = im.split()[-1]
-    bbox = alpha.getbbox()
-    if not bbox:
-        return None  # 완전 투명/불투명 이미지는 처리 불가
-    l, t, r, b = bbox
-    cw, ch = r - l, b - t
-    margin_w = int(cw * margin_pct)
-    margin_h = int(ch * margin_pct)
-    new_w, new_h = cw + margin_w * 2, ch + margin_h * 2
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+SRC_DIR = PROJECT_ROOT / "public" / "assets" / "img"
+SUPPORTED_SUFFIXES = frozenset({".png", ".jpg", ".jpeg", ".webp"})
+MARGIN_PCT = 0.08
 
-    if dry_run:
-        return {
-            "file": os.path.relpath(path, SRC_DIR), "orig": f"{w}x{h}",
-            "bbox": bbox, "content": f"{cw}x{ch}", "new_canvas": f"{new_w}x{new_h}",
-        }
-
-    cropped = im.crop(bbox)
-    canvas = Image.new("RGBA", (new_w, new_h), (0, 0, 0, 0))
-    canvas.paste(cropped, (margin_w, margin_h), cropped)
-    return canvas
+# Alpha bbox가 제품 외 프레임까지 포함하는 것으로 확인된 파일이다.
+EXCLUDE = frozenset({
+    "spk-la-sb6r.png",
+    "spk-la-sb10r.png",
+})
 
 
-def remove_region(path, box, save=True):
-    """
-    이미지의 지정 영역(box=(x0,y0,x1,y1))을 완전 투명으로 지운다.
-    배지/워터마크 제거용. box 좌표는 Read 도구로 이미지를 확대해 눈으로
-    확인한 뒤 지정할 것 (제품 본체와 겹치지 않는 범위로 좁게 잡는다).
-    """
-    im = Image.open(path).convert("RGBA")
-    px = im.load()
-    x0, y0, x1, y1 = box
-    for y in range(y0, y1):
-        for x in range(x0, x1):
-            r, g, b, a = px[x, y]
-            if a > 0:
-                px[x, y] = (r, g, b, 0)
+def iter_image_files(root: Path = SRC_DIR) -> list[Path]:
+    """지원 이미지 파일을 대소문자와 무관하게 안정된 순서로 반환한다."""
+    return sorted(
+        (path for path in root.rglob("*") if path.is_file() and path.suffix.lower() in SUPPORTED_SUFFIXES),
+        key=lambda path: path.relative_to(root).as_posix().casefold(),
+    )
+
+
+def sha256(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def has_alpha(image: Image.Image) -> bool:
+    return "A" in image.getbands() or "transparency" in image.info
+
+
+def normalized_canvas(image: Image.Image, margin_pct: float = MARGIN_PCT) -> tuple[Image.Image | None, tuple[int, int, int, int] | None]:
+    """EXIF 방향을 반영한 RGBA 이미지에서 내용 bbox와 새 canvas를 만든다."""
+    rgba = ImageOps.exif_transpose(image).convert("RGBA")
+    bbox = rgba.getchannel("A").getbbox()
+    if bbox is None:
+        return None, None
+
+    left, top, right, bottom = bbox
+    content_width = right - left
+    content_height = bottom - top
+    margin_width = int(content_width * margin_pct)
+    margin_height = int(content_height * margin_pct)
+    canvas = Image.new(
+        "RGBA",
+        (content_width + margin_width * 2, content_height + margin_height * 2),
+        (0, 0, 0, 0),
+    )
+    cropped = rgba.crop(bbox)
+    canvas.paste(cropped, (margin_width, margin_height), cropped)
+    return canvas, bbox
+
+
+def encode_for_path(image: Image.Image, path: Path) -> bytes:
+    """확장자에 맞는 형식으로 인코딩하되 다른 형식으로 변환하지 않는다."""
+    suffix = path.suffix.lower()
+    output = io.BytesIO()
+    if suffix == ".png":
+        image.save(output, "PNG", optimize=True)
+    elif suffix in {".jpg", ".jpeg"}:
+        background = Image.new("RGB", image.size, (255, 255, 255))
+        if "A" in image.getbands():
+            background.paste(image, mask=image.getchannel("A"))
+        else:
+            background.paste(image.convert("RGB"))
+        background.save(output, "JPEG", quality=92, optimize=True)
+    elif suffix == ".webp":
+        image.save(output, "WEBP", quality=92, method=6)
+    else:
+        raise ValueError(f"지원하지 않는 이미지 형식: {path.suffix}")
+    return output.getvalue()
+
+
+def inspect_image(path: Path, margin_pct: float = MARGIN_PCT) -> tuple[dict[str, Any], bytes | None]:
+    """원본과 예상 출력 manifest 항목 및 적용할 바이트를 만든다."""
+    source = path.read_bytes()
+    relative = path.relative_to(SRC_DIR).as_posix()
+    with Image.open(io.BytesIO(source)) as image:
+        oriented = ImageOps.exif_transpose(image)
+        original_size = oriented.size
+        original_alpha = has_alpha(image)
+        alpha_bbox = oriented.convert("RGBA").getchannel("A").getbbox()
+        canvas, bbox = normalized_canvas(image, margin_pct)
+
+    record: dict[str, Any] = {
+        "file": relative,
+        "format": path.suffix.lower().lstrip("."),
+        "status": "ready",
+        "original": {
+            "bytes": len(source),
+            "dimensions": list(original_size),
+            "hasAlpha": original_alpha,
+            "sha256": sha256(source),
+        },
+    }
+    if canvas is None or bbox is None:
+        record["status"] = "fully-transparent"
+        record["output"] = None
+        return record, None
+
+    record["bbox"] = list(bbox)
+    if not original_alpha:
+        record["status"] = "manual-review-no-alpha"
+        record["output"] = None
+        return record, None
+    if alpha_bbox == (0, 0, *original_size):
+        record["status"] = "manual-review-full-frame"
+        record["output"] = None
+        return record, None
+
+    encoded = encode_for_path(canvas, path)
+    record["output"] = {
+        "bytes": len(encoded),
+        "dimensions": list(canvas.size),
+        "hasAlpha": path.suffix.lower() not in {".jpg", ".jpeg"},
+        "sha256": sha256(encoded),
+    }
+    return record, encoded
+
+
+def replace_bytes(path: Path, data: bytes) -> None:
+    """같은 디렉터리의 임시 파일을 사용해 부분 기록된 원본을 남기지 않는다."""
+    temporary = path.with_name(f".{path.name}.normalize.tmp")
+    try:
+        temporary.write_bytes(data)
+        os.replace(temporary, path)
+    finally:
+        if temporary.exists():
+            temporary.unlink()
+
+
+def remove_region(path: str | Path, box: tuple[int, int, int, int], save: bool = True) -> Image.Image:
+    """제품과 겹치지 않는 수동 지정 영역을 투명하게 만든다."""
+    image_path = Path(path)
+    with Image.open(image_path) as source:
+        image = ImageOps.exif_transpose(source).convert("RGBA")
+    transparent = Image.new("RGBA", (box[2] - box[0], box[3] - box[1]), (0, 0, 0, 0))
+    image.paste(transparent, box[:2])
     if save:
-        im.save(path, "WEBP", quality=92)
-    return im
+        replace_bytes(image_path, encode_for_path(image, image_path))
+    return image
+
+
+def write_manifest(path: Path, mode: str, records: list[dict[str, Any]]) -> None:
+    payload = {
+        "schemaVersion": 1,
+        "mode": mode,
+        "sourceRoot": SRC_DIR.relative_to(PROJECT_ROOT).as_posix(),
+        "marginPercent": MARGIN_PCT,
+        "supportedExtensions": sorted(SUPPORTED_SUFFIXES),
+        "records": records,
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def validate_approved_manifest(path: Path, records: list[dict[str, Any]]) -> None:
+    """dry-run 승인본과 현재 계산 결과가 완전히 같을 때만 apply를 허용한다."""
+    approved = json.loads(path.read_text(encoding="utf-8"))
+    expected_header = {
+        "schemaVersion": 1,
+        "mode": "dry",
+        "sourceRoot": SRC_DIR.relative_to(PROJECT_ROOT).as_posix(),
+        "marginPercent": MARGIN_PCT,
+        "supportedExtensions": sorted(SUPPORTED_SUFFIXES),
+    }
+    for key, expected in expected_header.items():
+        if approved.get(key) != expected:
+            raise ValueError(f"승인 manifest의 {key} 값이 현재 정책과 다릅니다.")
+    if approved.get("records") != records:
+        raise ValueError("승인 manifest 이후 이미지 또는 예상 출력이 바뀌었습니다. dry-run부터 다시 실행하세요.")
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("mode", nargs="?", choices=("dry", "apply"), default="dry")
+    parser.add_argument("--manifest", type=Path, help="전체 결과를 기록할 JSON 경로")
+    parser.add_argument("--approved-manifest", type=Path, help="apply 전에 검토한 dry-run manifest")
+    args = parser.parse_args()
+    if args.mode == "apply" and args.approved_manifest is None:
+        parser.error("apply에는 검토한 --approved-manifest가 필요합니다.")
+    if args.mode == "dry" and args.approved_manifest is not None:
+        parser.error("--approved-manifest는 apply에서만 사용합니다.")
+    if (
+        args.mode == "apply"
+        and args.manifest is not None
+        and args.manifest.resolve() == args.approved_manifest.resolve()
+    ):
+        parser.error("적용 결과 manifest는 승인한 dry-run manifest와 다른 경로여야 합니다.")
+    return args
+
+
+def main() -> int:
+    args = parse_args()
+    records: list[dict[str, Any]] = []
+    prepared: list[tuple[Path, bytes | None]] = []
+    applied = 0
+
+    for path in iter_image_files():
+        if path.name in EXCLUDE:
+            record, _ = inspect_image(path)
+            record["status"] = "excluded"
+            records.append(record)
+            prepared.append((path, None))
+            print(json.dumps(record, ensure_ascii=False))
+            continue
+
+        record, encoded = inspect_image(path)
+        records.append(record)
+        prepared.append((path, encoded))
+        print(json.dumps(record, ensure_ascii=False))
+
+    # 전체 파일을 먼저 분석하고 승인본과 비교한다. 중간 파일에서 검증이
+    # 실패해 일부 이미지만 바뀌는 상태를 만들지 않는다.
+    if args.mode == "apply":
+        validate_approved_manifest(args.approved_manifest, records)
+        for path, encoded in prepared:
+            if encoded is None:
+                continue
+            replace_bytes(path, encoded)
+            applied += 1
+
+    if args.manifest:
+        write_manifest(args.manifest, args.mode, records)
+
+    summary = {
+        "mode": args.mode,
+        "discovered": len(records),
+        "ready": sum(record["status"] == "ready" for record in records),
+        "excluded": sum(record["status"] == "excluded" for record in records),
+        "manualReview": sum(record["status"].startswith("manual-review") for record in records),
+        "applied": applied,
+        "inputBytes": sum(record["original"]["bytes"] for record in records),
+        "projectedOutputBytes": sum(
+            record["output"]["bytes"] if record["status"] == "ready" else record["original"]["bytes"]
+            for record in records
+        ),
+    }
+    summary["projectedDeltaBytes"] = summary["projectedOutputBytes"] - summary["inputBytes"]
+    print(json.dumps({"summary": summary}, ensure_ascii=False))
+    return 0
 
 
 if __name__ == "__main__":
-    mode = sys.argv[1] if len(sys.argv) > 1 else "dry"
-    # ** 재귀 탐색 — assets/img/{도메인}/{mk}/{series}/*.webp 하위 폴더 구조를 전부 훑는다.
-    files = sorted(glob.glob(os.path.join(SRC_DIR, "**", "*.webp"), recursive=True))
-    files = [f for f in files if os.path.basename(f) not in EXCLUDE]
-
-    if mode == "dry":
-        for p in files:
-            r = normalize(p, dry_run=True)
-            if r:
-                print(json.dumps(r, ensure_ascii=False))
-        if EXCLUDE:
-            print(f"# 제외됨(수동 처리 필요): {sorted(EXCLUDE)}")
-    elif mode == "apply":
-        n = 0
-        for p in files:
-            canvas = normalize(p, dry_run=False)
-            if canvas:
-                canvas.save(p, "WEBP", quality=92)
-                n += 1
-        print(f"processed {n} files (excluded {len(EXCLUDE)})")
-    else:
-        print("usage: python3 normalize_images.py [dry|apply]")
+    raise SystemExit(main())

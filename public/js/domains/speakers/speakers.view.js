@@ -16,16 +16,30 @@ const SPL_RANGE = { lo: 0, hi: 0 };
  * @param {number} lo 데이터 최저 SPL
  * @param {number} hi 데이터 최고 SPL
  */
-export function setSplRange(lo, hi) { SPL_RANGE.lo = lo; SPL_RANGE.hi = hi; }
+export function setSplRange(lo, hi) {
+  SPL_RANGE.lo = lo;
+  SPL_RANGE.hi = hi;
+}
 
 /** SPL 값 → 게이지 채움 비율(%) (최소 4% 보장으로 항상 보이게) */
-const splPct = v => Math.max(4, Math.min(100, ((v - (SPL_RANGE.lo - 2)) / ((SPL_RANGE.hi + 2) - (SPL_RANGE.lo - 2))) * 100));
+const splPct = v =>
+  Math.max(4, Math.min(100, ((v - (SPL_RANGE.lo - 2)) / (SPL_RANGE.hi + 2 - (SPL_RANGE.lo - 2))) * 100));
 
 /** 앰프 항목에서 total 이 가장 큰 설정 반환 (카드 요약용) */
-function bestCfg(a) { const n = a.configs.filter(c => c.total != null); return n.length ? n.reduce((x, y) => y.total > x.total ? y : x) : null; }
+function bestCfg(a) {
+  const n = a.configs.filter(c => c.total != null);
+  return n.length ? n.reduce((x, y) => (y.total > x.total ? y : x)) : null;
+}
 
 /** 스피커의 대표(첫 유효) 앰프 매칭 요약 { model, perCh, total } 반환 */
-function primaryOf(d) { if (!d.amps || !d.amps.length) return null; for (const a of d.amps) { const c = bestCfg(a); if (c) return { model: a.model, perCh: c.perCh, total: c.total }; } return null; }
+function primaryOf(d) {
+  if (!d.amps || !d.amps.length) return null;
+  for (const a of d.amps) {
+    const c = bestCfg(a);
+    if (c) return { model: a.model, perCh: c.perCh, total: c.total };
+  }
+  return null;
+}
 
 /**
  * 검색어 매칭 규칙 (이름/시리즈/제조사명).
@@ -35,7 +49,9 @@ function primaryOf(d) { if (!d.amps || !d.amps.length) return null; for (const a
  */
 export function speakerMatchesQuery(d, q) {
   const s = q.toLowerCase();
-  return d.name.toLowerCase().includes(s) || d.series.toLowerCase().includes(s) || MFR[d.mk].name.toLowerCase().includes(s);
+  return (
+    d.name.toLowerCase().includes(s) || d.series.toLowerCase().includes(s) || MFR[d.mk].name.toLowerCase().includes(s)
+  );
 }
 
 /**
@@ -49,7 +65,10 @@ export function speakerMatchesQuery(d, q) {
  */
 function otherBandCount(raw) {
   if (!raw) return 0;
-  const parts = raw.split("·").map(s => s.trim()).filter(Boolean);
+  const parts = raw
+    .split("·")
+    .map(s => s.trim())
+    .filter(Boolean);
   return Math.max(0, parts.length - 1);
 }
 
@@ -62,11 +81,16 @@ function otherBandCount(raw) {
  */
 function parseTransducerBands(raw) {
   if (!raw) return [];
-  return raw.split("·").map(s => s.trim()).filter(Boolean).map(part => {
-    const i = part.indexOf(":");
-    if (i === -1) return null;
-    return { band: part.slice(0, i).trim(), detail: part.slice(i + 1).trim() };
-  }).filter(Boolean);
+  return raw
+    .split("·")
+    .map(s => s.trim())
+    .filter(Boolean)
+    .map(part => {
+      const i = part.indexOf(":");
+      if (i === -1) return null;
+      return { band: part.slice(0, i).trim(), detail: part.slice(i + 1).trim() };
+    })
+    .filter(Boolean);
 }
 
 /**
@@ -80,10 +104,18 @@ function parseTransducerBands(raw) {
 function transducerBandsRow(raw) {
   const bands = parseTransducerBands(raw);
   if (!bands.length) return specRow("Transducers", raw);
-  const lines = bands.map(b =>
-    `<div class="freq-list__row"><span class="freq-badge freq-badge--auto">${esc(b.band)}</span><span class="freq-list__val">${esc(b.detail)}</span></div>`
-  ).join("");
-  return { key: `<div class="spec-table__key">Transducers</div>`, value: `<div class="spec-table__value freq-list">${lines}</div>`, full: false, pin: null };
+  const lines = bands
+    .map(
+      b =>
+        `<div class="freq-list__row"><span class="freq-badge freq-badge--auto">${esc(b.band)}</span><span class="freq-list__val">${esc(b.detail)}</span></div>`,
+    )
+    .join("");
+  return {
+    key: `<div class="spec-table__key">Transducers</div>`,
+    value: `<div class="spec-table__value freq-list">${lines}</div>`,
+    full: false,
+    pin: null,
+  };
 }
 
 /**
@@ -92,7 +124,8 @@ function transducerBandsRow(raw) {
  * @returns {string} .card 마크업
  */
 export function cardHTML(d) {
-  const M = MFR[d.mk], color = M.color;
+  const M = MFR[d.mk],
+    color = M.color;
   const p = primaryOf(d);
   // 앰프 칸의 세 상태 구분이 중요하다: 매칭 있음 / Self-Powered / 미지정.
   // Meyer 파워드 라인(PANTHER·LEOPARD·TIGRA·LINA·MM·LFC·USW·Cinema 전 시리즈)
@@ -100,7 +133,8 @@ export function cardHTML(d) {
   // 미입력을 뜻하는 "— 미지정"으로 보이면 오해를 준다 — d.selfPowered 가 있으면
   // "Self-Powered"로 명시한다.
   // 값 색은 전역 accent 가 아니라 제조사 색(stat-grid__value--mfr).
-  const ampBlock = p ? `
+  const ampBlock = p
+    ? `
     <div class="stat-grid">
       <div class="stat-grid__cell"><span class="stat-grid__key">Amp</span><span class="stat-grid__value stat-grid__value--mfr">${esc(p.model)}</span></div>
       <div class="stat-grid__cell"><span class="stat-grid__key">Max / amp</span><span class="stat-grid__value">${p.total}<small> ea</small></span></div>
@@ -116,21 +150,22 @@ export function cardHTML(d) {
   const views = getViews(d);
   const hoverView = (d.cardHoverView && views.find(v => v.label === d.cardHoverView)) || views[1];
   const media = views.length
-    ? (views.length > 1 && hoverView
-        ? `<img class="card__img card__img--front" loading="lazy" src="${views[0].src}" alt="${esc(d.name)}"><img class="card__img card__img--back" loading="lazy" src="${hoverView.src}" alt="${esc(d.name)} ${esc(hoverView.label)}">`
-        : `<img class="card__img" loading="lazy" src="${views[0].src}" alt="${esc(d.name)}">`)
+    ? views.length > 1 && hoverView
+      ? `<img class="card__img card__img--front" loading="lazy" src="${views[0].src}" alt="${esc(d.name)}"><img class="card__img card__img--back" loading="lazy" src="${hoverView.src}" alt="${esc(d.name)} ${esc(hoverView.label)}">`
+      : `<img class="card__img" loading="lazy" src="${views[0].src}" alt="${esc(d.name)}">`
     : `<div class="card__noimg">◢</div>`;
   // 드라이버 구성: 로우 드라이버만 강조 박스, 나머지는 개수만(otherBandCount).
   const extra = otherBandCount(d.transducers);
-  const lowBadge = d.lowInch != null
-    ? `<span class="card__low-badge"><b>${d.lowQty ? esc(d.lowQty) + "×" : ""}${esc(d.lowInch)}″</b><small>LOW</small></span>`
-    : "";
+  const lowBadge =
+    d.lowInch != null
+      ? `<span class="card__low-badge"><b>${d.lowQty ? esc(d.lowQty) + "×" : ""}${esc(d.lowInch)}″</b><small>LOW</small></span>`
+      : "";
   const cfg = `${lowBadge}${extra > 0 ? `<span class="card__low-extra">+${extra}개 대역</span>` : ""}`;
   const { nameRowHTML, configRowHTML } = cardTagsHTML(d);
   return `<article class="card" style="--mfr:${color}" tabindex="0" data-id="${d.id}" role="button" aria-label="${esc(d.name)} 상세">
     <div class="card__media">${media}</div>
     <div class="card__body">
-      <div class="eyebrow"><span class="eyebrow__brand">${esc(M.short)}</span> · ${d.throwCat ? esc(d.throwCat) + ' · ' : ''}${esc(d.series)}</div>
+      <div class="eyebrow"><span class="eyebrow__brand">${esc(M.short)}</span> · ${d.throwCat ? esc(d.throwCat) + " · " : ""}${esc(d.series)}</div>
       <div class="card__name-row">
         <div class="card__name">${esc(d.name)}</div>
         ${nameRowHTML}
@@ -153,17 +188,14 @@ export function cardHTML(d) {
  * @returns {string} 배지들의 HTML (표시할 게 없으면 빈 문자열)
  */
 function titleTagsHTML(d, wrapClass, tagClass) {
-  const typeLabel = d.type ? (TYPE_BADGE_LABEL[d.type] || d.type) : null;
+  const typeLabel = d.type ? TYPE_BADGE_LABEL[d.type] || d.type : null;
   // active/passive 태그를 N-way 태그보다 앞으로 — /active|passive/ 매칭되는
   // 태그는 정렬 키 0, 나머지("3-way" 등)는 1로 줘서 stable sort 로 순서만 바꾼다.
   const crossover = [...(d.crossoverTags || [])].sort((a, b) => {
-    const rank = t => /active|passive/i.test(t) ? 0 : 1;
+    const rank = t => (/active|passive/i.test(t) ? 0 : 1);
     return rank(a) - rank(b);
   });
-  const tags = [
-    ...(typeLabel ? [typeLabel] : []),
-    ...crossover,
-  ];
+  const tags = [...(typeLabel ? [typeLabel] : []), ...crossover];
   if (!tags.length) return "";
   return `<div class="${wrapClass}">${tags.map(t => `<span class="${tagClass}">${esc(t)}</span>`).join("")}</div>`;
 }
@@ -179,24 +211,21 @@ function titleTagsHTML(d, wrapClass, tagClass) {
  *      대응. CCL-SUB 처럼 passive 만 있는 순수 수동은 그대로 유지된다.
  *   4. wayCount("3-way", d&b 공식 표기)를 뒤에 덧붙인다.
  * @param {Object} d 스피커 레코드
- * @returns {string} 배지들의 HTML (표시할 게 없으면 빈 문자열)
+ * @returns {{nameRowHTML: string, configRowHTML: string}} 카드의 두 배지 영역 HTML
  */
 function cardTagsHTML(d) {
-  const typeLabel = d.type ? (TYPE_BADGE_LABEL[d.type] || d.type) : null;
+  const typeLabel = d.type ? TYPE_BADGE_LABEL[d.type] || d.type : null;
   let crossover = (d.crossoverTags || [])
     .map(t => t.replace(/\s*\([^)]*\)\s*$/, "").trim()) // 괄호 상세 제거
     .filter(t => !/^\d+ch$/i.test(t)); // "1ch" 단독 태그는 정보 가치가 낮아 생략
   const hasActive = crossover.some(t => /active/i.test(t));
   if (hasActive) crossover = crossover.filter(t => t.toLowerCase() !== "passive");
   const sorted = [...crossover].sort((a, b) => {
-    const rank = t => /active|passive/i.test(t) ? 0 : 1;
+    const rank = t => (/active|passive/i.test(t) ? 0 : 1);
     return rank(a) - rank(b);
   });
   const wayTag = d.wayCount && d.wayCount !== "N/A" ? d.wayCount : null;
-  const crossoverTags = [
-    ...sorted,
-    ...(wayTag && !sorted.includes(wayTag) ? [wayTag] : []),
-  ];
+  const crossoverTags = [...sorted, ...(wayTag && !sorted.includes(wayTag) ? [wayTag] : [])];
   // 줄 배치: Type 태그(길지만 1개)는 이름 옆 줄에, crossover 태그(여러 개지만
   // 각각 짧음)는 config 줄에. 반대로 두면 "Progressive Ultra-Dense Line…" 같은
   // 긴 Type 라벨이 로우 배지와 폭을 다투는 config 줄에서 말줄임된다.
@@ -246,21 +275,32 @@ function specRow(label, val, full, pin) {
  */
 function serializeSpecRows(rows) {
   const list = rows.filter(Boolean);
-  let col = 0;         // 0: 다음 half 는 왼쪽 열, 1: 다음 half 는 오른쪽 열
-  let pending = null;  // 왼쪽 열에 배치되어 아직 짝을 못 받은 half 행
-  let curPin = null;   // 현재 왼쪽 열을 차지 중인 pin 그룹
+  let col = 0; // 0: 다음 half 는 왼쪽 열, 1: 다음 half 는 오른쪽 열
+  let pending = null; // 왼쪽 열에 배치되어 아직 짝을 못 받은 half 행
+  let curPin = null; // 현재 왼쪽 열을 차지 중인 pin 그룹
   for (const r of list) {
     const startsNewPinPair = r.pin && r.pin !== curPin && col === 1;
     if (r.full || startsNewPinPair) {
       if (pending) pending.full = true;
-      col = 0; pending = null; curPin = null;
+      col = 0;
+      pending = null;
+      curPin = null;
       if (r.full) continue;
     }
-    if (col === 0) { pending = r; col = 1; curPin = r.pin; }
-    else { pending = null; col = 0; curPin = null; } // 오른쪽 열까지 채워짐 — 짝 완성
+    if (col === 0) {
+      pending = r;
+      col = 1;
+      curPin = r.pin;
+    } else {
+      pending = null;
+      col = 0;
+      curPin = null;
+    } // 오른쪽 열까지 채워짐 — 짝 완성
   }
   if (pending) pending.full = true; // 끝까지 짝을 못 받은 마지막 half
-  return list.map(r => `<div class="spec-table__cell${r.full ? " spec-table__cell--full" : ""}">${r.key}${r.value}</div>`).join("");
+  return list
+    .map(r => `<div class="spec-table__cell${r.full ? " spec-table__cell--full" : ""}">${r.key}${r.value}</div>`)
+    .join("");
 }
 
 /**
@@ -304,10 +344,12 @@ function connectorRows(val) {
   // 모든 조각이 "짧은 라벨: 값" 형태(콜론이 앞부분 20자 이내에 있음)일 때만
   // 구조화된 데이터로 간주 — 그렇지 않으면 단일 문자열에 우연히 콜론이
   // 섞여도 잘못 쪼개지 않는다.
-  const isLabeled = parts.length > 1 && parts.every(p => {
-    const idx = p.indexOf(":");
-    return idx > 0 && idx <= 20;
-  });
+  const isLabeled =
+    parts.length > 1 &&
+    parts.every(p => {
+      const idx = p.indexOf(":");
+      return idx > 0 && idx <= 20;
+    });
   if (!isLabeled) return [specRow("Connectors", val, true)];
   return parts.map(p => {
     const idx = p.indexOf(":");
@@ -357,7 +399,9 @@ function weightDimsIpRow(d, footnotes) {
   const weightLbStr = d.weight != null ? Math.round(d.weight * 2.20462) + " lb" : null;
   const dims = parseDims(d.dims);
   if (weightStr == null && !dims && !d.dims && !d.ip) return [];
-  const weightCell = weightStr != null ? `<div>
+  const weightCell =
+    weightStr != null
+      ? `<div>
       <div class="spec-table__key-row">
         <div class="spec-table__key">Weight</div>
         <div class="dims-unit-switch" role="group" aria-label="무게 단위 선택">
@@ -367,7 +411,8 @@ function weightDimsIpRow(d, footnotes) {
       </div>
       <div class="spec-table__value" data-weight-kg>${esc(weightStr)}</div>
       <div class="spec-table__value" data-weight-lb hidden>${esc(weightLbStr)}</div>
-    </div>` : `<div>
+    </div>`
+      : `<div>
       <div class="spec-table__key">Weight</div>
       <div class="spec-table__value spec-table__value--na">—</div>
     </div>`;
@@ -408,12 +453,16 @@ function weightDimsIpRow(d, footnotes) {
   }
   const ipCell = `<div>
       <div class="spec-table__key">IP Rating</div>
-      <div class="spec-table__value${d.ip ? '' : ' spec-table__value--na'}">${d.ip ? ipDisplay : "—"}</div>
+      <div class="spec-table__value${d.ip ? "" : " spec-table__value--na"}">${d.ip ? ipDisplay : "—"}</div>
     </div>`;
-  return [{
-    key: "", value: `<div class="spec-table__tri">${dimsCell}${weightCell}${ipCell}</div>`,
-    full: true, pin: null,
-  }];
+  return [
+    {
+      key: "",
+      value: `<div class="spec-table__tri">${dimsCell}${weightCell}${ipCell}</div>`,
+      full: true,
+      pin: null,
+    },
+  ];
 }
 
 /**
@@ -432,16 +481,21 @@ function maxWattRows(d) {
   if (!hasBands) return [specRow("RMS Power Handling (Total)", totalStr)];
   const totalRow = {
     key: `<div class="spec-table__key">RMS Power Handling (Total)</div>`,
-    value: `<div class="spec-table__value${totalStr == null ? ' spec-table__value--na' : ''}">${totalStr != null ? esc(totalStr) : "—"}</div>`,
-    full: false, pin: null,
+    value: `<div class="spec-table__value${totalStr == null ? " spec-table__value--na" : ""}">${totalStr != null ? esc(totalStr) : "—"}</div>`,
+    full: false,
+    pin: null,
   };
-  const bandLines = d.wattByBand.map(b =>
-    `<div class="freq-list__row"><span class="freq-badge freq-badge--auto">${esc(b.band)}</span><span class="freq-list__val">${esc(b.watt)} W</span></div>`
-  ).join("");
+  const bandLines = d.wattByBand
+    .map(
+      b =>
+        `<div class="freq-list__row"><span class="freq-badge freq-badge--auto">${esc(b.band)}</span><span class="freq-list__val">${esc(b.watt)} W</span></div>`,
+    )
+    .join("");
   const bandRow = {
     key: `<div class="spec-table__key">By Band</div>`,
     value: `<div class="spec-table__value freq-list">${bandLines}</div>`,
-    full: false, pin: null,
+    full: false,
+    pin: null,
   };
   return [totalRow, bandRow];
 }
@@ -476,22 +530,29 @@ function freqRow(freqs) {
   // freq-badge 는 "-3 dB" 같은 짧은 라벨을 전제로 48px 고정 폭이다 — Meyer
   // PANTHER/LEOPARD 계열의 "Operating Range"·"Phase ±45°" 는 넘쳐서 옆 값과
   // 겹친다. 6자 초과 라벨은 자동 폭(--auto)으로 전환한다.
-  const lines = freqs.map(f => {
-    const badgeClass = f.db.length > 6 ? "freq-badge freq-badge--auto" : "freq-badge";
-    return `<div class="freq-list__row"><span class="${badgeClass}">${esc(f.db)}</span><span class="freq-list__val">${esc(f.lo)} – ${esc(f.hi)}</span></div>`;
-  }).join("");
-  return { key: `<div class="spec-table__key">Frequency Response</div>`, value: `<div class="spec-table__value freq-list">${lines}</div>`, full: true, pin: null };
+  const lines = freqs
+    .map(f => {
+      const badgeClass = f.db.length > 6 ? "freq-badge freq-badge--auto" : "freq-badge";
+      return `<div class="freq-list__row"><span class="${badgeClass}">${esc(f.db)}</span><span class="freq-list__val">${esc(f.lo)} – ${esc(f.hi)}</span></div>`;
+    })
+    .join("");
+  return {
+    key: `<div class="spec-table__key">Frequency Response</div>`,
+    value: `<div class="spec-table__value freq-list">${lines}</div>`,
+    full: true,
+    pin: null,
+  };
 }
 
 /**
  * 앰프 매칭 표(.match-table).
  * resolveAmpId 로 해석되는 행에는 data-amp-id 가 붙어 클릭 시 pane2 로 앰프
- * 상세가 열린다(클릭 배선은 controller 담당).
+ * 상세가 열린다(클릭 처리는 relation-navigation의 위임 listener 담당).
  *
  * 앰프 1개당 모드×프리셋 조합이 여러 행 나올 수 있어(5XT 의 LA4X SE/BTL ×
  * 프리셋들) 대표 행(Max/amp 최대) 1개만 기본 표시하고 나머지는 +N 토글로
- * 펼친다 — 앰프 모달의 Configurations 표와 같은 패턴. 행 클릭은 pane2 이동,
- * +N 버튼은 펼치기만(stopPropagation, wireConfigsToggle).
+ * 펼친다 — 앰프 모달의 Configurations 표와 같은 패턴. 행의 마우스 클릭과
+ * 모델명 버튼은 pane2 이동, +N 버튼은 펼치기만 담당한다.
  * @param {Object} d 스피커 레코드
  * @param {Function|null} resolveAmpId (mk, model) => 앰프 id | null
  * @returns {string}
@@ -507,13 +568,16 @@ export function ampMatchingHTML(d, resolveAmpId) {
   let rows = "";
   d.amps.forEach((a, gi) => {
     const ampId = resolveAmpId ? resolveAmpId(d.mk, a.model) : null;
-    const clickableAttr = ampId ? ` data-amp-id="${ampId}"` : "";
+    const clickableAttr = ampId ? ` data-amp-id="${esc(ampId)}"` : "";
+    const modelHTML = ampId
+      ? `<button type="button" class="match-table__relation-trigger match-table__model-name" data-amp-id="${esc(ampId)}">${esc(a.model)}</button>`
+      : `<span class="match-table__model-name">${esc(a.model)}</span>`;
     // 현재 앰프 DB에 등록된 모델(ampId 해석 성공)만 클릭 가능하게 표시하고,
     // 매칭 정보는 있으나 등록되지 않은 구형/미등록 모델(LA12X 등)은
     // match-table__row--static 으로 비활성 느낌을 준다.
     const clickableClass = ampId ? " match-table__row--clickable" : " match-table__row--static";
     if (!a.configs.length) {
-      rows += `<div class="match-table__row${clickableClass}"${clickableAttr}><div class="match-table__cell match-table__cell--model">${esc(a.model)}</div><div class="match-table__cell match-table__cell--mode">—</div><div class="match-table__cell"></div><div class="match-table__cell">—</div><div class="match-table__cell">—</div><div class="match-table__cell">—</div></div>`;
+      rows += `<div class="match-table__row${clickableClass}" role="row"${clickableAttr}><div class="match-table__cell match-table__cell--model" role="cell">${modelHTML}</div><div class="match-table__cell match-table__cell--mode" role="cell">—</div><div class="match-table__cell" role="cell"></div><div class="match-table__cell" role="cell">—</div><div class="match-table__cell" role="cell">—</div><div class="match-table__cell" role="cell">—</div></div>`;
       return;
     }
     // 이 앰프의 모든 (모드 × 프리셋) 조합을 평탄화 — 원본 자료에 SPL 이
@@ -522,7 +586,9 @@ export function ampMatchingHTML(d, resolveAmpId) {
     a.configs.forEach(c => {
       const byPreset = c.splByPreset ? c.splByPreset.filter(p => p.spl != null) : null;
       if (byPreset && byPreset.length) {
-        byPreset.forEach(p => flat.push({ mode: c.mode, preset: p.preset, perCh: c.perCh, total: c.total, spl: p.spl }));
+        byPreset.forEach(p =>
+          flat.push({ mode: c.mode, preset: p.preset, perCh: c.perCh, total: c.total, spl: p.spl }),
+        );
       } else if (!c.splByPreset && c.spl != null) {
         flat.push({ mode: c.mode, preset: null, perCh: c.perCh, total: c.total, spl: c.spl });
       } else if (!c.splByPreset) {
@@ -538,11 +604,18 @@ export function ampMatchingHTML(d, resolveAmpId) {
     const rep = sorted[0];
     const rest = sorted.slice(1);
     const groupId = `spk-amp-${gi}`;
-    const toggleBtn = rest.length ? `<button type="button" class="match-table__toggle-btn" data-toggle-group="${groupId}" aria-expanded="false" aria-label="설정 ${rest.length}개 더 보기">+${rest.length}</button>` : "";
-    rows += `<div class="match-table__row${clickableClass}"${clickableAttr}><div class="match-table__cell match-table__cell--model" title="${esc(a.model)}"><span class="match-table__model-name">${esc(a.model)}</span>${toggleBtn}</div><div class="match-table__cell match-table__cell--mode">${rep.mode ? esc(rep.mode) : "—"}</div><div class="match-table__cell match-table__cell--preset" title="${rep.preset ? esc(rep.preset) : ""}">${rep.preset ? esc(rep.preset) : "—"}</div><div class="match-table__cell">${rep.perCh != null ? rep.perCh : "—"}</div><div class="match-table__cell">${rep.total != null ? rep.total : "—"}</div><div class="match-table__cell">${rep.spl != null ? rep.spl + " dB" : "—"}</div></div>`;
-    rows += rest.map(r => `<div class="match-table__row match-table__row--sub" data-toggle-member="${groupId}" hidden><div class="match-table__cell match-table__cell--model"></div><div class="match-table__cell match-table__cell--mode">${r.mode ? esc(r.mode) : "—"}</div><div class="match-table__cell match-table__cell--preset" title="${r.preset ? esc(r.preset) : ""}">${r.preset ? esc(r.preset) : "—"}</div><div class="match-table__cell">${r.perCh != null ? r.perCh : "—"}</div><div class="match-table__cell">${r.total != null ? r.total : "—"}</div><div class="match-table__cell">${r.spl != null ? r.spl + " dB" : "—"}</div></div>`).join("");
+    const toggleBtn = rest.length
+      ? `<button type="button" class="match-table__toggle-btn" data-toggle-group="${groupId}" aria-expanded="false" aria-label="설정 ${rest.length}개 더 보기">+${rest.length}</button>`
+      : "";
+    rows += `<div class="match-table__row${clickableClass}" role="row"${clickableAttr}><div class="match-table__cell match-table__cell--model" role="cell" title="${esc(a.model)}">${modelHTML}${toggleBtn}</div><div class="match-table__cell match-table__cell--mode" role="cell">${rep.mode ? esc(rep.mode) : "—"}</div><div class="match-table__cell match-table__cell--preset" role="cell" title="${rep.preset ? esc(rep.preset) : ""}">${rep.preset ? esc(rep.preset) : "—"}</div><div class="match-table__cell" role="cell">${rep.perCh != null ? rep.perCh : "—"}</div><div class="match-table__cell" role="cell">${rep.total != null ? rep.total : "—"}</div><div class="match-table__cell" role="cell">${rep.spl != null ? rep.spl + " dB" : "—"}</div></div>`;
+    rows += rest
+      .map(
+        r =>
+          `<div class="match-table__row match-table__row--sub" role="row" data-toggle-member="${groupId}" hidden><div class="match-table__cell match-table__cell--model" role="cell"></div><div class="match-table__cell match-table__cell--mode" role="cell">${r.mode ? esc(r.mode) : "—"}</div><div class="match-table__cell match-table__cell--preset" role="cell" title="${r.preset ? esc(r.preset) : ""}">${r.preset ? esc(r.preset) : "—"}</div><div class="match-table__cell" role="cell">${r.perCh != null ? r.perCh : "—"}</div><div class="match-table__cell" role="cell">${r.total != null ? r.total : "—"}</div><div class="match-table__cell" role="cell">${r.spl != null ? r.spl + " dB" : "—"}</div></div>`,
+      )
+      .join("");
   });
-  return `<div class="match-table match-table--toggleable"><div class="match-table__row match-table__row--head"><div class="match-table__cell">Amplifier</div><div class="match-table__cell">Mode</div><div class="match-table__cell">Preset</div><div class="match-table__cell">Links/ch</div><div class="match-table__cell">Max/amp</div><div class="match-table__cell">Max SPL</div></div><div class="match-table__body">${rows}</div></div>`;
+  return `<div class="match-table match-table--toggleable" role="table" aria-label="Amplifier matching" aria-colcount="6"><div class="match-table__row match-table__row--head" role="row"><div class="match-table__cell" role="columnheader">Amplifier</div><div class="match-table__cell" role="columnheader">Mode</div><div class="match-table__cell" role="columnheader">Preset</div><div class="match-table__cell" role="columnheader">Links/ch</div><div class="match-table__cell" role="columnheader">Max/amp</div><div class="match-table__cell" role="columnheader">Max SPL</div></div><div class="match-table__body" role="rowgroup">${rows}</div></div>`;
 }
 
 /**
@@ -560,13 +633,17 @@ function systemElementsHTML(accessories) {
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(acc);
   });
-  const groupsHTML = [...groups.entries()].map(([type, items]) => `
+  const groupsHTML = [...groups.entries()]
+    .map(
+      ([type, items]) => `
     <div class="system-elements__group">
       <div class="system-elements__group-label">${esc(type)}</div>
       <div class="chip-group">
         ${items.map(acc => `<button type="button" class="chip" data-accessory-id="${esc(acc.id)}">${esc(acc.name)}</button>`).join("")}
       </div>
-    </div>`).join("");
+    </div>`,
+    )
+    .join("");
   return `<button type="button" class="section-label section-label--toggle" data-section-toggle="spk-system-elements" aria-expanded="false">System Elements<span class="section-label__arrow">▸</span></button><div data-section-toggle-body="spk-system-elements" hidden>${groupsHTML}</div>`;
 }
 
@@ -592,9 +669,7 @@ function wrapBreakable(text) {
     .replace(/\. /g, ". " + MARK)
     .replace(/: /g, ": " + MARK)
     .replace(/ — /g, " — " + MARK);
-  return esc(marked)
-    .replace(/ /g, "&nbsp;")
-    .split(MARK).join("<wbr>");
+  return esc(marked).replace(/ /g, "&nbsp;").split(MARK).join("<wbr>");
 }
 
 // Configuration/Preset 열의 "+" 뒤·"(" 앞 공백을 표시상으로만 없앤다
@@ -607,37 +682,6 @@ function wrapBreakable(text) {
 // 한다.
 function tightenConfigText(text) {
   return String(text).replace(/ \+ /g, "​+​").replace(/ \(/g, "​(");
-}
-
-// "출처: xxx.pdf pNN" 표기를 원본 PDF 링크로 바꾼다.
-// **원본 PDF 가 실제로 저장소에 보관된 제품만 여기 등록한다** — 스펙 대부분은
-// 역재구성본이라 원본 파일이 없고, 없는 경로로 링크를 걸면 깨진 링크가 된다.
-const PDF_SOURCE_LINKS = {
-  "spk-la-k1": {
-    "K1_OM_EN.pdf": "raw-data/raw-specs/la/speakers/k-series/k1/K1_OM_EN.pdf",
-    "preset_guide_EN.pdf": "raw-data/raw-specs/la/references/preset-guide-en/preset-guide-en.pdf",
-  },
-};
-
-/**
- * 출처 문자열을 escape 하면서, PDF_SOURCE_LINKS 에 등록된 제품/파일명이면
- * 그 파일명 부분만 "#page=N" 링크로 바꾼다(N 은 같은 세미콜론 구간 안에서
- * 파일명 뒤에 처음 나오는 "p.NN" 값, 없으면 1페이지).
- */
-function linkifySource(source, speakerId) {
-  if (!source) return "";
-  const map = PDF_SOURCE_LINKS[speakerId];
-  if (!map) return esc(source);
-  return esc(source).replace(/[\w-]+\.pdf/g, fileName => {
-    const path = map[fileName];
-    if (!path) return fileName;
-    const idx = source.indexOf(fileName);
-    const nextSemi = source.indexOf(";", idx);
-    const segment = nextSemi === -1 ? source.slice(idx) : source.slice(idx, nextSemi);
-    const pageMatch = segment.match(/p\.\s*(\d+)/);
-    const page = pageMatch ? pageMatch[1] : "1";
-    return `<a href="${path}#page=${page}" target="_blank" rel="noopener">${fileName}</a>`;
-  });
 }
 
 /**
@@ -656,19 +700,22 @@ function presetGuideHTML(d) {
   // 상투구를 빼고 행마다 다른 부분+수치만)을 쓰고 원문은 호버 팝오버로 보여준다.
   // raw-data 원문은 그대로 두고 표시만 축약(CLAUDE.md 원문 보존 원칙).
   // acousticShort 가 없는 행은 원문을 그대로 써 정보 유실을 막는다.
-  const rows = p.rows.map(r => {
-    const short = r.acousticShort || r.acoustic;
-    const acousticCell = r.acousticShort && r.acousticShort !== r.acoustic
-      ? `<span class="acoustic-tip" tabindex="0">${wrapBreakable(short)}<span class="acoustic-tip__popover">${wrapBreakable(r.acoustic)}</span></span>`
-      : wrapBreakable(short);
-    return `
+  const rows = p.rows
+    .map(r => {
+      const short = r.acousticShort || r.acoustic;
+      const acousticCell =
+        r.acousticShort && r.acousticShort !== r.acoustic
+          ? `<span class="acoustic-tip" tabindex="0">${wrapBreakable(short)}<span class="acoustic-tip__popover">${wrapBreakable(r.acoustic)}</span></span>`
+          : wrapBreakable(short);
+      return `
     <div class="match-table__row match-table__row--static">
       <div class="match-table__cell match-table__cell--model">${wrapBreakable(tightenConfigText(r.config))}</div>
       <div class="match-table__cell match-table__cell--preset">${wrapBreakable(tightenConfigText(r.preset))}</div>
       <div class="match-table__cell">${acousticCell}</div>
     </div>`;
-  }).join("");
-  const mainNotesHTML = notesToggleBlockHTML(p.notes, p.source, "spk-preset-guide-notes", d.id);
+    })
+    .join("");
+  const mainNotesHTML = notesToggleBlockHTML(p.notes, p.source, "spk-preset-guide-notes");
 
   // 기본 접힘으로 시작한다 — 모달을 열자마자 긴 표가 화면을 차지하지 않게.
   // Matching Ratio·Delay Defaults·Mechanical Safety 는 이 함수 밖의 별도 섹션
@@ -693,13 +740,17 @@ function matchingRatioHTML(d) {
   if (!p || !Array.isArray(p.rows) || !p.rows.length) return "";
   const ratioRows = p.rows.filter(r => r.ratio || r.minLine);
   if (!ratioRows.length) return "";
-  const ratioRowsHTML = ratioRows.map(r => `
+  const ratioRowsHTML = ratioRows
+    .map(
+      r => `
       <div class="match-table__row match-table__row--static">
         <div class="match-table__cell match-table__cell--model">${wrapBreakable(tightenConfigText(r.config))}</div>
         <div class="match-table__cell">${r.ratio ? wrapBreakable(r.ratio) : "—"}</div>
         <div class="match-table__cell">${r.minLine ? wrapBreakable(r.minLine) : "—"}</div>
-      </div>`).join("");
-  const notesHTML = notesToggleBlockHTML(p.ratioNotes, p.ratioSource, "spk-matching-ratio-notes", d.id);
+      </div>`,
+    )
+    .join("");
+  const notesHTML = notesToggleBlockHTML(p.ratioNotes, p.ratioSource, "spk-matching-ratio-notes");
   return `<button type="button" class="section-label section-label--toggle" data-section-toggle="spk-matching-ratio" aria-expanded="false">Matching Ratio &amp; Minimum Line Length<span class="section-label__arrow">▸</span></button>
     <div data-section-toggle-body="spk-matching-ratio" hidden>
       <div class="match-table match-table--preset-guide-ratio">
@@ -725,17 +776,19 @@ function delayDefaultsHTML(d) {
   // r.items(엘리먼트별 값)은 각각 .delay-item 으로 감싼다 — CSS 가 border-left
   // 로 표 가로선과 끊긴 짧은 세로 구분선을 그린다("|" 문자 대신).
   const highlightPolarityFlip = html => html.replace(/−/g, '<span class="polarity-flip">−</span>');
-  const delayRowsHTML = dd.rows.map(r => {
-    const itemsHTML = (r.items || []).map(item =>
-      `<span class="delay-item">${highlightPolarityFlip(wrapBreakable(item))}</span>`
-    ).join("");
-    return `
+  const delayRowsHTML = dd.rows
+    .map(r => {
+      const itemsHTML = (r.items || [])
+        .map(item => `<span class="delay-item">${highlightPolarityFlip(wrapBreakable(item))}</span>`)
+        .join("");
+      return `
       <div class="match-table__row match-table__row--static">
         <div class="match-table__cell match-table__cell--preset">${wrapBreakable(r.combo)}</div>
         <div class="match-table__cell match-table__cell--delay-items">${itemsHTML}</div>
       </div>`;
-  }).join("");
-  const notesHTML = notesToggleBlockHTML(dd.notes, dd.source, "spk-delay-defaults-notes", d.id);
+    })
+    .join("");
+  const notesHTML = notesToggleBlockHTML(dd.notes, dd.source, "spk-delay-defaults-notes");
   return `<button type="button" class="section-label section-label--toggle" data-section-toggle="spk-delay-defaults" aria-expanded="false">Delay Defaults<span class="section-label__arrow">▸</span></button>
     <div data-section-toggle-body="spk-delay-defaults" hidden>
       <div class="match-table match-table--preset-guide-delay">
@@ -755,18 +808,20 @@ function delayDefaultsHTML(d) {
  * notes 항목은 문자열 또는 { text, subs? } — subs 가 있으면 중첩 목록으로
  * 그린다(한 항목에 여러 갈래가 나열될 때 문장으로 잇지 않도록).
  */
-function notesToggleBlockHTML(notes, source, toggleId, speakerId) {
+function notesToggleBlockHTML(notes, source, toggleId) {
   const noteItemHTML = n => {
     const item = typeof n === "string" ? { text: n } : n;
-    const subsHTML = Array.isArray(item.subs) && item.subs.length
-      ? `<ul class="footnote__sublist">${item.subs.map(s => `<li>${wrapBreakable(s)}</li>`).join("")}</ul>`
-      : "";
+    const subsHTML =
+      Array.isArray(item.subs) && item.subs.length
+        ? `<ul class="footnote__sublist">${item.subs.map(s => `<li>${wrapBreakable(s)}</li>`).join("")}</ul>`
+        : "";
     return `<li>${wrapBreakable(item.text)}${subsHTML}</li>`;
   };
-  const listHTML = Array.isArray(notes) && notes.length
-    ? `<ul class="footnote footnote--list">${notes.map(noteItemHTML).join("")}</ul>`
-    : "";
-  const srcHTML = source ? `<div class="footnote">출처: ${linkifySource(source, speakerId)}</div>` : "";
+  const listHTML =
+    Array.isArray(notes) && notes.length
+      ? `<ul class="footnote footnote--list">${notes.map(noteItemHTML).join("")}</ul>`
+      : "";
+  const srcHTML = source ? `<div class="footnote">출처: ${esc(source)}</div>` : "";
   if (!listHTML && !srcHTML) return "";
   return `<button type="button" class="section-label section-label--toggle section-label--toggle-sub" data-section-toggle="${toggleId}" aria-expanded="false">참고 사항<span class="section-label__arrow">▸</span></button>
       <div data-section-toggle-body="${toggleId}" hidden>
@@ -786,16 +841,22 @@ function mechanicalSafetyHTML(d) {
   const ms = d.mechanicalSafety;
   if (!ms) return "";
   // 값이 없는 셀은 "null" 문자열 대신 "—"로 (원문 Safe/Max limit 미기재가 흔함).
-  const cell = v => v != null ? wrapBreakable(v) : "—";
-  const rowsHTML = rows => (rows || []).map(r => `
+  const cell = v => (v != null ? wrapBreakable(v) : "—");
+  const rowsHTML = rows =>
+    (rows || [])
+      .map(
+        r => `
     <div class="match-table__row match-table__row--static">
       <div class="match-table__cell match-table__cell--model">${cell(r.config)}</div>
       <div class="match-table__cell">${cell(r.accessory)}</div>
       <div class="match-table__cell">${cell(r.safeLimit)}</div>
       <div class="match-table__cell">${cell(r.maxLimit)}</div>
-    </div>`).join("");
-  const tableHTML = (title, rowsArr) => rowsArr && rowsArr.length
-    ? `<div class="section-label section-label--sub">${esc(title)}</div>
+    </div>`,
+      )
+      .join("");
+  const tableHTML = (title, rowsArr) =>
+    rowsArr && rowsArr.length
+      ? `<div class="section-label section-label--sub">${esc(title)}</div>
       <div class="match-table match-table--mech-safety">
         <div class="match-table__row match-table__row--head">
           <div class="match-table__cell">Configuration</div>
@@ -805,9 +866,9 @@ function mechanicalSafetyHTML(d) {
         </div>
         <div class="match-table__body">${rowsHTML(rowsArr)}</div>
       </div>`
-    : "";
-  // [upload/*_v*.md 마스터 스키마 반영] Safety_Factor/Max_Wind_Load — 기존
-  // specRow/serializeSpecRows 헬퍼를 그대로 재사용해 Flown/Stacked 표 위에
+      : "";
+  // [기계 안전] Safety_Factor/Max_Wind_Load는 specRow/serializeSpecRows
+  // 헬퍼를 재사용해 Flown/Stacked 표 위에
   // 작은 spec-table 로 표시(둘 다 없으면 생략).
   const safetyFactorRows = serializeSpecRows([
     specRow("Safety Factor", ms.safetyFactor),
@@ -818,27 +879,31 @@ function mechanicalSafetyHTML(d) {
   const stackedHTML = tableHTML("Stacked / Other configurations", ms.stackedRows);
   // 경고문(원문 warning 아이콘 문단) — 참고 사항과 별개로, 항상 눈에 띄어야
   // 하는 항목이라 footnote--list 가 아니라 강조된 별도 리스트로 그린다.
-  const warningsHTML = Array.isArray(ms.warnings) && ms.warnings.length
-    ? `<ul class="mech-safety-warning">${ms.warnings.map(w => `<li>${wrapBreakable(w)}</li>`).join("")}</ul>`
-    : "";
+  const warningsHTML =
+    Array.isArray(ms.warnings) && ms.warnings.length
+      ? `<ul class="mech-safety-warning">${ms.warnings.map(w => `<li>${wrapBreakable(w)}</li>`).join("")}</ul>`
+      : "";
   const noteItemHTML = n => {
     const item = typeof n === "string" ? { text: n } : n;
-    const subsHTML = Array.isArray(item.subs) && item.subs.length
-      ? `<ul class="footnote__sublist">${item.subs.map(s => `<li>${wrapBreakable(s)}</li>`).join("")}</ul>`
-      : "";
+    const subsHTML =
+      Array.isArray(item.subs) && item.subs.length
+        ? `<ul class="footnote__sublist">${item.subs.map(s => `<li>${wrapBreakable(s)}</li>`).join("")}</ul>`
+        : "";
     return `<li>${wrapBreakable(item.text)}${subsHTML}</li>`;
   };
-  const notesListHTML = Array.isArray(ms.notes) && ms.notes.length
-    ? `<ul class="footnote footnote--list">${ms.notes.map(noteItemHTML).join("")}</ul>`
-    : "";
-  const sourceHTML = ms.source ? `<div class="footnote">출처: ${linkifySource(ms.source, d.id)}</div>` : "";
-  const notesToggleHTML = (notesListHTML || sourceHTML)
-    ? `<button type="button" class="section-label section-label--toggle section-label--toggle-sub" data-section-toggle="spk-mech-safety-notes" aria-expanded="false">참고 사항<span class="section-label__arrow">▸</span></button>
+  const notesListHTML =
+    Array.isArray(ms.notes) && ms.notes.length
+      ? `<ul class="footnote footnote--list">${ms.notes.map(noteItemHTML).join("")}</ul>`
+      : "";
+  const sourceHTML = ms.source ? `<div class="footnote">출처: ${esc(ms.source)}</div>` : "";
+  const notesToggleHTML =
+    notesListHTML || sourceHTML
+      ? `<button type="button" class="section-label section-label--toggle section-label--toggle-sub" data-section-toggle="spk-mech-safety-notes" aria-expanded="false">참고 사항<span class="section-label__arrow">▸</span></button>
       <div data-section-toggle-body="spk-mech-safety-notes" hidden>
         ${notesListHTML}
         ${sourceHTML}
       </div>`
-    : "";
+      : "";
   return `<button type="button" class="section-label section-label--toggle" data-section-toggle="spk-mech-safety" aria-expanded="false">Mechanical Safety<span class="section-label__arrow">▸</span></button>
     <div data-section-toggle-body="spk-mech-safety" hidden>
       ${safetyFactorHTML}
@@ -889,7 +954,8 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
   //   - 스택이 3줄 이상인 모델(K2)은 첫 "+" 뒤에서 <br> 로 강제 줄바꿈해 옆
   //     버튼도 2줄이 되게 한다. 스택 2개 이하면 <wbr> 로 브라우저에 맡긴다 —
   //     폭에 여유가 있으면 한 줄로 붙어 스택과 줄 수가 안 맞기 때문.
-  const wrapHyphenTokens = text => esc(text).replace(/[\w]+-[\w-]+/g, m => `<span class="modal__view-btn-sub-nowrap">${m}</span>`);
+  const wrapHyphenTokens = text =>
+    esc(text).replace(/[\w]+-[\w-]+/g, m => `<span class="modal__view-btn-sub-nowrap">${m}</span>`);
   const parenBodyHTML = paren => {
     const plusIdx = paren.indexOf("+ ");
     if (plusIdx === -1) return wrapHyphenTokens(paren);
@@ -935,12 +1001,13 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
   // 포함) d.viewStackLabels 로 지정한다. 스택이 1개 이하면 전부 가로 나열.
   const stackViews = views.filter(v => STACK_LABELS.includes(v.label));
   const restViews = views.filter(v => !STACK_LABELS.includes(v.label));
-  const viewSwitchHTML = stackViews.length > 1
-    ? `<div class="modal__view-switch modal__view-switch--grouped" role="group" aria-label="이미지 보기 선택">
+  const viewSwitchHTML =
+    stackViews.length > 1
+      ? `<div class="modal__view-switch modal__view-switch--grouped" role="group" aria-label="이미지 보기 선택">
         <div class="modal__view-switch-stack">${stackViews.map(viewBtnHTML).join("")}</div>
         ${restViews.map(viewBtnHTML).join("")}
       </div>`
-    : `<div class="modal__view-switch" role="group" aria-label="이미지 보기 선택">
+      : `<div class="modal__view-switch" role="group" aria-label="이미지 보기 선택">
         ${views.map(viewBtnHTML).join("")}
       </div>`;
   const media = views.length
@@ -951,9 +1018,10 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
         ${viewSwitchHTML}
       </div>`
     : "";
-  const M = MFR[d.mk], color = M.color;
+  const M = MFR[d.mk],
+    color = M.color;
   const head = `<div class="modal__head">
-      <div class="eyebrow"><span class="eyebrow__brand" style="color:${color}">${esc(M.name)}</span> · ${d.throwCat ? esc(d.throwCat) + ' · ' : ''}${esc(d.series)}</div>
+      <div class="eyebrow"><span class="eyebrow__brand" style="color:${color}">${esc(M.name)}</span> · ${d.throwCat ? esc(d.throwCat) + " · " : ""}${esc(d.series)}</div>
       <div class="modal__head-row">
         <div class="modal__title">${esc(d.name)}</div>
         ${titleTagsHTML(d, "modal__title-tags", "modal__title-tag")}
@@ -981,11 +1049,7 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
   // 치수·무게·IP·커넥터를 "General" 한 섹션에 모은다 — 나누면 섹션당 항목이
   // 1~2개뿐이라 실익이 없다.
   const footnotes = [];
-  const generalRows = [
-    ...weightDimsIpRow(d, footnotes),
-    ...connectorRows(d.connectors),
-    paComPinoutRow(d.paComPinout),
-  ];
+  const generalRows = [...weightDimsIpRow(d, footnotes), ...connectorRows(d.connectors), paComPinoutRow(d.paComPinout)];
   const footnoteHTML = footnotes.length
     ? `<div class="footnote">${footnotes.map((n, i) => `<div>${i + 1}. ${esc(n)}</div>`).join("")}</div>`
     : "";
@@ -995,7 +1059,7 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
     ? `<p class="hint-text" style="margin-bottom:12px">스펙 조사 전입니다 — 현재는 제조사 홈페이지 이미지만 등록돼 있습니다.</p>`
     : "";
   const body = `${media}
-    <div class="modal__body" id="modal-body-main">
+    <div class="modal__body">
       ${pendingNote}
       ${systemElementsHTML(relatedAccessories)}
       ${specSectionHTML("Acoustical", acousticalRows)}

@@ -4,24 +4,18 @@
  *
  * 구성 요소:
  *   dsps.data.js   — 데이터 (브랜드별 파일의 배럴)
+ *   dsps.detail.js — 공통 상세 provider
  *   dsps.schema.js — 필터/정렬 정의
  *   dsps.view.js   — 카드/모달 마크업 (순수 함수)
  */
 import { esc } from "../../core/dom.js";
 import { createDomainTab } from "../../ui/domain-tab.js";
-import { openModalWith } from "../../ui/modal.js";
-import { wireChipPanes } from "../../ui/split-view.js";
-import { setItemRoute } from "../../core/router.js";
+import { openDetailModal } from "../../ui/relation-navigation.js";
 
 import { DSPS } from "./dsps.data.js";
+import { initDspDetailProvider } from "./dsps.detail.js";
 import { dspsSchema, DSP_MFR, DSP_MK_ORDER } from "./dsps.schema.js";
-import { cardHTML as dspCardHTML, modalBodyHTML as dspModalBodyHTML } from "./dsps.view.js";
-
-// DSP 모달 안의 소프트웨어 칩 클릭 → Split View pane 2 에 소프트웨어 상세.
-// 소프트웨어의 "순수 뷰 함수"와 색상 맵만 import (controller 미참조).
-import { SOFTWARE } from "../software/software.data.js";
-import { SW_MFR } from "../software/software.schema.js";
-import { modalBodyHTML as swModalBodyHTML } from "../software/software.view.js";
+import { cardHTML as dspCardHTML } from "./dsps.view.js";
 
 // category 필드가 없는 DSP(현재 데이터에는 없지만 향후 대비)는 "DSP"로 묶는다.
 const dspCategoryOf = d => d.category || "DSP";
@@ -46,23 +40,12 @@ function dspsGroupBy(state) {
  * @returns {boolean} id 가 유효해 모달을 열었으면 true (라우터 딥링크 판정용)
  */
 function openDspModal(id) {
-  const d = DSPS.find(x => x.id === id);
-  if (!d) return false;
-  const { color, head, body } = dspModalBodyHTML(d, (sid) => { const s = SOFTWARE.find(x => x.id === sid); return s ? s.name : sid; });
-  openModalWith(color, head, body);
-  // 소프트웨어 칩 → Split View pane 2 에 소프트웨어 상세.
-  wireChipPanes("software-id", sid => {
-    const s = SOFTWARE.find(x => x.id === sid);
-    if (!s) return null;
-    const { head, body } = swModalBodyHTML(s, (did) => { const d = DSPS.find(x => x.id === did); return d ? d.model : did; });
-    return { headHTML: head, paneColor: SW_MFR[s.mfr].color, bodyHTML: body };
-  });
-  setItemRoute(id);
-  return true;
+  return openDetailModal(id, "dsp");
 }
 
 /** DSPs 도메인을 라우터에 등록 — main.js 가 호출하는 유일한 공개 API */
 export function initDspsDomain() {
+  initDspDetailProvider();
   createDomainTab({
     key: "dsps",
     label: "DSP",

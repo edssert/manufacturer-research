@@ -40,7 +40,7 @@ export const LA_A_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/A10_Focus_v1.6.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 22,
     "transducers": "LF: 1 × 10″ · HF: 1 × 2.5″",
@@ -140,8 +140,8 @@ export const LA_A_SERIES = [
       "ampIds": []
     },
     "watt": 296,
-    // [upload/A10_Focus_v1.6.md 마스터 스키마 반영] Preset Guide/Matching
-    // Ratio/Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching
+    // Ratio/Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "A10 Focus line source", "preset": "[A10]", "acoustic": "66 Hz - 20 kHz", "acousticShort": "66 Hz - 20 kHz" },
@@ -218,7 +218,7 @@ export const LA_A_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/A10i_Focus_v1.6.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 19,
     "transducers": "LF: 1 × 10″ · HF: 1 × 2.5″",
@@ -320,8 +320,8 @@ export const LA_A_SERIES = [
       "ampIds": []
     },
     "watt": 296,
-    // [upload/A10i_Focus_v1.6.md 마스터 스키마 반영] Preset Guide/Matching
-    // Ratio/Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching
+    // Ratio/Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "A10i Focus line source", "preset": "[A10]", "acoustic": "66 Hz - 20 kHz", "acousticShort": "66 Hz - 20 kHz" },
@@ -400,7 +400,7 @@ export const LA_A_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/A10_Wide_v1.6.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 20,
     "transducers": "LF: 1 × 10″ · HF: 1 × 2.5″",
@@ -500,8 +500,8 @@ export const LA_A_SERIES = [
       "ampIds": []
     },
     "watt": 296,
-    // [upload/A10_Wide_v1.6.md 마스터 스키마 반영] Preset Guide/Matching
-    // Ratio/Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching
+    // Ratio/Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "A10 Wide line source", "preset": "[A10]", "acoustic": "67 Hz - 20 kHz", "acousticShort": "67 Hz - 20 kHz" },
@@ -578,7 +578,7 @@ export const LA_A_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/A10i_Wide_v1.7.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 18,
     "transducers": "LF: 1 × 10″ · HF: 1 × 2.5″",
@@ -680,8 +680,8 @@ export const LA_A_SERIES = [
       "ampIds": []
     },
     "watt": 296,
-    // [upload/A10i_Wide_v1.7.md 마스터 스키마 반영] Preset Guide/Matching
-    // Ratio/Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching
+    // Ratio/Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "A10i Wide line source", "preset": "[A10]", "acoustic": "67 Hz - 20 kHz", "acousticShort": "67 Hz - 20 kHz" },
@@ -760,7 +760,7 @@ export const LA_A_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/A15_Focus_v1.7.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 35,
     "transducers": "LF: 1 × 15″ · HF: 1 × 3″",
@@ -861,8 +861,8 @@ export const LA_A_SERIES = [
       "ampIds": []
     },
     "watt": 446,
-    // [upload/A15_Focus_v1.7.md 마스터 스키마 반영] Preset Guide/Matching
-    // Ratio/Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching
+    // Ratio/Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "A15 Focus line source", "preset": "[A15]", "acoustic": "41 Hz - 20 kHz", "acousticShort": "41 Hz - 20 kHz" },
@@ -945,9 +945,9 @@ export const LA_A_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/A15i_Focus_v1.6.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
-    // [upload/A15i_Focus_v1.6.md 마스터 스키마 재검증 — 값 정정] 33kg → 32kg
+    // 33kg → 32kg
     // (OM 스펙 표 기준; AE_EN.docx의 33kg과 소스 간 충돌 확인, OM 우선 원칙).
     "weight": 32,
     "transducers": "LF: 1 × 15″ · HF: 1 × 3″",
@@ -1049,8 +1049,8 @@ export const LA_A_SERIES = [
       "ampIds": []
     },
     "watt": 446,
-    // [upload/A15i_Focus_v1.6.md 마스터 스키마 반영] Preset Guide/Matching
-    // Ratio/Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching
+    // Ratio/Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "A15i Focus line source", "preset": "[A15]", "acoustic": "41 Hz - 20 kHz", "acousticShort": "41 Hz - 20 kHz" },
@@ -1125,7 +1125,7 @@ export const LA_A_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/A15_Wide_v1.6.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 33,
     "transducers": "LF: 1 × 15″ · HF: 1 × 3″",
@@ -1225,8 +1225,8 @@ export const LA_A_SERIES = [
       "ampIds": []
     },
     "watt": 446,
-    // [upload/A15_Wide_v1.6.md 마스터 스키마 반영] Preset Guide/Matching
-    // Ratio/Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching
+    // Ratio/Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "A15 Wide line source", "preset": "[A15]", "acoustic": "42 Hz - 20 kHz", "acousticShort": "42 Hz - 20 kHz" },
@@ -1306,7 +1306,7 @@ export const LA_A_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/A15i_Wide_v1.6.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 29,
     "transducers": "LF: 1 × 15″ · HF: 1 × 3″",
@@ -1408,8 +1408,8 @@ export const LA_A_SERIES = [
       "ampIds": []
     },
     "watt": 446,
-    // [upload/A15i_Wide_v1.6.md 마스터 스키마 반영] Preset Guide/Matching
-    // Ratio/Delay Defaults/Mechanical Safety 전체 신규 반영.
+    // [프리셋] Preset Guide/Matching
+    // Ratio/Delay Defaults/Mechanical Safety 필드를 함께 관리.
     "presets": {
       "rows": [
         { "config": "A15i Wide line source", "preset": "[A15]", "acoustic": "42 Hz - 20 kHz", "acousticShort": "42 Hz - 20 kHz" },

@@ -5,11 +5,12 @@
  * 관련 CSS: css/components/card.css, css/components/spec-table.css
  */
 import { esc, getViews } from "../../core/dom.js";
+import { configurationsBySpeakerTableHTML } from "./amplifiers.configurations.js";
 import { AMP_MFR } from "./amplifiers.schema.js";
 
 /* ── Total Watt 게이지 스케일 — speakers.view.js 의 SPL_RANGE/setSplRange/
    splPct 와 동일한 패턴을 재사용해 스피커 탭의 SPL 바와 같은 시각 언어로
-   앰프의 총 출력을 카드에서 한눈에 비교할 수 있게 한다(사용자 요청).
+   앰프의 총 출력을 카드에서 한눈에 비교할 수 있게 한다.
    Rack 앰프(LA-RAK III/II AVB)는 채널당 4Ω 정격이 없어
    8Ω/2.7Ω 기준 총량(62,400W/40,000W)을 대신 쓰는데, 이 값이 일반 앰프의
    4Ω 기준 값(최대 17,600W)보다 훨씬 커서 같은 스케일이면 일반 앰프 바가
@@ -237,167 +238,6 @@ function specRow(label, val, full) {
 }
 
 /**
- * 설정 표를 스피커 기준으로 렌더링 — 왼쪽 열이 앰프 모델이 아니라 "이 앰프로
- * 어떤 스피커를 어떤 모드/프리셋으로 몇 대까지 구동해 몇 dB 를 내는지"의 스피커
- * 이름이다. 스피커 모달의 Amplifier Matching 과 같은 6열 구조를 재사용한다.
- * 앰프 자체 configs 가 비어도 cross-ref 가 스피커 쪽 데이터에서 역으로 구성해
- * 준다(LA1.16i).
- *
- * 스피커 1개당 모드×프리셋 조합이 여러 행 나올 수 있어(SE/BTL × 프리셋 3 = 6행)
- * 대표 행(Max/amp 최대) 1개만 표시하고 나머지는 ▸ 로 펼친다. 클릭 영역은 분리
- * 한다 — 이름 셀은 pane2 이동, ▸ 버튼은 펼치기만.
- * @param {{speakerId:string, speakerName:string, mode:string, preset:string|null, perCh:number|null, total:number|null, spl:number|null}[]} rows
- * @returns {string}
- */
-function configsBySpeakerTableHTML(rows) {
-  if (!rows || !rows.length) return `<div class="data-empty-note">설정 데이터가 없습니다.</div>`;
-
-  // 스피커 id 순으로 등장 순서를 보존하며 그룹핑
-  const groups = [];
-  const bySid = new Map();
-  rows.forEach(r => {
-    if (!bySid.has(r.speakerId)) { const g = { speakerId: r.speakerId, speakerName: r.speakerName, rows: [] }; bySid.set(r.speakerId, g); groups.push(g); }
-    bySid.get(r.speakerId).rows.push(r);
-  });
-
-  // 이름이 유사한 변형 모델은 한 행으로 합쳐 "SB18(IIi)"/"A10(i) Focus"/
-  // "SB10(r/i)" 식으로 표기한다. 이름 유사성 패턴 세 가지:
-  //  1) 접두사 — 짧은 이름이 긴 이름의 앞부분 (SB18 → SB18 IIi, K3 → K3i,
-  //     Soka → Soka inWall)
-  //  2) "i" 중간 삽입 — "i" 하나만 빼면 같아짐 (A10 Focus → A10i Focus).
-  //     "i"가 끝이 아니라 중간에 끼어 접두사 관계가 아니다.
-  //  3) 끝글자 r↔i — 길이가 같고 마지막 글자만 다름 (SB10r ↔ SB10i, X4r ↔ X4i)
-  // **병합 조건은 이름이 아니라 rowsSignature 완전 일치다.** 이름 패턴은 후보를
-  // 좁힐 뿐이다 — 특히 r/i 페어는 i버전에만 LA1.16i 매칭이 추가돼 데이터가 다른
-  // 경우가 많고, 그러면 병합되지 않고 별개 행으로 남는 게 맞다.
-  const rowsSignature = g => [...g.rows]
-    .sort((a, b) => (b.total || 0) - (a.total || 0))
-    .map(r => `${r.mode || ""}|${r.preset || ""}|${r.perCh ?? ""}|${r.total ?? ""}|${r.spl ?? ""}`)
-    .join(";");
-  // a에서 "i" 문자 하나만 제거하면 b와 같아지는지 확인하고, 그렇다면
-  // 그 "i"가 삽입된 위치(인덱스)를 반환한다. 아니면 null.
-  function findSingleIInsertionIndex(shorter, longer) {
-    if (longer.length !== shorter.length + 1) return null;
-    let diffAt = -1;
-    for (let k = 0; k < longer.length; k++) {
-      if (shorter[k - (diffAt === -1 ? 0 : 1)] !== longer[k]) {
-        if (diffAt !== -1) return null; // 차이가 두 곳 이상이면 불일치
-        diffAt = k;
-      }
-    }
-    if (diffAt === -1) diffAt = shorter.length; // 맨 끝에 삽입된 경우
-    if (longer[diffAt] !== "i") return null;
-    return diffAt;
-  }
-  // 길이가 같고 마지막 한 글자만 "r"↔"i" 로 다른지 확인한다 (SB10r/SB10i 등).
-  function isTrailingRIVariant(a, b) {
-    if (a.length !== b.length || a.length === 0) return false;
-    if (a.slice(0, -1) !== b.slice(0, -1)) return false;
-    const lastA = a.slice(-1).toLowerCase(), lastB = b.slice(-1).toLowerCase();
-    return (lastA === "r" && lastB === "i") || (lastA === "i" && lastB === "r");
-  }
-  const merged = [];
-  const consumed = new Set();
-  groups.forEach((g, i) => {
-    if (consumed.has(i)) return;
-    // 이 그룹과 병합 가능한 파트너(이름이 접두사 관계이거나 "i" 삽입
-    // 관계, 또는 끝글자 r↔i 치환 관계 + 설정 데이터 동일)를 찾는다.
-    // [오탐 방지] 전체 스피커 이름을 전수 검증한 결과, 순수
-    // startsWith 접두사 조건만으로는 "K1"↔"K1-SB"(라인어레이 vs 전용
-    // 서브우퍼), "L1"↔"L1D", "L2"↔"L2D", "Syva"↔"Syva Low"/"Syva Sub"
-    // 처럼 실제로는 전혀 다른 별개 제품인데 우연히 접두사 관계라는 이유로
-    // 병합 후보가 되는 경우가 발견됐다. 지금은 rowsSignature(설정 데이터)
-    // 완전 일치 조건이 최종 방어선 역할을 하지만, 데이터가 우연히 겹치는
-    // 극단적 케이스가 생기면 서로 다른 제품이 잘못 합쳐질 위험이 있다.
-    // 그래서 접두사 관계는 "뒤에 남는 나머지 부분이 i-버전 표기(순수
-    // 'i', 또는 'IIi'처럼 끝이 'i'로 끝나는 리비전 표기)일 때만" 허용
-    // 하도록 좁힌다 — K3/K3i, SB18/SB18 IIi는 유지되고 K1/K1-SB,
-    // L1/L1D, L2/L2D, Syva/Syva Low, Syva/Syva Sub 는 제외된다.
-    // "Soka"/"Soka inWall"만 예외로 별도 허용(설치 변형, 끝이 "i"가
-    // 아닌 "inWall"이지만 기존에 이미 확인된 정상 케이스).
-    const j = groups.findIndex((g2, i2) => {
-      if (i2 === i || consumed.has(i2)) return false;
-      const a = g.speakerName, b = g2.speakerName;
-      const [pShort, pLong] = a.length <= b.length ? [a, b] : [b, a];
-      const prefixSuffix = pLong.startsWith(pShort) ? pLong.slice(pShort.length).trim() : null;
-      const isPrefix = prefixSuffix !== null && (prefixSuffix === "" || /i$/.test(prefixSuffix) || prefixSuffix === "inWall");
-      const [shorter, longer] = a.length <= b.length ? [a, b] : [b, a];
-      const isIInsertion = a.length !== b.length && findSingleIInsertionIndex(shorter, longer) !== null;
-      const isRIVariant = isTrailingRIVariant(a, b);
-      return (isPrefix || isIInsertion || isRIVariant) && rowsSignature(g2) === rowsSignature(g);
-    });
-    if (j === -1) { merged.push(g); return; }
-    consumed.add(i); consumed.add(j);
-    const g2 = groups[j];
-    // 짧은 쪽을 기본형(대표 id·표시 이름의 앞부분)으로 삼는다.
-    const [shortG, longG] = g.speakerName.length <= g2.speakerName.length ? [g, g2] : [g2, g];
-    // 병합된 행에서도 기본형/변형 각각의 상세로 들어갈 수 있어야 하므로 이름을
-    // 파트로 쪼갠다 — 각 파트는 렌더링 시 서로 다른 data-speaker-id 를 갖는다.
-    let nameParts;
-    if (longG.speakerName.startsWith(shortG.speakerName)) {
-      // 접두사 관계: 뒤에 붙는 나머지를 그대로 괄호로 표기 (K3 → K3(i))
-      const suffix = longG.speakerName.slice(shortG.speakerName.length).trim();
-      nameParts = suffix
-        ? [{ text: shortG.speakerName, id: shortG.speakerId }, { text: `(${suffix})`, id: longG.speakerId }]
-        : [{ text: shortG.speakerName, id: shortG.speakerId }];
-    } else if (isTrailingRIVariant(shortG.speakerName, longG.speakerName)) {
-      // 끝글자 r↔i: "SB10r + SB10i → SB10(r/i)". 길이가 같아 shortG/longG 로는
-      // 어느 쪽이 r 인지 알 수 없으므로 실제 접미사 문자로 판별한다.
-      const base = shortG.speakerName.slice(0, -1);
-      const rId = shortG.speakerName.slice(-1).toLowerCase() === "r" ? shortG.speakerId : longG.speakerId;
-      const iId = shortG.speakerName.slice(-1).toLowerCase() === "i" ? shortG.speakerId : longG.speakerId;
-      nameParts = [{ text: base, id: null }, { text: "(r", id: rId }, { text: "/i)", id: iId }];
-    } else {
-      // "i" 중간 삽입: "A10 Focus + A10i Focus → A10(i) Focus". 앞뒤로 잘린
-      // 기본형 텍스트는 같은 speakerId 라 group 으로 묶어 클릭 영역 하나로 쓴다.
-      const insertAt = findSingleIInsertionIndex(shortG.speakerName, longG.speakerName);
-      const before = shortG.speakerName.slice(0, insertAt);
-      const after = shortG.speakerName.slice(insertAt);
-      nameParts = [
-        { text: before, id: shortG.speakerId, group: "short" },
-        { text: "(i)", id: longG.speakerId, group: "long" },
-        { text: after, id: shortG.speakerId, group: "short" }
-      ];
-    }
-    merged.push({ speakerId: shortG.speakerId, nameParts, rows: g.rows });
-  });
-
-  const subCell = r => `<div class="match-table__cell match-table__cell--model"></div><div class="match-table__cell match-table__cell--mode">${r.mode ? esc(r.mode) : "—"}</div><div class="match-table__cell match-table__cell--preset">${r.preset ? esc(r.preset) : "—"}</div><div class="match-table__cell">${r.perCh != null ? r.perCh : "—"}</div><div class="match-table__cell">${r.total != null ? r.total : "—"}</div><div class="match-table__cell">${r.spl != null ? r.spl + " dB" : "—"}</div>`;
-
-  const body = merged.map((g, gi) => {
-    const sorted = [...g.rows].sort((a, b) => (b.total || 0) - (a.total || 0));
-    const rep = sorted[0];
-    const rest = sorted.slice(1);
-    const groupId = `amp-cfg-${gi}`;
-    const toggleBtn = rest.length ? `<button type="button" class="match-table__toggle-btn" data-toggle-group="${groupId}" aria-expanded="false" aria-label="설정 ${rest.length}개 더 보기">+${rest.length}</button>` : "";
-    // rep.speakerName 은 병합 전 원본 이름이라 병합된 그룹에서는 못 쓴다 —
-    // 그룹 레벨 이름(g.nameParts)이 있으면 파트별로 다른 data-speaker-id 를
-    // 가진 span 으로 렌더링한다. 행 전체의 data-speaker-id(나머지 셀용)는 대표
-    // (g.speakerId, 기본형)로 유지 — 이름 span 자체는 이벤트 버블링으로
-    // 행 클릭 핸들러도 같이 타므로, controller 에서 이름 span 클릭 시
-    // 그 span 의 data-speaker-id 를 우선 사용하도록 처리해야 한다.
-    const nameHTML = g.nameParts
-      ? `<span class="match-table__model-name match-table__model-name--split">${g.nameParts.map(p => `<span class="match-table__model-name-part" data-speaker-id="${p.id}">${esc(p.text)}</span>`).join("")}</span>`
-      : `<span class="match-table__model-name" data-speaker-id="${g.speakerId}">${esc(g.speakerName)}</span>`;
-    const repRow = `<div class="match-table__row match-table__row--clickable" data-speaker-id="${g.speakerId}"><div class="match-table__cell match-table__cell--model">${nameHTML}${toggleBtn}</div><div class="match-table__cell match-table__cell--mode">${rep.mode ? esc(rep.mode) : "—"}</div><div class="match-table__cell match-table__cell--preset">${rep.preset ? esc(rep.preset) : "—"}</div><div class="match-table__cell">${rep.perCh != null ? rep.perCh : "—"}</div><div class="match-table__cell">${rep.total != null ? rep.total : "—"}</div><div class="match-table__cell">${rep.spl != null ? rep.spl + " dB" : "—"}</div></div>`;
-    if (!rest.length) return repRow;
-    const restRows = rest.map(r => `<div class="match-table__row match-table__row--sub" data-toggle-member="${groupId}" hidden>${subCell(r)}</div>`).join("");
-    return repRow + restRows;
-  }).join("");
-
-  // match-table--amp-view 변경자 — 이 표(앰프 모달의 Configurations, "이
-  // 앰프로 어떤 스피커를 구동하는가")는 스피커 모달의 Amplifier Matching
-  // 표("이 스피커를 어떤 앰프로 구동하는가")와 6열 구조·클래스를 공유하지만,
-  // 왼쪽 열의 실제 콘텐츠가 반대다 — 여기서는 앰프 모델명(짧다, 예:
-  // "LA1.16i")이 아니라 스피커 모델명(길다, 예: "SB10i", "Syva Low" 등)이
-  // 들어간다. 공유 컬럼 비율(spec-table.css .match-table__row)은 앰프 모델
-  // 폭 기준으로 좁게 잡혀 있어 스피커 이름이 "S...", "5..."처럼 잘리는
-  // 문제가 있었다 — 이 변경자로 앰프 쪽만 열 너비를 독립적으로 재정의한다
-  // (spec-table.css 의 .match-table--amp-view 규칙 참고).
-  return `<div class="match-table match-table--toggleable match-table--amp-view"><div class="match-table__row match-table__row--head"><div class="match-table__cell">Speaker</div><div class="match-table__cell">Mode</div><div class="match-table__cell">Preset</div><div class="match-table__cell">Links/ch</div><div class="match-table__cell">Max/amp</div><div class="match-table__cell">Max SPL</div></div><div class="match-table__body">${body}</div></div>`;
-}
-
-/**
  * 상세 스펙 섹션 1개 HTML — 제목(section-label) + spec-table.
  * rows 가 전부 빈 문자열(specRow 가 값 없어 생략한 경우)이면 섹션 자체를
  * 통째로 생략한다 — d&b 등 이 필드들이 없는 앰프에서 빈 제목만 남지 않게.
@@ -503,7 +343,7 @@ function rackBodyHTML(a, media, physicalRowsExtra, relatedAccessories) {
   const cableRows = rackRowsHTML(rack.cables);
 
   return `${media}
-    <div class="modal__body" id="modal-body-main">
+    <div class="modal__body">
       ${systemElementsHTML(relatedAccessories)}
       ${a.notes ? `<p class="modal__notes modal__notes--after-toggle">${esc(a.notes)}</p>` : ""}
       <p class="section-label">General</p>
@@ -560,9 +400,8 @@ export function modalBodyHTML(a, resolveSpeakerName, speakerIds, configsBySpeake
       <div class="modal__title">${esc(a.model)}</div>
       <button class="modal__close" data-modal-close aria-label="닫기"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>`;
-  // 상세 스펙 섹션들 — mains/io/output/dsp/ecosystem 등은 L-Acoustics
-  // LA1.16i 부터 도입된 신규 필드(v1.1)라 d&b 등 기존 앰프에는 없을 수
-  // 있다. detailSection()이 빈 rows 는 섹션째로 생략하므로, 필드가 없는
+  // 상세 스펙의 mains/io/output/dsp/ecosystem 등은 선택 필드다.
+  // detailSection()이 빈 rows는 섹션째로 생략하므로, 필드가 없는
   // 앰프의 모달에는 자연스럽게 General/Configurations/Matched Speakers만
   // 남고 나머지 섹션은 나타나지 않는다.
   const mains = a.mains || {};
@@ -709,14 +548,14 @@ export function modalBodyHTML(a, resolveSpeakerName, speakerIds, configsBySpeake
   }
 
   const body = `${media}
-    <div class="modal__body" id="modal-body-main">
+    <div class="modal__body">
       ${a.notes ? `<p class="modal__notes">${esc(a.notes)}</p>` : ""}
       <div class="spec-table">
         ${generalRows}
       </div>
       <button type="button" class="section-label section-label--toggle" style="margin-top:20px" data-section-toggle="amp-configs" aria-expanded="false">Configurations<span class="section-label__arrow">▸</span></button>
       <div data-section-toggle-body="amp-configs" hidden>
-        ${configsBySpeakerTableHTML(configsBySpeaker || [])}
+        ${configurationsBySpeakerTableHTML(configsBySpeaker || [])}
       </div>
       ${detailSection("Power", mainsRows)}
       ${detailSection("Connections & Output", ioRows)}

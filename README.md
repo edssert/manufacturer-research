@@ -1,94 +1,169 @@
 # Manufacturer // Research (MR)
 
-L-Acoustics · d&b audiotechnik · Meyer Sound 의 스피커/앰프/DSP/소프트웨어/
-액세서리 사양을 검색·비교하고 앰프 매칭을 확인하는 리서치 도구.
-빌드 도구 없는 순수 Vanilla JS(ES Modules) 단일 페이지 앱이다.
+L-Acoustics, d&b audiotechnik, Meyer Sound의 스피커·앰프·DSP·소프트웨어·
+액세서리 사양을 검색하고 관계를 비교하는 정적 웹 앱이다. 브라우저 런타임은
+프레임워크 없는 Vanilla JavaScript ES modules이며, 서버나 데이터베이스가
+필요하지 않다.
 
-> **AI 에이전트 필독**: 클로드 지침(CLAUDE.md)만으로 정보가 부족하면
-> **반드시 이 README 에서 먼저 찾아 읽고** 작업하라. 여기에도 없는
-> 설정/규칙을 새로 확정했다면 **스스로 이 README 에 추가(업데이트)**
-> 해 둘 것.
+배포 전에는 빌드 단계가 있다. 이 단계는 소스를 번들링·변환·축소하지 않고,
+`index.html`의 스크립트 엔트리에서 도달 가능한 모듈과 허용된 정적 자산만
+`dist/`에 복사해 검증 가능한 배포 artifact를 만든다.
 
-## 실행·테스트
+## 빠른 시작
 
-- 실행: 정적 서버로 루트 서빙 — `npx serve .` 후 브라우저 접속.
-- 테스트: `npm test` (amp 데이터 무결성 → CSS 클래스 감사 → jsdom 스모크).
-  최초 1회 `npm i` 로 jsdom 설치.
+필요 환경은 Node.js `24.18 이상, 25 미만`과 npm `11.16 이상, 12 미만`이다. CI의 정확한 Node.js 버전은 [`.node-version`](./.node-version)에 고정되어 있다.
 
-## 문서 지도 (역할 분담)
-
-| 문서 | 대상 | 내용 |
-|---|---|---|
-| `README.md` (이 파일) | 전원/AI | 프로젝트 개요·규칙·설정의 최상위 참조점 |
-| `CLAUDE.md` | AI | 행동 원칙 + 절대 규칙만 |
-| `docs/ARCHITECTURE.md` | 개발자 | 기술 아키텍처 상세 (라우팅·모듈 구조·성능) |
-| `docs/ARCHITECTURE_GUIDE.md` | 비개발자 | 쉬운 구조 안내 |
-| `docs/CHANGELOG.md` | 일반 | 쉬운 버전 업데이트 기록 |
-| `docs/CHANGELOG-dev-detailed.md` | 개발자 | 파일/함수 단위 상세 변경 이력 |
-| `docs/TODO.md` | AI | 세션 인수인계 임시 기록장 (평소 비움) |
-
-## 폴더 구조 (요약)
-
-```
-index.html            진입 HTML
-public/js/            앱 코드 — core(라우터·필터엔진) / ui(모달·그리드) /
-                      domains/<도메인>/{controller,schema,view,data}
-public/css/           tokens → … → components 순 로드
-public/assets/        웹폰트·제품 이미지(webp)
-public/tests/         node 테스트 3종
-raw-data/raw-specs/   제조사 원문 스펙 보관(md + 원본 pdf/docx)
+```powershell
+npm ci
+npm run verify
+npm run build
+npm run preview
 ```
 
-제품 사진 **원본은 repo에 두지 않는다** — OneDrive
-`03.Resources\MR-Raw-Assets\` 에만 보관하고, repo 에는 `public/assets/` 의
-최종 가공본(투명 PNG)만 둔다.
+미리보기 주소는
+`http://127.0.0.1:4173/manufacturer-research/`이다. `preview`는 소스가
+아니라 `dist/`를 서빙하므로 먼저 `npm run build`를 실행해야 한다.
 
-상세 구조·데이터 흐름·URL 라우팅 설계는 `docs/ARCHITECTURE.md` 참고.
+### 주요 명령
 
-## 핵심 동작 규칙 (프로젝트 고유)
+| 명령                        | 역할                                                             |
+| --------------------------- | ---------------------------------------------------------------- |
+| `npm test`                  | 단위·데이터·관계·감사·보안·UI 테스트 실행                        |
+| `npm run lint`              | ESLint 오류 및 경고 검사                                         |
+| `npm run format:check`      | 프로젝트 설정과 핵심 소스의 Prettier 형식 검사                   |
+| `npm run typecheck`         | JavaScript의 TypeScript `checkJs` 검사                           |
+| `npm run test:data`         | 데이터 계약과 출처 거버넌스 검사                                 |
+| `npm run test:audit:assets` | 런타임 자산 참조·누락·고아·완전 중복 baseline 검사               |
+| `npm run build`             | 결정적 `dist/` artifact 생성 및 즉시 검증                        |
+| `npm run verify:dist`       | 기존 `dist/`의 경계·파일·해시·import 그래프 검사                 |
+| `npm run verify`            | lint, 형식, 타입, 전체 테스트, 반복 빌드, `dist/` 검증 통합 실행 |
 
-1. **원문 스펙 보관 (필수)** — 신규 제품 스펙 수신 시 두 가지를 모두 해야
-   완료다: ① `raw-data/raw-specs/<제조사>/<카테고리>/…/<모델>.md` 에 원문
-   그대로 저장(원본 pdf/docx 파일도 같은 폴더에 백업), ② 해당 도메인
-   `data.js` 에 구조화 반영. md 옆에 원본 파일이 함께 있으면 제품 전용
-   폴더 `<모델>/` 로 묶는다(원본 없는 역재구성 md 는 폴더화하지 않음).
-   폴더 이동 시 다른 파일 주석의 경로 문자열도 함께 갱신.
-2. **원본 이미지는 repo 밖(OneDrive)에 보관 (필수)** — 제품 사진 원본은
-   git 에 넣지 않는다. 보관처는 OneDrive
-   `03.Resources\MR-Raw-Assets\<제조사>\…` 하나이며, 출처별로
-   `doc-center-zips/`(문서센터 ZIP 원본) · `doc-center-extracted/`(그
-   압축해제본) · `web/`(사이트 대표사진·오버뷰 뷰) 로 나눈다. 구조·수집
-   방법·판별기준은 그 폴더의 `README.md`. repo 에는 **최종 가공본(투명 PNG,
-   누끼·그림자 제거)** 만 `public/assets/img/…` 에 둔다.
-3. **출처 기록 + 교차검증 필수** — 스펙 수치는 출처를 md 에 남기고, 출처
-   간 불일치는 확정 근거를 기록한다.
-4. **데이터만 추가하면 UI 는 자동** — 카드/필터/모달은 data.js 를 읽어
-   렌더링되므로 화면 코드는 원칙적으로 수정 불필요. 새 탭(도메인) 추가
-   절차는 `public/js/main.js` 상단 주석 참고.
+## 구조 요약
 
-## 코드 컨벤션
+```text
+index.html                   앱 셸, CSP, CSS/JavaScript 엔트리
+config/                      데이터·자산 거버넌스의 기계 판독 설정
+docs/                        아키텍처와 사용 안내
+raw-data/raw-specs/          제조사 원문 사양의 canonical 아카이브
+public/
+  assets/                    배포되는 폰트와 가공 이미지
+  css/                       토큰·레이아웃·컴포넌트 스타일
+  js/
+    core/                    라우터, 상태, 검색, 데이터 계약
+    domains/                 제품 도메인별 data/schema/view/detail/controller
+    relationships/           엔터티·상세 provider·역참조 레지스트리
+    ui/                      탭, 필터, 모달, Split View, 관계 이동
+  tests/                     Node/jsdom 기반 테스트
+scripts/                     빌드·배포 검증·미리보기·자산 도구
+dist/                        생성되는 배포 artifact; 직접 편집하지 않음
+```
 
-- controller 만 상태 소유, view 는 순수 함수, schema 는 선언, core/ui 는
-  도메인 지식 금지. BEM 클래스, 데이터는 시리즈별 파일로 분리.
-- 모달/pane 배선은 onXxx 재할당 패턴(중복 addEventListener 금지) —
-  `ui/pane-interactions.js` 참고.
-- 검색 비교는 반드시 `normalizeSearchText()` 를 양쪽에 적용.
-- URL 상태(카드/Split View)는 `core/router.js` 의 route API 로만 조작.
+자세한 의존성, 데이터 흐름, URL 계약은
+[기술 아키텍처](docs/ARCHITECTURE.md)를, 쉬운 설명은
+[구조 안내](docs/ARCHITECTURE_GUIDE.md)를 참고한다.
 
-## 알려진 공백 (2026-07-25 기준)
+## 런타임 아키텍처
 
-- **스펙 조사 전(`pending: true`) 항목** — 제조사 공식 이미지만 등록된 상태다:
-  d&b 107 종 중 79 종, Meyer 43 종 중 22 종. 스펙 필드는 전부 null/빈 배열이고,
-  파생 태그(`wayCount`/`network`/`lowUnitConfig`)는 `speakers.schema.js` 의
-  normalize\* 가 pending 항목을 건너뛰어 생성하지 않는다 — 조사도 안 한 제품이
-  Passive 등으로 잘못 분류되는 것을 막기 위함. 조사가 끝나면 값을 채우고
-  pending 플래그를 지운다.
-  - d&b: Heritage(xA-Series) 6 종은 단종 계열이라 의도적으로 제외.
-  - Meyer: 원본을 `MR-Raw-Assets/my/speakers/web` 로 한정해 등록했다. 그 폴더에
-    이미지가 없는 **MM-4XP 계열 일부·Astrya·Bluehorn·Acheron·Amie·HMS·
-    ULTRA-REFLEX 는 미등록** — 매니페스트에는 있으나 실제 파일이 없다.
-    Constellation·Libra 는 라우드스피커가 아니라 제외(능동음향 시스템/음향 패널).
-- d&b D40/D80/40D 앰프 데이터 미입력(D90 만 존재), D90 의 스피커 매칭
-  (`relations.speakerIds`) 의도적 공백 — 확정 자료 수신 시 채운다
-  (amp.test 의 KNOWN_MISSING 목록도 함께 갱신할 것).
-- 대형 view 파일 분리 로드맵: `docs/ARCHITECTURE.md` §8.
+- `index.html`은 저장된 표시 선호를 적용하는
+  `public/js/bootstrap-preferences.js`와 ES module 엔트리
+  `public/js/main.js`를 로드한다.
+- 각 도메인은 데이터(`data`), 검색·필터 선언(`schema`), 순수 마크업
+  생성(`view`), 상세 provider(`detail`), 상태와 수명주기(`controller`)로
+  책임을 나눈다.
+- 복잡한 도메인 전용 변환은 별도 순수 모듈로 둔다. 앰프 상세의
+  `amplifiers.configurations.js`는 configuration 그룹화·변형 병합·대표 행
+  정렬·표 렌더링을 맡고 view는 결과만 사용한다.
+- `relationships/entity-registry.js`는 ID 조회용 불변 배열 스냅샷을,
+  `relationships/cross-ref.js`는 원본 관계에서 지연 생성한 역방향 인덱스를
+  관리한다.
+- `relationships/detail-registry.js`는 도메인 레코드와 상세 렌더러를 등록한다.
+  `ui/relation-navigation.js`는 `#modal`의 단일 이벤트 위임으로 어떤 도메인의
+  관계 항목이든 같은 경로로 연다.
+- `core/route-codec.js`가 해시 URL을 DOM과 분리해 파싱·직렬화하고,
+  `core/router.js`가 탭·상세·Split View 상태를 브라우저 이력과 동기화한다.
+- 모달은 dialog 이름, 배경 `inert`, 포커스 트랩·초기 이동·복귀를 관리한다.
+  데스크톱 Split View와 모바일 전체 교체 스택도 같은 포커스 수명주기를
+  따른다.
+
+## 데이터와 출처
+
+데이터 변경은 구조화 데이터와 근거 문서를 함께 다룬다.
+
+1. 제조사 원문 사양은 `raw-data/raw-specs/` 아래에 보존한다. 원본
+   PDF/DOCX가 있으면 Markdown과 같은 제품 폴더에 보관한다.
+2. 해당 도메인의 `public/js/domains/<도메인>/data/`에 구조화 데이터를
+   반영한다.
+3. 확인이 끝나지 않은 레코드는 `pending: true`를 사용한다. `pending`이
+   없으면 완료 레코드로 간주하며, 완료 레코드는 canonical 출처가 필요하다.
+4. `npm run test:data`와 `npm run verify`를 실행한다.
+
+출처 coverage, 허용된 결손, 비대칭 관계의 현재 기준은
+[`config/data-governance.json`](config/data-governance.json)이 단일 참조점이다.
+감사는 canonical Markdown의 경로와 파일명만 확인하며 PDF/DOCX 본문을
+자동 해석하지 않는다. 수동으로 적은 개수나 과거 결손 목록 대신 이 설정과
+`public/tests/provenance-audit.mjs`의 결과를 따른다.
+
+## 이미지와 정적 자산
+
+- 제품 사진 원본 아카이브는 저장소 밖
+  `OneDrive/03.Resources/MR-Raw-Assets`에 둔다. 저장소에는 런타임에 쓰는
+  가공본만 `public/assets/img/`에 둔다.
+- 런타임 이미지는 PNG, JPEG, WebP 등 실제 확장자를 유지한다. 처리 규칙은
+  [`config/asset-policy.json`](config/asset-policy.json)과
+  [`public/assets/img/README.md`](public/assets/img/README.md)를 따른다.
+- `npm run test:audit:assets`는 코드/CSS의 참조와 실제 파일을 대조하고,
+  SHA-256으로 완전 중복 baseline을 확인한다. 누락과 고아 파일은 허용하지
+  않는다.
+- 정규화는 먼저 아래처럼 변경 없는 dry-run manifest를 만든다.
+
+  ```powershell
+  python scripts/normalize_images.py dry --manifest image-normalize-plan.json
+  ```
+
+- `apply`는 검토한 동일 manifest를 `--approved-manifest`로 전달한 경우에만
+  실행된다. 알파 채널이 없거나 전체 프레임이 불투명한 이미지는 자동 적용
+  대상이 아니라 수동 검수 대상이다. 완전 중복 파일도 의미 검수 없이 자동
+  삭제하지 않으며 Git 이력 재작성은 별도 승인 범위다.
+
+## 빌드와 GitHub Pages
+
+`scripts/build.mjs`는 다음 배포 경계를 강제한다.
+
+- `index.html`, 허용 확장자의 `public/assets/`, `public/css/` 복사
+- HTML 스크립트 엔트리에서 정적 import/export 그래프로 도달 가능한
+  `public/js/` 파일만 복사
+- 외부·bare import, 경계를 벗어난 경로, 누락 파일, 심볼릭 링크,
+  비정적 dynamic import 거부
+- 파일 경로·크기·SHA-256을 정렬한 `dist/asset-manifest.json` 생성
+- 같은 입력을 두 번 빌드했을 때 동일 manifest가 나오는지 테스트
+
+[`CI and Pages`](.github/workflows/ci-pages.yml)는 pull request와 push에서
+검증을 실행한다. `main` push가 통과하면 오직 `dist/`만 Pages artifact로
+업로드하고 GitHub Pages에 배포한다. 저장소의 Pages 소스 설정도
+**GitHub Actions**로 선택되어 있어야 이 워크플로가 실제 배포 경로가 된다.
+의존성 업데이트 감시는
+[`dependabot.yml`](.github/dependabot.yml)이 npm과 GitHub Actions를 대상으로
+수행한다.
+
+## 코드 변경 원칙
+
+- controller만 도메인 상태를 소유하고, view는 입력을 바꾸지 않는 마크업
+  함수로 유지한다. schema는 검색·필터·정렬 선언이고 데이터 계약은
+  `core/data-contracts.js`에 별도로 둔다.
+- 제조사 ID와 표시 메타데이터는 `core/manufacturers.js`를 사용한다.
+- 검색 비교는 질의와 대상 모두 `normalizeSearchText()`를 거친다.
+- URL 상태는 `core/router.js`와 `core/route-codec.js` API로만 바꾼다.
+- 관계 ID 조회와 상세 열기는 레지스트리를 사용한다. controller나 view가
+  다른 도메인의 데이터·schema·view를 직접 import하지 않는다.
+- UI 재배선은 누적 listener를 만들지 않는다. 영속 루트의 이벤트 위임 또는
+  반복 호출에 안전한 배선 함수를 사용한다.
+- `dist/`는 생성물이다. 변경은 소스에서 하고 `npm run build`로 다시 만든다.
+
+## 문서 지도
+
+| 문서                                         | 역할                                 |
+| -------------------------------------------- | ------------------------------------ |
+| [README](README.md)                          | 실행, 규칙, 현재 운영 경계           |
+| [기술 아키텍처](docs/ARCHITECTURE.md)        | 모듈·라우팅·빌드·데이터 설계 상세    |
+| [쉬운 구조 안내](docs/ARCHITECTURE_GUIDE.md) | 비개발자용 구조와 작업 흐름          |
+| [CLAUDE.md](CLAUDE.md)                       | 저장소 작업 시 지켜야 할 핵심 불변식 |

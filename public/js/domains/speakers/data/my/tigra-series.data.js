@@ -2,11 +2,9 @@
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
 // PANTHER/LEOPARD 와 마찬가지로 Meyer Sound 의 자체 DSP 앰프 내장형(파워드)
-// 라인어레이 — amps 는 빈 배열(사용자 확인 패턴 재사용). AC Power/Audio
-// Input 스펙은 connectors 필드에 요약. 대표 이미지는 사용자가 업로드한 흰
-// 배경 앵글샷(tigra-l_featured-sq.jpg)의 배경을 제거해 반영 — 파일명은
-// TIGRA-L 전용이지만 L/W 두 모델 외형이 동일(커버리지 각도만 다름)해 같은
-// 사진을 공유한다(사용자 확인 — "같은 시리즈는 같은 사진 사용").
+// 라인어레이이므로 amps는 빈 배열이고 AC Power/Audio Input 스펙은
+// connectors 필드에 요약한다. TIGRA-L/W 두 모델은 외형이 같고 커버리지
+// 각도만 다르므로 같은 투명 배경 이미지를 공유한다.
 // [치수/무게 출처] 카드 요약 텍스트(33.94in/114.7lb)와 스펙표(33.92in/120lb,
 // mm·kg 병기)가 서로 약간 다름 — 스펙표 쪽이 mm/kg 원본값을 직접 명시하고
 // 있어 더 신뢰할 수 있는 소스로 판단해 스펙표 값(862 x 324 x 565mm, 54kg)을 채택.

@@ -6,13 +6,10 @@
  * UI 나 데이터 파일이 아닌 "규칙"을 바꿀 때 수정하는 파일.
  */
 import { normalizeSearchText } from "../../core/filter-engine.js";
+import { MANUFACTURERS, MANUFACTURER_ORDER } from "../../core/manufacturers.js";
 
-export const SW_MFR = {
-  la: { name: "L-Acoustics", color: "var(--la)", short: "L-ACOUSTICS" },
-  db: { name: "d&b audiotechnik", color: "var(--db)", short: "d&b" },
-  my: { name: "Meyer Sound", color: "var(--my)", short: "MEYER" },
-};
-export const SW_MK_ORDER = ["la", "db", "my"];
+export const SW_MFR = MANUFACTURERS;
+export const SW_MK_ORDER = MANUFACTURER_ORDER;
 
 /**
  * 분류(섹션) 표시 순서 — 워크플로 순서(설계 → 제어 → 공간음향 → 처리기술).

@@ -7,16 +7,14 @@
  *
  * 리깅 툴/케이블/케이스 등 부속품을 정리하는 신규 탭.
  * 다른 도메인(DSP/Software)처럼 상호 연동 관계는 없는 단순 카탈로그라
- * relations 필드가 없다. Type 은 정해진 목록이 아니라 자유 텍스트로 두고
- * (사용자 확인) 데이터가 쌓이면 값에 따라 필터 칩이 자동 생성된다.
+ * relations 필드가 없다. Type은 정해진 목록이 아니라 자유 텍스트로 두며,
+ * 필터 칩은 현재 데이터의 고유 값에서 자동 생성한다.
  */
 import { normalizeSearchText } from "../../core/filter-engine.js";
-export const ACC_MFR = {
-  la: { name: "L-Acoustics", color: "var(--la)", short: "L-ACOUSTICS" },
-  db: { name: "d&b audiotechnik", color: "var(--db)", short: "d&b" },
-  my: { name: "Meyer Sound", color: "var(--my)", short: "MEYER" },
-};
-export const ACC_MK_ORDER = ["la", "db", "my"];
+import { MANUFACTURERS, MANUFACTURER_ORDER } from "../../core/manufacturers.js";
+
+export const ACC_MFR = MANUFACTURERS;
+export const ACC_MK_ORDER = MANUFACTURER_ORDER;
 
 export const accessoriesSchema = {
   unitLabel: "accessory",

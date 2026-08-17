@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "runtimeAssets": {
+    "root": "public/assets",
+    "supportedExtensions": [
+      ".avif",
+      ".gif",
+      ".ico",
+      ".jpeg",
+      ".jpg",
+      ".otf",
+      ".png",
+      ".svg",
+      ".ttf",
+      ".webp",
+      ".woff",
+      ".woff2"
+    ],
+    "missingReferencesAllowed": 0,
+    "orphanFilesAllowed": 0
+  },
+  "originalArchive": {
+    "role": "external-source-archive",
+    "location": "OneDrive/03.Resources/MR-Raw-Assets",
+    "trackedInRepository": false
+  },
+  "normalization": {
+    "defaultMode": "dry",
+    "applyRequiresManifestReview": true,
+    "formats": [".png", ".jpg", ".jpeg", ".webp"]
+  },
+  "knownExactDuplicates": {
+    "reviewStatus": "semantic-review-required",
+    "groups": 28,
+    "files": 64,
+    "recoverableBytes": 24951845,
+    "automaticDeletionAllowed": false,
+    "historyRewriteRequiresSeparateApproval": true
+  }
+}

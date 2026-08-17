@@ -1,22 +1,19 @@
 // d&b audiotechnik AL(A-Series) 스피커 데이터 (4개 모델: AL60/AL90 + 설치형 ALi60/ALi90).
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
-// 원본: audio-spec-parsing-skill 마스터 스키마 AL60/AL90/ALi60/ALi90 v1.0 md.
-// [type 판단 근거] 마스터 스키마 Product_Category 는 "augmented array
-// loudspeaker"(d&b 신규 마케팅 용어)이나 Product_Type 은 "Line array
-// loudspeaker" 관례를 유지 — TYPE_ORDER(speakers.schema.js) 기존 어휘 중
-// "Line Array" 가 가장 부합해 채택(신규 타입 어휘를 늘리지 않음).
-// [series 표기] 마스터 스키마 Product_Series 는 "A-Series"이나, 앱 그룹명은
-// 요청에 따라 "AL Series" 로 통일.
-// [throw=null] 원본 md 에 투사거리 정보 없음 — 추정하지 않고 null.
-// [amps configs.total=null] OM 은 채널당 캐비닛 수(PS/Out/In 셋업=2, AP
-// 셋업=1)만 명시하고 앰프 1대당 총 대수는 원문에 없음 — 추정하지 않고 null.
-// [ip=null] AL60/AL90: SPS 마케팅 불릿에만 "IP55" 언급, 정식 스펙 표에는
-// 없어 마스터 스키마가 미확인 처리 — 그대로 null. ALi60/ALi90: AE 원문
-// 자체에 IP 병합필드 오류([ERROR: Missing definition...])가 있어 미확인.
-// [dims] 원본 md 는 mm 치수만 제공(인치 병기 없음) — mm 만 기재.
-// [relations.ampIds] 권장 앰프(D20/D80/30D)가 현재 앰프 DB 에 없어 빈 배열
-// (실존 id 만 기재하는 원칙 — 현재 앰프 DB 에는 amp-db-d90 만 존재).
+// 기준 자료는 raw-data/raw-specs/db/speakers/al-series/에 둔다.
+// [type 판단] Product_Category의 "augmented array loudspeaker"는 마케팅
+// 용어이고 Product_Type은 "Line array loudspeaker"다. TYPE_ORDER의 기존
+// 어휘를 늘리지 않고 "Line Array"로 정규화한다.
+// [series 표기] Product_Series는 "A-Series"지만 앱 그룹명은 "AL Series"다.
+// [throw=null] 투사거리 정보가 없으므로 추정하지 않는다.
+// [amps configs.total=null] OM은 채널당 캐비닛 수(PS/Out/In=2, AP=1)만
+// 명시하므로 앰프 1대당 총 대수는 추정하지 않는다.
+// [ip=null] AL60/AL90의 IP55는 마케팅 불릿에만 있고 정식 스펙 표에는 없다.
+// ALi60/ALi90의 AE 자료도 IP 정의가 불완전하므로 모두 null을 유지한다.
+// [dims] 기준 자료가 mm 치수만 제공하므로 mm만 기재한다.
+// [relations.ampIds] 스피커-앰프 관계는 amps[]를 단일 원본으로 사용하므로
+// 이 파생 관계 배열은 비워 둔다.
 export const DB_AL_SERIES = [
 {
   "id": "spk-db-al60",

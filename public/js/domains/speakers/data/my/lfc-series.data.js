@@ -1,6 +1,6 @@
 // Meyer Sound LFC Series 서브우퍼 데이터 (5개 모델 — 750/900/1800/2100-LFC, VLFC).
-// 필드 스키마 설명은 speakers.schema.js 참조. 소스: audio-spec-parsing-skill 마스터
-// 스키마(750-LFC/900-LFC/1800-LFC/2100-LFC/VLFC v1.1, raw-data/raw-specs/my/speakers/lfc-series/).
+// 필드 스키마 설명은 speakers.schema.js, 기준 자료 경로는
+// raw-data/raw-specs/my/speakers/lfc-series/를 참조한다.
 // 전 모델 self-powered — LEOPARD 패턴 그대로 amps: [], selfPowered: true, ampRaw: null.
 // [판단 근거]
 // - spl: 원문에 Max_SPL_Peak 단일값이 없어, Linear_Peak_SPL 계열(750/900-LFC/VLFC)은

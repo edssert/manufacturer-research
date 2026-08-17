@@ -10,8 +10,8 @@ import { $, esc } from "../core/dom.js";
 
 /**
  * 범례를 렌더링한다 — 데이터에 실제로 존재하는 제조사만, order 순서대로.
- * @param {Object[]} data 현재 도메인의 전체 레코드 배열
- * @param {string[]} order 제조사 키 표시 순서 (예: ["la","db","my"])
+ * @param {ReadonlyArray<Object>} data 현재 도메인의 전체 레코드 배열
+ * @param {ReadonlyArray<string>} order 제조사 키 표시 순서 (예: ["la","db","my"])
  * @param {Object} mfrMap 제조사 표시 정보 맵 { key: { name, color } }
  * @param {Function} [keyOf] 레코드에서 제조사 키를 읽는 함수 (기본 d.mfr —
  *   speakers 도메인만 d.mk 를 사용)

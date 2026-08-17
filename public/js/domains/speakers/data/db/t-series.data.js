@@ -1,10 +1,8 @@
 // d&b audiotechnik T 스피커 데이터 (3개 모델: T10, Ti10L, Ti10P).
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
-// 소스(마스터 스키마 v1.1, audio-spec-parsing-skill):
-//   C:\Dev\audio-spec-parsing-skill\speakers\db\T10_v1.1.md / Ti10L_v1.1.md / Ti10P_v1.1.md
-//   (사본: raw-data/raw-specs/db/speakers/t-series/)
-// 내린 판단:
+// 기준 자료는 raw-data/raw-specs/db/speakers/t-series/에 둔다.
+// 데이터 정규화 판단:
 // - type: T10은 회전형 웨이브가이드로 라인어레이/포인트소스 겸용(원문 이중 Product_Type) —
 //   주 용도인 "Line Array"로 분류하고 notes에 겸용 명시. Ti10L=Line source 버전(어레이 리깅 포함) →
 //   "Line Array", Ti10P=Point source 버전(어레이 리깅 없음) → "Point". 셋 다 음향적으로 동일 설계.
@@ -13,7 +11,7 @@
 // - cov.h="105°,90°": 라인소스 105° / 포인트소스 90° 두 모드 병기(콤마 나열은 schema
 //   parseAngleRange가 min~max로 해석). cov.v="35°"는 포인트소스 모드 전용 수직각.
 // - Ti10P는 splayList 미기재: 원문 스펙표에 0-15° 값이 남아 있으나(공용 표 상속) 어레이 체이닝
-//   리깅 자체가 없어 실사용 불가 — 스플레이 필터 오도 방지를 위해 제외(마스터 스키마 각주 근거).
+//   리깅 자체가 없어 실사용할 수 없으므로 스플레이 필터 오도를 막기 위해 제외한다.
 // - amps.total = perCh(원문 "Cabinets per channel", 전 setup 공통 4) × 앰프 채널 수 —
 //   cl-series.data.js와 동일 산법. 앰프 채널 수는 원문 md에 없어 d&b 공식 스펙 근거:
 //   D80/D40/D20/30D/10D=4ch, D12/D6=2ch.

@@ -1,6 +1,6 @@
 // Meyer Sound USW Series 서브우퍼 데이터 (4개 모델 — USW-112P/112XP/121P/210P).
-// 필드 스키마 설명은 speakers.schema.js 참조. 소스: audio-spec-parsing-skill 마스터
-// 스키마(USW-112P/112XP/121P/210P v1.1, raw-data/raw-specs/my/speakers/usw-series/).
+// 필드 스키마 설명은 speakers.schema.js, 기준 자료 경로는
+// raw-data/raw-specs/my/speakers/usw-series/를 참조한다.
 // 전 모델 self-powered — LEOPARD 패턴 그대로 amps: [], selfPowered: true, ampRaw: null.
 // [판단 근거]
 // - 시리즈명: USW-112XP 원문만 "USW family" 소속을 명시하나 4개 모델 모두

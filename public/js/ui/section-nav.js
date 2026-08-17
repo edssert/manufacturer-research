@@ -19,7 +19,7 @@
  *
  * 관련 CSS: css/components/section-nav.css
  */
-import { $, esc } from "../core/dom.js";
+import { esc } from "../core/dom.js";
 
 /** 섹션 요소 → 레일 링크 */
 let linkOf = new Map();
@@ -46,10 +46,11 @@ const RAIL_ID = "section-nav";
  * @returns {number} px
  */
 function stickyOffset() {
-  const bar = document.querySelector(".topbar");
+  const bar = /** @type {HTMLElement|null} */ (document.querySelector(".topbar"));
   const nav = document.getElementById("topnav");
   // 탭마다 자기 .controls 를 갖고 있고 숨겨진 탭의 것은 offsetParent 가 null.
-  const ctrl = [...document.querySelectorAll(".controls")].find(el => el.offsetParent !== null);
+  const ctrl = /** @type {HTMLElement[]} */ ([...document.querySelectorAll(".controls")])
+    .find(el => el.offsetParent !== null);
   return (bar ? bar.offsetHeight : 0) + (nav ? nav.offsetHeight : 0) + (ctrl ? ctrl.offsetHeight : 0);
 }
 
@@ -60,7 +61,8 @@ function stickyOffset() {
  * @returns {number} px
  */
 function barsBottomOnScreen() {
-  const ctrl = [...document.querySelectorAll(".controls")].find(el => el.offsetParent !== null);
+  const ctrl = /** @type {HTMLElement[]} */ ([...document.querySelectorAll(".controls")])
+    .find(el => el.offsetParent !== null);
   const el = ctrl || document.getElementById("topnav");
   return el ? Math.max(0, el.getBoundingClientRect().bottom) : 0;
 }
@@ -300,7 +302,7 @@ function trackRailChange(ms = 320) {
  */
 function scrollToSection(sec) {
   if (sec.classList.contains("card-group--collapsed")) {
-    sec.querySelector(".card-group__head")?.click();
+    /** @type {HTMLElement|null} */ (sec.querySelector(".card-group__head"))?.click();
   }
   // scrollIntoView 는 고정 바 높이를 모른다 — 그만큼 위로 더 올린다.
   const top = Math.max(0, Math.round(sec.getBoundingClientRect().top + window.scrollY - stickyOffset() - 12));
@@ -392,7 +394,9 @@ export function buildSectionNav(resultsEl) {
   linkOf = new Map();
   lastActiveIdx = -1;
 
-  const sections = resultsEl ? [...resultsEl.querySelectorAll(".card-group")] : [];
+  const sections = resultsEl
+    ? /** @type {HTMLElement[]} */ ([...resultsEl.querySelectorAll(".card-group")])
+    : [];
   sectionsRef = sections;
   resultsRef = resultsEl || null;
   if (sections.length < 2) {

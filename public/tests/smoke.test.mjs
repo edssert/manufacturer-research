@@ -17,8 +17,7 @@ import { JSDOM } from "jsdom";
 // ERR_UNSUPPORTED_ESM_URL_SCHEME 로 죽는다 — file:// URL 로 변환해서 넘긴다.
 const imp = (p) => import(pathToFileURL(p).href);
 
-// [v1.8 재배치] tests/ 가 public/tests/ 로 이동하면서 index.html(루트 유지)까지
-// 두 단계 위로 올라가야 한다 — 프로젝트 ROOT = public/tests/../.. .
+// 테스트는 public/tests/ 아래에 있고 index.html 은 저장소 루트에 있다.
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 let pass = 0, failCount = 0;
 const check = (name, cond) => { cond ? pass++ : failCount++; console.log(`${cond ? "PASS" : "FAIL"} — ${name}`); };
@@ -74,8 +73,7 @@ if (ampRow) {
   check("pane 2 렌더링", document.querySelectorAll("#modal .split-view__pane").length === 2);
   // [모달 라우팅] pane2 상태가 해시 3번째 단에 기록된다.
   check("Split View → URL 해시에 pane2 기록", dom.window.location.hash.endsWith(`/${encodeURIComponent(ampId)}`));
-  // [2026-07 현행화] pane2 헤더는 이제 pane1 과 동일한 .modal__head 구조 —
-  // 닫기 버튼 셀렉터를 [data-modal-close] 로 변경.
+  // 두 pane은 같은 .modal__head 구조와 닫기 버튼 훅을 공유한다.
   const closeBtn = document.querySelector("#modal .split-view__pane:nth-child(2) [data-modal-close]");
   closeBtn.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
   check("pane 2 닫기 → 단일 pane 복귀", document.querySelectorAll("#modal .split-view__pane").length === 0 && document.querySelector("#modal .modal__title") !== null);
@@ -89,13 +87,12 @@ for (const key of ["amplifiers", "dsps", "software", "accessories", "brand", "sp
   check(`탭 전환: ${key}`, ok && document.querySelector(`#view-${key === "speakers" ? "speakers" : key}`).hidden === false);
 }
 check("앰프 카드 렌더링", document.querySelectorAll("#amp-results .card").length >= 8);
-// [2026-07 현행화] 브랜드 탭은 브랜드 스위치 방식 — 한 번에 1개 페이지만 렌더링.
+// 브랜드 탭은 활성 브랜드 페이지 한 개만 렌더링한다.
 check("브랜드 페이지 렌더링", document.querySelectorAll("#brand-results .brand-page").length === 1);
 check("타임라인 렌더링", document.querySelectorAll("#brand-results .timeline__item").length > 5);
 
 // ── 컨트롤 바 배선(칩 필터 · 필터 초기화 · 정렬) ──
-// [v1.8 통합] 다섯 탭이 이 배선을 ui/domain-tab.js 하나로 공유하므로
-// (이전에는 컨트롤러마다 같은 코드를 복사해 뒀다) 한 탭에서 확인하면 된다.
+// 다섯 도메인은 ui/domain-tab.js 배선을 공유하므로 한 탭에서 공통 경로를 확인한다.
 navigateTo("speakers");
 const totalCards = document.querySelectorAll("#spk-results .card").length;
 const firstChip = document.querySelector("#spk-filters .chip");
@@ -109,15 +106,13 @@ const sortSel = document.querySelector("#spk-sort");
 sortSel.value = "name";
 sortSel.dispatchEvent(new dom.window.Event("change", { bubbles: true }));
 check("정렬 변경 → 재렌더링(이름순은 그룹 없음)", document.querySelectorAll("#spk-results .card-group").length === 0);
-// [버그 수정 검증] 빈 결과 화면의 "필터 초기화" 버튼(ui/card-grid.js)이 쓰는
-// schema.onReset 은 예전에 아무도 대입하지 않아 눌러도 무반응이었다.
+// 빈 결과 화면의 초기화 버튼은 schema.onReset 계약에 의존한다.
 const { speakersSchema } = await imp(join(ROOT, "public/js/domains/speakers/speakers.schema.js"));
 check("빈 결과 화면 초기화 버튼 연결됨", typeof speakersSchema.onReset === "function");
 
 // ── 연관 항목 칩 → Split View pane 2 ──
-// [v1.8 통합] 스피커·앰프·액세서리·DSP·소프트웨어 다섯 도메인이 이 배선을
-// ui/split-view.js wireChipPanes 하나로 공유한다(이전에는 컨트롤러마다
-// 같은 함수를 복사해 뒀다) — 액세서리 모달로 한 번 실제로 눌러 보면
+// 스피커·앰프·액세서리·DSP·소프트웨어는 ui/split-view.js의
+// wireChipPanes 경로를 공유한다. 액세서리 모달에서 실제로 눌러 보면
 // "칩 클릭 → 레코드 조회 → pane 2 오픈" 경로 전체가 살아있는지 확인된다.
 navigateTo("accessories");
 let relChip = null;

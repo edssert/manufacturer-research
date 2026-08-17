@@ -5,24 +5,7 @@
  * 관련 CSS: css/components/card.css, css/components/spec-table.css
  */
 import { esc, getViews } from "../../core/dom.js";
-import { findAccessoryById } from "../../relationships/cross-ref.js";
 import { ACC_MFR } from "./accessories.schema.js";
-
-/**
- * 액세서리 id 를 Split View pane 2 열기 인자로 변환한다.
- * 스피커·앰프·액세서리 세 도메인 모달이 모두 System Elements /
- * Related Accessories 칩으로 액세서리를 열기 때문에 같은 함수가 컨트롤러
- * 3곳에 복사돼 있었다 — 액세서리 도메인에 한 벌만 둔다. pane 2 에서는
- * Used In/Related 없이 기본 상세만 보여준다(기존 동작 그대로).
- * @param {string} id 액세서리 id
- * @returns {Object|null} ui/split-view.js openSplitPane 인자 (없는 id 면 null)
- */
-export function panePropsFor(id) {
-  const acc = findAccessoryById(id);
-  if (!acc) return null;
-  const { color, head, body } = modalBodyHTML(acc);
-  return { headHTML: head, bodyHTML: body, paneColor: color, paneId: id };
-}
 
 /**
  * 카드 표시용 짧은 Type 라벨. "Protections & Transportations"
@@ -55,8 +38,8 @@ function lengthChipsHTML(lengths) {
  * 길이 칩을 이름 옆(card__name-row)에 붙일 작은 태그 형태로 렌더링한다.
  * 길이 칩이 이름 아래 별도 줄(전체 폭)을 차지하던 것을,
  * speakers.view.js titleTagsHTML 과 동일한 패턴으로 이름 줄 오른쪽 끝에
- * 나란히 배치 — 별도 열 없이 공간을 절약한다. 길이가 1개뿐인 케이블
- * (POW2 "2m" 등)도 일관되게 표시(사용자 확인).
+ * 나란히 배치해 별도 열 없이 공간을 절약한다. 길이가 1개뿐인 케이블도
+ * 같은 위치에 표시해야 제품 간 정보 밀도가 일정하다.
  * @param {{id:string, value:string}[]} lengths
  * @returns {string} 태그 목록 마크업 (없으면 "")
  */
@@ -91,8 +74,8 @@ function collapseConnOut(out) {
  * 분기(BOB32 등)와 양끝이 같은 단순 케이블(DO 등)을 모두 포괄하므로 이름은
  * breakout 이 아니라 connection 이다.
  * @param {{in:string, out:string[], bidirectional?:boolean}} connection
- * @param {boolean} [afterUsedIn] true 면 위에 Used In 섹션이 있다는 뜻 —
- *   여백+구분선을 추가해 두 섹션을 시각적으로 분리한다(사용자 요청).
+ * @param {boolean} [afterUsedIn] true 면 위에 Used In 섹션이 있다는 뜻이며,
+ *   여백과 구분선을 추가해 두 섹션을 시각적으로 분리한다.
  * @returns {string} 다이어그램 마크업 (없으면 "")
  */
 function connectionDiagramHTML(connection, afterUsedIn) {
@@ -100,8 +83,8 @@ function connectionDiagramHTML(connection, afterUsedIn) {
   // bidirectional(양방향, 예: CA-COM 19-pole ↔ CA-COM
   // 19-pole 처럼 양끝이 완전히 동일한 케이블)일 때는 오른쪽(out) 박스도
   // 왼쪽(in)과 똑같은 강조 스타일(connection__box--in: 진한 글자색 +
-  // 제조사 강조 테두리)을 받는다 — 방향성이 없는 대칭 연결이라 왼쪽만
-  // 강조되고 오른쪽이 밋밋해 보이면 어색했다(사용자 확인). 단방향(→)
+  // 제조사 강조 테두리)을 받는다. 방향성이 없는 대칭 연결은 양쪽의 시각적
+  // 위계도 같아야 한다. 단방향(→)
   // 연결은 기존처럼 out 박스가 기본(연한) 스타일을 유지한다.
   const outBoxClass = connection.bidirectional ? "connection__box connection__box--in" : "connection__box";
   const outBoxes = collapseConnOut(connection.out)
@@ -200,9 +183,8 @@ function specRow(label, val, full) {
  * @param {{id:string, name:string}[]} speakers 이 액세서리를 쓰는 스피커
  * @param {{id:string, name:string, type:string}[]} [related] 이 액세서리와
  *   짝을 이루는 다른 액세서리(예: K-BUMPFLIGHT ↔ K1-BUMP) — 별도 섹션이
- *   아니라 이 Used In 블록 안의 "Accessories" 그룹으로 합쳐서 보여준다
- *   (사용자 요청, controller 가 cross-ref.findRelatedAccessories() 로
- *   미리 조회해 전달).
+ *   아니라 이 Used In 블록 안의 "Accessories" 그룹으로 합쳐서 보여준다.
+ *   controller가 cross-ref.findRelatedAccessories()로 미리 조회해 전달한다.
  * @returns {string} 섹션 마크업 (없으면 "")
  */
 function usedInHTML(amps, speakers, related) {
@@ -258,12 +240,9 @@ export function modalBodyHTML(a, usedByAmps, usedBySpeakers, related) {
   // 클릭 연결은 ui/pane-interactions.js 의 wireViewSwitch 가 도메인 무관 처리).
   const views = getViews(a);
   const viewSlug = label => label.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  // K1-BUMP 처럼 사진 자체가 없는 액세서리는 예전엔 media
-  // 영역이 통째로 생략돼(카드에서는 card__noimg ⚙ 아이콘 폴백이 있는데
-  // 모달만 없었음) 단일 모달·Split View 양쪽에서 사진 자리 없이 헤더
-  // 바로 아래 System Elements 가 붙어 카드와 느낌이 달랐다 — 모달에도
-  // 동일한 톤의 자리표시 아이콘(modal__media--noimg)을 넣어 사진 유무와
-  // 무관하게 항상 같은 레이아웃(헤더 → 미디어 → 본문)을 유지한다.
+  // [레이아웃 안정성] 사진이 없는 액세서리도 카드와 같은 ⚙ 폴백을 media
+  // 영역 안에 둔다. 사진 유무와 단일/Split View 여부에 관계없이 항상
+  // 헤더 → 미디어 → 본문 순서를 유지한다.
   const modalWbClass = v => (v.whitebg ? " modal__img--whitebg" : "") + (v.whitebg2 ? " modal__img--whitebg2" : "");
   const media = views.length
     ? (views.length > 1
@@ -277,31 +256,20 @@ export function modalBodyHTML(a, usedByAmps, usedBySpeakers, related) {
           </div>`
         : `<div class="modal__media"><img class="${modalWbClass(views[0]).trim()}" src="${views[0].src}" alt="${esc(a.name)}"></div>`)
     : `<div class="modal__media-wrap"><div class="modal__media modal__media--noimg">⚙</div></div>`;
-  // [재정정] 길이가 1개(단일)뿐인 케이블도 "Available
-  // Lengths" 행을 그대로 만든다 — 예전엔 길이가 2개 이상일 때만 행을
-  // 만들고 단일 길이는 생략했는데, 단일 길이 케이블도 모달에서 그 길이
-  // 값을 바로 확인할 수 있어야 한다는 요청으로 조건을 없앤다(a.lengths
-  // 가 존재하기만 하면 항상 표시).
-  // [모달 폭 확대(628px) 후 재검증] 예전엔 전체 폭(--full)
-  // 으로 혼자 한 줄을 차지했는데, Type 처럼 앞의 절반 폭 셀이 홀로 남아
-  // 나머지 절반이 빈칸으로 보이는 경우가 생겼다 — 절반 폭 일반 셀로
-  // 바꿔 Type 옆에 나란히 배치되게 한다(specSectionHTML/spec-table 의
-  // 고아 승격 로직과 동일하게, 짝이 없으면 자동으로 --full 로 승격되는
-  // 다른 섹션과 달리 이 표는 정적 마크업이라 항상 Type 다음에 위치).
+  // [길이 표시] a.lengths가 있으면 항목 수와 관계없이 "Available Lengths"를
+  // 표시한다. 단일 길이도 모달에서 즉시 확인할 수 있어야 한다.
+  // Type과 한 행을 이루도록 일반 절반 폭 셀을 사용한다. 이 표는 정적
+  // 마크업이라 lengthsRow가 항상 Type 다음에 온다.
   const lengthsRow = a.lengths && a.lengths.length
     ? `<div class="spec-table__cell"><div class="spec-table__key">Available Lengths</div><div class="spec-table__value">${lengthChipsHTML(a.lengths)}</div></div>`
     : "";
   // connection(커넥터 연결/변환) 다이어그램 — spec-table(General) 바로
-  // 아래에 둔다(구조를 먼저, 설명은 그다음이라는 기존 감각 유지).
-  // [순서 변경] Used In 이 없는 항목(예: K1-BUMP, 이 부속품을
-  // 참조하는 스피커/앰프/다른 액세서리가 아직 없는 경우)은 예전엔 General
-  // 이 맨 위로 붙어, Used In 이 있는 다른 모달과 General 의 세로 위치가
-  // 서로 달라 보였다 — General(+연결 다이어그램)을 항상 먼저 고정 배치하고
-  // Used In 을 그 아래로 옮겨, Used In 유무와 무관하게 General 위치가
-  // 항상 일정하게 한다.
+  // 아래에 둔다(구조를 먼저, 설명은 그다음이라는 위계를 유지).
+  // [섹션 순서] Used In 유무와 관계없이 General(+연결 다이어그램)을 먼저
+  // 고정하고 Used In을 그 아래에 둬 General의 세로 위치를 일정하게 한다.
   const connectionHTML = a.connection ? connectionDiagramHTML(a.connection, false) : "";
   const body = `${media}
-    <div class="modal__body" id="modal-body-main">
+    <div class="modal__body">
       <p class="section-label">General</p>
       <div class="spec-table">
         ${specRow("Type", a.type)}

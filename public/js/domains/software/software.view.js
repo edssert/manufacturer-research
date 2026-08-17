@@ -83,7 +83,7 @@ export function modalBodyHTML(s, resolveDspName) {
     ? `<p class="hint-text" style="margin-bottom:12px">스펙 조사 전입니다 — 현재는 제조사 홈페이지 이미지만 등록돼 있습니다.</p>`
     : "";
   const body = `
-    <div class="modal__body" id="modal-body-main">
+    <div class="modal__body">
       ${media}
       ${pendingNote}
       <div class="spec-table">

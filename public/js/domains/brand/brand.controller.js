@@ -71,7 +71,7 @@ function buildBrandUI(wrap) {
       <div id="brand-results"></div>
     </div>`;
 
-  wrap.querySelectorAll(".brand-switch__tab").forEach(tab => {
+  /** @type {NodeListOf<HTMLElement>} */ (wrap.querySelectorAll(".brand-switch__tab")).forEach(tab => {
     tab.addEventListener("click", () => {
       // 비교 모드를 나갈 땐(탭 클릭으로 벗어나는 경우 포함)
       // 선택 상태를 초기화한다 — 다음에 비교 모드로 다시 들어오면 항상
@@ -128,7 +128,7 @@ function renderComparePicker() {
     })
     .join("");
 
-  picker.querySelectorAll("input[type=checkbox]").forEach(cb => {
+  /** @type {NodeListOf<HTMLInputElement>} */ (picker.querySelectorAll("input[type=checkbox]")).forEach(cb => {
     cb.addEventListener("change", () => {
       const mk = cb.dataset.mk;
       if (cb.checked) {
@@ -148,7 +148,7 @@ function renderBrand() {
   const compareBtn = $("#brand-compare-btn");
   const sortBtn = $("#brand-compare-sort-btn");
   compareBtn.classList.toggle("brand-switch__compare-btn--active", compareMode);
-  document.querySelectorAll("#brand-switch .brand-switch__tab").forEach(tab => {
+  /** @type {NodeListOf<HTMLElement>} */ (document.querySelectorAll("#brand-switch .brand-switch__tab")).forEach(tab => {
     tab.classList.toggle("brand-switch__tab--active", !compareMode && tab.dataset.mk === activeMk);
   });
 
@@ -206,7 +206,7 @@ function renderBrand() {
  * @param {HTMLElement} root 타임라인이 포함된 컨테이너
  */
 function sizeTimelineLines(root) {
-  root.querySelectorAll(".timeline").forEach(timeline => {
+  /** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll(".timeline")).forEach(timeline => {
     const items = timeline.querySelectorAll(".timeline__item");
     // 1) min-height 를 0으로 리셋한 자연 상태에서 각 항목의 실제 필요
     //    높이(콘텐츠 높이, 여백 없음)를 측정하고, 그중 최솟값(대개 설명
@@ -265,7 +265,7 @@ function sizeTimelineLines(root) {
  *   한다 — top% → year 역산 공식이 축 방향에 따라 달라지기 때문.
  */
 function sizeCompareTrack(root, selected, descending = false) {
-  const compareEl = root.querySelector(".brand-compare");
+  const compareEl = /** @type {HTMLElement|null} */ (root.querySelector(".brand-compare"));
   if (!compareEl) return;
 
   const years = [];
@@ -292,8 +292,8 @@ function sizeCompareTrack(root, selected, descending = false) {
 
   // 2) 각 컬럼에서, 연도순으로 인접한 두 포인트 사이 필요 px/year 를 구한다.
   let maxPxPerYear = 0;
-  root.querySelectorAll(".brand-compare__col").forEach(col => {
-    const points = [...col.querySelectorAll(".brand-compare__point")]
+  /** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll(".brand-compare__col")).forEach(col => {
+    const points = /** @type {HTMLElement[]} */ ([...col.querySelectorAll(".brand-compare__point")])
       .map(el => {
         // top% → year 역산: compareHTML() 의 yearToPct 와 정확히 반대 공식.
         // descending 이면 top% 자체가 (100 - 정방향pct) 로 저장돼 있으므로,

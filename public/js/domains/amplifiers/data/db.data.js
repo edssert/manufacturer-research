@@ -1,12 +1,9 @@
 // d&b audiotechnik 앰프 데이터.
 // 필드 스키마 설명은 amplifiers.schema.js 참조.
-// 기존 D80/D90/D40/40D(레거시 단순 스키마 — channels/
-// powerClass/connectivity/configs/notes/relations 만 있던 자리표시 데이터)를
-// 전부 지우고, d&b 공식 제품 페이지 스펙을 근거로 D90 하나만 L-Acoustics
-// LA1.16i 와 동일한 상세 필드 구조(mains/io/output/dsp/ecosystem/features/
-// note 등 중첩 필드)로 새로 작성했다. 기존 D80/D40/40D 에 걸려 있던
-// relations.speakerIds 매칭 정보도 함께 삭제됨(사용자 확인 후 진행) — 추후
-// 스피커 매칭 데이터가 확정되면 다시 채운다.
+// 모든 레코드는 L-Acoustics와 같은 상세 필드 구조(mains/io/output/dsp/
+// ecosystem/features/note 등)를 사용한다. canonical source가 없는 모델은
+// config/data-governance.json의 knownGaps에서 관리한다. 스피커 매칭은 스피커의
+// amps 구성을 단일 기준으로 사용하므로 relations.speakerIds에 복제하지 않는다.
 export const DB_AMPLIFIERS = [
   {
     "id": "amp-db-d90",

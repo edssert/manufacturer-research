@@ -1,132 +1,300 @@
 /**
- * comment-audit.mjs — 주석이 코드/파일 구조를 정확히 가리키는지 검증.
+ * 주석이 현재 코드 구조와 프로젝트의 주석 작성 규칙을 따르는지 검증한다.
  *
- * 주석은 대상이 옮겨져도 따라가지 않는다. 2026-07-25 전수 점검에서 11건이
- * 나왔는데 그중 7건이 이 스크립트로 잡히는 유형이었다(모듈이 분리되며 함수가
- * 다른 파일로 갔는데 주석은 옛 파일을 가리킴, 이미지 원본을 OneDrive 로
- * 이관했는데 주석은 옛 경로를 가리킴).
+ * 검사 범위는 앱·테스트 JavaScript, CSS, 루트 HTML, 빌드·자산 스크립트다.
+ * 데이터 원문과 문서·변경 기록은 서로 다른 작성 규칙을 가지므로 제외한다.
  *
- * 검사 4종:
- *   1) "<파일>.js 의 <함수>" 교차참조가 실제 정의 위치와 맞는가
- *   2) 주석이 호출 형태로 언급한 함수가 코드에 존재하는가
- *   3) 주석에 적힌 저장소 상대 경로가 실재하는가
- *   4) 주석이 언급한 CSS 클래스가 정의돼 있는가
+ * 검사 항목:
+ *   1) 파일과 심볼을 함께 언급한 교차 참조의 정의 위치
+ *   2) 호출 형태로 언급한 함수의 존재 여부
+ *   3) 저장소 상대 경로의 존재 여부
+ *   4) BEM 형태로 언급한 CSS 클래스의 존재 여부
+ *   5) 요청자·임시 출처·수정 이력·버전·날짜를 주석에 기록한 표기
  *
- * 자동으로 못 잡는 것: "이 필드는 K1 에만 있다" 같은 데이터 주장. 개수·한정
- * 표현은 사람이 데이터와 대조해야 한다(그 유형이 나머지 4건이었다).
- *
- * 실행: node public/tests/comment-audit.mjs   (프로젝트 루트에서)
- * 종료 코드: 문제 발견 시 1, 이상 없으면 0
+ * 실행: node public/tests/comment-audit.mjs
  */
-import { readFileSync, readdirSync, statSync, existsSync } from "fs";
-import { join, dirname } from "path";
-import { fileURLToPath } from "url";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { dirname, extname, join, relative } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const PUBLIC = join(dirname(fileURLToPath(import.meta.url)), "..");
 const ROOT = join(PUBLIC, "..");
-const norm = p => p.split("\\").join("/").split(ROOT.split("\\").join("/") + "/").pop();
+const INDEX = join(ROOT, "index.html");
+const norm = path => relative(ROOT, path).split("\\").join("/");
 
-function walk(dir, exts, out = []) {
+function walk(dir, extensions, out = []) {
   for (const name of readdirSync(dir)) {
-    const p = join(dir, name);
-    if (statSync(p).isDirectory()) walk(p, exts, out);
-    else if (exts.some(e => name.endsWith(e))) out.push(p);
+    const path = join(dir, name);
+    if (statSync(path).isDirectory()) walk(path, extensions, out);
+    else if (extensions.some(extension => name.endsWith(extension))) out.push(path);
   }
   return out;
 }
 
-const jsFiles = walk(join(PUBLIC, "js"), [".js"]);
-const cssFiles = walk(join(PUBLIC, "css"), [".css"]);
-const isComment = line => /^\s*(\/\/|\*|\/\*)/.test(line);
+function splitComment(text, firstLine) {
+  return text.split(/\r?\n/).map((line, index) => ({
+    line: firstLine + index,
+    text: line.trim(),
+  }));
+}
 
-/* ── 사전 수집 ── */
-const symbolOwners = new Map();   // 함수/상수명 → 정의 파일 목록
-for (const f of jsFiles) {
-  const rel = norm(f);
-  const src = readFileSync(f, "utf8");
+/** 문자열 리터럴 안의 주석 모양은 제외하고 JS/CSS 주석만 추출한다. */
+function collectSlashComments(source) {
+  const comments = [];
+  let line = 1;
+  let quote = null;
+
+  for (let index = 0; index < source.length;) {
+    const char = source[index];
+    const next = source[index + 1];
+
+    if (char === "\n") {
+      line += 1;
+      index += 1;
+      continue;
+    }
+
+    if (quote) {
+      if (char === "\\") {
+        index += 2;
+      } else {
+        if (char === quote) quote = null;
+        index += 1;
+      }
+      continue;
+    }
+
+    if (char === "\"" || char === "'" || char === "`") {
+      quote = char;
+      index += 1;
+      continue;
+    }
+
+    if (char === "/" && next === "/") {
+      const end = source.indexOf("\n", index);
+      comments.push(...splitComment(source.slice(index, end < 0 ? source.length : end), line));
+      index = end < 0 ? source.length : end;
+      continue;
+    }
+
+    if (char === "/" && next === "*") {
+      const startLine = line;
+      const end = source.indexOf("*/", index + 2);
+      const stop = end < 0 ? source.length : end + 2;
+      const comment = source.slice(index, stop);
+      comments.push(...splitComment(comment, startLine));
+      line += (comment.match(/\n/g) || []).length;
+      index = stop;
+      continue;
+    }
+
+    index += 1;
+  }
+
+  return comments;
+}
+
+function collectHtmlComments(source) {
+  const comments = [];
+  let index = 0;
+  let line = 1;
+
+  while (index < source.length) {
+    const start = source.indexOf("<!--", index);
+    if (start < 0) break;
+    line += (source.slice(index, start).match(/\n/g) || []).length;
+    const end = source.indexOf("-->", start + 4);
+    const stop = end < 0 ? source.length : end + 3;
+    const comment = source.slice(start, stop);
+    comments.push(...splitComment(comment, line));
+    line += (comment.match(/\n/g) || []).length;
+    index = stop;
+  }
+
+  return comments;
+}
+
+/** Python 문자열과 삼중 따옴표 블록을 건너뛰고 # 주석만 추출한다. */
+function collectPythonComments(source) {
+  const comments = [];
+  let tripleQuote = null;
+
+  source.split(/\r?\n/).forEach((line, lineIndex) => {
+    let quote = null;
+    for (let index = 0; index < line.length;) {
+      const triple = line.slice(index, index + 3);
+
+      if (tripleQuote) {
+        if (triple === tripleQuote) {
+          tripleQuote = null;
+          index += 3;
+        } else {
+          index += 1;
+        }
+        continue;
+      }
+
+      if (quote) {
+        if (line[index] === "\\") index += 2;
+        else {
+          if (line[index] === quote) quote = null;
+          index += 1;
+        }
+        continue;
+      }
+
+      if (triple === "'''" || triple === '"""') {
+        tripleQuote = triple;
+        index += 3;
+      } else if (line[index] === "'" || line[index] === '"') {
+        quote = line[index];
+        index += 1;
+      } else if (line[index] === "#") {
+        comments.push({ line: lineIndex + 1, text: line.slice(index).trim() });
+        break;
+      } else {
+        index += 1;
+      }
+    }
+  });
+
+  return comments;
+}
+
+function collectCommentLines(source, file) {
+  if (extname(file) === ".html") return collectHtmlComments(source);
+  if (extname(file) === ".py") return collectPythonComments(source);
+  return collectSlashComments(source);
+}
+
+// 금지 표현과 같은 데이터 문자열을 주석으로 오인하면 감사 자체가 신뢰할 수 없다.
+const slashLexerFixture = 'const value = "upload/example 사용자 요청";\n// 사용자 요청';
+const pythonLexerFixture = 'value = "upload/example 사용자 요청"\n# 사용자 요청';
+const htmlLexerFixture = '<p data-note="upload/example 사용자 요청"></p><!-- 사용자 요청 -->';
+if (collectSlashComments(slashLexerFixture).length !== 1
+  || collectPythonComments(pythonLexerFixture).length !== 1
+  || collectHtmlComments(htmlLexerFixture).length !== 1) {
+  throw new Error("comment lexer가 문자열과 주석을 구분하지 못했습니다.");
+}
+
+const appJsFiles = walk(join(PUBLIC, "js"), [".js"]);
+const testJsFiles = walk(join(PUBLIC, "tests"), [".mjs", ".js"]);
+const cssFiles = walk(join(PUBLIC, "css"), [".css"]);
+const scriptFiles = walk(join(ROOT, "scripts"), [".mjs", ".py"]);
+const scriptJsFiles = scriptFiles.filter(file => file.endsWith(".mjs"));
+const sourceFiles = [...appJsFiles, ...testJsFiles, ...cssFiles, ...scriptFiles, INDEX];
+
+const symbolOwners = new Map();
+for (const file of [...appJsFiles, ...testJsFiles, ...scriptJsFiles]) {
+  const source = readFileSync(file, "utf8");
   const names = new Set();
-  for (const m of src.matchAll(/^(?:export\s+)?(?:async\s+)?function\s+(\w+)/gm)) names.add(m[1]);
-  for (const m of src.matchAll(/^(?:export\s+)?const\s+(\w+)\s*=/gm)) names.add(m[1]);
-  for (const n of names) {
-    if (!symbolOwners.has(n)) symbolOwners.set(n, []);
-    symbolOwners.get(n).push(rel);
+  for (const match of source.matchAll(/^(?:export\s+)?(?:async\s+)?function\s+(\w+)/gm)) names.add(match[1]);
+  for (const match of source.matchAll(/^(?:export\s+)?const\s+(\w+)\s*=/gm)) names.add(match[1]);
+  for (const name of names) {
+    if (!symbolOwners.has(name)) symbolOwners.set(name, []);
+    symbolOwners.get(name).push(norm(file));
   }
 }
-const allCode = jsFiles.map(f => readFileSync(f, "utf8")).join("\n");
-const codeIdents = new Set(allCode.match(/\b[A-Za-z_$][\w$]*\b/g) || []);
+
+const allCode = [...appJsFiles, ...testJsFiles, ...scriptJsFiles]
+  .map(file => readFileSync(file, "utf8"))
+  .join("\n");
+const codeIdentifiers = new Set(allCode.match(/\b[A-Za-z_$][\w$]*\b/g) || []);
 
 const cssClasses = new Set();
-for (const f of cssFiles) {
-  for (const m of readFileSync(f, "utf8").matchAll(/\.([a-zA-Z][\w-]*)/g)) cssClasses.add(m[1]);
+for (const file of cssFiles) {
+  for (const match of readFileSync(file, "utf8").matchAll(/\.([a-zA-Z][\w-]*)/g)) {
+    cssClasses.add(match[1]);
+  }
 }
-// JS 템플릿 문자열이 직접 붙이는 클래스도 실재로 인정
-for (const m of allCode.matchAll(/class="([^"]+)"/g)) {
-  for (const c of m[1].split(/\s+/)) if (/^[a-z]/.test(c) && !c.includes("$")) cssClasses.add(c);
+for (const file of [...appJsFiles, INDEX]) {
+  const source = readFileSync(file, "utf8");
+  for (const match of source.matchAll(/class="([^"]+)"/g)) {
+    for (const className of match[1].split(/\s+/)) {
+      if (/^[a-z]/.test(className) && !className.includes("$")) cssClasses.add(className);
+    }
+  }
 }
 
-/* ── 검사 ── */
-const findings = { xref: [], symbol: [], path: [], css: [] };
+const forbiddenHistoryPatterns = [
+  /\[(?:사용자\s*(?:요청|제공|업로드|확인)[^\]]*|버그\s*수정[^\]]*|개선사항[^\]]*|신규\s*추가[^\]]*|재?정정[^\]]*|수정[^\]]*|전면\s*(?:리뉴얼|재설계|교체)[^\]]*)\]/i,
+  /\[[vV]\d+(?:\.\d+)*(?:\s+[^\]]*)?\]/,
+  /\[(?:19|20)\d{2}-\d{1,2}(?:-\d{1,2})?(?:\s+[^\]]*)?\]/,
+  /사용자(?:가|의)?\s*(?:요청|제공|업로드|확인|지적|재확인|채팅)/i,
+  /사용자\s*(?:요청|제공|업로드|확인|지적|재확인|채팅)/i,
+  /\bupload[\\/]/i,
+  /마스터\s*스키마/i,
+  /(?:값\s*(?:정정|수정)|재검증|기존\s*값|최초\s*반영|신규\s*(?:반영|추가)|부터\s*도입|예전(?:에는|엔)?|이전(?:에는|에)?\s*있)/i,
+  /(?:19|20)\d{2}-\d{1,2}-\d{1,2}/,
+];
 
-for (const f of jsFiles) {
-  const rel = norm(f);
-  readFileSync(f, "utf8").split(/\r?\n/).forEach((line, i) => {
-    if (!isComment(line)) return;
-    const at = `${rel}:${i + 1}`;
-    const text = line.trim();
+const findings = { xref: [], symbol: [], path: [], css: [], history: [] };
 
-    // 1) 교차참조
-    const fileRefs = [...line.matchAll(/([\w-]+(?:\.[\w-]+)*\.js)\b/g)].map(m => m[1]);
+for (const file of sourceFiles) {
+  const rel = norm(file);
+  const source = readFileSync(file, "utf8");
+
+  for (const comment of collectCommentLines(source, file)) {
+    const at = `${rel}:${comment.line}`;
+    const text = comment.text;
+
+    const fileRefs = [...text.matchAll(/([\w-]+(?:\.[\w-]+)*\.(?:m?js))\b/g)].map(match => match[1]);
     if (fileRefs.length) {
-      const idents = new Set([
-        ...[...line.matchAll(/\b([a-z][a-zA-Z0-9]{4,})\s*\(/g)].map(m => m[1]),
-        ...[...line.matchAll(/\b([a-z]+[A-Z][a-zA-Z0-9]{3,})\b/g)].map(m => m[1]),
+      const identifiers = new Set([
+        ...[...text.matchAll(/\b([a-z][a-zA-Z0-9]{4,})\s*\(/g)].map(match => match[1]),
+        ...[...text.matchAll(/\b([a-z]+[A-Z][a-zA-Z0-9]{3,})\b/g)].map(match => match[1]),
       ]);
-      for (const id of idents) {
-        const owners = symbolOwners.get(id);
+      for (const identifier of identifiers) {
+        const owners = symbolOwners.get(identifier);
         if (!owners) continue;
-        for (const fr of fileRefs) {
-          if (fr === "main.js") continue;   // main 은 호출만 하므로 정의가 없는 게 정상
-          if (!owners.some(o => o.endsWith("/" + fr) || o === fr)) {
-            findings.xref.push(`${at}\n    주석: "${fr} 의 ${id}"  실제: ${owners.join(", ")}\n    ${text}`);
+        for (const fileRef of fileRefs) {
+          if (fileRef === "main.js") continue;
+          if (!owners.some(owner => owner.endsWith(`/${fileRef}`) || owner === fileRef)) {
+            findings.xref.push(`${at}\n    주석: "${fileRef} 의 ${identifier}"  실제: ${owners.join(", ")}\n    ${text}`);
           }
         }
       }
     }
 
-    // 2) 없는 함수
-    for (const m of line.matchAll(/\b([a-z][a-zA-Z0-9]{5,})\(\)/g)) {
-      if (!codeIdents.has(m[1])) findings.symbol.push(`${at}  ${m[1]}()  | ${text}`);
+    for (const match of text.matchAll(/\b([a-z][a-zA-Z0-9]{5,})\(\)/g)) {
+      if (!codeIdentifiers.has(match[1])) findings.symbol.push(`${at}  ${match[1]}()  | ${text}`);
     }
 
-    // 3) 없는 경로
-    for (const m of line.matchAll(/\b((?:public|raw-data|docs|upload)\/[\w./-]+)/g)) {
-      const p = m[1].replace(/[.,)]+$/, "");
-      if (!existsSync(join(ROOT, p))) findings.path.push(`${at}  ${p}  | ${text}`);
+    for (const match of text.matchAll(/\b((?:public|raw-data|docs|upload)\/[\w./-]+)/g)) {
+      const path = match[1].replace(/[.,)]+$/, "");
+      if (!existsSync(join(ROOT, path))) findings.path.push(`${at}  ${path}  | ${text}`);
     }
 
-    // 4) 없는 CSS 클래스 (BEM 형태만 — 일반 단어 오탐 방지)
-    for (const m of line.matchAll(/\.([a-z][\w-]*(?:__|--)[\w-]+)/g)) {
-      if (!cssClasses.has(m[1])) findings.css.push(`${at}  .${m[1]}  | ${text}`);
+    for (const match of text.matchAll(/\.([a-z][\w-]*(?:__|--)[\w-]+)/g)) {
+      if (!cssClasses.has(match[1])) findings.css.push(`${at}  .${match[1]}  | ${text}`);
     }
-  });
+
+    if (forbiddenHistoryPatterns.some(pattern => pattern.test(text))) {
+      findings.history.push(`${at}  ${text}`);
+    }
+  }
 }
 
-/* ── 출력 ── */
 const groups = [
   ["주석이 가리킨 파일에 그 함수가 없음", findings.xref],
   ["주석이 언급했지만 코드에 없는 함수", findings.symbol],
   ["주석에 적힌 경로가 존재하지 않음", findings.path],
-  ["주석이 언급했지만 정의 없는 CSS 클래스", findings.css],
+  ["주석이 언급했지만 정의되지 않은 CSS 클래스", findings.css],
+  ["주석 규칙에서 금지한 요청·임시 출처·이력 표현", findings.history],
 ];
+
 let total = 0;
-for (const [title, arr] of groups) {
-  const uniq = [...new Set(arr)];
-  total += uniq.length;
-  if (uniq.length) {
-    console.log(`\n! ${title} (${uniq.length}건)`);
-    for (const line of uniq) console.log("   " + line.split("\n").join("\n   "));
-  }
+for (const [title, items] of groups) {
+  const uniqueItems = [...new Set(items)];
+  total += uniqueItems.length;
+  if (!uniqueItems.length) continue;
+  console.log(`\n! ${title} (${uniqueItems.length}건)`);
+  for (const item of uniqueItems) console.log(`   ${item.split("\n").join("\n   ")}`);
 }
-if (!total) console.log(`✓ 주석의 코드·경로 참조가 모두 실재함 (js ${jsFiles.length}개 검사)`);
-else console.log(`\n총 ${total}건 — 대상이 옮겨졌는데 주석이 안 따라간 곳입니다.`);
+
+if (!total) {
+  console.log(`✓ 주석 참조와 작성 규칙 통과 (${sourceFiles.length}개 소스 검사)`);
+} else {
+  console.log(`\n총 ${total}건의 주석 문제를 발견했습니다.`);
+}
 process.exit(total ? 1 : 0);

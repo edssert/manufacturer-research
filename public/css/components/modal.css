@@ -83,11 +83,9 @@
    overflow-y: auto 로 스크롤한다. overflow: hidden(모서리 둥글게 자르는
    용도)과 auto 스크롤을 동시에 원하면 축별로 분리해야 한다(overflow-x는
    hidden, overflow-y는 auto) — 가로 스크롤은 막고 세로만 허용.
-   [높이 통일] BOB32 처럼 항목이 적어 콘텐츠가 짧은
-   액세서리 모달은 예전엔 내용 높이만큼만 작게 열렸는데, Split View 두
-   pane 이 항상 같은 높이(calc(100vh - 80px))로 맞춰지는 것과 같은 느낌을
-   단일 모달에도 주기 위해 height 를 명시해 콘텐츠 길이와 무관하게 항상
-   최대 높이를 차지하게 한다(짧은 콘텐츠는 카드 안쪽에 남는 공간이
+   [높이 통일] 단일 모달도 Split View pane과 같은 높이
+   (calc(100vh - 80px))를 사용한다. 콘텐츠 길이와 무관하게 최대 높이를
+   유지하며, 짧은 콘텐츠는 카드 안쪽에 남는 공간이
    생기고, 긴 콘텐츠는 기존처럼 스크롤된다 — max-height 는 그대로 유지해
    더 커지지는 않는다). */
 .modal:not(.modal--split) {
@@ -140,7 +138,7 @@
    강제로 그려서, CSS(margin/min-height/border-clip 등)로는 막대의 실제
    길이를 원하는 만큼 짧게 줄일 수 없었다(칠해진 색만 줄어들 뿐 실제
    점유 길이는 그대로) — 그래서 네이티브 스크롤바는 완전히 숨기고,
-   js/ui/modal.js wireScrollbarAutoShow 가 스크롤 비율을 직접 계산해 그리는
+   js/ui/pane-interactions.js의 wireScrollbarAutoShow가 스크롤 비율을 계산하는
    오버레이 막대(.modal__scrollbar, .modal__scrollbar-thumb)로 대체한다.
    길이를 자유롭게(카드 높이와 무관하게 항상 짧게) 고정할 수 있는 것도
    이 방식의 장점. */
@@ -166,8 +164,8 @@
    position: fixed 로 바꾸면 스크롤 컨테이너의 문서 흐름/overflow 계산에서
    완전히 빠지므로(뷰포트 기준 배치, 스크롤 컨테이너는 그저 우연히 조상일
    뿐 레이아웃에 관여하지 않음) 안전하다 — 대신 화면 절대좌표를 js 가
-   getBoundingClientRect() 로 직접 계산해 넣어야 한다(js/ui/modal.js
-   wireScrollbarAutoShow 참고). */
+   getBoundingClientRect()로 직접 계산해 넣어야 한다
+   (js/ui/pane-interactions.js의 wireScrollbarAutoShow 참고). */
 .modal__scrollbar-track {
   position: fixed;
   width: 4px;
@@ -205,9 +203,7 @@
    .modal__head 의 24px padding 기준선(= 아래 spec-table/match-table 의
    실제 우측 끝과 동일한 세로선)까지 그대로 뻗을 수 있다. */
 .modal__head .eyebrow { margin-bottom: 7px; padding-right: 28px; }
-/* 사진 확대 pane(js/ui/split-view.js openMediaSplitPane)은
-   제목/사양 없이 닫기 버튼만 있는 빈 헤더라, 기본 border-bottom 구분선이
-   붕 떠 있는 가로줄처럼 어색해 보였다 — 이 전용 헤더에서만 없앤다. */
+/* 사진 확대 pane은 시각적으로 닫기 버튼만 보이므로 기본 구분선을 없앤다. */
 .modal__head--media-only { border-bottom: none; padding-bottom: 0; }
 .modal__title {
   font-size: 28px;
@@ -216,6 +212,17 @@
   line-height: 1.05;
   /* [레이아웃 안정성] 아주 긴 모델명도 모달 폭을 넘지 않고 줄바꿈 */
   overflow-wrap: break-word;
+}
+.modal__title--sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 /* [Type/Crossover 요약 태그] 제목과 배지를 한 행에 나란히 배치. 닫기
    버튼이 위 eyebrow 줄로 옮겨졌으므로 이 줄에는 여유 padding 이 필요
@@ -310,8 +317,8 @@
   place-items: center;
 }
 /* 사진 클릭 → Split View 오른쪽 pane 자리에 확대본을 연다
-   (hover-zoom 은 그대로 유지, 별개 기능 — js/ui/split-view.js
-   openMediaSplitPane, js/ui/modal.js wireMediaLightbox 참고). pane 자체의
+   (hover-zoom은 별개 기능 — js/ui/split-view.js의 openMediaSplitPane과
+   js/ui/pane-interactions.js의 wireMediaLightbox 참고). pane 자체의
    카드 배경/테두리는 split-view.css .split-view__pane 을 그대로 쓰고,
    여기서는 그 안의 빈 바디에 사진만 꽉 채워 보여준다. */
 /* [뷰 전환 버튼 추가] 확대 pane 이 여러 장(뷰)을 가질 때 사진 아래에
@@ -360,18 +367,10 @@
      높이가 먼저 차 좌우 여백이 남아 "제품마다 다르게" 보였다. 세로의
      98%(아래 max-height)와 동일하게 가로도 98%로 맞추면 중앙 정렬이라
      제품 종류·비율과 무관하게 항상 좌우 균일한 여백이 생긴다. */
-  /* [후속] 좌우(max-width)와 상하(max-height) 캡을 같은
-     값으로 통일 — 확대 pane 의 여백 한계를 대칭으로. 95%는 너무 꽉 차
-     보여 85%(여백 15%)로 조정. */
+  /* 확대 pane은 가로·세로 한계를 85%로 맞춰 대칭 여백을 확보한다. */
   max-width: 85%;
-  /* [FHD 100% 줌에서 사진 잘림 수정 후 후속 조정] 잘림은
-     해결됐지만 세로로 긴 이미지(Array 등)가 정확히 박스 높이까지 꽉
-     차면서 위아래 여백이 거의 안 보였다 — max-height 를 100%가 아닌
-     98%로 살짝 줄여 항상 미세한 여백이 남도록 한다(2%면 육안으로는
-     "약간의 숨 쉴 틈" 정도로만 보이고 사진이 작아 보이지는 않음). */
-  /* [후속] Soka/Syva 처럼 극단적으로 세로로 긴 이미지
-     (1:5~1:7.6)는 98%로도 서브픽셀 반올림 + 아래 drop-shadow 때문에
-     하단이 아주 살짝 잘렸다 — 85%로 낮춰 상하 여유를 더 준다. */
+  /* Soka/Syva처럼 세로로 긴 이미지도 서브픽셀 반올림과 drop-shadow가
+     하단에서 잘리지 않도록 높이 여유를 같은 비율로 둔다. */
   max-height: 85%;
   /* [근본 원인] grid item 의 암묵적 min-height 는 기본값이
      auto(=콘텐츠 자체 크기)라, 세로로 긴 원본 이미지(Array 사진 등)가
@@ -383,16 +382,11 @@
      계산되어 근본적으로 넘치지 않는다. */
   min-height: 0;
   object-fit: contain;
-  /* [후속] 하향 오프셋(20px)이 세로로 긴 이미지 하단을
-     넘겨 클리핑을 키웠다 — 오프셋/블러를 줄여 하단 초과를 최소화. */
+  /* 작은 그림자 오프셋을 써 세로 이미지의 하단 클리핑을 피한다. */
   filter: drop-shadow(0 8px 22px rgba(0, 0, 0, .55));
 }
-/* [특이도 수정] 이미지가 .modal__img(뷰 전환 배선용)를 겸하면서
-   .modal__media img(158px/74% 고정, 아래 선언)에 특이도로 밀려 확대
-   pane 안에서도 원본 모달 박스 크기로 눌려 보였다 — 여기서 다시
-   태그+클래스 조합으로 덮어써 확대 pane 에서는 98%까지 커지게 한다
-   (100%가 아닌 98%인 이유는 위 .media-split-pane__img 선언과 동일 —
-   FHD 100% 줌에서도 사진 아래 미세한 여백이 남도록). */
+/* 태그+클래스 조합으로 .modal__media img보다 높은 특이도를 확보해 확대
+   pane에서도 위의 85% 한계를 유지한다. */
 .modal__media img.media-split-pane__img {
   max-width: 85%;
   max-height: 85%;
@@ -458,7 +452,8 @@
    Acoustical 과 구분되는 선)까지 끊기지 않고 이어지고, 토글 버튼 자체는
    투명(.modal__view-btn)이라 그 위에 배경이 그대로 비쳐 보인다. 구분선도
    사진↔토글 사이가 아니라 wrap 전체의 맨 아래에만 둔다. 두 <img data-view>
-   는 같은 grid 셀에 겹쳐 있고, 버튼 클릭 시 modal.js 의 wireViewSwitch 가
+   는 같은 grid 셀에 겹쳐 있고, 버튼 클릭 시 pane-interactions.js의
+   wireViewSwitch가
    hidden 속성을 토글해 표시 이미지를 바꾼다. */
 .modal__media-wrap {
   position: relative;
@@ -466,9 +461,9 @@
      --card-media-start 참고, card__media 와 같은 톤 계열) */
   background: radial-gradient(circle at 50% 38%, var(--card-media-start), var(--panel) 88%);
   border-bottom: 1px solid var(--line);
-  /* [확대 시 토글 바까지 자연스럽게] 클리핑을 사진 박스(.modal__media)가
-     아니라 이 wrap 전체가 담당 — 이미지가 확대(hover zoom)되면 토글 바
-     영역까지 자연스럽게 퍼져 보인다(사용자 의도). 대신 토글 버튼은 아래
+  /* [확대 시 토글 바] 클리핑은 사진 박스(.modal__media)가 아니라 wrap
+     전체가 담당해 확대 이미지가 토글 바 영역까지 자연스럽게 이어진다.
+     토글 버튼은 아래
      .modal__view-switch 의 z-index 로 항상 이미지 위에 떠서 가려지지
      않고 클릭 가능하다. */
   overflow: hidden;
@@ -486,10 +481,10 @@
    영역은 위로 슬라이드되며 사라진다 — max-height 를 0으로 줄이고
    opacity 도 함께 낮춰 "접히며 사라지는" 느낌을 준다. overflow:hidden 이
    이미 걸려있어 별도 클리핑 처리 없이도 내용이 그 높이만큼만 보인다.
-   modal.js wireMediaLightbox 가 클릭 시 이 클래스를 추가하고,
+   pane-interactions.js의 wireMediaLightbox가 클릭 시 이 클래스를 추가하고,
    split-view.js closeSplitPane2 가 확대 pane 이 닫힐 때 제거한다.
    [속도 조정] 오른쪽 확대 pane 오픈이 이 트랜지션 종료를
-   기다렸다가 진행되므로(modal.js wireMediaLightbox), 너무 느리면 확대
+   기다렸다가 진행되므로(pane-interactions.js의 wireMediaLightbox), 너무 느리면 확대
    pane 이 뜨는 체감 속도까지 함께 느려진다 — .28s(기본) 대비 살짝만
    느리게. */
 .modal__media-wrap--collapsing {
@@ -503,11 +498,8 @@
    버튼을 누르기 쉬워진다 — 평상시엔 사진을 최대한 가리지 않으면서도
    지금 활성 뷰가 무엇인지는 흐릿하게나마 계속 보여준다. */
 .modal__media-wrap:hover .modal__view-switch { opacity: 1; }
-/* [최종 해결] whitebg 뷰가 보이는 동안엔 배경을 그냥
-   흰색으로 고정한다 — card.css 와 동일하게, whitebg 이미지 파일 자체를
-   이미 흰 배경으로 좌우 확장해서 저장해뒀으므로(원본 raw 는 그대로,
-   assets 처리본만 가공) 배경과 이미지가 "같은 색"이 되어 이음매가
-   생기지 않는다. */
+/* [흰 배경] whitebg 뷰가 보이는 동안 배경을 흰색으로 고정한다. 좌우를
+   흰색으로 확장한 배포 이미지와 배경색이 같아 이음매가 생기지 않는다. */
 .modal__media-wrap:has(img.modal__img--whitebg:not([hidden])) {
   background: #fff;
 }
@@ -519,21 +511,15 @@
    재사용한다. 모달 박스(628×190)는 카드보다 비율이 다르므로 cover 로
    채우면 위아래가 잘릴 수 있어, contain 으로 잘림 없이 전체를 보여주되,
    폭 기준으로 꽉 차면 다이어그램 자체가 작아 보이므로(카드용 이미지가
-   가로로 김) 항상 scale(1.8)로 확대해 다이어그램이 크게 보이게 고정한다
-   (사용자 요청) — 일반 이미지에 있는 커서 추적 hover 확대 기능은 이
-   다이어그램에는 불필요하다고 판단해(사용자 확인) 뺐다.
+   가로로 김) 항상 scale(1.8)로 확대해 다이어그램을 크게 고정한다.
+   다이어그램에는 일반 이미지의 커서 추적 hover 확대를 적용하지 않는다.
    transform-origin 은 .modal__media img 기본 규칙에서
    var(--zoom-x, 50%) var(--zoom-y, 50%) 로 마우스 위치를 추적하는데,
    whitebg 이미지는 이 값을 덮어쓰지 않아 마우스 움직임에 따라 확대
    기준점이 계속 바뀌면서 이미지가 위치를 옮기는 것처럼 보였다(호버가
    끝나도 --zoom-x/y 값 자체는 리셋되지 않아 원상복귀도 안 됨). 기준점을
-   50% 50%(중앙)로 고정해 마우스 위치와 완전히 무관하게 만든다.
-   [재조정] 60% 기준점이 의도와 반대로 이미지를 오히려
-   아래로 내려 보이게 했다(사용자 확인) — transform-origin 이 클수록
-   그 지점을 축으로 아래쪽이 더 늘어나 이미지 전체가 아래로 밀리는
-   방향이었다. 하단 여백을 줄이려면(이미지를 위로 붙여야 함) origin 을
-   중앙보다 위(40%)로 옮겨야 한다 — 배율은 2.6, 기준점은 여러 차례 조정
-   끝에 50%(중앙)가 적당하다고 확인됨(사용자 확인). */
+   50% 50%(중앙)로 고정해 마우스 위치와 무관하게 만든다. 배율 2.6과 중앙
+   기준점을 함께 유지해야 이미지의 위아래 여백이 균형을 이룬다. */
 .modal__media img.modal__img--whitebg,
 .modal__media img.modal__img--whitebg:hover {
   filter: none;
@@ -587,8 +573,8 @@
    Vertical (Panflex)는 항상 함께 다니는 "앵글" 계열이라 라벨이 짧다 —
    이 셋만 세로로 쌓아(.modal__view-switch-stack) 한 칸으로 압축하고,
    부가 설명이 긴 나머지 뷰(Array White/Array Black/With SB18 등)는
-   스택 칸을 제외하고는 항상 한 줄로 가로 나열해야 한다(사용자 확인 —
-   With SB18 이 줄바꿈으로 아래 줄에 혼자 떨어지면 안 됨). flex-wrap 을
+   스택 칸을 제외하고 항상 한 줄로 나열한다. With SB18이 별도 행으로
+   떨어지지 않도록 flex-wrap을
    기본값(nowrap)으로 둬 폭이 좁아져도 줄바꿈 대신 버튼 자체가 줄어들게
    한다. */
 /* [복구] 스택 칸을 포함하는 그룹 변형 — 유실됐던 정의 재작성. 스택+가로
@@ -661,10 +647,8 @@
    wrapHyphenTokens) 항상 통째로 다음 줄로 넘어가게 한다. */
 .modal__view-btn-sub-nowrap { white-space: nowrap; }
 .modal__view-btn:hover { color: var(--ink-2); }
-/* [확대 시 토글도 사진이 비쳐 보이게] active 버튼도 배경을 채우지 않는다 —
-   불투명 배경(구 --panel-3)이 있으면 사진이 확대(hover zoom)됐을 때 Array
-   등 활성 토글 영역만 사진을 가리는 사각형처럼 보였다(사용자 확인).
-   활성 여부는 글자색+테두리만으로 구분한다. */
+/* [확대 시 토글] active 버튼도 배경을 채우지 않아 hover zoom 이미지를
+   가리지 않는다. 활성 여부는 글자색과 테두리만으로 구분한다. */
 .modal__view-btn.is-active {
   color: var(--mfr, var(--accent));
   border-color: var(--mfr, var(--accent));
@@ -680,9 +664,8 @@
   margin: 0 0 14px;
 }
 
-/* [System Elements 토글과의 구분] 앰프 랙 모달에서 System Elements 접기/
-   펼치기 영역 바로 아래에 notes 문단이 오면 경계가 흐릿해 보였다(사용자
-   확인) — 위쪽에 여백 + 구분선을 추가해 두 블록을 시각적으로 분리한다. */
+/* [System Elements 구분] 앰프 랙 모달의 접기/펼치기 영역과 notes 사이에
+   여백과 구분선을 둬 두 블록의 경계를 유지한다. */
 .modal__notes--after-toggle {
   margin-top: 18px;
   padding-top: 18px;

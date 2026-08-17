@@ -2,11 +2,10 @@
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
 // PANTHER 는 Meyer Sound 의 자체 DSP 앰프 내장형(파워드) 라인어레이라
-// L-Acoustics/d&b 처럼 외부 앰프를 골라 매칭하는 개념이 없다 — amps 는
-// 항상 빈 배열이고(사용자 확인), 대신 AC Power/Audio Input 스펙을
-// connectors 필드에 요약해 담는다. 대표 이미지는 사용자가 업로드한 흰 배경
-// 앵글샷(panther_portal-sq.jpg)의 배경을 제거해 반영 — L/M/W 세 모델 모두
-// 외형이 동일(커버리지 각도만 다름)해 같은 사진을 공유한다(사용자 확인).
+// L-Acoustics/d&b처럼 외부 앰프를 골라 매칭하는 개념이 없어 amps는 항상
+// 빈 배열이고, AC Power/Audio Input 스펙은 connectors 필드에 요약한다.
+// L/M/W 세 모델은 외형이 같고 커버리지 각도만 다르므로 같은 투명 배경
+// 이미지를 공유한다.
 export const MY_PANTHER_SERIES = [
   {
     "id": "spk-my-panther-l",

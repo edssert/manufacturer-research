@@ -13,9 +13,16 @@
 let mediaLightboxOpener = null;
 
 /**
+ * @typedef {HTMLElement & {
+ *   _scrollbarTrack?: HTMLDivElement|null,
+ *   _scrollHideTimer?: ReturnType<typeof setTimeout>
+ * }} InteractiveElement
+ */
+
+/**
  * split-view.js 가 앱 초기화 시 1회 호출해 실제 "사진 확대 pane 열기" 구현을
  * 등록한다.
- * @param {(views: {src: string, alt: string, label: string}[], startIndex: number, paneColor: string, onViewChange: (index: number) => void, sourceId?: string) => void} opener
+ * @param {(views: {src: string, alt: string, label: string, slug: string}[], startIndex: number, paneColor: string, onViewChange?: (slug: string) => void, sourceId?: string) => void} opener
  */
 export function setMediaLightboxOpener(opener) {
   mediaLightboxOpener = opener;
@@ -45,8 +52,8 @@ export function wirePaneInteractions(root) {
  * @param {HTMLElement} root 배선 대상 컨테이너 (모달 전체 또는 pane)
  */
 function wireAcousticTips(root) {
-  root.querySelectorAll(".acoustic-tip").forEach(tip => {
-    const pop = tip.querySelector(".acoustic-tip__popover");
+  /** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll(".acoustic-tip")).forEach(tip => {
+    const pop = /** @type {HTMLElement|null} */ (tip.querySelector(".acoustic-tip__popover"));
     if (!pop) return;
     const show = () => {
       const rect = tip.getBoundingClientRect();
@@ -85,7 +92,7 @@ const SCROLLBAR_MAX_THUMB = 160;
  * 네이티브 thumb 은 길이가 "트랙 × (가시영역/전체 콘텐츠)"로 강제되어 CSS 로
  * 짧게 고정할 수 없다 — 네이티브는 modal.css 에서 숨기고 오버레이로 대체한다.
  * root 가 스크롤 컨테이너다(단일 모달은 #modal, Split View 는 각 pane).
- * @param {HTMLElement} root 스크롤 컨테이너 (모달 전체 또는 pane)
+ * @param {InteractiveElement} root 스크롤 컨테이너 (모달 전체 또는 pane)
  */
 function wireScrollbarAutoShow(root) {
   // 사진 확대 pane 은 overflow:hidden 이어도 scrollHeight 는 커지므로 아래
@@ -101,7 +108,7 @@ function wireScrollbarAutoShow(root) {
     document.body.appendChild(track);
     root._scrollbarTrack = track;
   }
-  const thumb = track.querySelector(".modal__scrollbar-thumb");
+  const thumb = /** @type {HTMLElement} */ (track.querySelector(".modal__scrollbar-thumb"));
 
   const update = () => {
     const rect = root.getBoundingClientRect();
@@ -110,9 +117,15 @@ function wireScrollbarAutoShow(root) {
     track.style.left = `${rect.right - 7}px`;
     track.style.height = `${Math.max(0, trackH)}px`;
     const scrollable = root.scrollHeight - root.clientHeight;
-    if (scrollable <= 1) { track.style.display = "none"; return; }
+    if (scrollable <= 1) {
+      track.style.display = "none";
+      return;
+    }
     track.style.display = "";
-    const thumbH = Math.min(SCROLLBAR_MAX_THUMB, Math.max(SCROLLBAR_MIN_THUMB, trackH * (root.clientHeight / root.scrollHeight)));
+    const thumbH = Math.min(
+      SCROLLBAR_MAX_THUMB,
+      Math.max(SCROLLBAR_MIN_THUMB, trackH * (root.clientHeight / root.scrollHeight)),
+    );
     const maxThumbTop = Math.max(0, trackH - thumbH);
     const thumbTop = (root.scrollTop / scrollable) * maxThumbTop;
     thumb.style.height = `${thumbH}px`;
@@ -131,8 +144,13 @@ function wireScrollbarAutoShow(root) {
     clearTimeout(root._scrollHideTimer);
     root._scrollHideTimer = setTimeout(() => track.classList.remove("is-visible"), 700);
   };
-  root.onmouseenter = () => { update(); track.classList.add("is-visible"); };
-  root.onmouseleave = () => { if (!root._scrollHideTimer) track.classList.remove("is-visible"); };
+  root.onmouseenter = () => {
+    update();
+    track.classList.add("is-visible");
+  };
+  root.onmouseleave = () => {
+    if (!root._scrollHideTimer) track.classList.remove("is-visible");
+  };
   update();
   // .modal--pop-in 팝업 애니메이션(0.18s)이 끝나기 전에 rect 를 읽으면 중간
   // 좌표가 잡혀 트랙이 왼쪽에 어긋난다 — 끝난 뒤 한 번 더 잡는다.
@@ -142,7 +160,7 @@ function wireScrollbarAutoShow(root) {
 /**
  * root 에 연결된 커스텀 스크롤바 트랙을 제거한다 — Split View 진입/해제로
  * 스크롤 컨테이너가 바뀔 때 옛 트랙이 화면에 고아로 남지 않도록.
- * @param {HTMLElement} root
+ * @param {InteractiveElement} root
  */
 export function removeScrollbarTrack(root) {
   if (root && root._scrollbarTrack) {
@@ -157,16 +175,18 @@ export function removeScrollbarTrack(root) {
  * @param {HTMLElement} root 버튼/이미지를 담고 있는 컨테이너
  */
 function wireViewSwitch(root) {
-  const btns = root.querySelectorAll("[data-view-switch]");
+  const btns = /** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll("[data-view-switch]"));
   if (!btns.length) return;
-  const media = root.querySelector(".modal__media");
+  const media = /** @type {HTMLElement|null} */ (root.querySelector(".modal__media"));
   if (!media) return;
-  const imgs = media.querySelectorAll(".modal__img[data-view]");
+  const imgs = /** @type {NodeListOf<HTMLElement>} */ (media.querySelectorAll(".modal__img[data-view]"));
   btns.forEach(btn => {
     btn.onclick = () => {
       const view = btn.dataset.viewSwitch;
       btns.forEach(b => b.classList.toggle("is-active", b === btn));
-      imgs.forEach(img => { img.hidden = img.dataset.view !== view; });
+      imgs.forEach(img => {
+        img.hidden = img.dataset.view !== view;
+      });
     };
   });
 }
@@ -176,10 +196,10 @@ function wireViewSwitch(root) {
  * @param {HTMLElement} root 버튼/값을 담고 있는 컨테이너
  */
 function wireDimsUnitSwitch(root) {
-  const btns = root.querySelectorAll("[data-dims-unit]");
+  const btns = /** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll("[data-dims-unit]"));
   if (!btns.length) return;
-  const mmEl = root.querySelector("[data-dims-mm]");
-  const inEl = root.querySelector("[data-dims-in]");
+  const mmEl = /** @type {HTMLElement|null} */ (root.querySelector("[data-dims-mm]"));
+  const inEl = /** @type {HTMLElement|null} */ (root.querySelector("[data-dims-in]"));
   if (!mmEl || !inEl) return;
   btns.forEach(btn => {
     btn.onclick = () => {
@@ -196,10 +216,10 @@ function wireDimsUnitSwitch(root) {
  * @param {HTMLElement} root 버튼/값을 담고 있는 컨테이너
  */
 function wireWeightUnitSwitch(root) {
-  const btns = root.querySelectorAll("[data-weight-unit]");
+  const btns = /** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll("[data-weight-unit]"));
   if (!btns.length) return;
-  const kgEl = root.querySelector("[data-weight-kg]");
-  const lbEl = root.querySelector("[data-weight-lb]");
+  const kgEl = /** @type {HTMLElement|null} */ (root.querySelector("[data-weight-kg]"));
+  const lbEl = /** @type {HTMLElement|null} */ (root.querySelector("[data-weight-lb]"));
   if (!kgEl || !lbEl) return;
   btns.forEach(btn => {
     btn.onclick = () => {
@@ -221,33 +241,42 @@ function wireWeightUnitSwitch(root) {
  * @param {HTMLElement} root 모달 전체 컨테이너
  */
 function wireMediaLightbox(root) {
-  const media = root.querySelector(".modal__media");
+  const media = /** @type {HTMLElement|null} */ (root.querySelector(".modal__media"));
   if (!media || media.dataset.lightbox === "off") return;
   // addEventListener 금지 — wirePaneInteractions 는 모달을 열 때마다 다시
   // 호출되므로 리스너가 누적돼 클릭 한 번에 확대 pane 이 여러 번 열린다.
   media.onclick = () => {
-    const imgs = [...media.querySelectorAll("img[data-view]")];
-    const list = imgs.length ? imgs : [...media.querySelectorAll("img")];
+    const imgs = [.../** @type {NodeListOf<HTMLImageElement>} */ (media.querySelectorAll("img[data-view]"))];
+    const list = imgs.length ? imgs : [.../** @type {NodeListOf<HTMLImageElement>} */ (media.querySelectorAll("img"))];
     if (!list.length || !mediaLightboxOpener) return;
-    const startIndex = Math.max(0, list.findIndex(img => !img.hidden));
-    const views = list.map(img => ({ src: img.src, alt: img.alt, label: img.dataset.viewLabel || img.dataset.view || "", slug: img.dataset.view || "" }));
+    const startIndex = Math.max(
+      0,
+      list.findIndex(img => !img.hidden),
+    );
+    const views = list.map(img => ({
+      src: img.src,
+      alt: img.alt,
+      label: img.dataset.viewLabel || img.dataset.view || "",
+      slug: img.dataset.view || "",
+    }));
     // 확대 pane 강조선도 원본 pane 과 같은 제조사 색.
     const paneColor = getComputedStyle(root).getPropertyValue("--mfr").trim();
     // 확대 pane 이 열리는 동안 원본 모달의 사진 영역은 접히며 사라진다.
-    const wrap = media.closest(".modal__media-wrap");
+    const wrap = /** @type {HTMLElement|null} */ (media.closest(".modal__media-wrap"));
     // 확대 pane 을 닫을 때 원본 모달도 그 뷰로 되돌린다 — 같은 slug 의 뷰
     // 버튼을 클릭시켜 wireViewSwitch 의 토글 로직을 재사용한다. 인덱스가
     // 아니라 slug 인 이유: 스택 그룹이 있는 카드는 버튼 DOM 순서가 views
     // 순서와 달라 인덱스로는 엉뚱한 버튼을 누른다.
     const onViewChange = slug => {
-      const btn = [...root.querySelectorAll("[data-view-switch]")].find(b => b.dataset.viewSwitch === slug);
+      const btn = [.../** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll("[data-view-switch]"))].find(
+        b => b.dataset.viewSwitch === slug,
+      );
       if (btn) btn.click();
     };
     // [모달 라우팅] pane2 사진이면 그 항목 id 를 함께 넘겨 URL 에
     // "<항목id>~media~<뷰>" 로 기록한다. pane1 사진이면 "media~<뷰>".
-    const sourceId = (root.matches && root.matches(".split-view__pane:nth-child(2)"))
-      ? (root.closest(".split-view") || {}).dataset?.paneId || ""
-      : "";
+    const splitView = /** @type {HTMLElement|null} */ (root.closest(".split-view"));
+    const sourceId = root.matches(".split-view__pane:nth-child(2)") ? splitView?.dataset.paneId || "" : "";
     // 순서 주의: pane 오픈(DOM 재구성 포함)을 먼저 끝내고, 다음 프레임에
     // --collapsing 을 붙인다. 클래스를 먼저 붙이면 "접히기 전" 상태가 한 번도
     // 페인트되지 않아 트랜지션 없이 최종 모습으로 튄다.
@@ -268,13 +297,17 @@ function wireMediaLightbox(root) {
  * @param {HTMLElement} root 배선 대상 컨테이너
  */
 function wireConfigsToggle(root) {
-  root.querySelectorAll(".match-table__toggle-btn").forEach(btn => {
-    btn.onclick = (e) => {
+  /** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll(".match-table__toggle-btn")).forEach(btn => {
+    btn.onclick = e => {
       e.stopPropagation();
       const groupId = btn.dataset.toggleGroup;
       const expanded = btn.getAttribute("aria-expanded") === "true";
-      const members = root.querySelectorAll(`[data-toggle-member="${groupId}"]`);
-      members.forEach(row => { row.hidden = expanded; });
+      const members = [
+        .../** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll("[data-toggle-member]")),
+      ].filter(row => row.dataset.toggleMember === groupId);
+      members.forEach(row => {
+        row.hidden = expanded;
+      });
       btn.setAttribute("aria-expanded", String(!expanded));
       btn.textContent = expanded ? `+${members.length}` : "−";
     };
@@ -288,8 +321,13 @@ function wireConfigsToggle(root) {
  * @param {HTMLElement} root 배선 대상 컨테이너
  */
 function wireSectionToggle(root) {
-  const pairs = [...root.querySelectorAll("[data-section-toggle]")]
-    .map(btn => ({ btn, bodyEl: root.querySelector(`[data-section-toggle-body="${btn.dataset.sectionToggle}"]`) }))
+  const pairs = [.../** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll("[data-section-toggle]"))]
+    .map(btn => ({
+      btn,
+      bodyEl: [.../** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll("[data-section-toggle-body]"))].find(
+        el => el.dataset.sectionToggleBody === btn.dataset.sectionToggle,
+      ),
+    }))
     .filter(p => p.bodyEl);
   pairs.forEach(({ btn, bodyEl }) => {
     btn.onclick = e => {

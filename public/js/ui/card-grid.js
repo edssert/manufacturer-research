@@ -6,7 +6,7 @@
  *
  * 관련 CSS: css/components/card.css (.card-grid, .card-group, .empty-state)
  */
-import { $, esc, uniq } from "../core/dom.js";
+import { esc, uniq } from "../core/dom.js";
 import { passes, sortItems } from "../core/filter-engine.js";
 import { updateChipDisabledStates } from "./filters.js";
 import { buildSectionNav } from "./section-nav.js";
@@ -28,13 +28,13 @@ const collapsedGroups = new Set();
  * @param {HTMLElement} opts.resultsEl 결과를 그릴 컨테이너
  * @param {HTMLElement} opts.countEl 상단 카운트 표시 요소 (#count)
  * @param {HTMLElement|null} opts.filterPanelEl 필터 패널 (칩 비활성화 갱신용, 없으면 null)
- * @param {Object[]} opts.data 전체 데이터 배열
+ * @param {ReadonlyArray<Object>} opts.data 전체 데이터 배열
  * @param {Object} opts.state 도메인 상태 (검색어/칩/범위/정렬)
  * @param {Object} opts.schema 도메인 스키마
  * @param {Function} opts.cardHTML (item) => 카드 HTML 문자열
  * @param {Function} opts.onOpen (id) => void — 카드 클릭 시 모달 열기
- * @param {Object|null} opts.groupBy 그룹핑 설정 (null 이면 평면 그리드)
- * @param {string[]} [opts.groupBy.order] 그룹 키 표시 순서
+ * @param {Object} [opts.groupBy] 그룹핑 설정 (없으면 평면 그리드)
+ * @param {ReadonlyArray<string>} [opts.groupBy.order] 그룹 키 표시 순서
  * @param {Function} opts.groupBy.getKey (item) => 그룹 키
  * @param {Function} [opts.groupBy.subGroupKey] (item) => 서브그룹 키 (예: 시리즈)
  * @param {Function} [opts.groupBy.subGroupOrder] 서브그룹 정렬 비교 함수
@@ -54,7 +54,7 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
       <div class="empty-state__hint">${esc(schema.emptyHint || "검색어나 필터 조건을 넓혀 보세요.")}</div>
       <button class="btn btn--primary" id="reset2">필터 초기화</button>
     </div>`;
-    resultsEl.querySelector("#reset2").onclick = schema.onReset;
+    /** @type {HTMLElement} */ (resultsEl.querySelector("#reset2")).onclick = schema.onReset;
     buildSectionNav(null);
     return;
   }
@@ -73,16 +73,16 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
       const items = view.filter(d => inGroup(d, gk));
       if (!items.length) return;
       let sub = groupBy.subGroupKey
-        ? uniq(items.map(groupBy.subGroupKey))
+        ? uniq(items.map(item => groupBy.subGroupKey(item)))
         : [null];
       // 서브그룹(시리즈) 자체의 표시 순서 제어 — 예: Long/Medium/Short Throw
       // 를 먼저, 독립 Subwoofers 시리즈를 마지막에.
-      if (groupBy.subGroupOrder) sub = [...sub].sort(groupBy.subGroupOrder);
+      if (groupBy.subGroupOrder) sub = [...sub].sort((a, b) => groupBy.subGroupOrder(a, b));
       sub.forEach(sg => {
         let g = sg == null ? items : items.filter(d => groupBy.subGroupKey(d) === sg);
         if (!g.length) return;
         // 서브그룹 내부 카드 순서 제어 — 예: Subwoofer 타입(K1-SB 등)을 뒤로.
-        if (groupBy.sortWithinGroup) g = [...g].sort(groupBy.sortWithinGroup);
+        if (groupBy.sortWithinGroup) g = [...g].sort((a, b) => groupBy.sortWithinGroup(a, b));
         const headHTML = groupBy.headHTML(gk, sg, g);
         // 그룹 헤더를 토글 버튼으로 — groupKey 는 이 그룹의
         // 접힘 상태를 collapsedGroups 에서 조회/기록하는 고유 키.
@@ -111,13 +111,13 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
     // 누른 채 클릭하면 전체 펼치기/접기가 되게 한다 — 모달의 섹션 토글
     // Ctrl+클릭(ui/pane-interactions.js wireSectionToggle)과 동일한 패턴. 클릭한
     // 헤더 자신의 "다음 상태"를 기준으로 나머지 전체를 맞춘다.
-    resultsEl.querySelectorAll(".card-group[data-group-key]").forEach(section => {
-      const head = section.querySelector(".card-group__head");
+    /** @type {NodeListOf<HTMLElement>} */ (resultsEl.querySelectorAll(".card-group[data-group-key]")).forEach(section => {
+      const head = /** @type {HTMLElement} */ (section.querySelector(".card-group__head"));
       head.addEventListener("click", e => {
         const collapseNext = !section.classList.contains("card-group--collapsed");
         if (e.ctrlKey || e.metaKey) {
-          resultsEl.querySelectorAll(".card-group[data-group-key]").forEach(s => {
-            setCollapsed(s, s.querySelector(".card-group__head"), collapseNext);
+          /** @type {NodeListOf<HTMLElement>} */ (resultsEl.querySelectorAll(".card-group[data-group-key]")).forEach(s => {
+            setCollapsed(s, /** @type {HTMLElement} */ (s.querySelector(".card-group__head")), collapseNext);
           });
           return;
         }
@@ -129,7 +129,7 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
   }
 
   // ── 카드 클릭/키보드(Enter·Space) → 상세 모달 ──
-  resultsEl.querySelectorAll(".card[data-id]").forEach(c => {
+  /** @type {NodeListOf<HTMLElement>} */ (resultsEl.querySelectorAll(".card[data-id]")).forEach(c => {
     c.addEventListener("click", () => onOpen(c.dataset.id));
     c.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpen(c.dataset.id); } });
   });

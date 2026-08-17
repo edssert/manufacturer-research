@@ -47,13 +47,13 @@ export const LA_K_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/K1_v1.13.md 마스터 스키마 반영] Cardioid_Capability — 원문:
+    // [지향성] Cardioid_Capability — 원문:
     // raw-data/raw-specs/la/speakers/k-series/k1/k1.md acoustical_performance 섹션.
     "cardioidCapability": "No",
     "weight": 106,
     "transducers": "LF: 2 × 15″ · MF: 4 × 6.5″ · HF: 3 × 3″",
     "connectors": "8-point PA-COM x2 (IN 1 + LINK 1)",
-    // [upload/K1_v1.13.md 마스터 스키마 반영] PA-COM 8핀 그룹별 매핑.
+    // [커넥터] PA-COM 8핀 그룹별 매핑.
     // 원문: k1.md connectivity 섹션(OM p.17 "Connectors" 내부 핀아웃 표).
     "paComPinout": { "ab": "left LF", "cd": "right LF", "ef": "MF", "gh": "HF" },
     "ip": "IP43",
@@ -89,15 +89,11 @@ export const LA_K_SERIES = [
     "cardHoverView": "Array (8x + K1-BUMP)",
     "relations": {
       "ampIds": [],
-      // [사용자 제공, K1 System Elements] amplifiers.rack.relatedAccessoryIds
-      // 와 동일한 패턴 — accessories.data.js 의 id 를 그대로 참조하고
-      // cross-ref.findAccessoriesForSpeaker() 로 조회한다. 원문:
-      // raw-data/raw-specs/la/speakers/k-series/k1/k1.md System Elements 섹션.
-      // [수정] 최초 반영 시 리깅/프로텍션 15개만 넣고 케이블(acc-la-do,
-      // DO25/DO10/DO.7 통합 레코드)을 빠뜨렸다 — System Elements 목록의
-      // LA12X/LA-RAK II AVB 는 이미 d.amps(위 amps 필드)로 앰프 매칭 표에
-      // 별도 연결되어 있어 액세서리 목록에는 포함하지 않지만, DO 케이블은
-      // 앰프 쪽 연결 경로가 없으므로 여기 추가해야 한다.
+      // [시스템 구성] accessories.data.js의 최상위 id를 참조하며
+      // cross-ref.findAccessoriesForSpeaker()로 조회한다. 기준 자료는
+      // raw-data/raw-specs/la/speakers/k-series/k1/k1.md의 System Elements다.
+      // LA12X/LA-RAK II AVB는 amps에서 연결하므로 제외하고, 길이 변형을
+      // 통합한 DO 케이블은 액세서리 관계에 포함한다.
       "accessoryIds": ["acc-la-k1-bump", "acc-la-k1-delta", "acc-la-la-sling2t", "acc-la-k1-bpchain", "acc-la-k2-link", "acc-la-kara-downk1", "acc-la-k1-lasermount", "acc-la-laser-magplate", "acc-la-k1-chariot2", "acc-la-k1-chariotcov", "acc-la-k-bumpflight", "acc-la-k1-pla", "acc-la-k1-cov", "acc-la-tech-toolcase-ii", "acc-la-maintenance-toolcase", "acc-la-do"]
     },
     "watt": 1118,
@@ -106,17 +102,11 @@ export const LA_K_SERIES = [
       { "band": "MF", "watt": 497 },
       { "band": "HF", "watt": 199 }
     ],
-    // 모달 최하단에 프리셋 구성 섹션 추가. 원문:
+    // [프리셋] 모달 최하단의 구성 섹션 기준 자료:
     // raw-data/raw-specs/la/references/presets/k-series/k1.md
-    // (출처: preset_guide_EN.pdf p.49-50, owner's manual EN v29.0;
-    // 교차검증/보강: K1_OM_EN.pdf owner's manual EN v4.0 p.34-45).
-    // [OM v4.0 반영] ratio(권장 매칭 비율)와 minLine(최소
-    // 라인 길이, 명시된 구성에만 존재)을 행마다 추가 — OM에서 preset_guide
-    // 원문에는 없던 신규 정보. [재검토] 이 표(rows) 자체에는 표시하지
-    // 않고, 렌더링(speakers.view.js presetGuideHTML)이 ratio/minLine이
-    // 있는 행만 걸러 Preset Guide 하위의 별도 "Matching Ratio & Minimum
-    // Line Length" 표로 보여준다(Delay Defaults와 동일 패턴) — 기존
-    // 3열 표가 이미 빽빽해 안에 끼워 넣지 않는다.
+    // ratio와 minLine은 명시된 구성에만 둔다. presetGuideHTML은 해당 값이
+    // 있는 행만 골라 별도 "Matching Ratio & Minimum Line Length" 표로
+    // 표시해 기본 3열 표의 밀도를 유지한다.
     "presets": {
       "rows": [
         { "config": "K1 line source", "preset": "[K1]", "acoustic": "35 Hz - 20 kHz", "acousticShort": "35 Hz - 20 kHz" },
@@ -129,44 +119,18 @@ export const LA_K_SERIES = [
         { "config": "K1 + Kara II (downfill)", "preset": "[K1] + [KARAIIDOWNK1]", "acoustic": "35 Hz - 20 kHz, extends vertical coverage to closer audience", "acousticShort": "35 Hz - 20 kHz, downfill", "ratio": "up to 6 Kara II" },
         { "config": "K1 + K2 (downfill)", "preset": "[K1] + [K2 110]", "acoustic": "35 Hz - 20 kHz, same horizontal coverage as K1 for optimal downfill", "acousticShort": "35 Hz - 20 kHz, downfill" }
       ],
-      // [가독성 개선, 웹 검색 교차검증] 기존 각주 4개는
-      // 문장 안에 서로 다른 성격의 정보(구성 규칙/호환성 경고/라우팅
-      // 표)가 축약된 채 섞여 있어 이해하기 어려웠다(특히 "+ 극성" 표기가
-      // 무슨 뜻인지 불명확했음, 사용자 지적). L-Acoustics K1 공식
-      // 유저매뉴얼(manualslib.com 게재본, "Preset description" p.23)의
-      // 실제 라우팅 표를 직접 확인해 교차검증 후 재작성 —
-      // 1) [K1]/[K2 xxx] 프리셋: OUT1=left LF, OUT2=right LF, OUT3=MF,
-      //    OUT4=HF 로 밴드별 채널이 나뉘고, 전부 IN A 입력을 받아 게인
-      //    0dB·딜레이 0ms·뮤트 해제(ON) 상태다. "+ 극성"은 반전 없는
-      //    정상 극성이라는 뜻 — 표 전체가 예외 없이 전부 이 값이라
-      //    "설정을 건드릴 필요가 없다"는 게 핵심이었다.
-      // 2) [K1SB_X]/[K1SB_60]/[K1SB_100_NC] 등 K1-SB 서브우퍼 프리셋은
-      //    OUT1~4 네 채널 모두 SB(서브우퍼 전용 채널)로 통일 라우팅되고,
-      //    나머지 값(IN A/0dB/0ms/정상 극성/ON)은 위와 동일하다 — 즉
-      //    "라인소스냐 서브냐"만 다르고 나머지 파라미터 값 자체는
-      //    프리셋 종류와 무관하게 항상 같다는 것을 명확히 했다.
-      // [가독성 2차 개선] notes 를 단순 문자열 배열 대신
-      // { text, subs? } 객체 배열로 바꿔 항목 안에서도 하위 글머리 기호
-      // (2단계 불렛)를 쓸 수 있게 한다 — Downfill 옵션(라인별 3가지)과
-      // 출력 라우팅(프리셋 그룹별 2가지)처럼 한 항목 안에 여러 갈래
-      // 정보가 나열되면 문장으로 줄줄이 이어붙이는 것보다 하위 목록으로
-      // 나누는 쪽이 항목 간 경계가 분명해진다(사용자 요청). subs 가 없는
-      // 항목(카디오이드/호환성 주의)은 기존처럼 단일 문장 그대로 둔다.
-      // 렌더링은 speakers.view.js presetGuideHTML 이 subs 유무를 보고
-      // 중첩 <ul> 을 추가로 그린다.
-      // [참고 사항 3분할, 최종] 표가 3개(메인/Matching
-      // Ratio/Delay Defaults)로 늘어나 각 표 바로 아래 그 표에 해당하는
-      // 참고 사항만 두도록 재배치했다(전에는 5개 항목이 전부 메인 표
-      // 밑 하나에 뭉쳐 있어 Matching Ratio/Delay Defaults 표와 내용이
-      // 섞여 보였다).
+      // [프리셋 안내] [K1]/[K2 xxx]는 OUT1=left LF, OUT2=right LF,
+      // OUT3=MF, OUT4=HF로 나뉜다. K1-SB 프리셋은 OUT1~4를 모두 SB로
+      // 라우팅한다. 나머지 기본 파라미터는 Delay Defaults 표를 따른다.
+      // notes는 { text, subs? } 구조를 사용해 여러 갈래 정보만 중첩 목록으로
+      // 렌더링한다. 각 참고 사항은 관련 표 바로 아래에 둔다.
       // - 메인 표(notes): Acoustic Properties 각주, 카디오이드 프리셋,
       //   호환성 주의, 출력 라우팅 — 전부 rows(Loudspeaker Configuration/
       //   Preset/Acoustic Properties) 열과 직접 관련된 내용만 남김.
       // - Matching Ratio 표(ratioNotes): Downfill 옵션(K2/Kara/Kara II
       //   프리셋 목록)을 이쪽으로 이동 — ratio/minLine 자체가 "몇 대를
       //   어떻게 매칭하느냐"는 질문이라 Downfill 목록과 같은 맥락.
-      // - Delay Defaults 표(delayDefaults.notes): 기존 그대로(딜레이 관련
-      //   각주만 원래도 거기 있었음, 변경 없음).
+      // - Delay Defaults 표(delayDefaults.notes): 딜레이 관련 각주.
       "notes": [
         { "text": "Acoustic Properties 열의 주파수 대역(예: \"35 Hz - 20 kHz\", \"down to 25 Hz\")은 원문 서문(p.49)에 명시된 대로 -10 dB 기준 대역폭/저역 한계다." },
         { "text": "카디오이드 배열(측면·후면으로 향하는 저역을 상쇄해 무대 뒤나 옆으로 새는 저음을 줄이는 배치)로 세울 때는 [xx28_60_C] 또는 [xx28_60_Cx] 프리셋을 쓴다." },
@@ -190,26 +154,20 @@ export const LA_K_SERIES = [
         }
       ],
       "ratioSource": "K1_OM_EN.pdf (K1 owner's manual EN version 4.0) p.35-45; preset_guide_EN.pdf p.49-50 (owner's manual EN v29.0)",
-      // [극성 오류 수정, 최종] pdfplumber 텍스트 추출로는
-      // 원문 표의 극성 아이콘(회색 [+]/빨간 [-] 배지, 텍스트 레이어에
-      // 없음)이 누락되어 "전부 극성 정상(+)"으로 잘못 옮겨졌었다 —
-      // 사용자 지적으로 PyMuPDF 로 p.37/38/40/42 를 실제 이미지 렌더링해
-      // 재확인. 실제로는 아래처럼 서브우퍼 계열마다 다르다.
+      // [극성] 극성 아이콘은 PDF 텍스트 레이어에 없으므로 표 이미지를
+      // 기준으로 읽어야 한다. 서브우퍼 계열별 규칙은 다음과 같다.
       // - K1: 모든 조합에서 항상 +
       // - K1-SB: [K1SB_X]/[K1SB_60](라인소스 편입/측면·후면 배치용) 조합
       //   에서는 +, [K1SB_100_NC](노이즈 컨트롤 카디오이드) 조합에서는 -
       // - KS28: 모든 조합(단독/K1-SB 병용 불문)에서 항상 -
       // - CS1: 모든 조합(단독/K1-SB 병용 불문)에서 항상 -
-      // [극성 표기 간소화] +(정상)는 기본값이라 당연하므로
+      // +(정상)는 기본값이므로
       // 표시를 생략하고, −(반전)만 "(−)"로 표기 — 렌더링(presetGuideHTML)
       // 이 이 문자열 안의 "−" 기호만 빨간색으로 강조한다(괄호 자체는
       // 일반 색 그대로, polarity-flip span은 "−"만 감쌈).
-      // [표 구분 기능으로 교체] 텍스트 문자 "|"로 이어붙이는
-      // 대신, values를 문자열 배열(items)로 구조화해 렌더링이 각 항목을
+      // [표 구분] values는 문자열 배열(items)로 구조화해 렌더링이 각 항목을
       // 별도 span으로 나누고 그 사이에 실제 CSS border-left 세로 구분선을
-      // 그린다(위아래 표 가로선과 끊겨 보이는 짧은 구분선, 사용자가 요청한
-      // "표 안에서 나눌 수 있는 기능"). 이전 values 단일 문자열 필드는
-      // 더 이상 쓰지 않는다.
+      // 그린다. 단일 문자열 values 필드는 사용하지 않는다.
       "delayDefaults": {
         "rows": [
           { "combo": "[K1] + [K1SB_X]", "items": ["K1 = 0 ms", "K1-SB = 0 ms"] },
@@ -224,12 +182,8 @@ export const LA_K_SERIES = [
           { "combo": "[K1] + [CS1_60] / [CS1_60_S]", "items": ["K1 = 7.5 ms", "CS1 = 0 ms (−)"] },
           { "combo": "[K1] + [K1SB_X] + [CS1_60] / [CS1_60_S]", "items": ["K1 = 7.5 ms", "K1-SB = 7.5 ms", "CS1 = 0 ms (−)"] }
         ],
-        // [notes 문구 정정] 첫 항목이 "딜레이 + 극성
-        // 기본값"이라고 적어 마치 "극성은 항상 +"라는 뜻으로 읽힐 수
-        // 있었다 — 실제로는 아래 두 번째 항목에서 설명하듯 조합에 따라
-        // −(반전)인 경우도 있으므로, 첫 항목은 "딜레이 및 극성 기본값
-        // (아래 표에 함께 표기)"으로만 서술하고 +/− 여부 판단은 두 번째
-        // 항목에 전적으로 맡긴다.
+        // [극성 안내] 첫 항목은 딜레이와 극성이 표에 함께 있음을 설명하고,
+        // 두 번째 항목이 조합별 정상(+)/반전(−) 판단을 전담한다.
         "notes": [
           { "text": "위 표의 값은 pre-alignment(사전 정렬) 딜레이와 극성 기본값을 함께 표기한 것이며, 실제 현장에서는 여기에 배치 간격에 따른 geometric(기하학적) 딜레이를 추가로 더해야 한다(극성은 geometric 딜레이와 무관하게 표에 적힌 그대로 유지)." },
           { "text": "별도 표기가 없으면 극성은 반전 없는 정상(+). 빨간색 (−) 표시가 있는 엘리먼트만 반전이다. K1은 모든 조합에서 항상 정상(+). K1-SB는 [K1SB_X]/[K1SB_60] 조합에서는 정상, [K1SB_100_NC](노이즈 컨트롤) 조합에서는 반전. KS28과 CS1은 K1과 병용하는 모든 조합에서 항상 반전(카디오이드/서브우퍼 위상 상쇄를 위한 의도된 설정)." },
@@ -247,7 +201,7 @@ export const LA_K_SERIES = [
     // 렌더링은 speakers.view.js mechanicalSafetyHTML 이 Preset Guide와
     // 동급(섹션 레벨) 토글로 그린다.
     "mechanicalSafety": {
-      // [upload/K1_v1.13.md 마스터 스키마 반영] Safety_Factor/Max_Wind_Load —
+      // [기계 안전] Safety_Factor/Max_Wind_Load —
       // 원문: k1.md mechanical_safety 섹션(OM p.6 "Safety > Instructions").
       "safetyFactor": "4:1",
       "maxWindLoad": "6 Beaufort",
@@ -330,12 +284,12 @@ export const LA_K_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/K2_v1.7.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 56,
     "transducers": "LF: 2 × 12″ · MF: 4 × 6.5″ · HF: 2 × 3″",
     "connectors": "8-point PA-COM x2 (IN 1 + LINK 1)",
-    // [upload/K2_v1.7.md 마스터 스키마 반영] PA-COM 8핀 그룹별 매핑(K1과 동일).
+    // [커넥터] PA-COM 8핀 그룹별 매핑(K1과 동일).
     "paComPinout": { "ab": "left LF", "cd": "right LF", "ef": "MF", "gh": "HF" },
     "ip": "IP55",
     "dims": "1338 x 354 x 400 mm / 52.7 x 13.9 x 15.7 in",
@@ -473,7 +427,7 @@ export const LA_K_SERIES = [
       },
       "source": "preset_guide_EN.pdf p.51-52 (owner's manual EN v29.0); K2_OM_EN_4.0.pdf p.32-43"
     },
-    // [upload/K2_v1.7.md 마스터 스키마 반영] mechanical_safety 섹션(OM
+    // [기계 안전] mechanical_safety 섹션(OM
     // p.29-30 "Mechanical safety", p.6 "Safety > Instructions") 전체 반영.
     "mechanicalSafety": {
       "flownRows": [
@@ -542,15 +496,14 @@ export const LA_K_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/K3_v1.9.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 43,
     "transducers": "LF: 2 × 12″ · HF: 1 × 4″",
     "connectors": "4-point speakON x2 (IN/LINK 상호교환)",
     "ip": "IP55",
-    // [upload/K3_v1.9.md 마스터 스키마 재검증 — 값 정정] Height/Depth를
-    // 357/403 → 355/402mm으로 정정(K3_AE_EN.docx "Physical data" 축 라벨링
-    // 기준, 기존 값과 1~2mm 차이).
+    // [치수] K3_AE_EN.docx "Physical data"의 축 라벨에 따라
+    // Height=355mm, Depth=402mm를 사용한다.
     "dims": "950 x 355 x 402 mm / 37.4 x 14.0 x 15.8 in",
     "amps": [
       {
@@ -667,7 +620,7 @@ export const LA_K_SERIES = [
       },
       "source": "preset_guide_EN.pdf p.53-54 (owner's manual EN v29.0); K3_OM_EN_4.1.pdf p.37-38"
     },
-    // [upload/K3_v1.9.md 마스터 스키마 반영] mechanical_safety 섹션(OM
+    // [기계 안전] mechanical_safety 섹션(OM
     // "Mechanical safety" 챕터) 전체 반영.
     "mechanicalSafety": {
       "flownRows": [
@@ -733,7 +686,7 @@ export const LA_K_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/K3i_v1.10.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 35,
     "transducers": "LF: 2 × 12″ · HF: 1 × 4″",
@@ -854,7 +807,7 @@ export const LA_K_SERIES = [
       },
       "source": "preset_guide_EN.pdf p.53-54 (owner's manual EN v29.0); K3i_OM_EN_3.1.pdf p.32-36"
     },
-    // [upload/K3i_v1.10.md 마스터 스키마 반영] mechanical_safety 섹션(OM
+    // [기계 안전] mechanical_safety 섹션(OM
     // "Mechanical safety > Flown configurations") 전체 반영.
     "mechanicalSafety": {
       "flownRows": [
@@ -917,15 +870,14 @@ export const LA_K_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/Kara_II_v1.10.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 26,
     "transducers": "LF: 2 × 8″ · HF: 1 × 3″",
     "connectors": "4-point speakON x2 (IN/LINK 상호교환)",
     "ip": "IP55",
-    // [upload/Kara_II_v1.10.md 마스터 스키마 재검증 — 값 정정] 733×252×500mm →
-    // 730×250×383mm(Kara_II_AE_EN.docx "Physical data" 기준). 특히 Depth가
-    // 500→383mm로 크게 달라 기존 값이 오기였을 가능성이 높다.
+    // [치수] Kara_II_AE_EN.docx "Physical data" 기준으로
+    // 730×250×383mm를 사용한다.
     "dims": "730 x 250 x 383 mm / 28.7 x 9.8 x 15.1 in",
     "amps": [
       {
@@ -1075,7 +1027,7 @@ export const LA_K_SERIES = [
       },
       "source": "preset_guide_EN.pdf p.55-56 (owner's manual EN v29.0); Kara_II_OM_EN_5.0.pdf p.32-40"
     },
-    // [upload/Kara_II_v1.10.md 마스터 스키마 반영] mechanical_safety 섹션 전체 반영.
+    // [기계 안전] mechanical_safety 섹션.
     "mechanicalSafety": {
       "flownRows": [
         { "config": "flown", "accessory": "M-BUMP + M-BAR (optional)", "safeLimit": "16", "maxLimit": "24" },
@@ -1137,7 +1089,7 @@ export const LA_K_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/Kara_IIi_v1.10.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 21,
     "transducers": "LF: 2 × 8″ · HF: 1 × 3″",
@@ -1295,7 +1247,7 @@ export const LA_K_SERIES = [
       },
       "source": "preset_guide_EN.pdf p.55-56 (owner's manual EN v29.0); Kara_IIi_OM_EN_5.0.pdf p.38-46"
     },
-    // [upload/Kara_IIi_v1.10.md 마스터 스키마 반영] mechanical_safety 섹션 전체 반영.
+    // [기계 안전] mechanical_safety 섹션.
     "mechanicalSafety": {
       "flownRows": [
         { "config": "flown", "accessory": "KARAIIi-BUMP + M-BARi (optional) + rigging plates", "safeLimit": "12", "maxLimit": "24" }
@@ -1354,7 +1306,7 @@ export const LA_K_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/Kiva_II_v1.7.md 마스터 스키마 반영] Cardioid_Capability.
+    // [지향성] Cardioid_Capability.
     "cardioidCapability": "No",
     "weight": 14,
     "transducers": "LF: 2 × 6.5″ · HF: 1 × 1.75″",
@@ -1511,7 +1463,7 @@ export const LA_K_SERIES = [
       },
       "source": "preset_guide_EN.pdf p.58 (owner's manual EN v29.0); Kiva_II_OM_EN_3.0.pdf p.23-29"
     },
-    // [upload/Kiva_II_v1.7.md 마스터 스키마 반영] mechanical_safety 섹션 전체 반영.
+    // [기계 안전] mechanical_safety 섹션.
     "mechanicalSafety": {
       "flownRows": [
         { "config": "flown", "accessory": "KIBU-SB", "safeLimit": "8", "maxLimit": "20" },
@@ -1559,7 +1511,7 @@ export const LA_K_SERIES = [
         "hi": "80 Hz"
       }
     ],
-    // [upload/K1-SB_v1.0.md 마스터 스키마 반영] Cardioid_Capability — 원문:
+    // [지향성] Cardioid_Capability — 원문:
     // K1-SB_AE_EN.docx/K1-SB_SP_EN_2.0.pdf 전량 "cardioid" 스캔 0건,
     // AE가 "Omni configuration"/"Enclosure directivity: omnidirectional"로
     // 직접 확정.
@@ -1607,7 +1559,7 @@ export const LA_K_SERIES = [
       "ampIds": []
     },
     "watt": 930,
-    // [upload/K1-SB_v1.0.md 마스터 스키마 반영] Mechanical Safety 신규
+    // [기계 안전] Mechanical Safety 필드
     // 반영. preset_guide_and_matching/delay_defaults는 K1-SB 자신의
     // 원본에 데이터가 없고(항상 2차 엘리먼트) K1/K2 자신의 presets에
     // 이미 K1-SB 관점으로 기록되어 있어 여기에는 추가하지 않았다.

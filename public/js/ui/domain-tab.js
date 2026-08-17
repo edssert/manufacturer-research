@@ -30,12 +30,12 @@ import { renderLegend } from "./legend.js";
  * @param {string} cfg.searchPlaceholder 검색창 placeholder
  * @param {{value:string, label:string}[]} cfg.sortOptions 정렬 select 옵션
  *   (첫 항목이 기본 정렬 = "필터 초기화" 가 되돌아갈 값)
- * @param {Object[]} cfg.data 전체 레코드 배열
+ * @param {ReadonlyArray<Object>} cfg.data 전체 레코드 배열
  * @param {Object} cfg.schema 도메인 스키마 (filter-engine 이 소비)
  * @param {Function} cfg.cardHTML (item) => 카드 HTML
  * @param {Function} cfg.openItem (id) => boolean — 카드 클릭/딥링크로 모달 열기
  * @param {Function} [cfg.groupBy] (state) => renderGrid 의 groupBy 설정 또는 null
- * @param {{order: string[], mfrMap: Object, keyOf?: Function}} cfg.legend 상단바 범례
+ * @param {{order: ReadonlyArray<string>, mfrMap: Object, keyOf?: Function}} cfg.legend 상단바 범례
  * @param {Function} [cfg.onMount] 탭이 활성화될 때마다 (범례 렌더 직후)
  * @param {Function} [cfg.onBuild] 최초 UI 빌드 직전 1회 (카드 게이지 범위 설정 등)
  * @returns {{render: Function, state: Object}}
@@ -66,8 +66,8 @@ export function createDomainTab({
   const reset = () => {
     resetState(state);
     state.sort = defaultSort;
-    $(sel("q")).value = "";
-    $(sel("sort")).value = defaultSort;
+    /** @type {HTMLInputElement} */ ($(sel("q"))).value = "";
+    /** @type {HTMLSelectElement} */ ($(sel("sort"))).value = defaultSort;
     document.querySelectorAll(`${sel("filters")} .chip`).forEach(c => c.setAttribute("aria-pressed", "false"));
     buildFilters($(sel("filters")), data, state, schema, render);
     render();
@@ -89,8 +89,16 @@ export function createDomainTab({
     // [성능] 타이핑마다 그리드 전체를 재생성하지 않도록 렌더만 디바운스
     // (상태 갱신은 즉시 — 다른 코드가 state.q 를 읽어도 항상 최신값).
     const debouncedRender = debounce(render);
-    $(sel("q")).addEventListener("input", e => { state.q = e.target.value.trim(); debouncedRender(); });
-    $(sel("sort")).addEventListener("change", e => { state.sort = e.target.value; render(); });
+    $(sel("q")).addEventListener("input", e => {
+      const input = /** @type {HTMLInputElement} */ (e.currentTarget);
+      state.q = input.value.trim();
+      debouncedRender();
+    });
+    $(sel("sort")).addEventListener("change", e => {
+      const select = /** @type {HTMLSelectElement} */ (e.currentTarget);
+      state.sort = select.value;
+      render();
+    });
     $(sel("reset")).onclick = reset;
   };
 

@@ -4,42 +4,24 @@
  *
  * 구성 요소:
  *   amplifiers.data.js   — 데이터 (브랜드별 파일의 배럴)
+ *   amplifiers.detail.js — 관계 조회와 공통 상세 provider
  *   amplifiers.schema.js — 필터/정렬 정의
  *   amplifiers.view.js   — 카드/모달 마크업 (순수 함수)
  */
 import { esc } from "../../core/dom.js";
 import { createDomainTab } from "../../ui/domain-tab.js";
-import { openModalWith } from "../../ui/modal.js";
-import { replaceSplitPane1, wireChipPanes } from "../../ui/split-view.js";
-import { setItemRoute, replaceItemRoute } from "../../core/router.js";
-import { registerAmplifiers, resolveAmpIdForModel, findSpeakerById, findSpeakersMatchingAmp, findAmpConfigsBySpeaker, accessoriesByIds } from "../../relationships/cross-ref.js";
+import { openDetailModal } from "../../ui/relation-navigation.js";
+import { findSpeakersMatchingAmp } from "../../relationships/cross-ref.js";
 
 import { AMPLIFIERS } from "./amplifiers.data.js";
-import { amplifiersSchema, AMP_MFR, AMP_MK_ORDER, compareModel } from "./amplifiers.schema.js";
-import { cardHTML as ampCardHTML, modalBodyHTML as ampModalBodyHTML, setWattRange, setRackWattRange, gaugeTotalWatt } from "./amplifiers.view.js";
+import { initAmplifierDetailProvider } from "./amplifiers.detail.js";
+import { amplifiersSchema, AMP_MFR, AMP_MK_ORDER, compareModel, withDerivedSpeakerCount } from "./amplifiers.schema.js";
+import { cardHTML as ampCardHTML, setWattRange, setRackWattRange, gaugeTotalWatt } from "./amplifiers.view.js";
 
-// 앰프 모달 안에서 스피커 칩을 클릭하면 Split View pane 2 에 스피커 상세를
-// 띄운다. 스피커의 "순수 뷰 함수"와 색상 맵만 import (controller 미참조).
-import { MFR } from "../speakers/speakers.schema.js";
-import { modalBodyHTML as speakerModalBodyHTML } from "../speakers/speakers.view.js";
-
-// Rack 타입 앰프(LA-RAK III 등) 모달 안에서 System Elements 칩을 클릭하면
-// Split View pane 2 에 액세서리(리깅/케이블) 상세를 띄운다 — 스피커와
-// 동일한 패턴. "액세서리를 pane 으로 여는 법"은 액세서리 도메인이 제공한다.
-import { panePropsFor as accessoryPaneProps } from "../accessories/accessories.view.js";
-
-// cross-ref 레지스트리에 앰프 데이터 등록 (모듈 로드 시 1회)
-registerAmplifiers(AMPLIFIERS);
-
-// relations.speakerIds(정적 필드)는 현재 대부분 비어있으므로, 실제 매칭은
-// 스피커 쪽 amps[].model 을 역해석해 동적으로 채운다(findSpeakersMatchingAmp).
-// 카드의 "Speakers" 개수·정렬(speakerCount)·모달의 Matched Speakers 가 모두
-// 이 필드를 읽으므로, 렌더링 전에 한 번 채워두면 기존 코드를 그대로 재사용할
-// 수 있다. registerSpeakers() 가 이미 호출된 뒤(스피커 도메인이 먼저 import
-// 되어 모듈 최상단에서 등록됨)라야 정확히 계산되므로 mount 시점에 수행한다.
-function syncMatchedSpeakerIds() {
-  AMPLIFIERS.forEach(a => { a.relations.speakerIds = findSpeakersMatchingAmp(a.id); });
-}
+// speakerCount 는 스피커의 amps[]를 단일 원본으로 삼는 cross-ref 조회값이다.
+// 스키마를 한 번 구성하되 조회는 comparator 실행 시 수행해 레지스트리 재등록에
+// 따른 인덱스 무효화가 즉시 반영되도록 한다.
+const amplifierListSchema = withDerivedSpeakerCount(findSpeakersMatchingAmp);
 
 /**
  * 카드 Watt 게이지 스케일 — 최초 빌드 때 1회.
@@ -89,74 +71,12 @@ function amplifiersGroupBy(state) {
  * @returns {boolean} id 가 유효해 모달을 열었으면 true (라우터 딥링크 판정용)
  */
 function openAmpModal(id) {
-  const a = AMPLIFIERS.find(x => x.id === id);
-  if (!a) return false;
-  const { color, head, body } = ampModalBodyHTML(a, (sid) => { const s = findSpeakerById(sid); return s ? s.name : sid; }, findSpeakersMatchingAmp(a.id), findAmpConfigsBySpeaker(a.id), accessoriesByIds(a.rack && a.rack.relatedAccessoryIds));
-  openModalWith(color, head, body);
-  wireAmpModalSpeakerClicks();
-  // Rack 앰프의 System Elements 칩 → pane 2 에 액세서리 상세.
-  wireChipPanes("accessory-id", accessoryPaneProps);
-  // Configurations +N 토글 배선은 openModalWith → wirePaneInteractions 로
-  // 이동 (pane 2 에서도 동작해야 하므로 공통화 — 개선사항 0-1).
-  setItemRoute(id);
-  return true;
-}
-
-/**
- * 앰프 모달 안의 스피커 칩(Matched Speakers) 또는 Configurations 표 대표
- * 행 클릭 → Split View pane 2 에 스피커 상세.
- * (앰프 → 스피커 방향 — 스피커 → 앰프 흐름의 미러)
- * pane 2 안에서 또 다른 스피커를 클릭하면 pane 2 가 교체되고, 이미 pane 2
- * 에 열려있는 것과 같은 스피커를 다시 클릭하면(paneId 일치) 대신 닫힌다 —
- * X 버튼까지 마우스를 옮기지 않아도 됨.
- */
-function wireAmpModalSpeakerClicks() {
-  wireChipPanes("speaker-id", sid => {
-    // "K3(i)" 처럼 병합된 행의 공통 텍스트 파트는 id 가 없다(전파는 이미
-    // wireChipPanes 가 막았으므로 여기서는 그냥 열지 않으면 된다).
-    if (!sid || sid === "null") return null;
-    const s = findSpeakerById(sid);
-    if (!s) return null;
-    const { head, body } = speakerModalBodyHTML(s, resolveAmpIdForModel);
-    return {
-      headHTML: head,
-      paneColor: MFR[s.mk].color,
-      bodyHTML: body,
-      paneId: sid,
-      onMounted: wireSplitPaneAmpRows,
-    };
-  });
-}
-
-/**
- * Split View pane 2(스피커 상세) 안의 Amplifier Matching 표 행 클릭 →
- * pane 1(왼쪽, 앰프 상세)을 그 앰프로 교체한다. pane 2 는 그대로 유지.
- * (스피커 → 앰프 방향 — wireSpeakerModalAmpClicks 의 pane 1 버전)
- * @param {HTMLElement} pane2El openSplitPane onMounted 가 넘겨주는 pane 2 요소
- */
-function wireSplitPaneAmpRows(pane2El) {
-  pane2El.querySelectorAll(".match-table__row[data-amp-id]").forEach(row => {
-    row.addEventListener("click", () => {
-      const ampId = row.dataset.ampId;
-      const a = AMPLIFIERS.find(x => x.id === ampId);
-      if (!a) return;
-      const M = AMP_MFR[a.mfr];
-      const { head, body } = ampModalBodyHTML(a, (sid) => { const s = findSpeakerById(sid); return s ? s.name : sid; }, findSpeakersMatchingAmp(a.id), findAmpConfigsBySpeaker(a.id));
-      replaceSplitPane1({
-        headHTML: head,
-        paneColor: M.color,
-        bodyHTML: body,
-        onMounted: wireAmpModalSpeakerClicks,
-      });
-      // [모달 라우팅] pane1 이 이 앰프로 교체됐음을 URL item 단에 반영
-      // (pane2 상태는 유지, 히스토리 엔트리 추가 없음).
-      replaceItemRoute(ampId);
-    });
-  });
+  return openDetailModal(id, "amplifier");
 }
 
 /** Amplifiers 도메인을 라우터에 등록 — main.js 가 호출하는 유일한 공개 API */
 export function initAmplifiersDomain() {
+  initAmplifierDetailProvider();
   createDomainTab({
     key: "amplifiers",
     label: "Amplifier",
@@ -169,12 +89,11 @@ export function initAmplifiersDomain() {
       { value: "speakerCount", label: "정렬 · 매칭 스피커 많은순" },
     ],
     data: AMPLIFIERS,
-    schema: amplifiersSchema,
+    schema: amplifierListSchema,
     cardHTML: ampCardHTML,
     openItem: openAmpModal,
     groupBy: amplifiersGroupBy,
     legend: { order: AMP_MK_ORDER, mfrMap: AMP_MFR },
-    onMount: syncMatchedSpeakerIds,
     onBuild: setWattScales,
   });
 }

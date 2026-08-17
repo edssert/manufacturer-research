@@ -30,7 +30,7 @@ export const LA_L_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/L2_v1.8.md 마스터 스키마 반영] Cardioid_Capability — L2/L2D
+    // [지향성] Cardioid_Capability — L2/L2D
     // 고유의 제3의 유형(CS1류의 Built-in도, KS28류의 Array-based only도
     // 아닌, 전용 LC 드라이버군 내장 + standard array + 프리셋 선택으로
     // 성립). 원문: L2_OM_EN_5.0.pdf "L2 and L2D each feature four low
@@ -71,8 +71,8 @@ export const LA_L_SERIES = [
       "ampIds": []
     },
     "watt": 1586,
-    // [upload/L2_v1.8.md 마스터 스키마 반영] Preset Guide/Delay Defaults/
-    // Mechanical Safety 신규 반영. ratio/minLine은 원문이 비율/최소길이
+    // [프리셋] Preset Guide/Delay Defaults/
+    // Mechanical Safety 필드를 관리. ratio/minLine은 원문이 비율/최소길이
     // 대신 물리적 거리(coupled)·최대 간격(separated)으로 정보를 제공해
     // 대응되지 않아 notes에만 원문 값을 보존한다(K1과 다른 구조).
     "presets": {
@@ -143,7 +143,7 @@ export const LA_L_SERIES = [
         "hi": "20 kHz"
       }
     ],
-    // [upload/L2D_v1.6.md 마스터 스키마 반영] Cardioid_Capability — L2와
+    // [지향성] Cardioid_Capability — L2와
     // 동일 근거(공용 매뉴얼 챕터, "L2 and L2D each feature four low
     // cardioid (LC) loudspeakers on the sides...").
     "cardioidCapability": "Integrated",
@@ -180,8 +180,8 @@ export const LA_L_SERIES = [
       "ampIds": []
     },
     "watt": 1586,
-    // [upload/L2D_v1.6.md 마스터 스키마 반영] Preset Guide/Delay Defaults/
-    // Mechanical Safety 신규 반영. L2/L2D 공용 매뉴얼 챕터라 구조는 L2와
+    // [프리셋] Preset Guide/Delay Defaults/
+    // Mechanical Safety 필드를 관리. L2/L2D 공용 매뉴얼 챕터라 구조는 L2와
     // 동일 — L2D 단독으로 명시된 값만 채택(L2와의 혼합 배열 값은 제외).
     "presets": {
       "rows": [
