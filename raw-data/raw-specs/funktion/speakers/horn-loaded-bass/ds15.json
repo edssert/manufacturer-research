@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-ds15",
+  "manufacturerId": "funktion",
+  "name": "DS15",
+  "slug": "ds15",
+  "series": "Horn Loaded Bass",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/ds15-bass/",
+  "rangePage": "https://funktion-one.com/ranges/horn-loaded-bass",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "DS15 - Dance Stack Low-Mid Section",
+    "technical": {
+      "bandwidth": "90Hz - 270Hz",
+      "weight": "49kg (108lbs)",
+      "dispersion": "N/A",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15\" Operating Band 105Hz - 220Hz Sensitivity at 1m 103dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/d0b49990-42c6-495c-bef2-739bf292ae53_Dance+Stack+DS15+Focus.jpg",
+      "https://images.prismic.io/funktion-one/b5da3539-60ef-49da-b944-5ebd7a5ea463_DS15-F1-WD%3DT0126-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/27681974-c14c-450a-bd72-6da38faf3756_Funktion-One_DS15_Spec_Sheet.pdf",
+        "label": "27681974-c14c-450a-bd72-6da38faf3756_Funktion-One_DS15_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0XkjpbqstJ97yMS_DS15-F1-3DM%3DT0278-00.dwg",
+        "label": "Z0XkjpbqstJ97yMS_DS15-F1-3DM%3DT0278-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

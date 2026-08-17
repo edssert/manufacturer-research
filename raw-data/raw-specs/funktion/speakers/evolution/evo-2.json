@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-evo-2",
+  "manufacturerId": "funktion",
+  "name": "Evo 2",
+  "slug": "evo-2",
+  "series": "Evolution",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/evo-2/",
+  "rangePage": "https://funktion-one.com/ranges/evolution",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "Evo 2 - Medium Dispersion, Versatile, Point Source",
+    "technical": {
+      "bandwidth": "85Hz - 18kHz",
+      "weight": "36kg (80lbs)",
+      "dispersion": "50° Horizontal x 25° Vertical",
+      "connectors": "2 x Neutrik NL8 (triamp) or NL4 (biamp) option",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 12\" Operating Band 60/85Hz - 280Hz Sensitivity at 1m 100dB at 2.8V Power (AES) 600W Nominal Impedence 8Ω Driver 8\" (Tri-amp) Operating Band 280Hz - 5kHz Sensitivity at 1m 111dB at 4V Power (AES) 200W Nominal Impedence 16Ω Driver 1\" (Tri-amp) Operating Band 5kHz - 18kHz Sensitivity at 1m 112dB at 4V Power (AES) 75W Nominal Impedence 16Ω Driver 8\" + 1\" (Bi-amp) Operating Band 280Hz - 18kHz Sensitivity at 1m 111dB at 4V Power (AES) 200W Nominal Impedence 16Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/65aea53a38f662e9dd2126b6_Evo2VltAngHi1200x1200.jpg",
+      "https://images.prismic.io/funktion-one/65aeb4ec38f662e9dd21271c_Evo2Quad.jpg",
+      "https://images.prismic.io/funktion-one/65c21755615e73009ec4540c_Evo2-F1-WD=T0235-00.png",
+      "https://images.prismic.io/funktion-one/aiBGoQeQX7-eWqq5_STC-200-BFP.png",
+      "https://images.prismic.io/funktion-one/aiA-JAeQX7-eWqj9_WB-E2.png",
+      "https://images.prismic.io/funktion-one/aiAx_weQX7-eWqX-_BFP-E2.png",
+      "https://images.prismic.io/funktion-one/aiFRbgeQX7-eWucR_FC-2E2.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0Ryoq8jQArT1RYm_Evo2-F1-DS%3DD0069-02.pdf",
+        "label": "Z0Ryoq8jQArT1RYm_Evo2-F1-DS%3DD0069-02.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aF0g3nfc4bHWivrP_Evo2UserGuideV2.0.pdf",
+        "label": "aF0g3nfc4bHWivrP_Evo2UserGuideV2.0.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/ZuL1cbVsGrYSvTJh_Funktion-OneEvo2v1.0.gll",
+        "label": "ZuL1cbVsGrYSvTJh_Funktion-OneEvo2v1.0.gll"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0XreZbqstJ97yRC_Evo2-F1-3DM%3DT0234-00.dwg",
+        "label": "Z0XreZbqstJ97yRC_Evo2-F1-3DM%3DT0234-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/7ff2203f-0621-4271-8a18-5f0f9cd0207e_Evo2-F1-2DM%3DT0233-00.dwg",
+        "label": "7ff2203f-0621-4271-8a18-5f0f9cd0207e_Evo2-F1-2DM%3DT0233-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/ZnrqjpbWFbowe2PG_Evo2-F1-TD%3DT0231-01.PDF",
+        "label": "ZnrqjpbWFbowe2PG_Evo2-F1-TD%3DT0231-01.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z2VQBJbqstJ98uhw_Evo2-F1-DD%3DT0232-01.PDF",
+        "label": "Z2VQBJbqstJ98uhw_Evo2-F1-DD%3DT0232-01.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Znrqw5bWFbowe2PQ_BFP-E2-F1-AD%3DT0252-01.PDF",
+        "label": "Znrqw5bWFbowe2PQ_BFP-E2-F1-AD%3DT0252-01.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Znrq4pbWFbowe2PV_WB-E2-F1-AD%3DT0276-00.PDF",
+        "label": "Znrq4pbWFbowe2PV_WB-E2-F1-AD%3DT0276-00.PDF"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

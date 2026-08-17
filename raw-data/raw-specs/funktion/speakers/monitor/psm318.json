@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-psm318",
+  "manufacturerId": "funktion",
+  "name": "PSM318",
+  "slug": "psm318",
+  "series": "Monitor",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/psm318-dj/",
+  "rangePage": "https://funktion-one.com/ranges/monitors",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "PSM318 - High Power DJ Monitoring",
+    "technical": {
+      "bandwidth": "30Hz - 18kHz",
+      "weight": "107kg (236lbs)",
+      "dispersion": "70° Conical",
+      "connectors": "Neutrik NL8 connection to lower section with NL4 glanded lead to top section",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 18\" (PSM318L) Operating Band 25Hz - 85Hz Sensitivity at 1m 101dB at 2V Power (AES) 1100W Nominal Impedence 4Ω Driver 18\" Operating Band 85Hz - 694Hz Sensitivity at 1m 104dB at 2.8V Power (AES) 600W Nominal Impedence 8Ω Driver 5\" + VHF (V1) Operating Band 694Hz - Up Sensitivity at 1m 112dB at 2.8V Power (AES) 80W Nominal Impedence 8Ω Driver MF + HF (V2) Operating Band 600Hz - Up Sensitivity at 1m 111dB at 2.8V Power (AES) 100W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/e5f3fc8f-ad4d-412d-9ae9-915ac56cde3c_PS318_Website_ProductFeatured.png",
+      "https://images.prismic.io/funktion-one/3b96fc44-d96e-4dcd-ae0a-ec28d493d679_PSM318-F1-WD%3DT0132-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/acUOZZGXnQHGY_Gz_PSM318-F1-DS%3DD0049-05.pdf",
+        "label": "acUOZZGXnQHGY_Gz_PSM318-F1-DS%3DD0049-05.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/97b61903-bb75-4830-a871-e75155cff928_PSM318-F1-TD%3DT0192-00.pdf",
+        "label": "97b61903-bb75-4830-a871-e75155cff928_PSM318-F1-TD%3DT0192-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/43510c7e-e5d5-4cae-a9e9-72f7ec8b68c5_PSM318-F1-DD%3DT0193-00.pdf",
+        "label": "43510c7e-e5d5-4cae-a9e9-72f7ec8b68c5_PSM318-F1-DD%3DT0193-00.pdf"
+      },
+      {
+        "url": "https://images.prismic.io/funktion-one/aGajxnfc4bHWjBcu_PSM318-F1-2DM%3DT0194-01.dwg?auto=format,compress?auto=compress,format",
+        "label": "aGajxnfc4bHWjBcu_PSM318-F1-2DM%3DT0194-01.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/2c59d966-6c3e-4d6a-9d24-314ec8a103f4_PSM318-F1-3DM%3DT0195-00.dwg",
+        "label": "2c59d966-6c3e-4d6a-9d24-314ec8a103f4_PSM318-F1-3DM%3DT0195-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl",
+    "coverage"
+  ]
+}

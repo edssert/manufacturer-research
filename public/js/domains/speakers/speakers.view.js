@@ -1,19 +1,12 @@
-/**
- * @module domains/speakers/view
- * 스피커 카드 + 상세 모달 마크업 생성 (순수 함수 모음).
- * "스피커가 어떻게 보이는가"만 담당하며, 범용 그리드/모달 엔진(ui/)과 분리됨.
- *
- * 관련 CSS: css/components/card.css, css/components/spec-table.css
- */
+/** @module domains/speakers/view */
 import { esc, getViews } from "../../core/dom.js";
+import { createSpeakerCardModel } from "./speakers.card-model.js";
 import { MFR, TYPE_BADGE_LABEL } from "./speakers.schema.js";
 
-/* ── SPL 게이지 스케일 (전체 데이터의 min/max 로 컨트롤러가 설정) ── */
 const SPL_RANGE = { lo: 0, hi: 0 };
 
-/** L-Acoustics K Series는 원본 배경 상태와 무관하게 흰 제품 스테이지를 쓴다. */
-function productMediaClass(d) {
-  return d.mk === "la" && d.series === "K Series" ? " product-media--white" : "";
+function productMediaClass() {
+  return " product-media--white";
 }
 
 /**
@@ -29,22 +22,6 @@ export function setSplRange(lo, hi) {
 /** SPL 값 → 게이지 채움 비율(%) (최소 4% 보장으로 항상 보이게) */
 const splPct = v =>
   Math.max(4, Math.min(100, ((v - (SPL_RANGE.lo - 2)) / (SPL_RANGE.hi + 2 - (SPL_RANGE.lo - 2))) * 100));
-
-/** 앰프 항목에서 total 이 가장 큰 설정 반환 (카드 요약용) */
-function bestCfg(a) {
-  const n = a.configs.filter(c => c.total != null);
-  return n.length ? n.reduce((x, y) => (y.total > x.total ? y : x)) : null;
-}
-
-/** 스피커의 대표(첫 유효) 앰프 매칭 요약 { model, perCh, total } 반환 */
-function primaryOf(d) {
-  if (!d.amps || !d.amps.length) return null;
-  for (const a of d.amps) {
-    const c = bestCfg(a);
-    if (c) return { model: a.model, perCh: c.perCh, total: c.total };
-  }
-  return null;
-}
 
 /**
  * 검색어 매칭 규칙 (이름/시리즈/제조사명).
@@ -124,6 +101,67 @@ function transducerBandsRow(raw) {
 }
 
 /**
+ * 범용 카드 표시 모델을 렌더링한다. 제조사명, 분류, 대역 수, 구동 방식은
+ * 모두 표시 모델에서 읽고 원본 데이터 누락은 명시적인 pending 상태로 남긴다.
+ * @param {Object} d 스피커 레코드
+ * @returns {string} 범용 스피커 카드 .card__body 마크업
+ */
+function speakerCardBodyHTML(d) {
+  const model = createSpeakerCardModel(d, MFR[d.mk]);
+  const bandGrid = model.drivers.bands.length
+    ? model.drivers.bands
+        .map(
+          band => `<div class="card-pilot__driver">
+        <span class="card-pilot__driver-head"><span class="card-pilot__driver-band">${esc(band.band)}</span>${band.quantity ? `<span class="card-pilot__driver-quantity">×${esc(band.quantity)}</span>` : ""}</span>
+        <strong>${esc(band.detail)}</strong>
+      </div>`,
+        )
+        .join("")
+    : `<div class="card-pilot__driver card-pilot__driver--unknown"><strong>Specifications pending</strong></div>`;
+  const comparisonSpecs = [...model.primarySpecs, ...Array(Math.max(0, 4 - model.primarySpecs.length)).fill(null)]
+    .slice(0, 4)
+    .map(spec =>
+      spec
+        ? `<div class="card-pilot__spec">
+        <span class="card-pilot__label" aria-label="${esc(spec.longLabel)}" title="${esc(spec.longLabel)}">${esc(spec.label)}</span>
+        <span class="card-pilot__value">${esc(spec.value)}</span>
+      </div>`
+        : '<div class="card-pilot__spec" aria-hidden="true"></div>',
+    )
+    .join("");
+  const context = model.identity.series || "";
+  const classification = model.classification.length ? model.classification.join(" · ") : "Specifications pending";
+  const classificationCompact = model.classificationCompact.length
+    ? model.classificationCompact.join(" · ")
+    : "Specifications pending";
+  const splValue = model.performance.status === "known" ? model.performance.maxSpl : "—";
+  const splWidth = model.performance.status === "known" ? splPct(model.performance.maxSpl) : 0;
+  const frequencyText = model.performance.frequencyRange.value;
+  const frequencyValue = esc(frequencyText)
+    .replace(/Hz/g, '<small class="card-pilot__unit">Hz</small>')
+    .replace(/\s+–\s+/g, '<small class="card-pilot__separator" aria-hidden="true">–</small>');
+  return `<div class="card__body card__body--info-pilot">
+    <div class="card-pilot__context"><span>${esc(model.manufacturer.short)}</span><span>${esc(context)}</span></div>
+    <div class="card-pilot__identity">
+      <div class="card__name">${esc(model.identity.name)}</div>
+      <span class="card-pilot__type" title="${esc(classification)}">${esc(classificationCompact)}</span>
+    </div>
+    <div class="card-pilot__performance">
+      <div class="card-pilot__metric-head"><span class="card-pilot__label">Max SPL</span><strong>${splValue}${model.performance.status === "known" ? '<small class="card-pilot__unit">dB</small>' : ""}</strong></div>
+      <div class="spl-meter__track"><div class="spl-meter__fill" style="width:${splWidth}%"></div></div>
+    </div>
+    <div class="card-pilot__drivers" aria-label="Transducers">
+      <div class="card-pilot__driver-list">${bandGrid}</div>
+    </div>
+    <div class="card-pilot__frequency">
+      <div class="card-pilot__metric-head"><span class="card-pilot__label">Frequency range</span><span class="card-pilot__frequency-value" aria-label="${esc(frequencyText)}"${model.performance.frequencyRange.basis ? ` title="${esc(model.performance.frequencyRange.basis)}"` : ""}>${frequencyValue}</span></div>
+      <div class="card-pilot__frequency-track" aria-hidden="true">${model.performance.frequencyRange.visual ? `<i style="--range-start:${model.performance.frequencyRange.visual.start.toFixed(2)}%;--range-width:${model.performance.frequencyRange.visual.width.toFixed(2)}%"></i>` : ""}</div>
+    </div>
+    <div class="card-pilot__specs">${comparisonSpecs}</div>
+  </div>`;
+}
+
+/**
  * 스피커 카드 1장의 HTML 을 생성한다.
  * @param {Object} d 스피커 레코드
  * @returns {string} .card 마크업
@@ -131,55 +169,22 @@ function transducerBandsRow(raw) {
 export function cardHTML(d) {
   const M = MFR[d.mk],
     color = M.color;
-  const p = primaryOf(d);
-  // 앰프 칸의 세 상태 구분이 중요하다: 매칭 있음 / Self-Powered / 미지정.
-  // Meyer 파워드 라인(PANTHER·LEOPARD·TIGRA·LINA·MM·LFC·USW·Cinema 전 시리즈)
-  // 처럼 DSP 앰프를 내장한 모델은 외부 앰프 매칭이 없는 게 정상 스펙이라, 데이터
-  // 미입력을 뜻하는 "— 미지정"으로 보이면 오해를 준다 — d.selfPowered 가 있으면
-  // "Self-Powered"로 명시한다.
-  // 값 색은 전역 accent 가 아니라 제조사 색(stat-grid__value--mfr).
-  const ampBlock = p
-    ? `
-    <div class="stat-grid">
-      <div class="stat-grid__cell"><span class="stat-grid__key">Amp</span><span class="stat-grid__value stat-grid__value--mfr">${esc(p.model)}</span></div>
-      <div class="stat-grid__cell"><span class="stat-grid__key">Max / amp</span><span class="stat-grid__value">${p.total}<small> ea</small></span></div>
-      <div class="stat-grid__cell"><span class="stat-grid__key">Links / ch</span><span class="stat-grid__value">${p.perCh}</span></div>
-    </div>`
-    : d.selfPowered
-      ? `<div class="stat-grid"><div class="stat-grid__cell"><span class="stat-grid__key">Amp</span><span class="stat-grid__value stat-grid__value--mfr">Self-Powered</span></div></div>`
-      : `<div class="stat-grid"><div class="stat-grid__cell"><span class="stat-grid__key">Amp</span><span class="stat-grid__value stat-grid__value--na">— 미지정</span></div></div>`;
   // 뷰가 2개 이상이면 호버 시 크로스페이드(두 이미지를 겹쳐 쌓고 CSS opacity
   // 전환 — JS 상태 없음). 세 번째 이상 뷰는 카드가 좁아 모달에서만 본다.
   // d.cardHoverView 로 호버 대상 뷰를 개별 지정할 수 있다(K1 처럼 모달의 뷰
   // 순서는 그대로 두면서 카드만 다른 뷰를 쓰고 싶을 때). 없으면 views[1].
   const views = getViews(d);
-  const mediaClass = productMediaClass(d);
+  const mediaClass = productMediaClass();
   const hoverView = (d.cardHoverView && views.find(v => v.label === d.cardHoverView)) || views[1];
   const media = views.length
     ? views.length > 1 && hoverView
       ? `<img class="card__img card__img--front" loading="lazy" src="${views[0].src}" alt="${esc(d.name)}"><img class="card__img card__img--back" loading="lazy" src="${hoverView.src}" alt="${esc(d.name)} ${esc(hoverView.label)}">`
       : `<img class="card__img" loading="lazy" src="${views[0].src}" alt="${esc(d.name)}">`
     : `<div class="card__noimg">◢</div>`;
-  // 드라이버 구성: 로우 드라이버만 강조 박스, 나머지는 개수만(otherBandCount).
-  const extra = otherBandCount(d.transducers);
-  const lowBadge =
-    d.lowInch != null
-      ? `<span class="card__low-badge"><b>${d.lowQty ? esc(d.lowQty) + "×" : ""}${esc(d.lowInch)}″</b><small>LOW</small></span>`
-      : "";
-  const cfg = `${lowBadge}${extra > 0 ? `<span class="card__low-extra">+${extra}개 대역</span>` : ""}`;
-  const { nameRowHTML, configRowHTML } = cardTagsHTML(d);
-  return `<article class="card" style="--mfr:${color}" tabindex="0" data-id="${d.id}" role="button" aria-label="${esc(d.name)} 상세">
+  const body = speakerCardBodyHTML(d);
+  return `<article class="card card--info-pilot" style="--mfr:${color}" tabindex="0" data-id="${d.id}" role="button" aria-label="${esc(d.name)} 상세">
     <div class="card__media${mediaClass}">${media}</div>
-    <div class="card__body">
-      <div class="eyebrow"><span class="eyebrow__brand">${esc(M.short)}</span> · ${d.throwCat ? esc(d.throwCat) + " · " : ""}${esc(d.series)}</div>
-      <div class="card__name-row">
-        <div class="card__name">${esc(d.name)}</div>
-        ${nameRowHTML}
-      </div>
-      <div class="card__config">${d.pending ? '<span class="hint-text">스펙 조사 전 — 이미지만 등록됨</span>' : `${cfg}${configRowHTML}`}</div>
-      <div class="spl-meter"><div class="spl-meter__track"><div class="spl-meter__fill" style="width:${d.spl != null ? splPct(d.spl) : 0}%"></div></div><div class="spl-meter__value">${d.spl != null ? d.spl : "—"}<small>dB SPL</small></div></div>
-      <div class="card__stats">${ampBlock}</div>
-    </div>
+    ${body}
   </article>`;
 }
 
@@ -204,44 +209,6 @@ function titleTagsHTML(d, wrapClass, tagClass) {
   const tags = [...(typeLabel ? [typeLabel] : []), ...crossover];
   if (!tags.length) return "";
   return `<div class="${wrapClass}">${tags.map(t => `<span class="${tagClass}">${esc(t)}</span>`).join("")}</div>`;
-}
-
-/**
- * 카드 전용 축약 배지 — 모달(titleTagsHTML)은 crossoverTags 원본을 그대로
- * 쓰지만 카드는 폭이 좁아 축약한다. 축약 규칙 4가지:
- *   1. 괄호 상세 제거 — "passive (side LF+MF+HF)" → "passive".
- *      d&b SL/CL 은 원본을 그대로 쓰면 배지가 카드 폭을 넘겨 겹친다.
- *   2. "1ch" 같은 채널 수 단독 태그는 생략(정보 가치가 낮다. 모달엔 남는다).
- *   3. active 태그가 이미 있으면 "passive" 단독 태그는 중복이라 제거 —
- *      GSL/KSL/XSL 의 하이브리드("2ch active split" + "passive (side ...)")
- *      대응. CCL-SUB 처럼 passive 만 있는 순수 수동은 그대로 유지된다.
- *   4. wayCount("3-way", d&b 공식 표기)를 뒤에 덧붙인다.
- * @param {Object} d 스피커 레코드
- * @returns {{nameRowHTML: string, configRowHTML: string}} 카드의 두 배지 영역 HTML
- */
-function cardTagsHTML(d) {
-  const typeLabel = d.type ? TYPE_BADGE_LABEL[d.type] || d.type : null;
-  let crossover = (d.crossoverTags || [])
-    .map(t => t.replace(/\s*\([^)]*\)\s*$/, "").trim()) // 괄호 상세 제거
-    .filter(t => !/^\d+ch$/i.test(t)); // "1ch" 단독 태그는 정보 가치가 낮아 생략
-  const hasActive = crossover.some(t => /active/i.test(t));
-  if (hasActive) crossover = crossover.filter(t => t.toLowerCase() !== "passive");
-  const sorted = [...crossover].sort((a, b) => {
-    const rank = t => (/active|passive/i.test(t) ? 0 : 1);
-    return rank(a) - rank(b);
-  });
-  const wayTag = d.wayCount && d.wayCount !== "N/A" ? d.wayCount : null;
-  const crossoverTags = [...sorted, ...(wayTag && !sorted.includes(wayTag) ? [wayTag] : [])];
-  // 줄 배치: Type 태그(길지만 1개)는 이름 옆 줄에, crossover 태그(여러 개지만
-  // 각각 짧음)는 config 줄에. 반대로 두면 "Progressive Ultra-Dense Line…" 같은
-  // 긴 Type 라벨이 로우 배지와 폭을 다투는 config 줄에서 말줄임된다.
-  const nameRowHTML = typeLabel
-    ? `<div class="card__name-tags"><span class="card__name-tag">${esc(typeLabel)}</span></div>`
-    : "";
-  const configRowHTML = crossoverTags.length
-    ? `<div class="card__type-tag card__type-tag--group">${crossoverTags.map(t => `<span class="card__config-tag">${esc(t)}</span>`).join("")}</div>`
-    : "";
-  return { nameRowHTML, configRowHTML };
 }
 
 /**
@@ -482,7 +449,10 @@ function weightDimsIpRow(d, footnotes) {
  */
 function maxWattRows(d) {
   const hasBands = Array.isArray(d.wattByBand) && d.wattByBand.length > 0;
-  const totalStr = d.watt != null ? d.watt + " W" + (d.wattVerified === false ? " (검증필요)" : "") : null;
+  const totalStr =
+    d.watt != null
+      ? `${d.watt}${typeof d.watt === "number" ? " W" : ""}${d.wattVerified === false ? " (검증필요)" : ""}`
+      : null;
   if (totalStr == null && !hasBands) return [];
   if (!hasBands) return [specRow("RMS Power Handling (Total)", totalStr)];
   const totalRow = {
@@ -944,7 +914,7 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
   // 레이아웃이 모든 스피커에서 통일된다. 버튼은 views 길이만큼 동적으로
   // 생성되므로 데이터에 뷰를 추가하면 버튼도 자동으로 늘어난다.
   const views = getViews(d);
-  const mediaClass = productMediaClass(d);
+  const mediaClass = productMediaClass();
   const viewSlug = label => label.toLowerCase().replace(/[^a-z0-9]+/g, "-");
   // 세로로 쌓인 스택 칸의 줄 수에 옆 버튼들의 줄 수를 맞춰야 자연스럽다.
   // stackViews 는 뒤에서 만들지만 개수가 parenBodyHTML(줄바꿈 판단)에 필요해
@@ -1028,7 +998,7 @@ export function modalBodyHTML(d, resolveAmpId, relatedAccessories) {
   const M = MFR[d.mk],
     color = M.color;
   const head = `<div class="modal__head">
-      <div class="eyebrow"><span class="eyebrow__brand" style="color:${color}">${esc(M.name)}</span> · ${d.throwCat ? esc(d.throwCat) + " · " : ""}${esc(d.series)}</div>
+      <div class="eyebrow"><span class="eyebrow__brand" style="color:${color}">${esc(M.name)}</span> · ${esc(d.series)}</div>
       <div class="modal__head-row">
         <div class="modal__title">${esc(d.name)}</div>
         ${titleTagsHTML(d, "modal__title-tags", "modal__title-tag")}

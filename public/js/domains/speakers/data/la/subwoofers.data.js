@@ -68,10 +68,20 @@ export const LA_SUBWOOFERS = [
       }
     ],
     "ampRaw": "LA12X(2/2)",
-    "img": "public/assets/img/speakers/la/subwoofers/spk-la-cs1.png",
+    "img": "public/assets/img/speakers/la/official/subwoofers/cs1/01-cs1-product-thumbnail.png",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-cs1.png" },
-      { "label": "Rear", "src": "public/assets/img/speakers/la/subwoofers/spk-la-cs1-rear.png" }
+      {
+        "label": "cs1-product-thumbnail",
+        "src": "public/assets/img/speakers/la/official/subwoofers/cs1/01-cs1-product-thumbnail.png"
+      },
+      {
+        "label": "cs1-product-overview-image-1",
+        "src": "public/assets/img/speakers/la/official/subwoofers/cs1/02-cs1-product-overview-image-1.jpg"
+      },
+      {
+        "label": "cs1-product-overview-image-2",
+        "src": "public/assets/img/speakers/la/official/subwoofers/cs1/03-cs1-product-overview-image-2.jpg"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -203,11 +213,20 @@ export const LA_SUBWOOFERS = [
       }
     ],
     "ampRaw": "LA12X(1/4), LA2Xi(PBTL1/1), LA2Xi(SE1/4)",
-    "img": "public/assets/img/speakers/la/subwoofers/spk-la-ks28.png",
+    "img": "public/assets/img/speakers/la/official/subwoofers/ks28/01-3dr-ks28-perspective-01.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-ks28.png" },
-      { "label": "Perspective", "src": "public/assets/img/speakers/la/subwoofers/spk-la-ks28-perspective.png" },
-      { "label": "4×KS28", "src": "public/assets/img/speakers/la/subwoofers/spk-la-ks28-array.png" }
+      {
+        "label": "KS28 Perspective 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/ks28/01-3dr-ks28-perspective-01.runtime.webp"
+      },
+      {
+        "label": "KS28 Front",
+        "src": "public/assets/img/speakers/la/official/subwoofers/ks28/02-l-acoustics-ks28-front.jpg"
+      },
+      {
+        "label": "KS28 x4 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/ks28/03-3dr-ks28-x4-01.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -358,11 +377,20 @@ export const LA_SUBWOOFERS = [
       }
     ],
     "ampRaw": "LA12X(2/8), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/8)",
-    "img": "public/assets/img/speakers/la/subwoofers/spk-la-ks21.png",
+    "img": "public/assets/img/speakers/la/official/subwoofers/ks21/01-l-acoustics-ks21-3-4-front.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-ks21.png" },
-      { "label": "Rear", "src": "public/assets/img/speakers/la/subwoofers/spk-la-ks21-rear.png" },
-      { "label": "Side", "src": "public/assets/img/speakers/la/subwoofers/spk-la-ks21-side.png" }
+      {
+        "label": "KS21 3 4 Front",
+        "src": "public/assets/img/speakers/la/official/subwoofers/ks21/01-l-acoustics-ks21-3-4-front.runtime.webp"
+      },
+      {
+        "label": "KS21 Rear",
+        "src": "public/assets/img/speakers/la/official/subwoofers/ks21/02-l-acoustics-ks21-rear.runtime.webp"
+      },
+      {
+        "label": "KS21 Side",
+        "src": "public/assets/img/speakers/la/official/subwoofers/ks21/03-l-acoustics-ks21-side.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -521,9 +549,16 @@ export const LA_SUBWOOFERS = [
       }
     ],
     "ampRaw": "LA12X(2/8), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/8)",
-    "img": "public/assets/img/speakers/la/subwoofers/spk-la-ks21i.png",
+    "img": "public/assets/img/speakers/la/official/subwoofers/ks21i/01-3dr-ks21i-perspective-01-800x400-1.png",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-ks21i.png" }
+      {
+        "label": "ks21i-perspective-01-800x400-1",
+        "src": "public/assets/img/speakers/la/official/subwoofers/ks21i/01-3dr-ks21i-perspective-01-800x400-1.png"
+      },
+      {
+        "label": "ks21i-perspective-white-ral-01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/ks21i/02-3dr-ks21i-perspective-white-ral-01.png"
+      }
     ],
     "notes": "KS21의 설치용(install) 버전. L-Acoustics preset_guide_EN.pdf(v29.0)에 KS21/KS21i가 동일 인클로저로 팩토리 프리셋·앰프 매칭을 공유한다고 명시되어 있어 음향 스펙은 KS21과 동일하게 반영. 물리 스펙은 공식 스펙시트(KS21i_AE_EN.docx, 2026-07-10 확보)로 채움 — non-i(KS21)와 값이 다름(weight 46kg vs 49kg 등), 별개 실측치로 확인.",
     "relations": {
@@ -668,11 +703,20 @@ export const LA_SUBWOOFERS = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/6)",
-    "img": "public/assets/img/speakers/la/subwoofers/spk-la-sb18.png",
+    "img": "public/assets/img/speakers/la/official/subwoofers/sb18/01-3dr-sb18-3-4-avant-catalogue-01.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18.png" },
-      { "label": "Horizontal", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-horizontal.png" },
-      { "label": "3×SB18", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-array.png" }
+      {
+        "label": "SB18 3 4 Avant Catalogue 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb18/01-3dr-sb18-3-4-avant-catalogue-01.runtime.webp"
+      },
+      {
+        "label": "3xSB18 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb18/02-3dr-3xsb18-01.runtime.webp"
+      },
+      {
+        "label": "SB18 Horizontal 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb18/03-3dr-sb18-horizontal-01.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -817,12 +861,24 @@ export const LA_SUBWOOFERS = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/6)",
-    "img": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii.png",
+    "img": "public/assets/img/speakers/la/official/subwoofers/sb18-iii/01-3dr-sb18-iii-3-4-avant-catalogue-01.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii.png" },
-      { "label": "3×SB18 IIi + 9×Kara IIi + KARAIIi-BUMP", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii-array.png" },
-      { "label": "4×SB18 IIi + KARAIIi-BUMP", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii-array2.png" },
-      { "label": "4×SB18 IIi + KARAIIi-BUMP (Cardioid)", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb18-iii-array3.png" }
+      {
+        "label": "SB18 IIi 3 4 Avant Catalogue 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb18-iii/01-3dr-sb18-iii-3-4-avant-catalogue-01.runtime.webp"
+      },
+      {
+        "label": "3xSB18 IIi+9xKara IIi+KARAIIi-BUMP 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb18-iii/02-3dr-3xsb18-iii-9xkara-iii-karaiii-bump-01.runtime.webp"
+      },
+      {
+        "label": "4xSB18 IIi+KARAIIi-BUMP 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb18-iii/03-3dr-4xsb18-iii-karaiii-bump-01.runtime.webp"
+      },
+      {
+        "label": "4xSB18 IIi+KARAIIi-BUMP Cardioide 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb18-iii/04-3dr-4xsb18-iii-karaiii-bump-cardioide-01.runtime.webp"
+      }
     ],
     "notes": "SB18(i/m)과 함께 [SB18_100] 프리셋 계열을 공유하는 후속 모델. L-Acoustics preset_guide_EN.pdf(v29.0) drive capacity 표에 'SB18(i/m) / SB18 IIi'로 병기되어 동일한 앰프 매칭 값을 사용. 물리 스펙은 공식 스펙시트(SB18_IIi_AE_EN.docx, 2026-07-10 확보)로 채움.",
     "relations": {
@@ -954,11 +1010,20 @@ export const LA_SUBWOOFERS = [
       }
     ],
     "ampRaw": "LA12X(2/8), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/subwoofers/spk-la-sb15m.png",
+    "img": "public/assets/img/speakers/la/official/subwoofers/sb15m/01-3dr-sb15m-3-4-avant-catalogue-01.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb15m.png" },
-      { "label": "White Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb15m-white-front.png" },
-      { "label": "Horizontal", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb15m-horizontal.png" }
+      {
+        "label": "SB15M 3 4 Avant Catalogue 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb15m/01-3dr-sb15m-3-4-avant-catalogue-01.runtime.webp"
+      },
+      {
+        "label": "SB15M 3 4 Avant Catalogue Blanc 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb15m/02-3dr-sb15m-3-4-avant-catalogue-blanc-01.runtime.webp"
+      },
+      {
+        "label": "SB15M Horizontal 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb15m/03-3dr-sb15m-horizontal-01.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -1128,11 +1193,36 @@ export const LA_SUBWOOFERS = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE2/8), LA7.16(2/32)",
-    "img": "public/assets/img/speakers/la/subwoofers/spk-la-sb10r.png",
+    "img": "public/assets/img/speakers/la/official/subwoofers/sb10r/01-3dr-sb10r-intile-program-ral-01.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb10r.png" },
-      { "label": "In-tile", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb10r-intile.png" },
-      { "label": "In-wall", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb10r-inwall.png" }
+      {
+        "label": "SB10r inTile Program RAL 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb10r/01-3dr-sb10r-intile-program-ral-01.runtime.webp"
+      },
+      {
+        "label": "SB10r inTile White RAL 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb10r/02-3dr-sb10r-intile-white-ral-01.runtime.webp"
+      },
+      {
+        "label": "SB10r In Ceiling 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb10r/03-3dr-sb10r-in-ceiling-01.runtime.webp"
+      },
+      {
+        "label": "SB10r In Wall 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb10r/04-3dr-sb10r-in-wall-01.runtime.webp"
+      },
+      {
+        "label": "SB10r In Wall 02",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb10r/05-3dr-sb10r-in-wall-02.runtime.webp"
+      },
+      {
+        "label": "SB10r inWall Program RAL 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb10r/06-3dr-sb10r-inwall-program-ral-01.runtime.webp"
+      },
+      {
+        "label": "SB10r inWall White RAL 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb10r/07-3dr-sb10r-inwall-white-ral-01.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -1364,11 +1454,24 @@ export const LA_SUBWOOFERS = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE2/8), LA4X(2/8), LA7.16(2/32)",
-    "img": "public/assets/img/speakers/la/subwoofers/spk-la-sb10i.png",
+    "img": "public/assets/img/speakers/la/official/subwoofers/sb10i/01-3dr-sb10i-3-4-avant-catalogue-01.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb10i.png" },
-      { "label": "On-wall", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb10i-on-wall.png" },
-      { "label": "Perspective", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb10i-perspective.png" }
+      {
+        "label": "SB10i 3 4 Avant Catalogue 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb10i/01-3dr-sb10i-3-4-avant-catalogue-01.runtime.webp"
+      },
+      {
+        "label": "SB10i Perspective 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb10i/02-3dr-sb10i-perspective-01.runtime.webp"
+      },
+      {
+        "label": "SB10i Publicite 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb10i/03-3dr-sb10i-publicite-01.runtime.webp"
+      },
+      {
+        "label": "SB10i On Wall 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb10i/04-3dr-sb10i-on-wall-01.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -1536,10 +1639,32 @@ export const LA_SUBWOOFERS = [
       }
     ],
     "ampRaw": "LA12X(2/8), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/subwoofers/spk-la-sb6r.png",
+    "img": "public/assets/img/speakers/la/official/subwoofers/sb6r/01-3dr-sb6r-intile-program-ral-01.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb6r.png" },
-      { "label": "In-tile", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb6r-intile.png" }
+      {
+        "label": "SB6r inTile Program RAL 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb6r/01-3dr-sb6r-intile-program-ral-01.runtime.webp"
+      },
+      {
+        "label": "SB6r inTile Program RAL 03",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb6r/02-3dr-sb6r-intile-program-ral-03.runtime.webp"
+      },
+      {
+        "label": "SB6r inTile White RAL 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb6r/03-3dr-sb6r-intile-white-ral-01.runtime.webp"
+      },
+      {
+        "label": "SB6r In Ceiling 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb6r/04-3dr-sb6r-in-ceiling-01.runtime.webp"
+      },
+      {
+        "label": "SB6r In Wall 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb6r/05-3dr-sb6r-in-wall-01.runtime.webp"
+      },
+      {
+        "label": "SB6r inWall White RAL 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb6r/06-3dr-sb6r-inwall-white-ral-01.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -1720,12 +1845,28 @@ export const LA_SUBWOOFERS = [
       }
     ],
     "ampRaw": "LA12X(2/8), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/subwoofers/spk-la-sb6i.png",
+    "img": "public/assets/img/speakers/la/official/subwoofers/sb6i/01-3dr-sb6i-3-4-avant-catalogue-01.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb6i.png" },
-      { "label": "White Front", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb6i-white-front.png" },
-      { "label": "On-wall", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb6i-on-wall.png" },
-      { "label": "On-ceiling", "src": "public/assets/img/speakers/la/subwoofers/spk-la-sb6i-on-ceiling.png" }
+      {
+        "label": "SB6i 3 4 Avant Catalogue 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb6i/01-3dr-sb6i-3-4-avant-catalogue-01.runtime.webp"
+      },
+      {
+        "label": "SB6i 3 4 Avant Catalogue White 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb6i/02-3dr-sb6i-3-4-avant-catalogue-white-01.runtime.webp"
+      },
+      {
+        "label": "SB6i Detail Rigging 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb6i/03-3dr-sb6i-detail-rigging-01.runtime.webp"
+      },
+      {
+        "label": "SB6i On Celing 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb6i/04-3dr-sb6i-on-celing-01.runtime.webp"
+      },
+      {
+        "label": "SB6i On Wall 01",
+        "src": "public/assets/img/speakers/la/official/subwoofers/sb6i/05-3dr-sb6i-on-wall-01.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []

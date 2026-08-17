@@ -1,0 +1,1827 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "funktion",
+  "scope": "loudspeakers",
+  "sourcePages": [
+    "https://funktion-one.com/product-system/vero",
+    "https://funktion-one.com/product-system/verox",
+    "https://funktion-one.com/ranges/evolution",
+    "https://funktion-one.com/ranges/compact-range",
+    "https://funktion-one.com/ranges/horn-loaded-bass",
+    "https://funktion-one.com/ranges/bass",
+    "https://funktion-one.com/ranges/dance-stack",
+    "https://funktion-one.com/ranges/public-address",
+    "https://funktion-one.com/ranges/monitors"
+  ],
+  "retrievedAt": "2026-08-18",
+  "lifecycleExclusions": {
+    "sourcePage": "https://funktion-one.com/ranges/heritage/",
+    "status": "discontinued",
+    "count": 40,
+    "productPageSlugs": [
+      "ax88",
+      "br118",
+      "ds210mk1",
+      "f101-mk1",
+      "f1201",
+      "f215-mk1",
+      "f218-mk1",
+      "f221a",
+      "f5_mk1",
+      "f81-1",
+      "f88",
+      "ib218",
+      "infrahorn",
+      "mb112",
+      "mb210",
+      "mb212",
+      "mb308",
+      "res-1",
+      "res-1.5",
+      "res-1.5tt",
+      "res-18",
+      "res-2",
+      "res-2a",
+      "res-2mk1",
+      "res-2sh",
+      "res-3",
+      "res-3eh",
+      "res-3sh",
+      "res-4d",
+      "res-4e",
+      "res-4s",
+      "res-4t",
+      "res-5e",
+      "res-5s",
+      "res-5t",
+      "res-9",
+      "rm12",
+      "rm15",
+      "satellite-tweeter-pod",
+      "sb210a"
+    ]
+  },
+  "products": [
+    {
+      "id": "spk-funktion-vero-v60",
+      "name": "VERO V60",
+      "slug": "vero-v60",
+      "pageSlug": "v60",
+      "series": "Vero",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/v60/",
+      "technical": {
+        "bandwidth": "200Hz - 18kHz",
+        "weight": "115kg",
+        "dispersion": "60° horizontal x 6° vertical",
+        "connectors": "2 x Syntax SPK 8 (male and female)",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 10\" Operating Band 200Hz - 4kHz Sensitivity at 1m 111dB at 3.4V Power (AES) 500W Nominal Impedence 12Ω Driver 3 x 1.4\" Operating Band 4kHz - 18kHz Sensitivity at 1m 114dB at 3.1V Power (AES) 225W Nominal Impedence 10Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/vero/spk-funktion-vero-v60.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/vero/vero-v60/01-898478fe-f2dd-4360-9b20-a82d05406717-v60-website-product.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/vero/vero-v60/02-ab1e8h5fn6df3cwm-d7f7b1bf-3768-4d51-a801-a103a92c3f84-funktion-one-2bvero-2bprod.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/vero/vero-v60/03-2b9d1654-edd1-437c-83c1-809740c32e25-v60-f1-wd-3dt0135-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-vero-v90",
+      "name": "VERO V90",
+      "slug": "vero-v90",
+      "pageSlug": "v90",
+      "series": "Vero",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/v90/",
+      "technical": {
+        "bandwidth": "200Hz - 18kHz",
+        "weight": "107kg",
+        "dispersion": "90° horizontal x 12º vertical",
+        "connectors": "2 x Syntax SPK 8 (male and female)",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 10\" Operating Band 200Hz - 4kHz Sensitivity at 1m 110dB at 3.4V Power (AES) 500W Nominal Impedence 12Ω Driver 2 x 1.4\" Operating Band 4kHz - 18kHz Sensitivity at 1m 114dB at 4V Power (AES) 150W Nominal Impedence 16Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/vero/spk-funktion-vero-v90.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/vero/vero-v90/01-e996fb3f-d239-4ced-90b9-a43b69738115-v90-website-product.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/vero/vero-v90/02-ab1e8h5fn6df3cwm-d7f7b1bf-3768-4d51-a801-a103a92c3f84-funktion-one-2bvero-2bprod.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/vero/vero-v90/03-256565e9-5d06-41a2-98b6-f9d01145269a-v90-f1-wd-3dt0134-00white.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-vero-v315",
+      "name": "Vero V315",
+      "slug": "vero-v315",
+      "pageSlug": "v315",
+      "series": "Vero",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/v315/",
+      "technical": {
+        "bandwidth": "50Hz to 250Hz",
+        "weight": "116kg",
+        "dispersion": "Array dependent",
+        "connectors": "1 x Neutrik NLT4MP",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 3 x 15\" Operating Band 50Hz - 200Hz Sensitivity at 1m 106dB at 2.8V Power (AES) 1500W Nominal Impedence 2.7Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/vero/spk-funktion-vero-v315.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/vero/vero-v315/01-f4399087-09eb-44c3-bd99-0122bd0a5453-v315-website-product.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/vero/vero-v315/02-ab1e8h5fn6df3cwm-d7f7b1bf-3768-4d51-a801-a103a92c3f84-funktion-one-2bvero-2bprod.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/vero/vero-v315/03-688bc768-129e-46d1-b341-7e3697ba0ced-v315-f1-wd-3dt0136-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-vx90",
+      "name": "VX90",
+      "slug": "vx90",
+      "pageSlug": "vx90",
+      "series": "Vero VX",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/vx90/",
+      "technical": {
+        "bandwidth": "60Hz - 18kHz",
+        "weight": "70kg",
+        "dispersion": "90° Horizontal / 13° Vertical",
+        "connectors": "2 x Neutrik NLT8MP",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 12\" Operating Band 45/85Hz - 280Hz Sensitivity at 1m 100dB at 4V Power (AES) 2 x 400W Nominal Impedence 2 x 16Ω Driver 1 x 8\" Operating Band 280Hz – 5kHz Sensitivity at 1m 107dB at 4V Power (AES) 200W Nominal Impedence 16Ω Driver 1 x 1\" Operating Band 5kHz – 18kHz Sensitivity at 1m 109dB at 4V Power (AES) 100W Nominal Impedence 16Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/vero-vx/spk-funktion-vx90.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/vero-vx/vx90/01-97ed6d87-abd4-432b-9326-eae8401c1e97-vero-vx90-angle.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/vero-vx/vx90/02-ab1i-x5fn6df3czu-a67ecfac-ccb1-44cb-bd58-4f086f239836-funktion-one-2bvero-2bvx-2.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/vero-vx/vx90/03-2563de41-3b6b-47c3-82a1-a6e0d92d34ef-vx90-f1-wd-3dt0137-00.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/vero-vx/vx90/04-aiaz-aeqx7-ewqan-gsb-vx.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-vx-v124",
+      "name": "VX V124",
+      "slug": "vx-v124",
+      "pageSlug": "v124",
+      "series": "Vero VX",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/v124/",
+      "technical": {
+        "bandwidth": "35Hz - 160Hz",
+        "weight": "103kg (227lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 24\" dual voice coil Operating Band 20Hz - 85Hz Sensitivity at 1m 104dB at 2V Power (AES) 2 x 750W Nominal Impedence 2 x 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/vero-vx/spk-funktion-vx-v124.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/vero-vx/vx-v124/01-58e11b3b-b790-45e0-ab11-3de99d8fc20a-v124-v2.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/vero-vx/vx-v124/02-84198778-5290-407c-917d-90fb3fabd69e-f124-f1-wd-3dt0120-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/vero-vx/vx-v124/03-aiaz-aeqx7-ewqan-gsb-vx.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-vx-v221",
+      "name": "VX V221",
+      "slug": "vx-v221",
+      "pageSlug": "v221",
+      "series": "Vero VX",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/v221/",
+      "technical": {
+        "bandwidth": "40Hz - 250Hz",
+        "weight": "130kg (288lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 21\" Operating Band 20Hz - 85Hz Sensitivity at 1m 104dB at 2V Power (AES) 2 x 750W Nominal Impedence 2 x 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/vero-vx/spk-funktion-vx-v221.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/vero-vx/vx-v221/01-bbe73614-8074-4617-a474-43b936a7e5cc-v221.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/vero-vx/vx-v221/02-3753139b-465e-42f1-8589-f86569e2d72d-f221-f1-wd-3dt0119-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/vero-vx/vx-v221/03-aiaz-aeqx7-ewqan-gsb-vx.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-2",
+      "name": "Evo 2",
+      "slug": "evo-2",
+      "pageSlug": "evo-2",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-2/",
+      "technical": {
+        "bandwidth": "85Hz - 18kHz",
+        "weight": "36kg (80lbs)",
+        "dispersion": "50° Horizontal x 25° Vertical",
+        "connectors": "2 x Neutrik NL8 (triamp) or NL4 (biamp) option",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 12\" Operating Band 60/85Hz - 280Hz Sensitivity at 1m 100dB at 2.8V Power (AES) 600W Nominal Impedence 8Ω Driver 8\" (Tri-amp) Operating Band 280Hz - 5kHz Sensitivity at 1m 111dB at 4V Power (AES) 200W Nominal Impedence 16Ω Driver 1\" (Tri-amp) Operating Band 5kHz - 18kHz Sensitivity at 1m 112dB at 4V Power (AES) 75W Nominal Impedence 16Ω Driver 8\" + 1\" (Bi-amp) Operating Band 280Hz - 18kHz Sensitivity at 1m 111dB at 4V Power (AES) 200W Nominal Impedence 16Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-2.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2/01-65aea53a38f662e9dd2126b6-evo2vltanghi1200x1200.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2/02-65aeb4ec38f662e9dd21271c-evo2quad.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2/03-65c21755615e73009ec4540c-evo2-f1-wd-t0235-00.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2/04-aibgoqeqx7-ewqq5-stc-200-bfp.png"
+        },
+        {
+          "label": "Official 5",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2/05-aia-jaeqx7-ewqj9-wb-e2.png"
+        },
+        {
+          "label": "Official 6",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2/06-aiax-weqx7-ewqx-bfp-e2.png"
+        },
+        {
+          "label": "Official 7",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2/07-aifrbgeqx7-ewucr-fc-2e2.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-2l",
+      "name": "Evo 2L",
+      "slug": "evo-2l",
+      "pageSlug": "evo2l",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo2l/",
+      "technical": {
+        "bandwidth": "85Hz - 280Hz",
+        "weight": "21kg (46lbs)",
+        "dispersion": "N/A",
+        "connectors": "2 x Neutrik NL8 or NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 12\" Operating Band 60/85Hz - 280Hz Sensitivity at 1m 100dB at 2.8V Power (AES) 600W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-2l.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2l/01-z4zgjpbqstj99brb-evo2lweb-frontwrigging.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2l/02-z4zn-zbqstj99bxi-evo2-2blpair.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2l/03-em951kbypuxnk-4-evo2l-f1-wd-3dt0298-02.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2l/04-aiax-weqx7-ewqx-bfp-e2.png"
+        },
+        {
+          "label": "Official 5",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2l/05-frx9ahtanxhnhhzl-wb-e2l.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-2sh",
+      "name": "Evo 2SH",
+      "slug": "evo-2sh",
+      "pageSlug": "evo2sh",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo2sh/",
+      "technical": {
+        "bandwidth": "280Hz - 18kHz",
+        "weight": "10kg (22lbs)",
+        "dispersion": "50° Horizontal x 25° Vertical",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 8\" + 1\" Operating Band 280Hz - 18kHz Sensitivity at 1m 111dB at 4V Power (AES) 200W Nominal Impedence 16Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-2sh.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2sh/01-z4zlwjbqstj99bv3-evo2shangle.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2sh/02-z4zlkjbqstj99bv8-evo2shfront.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-2sh/03-z5dmqjbqstj99uyh-evo2sh-f1-wd-3dt0296-00-1.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-6e",
+      "name": "Evo 6E",
+      "slug": "evo-6e",
+      "pageSlug": "evo-6e",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-6e/",
+      "technical": {
+        "bandwidth": "70Hz - 18kHz",
+        "weight": "57kg (126lbs) without wheelboard",
+        "dispersion": "50° Horizontal x 25° Vertical",
+        "connectors": "2 x Neutrik NL8",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15\" Operating Band 85Hz - 220Hz Sensitivity at 1m 103dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω Driver 10\" Operating Band 220Hz - 4kHz Sensitivity at 1m 112dB at 4.9V Power (AES) 250W Nominal Impedence 24Ω Driver 1.4\" Operating Band 4kHz - 18kHz Sensitivity at 1m 114dB at 5.6V Power (AES) 75W Nominal Impedence 32Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-6e.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6e/01-787266de-1b1b-48a2-98e6-778612f26533-evo-6e-new.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6e/02-ef3ca298-f232-4f94-ab6f-db27cde524dd-evo6e-f1-wd-3dt0015-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6e/03-aia14aeqx7-ewqb8-cfpk-2e67.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6e/04-aia3qweqx7-ewqep-wb-e67.png"
+        },
+        {
+          "label": "Official 5",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6e/05-aia0daeqx7-ewqa5-cfpk-2e67l.png"
+        },
+        {
+          "label": "Official 6",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6e/06-aia3vgeqx7-ewqee-yk-se6.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-6eh",
+      "name": "Evo 6EH",
+      "slug": "evo-6eh",
+      "pageSlug": "evo-6eh",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-6eh/",
+      "technical": {
+        "bandwidth": "200Hz - 18kHz",
+        "weight": "38kg (84lbs)",
+        "dispersion": "50° Horizontal x 25° Vertical",
+        "connectors": "Neutrik NL4 or NL8 option",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 10\" Operating Band 200Hz - 4kHz Sensitivity at 1m 112dB at 4.9V Power (AES) 250W Nominal Impedence 24Ω Driver 1.4\" Operating Band 4kHz - up Sensitivity at 1m 114dB at 5.6V Power (AES) 75W Nominal Impedence 32Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-6eh.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6eh/01-fb57d5bd-cef7-446b-811e-5b9043552df9-evo-6eh.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6eh/02-7b118261-99ee-4f22-a9fc-214f309c3fa8-evo6eh-f1-wd-3dt0024-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6eh/03-aia70geqx7-ewqh7-gk-e67h.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6eh/04-aia1lgeqx7-ewqbg-yk-se6h.png"
+        },
+        {
+          "label": "Official 5",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6eh/05-aia4kqeqx7-ewqfn-wb-e67h.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-6el",
+      "name": "Evo 6EL",
+      "slug": "evo-6el",
+      "pageSlug": "evo-6el",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-6el/",
+      "technical": {
+        "bandwidth": "70Hz - 300Hz",
+        "weight": "30kg (66lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4 or NL8 option",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15\" Operating Band 85Hz - 250Hz Sensitivity at 1m 103dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-6el.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6el/01-c492e8fb-b14f-46b6-9c59-abc35dd08b22-evo-6el.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6el/02-57b96e2c-1f5c-4cae-9b0a-c08f14f35afa-evo6el-f1-wd-3dt0029-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6el/03-aia3qweqx7-ewqep-wb-e67.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6el/04-aia0daeqx7-ewqa5-cfpk-2e67l.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-6sh",
+      "name": "Evo 6SH",
+      "slug": "evo-6sh",
+      "pageSlug": "evo-6sh-skeletal",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-6sh-skeletal/",
+      "technical": {
+        "bandwidth": "200Hz - 18kHz",
+        "weight": "20.5kg (45lbs)",
+        "dispersion": "50° Horizontal x 25° Vertical",
+        "connectors": "Neutrik NL4 or Junction box option",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 10\" Operating Band 200Hz - 4kHz Sensitivity at 1m 112dB at 4.9V Power (AES) 250W Nominal Impedence 24Ω Driver 1.4\" Operating Band 4kHz - 18kHz Sensitivity at 1m 114dB at 5.6V Power (AES) 75W Nominal Impedence 32Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-6sh.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6sh/01-7e5f840d-8029-48b7-99f5-9ba82d853d22-evo-6sh-copy.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-6sh/02-16c155dc-0688-46eb-b290-239259e3ac01-evo6sh-f1-wd-3dt0034-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-7e",
+      "name": "Evo 7E",
+      "slug": "evo-7e",
+      "pageSlug": "evo-7e",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-7e/",
+      "technical": {
+        "bandwidth": "70Hz - 18kHz",
+        "weight": "61kg (134lbs)",
+        "dispersion": "40° Horizontal x 20° Vertical",
+        "connectors": "2 x Neutrik NL8",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15\" Operating Band 85Hz - 220Hz Sensitivity at 1m 103dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω Driver 10\" Operating Band 220Hz - 4kHz Sensitivity at 1m 112dB at 4.9V Power (AES) 250W Nominal Impedence 24Ω Driver 1.4\" Operating Band 4kHz - 18kHz Sensitivity at 1m 114dB at 5.6V Power (AES) 75W Nominal Impedence 32Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-7e.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7e/01-bd5077ff-b073-48ae-8c35-d280407c932d-evo-7e.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7e/02-7bd98a0e-3097-4a6d-8c1c-78bde74ac626-evo7e-f1-wd-3dt0066-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7e/03-aia3cgeqx7-ewqd1-yk-se7.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7e/04-aia14aeqx7-ewqb8-cfpk-2e67.png"
+        },
+        {
+          "label": "Official 5",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7e/05-aia3qweqx7-ewqep-wb-e67.png"
+        },
+        {
+          "label": "Official 6",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7e/06-aia0daeqx7-ewqa5-cfpk-2e67l.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-7eh",
+      "name": "Evo 7EH",
+      "slug": "evo-7eh",
+      "pageSlug": "evo-7eh1",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-7eh1/",
+      "technical": {
+        "bandwidth": "200Hz - 18kHz",
+        "weight": "41kg (90lbs)",
+        "dispersion": "40° Horizontal x 20° Vertical",
+        "connectors": "2x Neutrik NL4 or NL8 option",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 10\" Operating Band 200Hz - 4kHz Sensitivity at 1m 112dB at 4.9V Power (AES) 250W Nominal Impedence 24Ω Driver 1.4\" Operating Band 4kHz - up Sensitivity at 1m 114dB at 5.6V Power (AES) 75W Nominal Impedence 32Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-7eh.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7eh/01-fb57d5bd-cef7-446b-811e-5b9043552df9-evo-6eh.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7eh/02-0abfafdf-bfe2-4368-892c-7a97477759c8-evo7eh-f1-wd-3dt0089-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7eh/03-aia70geqx7-ewqh7-gk-e67h.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7eh/04-aia1caeqx7-ewqbo-yk-se7h.png"
+        },
+        {
+          "label": "Official 5",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7eh/05-aia4kqeqx7-ewqfn-wb-e67h.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-7el",
+      "name": "Evo 7EL",
+      "slug": "evo-7el",
+      "pageSlug": "evo-7el1",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-7el1/",
+      "technical": {
+        "bandwidth": "70Hz - 300Hz",
+        "weight": "32kg (70.5lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15\" Operating Band 85Hz - 250Hz Sensitivity at 1m 103dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-7el.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7el/01-c492e8fb-b14f-46b6-9c59-abc35dd08b22-evo-6el.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7el/02-7021a711-0dc9-4bed-8ee7-5e0d77fa0521-evo7el-f1-wd-t0094-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7el/03-aia3qweqx7-ewqep-wb-e67.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7el/04-aia0daeqx7-ewqa5-cfpk-2e67l.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-7sh",
+      "name": "Evo 7SH",
+      "slug": "evo-7sh",
+      "pageSlug": "evo-7sh-skeletal",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-7sh-skeletal/",
+      "technical": {
+        "bandwidth": "200Hz - 18kHz",
+        "weight": "23kg (51lbs)",
+        "dispersion": "40° Horizontal x 20° Vertical",
+        "connectors": "Neutrik NL4 or Junction box option",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 10\" Operating Band 200Hz - 4kHz Sensitivity at 1m 112dB at 4.9V Power (AES) 250W Nominal Impedence 24Ω Driver 1.4\" Operating Band 4kHz - 18kHz Sensitivity at 1m 114dB at 5.6V Power (AES) 75W Nominal Impedence 32Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-7sh.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7sh/01-9770c7dd-c7b6-4ac5-a88b-bbc10aeeff20-evo-7sh.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7sh/02-75c73a08-ed60-438a-8863-f77a0c5309aa-evo7sh-f1-wd-3dt0099-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-7t",
+      "name": "Evo 7T",
+      "slug": "evo-7t",
+      "pageSlug": "evo-7t",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-7t/",
+      "technical": {
+        "bandwidth": "70Hz - 18kHz",
+        "weight": "70kg (154lbs) without wheelboard",
+        "dispersion": "40° Horizontal x 20° Vertical",
+        "connectors": "2 x Neutrik NL8",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15\" Operating Band 85Hz - 220Hz Sensitivity at 1m 103dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω Driver 10\" Operating Band 220Hz - 4kHz Sensitivity at 1m 112dB at 4.9V Power (AES) 250W Nominal Impedence 24Ω Driver 1.4\" Operating Band 4kHz - 18kHz Sensitivity at 1m 114dB at 5.6V Power (AES) 75W Nominal Impedence 32Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-7t.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7t/01-2adafd79-d552-419b-a2f0-fe34c8ad951f-evo7t-website-featureproduct.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7t/02-a66645ec-72a3-4362-85ca-ae856d582681-evo7t-f1-wd-3dt0100-3d00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7t/03-aia3qweqx7-ewqep-wb-e67.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7t/04-aia2ogeqx7-ewqcx-tsfk-3e7.png"
+        },
+        {
+          "label": "Official 5",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7t/05-aia81aeqx7-ewqjd-gk-e6.png"
+        },
+        {
+          "label": "Official 6",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7t/06-aia2yaeqx7-ewqcu-tsfk-2e7.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-7th",
+      "name": "Evo 7TH",
+      "slug": "evo-7th",
+      "pageSlug": "evo-7th",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-7th/",
+      "technical": {
+        "bandwidth": "200Hz - 18kHz",
+        "weight": "44kg (97lbs) without wheelboard",
+        "dispersion": "40° Horizontal x 20° Vertical",
+        "connectors": "2 x Neutrik NL8",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 10\" Operating Band 200Hz - 4kHz Sensitivity at 1m 112dB at 4.9V Power (AES) 250W Nominal Impedence 24Ω Driver 1.4\" Operating Band 4kHz - 18kHz Sensitivity at 1m 114dB at 5.6V Power (AES) 75W Nominal Impedence 32Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-7th.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7th/01-15b9dc83-b4f1-48d8-8398-9d4056bf1cef-evo7th-website-product.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7th/02-6f3e7b5d-af4f-4390-b269-286b86cc1ed8-evo7th-f1-wd-3dt0101-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7th/03-aia70geqx7-ewqh7-gk-e67h.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7th/04-aia2ogeqx7-ewqcx-tsfk-3e7.png"
+        },
+        {
+          "label": "Official 5",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7th/05-aia2yaeqx7-ewqcu-tsfk-2e7.png"
+        },
+        {
+          "label": "Official 6",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7th/06-aia4kqeqx7-ewqfn-wb-e67h.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evo-7tl",
+      "name": "Evo 7TL",
+      "slug": "evo-7tl",
+      "pageSlug": "evo-7tl-215",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evo-7tl-215/",
+      "technical": {
+        "bandwidth": "65Hz - 300 Hz",
+        "weight": "61kg (135lbs) without wheelboard",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL8",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 15\" Operating Band 65Hz - 300Hz Sensitivity at 1m 102dB at 2V Power (AES) 2 x 400W Nominal Impedence 2 x 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-7tl.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7tl/01-7e995a44-c05a-497c-884c-1dad92e1edff-evo-7tl-215.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7tl/02-c3babd69-aaac-46c3-90a1-7caf761e5d69-evo7tl-f1-wd-3dt0102-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7tl/03-aia3qweqx7-ewqep-wb-e67.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7tl/04-aia2ogeqx7-ewqcx-tsfk-3e7.png"
+        },
+        {
+          "label": "Official 5",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7tl/05-aia81aeqx7-ewqjd-gk-e6.png"
+        },
+        {
+          "label": "Official 6",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evo-7tl/06-aia2yaeqx7-ewqcu-tsfk-2e7.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evolution-x",
+      "name": "Evolution X",
+      "slug": "evolution-x",
+      "pageSlug": "evolution-x",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evolution-x/",
+      "technical": {
+        "bandwidth": "60Hz - 18kHz",
+        "weight": "47kg (103lbs) without wheelboard",
+        "dispersion": "90° Horizontal x 13° Vertical",
+        "connectors": "2 x Neutrik NL8",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15\" Operating Band 35/85Hz - 280Hz Sensitivity at 1m 102dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω Driver 8\" Operating Band 280Hz - 5kHz Sensitivity at 1m 107dB at 4V Power (AES) 200W Nominal Impedence 16Ω Driver 1\" Operating Band 5kHz - 18kHz Sensitivity at 1m 109dB at 4V Power (AES) 100W Nominal Impedence 16Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evolution-x.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evolution-x/01-6dd0ea8b-db3d-4fbd-bc36-22626c2ed050-evo-x-product-page.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evolution-x/02-d7badb01-c457-4633-8ee2-22d084e4b2bb-funktion-one-evo-x-grid-2.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evolution-x/03-zove0x5lenntwwsn-ex-f1-wd-3dt0005-00.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evolution-x/04-aia9iweqx7-ewqjc-wb-ex.png"
+        },
+        {
+          "label": "Official 5",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evolution-x/05-aiaziaeqx7-ewqzq-yk-se-x.png"
+        },
+        {
+          "label": "Official 6",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evolution-x/06-aia9iqeqx7-ewqjv-gk-ex.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-evolution-xsh",
+      "name": "Evolution XSH",
+      "slug": "evolution-xsh",
+      "pageSlug": "evolution-xsh1",
+      "series": "Evolution",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/evolution-xsh1/",
+      "technical": {
+        "bandwidth": "280Hz - 18kHz",
+        "weight": "13.5kg (30lbs) (including yoke)",
+        "dispersion": "90° Horizontal x 13° Vertical",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 8\" Operating Band 280Hz - 5kHz Sensitivity at 1m 107dB at 4V Power (AES) 200W Nominal Impedence 16Ω Driver 1\" Operating Band 5kHz - 18kHz Sensitivity at 1m 109dB at 4V Power (AES) 100W Nominal Impedence 16Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/evolution/spk-funktion-evolution-xsh.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evolution-xsh/01-8fe63ae3-fb4b-4afc-9cc6-e5c938ca573e-evo-xsh.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/evolution/evolution-xsh/02-fe6a9c38-7c0e-4029-8128-2ac81c2ab436-evo-xsh-website-drawing.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f5-2",
+      "name": "F5.2",
+      "slug": "f5-2",
+      "pageSlug": "f5.2",
+      "series": "Compact",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f5.2/",
+      "technical": {},
+      "runtimeImage": "public/assets/img/speakers/funktion/compact/spk-funktion-f5-2.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/f5-2/01-1ea9d2aa-87d9-4f2b-aa6c-731207e88bab-f5-2-600x600.jpg"
+        }
+      ],
+      "evidenceStatus": "pending",
+      "pendingReasons": [
+        "usable bandwidth unavailable",
+        "weight unavailable",
+        "dispersion unavailable"
+      ]
+    },
+    {
+      "id": "spk-funktion-f55",
+      "name": "F55",
+      "slug": "f55",
+      "pageSlug": "f55",
+      "series": "Compact",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f55/",
+      "technical": {
+        "bandwidth": "160Hz - 13kHz",
+        "weight": "3.5kg (7.5lbs)",
+        "dispersion": "90° x 45°",
+        "connectors": "2 x Neutrik NL4 or Phoenix",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 5\" Operating Band 160Hz - 13kHz Sensitivity at 1m 95dB at 2.8V Power (AES) 60W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/compact/spk-funktion-f55.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/f55/01-ad2d26d0-1581-41fd-a3ca-efbe17ab6974-f55.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/f55/02-da835bde-c223-4e05-bf2c-327656c2630a-f55-f1-wd-3dt0109-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f61",
+      "name": "F61",
+      "slug": "f61",
+      "pageSlug": "f61",
+      "series": "Compact",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f61/",
+      "technical": {
+        "bandwidth": "100Hz - 20kHz",
+        "weight": "5.25kg (11.5lbs)",
+        "dispersion": "90° x 60°",
+        "connectors": "2 x Neutrik NL4 and 1 x Phoenix",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 6\" + 1\" Operating Band 100Hz - 20kHz Sensitivity at 1m 92dB at 4V Power (AES) 100W Nominal Impedence 16Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/compact/spk-funktion-f61.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/f61/01-z6ef35bqstj9-lmo-fuktion-onef61violetanglesmaller.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/f61/02-z4ahd5bqstj99cr0-f61whiteangle.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/f61/03-z5dlxpbqstj99uyp-f61-f1-wd-3dt0283-00.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/f61/04-aiaytgeqx7-ewqyr-wms50.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f81-2",
+      "name": "F81.2",
+      "slug": "f81-2",
+      "pageSlug": "f81.2",
+      "series": "Compact",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f81.2/",
+      "technical": {},
+      "runtimeImage": "public/assets/img/speakers/funktion/compact/spk-funktion-f81-2.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/f81-2/01-c012f632-5998-4d61-aa26-52f1c44f44d6-funktion-one-f81-2.jpg"
+        }
+      ],
+      "evidenceStatus": "pending",
+      "pendingReasons": [
+        "usable bandwidth unavailable",
+        "weight unavailable",
+        "dispersion unavailable"
+      ]
+    },
+    {
+      "id": "spk-funktion-f101-2",
+      "name": "F101.2",
+      "slug": "f101-2",
+      "pageSlug": "f101.2",
+      "series": "Compact",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f101.2/",
+      "technical": {},
+      "runtimeImage": "public/assets/img/speakers/funktion/compact/spk-funktion-f101-2.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/f101-2/01-b58e8306-346d-43ae-8051-c085b3febb40-funktion-one-f101-2-v2.png"
+        }
+      ],
+      "evidenceStatus": "pending",
+      "pendingReasons": [
+        "usable bandwidth unavailable",
+        "weight unavailable",
+        "dispersion unavailable"
+      ]
+    },
+    {
+      "id": "spk-funktion-f1201-2",
+      "name": "F1201.2",
+      "slug": "f1201-2",
+      "pageSlug": "f1201.2",
+      "series": "Compact",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f1201.2/",
+      "technical": {},
+      "runtimeImage": "public/assets/img/speakers/funktion/compact/spk-funktion-f1201-2.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/f1201-2/01-30904df4-da97-434d-930b-9b2e7b58e2a7-funktion-one-f1201-2.jpg"
+        }
+      ],
+      "evidenceStatus": "pending",
+      "pendingReasons": [
+        "usable bandwidth unavailable",
+        "weight unavailable",
+        "dispersion unavailable"
+      ]
+    },
+    {
+      "id": "spk-funktion-sb8",
+      "name": "SB8",
+      "slug": "sb8",
+      "pageSlug": "sb8-compact-range",
+      "series": "Compact",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/sb8-compact-range/",
+      "technical": {
+        "bandwidth": "50Hz - 300Hz",
+        "weight": "14kg (38.8lbs)",
+        "dispersion": "N/A",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 8” Operating Band 50Hz - 300Hz Sensitivity at 1m 95dB at 2.8V Power (AES) 250W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/compact/spk-funktion-sb8.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/sb8/01-b0eab8a2-8f36-4702-a33f-fc42b0a8f257-sb8-new.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/sb8/02-b6b93c3f-9e64-44c6-9109-4176110fe1de-funktion-one-sb8-grid.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/sb8/03-4194661e-8e22-4191-9510-e8eb9ef5b7cd-sb8-f1-wd-3dt0074-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-sb10",
+      "name": "SB10",
+      "slug": "sb10",
+      "pageSlug": "sb10-compact-range",
+      "series": "Compact",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/sb10-compact-range/",
+      "technical": {
+        "bandwidth": "45Hz - 300Hz",
+        "weight": "19kg (42lbs)",
+        "dispersion": "N/A",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 10” Operating Band 40Hz - 130Hz Sensitivity at 1m 98dB at 2.8V Power (AES) 300W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/compact/spk-funktion-sb10.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/sb10/01-834667dd-9884-4cee-b126-beb66f1f956d-funktion-one-sb10-bass.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/sb10/02-ca369c89-c406-4a3f-a0bd-bfc39edc00c0-funktion-one-sb10-grid.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/sb10/03-46e1cf1f-20e5-48e2-a479-ff4d3d53329c-sb10-f1-wd-3dt0079-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-sb12",
+      "name": "SB12",
+      "slug": "sb12",
+      "pageSlug": "sb12-compact-range",
+      "series": "Compact",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/sb12-compact-range/",
+      "technical": {
+        "bandwidth": "42Hz - 150Hz",
+        "weight": "28kg (62lbs)",
+        "dispersion": "N/A",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 12” Operating Band 35Hz - 150Hz Sensitivity at 1m 97dB at 2.8V Power (AES) 350W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/compact/spk-funktion-sb12.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/sb12/01-awtqdqivotkhbtw4-sb12-website.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/sb12/02-z5dngpbqstj99uyu-sb12-f1-wd-3dt0310-00-1.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-sb212lp",
+      "name": "SB212LP",
+      "slug": "sb212lp",
+      "pageSlug": "sb212lp-compact-range",
+      "series": "Compact",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/sb212lp-compact-range/",
+      "technical": {
+        "bandwidth": "32Hz - 300Hz",
+        "weight": "50kg (110lbs)",
+        "dispersion": "N/A",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 12” Operating Band 32Hz - 150Hz Sensitivity at 1m 100dB at 2V Power (AES) 700W Nominal Impedence 4Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/compact/spk-funktion-sb212lp.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/sb212lp/01-z4zntpbqstj99bxy-sb212lpweb.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/sb212lp/02-z4zn1zbqstj99bxc-sb212frtvrtangle.jpg"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/compact/sb212lp/03-z5dnrpbqstj99uyz-sb212lp-f1-wd-3dt0230-00-1.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-ds15",
+      "name": "DS15",
+      "slug": "ds15",
+      "pageSlug": "ds15-bass",
+      "series": "Horn Loaded Bass",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/ds15-bass/",
+      "technical": {
+        "bandwidth": "90Hz - 270Hz",
+        "weight": "49kg (108lbs)",
+        "dispersion": "N/A",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15\" Operating Band 105Hz - 220Hz Sensitivity at 1m 103dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-ds15.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/ds15/01-d0b49990-42c6-495c-bef2-739bf292ae53-dance-stack-ds15-focus.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/ds15/02-b5da3539-60ef-49da-b944-5ebd7a5ea463-ds15-f1-wd-3dt0126-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f115-mkii",
+      "name": "F115 MkII",
+      "slug": "f115-mkii",
+      "pageSlug": "f115-mk2",
+      "series": "Horn Loaded Bass",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f115-mk2/",
+      "technical": {
+        "bandwidth": "60Hz - 250Hz",
+        "weight": "34kg (75lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15\" Operating Band 55/85Hz - 250Hz Sensitivity at 1m 102dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-f115-mkii.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f115-mkii/01-66e27c96-4bff-45c1-8551-78dadee658b9-f115-2.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f115-mkii/02-826d05ef-8a88-4445-9b84-487d531eb119-f115-mk2-f1-wd-3dt0113-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f118-mkii",
+      "name": "F118 MkII",
+      "slug": "f118-mkii",
+      "pageSlug": "f118-mk2",
+      "series": "Horn Loaded Bass",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f118-mk2/",
+      "technical": {
+        "bandwidth": "50 - 200Hz",
+        "weight": "50kg (110lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 18\" Operating Band 25Hz - 200Hz Sensitivity at 1m 102dB at 2.8V Power (AES) 450W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-f118-mkii.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f118-mkii/01-cbac779c-a7ab-40fa-9400-4b5587c85de2-f118mkii-website-product.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f118-mkii/02-390e2020-301f-4a78-ab5f-4462025434a0-f118-mk2-f1-wd-3dt0116-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f121",
+      "name": "F121",
+      "slug": "f121",
+      "pageSlug": "f121",
+      "series": "Horn Loaded Bass",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f121/",
+      "technical": {
+        "bandwidth": "40Hz - 250Hz",
+        "weight": "72kg (159lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 21\" Operating Band 20Hz - 200Hz Sensitivity at 1m 101dB at 2.8V Power (AES) 750W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-f121.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f121/01-690b3ed6-84ca-4601-810a-ddf01ac7f8ea-f121-website-product.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f121/02-f540fb5b-0eed-4e2f-8857-320593c90805-f121-f1-wd-3dt0118-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f121/03-aiaz-aeqx7-ewqan-gsb-vx.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f124",
+      "name": "F124",
+      "slug": "f124",
+      "pageSlug": "f124",
+      "series": "Horn Loaded Bass",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f124/",
+      "technical": {
+        "bandwidth": "35Hz - 160Hz",
+        "weight": "103kg (227lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 24\" dual voice coil Operating Band 20Hz - 85Hz Sensitivity at 1m 104dB at 2V Power (AES) 2 x 750W Nominal Impedence 2 x 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-f124.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f124/01-2dcf1918-45f7-4675-8e43-b59e2229b16f-f124.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f124/02-84198778-5290-407c-917d-90fb3fabd69e-f124-f1-wd-3dt0120-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f132",
+      "name": "F132",
+      "slug": "f132",
+      "pageSlug": "f132",
+      "series": "Horn Loaded Bass",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f132/",
+      "technical": {
+        "bandwidth": "25Hz - 60Hz",
+        "weight": "208kg (458lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "Analogue XLR input and link out, Powercon True (20A), RJ45 for RS485 remote control and firmware update",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 1 x Linear motor with 32” cone Operating Band 20Hz - 50Hz Sensitivity at 1m 134dB at 0dBu Power (AES) 5000W Nominal Impedence N/A"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-f132.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f132/01-578c3b4d-593b-4255-bd4d-3de778b1c881-f132.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f132/02-5f26ff9a-9ce0-49c3-9106-00fb4e03c3d3-f132-tech-drawing.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f215-mkii",
+      "name": "F215 MkII",
+      "slug": "f215-mkii",
+      "pageSlug": "f215-mk2",
+      "series": "Horn Loaded Bass",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f215-mk2/",
+      "technical": {
+        "bandwidth": "60Hz - 250Hz",
+        "weight": "63kg (139lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 15\" Operating Band 55/85Hz - 250Hz Sensitivity at 1m 102dB at 2V Power (AES) 2 x 400W Nominal Impedence 2 x 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-f215-mkii.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f215-mkii/01-ajfooo1p9hi4ukmk-funktion-onef215mk2edit.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f215-mkii/02-d353ee42-a0f3-4a67-ba8e-c06221976cc3-f215-mk2-f1-wd-3dt0114-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f218-mkii",
+      "name": "F218 MkII",
+      "slug": "f218-mkii",
+      "pageSlug": "f218-mk2",
+      "series": "Horn Loaded Bass",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f218-mk2/",
+      "technical": {
+        "bandwidth": "50Hz - 200Hz",
+        "weight": "93kg (204lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 18\" Operating Band 25Hz - 200Hz Sensitivity at 1m 102dB at 2V Power (AES) 2 x 450W Nominal Impedence 2 x 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-f218-mkii.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f218-mkii/01-f296473d-2ce2-4d13-8e69-b56414805b46-f218-mk2.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f218-mkii/02-7eacb1da-922b-4cea-8fe8-b74be38f87bf-f218-mk2-f1-wd-3dt0117-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f218-mkii/03-aiaz-aeqx7-ewqan-gsb-vx.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f221",
+      "name": "F221",
+      "slug": "f221",
+      "pageSlug": "f221",
+      "series": "Horn Loaded Bass",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f221/",
+      "technical": {
+        "bandwidth": "40Hz - 250Hz",
+        "weight": "130kg (288lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 21\" Operating Band 20Hz - 85Hz Sensitivity at 1m 104dB at 2V Power (AES) 2 x 750W Nominal Impedence 2 x 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-f221.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f221/01-249c402a-accc-41b7-8f31-ef7c637d9f5b-f221.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f221/02-3753139b-465e-42f1-8589-f86569e2d72d-f221-f1-wd-3dt0119-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-f315",
+      "name": "F315",
+      "slug": "f315",
+      "pageSlug": "f315",
+      "series": "Horn Loaded Bass",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/f315/",
+      "technical": {
+        "bandwidth": "60Hz - 250Hz",
+        "weight": "81kg (178lbs)",
+        "dispersion": "N/A",
+        "connectors": "1x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 3 x 15\" Operating Band 85Hz - 250Hz Sensitivity at 1m 101dB at 1.6V Power (AES) 1200W Nominal Impedence 2.7Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-f315.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/horn-loaded-bass/f315/01-f13847bd-b29d-48de-b475-d93840164e4c-f315-website-product.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-br115",
+      "name": "BR115",
+      "slug": "br115",
+      "pageSlug": "br115",
+      "series": "Bass Reflex",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/br115/",
+      "technical": {
+        "bandwidth": "55Hz - 200Hz",
+        "weight": "33kg (73lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15” Operating Band 45Hz - 100Hz Sensitivity at 1m 100dB at 2.8V Power (AES) 500W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/bass-reflex/spk-funktion-br115.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/bass-reflex/br115/01-df9f1efd-a4bf-4066-98da-e25e84074055-br115-600x600.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/bass-reflex/br115/02-d34121c0-76a9-4549-84bf-4dd8c72436ee-br115-f1-wd-3dt0121-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-br118-2",
+      "name": "BR118.2",
+      "slug": "br118-2",
+      "pageSlug": "br118.2",
+      "series": "Bass Reflex",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/br118.2/",
+      "technical": {},
+      "runtimeImage": "public/assets/img/speakers/funktion/bass-reflex/spk-funktion-br118-2.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/bass-reflex/br118-2/01-z8cmnrsahjwomgva-br118anglevb600x590.jpg"
+        }
+      ],
+      "evidenceStatus": "pending",
+      "pendingReasons": [
+        "usable bandwidth unavailable",
+        "weight unavailable",
+        "dispersion unavailable"
+      ]
+    },
+    {
+      "id": "spk-funktion-br121",
+      "name": "BR121",
+      "slug": "br121",
+      "pageSlug": "br121",
+      "series": "Bass Reflex",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/br121/",
+      "technical": {
+        "bandwidth": "40Hz - 200Hz",
+        "weight": "66kg (146lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 21\" Operating Band 25Hz - 85Hz Sensitivity at 1m 100dB at 2.8V Power (AES) 650W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/bass-reflex/spk-funktion-br121.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/bass-reflex/br121/01-5786e4ca-334c-4da6-b546-4638d83cc8bc-br121-600x600.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/bass-reflex/br121/02-ef6f923e-f176-478e-ad73-2b95b2d545dd-br121-f1-wd-3dt0124-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-br132",
+      "name": "BR132",
+      "slug": "br132",
+      "pageSlug": "br132",
+      "series": "Bass Reflex",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/br132/",
+      "technical": {
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/bass-reflex/spk-funktion-br132.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/bass-reflex/br132/01-bd66e8c3-8904-448e-aa85-74b81035b34f-br132-front3-resize.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/bass-reflex/br132/02-aee33a78-a592-4d61-8812-0bb8ab99dbd1-br132-techical.png"
+        }
+      ],
+      "evidenceStatus": "pending",
+      "pendingReasons": [
+        "usable bandwidth unavailable",
+        "weight unavailable",
+        "dispersion unavailable"
+      ]
+    },
+    {
+      "id": "spk-funktion-br218",
+      "name": "BR218",
+      "slug": "br218",
+      "pageSlug": "br218",
+      "series": "Bass Reflex",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/br218/",
+      "technical": {
+        "bandwidth": "45Hz - 125Hz",
+        "weight": "70kg (152lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 18\" Operating Band 35Hz - 85Hz Sensitivity at 1m 102dB at 2V Power (AES) 2 x 550W Nominal Impedence 2 x 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/bass-reflex/spk-funktion-br218.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/bass-reflex/br218/01-0445c2dc-3b0d-48d7-9678-e9fda9094554-br218-600x600.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/bass-reflex/br218/02-412d0a50-ab77-4f9b-a7c7-720cf019d00b-br218-f1-wd-3dt0123-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-br221",
+      "name": "BR221",
+      "slug": "br221",
+      "pageSlug": "br221",
+      "series": "Bass Reflex",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/br221/",
+      "technical": {
+        "bandwidth": "32Hz - 200Hz",
+        "weight": "120kg (265lbs)",
+        "dispersion": "Array dependent",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 21” Operating Band 25Hz - 85Hz Sensitivity at 1m 102dB at 2V Power (AES) 2 x 650W Nominal Impedence 2 x 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/bass-reflex/spk-funktion-br221.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/bass-reflex/br221/01-d91fd362-fa03-4052-aab7-9a487bd334f4-br221-600x600.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/bass-reflex/br221/02-640b8dc8-5f97-40d1-bb7e-65e52a57eda2-br221-f1-wd-3dt0125-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-ds210",
+      "name": "DS210",
+      "slug": "ds210",
+      "pageSlug": "ds210",
+      "series": "Dance Stack",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/ds210/",
+      "technical": {
+        "bandwidth": "200Hz - 18kHz",
+        "weight": "64kg (141lbs)",
+        "dispersion": "100° Horizontal x 25° Vertical",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 10\" Operating Band 220Hz - 4kHz Sensitivity at 1m 112dB at 3.5V Power (AES) 500W Nominal Impedence 12Ω Driver 2 x 1.4\" Operating Band 4kHz - up Sensitivity at 1m 114dB at 4V Power (AES) 150W Nominal Impedence 16Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/dance-stack/spk-funktion-ds210.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/dance-stack/ds210/01-363c16f5-3d81-4d80-aa1b-8eaa08a8db37-ds210-website-product.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/dance-stack/ds210/02-6fea7e4c-5eff-4e7a-aa0b-853cf1c29a53-ds210-f1-wd-3dt0127-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-psm12",
+      "name": "PSM12",
+      "slug": "psm12",
+      "pageSlug": "psm12-point-source",
+      "series": "Monitor",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/psm12-point-source/",
+      "technical": {
+        "bandwidth": "65Hz - 17kHz",
+        "weight": "23kg (50lbs)",
+        "dispersion": "70° Conical",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 12\" Operating Band 40Hz - 2.5kHz Sensitivity at 1m 101dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω Driver 1.4\" Operating Band 2.5kHz - Up Sensitivity at 1m 111dB at 4V Power (AES) 75W Nominal Impedence 16Ω Driver 12\" + 1.4\" (Passive mode) Operating Band 40Hz - Up Sensitivity at 1m 100dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/monitor/spk-funktion-psm12.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm12/01-d0963c95-391c-4305-bbdc-a32f54004f88-psm12-pointsource-website-product.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm12/02-b813bf7d-8431-4be5-b78c-c588c3c10d14-psm12-f1-wd-3dt0130-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-psm15",
+      "name": "PSM15",
+      "slug": "psm15",
+      "pageSlug": "psm15",
+      "series": "Monitor",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/psm15/",
+      "technical": {
+        "bandwidth": "80Hz - 18kHz",
+        "weight": "28kg (62lbs)",
+        "dispersion": "50° Horizontal x 70° Vertical (rotatable by 90°)",
+        "connectors": "2 x NLT4M",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver MHF Operating Band 1kHz - up Sensitivity at 1m 105dB at 2.8V Power (AES) 100W Nominal Impedence 8Ω Driver 15\" (LF) Operating Band 60Hz - 1kHz Sensitivity at 1m 96dB at 2.8V Power (AES) 600W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/monitor/spk-funktion-psm15.jpg",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm15/01-awvl4wivotkhbxn6-psm15angledlr1200.jpg"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm15/02-awyk-qivotkhbboq-psm15-f1-wd-3dt0328-00.png"
+        },
+        {
+          "label": "Official 3",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm15/03-aibbtqeqx7-ewqnx-yk-upsm15.png"
+        },
+        {
+          "label": "Official 4",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm15/04-aibbpqeqx7-ewqnc-fc-2psm15.png"
+        },
+        {
+          "label": "Official 5",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm15/05-aibcfgeqx7-ewqn6-yk-spsm15.png"
+        },
+        {
+          "label": "Official 6",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm15/06-aibcxaeqx7-ewqoo-sta-2m8.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-psm18",
+      "name": "PSM18",
+      "slug": "psm18",
+      "pageSlug": "psm18-point-source",
+      "series": "Monitor",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/psm18-point-source/",
+      "technical": {
+        "bandwidth": "50Hz - 18kHz",
+        "weight": "35kg (77lbs)",
+        "dispersion": "70° Conical",
+        "connectors": "2 x Neutrik NL4",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 18\" Operating Band 30Hz - 694Hz Sensitivity at 1m 104dB at 2.8V Power (AES) 600W Nominal Impedence 8Ω Driver 5\" + VHF (V1) Operating Band 694Hz - Up Sensitivity at 1m 112dB at 2.8V Power (AES) 80W Nominal Impedence 8Ω Driver MF + HF (V2) Operating Band 600Hz - Up Sensitivity at 1m 111dB at 2.8V Power (AES) 100W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/monitor/spk-funktion-psm18.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm18/01-9a62cc70-8a30-4795-8e57-3aaea38e1ed5-psm18-website-productimage.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm18/02-6dacb49f-074d-4f55-abfe-bd2d6732a4aa-psm18-f1-wd-3dt0131-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    },
+    {
+      "id": "spk-funktion-psm318",
+      "name": "PSM318",
+      "slug": "psm318",
+      "pageSlug": "psm318-dj",
+      "series": "Monitor",
+      "lifecycle": "current",
+      "sourcePage": "https://funktion-one.com/product/psm318-dj/",
+      "technical": {
+        "bandwidth": "30Hz - 18kHz",
+        "weight": "107kg (236lbs)",
+        "dispersion": "70° Conical",
+        "connectors": "Neutrik NL8 connection to lower section with NL4 glanded lead to top section",
+        "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 18\" (PSM318L) Operating Band 25Hz - 85Hz Sensitivity at 1m 101dB at 2V Power (AES) 1100W Nominal Impedence 4Ω Driver 18\" Operating Band 85Hz - 694Hz Sensitivity at 1m 104dB at 2.8V Power (AES) 600W Nominal Impedence 8Ω Driver 5\" + VHF (V1) Operating Band 694Hz - Up Sensitivity at 1m 112dB at 2.8V Power (AES) 80W Nominal Impedence 8Ω Driver MF + HF (V2) Operating Band 600Hz - Up Sensitivity at 1m 111dB at 2.8V Power (AES) 100W Nominal Impedence 8Ω"
+      },
+      "runtimeImage": "public/assets/img/speakers/funktion/monitor/spk-funktion-psm318.png",
+      "views": [
+        {
+          "label": "Official",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm318/01-e5f3fc8f-ad4d-412d-9ae9-915ac56cde3c-ps318-website-productfeatured.png"
+        },
+        {
+          "label": "Official 2",
+          "src": "raw-data/raw-assets/funktion/speakers/monitor/psm318/02-3b96fc44-d96e-4dcd-ae0a-ec28d493d679-psm318-f1-wd-3dt0132-00.png"
+        }
+      ],
+      "evidenceStatus": "verified",
+      "pendingReasons": []
+    }
+  ],
+  "officialRangeListings": 54,
+  "uniqueProducts": 53,
+  "deduplicatedMappings": [
+    {
+      "productId": "spk-funktion-ds15",
+      "selectedSeries": "Horn Loaded Bass",
+      "alsoListedIn": "Dance Stack",
+      "sourcePages": [
+        "https://funktion-one.com/product/ds15-bass/",
+        "https://funktion-one.com/product/ds15/"
+      ],
+      "rationale": "The official website exposes DS15 through two range-specific routes; the canonical catalog keeps one product identity."
+    }
+  ]
+}

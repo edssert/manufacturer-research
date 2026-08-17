@@ -16,10 +16,11 @@ playwright-report/
 test-results/
 blob-report/
 output/playwright/
+.playwright-cli/
+tmp/
 montage_check_output.png
 image-normalize-*.json
 
-# 제품 사진 원본은 repo 밖의 전용 보관소에 두고 최종 가공본만 추적한다.
+# 공식 원본은 raw-data/raw-assets에 Git LFS로 보존하고, 이전 임시 경로와 작업 산출물만 제외한다.
 raw-data/raw-images/
-raw-data/**/*.zip
 _imgwork/

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-br118-2",
+  "manufacturerId": "funktion",
+  "name": "BR118.2",
+  "slug": "br118-2",
+  "series": "Bass Reflex",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/br118.2/",
+  "rangePage": "https://funktion-one.com/ranges/bass",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "BR118.2",
+    "technical": {},
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/Z8cmnRsAHJWomGvA_BR118AngleVb600x590.jpg"
+    ],
+    "downloads": []
+  },
+  "evidenceStatus": "pending",
+  "pendingReasons": [
+    "usable bandwidth unavailable",
+    "weight unavailable",
+    "dispersion unavailable",
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl",
+    "transducers",
+    "frequencyRange",
+    "weight"
+  ]
+}

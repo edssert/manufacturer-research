@@ -1,11 +1,4 @@
-/**
- * @module ui/card-grid
- * 범용 카드 그리드/그룹 렌더러 — 도메인 비의존.
- * 카드 마크업 자체는 각 도메인의 cardHTML(item) 함수가 만들고,
- * 이 모듈은 필터링·정렬·그룹핑·빈 결과 화면·클릭/키보드 연결만 담당한다.
- *
- * 관련 CSS: css/components/card.css (.card-grid, .card-group, .empty-state)
- */
+/** @module ui/card-grid */
 import { esc, uniq } from "../core/dom.js";
 import { passes, sortItems } from "../core/filter-engine.js";
 import { updateChipDisabledStates } from "./filters.js";
@@ -37,7 +30,7 @@ const collapsedGroups = new Set();
  * @param {ReadonlyArray<string>} [opts.groupBy.order] 그룹 키 표시 순서
  * @param {Function} opts.groupBy.getKey (item) => 그룹 키
  * @param {Function} [opts.groupBy.subGroupKey] (item) => 서브그룹 키 (예: 시리즈)
- * @param {Function} [opts.groupBy.subGroupOrder] 서브그룹 정렬 비교 함수
+ * @param {Function} [opts.groupBy.subGroupOrder] 서브그룹 정렬 비교 함수 (a, b, groupKey)
  * @param {Function} [opts.groupBy.sortWithinGroup] 서브그룹 내 카드 정렬 비교 함수
  * @param {Function} opts.groupBy.headHTML (그룹키, 서브그룹키, 항목들) => 그룹 헤더 HTML
  */
@@ -64,7 +57,10 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
     let html = "";
     // getKey 가 배열을 반환하면 그 항목은 여러 그룹에 동시에 속한다 — 기능이
     // 겹치는 제품을 두 섹션에 모두 노출하기 위함(예: 소프트웨어 type).
-    const keysOf = d => { const k = groupBy.getKey(d); return Array.isArray(k) ? k : [k]; };
+    const keysOf = d => {
+      const k = groupBy.getKey(d);
+      return Array.isArray(k) ? k : [k];
+    };
     const inGroup = (d, gk) => keysOf(d).some(k => k === gk);
     const groupOrder = groupBy.order
       ? groupBy.order.filter(k => view.some(d => inGroup(d, k)))
@@ -72,12 +68,10 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
     groupOrder.forEach(gk => {
       const items = view.filter(d => inGroup(d, gk));
       if (!items.length) return;
-      let sub = groupBy.subGroupKey
-        ? uniq(items.map(item => groupBy.subGroupKey(item)))
-        : [null];
+      let sub = groupBy.subGroupKey ? uniq(items.map(item => groupBy.subGroupKey(item))) : [null];
       // 서브그룹(시리즈) 자체의 표시 순서 제어 — 예: Long/Medium/Short Throw
       // 를 먼저, 독립 Subwoofers 시리즈를 마지막에.
-      if (groupBy.subGroupOrder) sub = [...sub].sort((a, b) => groupBy.subGroupOrder(a, b));
+      if (groupBy.subGroupOrder) sub = [...sub].sort((a, b) => groupBy.subGroupOrder(a, b, gk));
       sub.forEach(sg => {
         let g = sg == null ? items : items.filter(d => groupBy.subGroupKey(d) === sg);
         if (!g.length) return;
@@ -88,7 +82,7 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
         // 접힘 상태를 collapsedGroups 에서 조회/기록하는 고유 키.
         const groupKey = `${gk}::${sg ?? ""}`;
         const isCollapsed = collapsedGroups.has(groupKey);
-        html += `<section class="card-group${isCollapsed ? " card-group--collapsed" : ""}" data-group-key="${esc(groupKey)}">
+        html += `<section class="card-group${isCollapsed ? " card-group--collapsed" : ""}" data-group-key="${esc(groupKey)}" style="--group-card-count:${g.length}">
           <button type="button" class="card-group__head" aria-expanded="${!isCollapsed}">
             <svg class="card-group__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
             ${headHTML}
@@ -105,25 +99,30 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
       const key = section.dataset.groupKey;
       section.classList.toggle("card-group--collapsed", collapsed);
       head.setAttribute("aria-expanded", String(!collapsed));
-      if (collapsed) collapsedGroups.add(key); else collapsedGroups.delete(key);
+      if (collapsed) collapsedGroups.add(key);
+      else collapsedGroups.delete(key);
     };
     // 버튼을 따로 보여주는 대신, 아무 그룹 헤더든 Ctrl/Cmd 를
     // 누른 채 클릭하면 전체 펼치기/접기가 되게 한다 — 모달의 섹션 토글
     // Ctrl+클릭(ui/pane-interactions.js wireSectionToggle)과 동일한 패턴. 클릭한
     // 헤더 자신의 "다음 상태"를 기준으로 나머지 전체를 맞춘다.
-    /** @type {NodeListOf<HTMLElement>} */ (resultsEl.querySelectorAll(".card-group[data-group-key]")).forEach(section => {
-      const head = /** @type {HTMLElement} */ (section.querySelector(".card-group__head"));
-      head.addEventListener("click", e => {
-        const collapseNext = !section.classList.contains("card-group--collapsed");
-        if (e.ctrlKey || e.metaKey) {
-          /** @type {NodeListOf<HTMLElement>} */ (resultsEl.querySelectorAll(".card-group[data-group-key]")).forEach(s => {
-            setCollapsed(s, /** @type {HTMLElement} */ (s.querySelector(".card-group__head")), collapseNext);
-          });
-          return;
-        }
-        setCollapsed(section, head, collapseNext);
-      });
-    });
+    /** @type {NodeListOf<HTMLElement>} */ (resultsEl.querySelectorAll(".card-group[data-group-key]")).forEach(
+      section => {
+        const head = /** @type {HTMLElement} */ (section.querySelector(".card-group__head"));
+        head.addEventListener("click", e => {
+          const collapseNext = !section.classList.contains("card-group--collapsed");
+          if (e.ctrlKey || e.metaKey) {
+            /** @type {NodeListOf<HTMLElement>} */ (resultsEl.querySelectorAll(".card-group[data-group-key]")).forEach(
+              s => {
+                setCollapsed(s, /** @type {HTMLElement} */ (s.querySelector(".card-group__head")), collapseNext);
+              },
+            );
+            return;
+          }
+          setCollapsed(section, head, collapseNext);
+        });
+      },
+    );
   } else {
     resultsEl.innerHTML = `<div class="card-grid">${view.map(d => cardHTML(d)).join("")}</div>`;
   }
@@ -131,7 +130,12 @@ export function renderGrid({ resultsEl, countEl, filterPanelEl, data, state, sch
   // ── 카드 클릭/키보드(Enter·Space) → 상세 모달 ──
   /** @type {NodeListOf<HTMLElement>} */ (resultsEl.querySelectorAll(".card[data-id]")).forEach(c => {
     c.addEventListener("click", () => onOpen(c.dataset.id));
-    c.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onOpen(c.dataset.id); } });
+    c.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        onOpen(c.dataset.id);
+      }
+    });
   });
 
   // ── 결과 0이 되는 칩 비활성화 갱신 ──

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-psm18",
+  "manufacturerId": "funktion",
+  "name": "PSM18",
+  "slug": "psm18",
+  "series": "Monitor",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/psm18-point-source/",
+  "rangePage": "https://funktion-one.com/ranges/monitors",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "PSM18 - Triaxial Point Source Monitor",
+    "technical": {
+      "bandwidth": "50Hz - 18kHz",
+      "weight": "35kg (77lbs)",
+      "dispersion": "70° Conical",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 18\" Operating Band 30Hz - 694Hz Sensitivity at 1m 104dB at 2.8V Power (AES) 600W Nominal Impedence 8Ω Driver 5\" + VHF (V1) Operating Band 694Hz - Up Sensitivity at 1m 112dB at 2.8V Power (AES) 80W Nominal Impedence 8Ω Driver MF + HF (V2) Operating Band 600Hz - Up Sensitivity at 1m 111dB at 2.8V Power (AES) 100W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/9a62cc70-8a30-4795-8e57-3aaea38e1ed5_PSM18_Website_ProductImage.png",
+      "https://images.prismic.io/funktion-one/6dacb49f-074d-4f55-abfe-bd2d6732a4aa_PSM18-F1-WD%3DT0131-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/acUOSZGXnQHGY_Gv_PSM18-F1-DS%3DD0048-03.pdf",
+        "label": "acUOSZGXnQHGY_Gv_PSM18-F1-DS%3DD0048-03.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/3c237f2b-8ddb-4ee9-965d-53dfe2beb507_PSM18-F1-TD%3DT0188-00.pdf",
+        "label": "3c237f2b-8ddb-4ee9-965d-53dfe2beb507_PSM18-F1-TD%3DT0188-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/ea790306-99b2-48df-a6b0-bbeff320f0b2_PSM18-F1-DD%3DT0189-00.pdf",
+        "label": "ea790306-99b2-48df-a6b0-bbeff320f0b2_PSM18-F1-DD%3DT0189-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/ec979c45-a6d7-493f-8e92-33df2828b4b8_PSM18-F1-2DM%3DT0190-00.dwg",
+        "label": "ec979c45-a6d7-493f-8e92-33df2828b4b8_PSM18-F1-2DM%3DT0190-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/b56a6dad-9998-4bb9-9c7c-95d4c4430c6f_PSM18-F1-3DM%3DT0191-00.dwg",
+        "label": "b56a6dad-9998-4bb9-9c7c-95d4c4430c6f_PSM18-F1-3DM%3DT0191-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl",
+    "coverage"
+  ]
+}

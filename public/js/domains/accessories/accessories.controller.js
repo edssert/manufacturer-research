@@ -22,16 +22,18 @@ import { cardHTML as accCardHTML } from "./accessories.view.js";
 
 /** 유형별 정렬일 때만 제조사>Type 2단 그룹핑, 그 외에는 평면 그리드 */
 function accessoriesGroupBy(state) {
-  return state.sort === "type" ? {
-      order: ACC_MK_ORDER,
-      getKey: d => d.mfr,
-      subGroupKey: d => d.type || "Other",
-      subGroupOrder: (sgA, sgB) => sgA.localeCompare(sgB),
-      sortWithinGroup: (a, b) => a.name.localeCompare(b.name),
-      headHTML: (mfr, type, group) => {
-        return `<span class="card-group__badge card-group__badge--name" style="border-color:${ACC_MFR[mfr].color}55;color:${ACC_MFR[mfr].color}">${esc(ACC_MFR[mfr].name)}</span><span class="card-group__title">${esc(type)}</span><span class="card-group__count">${group.length} ea</span>`;
+  return state.sort === "type"
+    ? {
+        order: ACC_MK_ORDER,
+        getKey: d => d.mfr,
+        subGroupKey: d => d.type || "Other",
+        subGroupOrder: (sgA, sgB) => sgA.localeCompare(sgB),
+        sortWithinGroup: (a, b) => a.name.localeCompare(b.name),
+        headHTML: (mfr, type, group) => {
+          return `<span class="card-group__badge card-group__badge--name" style="--mfr:${ACC_MFR[mfr].color}">${esc(ACC_MFR[mfr].name)}</span><span class="card-group__title">${esc(type)}</span><span class="card-group__count">${group.length} ea</span>`;
+        },
       }
-    } : null;
+    : null;
 }
 
 /**

@@ -20,9 +20,10 @@
     "orphanFilesAllowed": 0
   },
   "originalArchive": {
-    "role": "external-source-archive",
-    "location": "OneDrive/03.Resources/MR-Raw-Assets",
-    "trackedInRepository": false
+    "role": "official-source-archive",
+    "location": "raw-data/raw-assets and raw-data/official-docs",
+    "trackedInRepository": true,
+    "storage": "git-lfs"
   },
   "normalization": {
     "defaultMode": "dry",
@@ -37,10 +38,10 @@
     "sourcedAssetsRequireHashManifest": true
   },
   "knownExactDuplicates": {
-    "reviewStatus": "semantic-review-required",
-    "groups": 28,
-    "files": 64,
-    "recoverableBytes": 24951845,
+    "reviewStatus": "reviewed-same-brand-variant-aliases",
+    "groups": 105,
+    "files": 270,
+    "recoverableBytes": 141615065,
     "automaticDeletionAllowed": false,
     "historyRewriteRequiresSeparateApproval": true
   }

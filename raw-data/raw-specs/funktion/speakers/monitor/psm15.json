@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-psm15",
+  "manufacturerId": "funktion",
+  "name": "PSM15",
+  "slug": "psm15",
+  "series": "Monitor",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/psm15/",
+  "rangePage": "https://funktion-one.com/ranges/monitors",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "PSM15 - Advanced Stage Monitoring for Live Applications",
+    "technical": {
+      "bandwidth": "80Hz - 18kHz",
+      "weight": "28kg (62lbs)",
+      "dispersion": "50° Horizontal x 70° Vertical (rotatable by 90°)",
+      "connectors": "2 x NLT4M",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver MHF Operating Band 1kHz - up Sensitivity at 1m 105dB at 2.8V Power (AES) 100W Nominal Impedence 8Ω Driver 15\" (LF) Operating Band 60Hz - 1kHz Sensitivity at 1m 96dB at 2.8V Power (AES) 600W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/aWVL4wIvOtkhBXn6_PSM15angledLR1200.jpg",
+      "https://images.prismic.io/funktion-one/aWYk-QIvOtkhBboq_PSM15-F1-WD%3DT0328-00.png",
+      "https://images.prismic.io/funktion-one/aiBBtQeQX7-eWqnX_YK-UPSM15.png",
+      "https://images.prismic.io/funktion-one/aiBBPQeQX7-eWqnC_FC-2PSM15.png",
+      "https://images.prismic.io/funktion-one/aiBCFgeQX7-eWqn6_YK-SPSM15.png",
+      "https://images.prismic.io/funktion-one/aiBCxAeQX7-eWqoO_STA-2M8.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aWYn0QIvOtkhBbt2_PSM15-F1-DS%3DD0086-01.pdf",
+        "label": "aWYn0QIvOtkhBbt2_PSM15-F1-DS%3DD0086-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/adjtpZ1ZCF7ETEmV_PSM15_User_Guide_V1.0.pdf",
+        "label": "adjtpZ1ZCF7ETEmV_PSM15_User_Guide_V1.0.pdf"
+      },
+      {
+        "url": "https://images.prismic.io/funktion-one/aUliSnNYClf9ok-G_PSM15-F1-3DM%3DT0323-00.dwg?auto=format,compress?auto=compress,format",
+        "label": "aUliSnNYClf9ok-G_PSM15-F1-3DM%3DT0323-00.dwg"
+      },
+      {
+        "url": "https://images.prismic.io/funktion-one/aUliVHNYClf9ok-K_PSM15-F1-2DM%3DT0322-00.dwg?auto=format,compress?auto=compress,format",
+        "label": "aUliVHNYClf9ok-K_PSM15-F1-2DM%3DT0322-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aUliXnNYClf9ok-P_PSM15-F1-TD%3DT0320-00.PDF",
+        "label": "aUliXnNYClf9ok-P_PSM15-F1-TD%3DT0320-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aUliaHNYClf9ok-T_PSM15-F1-DD%3DT0321-00.PDF",
+        "label": "aUliaHNYClf9ok-T_PSM15-F1-DD%3DT0321-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aUligHNYClf9ok-b_FC-2PSM15-F1-AD%3DT0324-00.PDF",
+        "label": "aUligHNYClf9ok-b_FC-2PSM15-F1-AD%3DT0324-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aUlim3NYClf9ok-i_STA-2M8-F1-AD%3DT0327-00.PDF",
+        "label": "aUlim3NYClf9ok-i_STA-2M8-F1-AD%3DT0327-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aUljGXNYClf9ok-0_YK-UPSM15-F1-AD%3DT0326-00.PDF",
+        "label": "aUljGXNYClf9ok-0_YK-UPSM15-F1-AD%3DT0326-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aUlj_HNYClf9ok_j_YK-SPSM15-F1-AD%3DT0325-00.PDF",
+        "label": "aUlj_HNYClf9ok_j_YK-SPSM15-F1-AD%3DT0325-00.PDF"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

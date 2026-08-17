@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-br132",
+  "manufacturerId": "funktion",
+  "name": "BR132",
+  "slug": "br132",
+  "series": "Bass Reflex",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/br132/",
+  "rangePage": "https://funktion-one.com/ranges/bass",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "BR132 - Extraordinarily Powerful Bass Reflex Enclosure",
+    "technical": {
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/bd66e8c3-8904-448e-aa85-74b81035b34f_BR132+front3-resize.jpg",
+      "https://images.prismic.io/funktion-one/aee33a78-a592-4d61-8812-0bb8ab99dbd1_BR132_techical.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/43db8eb5-ceaa-4346-ba2e-4ad611301439_BR132A_2017.pdf",
+        "label": "43db8eb5-ceaa-4346-ba2e-4ad611301439_BR132A_2017.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/d2c37fab-6c8a-4918-af6b-c7e3428a9d50_BR132-A-3D-DWG_2106.dwg",
+        "label": "d2c37fab-6c8a-4918-af6b-c7e3428a9d50_BR132-A-3D-DWG_2106.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "pending",
+  "pendingReasons": [
+    "usable bandwidth unavailable",
+    "weight unavailable",
+    "dispersion unavailable",
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl",
+    "transducers",
+    "frequencyRange",
+    "weight"
+  ]
+}

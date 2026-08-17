@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "la",
+  "retrievedAt": "2026-08-18",
+  "gaps": [
+    {
+      "productIds": [
+        "spk-la-l1",
+        "spk-la-l1d"
+      ],
+      "field": "product-visuals-archive",
+      "status": "not-listed",
+      "fallback": "Official L1 System product-page originals; no image processing."
+    },
+    {
+      "productIds": [
+        "spk-la-cs1"
+      ],
+      "field": "product-visuals-archive",
+      "status": "not-listed",
+      "fallback": "Official CS1 product-page originals; no image processing."
+    },
+    {
+      "productIds": [
+        "spk-la-ks21i"
+      ],
+      "field": "product-visuals-archive",
+      "status": "not-listed",
+      "fallback": "Official KS21i product-page originals; no image processing."
+    },
+    {
+      "productIds": [
+        "spk-la-l1",
+        "spk-la-l1d"
+      ],
+      "field": "product-manuals-and-spec-sheets",
+      "status": "not-published-on-product-page",
+      "fallback": "Official L1 System festival and stadium design project files archived."
+    }
+  ]
+}

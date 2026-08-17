@@ -116,7 +116,13 @@ export function buildFilters(panelEl, data, state, schema, onChange) {
 
   // ── 범위 슬라이더 행 ──
   schema.rangeFields.forEach(rf => {
-    const raw = data.map(d => resolve(d, rf.key)).filter(x => x != null);
+    const raw = data
+      .map(d => resolve(d, rf.key))
+      .filter(value =>
+        rf.isRange
+          ? Array.isArray(value) && value.length === 2 && value.every(Number.isFinite)
+          : Number.isFinite(value),
+      );
     if (!raw.length) return;
     // isRange 필드는 값이 스칼라가 아니라 [min,max] 구간 배열이므로, 슬라이더
     // 자체의 전체 min/max 는 모든 항목의 구간을 펼쳐(flat) 계산한다.

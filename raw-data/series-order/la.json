@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "la",
+  "sourcePage": "https://www.l-acoustics.com/loudspeakers/",
+  "retrievedAt": "2026-08-18",
+  "seriesOrder": [
+    "K Series",
+    "L Series",
+    "Subwoofers",
+    "S Series",
+    "A Series",
+    "X Series"
+  ],
+  "basis": "existing-catalog-order-validated-against-official-product-families",
+  "series": [
+    {
+      "series": "K Series",
+      "productIds": [
+        "spk-la-k1",
+        "spk-la-k2",
+        "spk-la-k3",
+        "spk-la-k3i",
+        "spk-la-kara-ii",
+        "spk-la-kara-iii",
+        "spk-la-kiva-ii",
+        "spk-la-k1-sb"
+      ]
+    },
+    {
+      "series": "L Series",
+      "productIds": [
+        "spk-la-l2",
+        "spk-la-l2d",
+        "spk-la-l1",
+        "spk-la-l1d"
+      ]
+    },
+    {
+      "series": "Subwoofers",
+      "productIds": [
+        "spk-la-cs1",
+        "spk-la-ks28",
+        "spk-la-ks21",
+        "spk-la-ks21i",
+        "spk-la-sb18",
+        "spk-la-sb18-iii",
+        "spk-la-sb15m",
+        "spk-la-sb10r",
+        "spk-la-sb10i",
+        "spk-la-sb6r",
+        "spk-la-sb6i"
+      ]
+    },
+    {
+      "series": "S Series",
+      "productIds": [
+        "spk-la-soka",
+        "spk-la-soka-inwall",
+        "spk-la-syva",
+        "spk-la-syva-low",
+        "spk-la-syva-sub"
+      ]
+    },
+    {
+      "series": "A Series",
+      "productIds": [
+        "spk-la-a10-focus",
+        "spk-la-a10i-focus",
+        "spk-la-a10-wide",
+        "spk-la-a10i-wide",
+        "spk-la-a15-focus",
+        "spk-la-a15i-focus",
+        "spk-la-a15-wide",
+        "spk-la-a15i-wide"
+      ]
+    },
+    {
+      "series": "X Series",
+      "productIds": [
+        "spk-la-x15-hiq",
+        "spk-la-x12",
+        "spk-la-x8",
+        "spk-la-x8i",
+        "spk-la-x6i",
+        "spk-la-5xt",
+        "spk-la-x4i",
+        "spk-la-x4r"
+      ]
+    }
+  ]
+}

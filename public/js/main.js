@@ -28,7 +28,7 @@ import { initAmplifiersDomain } from "./domains/amplifiers/amplifiers.controller
 import { initDspsDomain } from "./domains/dsps/dsps.controller.js";
 import { initAccessoriesDomain } from "./domains/accessories/accessories.controller.js";
 import { initSoftwareDomain } from "./domains/software/software.controller.js";
-import { initBrandDomain, getBrandNames } from "./domains/brand/brand.controller.js";
+import { initBrandDomain } from "./domains/brand/brand.controller.js";
 
 initModal();
 initRelationNavigation();
@@ -98,10 +98,6 @@ if (typeof modalLayoutQuery.addEventListener === "function") {
 } else if (typeof modalLayoutQuery.addListener === "function") {
   modalLayoutQuery.addListener(refreshModalLayout);
 }
-
-// 상단바 부제 — BRANDS 데이터로 구동되므로 제조사를 추가해도 index.html 은 그대로.
-const subtitleEl = $("#brand-subtitle");
-if (subtitleEl) subtitleEl.textContent = getBrandNames().join(" · ");
 
 // topnav 고정 — 실제 렌더 높이를 재서 controls 가 그 아래 이어 붙게 한다.
 initStickyHeader($("#topnav"));

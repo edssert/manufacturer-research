@@ -1,0 +1,43 @@
+# TiRAY
+
+- Canonical ID: `spk-coda-tiray`
+- Status: verified
+- Lifecycle: current
+- Official product page: https://codaaudio.com/speakers/tiray/
+- Retrieved: 2026-08-18
+
+## Official specification
+- Type:: Ultra compact 2-way line array system
+- Application:: Line array
+- Frequency response:: 70 Hz – 20 kHz (-6 dB)
+- Power handling AES / peak (passive):: 300 W / 1200 W
+- Sensitivity low:: 94 dB
+- Max. SPL peak low:: 124 dB
+- Sensitivity high:: 113 dB
+- Max. SPL peak high:*: 139 dB
+- Amplification, cabinets per amplifier:: 
+- LINUS5-C Optimum / Maximum:: 8/12
+- LINUS10-C Optimum / Maximum:: 8/12
+- LINUS12C Optimum / Maximum:: 8/12
+- LINUS14 Optimum / Maximum:: 8/12
+- Dispersion horizontal:: 100°
+- Dispersion vertical:: Array dependent, 0°-12° (in steps 0°, 1°, 3°, 5°, 7°, 9°, 12°)
+- Components:: 
+- Low frequency:: 2x 5″ woofers, 1.5″ (38 mm) voice coil, 150 W (AES) each
+- High frequency:: 5″ neodymium planar wave driver, 1.75″ (44.4 mm) voice coil, 80 W (AES)
+- Crossover point:: 950 Hz passive
+- Nominal impedance:: 8 Ω (2+/2-)
+- Input connectors:: 2x Neutrik™: 1x NL4MP + 1x Link cable NL4FX
+- Enclosure shape:: Horizontal trapezoid 2 x 6°
+- Enclosure material:: Birch plywood
+- Finish:: Polyurea coating
+- Flying hardware:: 3-point integrated
+- IP rating (IEC 60529):: IP54
+- Weather protection options:: Standard IP55: IP55 (Amphenol connectors) · MG1 (Marine Grade 1): IP55
+- Dimensions (WxHxD):: 404 x 155 x 253 mm / 15.91 x 6.10 x 9.96″
+- Net weight:: 9.9 kg / 21.83 lbs
+- System Perfomance: 
+- Array: Frequency response (-6 dB)
+- 1 Enclosure: 70 Hz – 20 kHz
+- 4 Enclosures: 70 Hz – 20 kHz
+- 8 Enclosures: 70 Hz – 20 kHz

@@ -15,12 +15,16 @@ import { JSDOM } from "jsdom";
 
 // [Node 20+ / Windows] await import() 에 윈도우 절대경로("C:\...")를 그대로 넘기면
 // ERR_UNSUPPORTED_ESM_URL_SCHEME 로 죽는다 — file:// URL 로 변환해서 넘긴다.
-const imp = (p) => import(pathToFileURL(p).href);
+const imp = p => import(pathToFileURL(p).href);
 
 // 테스트는 public/tests/ 아래에 있고 index.html 은 저장소 루트에 있다.
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
-let pass = 0, failCount = 0;
-const check = (name, cond) => { cond ? pass++ : failCount++; console.log(`${cond ? "PASS" : "FAIL"} — ${name}`); };
+let pass = 0,
+  failCount = 0;
+const check = (name, cond) => {
+  cond ? pass++ : failCount++;
+  console.log(`${cond ? "PASS" : "FAIL"} — ${name}`);
+};
 
 // ── jsdom 부팅: index.html 로드 + 전역 노출 ──
 const html = readFileSync(join(ROOT, "index.html"), "utf8");
@@ -33,26 +37,65 @@ global.HTMLElement = dom.window.HTMLElement;
 global.history = dom.window.history;
 // [테스트 환경 보강] jsdom 은 matchMedia 를 구현하지 않는다 —
 // isMobileLayout(ui/modal.js)이 호출하므로 데스크탑(false) 스텁을 제공.
-dom.window.matchMedia = () => ({ matches: false, addListener() {}, removeListener() {}, addEventListener() {}, removeEventListener() {} });
+dom.window.matchMedia = () => ({
+  matches: false,
+  addListener() {},
+  removeListener() {},
+  addEventListener() {},
+  removeEventListener() {},
+});
 // [테스트 환경 보강] jsdom 은 IntersectionObserver 도 구현하지 않는다 —
 // 좌측 섹션 내비(ui/section-nav.js)가 스크롤스파이에 쓰므로 no-op 스텁 제공.
 dom.window.IntersectionObserver = globalThis.IntersectionObserver = class {
-  constructor(cb) { this.cb = cb; }
-  observe() {} unobserve() {} disconnect() {}
+  constructor(cb) {
+    this.cb = cb;
+  }
+  observe() {}
+  unobserve() {}
+  disconnect() {}
 };
 
 // main.js import → 모든 도메인 등록 + 기본 탭(speakers) 마운트까지 실행됨
 await imp(join(ROOT, "public/js/main.js"));
 const { navigateTo } = await imp(join(ROOT, "public/js/core/router.js"));
+const { SPEAKERS } = await imp(join(ROOT, "public/js/domains/speakers/speakers.data.js"));
+const speakerCount = SPEAKERS.length;
 
 // ── 부팅 상태 검증 ──
 check("Speakers 탭이 기본으로 마운트됨", document.querySelector("#view-speakers").hidden === false);
 check("탭 6개 렌더링", document.querySelectorAll(".topnav__tab").length === 6);
 check("활성 탭 변경자 적용", document.querySelector(".topnav__tab--active") !== null);
 check("스피커 카드 렌더링(> 40장)", document.querySelectorAll("#spk-results .card").length > 40);
+check(
+  "전체 Speaker가 공통 카드 스키마를 사용함",
+  document.querySelectorAll("#spk-results .card").length === speakerCount &&
+    document.querySelectorAll("#spk-results .card--info-pilot").length === speakerCount &&
+    document.querySelectorAll("#spk-results .card-pilot__drivers").length === speakerCount,
+);
+check(
+  "대표 제품군 카드가 같은 비교 정보 구조를 사용함",
+  ["spk-la-k1", "spk-la-l1", "spk-db-gsl12", "spk-la-ks28", "spk-my-panther-l", "spk-ad-vgt", "spk-co-co12"].every(
+    id =>
+      document.querySelector(`[data-id="${id}"] .card-pilot__drivers`) &&
+      document.querySelector(`[data-id="${id}"] .card-pilot__performance`) &&
+      document.querySelector(`[data-id="${id}"] .card-pilot__specs`),
+  ),
+);
 check("카드 그룹(시리즈) 헤더 존재", document.querySelectorAll("#spk-results .card-group__head").length > 5);
+check(
+  "그룹 헤더는 제조사 비공통 Throw 분류를 노출하지 않음",
+  [...document.querySelectorAll("#spk-results .card-group__title")].every(
+    title => !/^(?:Long|Medium|Short) Throw\b/.test(title.textContent || ""),
+  ),
+);
+check(
+  "Adamson과 Cohesion의 첫 검증 제품이 렌더링됨",
+  ["spk-ad-vgt", "spk-ad-cs10", "spk-co-co12", "spk-co-cf24"].every(id =>
+    document.querySelector(`[data-id="${id}"] img`),
+  ),
+);
 check("필터 칩 렌더링", document.querySelectorAll("#spk-filters .chip").length > 10);
-check("상단바 부제(브랜드 목록) 주입", document.querySelector("#brand-subtitle").textContent.includes("L-Acoustics"));
+check("상단바 제목 아래 중복 제조사 목록 없음", document.querySelector("#brand-subtitle") === null);
 
 // ── 모달 열기 (카드 클릭) ──
 const firstCard = document.querySelector("#spk-results .card[data-id]");
@@ -61,7 +104,10 @@ check("카드 클릭 → 모달 열림", document.querySelector("#modalbg").clas
 check("모달 제목 존재", document.querySelector("#modal .modal__title") !== null);
 check("모달 사양 표 렌더링", document.querySelectorAll("#modal .spec-table__cell").length > 3);
 // [모달 라우팅] 카드 모달이 열리면 해시가 #speakers/<카드id> 로 바뀐다.
-check("모달 열림 → URL 해시에 카드 id 기록", dom.window.location.hash === `#speakers/${encodeURIComponent(firstCard.dataset.id)}`);
+check(
+  "모달 열림 → URL 해시에 카드 id 기록",
+  dom.window.location.hash === `#speakers/${encodeURIComponent(firstCard.dataset.id)}`,
+);
 
 // ── Split View (모달 안 앰프 행 클릭) ──
 const ampRow = document.querySelector("#modal .match-table__row[data-amp-id]");
@@ -76,15 +122,27 @@ if (ampRow) {
   // 두 pane은 같은 .modal__head 구조와 닫기 버튼 훅을 공유한다.
   const closeBtn = document.querySelector("#modal .split-view__pane:nth-child(2) [data-modal-close]");
   closeBtn.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
-  check("pane 2 닫기 → 단일 pane 복귀", document.querySelectorAll("#modal .split-view__pane").length === 0 && document.querySelector("#modal .modal__title") !== null);
+  check(
+    "pane 2 닫기 → 단일 pane 복귀",
+    document.querySelectorAll("#modal .split-view__pane").length === 0 &&
+      document.querySelector("#modal .modal__title") !== null,
+  );
   check("pane 2 닫기 → URL 해시에서 pane2 제거", !dom.window.location.hash.includes(encodeURIComponent(ampId)));
 }
 
 // ── 나머지 탭 전환 ──
 for (const key of ["amplifiers", "dsps", "software", "accessories", "brand", "speakers"]) {
   let ok = true;
-  try { navigateTo(key); } catch (e) { ok = false; console.log("   에러:", e.message); }
-  check(`탭 전환: ${key}`, ok && document.querySelector(`#view-${key === "speakers" ? "speakers" : key}`).hidden === false);
+  try {
+    navigateTo(key);
+  } catch (e) {
+    ok = false;
+    console.log("   에러:", e.message);
+  }
+  check(
+    `탭 전환: ${key}`,
+    ok && document.querySelector(`#view-${key === "speakers" ? "speakers" : key}`).hidden === false,
+  );
 }
 check("앰프 카드 렌더링", document.querySelectorAll("#amp-results .card").length >= 8);
 // 브랜드 탭은 활성 브랜드 페이지 한 개만 렌더링한다.
@@ -101,7 +159,10 @@ check("칩 클릭 → 선택 표시", firstChip.getAttribute("aria-pressed") ===
 check("칩 클릭 → 결과 필터링", document.querySelectorAll("#spk-results .card").length < totalCards);
 document.querySelector("#spk-reset").dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
 check("필터 초기화 → 전체 결과 복귀", document.querySelectorAll("#spk-results .card").length === totalCards);
-check("필터 초기화 → 칩 선택 해제", [...document.querySelectorAll("#spk-filters .chip")].every(c => c.getAttribute("aria-pressed") !== "true"));
+check(
+  "필터 초기화 → 칩 선택 해제",
+  [...document.querySelectorAll("#spk-filters .chip")].every(c => c.getAttribute("aria-pressed") !== "true"),
+);
 const sortSel = document.querySelector("#spk-sort");
 sortSel.value = "name";
 sortSel.dispatchEvent(new dom.window.Event("change", { bubbles: true }));
@@ -125,7 +186,10 @@ check("액세서리 모달에 연관 항목 칩 존재", relChip !== null);
 if (relChip) {
   relChip.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true }));
   check("연관 항목 칩 클릭 → pane 2 열림", document.querySelectorAll("#modal .split-view__pane").length === 2);
-  check("pane 2 에 상세 내용 렌더링", document.querySelector("#modal .split-view__pane:nth-child(2) .modal__title") !== null);
+  check(
+    "pane 2 에 상세 내용 렌더링",
+    document.querySelector("#modal .split-view__pane:nth-child(2) .modal__title") !== null,
+  );
 }
 
 console.log(`\n결과: ${pass} PASS / ${failCount} FAIL`);

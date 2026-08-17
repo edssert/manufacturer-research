@@ -1,19 +1,55 @@
 {
   "schemaVersion": 1,
+  "scope": "curated-runtime-samples; complete provenance is stored in raw-data/source-manifests",
   "assets": [
     {
-      "runtimePath": "public/assets/img/speakers/la/k-series/spk-la-k1-sb-horizontal.png",
+      "runtimePath": "public/assets/img/speakers/la/official/k-series/k1-sb/01-3dr-k1-sb-perspective-01-800x400-1.png",
       "productId": "spk-la-k1-sb",
       "role": "primary",
       "sourceType": "official-product-page",
-      "sourcePage": "https://www.l-acoustics.com/products/k1-SB/",
+      "sourcePage": "https://www.l-acoustics.com/products/K1-SB/",
       "sourceAsset": "https://www.l-acoustics.com/wp-content/uploads/2021/04/3DR_K1-SB_Perspective_01-800x400-1.png",
       "officialVisualArchive": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/K1-SB/EN/Product%20Visuals/K1-SB_Visuals.zip",
-      "retrievedAt": "2026-08-17",
+      "retrievedAt": "2026-08-18",
+      "originalPath": "raw-data/raw-assets/la/speakers/k-series/k1-sb/page-originals/3dr-k1-sb-perspective-01-800x400-1.png",
+      "originalSha256": "34db6e1826a8cf143a45c2b77e17a4649e116f0cdec438ee200609e98526731d",
+      "originalBytes": 152618,
       "sha256": "34db6e1826a8cf143a45c2b77e17a4649e116f0cdec438ee200609e98526731d",
       "bytes": 152618,
       "dimensions": [800, 400],
       "backgroundTreatment": "official-alpha-with-floor-shadow"
+    },
+    {
+      "runtimePath": "public/assets/img/speakers/co/co-series/spk-co-co12.runtime.webp",
+      "productId": "spk-co-co12",
+      "role": "primary",
+      "sourceType": "official-product-page",
+      "sourcePage": "https://www.cohesionaudio.com/products/co12",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654103160cadada12ac956a9_Cohesion_CO12_FrontRight_2k.webp",
+      "retrievedAt": "2026-08-17",
+      "originalPath": "raw-data/raw-assets/co/speakers/co-series/co12/cohesion-co12-frontright-2k.webp",
+      "originalSha256": "e1a397574201e2495823c3049c8274f52ae559f6a3b89c3b6fabac31b74aa9b7",
+      "originalBytes": 152302,
+      "sha256": "90486157437dc143b9021851d1319fa809eb175e4a4c19c2f116e0abf835d0b4",
+      "bytes": 364890,
+      "dimensions": [2200, 1238],
+      "backgroundTreatment": "official-alpha-original"
+    },
+    {
+      "runtimePath": "public/assets/img/speakers/co/cf-series/spk-co-cf24.png",
+      "productId": "spk-co-cf24",
+      "role": "primary",
+      "sourceType": "official-product-page",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf24",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c5010a567cff2611d146ad_Front%20Right.png",
+      "retrievedAt": "2026-08-18",
+      "originalPath": "raw-data/raw-assets/co/speakers/cf-series/cf24/front-right.png",
+      "originalSha256": "44037f22d0d862cdbc722eff85def4fefc2faf8a53bc9173854c4946c1562e77",
+      "originalBytes": 903552,
+      "sha256": "44037f22d0d862cdbc722eff85def4fefc2faf8a53bc9173854c4946c1562e77",
+      "bytes": 903552,
+      "dimensions": [1500, 764],
+      "backgroundTreatment": "official-alpha-original"
     }
   ]
 }

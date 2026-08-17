@@ -1,0 +1,89 @@
+# EVOX JMIX8
+
+- Canonical ID: `spk-rcf-evox-jmix8`
+- Status: verified
+- Lifecycle: current
+- Official product page: https://www.rcf.it/en/products/product-detail/evox-jmix8
+- Current-catalog evidence: https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true
+- Retrieved: 2026-08-18
+
+## Official page facts (verbatim)
+
+- Frequency Response: 20 Hz - 20 Hz
+- Max SPL @ 1m: 128 dB
+- Horizontal coverage angle: 120°
+- Vertical coverage angle: 30°
+- Fullrange: 8 x 2.0'', 1.0'' v.c
+- Woofer: 1 x 12'', 2.5'' v.c
+- Input signal: bal/unbal
+- Input connectors: XLR, Jack
+- Output connectors: XLR
+- Input sensitivity: -2 dBu/+4 dBu
+- Crossover Frequencies: 220 Hz
+- Protections: Thermal, RMS
+- Limiter: Soft Limiter
+- Controls: Volume, Boost, Mic/Line
+- Total Power: 1400 W Peak, 700 W RMS
+- High frequencies: 400 W Peak, 200 W RMS
+- Low frequencies: 1000 W Peak, 500 W RMS
+- Cooling: Convection
+- Connections: VDE
+- THD+N, 20dB gain, 0dBu out: 0.004% A-Weighted
+- Processing Channels: 8
+- Signal Processing: 32 Bit Floating Point
+- A/D-D/A conversion: 24 Bit @ 48.0 kHz
+- Dynamic range: 108
+- Mic: 4
+- Remote Controlled Storable Gain: Yes
+- Gain Range: 0 dB - 45 dB
+- Input Noise Level: -114 dBu A-Weighted
+- Mic Inputs Impedance: 3 kohm
+- Low Cut: 20 Hz - 1000 Hz
+- Phantom Power +48V: Yes
+- Mono Line: 4
+- Gain Selection: 0 dB - 45 dB
+- Line Input Impedance: 11 kohm
+- HI-Z Line Inputs: 1
+- HI-Z Line Inputs Impedance (Mohm): 1 Mohm
+- A/D Dynamic range: 108 dB
+- Stereo Line: 2
+- Stereo Line Input Impedance (kOhm): 11 kohm
+- AUX Send: 1
+- AUX Output: 1
+- Main Out Impedance: 150 ohm
+- Main Out Level: 19 dBu
+- Aux Out Impedance (ohm): 150 ohm
+- Aux Out Level: 19 dBu
+- D/A Dynamic Range: 108 dB
+- RCF Compressors: 4 mono (6 preset)
+- Input Channels EQ: 1 Semi Parametric / 2 Shelving
+- Description: 3 Band EQ: High and Low band shelving, Mid Band with sweepable frequency Graphic 7 Band EQ on Main Mix and AUX send.
+- AUX: 1 PRE/POST
+- FX POST: 1
+- Send Effects: 1
+- MultiFX Insert Effects: 1
+- Main OUT processors: 1
+- Play trk: 2
+- Footswitch: Yes
+- Power supply: Internal
+- Safety agency: CE compliant
+- Cabinet/Case Material: PP Composite
+- Handles: 1 Top
+- Pole mount/Cap: M20 thread
+- Grille: Steel
+- Color: Black, White
+- Height: 623 mm / 24.53 inches
+- Width: 400 mm / 15.75 inches
+- Depth: 460 mm / 18.11 inches
+- Weight: 22.2 kg / 48.94 lbs
+- Package Height: 676 mm / 26.61 inches
+- Package Width: 451 mm / 17.76 inches
+- Package Depth: 581 mm / 22.87 inches
+- Package Weight: 29 kg / 63.93 lbs
+
+## Normalization
+
+- Series: EVOX Systems
+- Type: Point
+- Parser-safe coverage: H 120°; V 30°
+- Card evidence: Official exact-model product page and matching RCF 2026 catalogue, accessed 2026-08-18.

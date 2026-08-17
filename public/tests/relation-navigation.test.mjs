@@ -239,6 +239,7 @@ const runtimeReferenceErrors = detailIds.flatMap(id => {
   if (!detail) return [`상세 provider가 없는 ID: ${id}`];
   return runtimeMarkupReferenceErrors(detail.head + detail.body).map(error => `${id}: ${error}`);
 });
+if (runtimeReferenceErrors.length) console.error(runtimeReferenceErrors.join("\n"));
 check(
   "모든 상세 HTML의 로컬 href/src가 배포 public 경계 안의 실제 파일만 가리킴",
   detailIds.length > 0 && runtimeReferenceErrors.length === 0,

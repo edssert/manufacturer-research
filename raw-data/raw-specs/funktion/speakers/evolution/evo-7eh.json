@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-evo-7eh",
+  "manufacturerId": "funktion",
+  "name": "Evo 7EH",
+  "slug": "evo-7eh",
+  "series": "Evolution",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/evo-7eh1/",
+  "rangePage": "https://funktion-one.com/ranges/evolution",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "Evo 7EH - Narrow Dispersion, Arrayable, Mid-High Point Source",
+    "technical": {
+      "bandwidth": "200Hz - 18kHz",
+      "weight": "41kg (90lbs)",
+      "dispersion": "40° Horizontal x 20° Vertical",
+      "connectors": "2x Neutrik NL4 or NL8 option",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 10\" Operating Band 200Hz - 4kHz Sensitivity at 1m 112dB at 4.9V Power (AES) 250W Nominal Impedence 24Ω Driver 1.4\" Operating Band 4kHz - up Sensitivity at 1m 114dB at 5.6V Power (AES) 75W Nominal Impedence 32Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/fb57d5bd-cef7-446b-811e-5b9043552df9_Evo+6EH.png",
+      "https://images.prismic.io/funktion-one/0abfafdf-bfe2-4368-892c-7a97477759c8_Evo7EH-F1-WD%3DT0089-00.png",
+      "https://images.prismic.io/funktion-one/aiA70geQX7-eWqh7_GK-E67H.png",
+      "https://images.prismic.io/funktion-one/aiA1cAeQX7-eWqbo_YK-SE7H.png",
+      "https://images.prismic.io/funktion-one/aiA4KQeQX7-eWqfN_WB-E67H.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/a3d1b151-f192-48ae-8d3f-ce8576d52687_Funktion-One_Evo7EH_Spec_Sheet.pdf",
+        "label": "a3d1b151-f192-48ae-8d3f-ce8576d52687_Funktion-One_Evo7EH_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/3e093e6d-9d02-4eae-8d26-555982d4120c_Evo7EH-F1-TD%3DT0085-00.pdf",
+        "label": "3e093e6d-9d02-4eae-8d26-555982d4120c_Evo7EH-F1-TD%3DT0085-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z2VOzZbqstJ98uhP_Evo7EH-F1-DD%3DT0086-00.pdf",
+        "label": "Z2VOzZbqstJ98uhP_Evo7EH-F1-DD%3DT0086-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/9930a840-522b-4688-8905-9b62084e8cd7_Evo7EH-F1-2DM%3DT0087-00.dwg",
+        "label": "9930a840-522b-4688-8905-9b62084e8cd7_Evo7EH-F1-2DM%3DT0087-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0Xi8JbqstJ97yKb_Evo7EH-F1-3DM%3DT0088-00.dwg",
+        "label": "Z0Xi8JbqstJ97yKb_Evo7EH-F1-3DM%3DT0088-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/b9b0be83-4d44-4216-9827-c9cd4a237479_GK-E67H-F1-AD%3DT0009-01.pdf",
+        "label": "b9b0be83-4d44-4216-9827-c9cd4a237479_GK-E67H-F1-AD%3DT0009-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/b14922ea-5b30-40c9-8a7c-0a215d823b8f_WB-E67H-F1-AD%3DT0010-01.pdf",
+        "label": "b14922ea-5b30-40c9-8a7c-0a215d823b8f_WB-E67H-F1-AD%3DT0010-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/25c3eb02-3101-45ce-a53b-15ec243f059f_YK-SE7H-F1-AD%3DT0054-01.pdf",
+        "label": "25c3eb02-3101-45ce-a53b-15ec243f059f_YK-SE7H-F1-AD%3DT0054-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/b3811688-12ae-4d08-8df9-a4536c94bfb4_Evo+Brochure+2022+HR.pdf",
+        "label": "b3811688-12ae-4d08-8df9-a4536c94bfb4_Evo+Brochure+2022+HR.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/fc712f5f-f051-42c3-9722-9505e6a2ed33_Evo+Ground+Stack+System.pdf",
+        "label": "fc712f5f-f051-42c3-9722-9505e6a2ed33_Evo+Ground+Stack+System.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/2a0e358f-788c-42d1-90f4-bcd0ee0a5b1f_New+Ground+Stack+Straps-2.pdf",
+        "label": "2a0e358f-788c-42d1-90f4-bcd0ee0a5b1f_New+Ground+Stack+Straps-2.pdf"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

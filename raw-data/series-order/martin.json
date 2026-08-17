@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "martin",
+  "basis": "Martin Audio official Products by Series page order; models retain official category-list order within each series.",
+  "source": "https://martin-audio.com/products/series",
+  "retrievedAt": "2026-08-18",
+  "series": [
+    {
+      "rank": 1,
+      "series": "Adorn Series",
+      "modelIds": [
+        "spk-martin-a40",
+        "spk-martin-a40t",
+        "spk-martin-a55",
+        "spk-martin-a55t",
+        "spk-martin-a80t",
+        "spk-martin-acs-40ts",
+        "spk-martin-acs-55ts",
+        "spk-martin-acs-55t",
+        "spk-martin-acp-55t"
+      ]
+    },
+    {
+      "rank": 2,
+      "series": "BlacklineQ",
+      "modelIds": [
+        "spk-martin-blackline-q8",
+        "spk-martin-blackline-q10",
+        "spk-martin-blackline-q12",
+        "spk-martin-blackline-q15",
+        "spk-martin-blackline-q26",
+        "spk-martin-blackline-q44",
+        "spk-martin-blackline-q210",
+        "spk-martin-blackline-q118",
+        "spk-martin-blackline-q218"
+      ]
+    },
+    {
+      "rank": 3,
+      "series": "BlacklineX Powered Series",
+      "modelIds": [
+        "spk-martin-blackline-xp12",
+        "spk-martin-blackline-xp15",
+        "spk-martin-blackline-xp118"
+      ]
+    },
+    {
+      "rank": 4,
+      "series": "CDD/CDD-WR Series",
+      "modelIds": [
+        "spk-martin-cdd5",
+        "spk-martin-cdd5tx-wr",
+        "spk-martin-cdd6",
+        "spk-martin-cdd6tx-wr",
+        "spk-martin-cdd8",
+        "spk-martin-cdd8-wr",
+        "spk-martin-cdd8tx",
+        "spk-martin-cdd8tx-wr",
+        "spk-martin-cdd10",
+        "spk-martin-cdd10-wr",
+        "spk-martin-cdd10tx",
+        "spk-martin-cdd10tx-wr",
+        "spk-martin-cdd12",
+        "spk-martin-cdd12-wr",
+        "spk-martin-cdd15",
+        "spk-martin-cdd15-wr"
+      ]
+    },
+    {
+      "rank": 5,
+      "series": "CDD-LIVE!",
+      "modelIds": [
+        "spk-martin-cdd-live-8",
+        "spk-martin-cdd-live-12",
+        "spk-martin-cdd-live-15"
+      ]
+    },
+    {
+      "rank": 6,
+      "series": "Ceiling Series",
+      "modelIds": [
+        "spk-martin-c4-8t",
+        "spk-martin-c6-8t",
+        "spk-martin-c8-1t"
+      ]
+    },
+    {
+      "rank": 7,
+      "series": "FlexPoint",
+      "modelIds": [
+        "spk-martin-flexpoint-fp4",
+        "spk-martin-flexpoint-fp6",
+        "spk-martin-flexpoint-fp8",
+        "spk-martin-flexpoint-fp12",
+        "spk-martin-flexpoint-fp15"
+      ]
+    },
+    {
+      "rank": 8,
+      "series": "LE Stage Monitors",
+      "modelIds": [
+        "spk-martin-le100",
+        "spk-martin-le200"
+      ]
+    },
+    {
+      "rank": 9,
+      "series": "O-Line",
+      "modelIds": [
+        "spk-martin-o-line"
+      ]
+    },
+    {
+      "rank": 10,
+      "series": "SX Series",
+      "modelIds": [
+        "spk-martin-sx110",
+        "spk-martin-sx210",
+        "spk-martin-sx112",
+        "spk-martin-sx212",
+        "spk-martin-sx115",
+        "spk-martin-sxc115",
+        "spk-martin-sxcf115",
+        "spk-martin-sx215",
+        "spk-martin-sx118",
+        "spk-martin-sx118-plus",
+        "spk-martin-sxc118",
+        "spk-martin-sxcf118",
+        "spk-martin-sx218",
+        "spk-martin-sx218-plus",
+        "spk-martin-sxh218",
+        "spk-martin-sxhf218",
+        "spk-martin-sxp118",
+        "spk-martin-sxp218"
+      ]
+    },
+    {
+      "rank": 11,
+      "series": "TH Series",
+      "modelIds": [
+        "spk-martin-thh",
+        "spk-martin-thv",
+        "spk-martin-ths"
+      ]
+    },
+    {
+      "rank": 12,
+      "series": "Torus",
+      "modelIds": [
+        "spk-martin-torus-t1215",
+        "spk-martin-torus-t1230",
+        "spk-martin-torus-t820"
+      ]
+    },
+    {
+      "rank": 13,
+      "series": "Wavefront Precision",
+      "modelIds": [
+        "spk-martin-wpm",
+        "spk-martin-wps",
+        "spk-martin-wpc",
+        "spk-martin-wpl"
+      ]
+    },
+    {
+      "rank": 14,
+      "series": "XE Stage Monitors",
+      "modelIds": [
+        "spk-martin-xe300",
+        "spk-martin-xe500"
+      ]
+    },
+    {
+      "rank": 15,
+      "series": "BlacklineX Series",
+      "modelIds": [
+        "spk-martin-blackline-xh15",
+        "spk-martin-blackline-x8",
+        "spk-martin-blackline-x10",
+        "spk-martin-blackline-x12",
+        "spk-martin-blackline-x15",
+        "spk-martin-blackline-x115",
+        "spk-martin-blackline-x118",
+        "spk-martin-blackline-x218"
+      ]
+    },
+    {
+      "rank": 16,
+      "series": "Blackline3 Series",
+      "modelIds": [
+        "spk-martin-blackline-3-fh3",
+        "spk-martin-blackline-3-fx10",
+        "spk-martin-blackline-3-fx12",
+        "spk-martin-blackline-3-fx15",
+        "spk-martin-blackline-3-b218",
+        "spk-martin-b218x",
+        "spk-martin-b118x"
+      ]
+    },
+    {
+      "rank": 17,
+      "series": "DDX Series",
+      "modelIds": [
+        "spk-martin-ddx8",
+        "spk-martin-ddx10",
+        "spk-martin-ddx12",
+        "spk-martin-ddx15",
+        "spk-martin-ddx118"
+      ]
+    },
+    {
+      "rank": 18,
+      "series": "V.Series",
+      "modelIds": [
+        "spk-martin-v-10",
+        "spk-martin-v-12",
+        "spk-martin-v-15"
+      ]
+    },
+    {
+      "rank": 19,
+      "series": "S.Series",
+      "modelIds": [
+        "spk-martin-s-10",
+        "spk-martin-s-12",
+        "spk-martin-s-15"
+      ]
+    },
+    {
+      "rank": 20,
+      "series": "D.Series",
+      "modelIds": [
+        "spk-martin-d-12",
+        "spk-martin-d-15"
+      ]
+    },
+    {
+      "rank": 21,
+      "series": "P.I.",
+      "modelIds": [
+        "spk-martin-pi8",
+        "spk-martin-pi10",
+        "spk-martin-pi12",
+        "spk-martin-pi15",
+        "spk-martin-pi118",
+        "spk-martin-pi218"
+      ]
+    },
+    {
+      "rank": 22,
+      "series": "XD Series",
+      "modelIds": [
+        "spk-martin-xd12-a",
+        "spk-martin-xd15-a"
+      ]
+    }
+  ]
+}

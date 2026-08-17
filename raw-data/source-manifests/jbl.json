@@ -1,0 +1,806 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "jbl",
+  "scope": "loudspeakers",
+  "files": [
+    {
+      "path": "raw-data/official-docs/jbl/speakers/catalogues/jbl-2025-portable-pa-brochure.pdf",
+      "productIds": [
+        "spk-jbl-eon-one-compact",
+        "spk-jbl-eon-one-mk2",
+        "spk-jbl-eon208p",
+        "spk-jbl-irx-one",
+        "spk-jbl-irx108bt",
+        "spk-jbl-irx112bt",
+        "spk-jbl-irx115s",
+        "spk-jbl-jrx212",
+        "spk-jbl-jrx215",
+        "spk-jbl-jrx218s",
+        "spk-jbl-jrx225",
+        "spk-jbl-prx908",
+        "spk-jbl-prx912",
+        "spk-jbl-prx915",
+        "spk-jbl-prx915xlf",
+        "spk-jbl-prx918xlf",
+        "spk-jbl-prx925",
+        "spk-jbl-prx935",
+        "spk-jbl-srx912m",
+        "spk-jbl-srx915m",
+        "spk-jbl-srx922"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://jblpro.com/en-US/product_selector/product_families/live-portable",
+      "sourceAsset": "https://jblpro.com/resource/jbl-professional-brochure-jbl-2025-ppa-brochure.pdf",
+      "retrievedAt": "2026-08-18",
+      "sha256": "354597b94464c2342a1c47e362ef2004fc26b56934674e135e68b340c688f838",
+      "bytes": 8863005,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/catalogues/jbl-2026-install-full-line-product-catalog.pdf",
+      "productIds": [
+        "spk-jbl-lct-81c-t",
+        "spk-jbl-lct-81c-tm",
+        "spk-jbl-control-47c-t",
+        "spk-jbl-control-47lp",
+        "spk-jbl-control-47hc",
+        "spk-jbl-control-40cs-t",
+        "spk-jbl-control-42c",
+        "spk-jbl-control-45c-t",
+        "spk-jbl-css8004",
+        "spk-jbl-css8006bm-china-only",
+        "spk-jbl-css8008",
+        "spk-jbl-css8018",
+        "spk-jbl-control-12c-t",
+        "spk-jbl-control-14c-t",
+        "spk-jbl-control-16c-t",
+        "spk-jbl-control-18c-t",
+        "spk-jbl-control-12c-va",
+        "spk-jbl-control-14c-va",
+        "spk-jbl-control-16c-va",
+        "spk-jbl-8124",
+        "spk-jbl-8128",
+        "spk-jbl-8138",
+        "spk-jbl-control-226c-t",
+        "spk-jbl-control-227c",
+        "spk-jbl-control-227ct",
+        "spk-jbl-control-424c-t",
+        "spk-jbl-control-424lp",
+        "spk-jbl-control-426c-t",
+        "spk-jbl-control-426lp",
+        "spk-jbl-control-426c-t-ls",
+        "spk-jbl-control-419cs-t",
+        "spk-jbl-control-312cs",
+        "spk-jbl-control-321c",
+        "spk-jbl-control-321ct",
+        "spk-jbl-control-322c",
+        "spk-jbl-control-322ct",
+        "spk-jbl-control-328c",
+        "spk-jbl-control-328ct",
+        "spk-jbl-control-412c-t",
+        "spk-jbl-control-412c-t-va",
+        "spk-jbl-control-414c-t",
+        "spk-jbl-control-414c-t-va",
+        "spk-jbl-control-416c-t",
+        "spk-jbl-control-416c-t-va",
+        "spk-jbl-control-418c-t",
+        "spk-jbl-control-414c-t-micro",
+        "spk-jbl-control-414ct-micro-plus",
+        "spk-jbl-control-24c-micro",
+        "spk-jbl-control-24ct-micro",
+        "spk-jbl-control-24ct-micro-plus",
+        "spk-jbl-control-24c",
+        "spk-jbl-control-24ct",
+        "spk-jbl-control-24ct-bk",
+        "spk-jbl-control-26c",
+        "spk-jbl-control-26ct",
+        "spk-jbl-control-26ct-ls",
+        "spk-jbl-control-26-dt",
+        "spk-jbl-control-19cs",
+        "spk-jbl-control-19cst",
+        "spk-jbl-control-442c-t",
+        "spk-jbl-control-445c-t",
+        "spk-jbl-control-447c-t",
+        "spk-jbl-control-447lp",
+        "spk-jbl-control-447hc",
+        "spk-jbl-control-440cs-t",
+        "spk-jbl-cbt-50la-1",
+        "spk-jbl-cbt-50la-ls",
+        "spk-jbl-cbt-100la-1",
+        "spk-jbl-cbt-100la-ls",
+        "spk-jbl-cbt-70j-1",
+        "spk-jbl-cbt-70j-1-70je-1-system",
+        "spk-jbl-cbt-200la-1",
+        "spk-jbl-cbt-1000",
+        "spk-jbl-cbt-1000-cbt-1000e-system",
+        "spk-jbl-col600",
+        "spk-jbl-col800",
+        "spk-jbl-prx412m",
+        "spk-jbl-prx415m",
+        "spk-jbl-prx418",
+        "spk-jbl-prx425",
+        "spk-jbl-prx412m-wh",
+        "spk-jbl-prx415m-wh",
+        "spk-jbl-adc-h90-mark-ii",
+        "spk-jbl-adc-v90-mark-ii",
+        "spk-jbl-srx812p",
+        "spk-jbl-srx815p",
+        "spk-jbl-srx835p",
+        "spk-jbl-srx818sp",
+        "spk-jbl-srx828sp",
+        "spk-jbl-prx-one-all-in-one-powered-column-pa-system-with-app-control",
+        "spk-jbl-srx812",
+        "spk-jbl-srx815",
+        "spk-jbl-srx835",
+        "spk-jbl-srx818s",
+        "spk-jbl-srx828s",
+        "spk-jbl-jbl-eon710",
+        "spk-jbl-jbl-eon712",
+        "spk-jbl-jbl-eon715",
+        "spk-jbl-jbl-eon718s",
+        "spk-jbl-psb-1-pro-soundbar-pro-soundbar-psb-1",
+        "spk-jbl-psb-2-pro-soundbar-pro-soundbar-psb-2",
+        "spk-jbl-gsb8",
+        "spk-jbl-gsb12",
+        "spk-jbl-control-126-w",
+        "spk-jbl-control-126-wt",
+        "spk-jbl-control-128-w",
+        "spk-jbl-control-128-wt",
+        "spk-jbl-vrx932lap",
+        "spk-jbl-vrx918sp",
+        "spk-jbl-vrx928la",
+        "spk-jbl-vrx932la-1",
+        "spk-jbl-vrx915s",
+        "spk-jbl-vrx918s",
+        "spk-jbl-vrx915m",
+        "spk-jbl-gsf3",
+        "spk-jbl-gsf6",
+        "spk-jbl-vla301i",
+        "spk-jbl-vla601i",
+        "spk-jbl-vla901i",
+        "spk-jbl-vla301hi",
+        "spk-jbl-vla601hi",
+        "spk-jbl-vla901hi",
+        "spk-jbl-control-85m",
+        "spk-jbl-control-88m",
+        "spk-jbl-control-89ms",
+        "spk-jbl-vla-c2100",
+        "spk-jbl-vla-c265",
+        "spk-jbl-vla-c125s",
+        "spk-jbl-control-60ps-t",
+        "spk-jbl-control-62p",
+        "spk-jbl-control-64p-t",
+        "spk-jbl-control-65-p-t",
+        "spk-jbl-control-67-p-t",
+        "spk-jbl-control-67-hc-t",
+        "spk-jbl-control-68hp",
+        "spk-jbl-pd544",
+        "spk-jbl-pd564",
+        "spk-jbl-pd566",
+        "spk-jbl-pd595",
+        "spk-jbl-pd525s",
+        "spk-jbl-ac895",
+        "spk-jbl-ac195",
+        "spk-jbl-ac266",
+        "spk-jbl-ac299",
+        "spk-jbl-ac566",
+        "spk-jbl-ac599",
+        "spk-jbl-ac115s",
+        "spk-jbl-ac118s",
+        "spk-jbl-awc62",
+        "spk-jbl-awc82",
+        "spk-jbl-awc129",
+        "spk-jbl-awc159",
+        "spk-jbl-awc15lf",
+        "spk-jbl-aw266",
+        "spk-jbl-aw266-ls",
+        "spk-jbl-aw295",
+        "spk-jbl-aw295-ls",
+        "spk-jbl-aw526",
+        "spk-jbl-aw526-ls",
+        "spk-jbl-aw566",
+        "spk-jbl-aw566-ls",
+        "spk-jbl-aw595",
+        "spk-jbl-aw595-ls",
+        "spk-jbl-ac15",
+        "spk-jbl-ac25",
+        "spk-jbl-ac16",
+        "spk-jbl-ac26",
+        "spk-jbl-ac18-26",
+        "spk-jbl-ac18-95",
+        "spk-jbl-ac28-26",
+        "spk-jbl-ac28-95",
+        "spk-jbl-pd6200-43",
+        "spk-jbl-pd6200-64",
+        "spk-jbl-pd6200-66",
+        "spk-jbl-pd6200-95",
+        "spk-jbl-pd6212-43",
+        "spk-jbl-pd6212-64",
+        "spk-jbl-pd6212-66",
+        "spk-jbl-pd6212-95",
+        "spk-jbl-pd6322-43",
+        "spk-jbl-pd6322-64",
+        "spk-jbl-pd6322-66",
+        "spk-jbl-pd6322-95",
+        "spk-jbl-pd5122",
+        "spk-jbl-pd743i",
+        "spk-jbl-pd764i",
+        "spk-jbl-pd743i-215",
+        "spk-jbl-pd764i-215",
+        "spk-jbl-css-commercial-series-surface-mount-speakers-the-jbl-css-commercial-series-surface-mount-speaker-is-versatile-able-to-operate-with-100v-or-70",
+        "spk-jbl-control-1-pro-speaker-control-1-pro",
+        "spk-jbl-slp12-t",
+        "spk-jbl-slp14-t",
+        "spk-jbl-css-h15",
+        "spk-jbl-css-h30",
+        "spk-jbl-control-23-1",
+        "spk-jbl-control-23-1l",
+        "spk-jbl-control-25-1",
+        "spk-jbl-control-25-1l",
+        "spk-jbl-control-25av",
+        "spk-jbl-control-25av-ls",
+        "spk-jbl-control-28-1",
+        "spk-jbl-control-28-1l",
+        "spk-jbl-control-29av-1",
+        "spk-jbl-control-30",
+        "spk-jbl-control-31",
+        "spk-jbl-control-sb2210",
+        "spk-jbl-control-52",
+        "spk-jbl-control-50s-t",
+        "spk-jbl-c50pack",
+        "spk-jbl-c2ps",
+        "spk-jbl-c2pm",
+        "spk-jbl-control-5",
+        "spk-jbl-crv-black",
+        "spk-jbl-crv-white",
+        "spk-jbl-asb6112",
+        "spk-jbl-asb6115",
+        "spk-jbl-asb6118",
+        "spk-jbl-asb6125",
+        "spk-jbl-asb6128",
+        "spk-jbl-asb7118",
+        "spk-jbl-asb7128"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://jblpro.com/en-US/product_families/installed",
+      "sourceAsset": "https://jblpro.com/resource/jbl-2026-product-catalog.pdf",
+      "retrievedAt": "2026-08-18",
+      "sha256": "f1444e0ad0d3641421bf5e7d4a343bbfee04ccafa251ccc4246c3ebb5798e2af",
+      "bytes": 31175069,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/control-40-series-constant-directivity-ceiling/control-40cs-t-spec-sheet.pdf",
+      "productIds": [
+        "spk-jbl-control-40cs-t"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://jblpro.com/en/products/control-40cs-t",
+      "sourceAsset": "https://jblpro.com/en/site_elements/jbl-professional-data_sheet-control-40cst-spec-sheet",
+      "retrievedAt": "2026-08-18",
+      "sha256": "39313aa8123b673a86aea165cd4a8fa783c7c681dc40b7bc78dd1df910245c8a",
+      "bytes": 521332,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/control-40-series-constant-directivity-ceiling/control-42c-spec-sheet.pdf",
+      "productIds": [
+        "spk-jbl-control-42c"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://jblpro.com/en/products/control-42c",
+      "sourceAsset": "https://jblpro.com/en/site_elements/control-42c-spec-sheet-e36e78ca-fcac-49f1-b28b-2d9cc15182db",
+      "retrievedAt": "2026-08-18",
+      "sha256": "42a4a2d7f22354f09a511a46b3ffb0d6146291087ccbc7b102776e1ebe14d668",
+      "bytes": 1284595,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/control-40-series-constant-directivity-ceiling/control-45c-t-spec-sheet.pdf",
+      "productIds": [
+        "spk-jbl-control-45c-t"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://jblpro.com/en/products/control-45c-t",
+      "sourceAsset": "https://jblpro.com/en/site_elements/jbl-professional-data_sheet-control-45c-t-spec-sheet",
+      "retrievedAt": "2026-08-18",
+      "sha256": "47bd8d1d2bcde34e1514aa191758e3115ac40927dde496d56a43a9285db1d7da",
+      "bytes": 1033891,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/control-40-series-constant-directivity-ceiling/control-47c-t-spec-sheet.pdf",
+      "productIds": [
+        "spk-jbl-control-47c-t"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://jblpro.com/en/products/control-47c-t",
+      "sourceAsset": "https://jblpro.com/en/site_elements/jbl-professional-data_sheet-control-47c-t-spec-sheet",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9fbffd842e0f0ef6cd7b341c89603040d06faec3c813e0db13f018d65f06010e",
+      "bytes": 954704,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/control-40-series-constant-directivity-ceiling/control-47hc-spec-sheet.pdf",
+      "productIds": [
+        "spk-jbl-control-47hc"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://jblpro.com/en/products/control-47hc",
+      "sourceAsset": "https://jblpro.com/en/site_elements/control-47hc-spec-sheet",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7f3c32de148745623185d54e0fad4e839b6606f3d7f4ea7da987ab2e3caf1f7f",
+      "bytes": 303754,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/control-40-series-constant-directivity-ceiling/control-47lp-spec-sheet.pdf",
+      "productIds": [
+        "spk-jbl-control-47lp"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://jblpro.com/en/products/control-47lp",
+      "sourceAsset": "https://jblpro.com/en/site_elements/jbl-professional-data_sheet-control-47lp-spec-sheet",
+      "retrievedAt": "2026-08-18",
+      "sha256": "74e0e5c40fe4848bef01532f5abc2ba139d9c7dd72a07bcc12ff55b269ccaa71",
+      "bytes": 992131,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/lct-lay-in-ceiling-tile-speakers/lct-81c-t-spec-sheet.pdf",
+      "productIds": [
+        "spk-jbl-lct-81c-t"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://jblpro.com/en/products/lct-81c-t",
+      "sourceAsset": "https://jblpro.com/en/site_elements/jbl-professional-lct81c-t-spec-sheet",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a980a8613c80dcfb39468e9cfee92e5aa7cc8380b4a521d6267f2b41eed36f57",
+      "bytes": 269435,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/lct-lay-in-ceiling-tile-speakers/lct-81c-tm-spec-sheet.pdf",
+      "productIds": [
+        "spk-jbl-lct-81c-tm"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://jblpro.com/en/products/lct-81c-tm",
+      "sourceAsset": "https://jblpro.com/en/site_elements/lct-81c-tm-spec-sheet",
+      "retrievedAt": "2026-08-18",
+      "sha256": "3d540b545f4b9e68d3ba4f1487bc7e188df7b63607c9e292507cfdd25e94cfce",
+      "bytes": 495330,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/control-40cs-t.html",
+      "productIds": [
+        "spk-jbl-control-40cs-t"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/en/products/control-40cs-t",
+      "sourceAsset": "https://jblpro.com/en/products/control-40cs-t",
+      "retrievedAt": "2026-08-18",
+      "sha256": "294711c7b246ac73d34caacdf168477231061e0752286cdb693168c1513c0a7b",
+      "bytes": 69134,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/control-42c.html",
+      "productIds": [
+        "spk-jbl-control-42c"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/en/products/control-42c",
+      "sourceAsset": "https://jblpro.com/en/products/control-42c",
+      "retrievedAt": "2026-08-18",
+      "sha256": "aad82431a8ca9da292860d98aa3d2b89d96506e86bf2428b2644cf59201ac512",
+      "bytes": 68118,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/control-45c-t.html",
+      "productIds": [
+        "spk-jbl-control-45c-t"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/en/products/control-45c-t",
+      "sourceAsset": "https://jblpro.com/en/products/control-45c-t",
+      "retrievedAt": "2026-08-18",
+      "sha256": "0517f91ac3962f76c61322a2bea43ca89eb7014841047c9c541ef79a7f2e47ac",
+      "bytes": 73957,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/control-47c-t.html",
+      "productIds": [
+        "spk-jbl-control-47c-t"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/en/products/control-47c-t",
+      "sourceAsset": "https://jblpro.com/en/products/control-47c-t",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b5c67828cec54e6e83431ab8788c6498e1ad1b32fb15a9b6b5fb1617f5adcc72",
+      "bytes": 81774,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/control-47hc.html",
+      "productIds": [
+        "spk-jbl-control-47hc"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/en/products/control-47hc",
+      "sourceAsset": "https://jblpro.com/en/products/control-47hc",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e1118396bd66145a763d433f06d4707994ee1bd0c48fa0d252f4017d9a810181",
+      "bytes": 83173,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/control-47lp.html",
+      "productIds": [
+        "spk-jbl-control-47lp"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/en/products/control-47lp",
+      "sourceAsset": "https://jblpro.com/en/products/control-47lp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a8c87af94f73ba2eba678873b4fee7d67b0761402e4cb5680399df06cfd3a4fe",
+      "bytes": 77569,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/css8004.html",
+      "productIds": [
+        "spk-jbl-css8004"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/en/products/jbl-professional-css8004",
+      "sourceAsset": "https://jblpro.com/en/products/jbl-professional-css8004",
+      "retrievedAt": "2026-08-18",
+      "sha256": "94251a806135bf776e07caf23ea2c4c2ed59f36a7871144768595697b1f26c50",
+      "bytes": 65937,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/css8006bm-china-only.html",
+      "productIds": [
+        "spk-jbl-css8006bm-china-only"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/zh/products/css8006bm-china-only",
+      "sourceAsset": "https://jblpro.com/zh/products/css8006bm-china-only",
+      "retrievedAt": "2026-08-18",
+      "sha256": "abc9f4f89b57691c1ba520499aea23cae4f48a5464739a0c2d3b71ba52f0b433",
+      "bytes": 43587,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/css8008.html",
+      "productIds": [
+        "spk-jbl-css8008"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/en/products/jbl-professional-css8008",
+      "sourceAsset": "https://jblpro.com/en/products/jbl-professional-css8008",
+      "retrievedAt": "2026-08-18",
+      "sha256": "f185bbcdeafd4545c48a7919d433c329b592ab5abe6fb3e4a25e12b12295314b",
+      "bytes": 65612,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/css8018.html",
+      "productIds": [
+        "spk-jbl-css8018"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/zh/products/jbl-professional-css8018",
+      "sourceAsset": "https://jblpro.com/zh/products/jbl-professional-css8018",
+      "retrievedAt": "2026-08-18",
+      "sha256": "148e12ebb6e9445b2f6e768053a3f6c5939c59574623e9c88a650e64151e7243",
+      "bytes": 66297,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/lct-81c-t.html",
+      "productIds": [
+        "spk-jbl-lct-81c-t"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/en/products/lct-81c-t",
+      "sourceAsset": "https://jblpro.com/en/products/lct-81c-t",
+      "retrievedAt": "2026-08-18",
+      "sha256": "642ec746d160551855e626b2732af5e300f67e38511131823c4318f8028da364",
+      "bytes": 57260,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages/lct-81c-tm.html",
+      "productIds": [
+        "spk-jbl-lct-81c-tm"
+      ],
+      "role": "product-page-snapshot",
+      "sourcePage": "https://jblpro.com/en/products/lct-81c-tm",
+      "sourceAsset": "https://jblpro.com/en/products/lct-81c-tm",
+      "retrievedAt": "2026-08-18",
+      "sha256": "15927c5b09db2bae2d0d86c37b528e542daa9c1765eae592463683f47e89ab2e",
+      "bytes": 55994,
+      "mimeType": "text/html"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/control-40-series-constant-directivity-ceiling/control-40cs-t/front.jpg",
+      "productIds": [
+        "spk-jbl-control-40cs-t"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/en/products/control-40cs-t",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7358_1728933337/mtc_48trx12_front_z_original.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "cba315771285e832e4070059a9346a48453c1c7e6b5a9f3fe1c25ad7bc6a2405",
+      "bytes": 38450,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/control-40-series-constant-directivity-ceiling/control-42c/front.jpg",
+      "productIds": [
+        "spk-jbl-control-42c"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/en/products/control-42c",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7358_1728933337/mtc_48trx12_front_z_original.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "cba315771285e832e4070059a9346a48453c1c7e6b5a9f3fe1c25ad7bc6a2405",
+      "bytes": 38450,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/control-40-series-constant-directivity-ceiling/control-45c-t/front.webp",
+      "productIds": [
+        "spk-jbl-control-45c-t"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/en/products/control-45c-t",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7257_1728985062/45ct_front_grilloff_tE2B43280BCB5_x_large_2x.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "97d42358ef788b3b46772e2e2a85167cd8ab541ea1389ba356411e874540709b",
+      "bytes": 100534,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/control-40-series-constant-directivity-ceiling/control-45c-t/side.webp",
+      "productIds": [
+        "spk-jbl-control-45c-t"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://jblpro.com/en/products/control-45c-t",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7258_1728985074/45ct_side_tBE684CC016FA_x_large_2x.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b15c84bcba8a26a46a80adb92c154982ae6e9c2f058ae7dfc40efb386a84f740",
+      "bytes": 84984,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/control-40-series-constant-directivity-ceiling/control-47c-t/front.jpg",
+      "productIds": [
+        "spk-jbl-control-47c-t"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/en/products/control-47c-t",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7358_1728933337/mtc_48trx12_front_z_original.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "cba315771285e832e4070059a9346a48453c1c7e6b5a9f3fe1c25ad7bc6a2405",
+      "bytes": 38450,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/control-40-series-constant-directivity-ceiling/control-47hc/front.jpg",
+      "productIds": [
+        "spk-jbl-control-47hc"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/en/products/control-47hc",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7358_1728933337/mtc_48trx12_front_z_original.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "cba315771285e832e4070059a9346a48453c1c7e6b5a9f3fe1c25ad7bc6a2405",
+      "bytes": 38450,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/control-40-series-constant-directivity-ceiling/control-47lp/front.jpg",
+      "productIds": [
+        "spk-jbl-control-47lp"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/en/products/control-47lp",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7358_1728933337/mtc_48trx12_front_z_original.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "cba315771285e832e4070059a9346a48453c1c7e6b5a9f3fe1c25ad7bc6a2405",
+      "bytes": 38450,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers-cn/css8004/front.jpg",
+      "productIds": [
+        "spk-jbl-css8004"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://jblpro.com/zh/products/jbl-professional-css8004",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7221_1728933988/css_bb4_front_z_original.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a8643d11138585e829da71589d17f23b030cc80f541526492a6c75b72648072d",
+      "bytes": 168644,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers-cn/css8004/front.webp",
+      "productIds": [
+        "spk-jbl-css8004"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/zh/products/jbl-professional-css8004",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7206_1728985483/css_8004_front01_z_x_large_2x.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "688a24a1f01e93cf6d7cdf818708f750ac37f1b92233a2b4755e53a5606b1ff3",
+      "bytes": 238830,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers-cn/css8006bm-china-only/front.webp",
+      "productIds": [
+        "spk-jbl-css8006bm-china-only"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/zh/products/css8006bm-china-only",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/11541_1728955082/CSS-8006BM-Speaker_Front_x_large_2x.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "ac2e30b138594737d3d95dd36c326d9b28aa5fef7fb7cfeee52bcbe0504f3143",
+      "bytes": 890340,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers-cn/css8006bm-china-only/rear.webp",
+      "productIds": [
+        "spk-jbl-css8006bm-china-only"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://jblpro.com/zh/products/css8006bm-china-only",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/11542_1728955078/CSS-8006BM-Speaker_Rear_x_large_2x.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "fd08e5513dd28f86c85b10b2cbcb8d6fba3405eb1efbecf8531bd83a2f6b2427",
+      "bytes": 558190,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers-cn/css8008/front.jpg",
+      "productIds": [
+        "spk-jbl-css8008"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://jblpro.com/zh/products/jbl-professional-css8008",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7222_1728933978/css_bb8_front_z_original.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "37ba65320c625c545a89ee155a8c852109a49239fc15c3b51ee802d0261a86e0",
+      "bytes": 193720,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers-cn/css8008/front.webp",
+      "productIds": [
+        "spk-jbl-css8008"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/zh/products/jbl-professional-css8008",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7210_1728985445/css_8008_front01_z_x_large_2x.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "52b534ec09f4181268edaa8f38ab3192a11e497300662c6173bd8bbd9703fc1d",
+      "bytes": 158650,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers-cn/css8018/front.jpg",
+      "productIds": [
+        "spk-jbl-css8018"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://jblpro.com/zh/products/jbl-professional-css8018",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7222_1728933978/css_bb8_front_z_original.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "37ba65320c625c545a89ee155a8c852109a49239fc15c3b51ee802d0261a86e0",
+      "bytes": 193720,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers-cn/css8018/front.webp",
+      "productIds": [
+        "spk-jbl-css8018"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/zh/products/jbl-professional-css8018",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7213_1728985419/css_8018_front01_z_x_large_2x.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a621825b4e87f3bca6f91fe8f2816d42a1665f68e5e08000dc29b10e990a0a06",
+      "bytes": 169976,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers/css8004/front.jpg",
+      "productIds": [
+        "spk-jbl-css8004"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://jblpro.com/en/products/jbl-professional-css8004",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7221_1728933988/css_bb4_front_z_original.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a8643d11138585e829da71589d17f23b030cc80f541526492a6c75b72648072d",
+      "bytes": 168644,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers/css8004/front.webp",
+      "productIds": [
+        "spk-jbl-css8004"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/en/products/jbl-professional-css8004",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7206_1728985483/css_8004_front01_z_x_large_2x.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "688a24a1f01e93cf6d7cdf818708f750ac37f1b92233a2b4755e53a5606b1ff3",
+      "bytes": 238830,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers/css8008/front.jpg",
+      "productIds": [
+        "spk-jbl-css8008"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://jblpro.com/en/products/jbl-professional-css8008",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7222_1728933978/css_bb8_front_z_original.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "37ba65320c625c545a89ee155a8c852109a49239fc15c3b51ee802d0261a86e0",
+      "bytes": 193720,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/css-commercial-series-ceiling-speakers/css8008/front.webp",
+      "productIds": [
+        "spk-jbl-css8008"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/en/products/jbl-professional-css8008",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7210_1728985445/css_8008_front01_z_x_large_2x.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "52b534ec09f4181268edaa8f38ab3192a11e497300662c6173bd8bbd9703fc1d",
+      "bytes": 158650,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/lct-lay-in-ceiling-tile-speakers/lct-81c-t/side.webp",
+      "productIds": [
+        "spk-jbl-lct-81c-t"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/en/products/lct-81c-t",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/7409_1728983940/lct-81ct-side_z_x_large_2x.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9ae56d05a606310695e4323860728fc215a18519e7cbcefb80af7d2d9f7f56f4",
+      "bytes": 92758,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/jbl/speakers/lct-lay-in-ceiling-tile-speakers/lct-81c-tm/side.webp",
+      "productIds": [
+        "spk-jbl-lct-81c-tm"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://jblpro.com/en/products/lct-81c-tm",
+      "sourceAsset": "https://adn.harmanpro.com/product_attachments/product_attachments/10412_1728962962/lct-81ct-side_z_x_large_2x.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9ae56d05a606310695e4323860728fc215a18519e7cbcefb80af7d2d9f7f56f4",
+      "bytes": 92758,
+      "mimeType": "image/webp"
+    }
+  ]
+}

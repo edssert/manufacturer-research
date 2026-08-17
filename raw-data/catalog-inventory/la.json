@@ -1,0 +1,368 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "la",
+  "scope": "loudspeakers",
+  "inclusion": "The 44 L-Acoustics loudspeaker records currently deployed by this catalog, verified against official product pages and the official Documentation Center.",
+  "sourcePages": [
+    "https://www.l-acoustics.com/loudspeakers/",
+    "https://www.l-acoustics.com/result-documentation-center/?choice=all+catalog"
+  ],
+  "retrievedAt": "2026-08-18",
+  "products": [
+    {
+      "id": "spk-la-k1",
+      "name": "K1",
+      "series": "k-series",
+      "productPage": "https://www.l-acoustics.com/products/K1/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-k2",
+      "name": "K2",
+      "series": "k-series",
+      "productPage": "https://www.l-acoustics.com/products/K2/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-k3",
+      "name": "K3",
+      "series": "k-series",
+      "productPage": "https://www.l-acoustics.com/products/K3/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-k3i",
+      "name": "K3i",
+      "series": "k-series",
+      "productPage": "https://www.l-acoustics.com/products/K3i/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-kara-ii",
+      "name": "KARA II",
+      "series": "k-series",
+      "productPage": "https://www.l-acoustics.com/products/KARA-II/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-kara-iii",
+      "name": "KARA IIi",
+      "series": "k-series",
+      "productPage": "https://www.l-acoustics.com/products/KARA-IIi/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-kiva-ii",
+      "name": "KIVA II",
+      "series": "k-series",
+      "productPage": "https://www.l-acoustics.com/products/KIVA-II/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-k1-sb",
+      "name": "K1-SB",
+      "series": "k-series",
+      "productPage": "https://www.l-acoustics.com/products/K1-SB/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-l2",
+      "name": "L2",
+      "series": "l-series",
+      "productPage": "https://www.l-acoustics.com/products/L2/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-l2d",
+      "name": "L2D",
+      "series": "l-series",
+      "productPage": "https://www.l-acoustics.com/products/L2D/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-l1",
+      "name": "L1",
+      "series": "l-series",
+      "productPage": "https://www.l-acoustics.com/products/l1-system/",
+      "status": "verified",
+      "mediaEvidence": "official-product-page-original"
+    },
+    {
+      "id": "spk-la-l1d",
+      "name": "L1D",
+      "series": "l-series",
+      "productPage": "https://www.l-acoustics.com/products/l1-system/",
+      "status": "verified",
+      "mediaEvidence": "official-product-page-original"
+    },
+    {
+      "id": "spk-la-cs1",
+      "name": "CS1",
+      "series": "subwoofers",
+      "productPage": "https://www.l-acoustics.com/products/CS1/",
+      "status": "verified",
+      "mediaEvidence": "official-product-page-original"
+    },
+    {
+      "id": "spk-la-ks28",
+      "name": "KS28",
+      "series": "subwoofers",
+      "productPage": "https://www.l-acoustics.com/products/KS28/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-ks21",
+      "name": "KS21",
+      "series": "subwoofers",
+      "productPage": "https://www.l-acoustics.com/products/KS21/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-ks21i",
+      "name": "KS21i",
+      "series": "subwoofers",
+      "productPage": "https://www.l-acoustics.com/products/KS21i/",
+      "status": "verified",
+      "mediaEvidence": "official-product-page-original"
+    },
+    {
+      "id": "spk-la-sb18",
+      "name": "SB18",
+      "series": "subwoofers",
+      "productPage": "https://www.l-acoustics.com/products/SB18/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-sb18-iii",
+      "name": "SB18 IIi",
+      "series": "subwoofers",
+      "productPage": "https://www.l-acoustics.com/products/SB18-IIi/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-sb15m",
+      "name": "SB15m",
+      "series": "subwoofers",
+      "productPage": "https://www.l-acoustics.com/products/SB15m/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-sb10r",
+      "name": "SB10r",
+      "series": "subwoofers",
+      "productPage": "https://www.l-acoustics.com/products/SB10r/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-sb10i",
+      "name": "SB10i",
+      "series": "subwoofers",
+      "productPage": "https://www.l-acoustics.com/products/SB10i/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-sb6r",
+      "name": "SB6r",
+      "series": "subwoofers",
+      "productPage": "https://www.l-acoustics.com/products/SB6r/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-sb6i",
+      "name": "SB6i",
+      "series": "subwoofers",
+      "productPage": "https://www.l-acoustics.com/products/SB6i/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-soka",
+      "name": "Soka",
+      "series": "s-series",
+      "productPage": "https://www.l-acoustics.com/products/Soka/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-soka-inwall",
+      "name": "Soka inWall",
+      "series": "s-series",
+      "productPage": "https://www.l-acoustics.com/products/Soka-inWall/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-syva",
+      "name": "Syva",
+      "series": "s-series",
+      "productPage": "https://www.l-acoustics.com/products/Syva/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-syva-low",
+      "name": "Syva Low",
+      "series": "s-series",
+      "productPage": "https://www.l-acoustics.com/products/Syva-Low/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-syva-sub",
+      "name": "Syva Sub",
+      "series": "s-series",
+      "productPage": "https://www.l-acoustics.com/products/Syva-Sub/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-a10-focus",
+      "name": "A10 Focus",
+      "series": "a-series",
+      "productPage": "https://www.l-acoustics.com/products/A10-Focus/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-a10i-focus",
+      "name": "A10i Focus",
+      "series": "a-series",
+      "productPage": "https://www.l-acoustics.com/products/A10i-Focus/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-a10-wide",
+      "name": "A10 Wide",
+      "series": "a-series",
+      "productPage": "https://www.l-acoustics.com/products/A10-Wide/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-a10i-wide",
+      "name": "A10i Wide",
+      "series": "a-series",
+      "productPage": "https://www.l-acoustics.com/products/A10i-Wide/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-a15-focus",
+      "name": "A15 Focus",
+      "series": "a-series",
+      "productPage": "https://www.l-acoustics.com/products/A15-Focus/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-a15i-focus",
+      "name": "A15i Focus",
+      "series": "a-series",
+      "productPage": "https://www.l-acoustics.com/products/A15i-Focus/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-a15-wide",
+      "name": "A15 Wide",
+      "series": "a-series",
+      "productPage": "https://www.l-acoustics.com/products/A15-Wide/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-a15i-wide",
+      "name": "A15i Wide",
+      "series": "a-series",
+      "productPage": "https://www.l-acoustics.com/products/A15i-Wide/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-x15-hiq",
+      "name": "X15 HiQ",
+      "series": "x-series",
+      "productPage": "https://www.l-acoustics.com/products/X15-HiQ/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-x12",
+      "name": "X12",
+      "series": "x-series",
+      "productPage": "https://www.l-acoustics.com/products/X12/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-x8",
+      "name": "X8",
+      "series": "x-series",
+      "productPage": "https://www.l-acoustics.com/products/X8/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-x8i",
+      "name": "X8i",
+      "series": "x-series",
+      "productPage": "https://www.l-acoustics.com/products/X8i/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-x6i",
+      "name": "X6i",
+      "series": "x-series",
+      "productPage": "https://www.l-acoustics.com/products/X6i/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-5xt",
+      "name": "5XT",
+      "series": "x-series",
+      "productPage": "https://www.l-acoustics.com/products/5XT/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-x4i",
+      "name": "X4i",
+      "series": "x-series",
+      "productPage": "https://www.l-acoustics.com/products/X4i/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    },
+    {
+      "id": "spk-la-x4r",
+      "name": "X4r",
+      "series": "x-series",
+      "productPage": "https://www.l-acoustics.com/products/X4r/",
+      "status": "verified",
+      "mediaEvidence": "official-product-visuals-archive"
+    }
+  ],
+  "currentStatus": "complete-official-media-rebuild",
+  "verifiedCount": 44,
+  "pendingCount": 0
+}

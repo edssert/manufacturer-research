@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-vx-v124",
+  "manufacturerId": "funktion",
+  "name": "VX V124",
+  "slug": "vx-v124",
+  "series": "Vero VX",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/v124/",
+  "rangePage": "https://funktion-one.com/product-system/verox",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "VX V124 - Next Level Bass Loading and Driver Technology",
+    "technical": {
+      "bandwidth": "35Hz - 160Hz",
+      "weight": "103kg (227lbs)",
+      "dispersion": "Array dependent",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 24\" dual voice coil Operating Band 20Hz - 85Hz Sensitivity at 1m 104dB at 2V Power (AES) 2 x 750W Nominal Impedence 2 x 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/58e11b3b-b790-45e0-ab11-3de99d8fc20a_V124+v2.png",
+      "https://images.prismic.io/funktion-one/84198778-5290-407c-917d-90fb3fabd69e_F124-F1-WD%3DT0120-00.png",
+      "https://images.prismic.io/funktion-one/aiAz-AeQX7-eWqaN_GSB-VX.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/9e3fd306-e4ca-473c-b0c4-2a6acb28a857_Funktion-One_F124_Spec_Sheet.pdf",
+        "label": "9e3fd306-e4ca-473c-b0c4-2a6acb28a857_Funktion-One_F124_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/3d67a2ec-e582-4db6-b4e7-225b65cfa577_F124-F1-TD%3DT0220-00.PDF",
+        "label": "3d67a2ec-e582-4db6-b4e7-225b65cfa577_F124-F1-TD%3DT0220-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/fbf4eee3-bd14-4a51-883d-812095a7a6a8_F124-F1-DD%3DT0221-00.PDF",
+        "label": "fbf4eee3-bd14-4a51-883d-812095a7a6a8_F124-F1-DD%3DT0221-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/d07b1807-e73a-43ef-ad93-2349bc07ebe1_F124-F1-3DM%3DT0223-00.dwg",
+        "label": "d07b1807-e73a-43ef-ad93-2349bc07ebe1_F124-F1-3DM%3DT0223-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/55d0aba0-d10e-4bad-9266-9fdecf108a16_F124-F1-2DM%3DT0222-00.dwg",
+        "label": "55d0aba0-d10e-4bad-9266-9fdecf108a16_F124-F1-2DM%3DT0222-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/2461fb46-840f-4be1-abcf-4f91aff7d8e2_Vero+VX+Nov_2022_+webHR.pdf",
+        "label": "2461fb46-840f-4be1-abcf-4f91aff7d8e2_Vero+VX+Nov_2022_+webHR.pdf"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

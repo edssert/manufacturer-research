@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-vero-v60",
+  "manufacturerId": "funktion",
+  "name": "VERO V60",
+  "slug": "vero-v60",
+  "series": "Vero",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/v60/",
+  "rangePage": "https://funktion-one.com/product-system/vero",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "VERO V60 - Narrow Dispersion Vero Array Element",
+    "technical": {
+      "bandwidth": "200Hz - 18kHz",
+      "weight": "115kg",
+      "dispersion": "60° horizontal x 6° vertical",
+      "connectors": "2 x Syntax SPK 8 (male and female)",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 10\" Operating Band 200Hz - 4kHz Sensitivity at 1m 111dB at 3.4V Power (AES) 500W Nominal Impedence 12Ω Driver 3 x 1.4\" Operating Band 4kHz - 18kHz Sensitivity at 1m 114dB at 3.1V Power (AES) 225W Nominal Impedence 10Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/898478fe-f2dd-4360-9b20-a82d05406717_V60_Website_Product.png",
+      "https://images.prismic.io/funktion-one/ab1E8h5fn6DF3CWm_d7f7b1bf-3768-4d51-a801-a103a92c3f84_Funktion-One%2BVero%2BProduct%2BGrid.jpg",
+      "https://images.prismic.io/funktion-one/2b9d1654-edd1-437c-83c1-809740c32e25_V60-F1-WD%3DT0135-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aa8265b1-b8d7-4487-954e-acc0087f552b_Funktion-One_V60_Spec_Sheet.pdf",
+        "label": "aa8265b1-b8d7-4487-954e-acc0087f552b_Funktion-One_V60_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/a600e254-dc06-4264-a4ec-063e2409e628_Vero+User+Guide+29_04_2018+%28v0.96%29.pdf",
+        "label": "a600e254-dc06-4264-a4ec-063e2409e628_Vero+User+Guide+29_04_2018+%28v0.96%29.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/43579517-3243-4a75-b002-859eda36af46_VERO+Brochure_Compressed.pdf",
+        "label": "43579517-3243-4a75-b002-859eda36af46_VERO+Brochure_Compressed.pdf"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

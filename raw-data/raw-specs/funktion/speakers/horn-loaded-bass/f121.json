@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-f121",
+  "manufacturerId": "funktion",
+  "name": "F121",
+  "slug": "f121",
+  "series": "Horn Loaded Bass",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/f121/",
+  "rangePage": "https://funktion-one.com/ranges/horn-loaded-bass",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "F121 - Outstanding Mid-Size Bass Performance",
+    "technical": {
+      "bandwidth": "40Hz - 250Hz",
+      "weight": "72kg (159lbs)",
+      "dispersion": "Array dependent",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 21\" Operating Band 20Hz - 200Hz Sensitivity at 1m 101dB at 2.8V Power (AES) 750W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/690b3ed6-84ca-4601-810a-ddf01ac7f8ea_F121_Website_Product.png",
+      "https://images.prismic.io/funktion-one/f540fb5b-0eed-4e2f-8857-320593c90805_F121-F1-WD%3DT0118-00.png",
+      "https://images.prismic.io/funktion-one/aiAz-AeQX7-eWqaN_GSB-VX.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/ZtWvQUaF0TcGJq7k_Funktion-One_F121_Spec_Sheet_2.pdf",
+        "label": "ZtWvQUaF0TcGJq7k_Funktion-One_F121_Spec_Sheet_2.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/65c39b9a9be9a5b998b58127_F121-F1-TD%3DT0212-02.PDF",
+        "label": "65c39b9a9be9a5b998b58127_F121-F1-TD%3DT0212-02.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/78b5160c-cdd3-4b95-9984-49d1bbcce181_F121-F1-DD%3DT0213-01.PDF",
+        "label": "78b5160c-cdd3-4b95-9984-49d1bbcce181_F121-F1-DD%3DT0213-01.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0XrOZbqstJ97yQ4_F121-F1-3DM%3DT0215-00.dwg",
+        "label": "Z0XrOZbqstJ97yQ4_F121-F1-3DM%3DT0215-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/255a64c4-eadb-463d-a00d-dc9609ce0205_F121-F1-2DM%3DT0214-00.dwg",
+        "label": "255a64c4-eadb-463d-a00d-dc9609ce0205_F121-F1-2DM%3DT0214-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/be606dc9-b7a4-4b20-b1ad-6300a1ca4d62_1300.pdf",
+        "label": "be606dc9-b7a4-4b20-b1ad-6300a1ca4d62_1300.pdf"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

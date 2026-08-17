@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-br221",
+  "manufacturerId": "funktion",
+  "name": "BR221",
+  "slug": "br221",
+  "series": "Bass Reflex",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/br221/",
+  "rangePage": "https://funktion-one.com/ranges/bass",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "BR221 - Deep, Powerful, Bass Reflex",
+    "technical": {
+      "bandwidth": "32Hz - 200Hz",
+      "weight": "120kg (265lbs)",
+      "dispersion": "Array dependent",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 21” Operating Band 25Hz - 85Hz Sensitivity at 1m 102dB at 2V Power (AES) 2 x 650W Nominal Impedence 2 x 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/d91fd362-fa03-4052-aab7-9a487bd334f4_BR221+600x600.jpg",
+      "https://images.prismic.io/funktion-one/640b8dc8-5f97-40d1-bb7e-65e52a57eda2_BR221-F1-WD%3DT0125-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/365d96a7-0e04-4ea2-9760-6ab86f0161e0_Funktion-One_BR221_Spec_Sheet.pdf",
+        "label": "365d96a7-0e04-4ea2-9760-6ab86f0161e0_Funktion-One_BR221_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/a99a3c15-ecf2-413c-9009-028c1a21a870_BR221-F1-TD%3DT0180-00.pdf",
+        "label": "a99a3c15-ecf2-413c-9009-028c1a21a870_BR221-F1-TD%3DT0180-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/f01aa94f-a221-4d47-a26c-43b726e66f3e_BR221-F1-DD%3DT0181-00.pdf",
+        "label": "f01aa94f-a221-4d47-a26c-43b726e66f3e_BR221-F1-DD%3DT0181-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/2ef922f5-67b7-4671-9e98-a6892feb27bc_BR221-F1-2DM%3DT0182-00.dwg",
+        "label": "2ef922f5-67b7-4671-9e98-a6892feb27bc_BR221-F1-2DM%3DT0182-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/bbb5e8f4-bb0a-4815-b404-92d2ca81ab4c_BR221-F1-3DM%3DT0183-00.dwg",
+        "label": "bbb5e8f4-bb0a-4815-b404-92d2ca81ab4c_BR221-F1-3DM%3DT0183-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

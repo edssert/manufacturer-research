@@ -39,11 +39,11 @@ export const MY_TIGRA_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/tigra-series/spk-my-tigra.png",
+    "img": "public/assets/img/speakers/my/tigra-series/spk-my-tigra-official.jpg",
     "views": [
       {
         "label": "Front",
-        "src": "public/assets/img/speakers/my/tigra-series/spk-my-tigra.png"
+        "src": "public/assets/img/speakers/my/tigra-series/spk-my-tigra-official.jpg"
       }
     ],
     "relations": {
@@ -83,11 +83,11 @@ export const MY_TIGRA_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/tigra-series/spk-my-tigra.png",
+    "img": "public/assets/img/speakers/my/tigra-series/spk-my-tigra-official.jpg",
     "views": [
       {
         "label": "Front",
-        "src": "public/assets/img/speakers/my/tigra-series/spk-my-tigra.png"
+        "src": "public/assets/img/speakers/my/tigra-series/spk-my-tigra-official.jpg"
       }
     ],
     "relations": {

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-evo-2l",
+  "manufacturerId": "funktion",
+  "name": "Evo 2L",
+  "slug": "evo-2l",
+  "series": "Evolution",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/evo2l/",
+  "rangePage": "https://funktion-one.com/ranges/evolution",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "Evo 2L - Increased Headroom for Evo 2 Systems",
+    "technical": {
+      "bandwidth": "85Hz - 280Hz",
+      "weight": "21kg (46lbs)",
+      "dispersion": "N/A",
+      "connectors": "2 x Neutrik NL8 or NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 12\" Operating Band 60/85Hz - 280Hz Sensitivity at 1m 100dB at 2.8V Power (AES) 600W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/Z4ZgJpbqstJ99bRb_Evo2LWeb-FrontwRigging-.png",
+      "https://images.prismic.io/funktion-one/Z4Zn-ZbqstJ99bXi_Evo2%2BLPair.jpg",
+      "https://images.prismic.io/funktion-one/EM951KBYpUxnK__4_Evo2L-F1-WD%3DT0298-02.png",
+      "https://images.prismic.io/funktion-one/aiAx_weQX7-eWqX-_BFP-E2.png",
+      "https://images.prismic.io/funktion-one/frx9aHtANXHNHHzL_WB-E2L.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aF0g3nfc4bHWivrP_Evo2UserGuideV2.0.pdf",
+        "label": "aF0g3nfc4bHWivrP_Evo2UserGuideV2.0.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/ad-KnZ1ZCF7ETNuk_Evo2L-F1-DS%3DD0075-02.pdf",
+        "label": "ad-KnZ1ZCF7ETNuk_Evo2L-F1-DS%3DD0075-02.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/SSWfjNumvnxlCeQ9_Evo2L-F1-TD%3DT0294-02.PDF",
+        "label": "SSWfjNumvnxlCeQ9_Evo2L-F1-TD%3DT0294-02.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/UliSbmVfRN7yEDbW_Evo2L-F1-DD%3DT0295-02.PDF",
+        "label": "UliSbmVfRN7yEDbW_Evo2L-F1-DD%3DT0295-02.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5ondJbqstJ99_aI_Evo2L-F1-3DM%3DT0297-00.dwg",
+        "label": "Z5ondJbqstJ99_aI_Evo2L-F1-3DM%3DT0297-00.dwg"
+      },
+      {
+        "url": "https://images.prismic.io/funktion-one/wJI2-g3U9VIf2Clw_Evo2L-F1-2DM%3DT0296-01.dwg?auto=format,compress?auto=compress,format",
+        "label": "wJI2-g3U9VIf2Clw_Evo2L-F1-2DM%3DT0296-01.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Znrqw5bWFbowe2PQ_BFP-E2-F1-AD%3DT0252-01.PDF",
+        "label": "Znrqw5bWFbowe2PQ_BFP-E2-F1-AD%3DT0252-01.PDF"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl",
+    "coverage"
+  ]
+}

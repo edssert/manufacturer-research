@@ -45,7 +45,7 @@ function asciiCompare(left, right) {
 }
 
 function normalizedStrings(values) {
-  return values.map((value) => String(value).toLowerCase()).sort(asciiCompare);
+  return values.map(value => String(value).toLowerCase()).sort(asciiCompare);
 }
 
 function checkExactStrings(label, actual, expected) {
@@ -80,8 +80,8 @@ function listFiles(directory) {
 }
 
 function domainDocuments(allMarkdownFiles, coverage) {
-  const directorySegments = new Set(coverage.directorySegments.map((value) => value.toLowerCase()));
-  return allMarkdownFiles.filter((filePath) => {
+  const directorySegments = new Set(coverage.directorySegments.map(value => value.toLowerCase()));
+  return allMarkdownFiles.filter(filePath => {
     const segments = normalizedPath(relative(canonicalRoot, filePath)).split("/");
     return segments.length >= 3 && directorySegments.has(segments[1]);
   });
@@ -104,47 +104,56 @@ function duplicateValues(values) {
 
 check(governance.schemaVersion === 1, "schemaVersion은 1이어야 함");
 check(
-  governance.sourceRegistry?.canonical?.root === "raw-data/raw-specs"
-    && governance.sourceRegistry.canonical.role === "canonical-source"
-    && governance.sourceRegistry.canonical.acceptedForCoverage === true
-    && governance.sourceRegistry.canonical.auditSurface === "paths-and-filenames-only",
+  governance.sourceRegistry?.canonical?.root === "raw-data/raw-specs" &&
+    governance.sourceRegistry.canonical.role === "canonical-source" &&
+    governance.sourceRegistry.canonical.acceptedForCoverage === true &&
+    governance.sourceRegistry.canonical.auditSurface === "paths-and-filenames-only",
   "raw-data/raw-specs만 경로·파일명 감사 대상 canonical source여야 함",
 );
 check(
-  governance.sourceRegistry?.legacyStaging?.root === "upload"
-    && governance.sourceRegistry.legacyStaging.role === "legacy-staging"
-    && governance.sourceRegistry.legacyStaging.acceptedForCoverage === false,
+  governance.sourceRegistry?.legacyStaging?.root === "upload" &&
+    governance.sourceRegistry.legacyStaging.role === "legacy-staging" &&
+    governance.sourceRegistry.legacyStaging.acceptedForCoverage === false,
   "upload은 coverage에 포함되지 않는 legacy staging이어야 함",
 );
 check(
-  governance.dataStatus?.field === "pending"
-    && governance.dataStatus.pendingValue === true
-    && governance.dataStatus.defaultWhenAbsent === "complete"
-    && governance.dataStatus.completeRequiresCanonicalSource === true
-    && governance.dataStatus.pendingMayLackCanonicalSource === true
-    && governance.dataStatus.missingCompleteSourcesMustBeListedAsKnownGaps === true,
+  governance.dataStatus?.field === "pending" &&
+    governance.dataStatus.pendingValue === true &&
+    governance.dataStatus.defaultWhenAbsent === "complete" &&
+    governance.dataStatus.completeRequiresCanonicalSource === true &&
+    governance.dataStatus.pendingMayLackCanonicalSource === true &&
+    governance.dataStatus.missingCompleteSourcesMustBeListedAsKnownGaps === true,
   "pending/complete source 규칙이 명시되어야 함",
 );
 
 const canonicalRoot = resolve(ROOT, governance.sourceRegistry.canonical.root);
-const allMarkdownFiles = listFiles(canonicalRoot)
-  .filter((filePath) => extname(filePath).toLowerCase() === ".md");
+const allMarkdownFiles = listFiles(canonicalRoot).filter(filePath => extname(filePath).toLowerCase() === ".md");
 const coverageBaselines = governance.sourceCoverage;
 const missingSourceBaselines = governance.knownGaps.missingCanonicalSourceRecordIds;
+const archivedSourceBaselines = governance.knownGaps.archivedCanonicalSourceRecordIds;
+
+check(
+  coverageBaselines.speakers.recordScope === "complete" &&
+    coverageBaselines.speakers.versionSuffixPattern === "_v\\d+(?:\\.\\d+)*$",
+  "speaker canonical mapping은 complete 레코드를 감사하고 underscore 버전 접미사만 제거해야 함",
+);
 
 for (const domainName of ["speakers", "amplifiers", "dsps", "software", "brand"]) {
   const coverage = coverageBaselines[domainName];
   const allRecords = datasets[domainName];
-  const records = coverage.recordScope === "complete"
-    ? allRecords.filter((record) => record.pending !== true)
-    : allRecords;
+  const records =
+    coverage.recordScope === "complete" ? allRecords.filter(record => record.pending !== true) : allRecords;
   const documents = domainDocuments(allMarkdownFiles, coverage);
-  const documentRecordIds = documents.map((filePath) => sourceRecordId(filePath, coverage));
+  const documentRecordIds = documents.map(filePath => sourceRecordId(filePath, coverage));
   const recordIds = records.map(({ id }) => id);
-  const documentIdSet = new Set(documentRecordIds.map((id) => id.toLowerCase()));
-  const recordIdSet = new Set(recordIds.map((id) => id.toLowerCase()));
-  const missingIds = recordIds.filter((id) => !documentIdSet.has(id.toLowerCase()));
-  const orphanDocumentIds = documentRecordIds.filter((id) => !recordIdSet.has(id.toLowerCase()));
+  const documentIdSet = new Set(documentRecordIds.map(id => id.toLowerCase()));
+  const allRecordIdSet = new Set(allRecords.map(({ id }) => id.toLowerCase()));
+  const archivedIdSet = new Set((archivedSourceBaselines[domainName] ?? []).map(id => id.toLowerCase()));
+  const missingIds = recordIds.filter(id => !documentIdSet.has(id.toLowerCase()));
+  const orphanDocumentIds = documentRecordIds.filter(
+    id => !allRecordIdSet.has(id.toLowerCase()) && !archivedIdSet.has(id.toLowerCase()),
+  );
+  const missingArchivedIds = [...archivedIdSet].filter(id => !documentIdSet.has(id));
 
   check(
     records.length === coverage.expectedRecordCount,
@@ -156,14 +165,13 @@ for (const domainName of ["speakers", "amplifiers", "dsps", "software", "brand"]
   );
   checkExactStrings(`${domainName}: missing canonical sources`, missingIds, missingSourceBaselines[domainName]);
   checkExactStrings(`${domainName}: orphan canonical documents`, orphanDocumentIds, []);
+  checkExactStrings(`${domainName}: missing archived canonical sources`, missingArchivedIds, []);
   checkExactStrings(`${domainName}: duplicate canonical document mappings`, duplicateValues(documentRecordIds), []);
 }
 
 const accessoryCoverage = coverageBaselines.accessories;
 const accessoryDocuments = domainDocuments(allMarkdownFiles, accessoryCoverage);
-const accessoryDocumentPaths = accessoryDocuments.map((filePath) =>
-  normalizedPath(relative(canonicalRoot, filePath))
-);
+const accessoryDocumentPaths = accessoryDocuments.map(filePath => normalizedPath(relative(canonicalRoot, filePath)));
 check(
   datasets.accessories.length === accessoryCoverage.expectedRecordCount,
   `accessories: expected ${accessoryCoverage.expectedRecordCount} records, received ${datasets.accessories.length}`,
@@ -178,24 +186,16 @@ checkExactStrings(
   accessoryCoverage.expectedDocumentPaths,
 );
 
-const speakerDocumentCount = domainDocuments(allMarkdownFiles, coverageBaselines.speakers).length;
-const completeSpeakerCount = datasets.speakers.filter((speaker) => speaker.pending !== true).length;
 check(
-  speakerDocumentCount === completeSpeakerCount,
-  `speakers: canonical documents (${speakerDocumentCount}) must map 1:1 to complete records (${completeSpeakerCount})`,
-);
-check(
-  datasets.software.every((record) => record.pending === true),
+  datasets.software.every(record => record.pending === true),
   "software: source가 없는 현재 18개 레코드는 모두 pending이어야 함",
 );
 
-const amplifierModels = new Set(
-  datasets.amplifiers.map(({ model }) => String(model).trim().toLowerCase()),
-);
-const unresolvedAmplifierRows = datasets.speakers.flatMap((speaker) =>
+const amplifierModels = new Set(datasets.amplifiers.map(({ model }) => String(model).trim().toLowerCase()));
+const unresolvedAmplifierRows = datasets.speakers.flatMap(speaker =>
   (speaker.amps ?? [])
     .filter(({ model }) => !amplifierModels.has(String(model).trim().toLowerCase()))
-    .map(({ model }) => ({ speakerId: speaker.id, model: String(model) }))
+    .map(({ model }) => ({ speakerId: speaker.id, model: String(model) })),
 );
 checkExactStrings(
   "speaker amplifier models: unresolved model baseline",
@@ -203,13 +203,12 @@ checkExactStrings(
   governance.knownGaps.unresolvedSpeakerAmplifierModels.models,
 );
 check(
-  unresolvedAmplifierRows.length
-    === governance.knownGaps.unresolvedSpeakerAmplifierModels.referenceRowCount,
+  unresolvedAmplifierRows.length === governance.knownGaps.unresolvedSpeakerAmplifierModels.referenceRowCount,
   `speaker amplifier models: expected ${governance.knownGaps.unresolvedSpeakerAmplifierModels.referenceRowCount} unresolved rows, received ${unresolvedAmplifierRows.length}`,
 );
 
-const dspsById = new Map(datasets.dsps.map((record) => [record.id, record]));
-const softwareById = new Map(datasets.software.map((record) => [record.id, record]));
+const dspsById = new Map(datasets.dsps.map(record => [record.id, record]));
+const softwareById = new Map(datasets.software.map(record => [record.id, record]));
 const dspSoftwareAsymmetries = new Map();
 
 for (const dsp of datasets.dsps) {
@@ -234,7 +233,7 @@ checkExactRelations(
   governance.knownGaps.asymmetricRelations.dspSoftware,
 );
 
-const accessoriesById = new Map(datasets.accessories.map((record) => [record.id, record]));
+const accessoriesById = new Map(datasets.accessories.map(record => [record.id, record]));
 const accessoryAsymmetries = [];
 for (const accessory of datasets.accessories) {
   for (const relatedId of accessory.relatedAccessoryIds ?? []) {
@@ -251,10 +250,8 @@ checkExactStrings(
 
 if (failures.length) {
   console.error(`출처 거버넌스 감사 실패: ${failures.length}건`);
-  failures.forEach((failure) => console.error(`- ${failure}`));
+  failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
 
-console.log(
-  `출처 거버넌스 감사 통과: ${checks}개 조건, canonical markdown ${allMarkdownFiles.length}개`,
-);
+console.log(`출처 거버넌스 감사 통과: ${checks}개 조건, canonical markdown ${allMarkdownFiles.length}개`);

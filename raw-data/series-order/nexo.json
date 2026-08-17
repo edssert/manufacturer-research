@@ -1,0 +1,185 @@
+﻿{
+    "schemaVersion":  1,
+    "manufacturerId":  "nexo",
+    "sourcePage":  "https://www.nexo-sa.com/systems/",
+    "retrievedAt":  "2026-08-18",
+    "seriesOrder":  [
+                        "Alpha+ Series",
+                        "STM",
+                        "M28",
+                        "GEO M Series",
+                        "P+ Series",
+                        "ID Series",
+                        "ePS Series",
+                        "ePS Outdoor",
+                        "45N12",
+                        "GEO S12",
+                        "LS18",
+                        "RS"
+                    ],
+    "basis":  "official-systems-menu-and-modules-page",
+    "sharedProductPolicy":  "A product referenced by multiple official systems is stored once under the earliest system in NEXO official menu order; source snapshots preserve all cross-system appearances.",
+    "series":  [
+                   {
+                       "series":  "Alpha+ Series",
+                       "slug":  "alpha-series",
+                       "productIds":  [
+                                          "spk-nexo-m210",
+                                          "spk-nexo-b218",
+                                          "spk-nexo-l20"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/alpha-series/"
+                   },
+                   {
+                       "series":  "STM",
+                       "slug":  "stm",
+                       "productIds":  [
+                                          "spk-nexo-stm-m28-omni-purpose-module",
+                                          "spk-nexo-stm-m46-main-module",
+                                          "spk-nexo-stm-b112-bass-module",
+                                          "spk-nexo-stm-s118-sub-module"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/stm/"
+                   },
+                   {
+                       "series":  "M28",
+                       "slug":  "m28-systems",
+                       "productIds":  [
+                                          "spk-nexo-m28",
+                                          "spk-nexo-m28-i",
+                                          "spk-nexo-msub18",
+                                          "spk-nexo-msub18-i"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/m28-systems/"
+                   },
+                   {
+                       "series":  "GEO M Series",
+                       "slug":  "geo-m",
+                       "productIds":  [
+                                          "spk-nexo-geo-m1220",
+                                          "spk-nexo-geo-m1220-i",
+                                          "spk-nexo-geo-m1210",
+                                          "spk-nexo-geo-m1210-i",
+                                          "spk-nexo-geo-m1025",
+                                          "spk-nexo-geo-m1025-i",
+                                          "spk-nexo-geo-m1012",
+                                          "spk-nexo-geo-m1012-i",
+                                          "spk-nexo-msub15",
+                                          "spk-nexo-msub15-i",
+                                          "spk-nexo-geo-m620",
+                                          "spk-nexo-geo-m6b",
+                                          "spk-nexo-msub12"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/geo-m/"
+                   },
+                   {
+                       "series":  "P+ Series",
+                       "slug":  "p-series",
+                       "productIds":  [
+                                          "spk-nexo-p8",
+                                          "spk-nexo-p10",
+                                          "spk-nexo-p12",
+                                          "spk-nexo-p15",
+                                          "spk-nexo-p18",
+                                          "spk-nexo-l15",
+                                          "spk-nexo-l15-i",
+                                          "spk-nexo-l18",
+                                          "spk-nexo-l18-i",
+                                          "spk-nexo-l20-i"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/p-series/"
+                   },
+                   {
+                       "series":  "ID Series",
+                       "slug":  "id-series",
+                       "productIds":  [
+                                          "spk-nexo-id84-t",
+                                          "spk-nexo-id84-i",
+                                          "spk-nexo-id84-tis",
+                                          "spk-nexo-id84l-t",
+                                          "spk-nexo-id84l-i",
+                                          "spk-nexo-id84l-tis",
+                                          "spk-nexo-ids312-t",
+                                          "spk-nexo-ids312-i",
+                                          "spk-nexo-ids312-tis",
+                                          "spk-nexo-id14t",
+                                          "spk-nexo-id14i",
+                                          "spk-nexo-id-s108t",
+                                          "spk-nexo-id-s108i",
+                                          "spk-nexo-id24t",
+                                          "spk-nexo-id24i",
+                                          "spk-nexo-id24c",
+                                          "spk-nexo-id-s110t",
+                                          "spk-nexo-id-s110e",
+                                          "spk-nexo-id-s210t",
+                                          "spk-nexo-id-s210e"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/id-series/"
+                   },
+                   {
+                       "series":  "ePS Series",
+                       "slug":  "eps-series",
+                       "productIds":  [
+                                          "spk-nexo-eps6",
+                                          "spk-nexo-eps8",
+                                          "spk-nexo-eps10",
+                                          "spk-nexo-eps12",
+                                          "spk-nexo-els400",
+                                          "spk-nexo-els600",
+                                          "spk-nexo-els18"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/eps-series/"
+                   },
+                   {
+                       "series":  "ePS Outdoor",
+                       "slug":  "eps-outdoor",
+                       "productIds":  [
+                                          "spk-nexo-eps6-en54",
+                                          "spk-nexo-eps8-en54",
+                                          "spk-nexo-eps10-en54",
+                                          "spk-nexo-eps12-en54"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/eps-outdoor/"
+                   },
+                   {
+                       "series":  "45N12",
+                       "slug":  "45n_monitor",
+                       "productIds":  [
+                                          "spk-nexo-45n12"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/45n_monitor/"
+                   },
+                   {
+                       "series":  "GEO S12",
+                       "slug":  "geo-s12",
+                       "productIds":  [
+                                          "spk-nexo-geo-s1210",
+                                          "spk-nexo-geo-s1210-st",
+                                          "spk-nexo-geos1210-en54",
+                                          "spk-nexo-geos1210st-en54",
+                                          "spk-nexo-geo-s1230",
+                                          "spk-nexo-geo-s12030-st",
+                                          "spk-nexo-geos1230-en54",
+                                          "spk-nexo-geos1230st-en54"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/geo-s12/"
+                   },
+                   {
+                       "series":  "LS18",
+                       "slug":  "ls18",
+                       "productIds":  [
+                                          "spk-nexo-ls18",
+                                          "spk-nexo-ls18e"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/ls18/"
+                   },
+                   {
+                       "series":  "RS",
+                       "slug":  "rs",
+                       "productIds":  [
+                                          "spk-nexo-rs18"
+                                      ],
+                       "sourcePage":  "https://www.nexo-sa.com/systems/rs/"
+                   }
+               ]
+}

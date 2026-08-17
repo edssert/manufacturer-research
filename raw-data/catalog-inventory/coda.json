@@ -1,0 +1,410 @@
+{
+    "schemaVersion":  1,
+    "manufacturerId":  "coda",
+    "scope":  "loudspeakers",
+    "sourcePages":  [
+                        "https://codaaudio.com/",
+                        "https://codaaudio.com/line-array/",
+                        "https://codaaudio.com/column-speaker/",
+                        "https://codaaudio.com/point-source/",
+                        "https://codaaudio.com/subwoofer/",
+                        "https://codaaudio.com/download-manager-all-packages/"
+                    ],
+    "retrievedAt":  "2026-08-18",
+    "currentProducts":  [
+                            {
+                                "id":  "spk-coda-viforce",
+                                "name":  "ViFORCE",
+                                "series":  "ViFORCE Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/viforce/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-sub-force-35",
+                                "name":  "SUB FORCE 35",
+                                "series":  "ViFORCE Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/sub-force-35/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-airay",
+                                "name":  "AiRAY",
+                                "series":  "AiRAY Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/airay/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-ciray",
+                                "name":  "CiRAY",
+                                "series":  "CiRAY Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/ciray/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-viray",
+                                "name":  "ViRAY",
+                                "series":  "ViRAY Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/viray/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-n-ray",
+                                "name":  "N-RAY",
+                                "series":  "N-RAY Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/n-ray/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-tiray",
+                                "name":  "TiRAY",
+                                "series":  "TiRAY Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/tiray/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-tilow",
+                                "name":  "TiLOW",
+                                "series":  "TiRAY Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/tilow/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-coray4",
+                                "name":  "CoRAY4",
+                                "series":  "CoRAY Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/coray-4/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-coray4l",
+                                "name":  "CoRAY4L",
+                                "series":  "CoRAY Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/coray-4l/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-aps",
+                                "name":  "APS",
+                                "series":  "APS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/aps/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-aps-pro-d",
+                                "name":  "APS-Pro-D",
+                                "series":  "APS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/aps-pro-d/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-aps-pro-s",
+                                "name":  "APS-Pro-S",
+                                "series":  "APS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/aps-pro-s/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-aps-sub",
+                                "name":  "APS-SUB",
+                                "series":  "APS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/aps-sub/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-apsi-pro-d",
+                                "name":  "APSi-Pro-D",
+                                "series":  "APSi Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/apsi-pro-d/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-apsi-pro-s",
+                                "name":  "APSi-Pro-S",
+                                "series":  "APSi Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/apsi-pro-s/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-apsi-sub",
+                                "name":  "APSi-SUB",
+                                "series":  "APSi Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/apsi-sub/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-n-aps",
+                                "name":  "N-APS",
+                                "series":  "N-APS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/n-aps/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-n-sub",
+                                "name":  "N-SUB",
+                                "series":  "N-APS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/n-sub/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-hops5",
+                                "name":  "HOPS5",
+                                "series":  "HOPS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/hops5/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-hops7-pro",
+                                "name":  "HOPS7-Pro",
+                                "series":  "HOPS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/hops7/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-hops8i",
+                                "name":  "HOPS8i",
+                                "series":  "HOPS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/hops8i/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-hops8t",
+                                "name":  "HOPS8T",
+                                "series":  "HOPS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/hops8t/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-hops10i-pro",
+                                "name":  "HOPS10i-Pro",
+                                "series":  "HOPS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/new-hops10i-pro/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-hops10t-pro",
+                                "name":  "HOPS10T-Pro",
+                                "series":  "HOPS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/hops10t-pro/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-hops12i",
+                                "name":  "HOPS12i",
+                                "series":  "HOPS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/hops12/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-hops12t",
+                                "name":  "HOPS12T",
+                                "series":  "HOPS Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/hops12t/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-cue-one",
+                                "name":  "CUE ONE",
+                                "series":  "CUE Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/cue-one/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-cue-two",
+                                "name":  "CUE TWO",
+                                "series":  "CUE Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/cue-two/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-cue-four",
+                                "name":  "CUE FOUR",
+                                "series":  "CUE Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/cue-four/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-sc2-f",
+                                "name":  "SC2-F",
+                                "series":  "SC SUB Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/sc2-f/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-scv-f",
+                                "name":  "SCV-F",
+                                "series":  "SC SUB Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/scv-f/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-scp-f",
+                                "name":  "SCP-F",
+                                "series":  "SC SUB Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/scp-f/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-scn-f",
+                                "name":  "SCN-F",
+                                "series":  "SC SUB Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/scn-f/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-scp",
+                                "name":  "SCP",
+                                "series":  "SC SUB Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/scp/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-sc8",
+                                "name":  "SC8",
+                                "series":  "SC SUB Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/sc8/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-g308-pro",
+                                "name":  "G308-Pro",
+                                "series":  "G Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/g308/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-g512-pro",
+                                "name":  "G512-Pro",
+                                "series":  "G Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/g512-96/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-g515-pro",
+                                "name":  "G515-Pro",
+                                "series":  "G Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/g515-pro/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-g712-pro",
+                                "name":  "G712-Pro",
+                                "series":  "G Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/g712-pro/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-g715-pro",
+                                "name":  "G715-Pro",
+                                "series":  "G Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/g715-pro/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-g15-sub",
+                                "name":  "G15-Sub",
+                                "series":  "G Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/g15-sub/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-g18-sub",
+                                "name":  "G18-Sub",
+                                "series":  "G Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/g18-sub/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-d5-cube",
+                                "name":  "D5-Cube",
+                                "series":  "D Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/d5-cube/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-d5-tube",
+                                "name":  "D5-Tube",
+                                "series":  "D Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/d5-tube/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-d5-ceiling",
+                                "name":  "D5-Ceiling",
+                                "series":  "D Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/d5-ceiling/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-d8",
+                                "name":  "D8",
+                                "series":  "D Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/d8/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-d12",
+                                "name":  "D12",
+                                "series":  "D Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/d12/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-d20",
+                                "name":  "D20",
+                                "series":  "D Series",
+                                "sourcePage":  "https://codaaudio.com/speakers/d20/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-u12-sub",
+                                "name":  "U12-Sub",
+                                "series":  "Multipurpose Subwoofers",
+                                "sourcePage":  "https://codaaudio.com/speakers/u12-sub/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-u12i-sub",
+                                "name":  "U12i-Sub",
+                                "series":  "Multipurpose Subwoofers",
+                                "sourcePage":  "https://codaaudio.com/speakers/u12i-sub/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-u15-sub",
+                                "name":  "U15-Sub",
+                                "series":  "Multipurpose Subwoofers",
+                                "sourcePage":  "https://codaaudio.com/speakers/u15-sub/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-u4-sub",
+                                "name":  "U4-Sub",
+                                "series":  "Multipurpose Subwoofers",
+                                "sourcePage":  "https://codaaudio.com/speakers/u4-sub/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-omnio5",
+                                "name":  "Omnio5",
+                                "series":  "Special Applications",
+                                "sourcePage":  "https://codaaudio.com/speakers/omnio5/",
+                                "status":  "verified"
+                            },
+                            {
+                                "id":  "spk-coda-ktv-soundbar",
+                                "name":  "KTV Soundbar",
+                                "series":  "Special Applications",
+                                "sourcePage":  "https://codaaudio.com/speakers/ktv-soundbar/",
+                                "status":  "verified"
+                            }
+                        ],
+    "excluded":  [
+                     {
+                         "id":  "spk-coda-pw418",
+                         "name":  "PW418",
+                         "lifecycle":  "discontinued",
+                         "sourcePage":  "https://codaaudio.com/speakers/pw418/",
+                         "reason":  "Official download package is explicitly labelled discontinued."
+                     }
+                 ]
+}

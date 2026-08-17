@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "eaw",
+  "sourcePage": "https://eaw.com/products/",
+  "retrievedAt": "2026-08-18",
+  "seriesOrder": [
+    "ADAPTive Series",
+    "Newport",
+    "KF Series",
+    "QX Series",
+    "MKD Series",
+    "MK Series",
+    "MKC Series",
+    "RSX Series",
+    "RS Series",
+    "LA Series",
+    "SB Series",
+    "SBX Series",
+    "MW Series",
+    "SM Series",
+    "CIS Series",
+    "LS Series"
+  ],
+  "basis": "official-products-page"
+}

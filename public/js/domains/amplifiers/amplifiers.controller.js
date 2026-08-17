@@ -30,9 +30,14 @@ const amplifierListSchema = withDerivedSpeakerCount(findSpeakersMatchingAmp);
  * 짧아 보인다 — type:"Rack" 기준으로 스케일을 분리한다.
  */
 function setWattScales() {
-  const standaloneVals = AMPLIFIERS.filter(a => a.type !== "Rack").map(gaugeTotalWatt).filter(x => x != null);
-  const rackVals = AMPLIFIERS.filter(a => a.type === "Rack").map(gaugeTotalWatt).filter(x => x != null);
-  if (standaloneVals.length) setWattRange(Math.floor(Math.min(...standaloneVals)), Math.ceil(Math.max(...standaloneVals)));
+  const standaloneVals = AMPLIFIERS.filter(a => a.type !== "Rack")
+    .map(gaugeTotalWatt)
+    .filter(x => x != null);
+  const rackVals = AMPLIFIERS.filter(a => a.type === "Rack")
+    .map(gaugeTotalWatt)
+    .filter(x => x != null);
+  if (standaloneVals.length)
+    setWattRange(Math.floor(Math.min(...standaloneVals)), Math.ceil(Math.max(...standaloneVals)));
   if (rackVals.length) setRackWattRange(Math.floor(Math.min(...rackVals)), Math.ceil(Math.max(...rackVals)));
 }
 
@@ -42,27 +47,30 @@ function setWattScales() {
  * 나머지는 시장(usage: Touring/Installation) → type → 기본값 순으로 폴백한다.
  * type 자체는 Type 필터 칩으로도 계속 쓰인다.
  */
-const ampTypeOf = a => a.type === "Rack" ? "Rack" : (a.usage || a.type || "Amplifier");
+const ampTypeOf = a => (a.type === "Rack" ? "Rack" : a.usage || a.type || "Amplifier");
 
 /** 제조사/타입 정렬일 때만 제조사>타입 2단 그룹핑, 그 외에는 평면 그리드 */
 function amplifiersGroupBy(state) {
-  return state.sort === "type" ? {
-      order: AMP_MK_ORDER,
-      getKey: d => d.mfr,
-      subGroupKey: d => ampTypeOf(d),
-      // 섹션 표시 순서: 플래그십인 Touring 을 Installation 보다 위로(LA·d&b
-      // 공통). type 폴백 키(Amplified Controller/Rack)도 순서에 두어 안전.
-      // 목록에 없는 키는 뒤에 알파벳순.
-      subGroupOrder: (sgA, sgB) => {
-        const ORDER = ["Amplified Controller", "Touring", "Installation", "Rack"];
-        const ia = ORDER.indexOf(sgA), ib = ORDER.indexOf(sgB);
-        return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib) || sgA.localeCompare(sgB);
-      },
-      sortWithinGroup: compareModel,
-      headHTML: (mfr, type, group) => {
-        return `<span class="card-group__badge card-group__badge--name" style="border-color:${AMP_MFR[mfr].color}55;color:${AMP_MFR[mfr].color}">${esc(AMP_MFR[mfr].name)}</span><span class="card-group__title">${esc(type)}</span><span class="card-group__count">${group.length} ea</span>`;
+  return state.sort === "type"
+    ? {
+        order: AMP_MK_ORDER,
+        getKey: d => d.mfr,
+        subGroupKey: d => ampTypeOf(d),
+        // 섹션 표시 순서: 플래그십인 Touring 을 Installation 보다 위로(LA·d&b
+        // 공통). type 폴백 키(Amplified Controller/Rack)도 순서에 두어 안전.
+        // 목록에 없는 키는 뒤에 알파벳순.
+        subGroupOrder: (sgA, sgB) => {
+          const ORDER = ["Amplified Controller", "Touring", "Installation", "Rack"];
+          const ia = ORDER.indexOf(sgA),
+            ib = ORDER.indexOf(sgB);
+          return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib) || sgA.localeCompare(sgB);
+        },
+        sortWithinGroup: compareModel,
+        headHTML: (mfr, type, group) => {
+          return `<span class="card-group__badge card-group__badge--name" style="--mfr:${AMP_MFR[mfr].color}">${esc(AMP_MFR[mfr].name)}</span><span class="card-group__title">${esc(type)}</span><span class="card-group__count">${group.length} ea</span>`;
+        },
       }
-    } : null;
+    : null;
 }
 
 /**

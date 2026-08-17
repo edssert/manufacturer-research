@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-vero-v315",
+  "manufacturerId": "funktion",
+  "name": "Vero V315",
+  "slug": "vero-v315",
+  "series": "Vero",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/v315/",
+  "rangePage": "https://funktion-one.com/product-system/vero",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "Vero V315 - Mid-bass Vero Array Element",
+    "technical": {
+      "bandwidth": "50Hz to 250Hz",
+      "weight": "116kg",
+      "dispersion": "Array dependent",
+      "connectors": "1 x Neutrik NLT4MP",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 3 x 15\" Operating Band 50Hz - 200Hz Sensitivity at 1m 106dB at 2.8V Power (AES) 1500W Nominal Impedence 2.7Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/f4399087-09eb-44c3-bd99-0122bd0a5453_V315_Website_Product.png",
+      "https://images.prismic.io/funktion-one/ab1E8h5fn6DF3CWm_d7f7b1bf-3768-4d51-a801-a103a92c3f84_Funktion-One%2BVero%2BProduct%2BGrid.jpg",
+      "https://images.prismic.io/funktion-one/688bc768-129e-46d1-b341-7e3697ba0ced_V315-F1-WD%3DT0136-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/5a400252-1c5f-4094-9bb0-ae3c82035287_Funktion-One_F315_Spec_Sheet.pdf",
+        "label": "5a400252-1c5f-4094-9bb0-ae3c82035287_Funktion-One_F315_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/a600e254-dc06-4264-a4ec-063e2409e628_Vero+User+Guide+29_04_2018+%28v0.96%29.pdf",
+        "label": "a600e254-dc06-4264-a4ec-063e2409e628_Vero+User+Guide+29_04_2018+%28v0.96%29.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/43579517-3243-4a75-b002-859eda36af46_VERO+Brochure_Compressed.pdf",
+        "label": "43579517-3243-4a75-b002-859eda36af46_VERO+Brochure_Compressed.pdf"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl",
+    "frequencyRange"
+  ]
+}

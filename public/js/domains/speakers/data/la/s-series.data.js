@@ -213,11 +213,24 @@ export const LA_S_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/s-series/spk-la-soka.png",
+    "img": "public/assets/img/speakers/la/official/s-series/soka/01-3dr-soka-3-4-avant-catalogue-01.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/s-series/spk-la-soka.png" },
-      { "label": "On-wall", "src": "public/assets/img/speakers/la/s-series/spk-la-soka-on-wall.png" },
-      { "label": "Range", "src": "public/assets/img/speakers/la/s-series/spk-la-soka-range.png" }
+      {
+        "label": "Soka 3 4 Avant Catalogue 01",
+        "src": "public/assets/img/speakers/la/official/s-series/soka/01-3dr-soka-3-4-avant-catalogue-01.runtime.webp"
+      },
+      {
+        "label": "Soka Range 01",
+        "src": "public/assets/img/speakers/la/official/s-series/soka/02-3dr-soka-range-01.runtime.webp"
+      },
+      {
+        "label": "Soka In Wall 01",
+        "src": "public/assets/img/speakers/la/official/s-series/soka/03-3dr-soka-in-wall-01.runtime.webp"
+      },
+      {
+        "label": "Soka On Wall 01",
+        "src": "public/assets/img/speakers/la/official/s-series/soka/04-3dr-soka-on-wall-01.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -486,9 +499,20 @@ export const LA_S_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/s-series/spk-la-soka-inwall.png",
+    "img": "public/assets/img/speakers/la/official/s-series/soka-inwall/01-3dr-soka-in-wall-01.runtime.webp",
     "views": [
-      { "label": "In-wall", "src": "public/assets/img/speakers/la/s-series/spk-la-soka-inwall.png" }
+      {
+        "label": "Soka In Wall 01",
+        "src": "public/assets/img/speakers/la/official/s-series/soka-inwall/01-3dr-soka-in-wall-01.runtime.webp"
+      },
+      {
+        "label": "Soka inWall Program RAL 01",
+        "src": "public/assets/img/speakers/la/official/s-series/soka-inwall/02-3dr-soka-inwall-program-ral-01.runtime.webp"
+      },
+      {
+        "label": "Soka inWall White RAL 01",
+        "src": "public/assets/img/speakers/la/official/s-series/soka-inwall/03-3dr-soka-inwall-white-ral-01.runtime.webp"
+      }
     ],
     "notes": "Soka의 벽매립(in-wall) 설치용 버전 — L-Acoustics 정식 제품명은 \"Sokar\"(Sokar owner's manual EN version 1.0 기준). 음향 스펙(SPL/대역폭/커버리지/앰프 매칭)은 Soka와 동일하나, 매입형이라 전면 그릴 등 일부 부품이 빠져 오히려 더 가볍다(9.4kg → 8.7kg, upload/Sokar_v1.3.md로 정정). 치수는 엔클로저 기준으로 Soka와 동일.",
     "relations": {
@@ -665,12 +689,20 @@ export const LA_S_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/10)",
-    "img": "public/assets/img/speakers/la/s-series/spk-la-syva.png",
+    "img": "public/assets/img/speakers/la/official/s-series/syva/01-3dr-syva-3-4-avant-catalogue-05.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/s-series/spk-la-syva.png" },
-      { "label": "White Front", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-white-front.png" },
-      { "label": "Syva + Syva Low", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-stack.png" },
-      { "label": "System", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-system.png" }
+      {
+        "label": "Syva 3 4 Avant Catalogue 05",
+        "src": "public/assets/img/speakers/la/official/s-series/syva/01-3dr-syva-3-4-avant-catalogue-05.runtime.webp"
+      },
+      {
+        "label": "Syva 3 4 Avant Catalogue 08",
+        "src": "public/assets/img/speakers/la/official/s-series/syva/02-3dr-syva-3-4-avant-catalogue-08.runtime.webp"
+      },
+      {
+        "label": "S Series 01",
+        "src": "public/assets/img/speakers/la/official/s-series/syva/03-3dr-s-series-01.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -827,11 +859,16 @@ export const LA_S_SERIES = [
       }
     ],
     "ampRaw": "LA12X(2/6), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/8)",
-    "img": "public/assets/img/speakers/la/s-series/spk-la-syva-low.png",
+    "img": "public/assets/img/speakers/la/official/s-series/syva-low/01-3dr-syva-low-3-4-avant-catalogue-06-800x400-1.png",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-low.png" },
-      { "label": "Syva + Syva Low", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-stack.png" },
-      { "label": "System", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-system.png" }
+      {
+        "label": "syva-low-3-4-avant-catalogue-06-800x400-1",
+        "src": "public/assets/img/speakers/la/official/s-series/syva-low/01-3dr-syva-low-3-4-avant-catalogue-06-800x400-1.png"
+      },
+      {
+        "label": "Syva Syva-Low 3 4 Avant Catalogue 01",
+        "src": "public/assets/img/speakers/la/official/s-series/syva-low/02-3dr-syva-syva-low-3-4-avant-catalogue-01.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -1023,10 +1060,12 @@ export const LA_S_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/s-series/spk-la-syva-sub.png",
+    "img": "public/assets/img/speakers/la/official/s-series/syva-sub/01-3dr-syva-sub-perspective-01-800x400-1.png",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-sub.png" },
-      { "label": "System", "src": "public/assets/img/speakers/la/s-series/spk-la-syva-system.png" }
+      {
+        "label": "syva-sub-perspective-01-800x400-1",
+        "src": "public/assets/img/speakers/la/official/s-series/syva-sub/01-3dr-syva-sub-perspective-01-800x400-1.png"
+      }
     ],
     "relations": {
       "ampIds": []

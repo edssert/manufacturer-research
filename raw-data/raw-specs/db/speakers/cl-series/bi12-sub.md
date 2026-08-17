@@ -1,0 +1,7 @@
+# Bi12-SUB
+
+Source: d&b official product page, `https://www.dbaudio.com/global/en/products/all/series/cl-series/bi12-sub/`, Bi12-SUB Manual 1.2 en, `https://www.dbaudio.com/assets/products/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-bi12-sub-1.2-en.pdf`, and Bi12-SUB Datasheet 1.2 en, `https://www.dbaudio.com/assets/products/downloads/manuals-documentation/cl-series/dbaudio-datasheet-bi12-sub-1.2-en.pdf`, reviewed 2026-08-18.
+
+Installation-specific ground-stacked-only passive cardioid subwoofer operated on one amplifier channel. The integrated driver arrangement is one front-facing 15 in bass-reflex driver plus one rear-facing 10 in two-chamber bandpass driver. Frequency response is 39 Hz-150 Hz (-5 dB standard) and 35 Hz-180 Hz (-10 dB standard, IEC60268). Maximum SPL is 129 dB with D25/25D and 132 dB with D40/D80/D90/40D; the latter support eight cabinets per channel. Power handling is 500 W RMS / 1200 W peak (10 ms). The Phoenix-connected cabinet measures 457 x 590 x 688 mm. Standard and 100 Hz controller modes are documented.
+
+The English product page's detailed table currently displays 37 kg, while its summary, Manual 1.2, and Datasheet 1.2 independently state 41.5 kg. The canonical record therefore uses 41.5 kg and preserves this source discrepancy here. Coverage is stored as not applicable in the angular coverage field because the official specification describes cardioid directivity rather than a horizontal or vertical angle; the canonical record preserves this as integrated cardioid capability.

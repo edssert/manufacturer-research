@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-f61",
+  "manufacturerId": "funktion",
+  "name": "F61",
+  "slug": "f61",
+  "series": "Compact",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/f61/",
+  "rangePage": "https://funktion-one.com/ranges/compact-range",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "F61 - Outstanding Compact 2-Way Loudspeaker",
+    "technical": {
+      "bandwidth": "100Hz - 20kHz",
+      "weight": "5.25kg (11.5lbs)",
+      "dispersion": "90° x 60°",
+      "connectors": "2 x Neutrik NL4 and 1 x Phoenix",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 6\" + 1\" Operating Band 100Hz - 20kHz Sensitivity at 1m 92dB at 4V Power (AES) 100W Nominal Impedence 16Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/Z6EF35bqstJ9-LmO_Fuktion-OneF61VioletangleSmaller.jpg",
+      "https://images.prismic.io/funktion-one/Z4aHd5bqstJ99cR0_F61Whiteangle.jpg",
+      "https://images.prismic.io/funktion-one/Z5DlxpbqstJ99uyP_F61-F1-WD%3DT0283-00.png",
+      "https://images.prismic.io/funktion-one/aiAytgeQX7-eWqYr_WMS50.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aBTvcvIqRLdaB1GT_F61-F1-DS%3DD0074-02.pdf",
+        "label": "aBTvcvIqRLdaB1GT_F61-F1-DS%3DD0074-02.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aBTw6PIqRLdaB1Gh_F61IP-F1-DS%3DD0080-01.pdf",
+        "label": "aBTw6PIqRLdaB1Gh_F61IP-F1-DS%3DD0080-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5DnnZbqstJ99uzK_F61-F1-TD%3DT0279-00.PDF",
+        "label": "Z5DnnZbqstJ99uzK_F61-F1-TD%3DT0279-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5DnppbqstJ99uzW_F61-F1-DD%3DT0280-00.PDF",
+        "label": "Z5DnppbqstJ99uzW_F61-F1-DD%3DT0280-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5DnsJbqstJ99uzZ_F61-F1-2DM%3DT0281-00.dwg",
+        "label": "Z5DnsJbqstJ99uzZ_F61-F1-2DM%3DT0281-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5DnuZbqstJ99uzc_F61-F1-3DM%3DT0282-00.dwg",
+        "label": "Z5DnuZbqstJ99uzc_F61-F1-3DM%3DT0282-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aC3nGSdWJ-7kSZ0i_Funktion-OneF61.gll",
+        "label": "aC3nGSdWJ-7kSZ0i_Funktion-OneF61.gll"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5DnxpbqstJ99uzf_WMS50-61-F1-AD%3DT0304-00.PDF",
+        "label": "Z5DnxpbqstJ99uzf_WMS50-61-F1-AD%3DT0304-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5Dn1pbqstJ99uzh_YK-F61-F1-AD%3DT0305-00.PDF",
+        "label": "Z5Dn1pbqstJ99uzh_YK-F61-F1-AD%3DT0305-00.PDF"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

@@ -1,12 +1,4 @@
-/**
- * @module ui/modal
- * 카드형 상세 팝업(모달)의 수명주기(열기/닫기/모바일 뒤로가기 스택).
- * 내부 마크업은 호출자(각 도메인의 view)가, pane 안 배선은
- * ui/pane-interactions.js 가 공급한다.
- *
- * 관련 CSS: css/components/modal.css (.modal-overlay, .modal)
- * 닫기 경로: 배경 클릭 · ESC 키 · [data-modal-close] 버튼 클릭
- */
+/** @module ui/modal */
 import { clearItemRoute, clearPane2Route, setPane2Route } from "../core/router.js";
 import { wirePaneInteractions, removeScrollbarTrack } from "./pane-interactions.js";
 

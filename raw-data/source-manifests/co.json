@@ -1,0 +1,1307 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "co",
+  "scope": "loudspeakers",
+  "files": [
+    {
+      "path": "raw-data/official-docs/co/datasheets/cf14-datasheet.pdf",
+      "productIds": [
+        "spk-co-cf14"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf14",
+      "sourceAsset": "https://wdl.cohesionaudio.com/files/parts/250/dl/16416/CF14_SpecSheet_Web.pdf",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c63696ef1f2807bc614ccb9e1da37db5574450fe00e843a074bb015e72afb007",
+      "bytes": 286784,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/co/datasheets/cf28-datasheet.pdf",
+      "productIds": [
+        "spk-co-cf28"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf28",
+      "sourceAsset": "https://wdl.cohesionaudio.com/files/parts/220/dl/16419/CF28_SpecSheet_Web.pdf",
+      "retrievedAt": "2026-08-18",
+      "sha256": "609d7a673feb356bac5af0e68f96d61b7a0a3bb5c715caf61974c4e5d079a27c",
+      "bytes": 2525740,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/co/datasheets/cm22-datasheet.pdf",
+      "productIds": [
+        "spk-co-cm22"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm22",
+      "sourceAsset": "https://wdl.cohesionaudio.com/files/parts/189/dl/14269/CM22_SpecSheet_Web.pdf",
+      "retrievedAt": "2026-08-18",
+      "sha256": "287e02e5c650d39b929ec087a89436f141d1d4581bc280a17bc7c72644f19451",
+      "bytes": 246672,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/co/datasheets/cp118-plus-datasheet.pdf",
+      "productIds": [
+        "spk-co-cp118-plus"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp118",
+      "sourceAsset": "https://wdl.cohesionaudio.com/files/parts/276/dl/16427/CP118%2B_SpecSheet_Web.pdf",
+      "retrievedAt": "2026-08-18",
+      "sha256": "8482b4ca04645e8bb5b81f109e0564f55b948883dd211133fc0ca9bc8e24cdad",
+      "bytes": 396845,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/co/datasheets/cp218-ii-plus-datasheet.pdf",
+      "productIds": [
+        "spk-co-cp218-ii-plus"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp218ii",
+      "sourceAsset": "https://wdl.cohesionaudio.com/files/parts/178/dl/14046/CP218%20II%2B_SpecSheet_Web.pdf",
+      "retrievedAt": "2026-08-18",
+      "sha256": "2f8f2594bae12a642af527134a5fd2a3a7c78142db4e9ed0072243471f61823b",
+      "bytes": 360271,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/co/datasheets/cp6-plus-datasheet.pdf",
+      "productIds": [
+        "spk-co-cp6-plus"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp6",
+      "sourceAsset": "https://wdl.cohesionaudio.com/files/parts/176/dl/14207/CP6%2B_SpecSheets_Web.pdf",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b5cac2603cc3952f2ab6cbbe00752d43b0cbd4bc33e7dbf270e796ca34d29a0b",
+      "bytes": 264124,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/co/manuals/co12-quick-start-guide.pdf",
+      "productIds": [
+        "spk-co-co12"
+      ],
+      "role": "manual",
+      "sourcePage": "https://www.cohesionaudio.com/downloads",
+      "sourceAsset": "https://wdl.cohesionaudio.com/files/parts/166/dl/21201/Quick%20Start%20Guide-CO12-00-en.pdf",
+      "retrievedAt": "2026-08-18",
+      "sha256": "75d02c46174916ab71566cf91b039cf2197bfb270fac0f9bf0c75dc09d39455a",
+      "bytes": 286502,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/co/system-guides/cp218-ii-plus-reference-guide.pdf",
+      "productIds": [
+        "spk-co-cp218-ii-plus"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://www.cohesionaudio.com/downloads",
+      "sourceAsset": "https://wdl.cohesionaudio.com/files/parts/178/dl/16482/CP218%20II%2B_ReferenceGuide_Web.pdf",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e6c351e521d75d9e9a57f40a7d351b5569bf5f1ead9ea2ce6ca2212e90184816",
+      "bytes": 749193,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf-sub/cohesion-cf-sub-h-3back-copy.png",
+      "productIds": [
+        "spk-co-cf-sub"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf-sub",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6917a16fe1dac8a236b3741c_Cohesion_CF%20Sub%20-%20H__3Back%20copy.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "8ccc2b9c7dd713862c8771164cd2a3562b666ce65ba9148deec3bc8cefbac61a",
+      "bytes": 923223,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf-sub/cohesion-cf-sub-h-3backleft-copy.png",
+      "productIds": [
+        "spk-co-cf-sub"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf-sub",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6917a16fe52fdb0e2986842c_Cohesion_CF%20Sub%20-%20H__3BackLeft%20copy.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "5e0efe37f43aca27816bde1bcb5bc657e5da17ac716d93b16aae3fbbd38d9257",
+      "bytes": 1026335,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf-sub/cohesion-cf-sub-h-3backright-copy.png",
+      "productIds": [
+        "spk-co-cf-sub"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf-sub",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6917a1707c7f2f69ab4a6343_Cohesion_CF%20Sub%20-%20H__3BackRight%20copy.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "df7bcb5a5e318aba8e69cce4dd68615177a140a422aa331388cc8bc7df5c0ec2",
+      "bytes": 1190573,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf-sub/cohesion-cf-sub-h-3front-copy.png",
+      "productIds": [
+        "spk-co-cf-sub"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf-sub",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6917a17002bba8615e7fc469_Cohesion_CF%20Sub%20-%20H__3Front%20copy.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "6a0910e1b3e5d72c6e58b14fa8cba042e2fc8c9c4b7c0eda68895032ab842a6d",
+      "bytes": 1283441,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf-sub/cohesion-cf-sub-h-3frontleft-copy.png",
+      "productIds": [
+        "spk-co-cf-sub"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf-sub",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6917a16f97ce2e3c9aa2282a_Cohesion_CF%20Sub%20-%20H__3FrontLeft%20copy.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d284ae4950dbf397fc1096361f52452a9713b7912ddb9591d403b1a594b6df45",
+      "bytes": 1293375,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf10/back-left.png",
+      "productIds": [
+        "spk-co-cf10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4e794dfe1f08711ce629f_Back%20Left.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "8372608dd7b42452adbde850b705680389e238de79dbc486f25c9d855280f112",
+      "bytes": 447304,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf10/back-right.png",
+      "productIds": [
+        "spk-co-cf10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4e794ecb52a088f3b6e7a_Back%20Right.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "ed9764dfa12f302c795d9aeb4d4267f58fdebba0ef739c71ed453fac036018bd",
+      "bytes": 469423,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf10/back.png",
+      "productIds": [
+        "spk-co-cf10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4e794d7dec11b6926b598_Back.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "8a9715b424bf18db8ad2edbdc0eb59cf9c701db3ad936e5a661f80cbffa0560f",
+      "bytes": 365707,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf10/front-left.png",
+      "productIds": [
+        "spk-co-cf10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4e794d7dec11b6926b5de_Front%20Left.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d74edc55cd1af2da981fca5e3b7aa3d418b76c5ae70b60dee43529007ae5f30c",
+      "bytes": 671057,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf10/front-right.png",
+      "productIds": [
+        "spk-co-cf10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4e794b6c32bccc9c97a26_Front%20Right.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "fb61b5526216f0c9237196312ebebc6b70dd533997f1d7062c350f6d0622f20b",
+      "bytes": 636289,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf10/front.png",
+      "productIds": [
+        "spk-co-cf10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4e794137b25e0ba90153e_Front.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "fed7bb3254b4df57ec6c076ac89d83fb229be70a73444d4178031c03ed4214ec",
+      "bytes": 610900,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf14/back-left.png",
+      "productIds": [
+        "spk-co-cf14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4fa775a6979bba2294417_Back%20Left.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "24c238b4f14249fa7ed734001588b0c8660606097aed42524a29764c34fac9e8",
+      "bytes": 477668,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf14/back-right.png",
+      "productIds": [
+        "spk-co-cf14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4fa77f651b46e5d41a880_Back%20Right.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "3b99bc371ce4890f03fcd26fae8d58629f0ade8c2047a289c3a16854818d04f1",
+      "bytes": 494953,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf14/back.png",
+      "productIds": [
+        "spk-co-cf14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4fa777f73fb5699205439_Back.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9ed4e22a49f06e4fb62b5382b3cf8093845ae42890bb81c7cc42126e9d90ec31",
+      "bytes": 419063,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf14/front-left.png",
+      "productIds": [
+        "spk-co-cf14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4fa774243fb577537b60e_Front%20Left.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "8c2b17bd5a5558a395d90d5dc805012e7f5feaaf9ff9edbd82c2fb1bea82f568",
+      "bytes": 695746,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf14/front-right.png",
+      "productIds": [
+        "spk-co-cf14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4fa77e3954ef9511c40c2_Front%20Right.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a7dc0b09c9dafe94c28b87663e8be78932b9d95ce9fd0f2cbfeb454b5e5c087c",
+      "bytes": 714651,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf14/front.png",
+      "productIds": [
+        "spk-co-cf14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4fa7755641cf58a462f2d_Front.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "30154c7cbba167e7fb8c8ae396130e63513a04b35cf944f85d40a21350b28f5b",
+      "bytes": 783428,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf24/back-left.png",
+      "productIds": [
+        "spk-co-cf24"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf24",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c5010abae9801ca92b4d08_Back%20Left.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "720bbbdcbfac4bd3d9c051930cfd4ba9af730eab52be9e501ad20e2e7993fef7",
+      "bytes": 660470,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf24/back-right.png",
+      "productIds": [
+        "spk-co-cf24"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf24",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c5010a2bf790e924e20a3e_Back%20Right.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d07b39499ac3fd3a7a00e76868d28bf6f10b53c34c1fae18966210ef4fe838cd",
+      "bytes": 626884,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf24/back.png",
+      "productIds": [
+        "spk-co-cf24"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf24",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c5010a567cff2611d14671_Back.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "f933c5ad77a2d753fb84ab2a33924c67676334536f711aed79aab1b30aa7cab6",
+      "bytes": 412830,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf24/front-left.png",
+      "productIds": [
+        "spk-co-cf24"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf24",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c5010afb234dd4c941f3d5_Front%20Left.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7390832d71cec16f109b4423fc382fa38250e8bb2bb083b7730b3deea35f9326",
+      "bytes": 855442,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf24/front-right.png",
+      "productIds": [
+        "spk-co-cf24"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf24",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c5010a567cff2611d146ad_Front%20Right.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "44037f22d0d862cdbc722eff85def4fefc2faf8a53bc9173854c4946c1562e77",
+      "bytes": 903552,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf24/front.png",
+      "productIds": [
+        "spk-co-cf24"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf24",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c5010a56afaf1704ff0394_Front.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "82fc3aed69a321d8f65b3873645ff0044c9e14eb8441692e520b6ec89aff6d1e",
+      "bytes": 909528,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf28/back-left.png",
+      "productIds": [
+        "spk-co-cf28"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf28",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4f2dc1dae9067e4a3e3cb_Back%20Left.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "1f471d0d6da875288cc5a885ad7ba7c57515031d958b70b3f7a53319612b3c16",
+      "bytes": 433882,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf28/back-right.png",
+      "productIds": [
+        "spk-co-cf28"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf28",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4f2dc8e60f23a6a8ecea5_Back%20Right.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b324e9eecda84bc0dd0c1789cf3e8bf0cb81af6d1b7c8fa46c85bc9c33e54c7d",
+      "bytes": 421047,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf28/back.png",
+      "productIds": [
+        "spk-co-cf28"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf28",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4f2dc0e58e8d8158362d5_Back.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "321417d4af428278b82ac7fa4749ac3ff0654e30b613fd513015016bba4f5fde",
+      "bytes": 389324,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf28/front-left.png",
+      "productIds": [
+        "spk-co-cf28"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf28",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4f2dc2232684a919282c6_Front%20Left.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "044325e1899a88e8673f50a95862c00f0162b42ab2aca97860b2a0a943c15621",
+      "bytes": 657480,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf28/front-right.png",
+      "productIds": [
+        "spk-co-cf28"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf28",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4f2dc2232684a919282e9_Front%20Right.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d18245ae5bda8e02b24ab275e98fdf8c975f5df978b8fa962571ce06a4e3216f",
+      "bytes": 671615,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cf-series/cf28/front.png",
+      "productIds": [
+        "spk-co-cf28"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cf28",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/66c4f2dc87dee0730e9abfa2_Front.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "21273bf267d97596f9c4833cceb71d518af5ac5bfabf73e25ccf85ad53224f7c",
+      "bytes": 939099,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm14/cm14.webp",
+      "productIds": [
+        "spk-co-cm14"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654149b414346a39c596a170_CM14.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "4626d0ff84c6d8fd9f698f256ab782f8bdfdbd8f3bfc755d5d6e017bb5fd4f14",
+      "bytes": 128726,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm14/cohesion-cm14-back-2k.webp",
+      "productIds": [
+        "spk-co-cm14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541490eed33c28ff596e5a9_Cohesion_CM14_Back_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "db0ef4acf5b2520bd293509a1415154cdcbca066f6d664477402ec117e0b40f4",
+      "bytes": 245986,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm14/cohesion-cm14-backleft-2k.webp",
+      "productIds": [
+        "spk-co-cm14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541490f5dc746e7a0b1468e_Cohesion_CM14_BackLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "2e3a6d2eb89d64e176c38655b7c3eeecd7dbc5566084c5dd4225750166ec7223",
+      "bytes": 299284,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm14/cohesion-cm14-backright-2k.webp",
+      "productIds": [
+        "spk-co-cm14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541490fbeaf60b1b9d43a31_Cohesion_CM14_BackRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "57ab6c6c88d66f63f07384265a435ec31c9395ee68542594f0da3c423c61da6b",
+      "bytes": 284436,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm14/cohesion-cm14-front-2k.webp",
+      "productIds": [
+        "spk-co-cm14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541490d6bf83289bf1e9bd2_Cohesion_CM14_Front_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "f1da1968288bdffb81e6426de5adf84cac334f520edab779bf745683cedc0f9f",
+      "bytes": 206228,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm14/cohesion-cm14-frontleft-2k.webp",
+      "productIds": [
+        "spk-co-cm14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541490e5feac07d14b531dc_Cohesion_CM14_FrontLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "6df2dc2b7b56a8dea47a1032c0bab05c0738e56a894b119ae2b1b18718d15d00",
+      "bytes": 263500,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm14/cohesion-cm14-frontright-2k.webp",
+      "productIds": [
+        "spk-co-cm14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm14",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541490e5374f542270a4d2d_Cohesion_CM14_FrontRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "57307e04c181e766afed738b33735a3190816428d7745baba3b23a77539ec17a",
+      "bytes": 271292,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm22/cm22.webp",
+      "productIds": [
+        "spk-co-cm22"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm22",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654152d375694ee744c4980d_CM22.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b67a84ed82bb7a0dbd823b53254b5bb3af3356fc97cc4107335e472d9096b2b0",
+      "bytes": 130830,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm22/cohesion-cm22-back-2k.webp",
+      "productIds": [
+        "spk-co-cm22"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm22",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65414cd96bf83289bf21a8bc_Cohesion_CM22_Back_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "006a916bd643415d4a4d186b096a8b848fa42c29d997e85070ad2f465321fd45",
+      "bytes": 115176,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm22/cohesion-cm22-backleft-2k.webp",
+      "productIds": [
+        "spk-co-cm22"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm22",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65414cd9df66d079d5e224e2_Cohesion_CM22_BackLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e4b01e05e330aca04aa9ef54ba3ca339687aae1453d941fc32256ed019439527",
+      "bytes": 178184,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm22/cohesion-cm22-backright-2k.webp",
+      "productIds": [
+        "spk-co-cm22"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm22",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65414cdaea39092d1b83270b_Cohesion_CM22_BackRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "52de38b0c7a384e424faa0d62300c30c1aef8a134ba6c973293ea148a5438294",
+      "bytes": 216278,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm22/cohesion-cm22-front-2k.webp",
+      "productIds": [
+        "spk-co-cm22"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm22",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65414cd914346a39c598d665_Cohesion_CM22_Front_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d5febda26aec0ba72cffc00358a7f41f26dcff9ce694f4e5195d20287ea2ab87",
+      "bytes": 156786,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm22/cohesion-cm22-frontleft-2k.webp",
+      "productIds": [
+        "spk-co-cm22"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm22",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65414cdaceb4934cda776848_Cohesion_CM22_FrontLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "bcc0e76facfe71f7dbe93a82f22e18aa15707bd11b82fa5822e1f5d561968346",
+      "bytes": 223120,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cm-series/cm22/cohesion-cm22-frontright-2k.webp",
+      "productIds": [
+        "spk-co-cm22"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cm22",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65414cda057dfd392b98d919_Cohesion_CM22_FrontRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "ce6636476079a6b10c4367b8fe67bf49b66536295de0afac4b787533cf3d56e3",
+      "bytes": 227132,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co10/co10.webp",
+      "productIds": [
+        "spk-co-co10"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654147d29a33e9a5fd1b78b3_CO10.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "279843d9877bdfaf4c4c33ad6f1aa35cff5d031e0c10b44dffc4afde09b8175d",
+      "bytes": 134472,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co10/cohesion-co10-8array-front-2k.webp",
+      "productIds": [
+        "spk-co-co10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654142c6beaf60b1b9cfc5c7_Cohesion_CO10_8Array_Front_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9cab9c5696a34ad6615e7cd8701e501c2e4049f8361832d6f63bdd80a54c4cb1",
+      "bytes": 251274,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co10/cohesion-co10-back-2k.webp",
+      "productIds": [
+        "spk-co-co10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654142c55feac07d14b05a1e_Cohesion_CO10_Back_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c788cc61d589c2fd8c3b996cb5aa7c1b17783cf481838297dfb7d87ea4184513",
+      "bytes": 103386,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co10/cohesion-co10-backleft-2k.webp",
+      "productIds": [
+        "spk-co-co10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654142c646025dbf996b12a7_Cohesion_CO10_BackLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "fbf53db989a78d05e74372846710050cdca938e4e4417e44ea38364b0c95b4d7",
+      "bytes": 143996,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co10/cohesion-co10-backright-2k.webp",
+      "productIds": [
+        "spk-co-co10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654142c76c3aba9d46b6a027_Cohesion_CO10_BackRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "3f0faf85767fbb9b0f825a2bea1e15c8dff7a385ac440a7ff0ecac3474e985c0",
+      "bytes": 210682,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co10/cohesion-co10-frontleft-2k.webp",
+      "productIds": [
+        "spk-co-co10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654142c6aa3f9e6a40d86f0e_Cohesion_CO10_FrontLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "6dcea0161862048fc58a51c66576b7d4009df42eece3c6dfd648f23a35822e83",
+      "bytes": 206650,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co10/cohesion-co10-frontright-2k.webp",
+      "productIds": [
+        "spk-co-co10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co10",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654142c5fab594a75a02b96d_Cohesion_CO10_FrontRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "ad85cc08bb2df46ecf087695513d9c9c3b60a114697c6f100bac6a0ad2cfed2b",
+      "bytes": 207214,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co12/co12.webp",
+      "productIds": [
+        "spk-co-co12"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co12",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65413fafdbc79e335073c69a_CO12.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c7c531bebb331596d9ff91d9f9960bfb54c166e916f3727a7a335c2fda133987",
+      "bytes": 142448,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co12/cohesion-co12-8array-frontleft-2k.webp",
+      "productIds": [
+        "spk-co-co12"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co12",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65410317e13bf12783c020b6_Cohesion_CO12_8Array_FrontLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7273ee66d322209b4979c9a1c3cbb910ba851a0398c4593d9063a8ad50f2d521",
+      "bytes": 278828,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co12/cohesion-co12-back-2k.webp",
+      "productIds": [
+        "spk-co-co12"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co12",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65410317302d1f8c821b4099_Cohesion_CO12_Back_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "ba1b6f9be86749a30d353e0656138e40f5889051f891114ee60e19c6a5b7bed7",
+      "bytes": 79252,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co12/cohesion-co12-backleft-2k.webp",
+      "productIds": [
+        "spk-co-co12"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co12",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65410316534d8116518bdb52_Cohesion_CO12_BackLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "1bb9daf6618b12809f37901274599cd9a673f0e3c8a24de6a16204605e8ce387",
+      "bytes": 92346,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co12/cohesion-co12-backright-2k.webp",
+      "productIds": [
+        "spk-co-co12"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co12",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654103160018486c70208611_Cohesion_CO12_BackRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "56b66075393cb022a93729b4f8e543ca360a6d7a3ce8732947cb45dd96f90514",
+      "bytes": 109486,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co12/cohesion-co12-frontleft-2k.webp",
+      "productIds": [
+        "spk-co-co12"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co12",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65410316158b7ad07b0f10c7_Cohesion_CO12_FrontLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "5e3b65df9a614e6cc6247cc17a973c7b7943d26f451c3668635a207f62511b9b",
+      "bytes": 178336,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co12/cohesion-co12-frontright-2k.webp",
+      "productIds": [
+        "spk-co-co12"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co12",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654103160cadada12ac956a9_Cohesion_CO12_FrontRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e1a397574201e2495823c3049c8274f52ae559f6a3b89c3b6fabac31b74aa9b7",
+      "bytes": 152302,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co8/co8.webp",
+      "productIds": [
+        "spk-co-co8"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co8",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654147e1271f5994e663ebce_CO8.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "3a1a1fc9f63c7e3758bb23d3ce2ba96571d38e552bd97afb4f9b3d14c6317c1c",
+      "bytes": 122636,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co8/cohesion-co8-8array-front-2k.webp",
+      "productIds": [
+        "spk-co-co8"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co8",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654145475ea6b01fc0953ff8_Cohesion_CO8_8Array_Front_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b0b1d7445d8b82a794cd4b018298810a1c1e46a72c36a8c53636c3475515c3ac",
+      "bytes": 269886,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co8/cohesion-co8-back-2k.webp",
+      "productIds": [
+        "spk-co-co8"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co8",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65414545dd2f059d4749a5ee_Cohesion_CO8_Back_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "036eb812f8a84f540f48fdb602d0edb6d9b5dae2a44fef6c5efb540b5698699f",
+      "bytes": 68222,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co8/cohesion-co8-backleft-2k.webp",
+      "productIds": [
+        "spk-co-co8"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co8",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65414545dd2f059d4749a605_Cohesion_CO8_BackLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "902bbbc784dbfe88dd24ba934474ff45880dc4df867408abbe73e102f6b4163b",
+      "bytes": 75758,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co8/cohesion-co8-backright-2k.webp",
+      "productIds": [
+        "spk-co-co8"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co8",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541454665457dc981776459_Cohesion_CO8_BackRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7cba787379b1134897902ae7fa8b9b949c3a939879bcb82200fc54fdaad0f10a",
+      "bytes": 131582,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co8/cohesion-co8-frontleft-2k.webp",
+      "productIds": [
+        "spk-co-co8"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co8",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65414546f12fc7063c1833de_Cohesion_CO8_FrontLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a238cbeca7d557c9ef7152e52165c596a34844a1f7a9e62fb77387643b943dc7",
+      "bytes": 128612,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/co-series/co8/cohesion-co8-frontright-2k.webp",
+      "productIds": [
+        "spk-co-co8"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/co8",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541454595cc21cd292a75c9_Cohesion_CO8_FrontRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9b5782000fd87b56612bd44a282ed67292a11376d43f47b561a7350e018a1fab",
+      "bytes": 131082,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp118-plus/cohesion-cp118-back-2k.webp",
+      "productIds": [
+        "spk-co-cp118-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp118",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654159174eaf0e4f5171a242_Cohesion_CP118_Back_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b67e48134cfa5a783b222367cdd7f0c27f0bbcd2adc4ec31949f65640823c410",
+      "bytes": 109006,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp118-plus/cohesion-cp118-backleft-2k.webp",
+      "productIds": [
+        "spk-co-cp118-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp118",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541591898dccd0629420724_Cohesion_CP118_BackLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "760a90ca998d12cadb9a6690cb98e731cd1293229a687c84c3e4c6a55b2d8eee",
+      "bytes": 145948,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp118-plus/cohesion-cp118-backright-2k.webp",
+      "productIds": [
+        "spk-co-cp118-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp118",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65415918f4961c2adf64ea96_Cohesion_CP118_BackRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "5cb8cff042fd7fff4f719fb943f3c1e9525c79788bf491c5d79ebd41e320ffe8",
+      "bytes": 138998,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp118-plus/cohesion-cp118-front-2k.webp",
+      "productIds": [
+        "spk-co-cp118-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp118",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654159175dcb3cf18ecf5175_Cohesion_CP118_Front_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "46aacb77656ffc0ba65a91744019b6ef23b25eac34efde85b4d64c595e174d5d",
+      "bytes": 119726,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp118-plus/cohesion-cp118-frontleft-2k.webp",
+      "productIds": [
+        "spk-co-cp118-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp118",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654159176683e20096630502_Cohesion_CP118_FrontLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "1b0bd4119fb470110d0863cd8c41c3b48ec6f6096bd3684a04d25702073fa531",
+      "bytes": 150482,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp118-plus/cohesion-cp118-frontright-2k.webp",
+      "productIds": [
+        "spk-co-cp118-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp118",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65415918633d6cfac7cf8920_Cohesion_CP118_FrontRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "af7f3d5dff92d0be5b12644d6e1bdd79fd4c89895686cb27d9fa2e6eb7dc0d77",
+      "bytes": 167134,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp118-plus/cp118.webp",
+      "productIds": [
+        "spk-co-cp118-plus"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp118",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65415a3a5915cbbfc1f6f5bd_CP118.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "99c00f272d17fa0627bac41f0930760c2b28fec3ef91143e20eb6aca0851b28c",
+      "bytes": 106750,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp218-ii-plus/cohesion-cp218ii-6array-frontleft-2k.webp",
+      "productIds": [
+        "spk-co-cp218-ii-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp218ii",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65415691f6792b587f3743da_Cohesion_CP218II%2B_6Array_FrontLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "f522c3eb3c4ce904a4d866f170063351e2bae4f3866146772865ccb39bfdb878",
+      "bytes": 192078,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp218-ii-plus/cohesion-cp218ii-back-2k.webp",
+      "productIds": [
+        "spk-co-cp218-ii-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp218ii",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541569175694ee744c7a725_Cohesion_CP218II%2B_Back_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "2166c43a72656d923fa3c843b393f1b78b7fdc734dbc7f85e08c1e0e4a4c5099",
+      "bytes": 223054,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp218-ii-plus/cohesion-cp218ii-backleft-2k.webp",
+      "productIds": [
+        "spk-co-cp218-ii-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp218ii",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65415692ebaf1c3d21585a74_Cohesion_CP218II%2B_BackLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "03dcab1be383ca596a7c965d6939de44c012b5662bc92beabf591993da26ea93",
+      "bytes": 250558,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp218-ii-plus/cohesion-cp218ii-backright-2k.webp",
+      "productIds": [
+        "spk-co-cp218-ii-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp218ii",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541569184edcc621c9912d5_Cohesion_CP218II%2B_BackRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "81146b235a7f3c10269399d2c9d522f77aff08681628e1102bc76a59a5b44e05",
+      "bytes": 241304,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp218-ii-plus/cohesion-cp218ii-front-2k.webp",
+      "productIds": [
+        "spk-co-cp218-ii-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp218ii",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654156913608fcbf2197ea73_Cohesion_CP218II%2B_Front_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c3a5df50e724fd9987ba38a750e70020c864fa6b04b6c3e0f27b02bc67e02f34",
+      "bytes": 206514,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp218-ii-plus/cohesion-cp218ii-frontleft-2k.webp",
+      "productIds": [
+        "spk-co-cp218-ii-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp218ii",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654156914a8cdf258dc46c23_Cohesion_CP218II%2B_FrontLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d1136ae107c8410ad1133b4d0d65a28d07b3d4b5e4a1807dd1f44ad4cab9826f",
+      "bytes": 248654,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp218-ii-plus/cohesion-cp218ii-frontright-2k.webp",
+      "productIds": [
+        "spk-co-cp218-ii-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp218ii",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654156910cd3008ac610d342_Cohesion_CP218II%2B_FrontRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "996500bb3d279c31527fd2c1f1e6812e2aa31a7ae685c4946bf28f90dee8c713",
+      "bytes": 257934,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp218-ii-plus/cp218-ii.webp",
+      "productIds": [
+        "spk-co-cp218-ii-plus"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp218ii",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65415756189df99f691025c8_CP218-ii.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9efac56b135f62971b5135a9d1d6a5e5c872711f6dcf15086e3572bbab48fc49",
+      "bytes": 131566,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp6-plus/cohesion-cp6-back-2k.webp",
+      "productIds": [
+        "spk-co-cp6-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp6",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654146bb5feac07d14b3587a_Cohesion_CP6%2B_Back_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "bae015d548d79c0ab8a7229135eb62e95c02d448ebf97a7bcb66d0c7cb5c291e",
+      "bytes": 59498,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp6-plus/cohesion-cp6-backleft-2k.webp",
+      "productIds": [
+        "spk-co-cp6-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp6",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654146bb7638df7e59892440_Cohesion_CP6%2B_BackLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7e82341cdbf0597325c1cd99deaa93e1737690e15a80493e21d5c31e04e79fa2",
+      "bytes": 146154,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp6-plus/cohesion-cp6-backright-2k.webp",
+      "productIds": [
+        "spk-co-cp6-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp6",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654146bcdf66d079d5dd9a24_Cohesion_CP6%2B_BackRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "dda5209d1461acf78889c53c0ac4cdb9c5202d93a0c3cf21d1e780a792a918f1",
+      "bytes": 137550,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp6-plus/cohesion-cp6-frontleft-2k.webp",
+      "productIds": [
+        "spk-co-cp6-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp6",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654146bc1e63fd24c9289d85_Cohesion_CP6%2B_FrontLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "6fe88ad6762ebdaf82dfc4a067fcdf6f0e64f5f74144b890294633b0000cac03",
+      "bytes": 165120,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp6-plus/cohesion-cp6-frontright-2k.webp",
+      "productIds": [
+        "spk-co-cp6-plus"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp6",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654146bb231e28f70588f458_Cohesion_CP6%2B_FrontRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "5f1369096b0c03e408ca3251d5dc6d2279dc665bad4a9cd0c89b28602d136f67",
+      "bytes": 177414,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/cp-series/cp6-plus/cp6.webp",
+      "productIds": [
+        "spk-co-cp6-plus"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/cp6",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/654147b9faba338050213c5f_CP6.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "8c4dc0a36d9e1fb8dfaaa652faf2030965799d3d5dd391f90e52c3d4e07b40e2",
+      "bytes": 138370,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/csb-series/csb218i/cohesion-csb218i-back-2k.webp",
+      "productIds": [
+        "spk-co-csb218i"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/csb218i",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65413b42384b9716e90566e0_Cohesion_CSB218i_Back_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9be24290931b869d350da418266f73735171d76bcde4d292f90cbccec0db1b40",
+      "bytes": 230224,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/csb-series/csb218i/cohesion-csb218i-backleft-2k.webp",
+      "productIds": [
+        "spk-co-csb218i"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/csb218i",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65413b4263da8dd8fca65aff_Cohesion_CSB218i_BackLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "1fcbcdee2bc118bbfcdff45d51067b08c802f11607962126f7c8d87262716d79",
+      "bytes": 262286,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/csb-series/csb218i/cohesion-csb218i-backright-2k.webp",
+      "productIds": [
+        "spk-co-csb218i"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/csb218i",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65413b43bfd06a9a1b67acd3_Cohesion_CSB218i_BackRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "ba142c7fa230e9ec3f064fd360cfc4be39e027de49df0fab3c8b0d83fd391f5c",
+      "bytes": 247128,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/csb-series/csb218i/cohesion-csb218i-front-2k.webp",
+      "productIds": [
+        "spk-co-csb218i"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/csb218i",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65413b423d3752ea3e640b01_Cohesion_CSB218i_Front_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "dece07c1df394519c32576e61564879c28949dfb117b5ed33217000b259d6387",
+      "bytes": 219484,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/csb-series/csb218i/cohesion-csb218i-frontleft-2k.webp",
+      "productIds": [
+        "spk-co-csb218i"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/csb218i",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65413b42bfd06a9a1b67acc2_Cohesion_CSB218i_FrontLeft_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "6ae3e59bc82caf65948a518f3b1d4f7a80c001d94eff99b55487b65e0ccb1f2a",
+      "bytes": 258142,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/csb-series/csb218i/cohesion-csb218i-frontright-2k.webp",
+      "productIds": [
+        "spk-co-csb218i"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/csb218i",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/65413b421294c2c579cfbbe5_Cohesion_CSB218i_FrontRight_2k.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "215da411e6d73c25babfc9c3e46e1d9fa30dea2fea84c3f9c581bfebb5d1573a",
+      "bytes": 280424,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/co/speakers/csb-series/csb218i/csb218i.webp",
+      "productIds": [
+        "spk-co-csb218i"
+      ],
+      "role": "list-image",
+      "sourcePage": "https://www.cohesionaudio.com/products/csb218i",
+      "sourceAsset": "https://cdn.prod.website-files.com/6489cd41cc5f57f16dcc3ea1/6541406abfd06a9a1b6b04c0_CSB218i.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "4938f42c8fd51af3b01bf981b5fe62963d3ffc7febbb549837f5704803e74087",
+      "bytes": 138972,
+      "mimeType": "image/webp"
+    }
+  ]
+}

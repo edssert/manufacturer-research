@@ -869,12 +869,7 @@
   left: 0;
   color: var(--mfr, var(--accent));
 }
-/* footnote--list 항목 안에 중첩되는 하위 글머리 기호(2단계
-   불렛) — Downfill/출력 라우팅처럼 한 각주 항목이 여러 하위 항목을 가질 때
-   사용 (speakers.view.js footnote 렌더링 참고).
-   [복구 노트] 이 파일 꼬리가 과거 세션의 파일 동기화 문제로 잘려나가
-   .footnote__sublist / .hint-text 정의가 유실된 상태였다(class-audit 의
-   "CSS 정의 없음" 경고와 일치) — 아래에 재정의해 복구했다. */
+/* 각주 안의 2단계 목록. */
 .footnote__sublist {
   margin: 4px 0 0;
   padding: 0;
@@ -901,8 +896,6 @@
   color: var(--muted);
 }
 
-/* [복구] System Elements 타입 그룹 라벨(Rigging/Cables 등) — 유실됐던
-   정의 재작성. spec-table__key 와 같은 시각 언어(소형 대문자, muted). */
 .system-elements__group-label {
   font-size: 9.5px;
   letter-spacing: 0.13em;

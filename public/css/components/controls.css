@@ -1,10 +1,3 @@
-/* ============================================================
-   controls.css — 검색/정렬/필터 컨트롤 바
-   BEM 블록: .controls, .search-box, .select, .btn,
-             .filter-panel, .chip, .chip-group, .range-slider
-   마크업 생성: 각 도메인 controller(컨트롤 바) + js/ui/filters.js(필터 패널)
-   ============================================================ */
-
 /* ---------- 블록: controls (상단 고정 컨트롤 바) ----------
    topnav(도메인 탭)도 상단 고정이라, 이 바는 스크롤 시
    그 아래(topnav 높이만큼 내려온 지점)에 이어 붙어야 한다 — --topnav-h
@@ -19,9 +12,6 @@
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
-/* [밀도/높이 통일] 세로 여백 대신 --bar-h 로 높이를 잡는다 —
-   최상단 로고 바·탭 바와 같은 높이(40px)가 되고, 그 안에서 컨트롤(30px)이
-   가운데 정렬돼 위아래 여백이 5px 씩만 남는다. */
 .controls__inner { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
 .controls__row {
   display: flex;
@@ -32,11 +22,6 @@
 }
 .controls__tools { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 
-/* ---------- 블록: search-box (검색 입력) ----------
-   한때 정렬/필터초기화/필터 버튼과 같은 줄에서 폭을 나눠
-   쓰기 위해 flex: 0 1 340px 로 줄였었는데, 사진/모션 토글이 topnav
-   쪽으로 옮겨가면서(js/ui/nav.js) 이 줄의 공간 압박이 사라져 다시 남는
-   폭을 전부 차지하도록 원복. */
 .search-box { position: relative; flex: 1; min-width: 220px; }
 .search-box__icon {
   position: absolute;
@@ -45,9 +30,6 @@
   color: var(--muted);
   pointer-events: none;
 }
-/* [밀도] 세로 패딩 11px + 14px 글자로 47px 짜리 큰 입력이었다 —
-   높이는 --control-h 로 고정하고 좌우 패딩만 준다. 글자도 컨트롤 스케일
-   (--fs-md 13px)로 내려 정렬 셀렉트·버튼과 같은 급으로 맞췄다. */
 .search-box__input {
   width: 100%;
   height: var(--control-h);
@@ -65,7 +47,6 @@
 .search-box__input::placeholder { color: var(--muted); font-weight: 400; }
 .search-box__input:focus { border-color: var(--accent-line); box-shadow: 0 0 0 3px var(--accent-dim); }
 
-/* ---------- 블록: select (정렬 드롭다운) ---------- */
 .select {
   background: var(--panel);
   border: 1px solid var(--line-2);
@@ -85,7 +66,6 @@
 }
 .select:focus { border-color: var(--accent-line); }
 
-/* ---------- 블록: btn (버튼 공통 + 변경자) ---------- */
 .btn {
   background: transparent;
   border: 1px solid var(--line-2);
@@ -111,7 +91,6 @@
 .btn--toggle svg { transition: transform .18s; }
 .btn--toggle[aria-expanded="false"] svg { transform: rotate(-90deg); }
 
-/* 변경자: 강조 버튼 (빈 결과 화면의 초기화 버튼 등) */
 .btn--primary {
   background: var(--accent);
   border-color: var(--accent);
@@ -198,11 +177,9 @@
 .chip:hover { color: var(--ink); background: var(--panel-2); }
 .chip__count { color: var(--muted); font-size: var(--fs-xs); font-variant-numeric: tabular-nums; }
 
-/* 상태: 선택됨 (aria-pressed 속성 기반 — JS가 토글) */
 .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 700; }
 .chip[aria-pressed="true"] .chip__count { color: rgba(14, 17, 22, .6); }
 
-/* 상태: 비활성 (현재 필터 조합에서 결과가 0이 되는 값) */
 .chip:disabled,
 .chip[disabled] { opacity: .35; cursor: not-allowed; color: var(--muted-2); pointer-events: none; background: var(--panel); }
 .chip:disabled .chip__count,
@@ -287,7 +264,6 @@
 .range-slider__readout b { color: var(--accent); font-weight: 700; }
 .range-slider__readout span { color: var(--muted); font-weight: 500; font-size: var(--fs-xs); margin-left: 2px; }
 
-/* ---------- 반응형 ---------- */
 @media (max-width: 720px) {
   .controls__inner { padding: 11px 16px; }
   .search-box { min-width: 0; flex-basis: 100%; }

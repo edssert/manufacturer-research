@@ -47,11 +47,11 @@ export const MY_LINA_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/lina-series/spk-my-lina.png",
+    "img": "public/assets/img/speakers/my/lina-series/spk-my-lina-official.jpg",
     "views": [
       {
         "label": "Front",
-        "src": "public/assets/img/speakers/my/lina-series/spk-my-lina.png"
+        "src": "public/assets/img/speakers/my/lina-series/spk-my-lina-official.jpg"
       }
     ],
     "relations": {

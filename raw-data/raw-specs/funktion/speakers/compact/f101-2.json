@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-f101-2",
+  "manufacturerId": "funktion",
+  "name": "F101.2",
+  "slug": "f101-2",
+  "series": "Compact",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/f101.2/",
+  "rangePage": "https://funktion-one.com/ranges/compact-range",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "F101.2",
+    "technical": {},
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/b58e8306-346d-43ae-8051-c085b3febb40_Funktion-One+F101.2+v2.png"
+    ],
+    "downloads": []
+  },
+  "evidenceStatus": "pending",
+  "pendingReasons": [
+    "usable bandwidth unavailable",
+    "weight unavailable",
+    "dispersion unavailable",
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl",
+    "transducers",
+    "frequencyRange",
+    "weight",
+    "coverage"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "pk",
+  "sourcePage": "https://pksound.live",
+  "retrievedAt": "2026-08-18",
+  "seriesOrder": [
+    "Line Source",
+    "Low Frequency",
+    "Point Source"
+  ],
+  "basis": "official-products-navigation",
+  "series": [
+    {
+      "series": "Line Source",
+      "productIds": [
+        "spk-pk-trinity-black",
+        "spk-pk-t10",
+        "spk-pk-t8"
+      ]
+    },
+    {
+      "series": "Low Frequency",
+      "productIds": [
+        "spk-pk-t218",
+        "spk-pk-t18",
+        "spk-pk-ts15"
+      ]
+    },
+    {
+      "series": "Point Source",
+      "productIds": [
+        "spk-pk-tx14",
+        "spk-pk-tx26"
+      ]
+    }
+  ]
+}

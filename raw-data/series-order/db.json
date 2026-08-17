@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "db",
+  "sourcePage": "https://www.dbaudio.com/global/en/products/",
+  "retrievedAt": "2026-08-18",
+  "seriesOrder": [
+    "SL Series",
+    "V Series",
+    "Y Series",
+    "T Series",
+    "CL Series",
+    "AL Series",
+    "xS Series",
+    "xC Series",
+    "E Series",
+    "U Series",
+    "Monitors",
+    "Subwoofers"
+  ],
+  "basis": "application inventory order cross-checked against official product sitemap"
+}

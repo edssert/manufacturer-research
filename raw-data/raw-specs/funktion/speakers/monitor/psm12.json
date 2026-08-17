@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-psm12",
+  "manufacturerId": "funktion",
+  "name": "PSM12",
+  "slug": "psm12",
+  "series": "Monitor",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/psm12-point-source/",
+  "rangePage": "https://funktion-one.com/ranges/monitors",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "PSM12 - Compact Point Source Monitor",
+    "technical": {
+      "bandwidth": "65Hz - 17kHz",
+      "weight": "23kg (50lbs)",
+      "dispersion": "70° Conical",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 12\" Operating Band 40Hz - 2.5kHz Sensitivity at 1m 101dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω Driver 1.4\" Operating Band 2.5kHz - Up Sensitivity at 1m 111dB at 4V Power (AES) 75W Nominal Impedence 16Ω Driver 12\" + 1.4\" (Passive mode) Operating Band 40Hz - Up Sensitivity at 1m 100dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/d0963c95-391c-4305-bbdc-a32f54004f88_PSM12_PointSource_Website_Product.png",
+      "https://images.prismic.io/funktion-one/b813bf7d-8431-4be5-b78c-c588c3c10d14_PSM12-F1-WD%3DT0130-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/5e9fd992-1981-459d-96b2-979adc9ef188_Funktion-One_PSM12_Spec_Sheet.pdf",
+        "label": "5e9fd992-1981-459d-96b2-979adc9ef188_Funktion-One_PSM12_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/c695e874-7883-4ab5-a97c-b4ad21bec408_PSM12-F1-TD%3DT0184-00.pdf",
+        "label": "c695e874-7883-4ab5-a97c-b4ad21bec408_PSM12-F1-TD%3DT0184-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/21d0dad2-6b40-42c7-ad64-509595199f04_PSM12-F1-DD%3DT0185-00.pdf",
+        "label": "21d0dad2-6b40-42c7-ad64-509595199f04_PSM12-F1-DD%3DT0185-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/706bef11-a233-4220-8750-ec415db1636e_PSM12-F1-2DM%3DT0186-00.dwg",
+        "label": "706bef11-a233-4220-8750-ec415db1636e_PSM12-F1-2DM%3DT0186-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/9980661a-e75e-4e69-94fd-dc8240adb08a_PSM12-F1-3DM%3DT0187-00.dwg",
+        "label": "9980661a-e75e-4e69-94fd-dc8240adb08a_PSM12-F1-3DM%3DT0187-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl",
+    "coverage"
+  ]
+}

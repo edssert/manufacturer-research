@@ -1,18 +1,4 @@
-/**
- * @module ui/domain-tab
- * 카드 목록형 탭(Speaker/Amplifier/DSP/Software/Accessories)의 공통 뼈대.
- *
- * 다섯 컨트롤러가 mount/unmount/build/reset/render 를 id 접두사만
- * 바꿔 그대로 복사해 두고 있었다(도메인당 ~45줄 × 5). 실제로 도메인마다 다른
- * 것은 데이터·스키마·카드 마크업·그룹핑·모달 열기뿐이라, 나머지 배선을 여기로
- * 올렸다 — 각 컨트롤러에는 "이 탭은 무엇인가"(설정)와 도메인 고유 로직(모달
- * 안 연관 항목 배선 등)만 남는다.
- *
- * 기본 정렬은 sortOptions 의 첫 항목으로 정의한다 — select 가 화면에 보여주는
- * 값과 상태(state.sort)가 어긋날 수 없게 하기 위함(이전에는 컨트롤러의 초기값·
- * 리셋 시 대입값·schema.defaultSort 세 군데에 따로 적혀 있었고, 실제로 네
- * 도메인에서 서로 달랐다).
- */
+/** @module ui/domain-tab */
 import { $, debounce } from "../core/dom.js";
 import { createState, resetState } from "../core/state.js";
 import { buildFilters, wireFilterToggle, controlsBarHTML } from "./filters.js";
@@ -41,21 +27,35 @@ import { renderLegend } from "./legend.js";
  * @returns {{render: Function, state: Object}}
  */
 export function createDomainTab({
-  key, label, idPrefix, searchPlaceholder, sortOptions,
-  data, schema, cardHTML, openItem, groupBy, legend, onMount, onBuild,
+  key,
+  label,
+  idPrefix,
+  searchPlaceholder,
+  sortOptions,
+  data,
+  schema,
+  cardHTML,
+  openItem,
+  groupBy,
+  legend,
+  onMount,
+  onBuild,
 }) {
   const state = createState();
   const defaultSort = sortOptions[0].value;
   state.sort = defaultSort;
   /** 이 탭의 컨트롤 바 요소 셀렉터 (#spk-q, #spk-filters, ...) */
-  const sel = (suffix) => `#${idPrefix}-${suffix}`;
+  const sel = suffix => `#${idPrefix}-${suffix}`;
 
   const render = () => {
     renderGrid({
       resultsEl: $(sel("results")),
       countEl: $("#count"),
       filterPanelEl: $(sel("filters")),
-      data, state, schema, cardHTML,
+      data,
+      state,
+      schema,
+      cardHTML,
       onOpen: openItem,
       groupBy: groupBy ? groupBy(state) : null,
     });
@@ -78,10 +78,12 @@ export function createDomainTab({
   schema.onReset = reset;
 
   /** 검색/정렬/필터 컨트롤 바 + 결과 영역 골격을 1회 빌드하고 이벤트를 연결 */
-  const build = (wrap) => {
+  const build = wrap => {
     if (onBuild) onBuild();
-    wrap.innerHTML = controlsBarHTML(idPrefix, searchPlaceholder, sortOptions) + `
-    <div class="content-wrap">
+    wrap.innerHTML =
+      controlsBarHTML(idPrefix, searchPlaceholder, sortOptions) +
+      `
+    <div class="content-wrap" data-domain="${idPrefix}">
       <div id="${idPrefix}-results"></div>
     </div>`;
     buildFilters($(sel("filters")), data, state, schema, render);
@@ -118,7 +120,9 @@ export function createDomainTab({
   registerDomain(key, {
     label,
     mount,
-    unmount: () => { $(`#view-${key}`).hidden = true; },
+    unmount: () => {
+      $(`#view-${key}`).hidden = true;
+    },
     count: () => data.length,
     openItem,
   });

@@ -1,9 +1,22 @@
-// d&b audiotechnik SL 시리즈 설치형(install) 변형 6종 — KSLi8/12, XSLi8/12, XSLi8/12 SVS.
+const sliSub = ({ id, name, front, rear, spl, lo, hi, weight, dims }) => ({
+  id, mfr: "d&b audiotechnik", mk: "db", name, series: "SL Series", throwCat: null,
+  type: "Subwoofer", throw: null, lowInch: front.inch, lowQty: front.qty + rear.qty,
+  crossover: "2-way active", crossoverTags: ["2ch active split"], spl,
+  cov: { h: "Cardioid" }, freqs: [{ db: "-5 dB", lo, hi }], weight,
+  transducers: `LF: ${front.qty} × ${front.inch}″ · LC: ${rear.qty} × ${rear.inch}″`,
+  connectors: null, ip: null, dims,
+  amps: [{ model: "40D", configs: [{ mode: "2-Way Active", perCh: 2, total: null }] }],
+  ampRaw: "40D, 2-Way Active", notes: "Official Installation Solutions brochure, PDF p.47.",
+  img: `public/assets/img/speakers/db/sl/${id}.png`, relations: { ampIds: ["amp-db-40d"] },
+  watt: null, mechanicalSafety: null, presets: null, cardioidCapability: "Integrated"
+});
+
+// d&b audiotechnik SL 시리즈 설치형 변형.
 // 음향·드라이버·크로스오버·앰프 매칭은 투어링 원본(KSL/XSL)과 동일하며, 물리 스펙
 // (중량·깊이·IP·리깅)만 상이하다(파싱 원문 근거). 각 레코드 notes에 차이를 요약.
 // 원본을 프로그램적으로 클론 후 차이 필드만 오버라이드해 생성(전사 오류 방지).
 // series 필드는 "SL Series" 유지 — UI에서 투어링판과 같은 그룹으로 정렬된다.
-export const DB_SL_I_SERIES = [
+const DB_SL_I_SERIES_RAW = [
   {
     "id": "spk-db-ksli8",
     "mfr": "d&b audiotechnik",
@@ -855,3 +868,12 @@ export const DB_SL_I_SERIES = [
   "pending": true
 }
 ];
+
+const DB_SL_I_RESEARCHED = new Map([
+  sliSub({ id: "spk-db-ksli-sub", name: "KSLi-SUB", front: { qty: 2, inch: 15 }, rear: { qty: 1, inch: 15 }, spl: 139, lo: "36 Hz", hi: "105 Hz", weight: 82, dims: "1000 x 450 x 900 mm" }),
+  sliSub({ id: "spk-db-ksli-gsub", name: "KSLi-GSUB", front: { qty: 2, inch: 15 }, rear: { qty: 1, inch: 15 }, spl: 139, lo: "36 Hz", hi: "105 Hz", weight: 78, dims: "1000 x 450 x 900 mm" }),
+  sliSub({ id: "spk-db-xsli-sub", name: "XSLi-SUB", front: { qty: 1, inch: 18 }, rear: { qty: 1, inch: 12 }, spl: 137, lo: "37 Hz", hi: "110 Hz", weight: 65, dims: "700 x 565 x 898 mm" }),
+  sliSub({ id: "spk-db-xsli-gsub", name: "XSLi-GSUB", front: { qty: 1, inch: 18 }, rear: { qty: 1, inch: 12 }, spl: 137, lo: "37 Hz", hi: "110 Hz", weight: 61, dims: "700 x 565 x 898 mm" })
+].map(speaker => [speaker.id, speaker]));
+
+export const DB_SL_I_SERIES = DB_SL_I_SERIES_RAW.map(speaker => DB_SL_I_RESEARCHED.get(speaker.id) || speaker);

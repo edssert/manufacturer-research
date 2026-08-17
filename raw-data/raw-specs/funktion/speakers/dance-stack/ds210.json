@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-ds210",
+  "manufacturerId": "funktion",
+  "name": "DS210",
+  "slug": "ds210",
+  "series": "Dance Stack",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/ds210/",
+  "rangePage": "https://funktion-one.com/ranges/dance-stack",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "DS210 - Dance Stack Mid-High Section",
+    "technical": {
+      "bandwidth": "200Hz - 18kHz",
+      "weight": "64kg (141lbs)",
+      "dispersion": "100° Horizontal x 25° Vertical",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 10\" Operating Band 220Hz - 4kHz Sensitivity at 1m 112dB at 3.5V Power (AES) 500W Nominal Impedence 12Ω Driver 2 x 1.4\" Operating Band 4kHz - up Sensitivity at 1m 114dB at 4V Power (AES) 150W Nominal Impedence 16Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/363c16f5-3d81-4d80-aa1b-8eaa08a8db37_DS210_Website_Product.png",
+      "https://images.prismic.io/funktion-one/6fea7e4c-5eff-4e7a-aa0b-853cf1c29a53_DS210-F1-WD%3DT0127-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/f823e17f-d8b1-41dd-a0e8-8eddf051d445_Funktion-One_DS210_Spec_Sheet.pdf",
+        "label": "f823e17f-d8b1-41dd-a0e8-8eddf051d445_Funktion-One_DS210_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/a41b0ccf-b4c5-416d-9eb9-cd97eebf4192_DS210-webdxf.dxf",
+        "label": "a41b0ccf-b4c5-416d-9eb9-cd97eebf4192_DS210-webdxf.dxf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/4b8bbcbc-9745-44cd-beb4-cba941aea5b4_2+x+DS210F+%2B+4+x+DS15F+Flyware.PDF",
+        "label": "4b8bbcbc-9745-44cd-beb4-cba941aea5b4_2+x+DS210F+%2B+4+x+DS15F+Flyware.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/8d3fed56-193c-4f02-b46d-4db703fbc2be_DS210F+%2B+2+DS15F+Metalwork+Assembly.pdf",
+        "label": "8d3fed56-193c-4f02-b46d-4db703fbc2be_DS210F+%2B+2+DS15F+Metalwork+Assembly.pdf"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

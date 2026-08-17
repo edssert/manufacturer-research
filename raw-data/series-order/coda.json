@@ -1,0 +1,27 @@
+{
+    "schemaVersion":  1,
+    "manufacturerId":  "coda",
+    "sourcePage":  "https://codaaudio.com/",
+    "retrievedAt":  "2026-08-18",
+    "seriesOrder":  [
+                        "ViFORCE Series",
+                        "AiRAY Series",
+                        "CiRAY Series",
+                        "ViRAY Series",
+                        "N-RAY Series",
+                        "TiRAY Series",
+                        "CoRAY Series",
+                        "APS Series",
+                        "APSi Series",
+                        "N-APS Series",
+                        "HOPS Series",
+                        "CUE Series",
+                        "SC SUB Series",
+                        "G Series",
+                        "D Series",
+                        "Multipurpose Subwoofers",
+                        "Special Applications"
+                    ],
+    "basis":  "official-homepage-and-category-order",
+    "notes":  "Loudspeaker-only sequence. Electronics, software, transport and amplification ranges omitted."
+}

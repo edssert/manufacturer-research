@@ -1,0 +1,2479 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "db",
+  "scope": "loudspeakers",
+  "inclusion": "The 107 d&b loudspeaker records currently deployed by the application. Official current or heritage product pages are accepted; no inferred media is used.",
+  "sourcePages": [
+    "https://www.dbaudio.com/global/en/products/",
+    "https://www.dbaudio.com/global/en/sitemap.xml"
+  ],
+  "retrievedAt": "2026-08-18",
+  "products": [
+    {
+      "id": "spk-db-gsl8",
+      "name": "GSL8",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/sl-series/gsl8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-gsl8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/gsl8/01-dbaudio-gsl8-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/gsl8/02-dbaudio-gsl8-loudspeaker-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/gsl8/03-dbaudio-gsl8-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-gsl8-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-gsl-ksl-1.16-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-gsl8-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-gsl8-gsl12-1.6-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/electronics/dbaudio-manual-arraysight-1.14-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-e7494-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-gsl-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-gsl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-sl-series-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-gsl12",
+      "name": "GSL12",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/sl-series/gsl12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-gsl12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/gsl12/01-dbaudio-gsl12-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/gsl12/02-dbaudio-gsl12-loudspeaker-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/gsl12/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-gsl-ksl-1.16-en.pdf",
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-gsl8-gsl12-1.6-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/electronics/dbaudio-manual-arraysight-1.14-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-e7494-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-gsl-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-gsl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-sl-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-gsl12-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-gsl12-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ksl8",
+      "name": "KSL8",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/sl-series/ksl8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-ksl8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/ksl8/01-dbaudio-ksl8-loudspeaker-front-reddot-award.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksl8/02-dbaudio-ksl8-loudspeaker-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksl8/03-csm_dbaudio-ksl8-loudspeaker-th_db98d63238.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-gsl-ksl-1.16-en.pdf",
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/electronics/dbaudio-manual-arraysight-1.14-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-e7494-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ksl8-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksl8-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-ksl8-ksl12-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-ksl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5731-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-ksl-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ksl12",
+      "name": "KSL12",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/sl-series/ksl12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-ksl12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/ksl12/01-dbaudio-ksl12-loudspeaker-front-reddot-award.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksl12/02-dbaudio-ksl12-loudspeaker-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksl12/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-gsl-ksl-1.16-en.pdf",
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/electronics/dbaudio-manual-arraysight-1.14-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-e7494-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-ksl8-ksl12-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-ksl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5731-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-ksl-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ksl12-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksl12-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-xsl8",
+      "name": "XSL8",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/sl-series/xsl8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-xsl8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/xsl8/01-dbaudio-xsl-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsl8/02-dbaudio-xsl8-loudspeaker-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsl8/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/electronics/dbaudio-manual-arraysight-1.14-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-xsl8-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-xsl8-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsl8-xsl12-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-xsl-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5786-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5777-z5790-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5778-z5779-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-xsl-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-xsl12",
+      "name": "XSL12",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/sl-series/xsl12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-xsl12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/xsl12/01-dbaudio-xsl-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsl12/02-dbaudio-xsl12-loudspeaker-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsl12/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/electronics/dbaudio-manual-arraysight-1.14-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsl8-xsl12-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-xsl-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5786-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5777-z5790-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5778-z5779-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-xsl12-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-xsl12-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-sl-sub",
+      "name": "SL-SUB",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/sl-series/sl-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-sl-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/sl-sub/01-dbaudio-sl-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/sl-sub/02-dbaudio-sl-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-gsl-ksl-1.16-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/electronics/dbaudio-manual-arraysight-1.14-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-gsl-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-gsl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-sl-series-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-ksl-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-sl-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-sl-sub-sl-gsub-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-sl-sub-sl-gsub-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-sl-gsub",
+      "name": "SL-GSUB",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/sl-series/sl-gsub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-sl-gsub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/sl-gsub/01-dbaudio-sl-gsub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/sl-gsub/02-dbaudio-sl-gsub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-gsl-ksl-1.16-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-gsl-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-gsl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-sl-series-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-ksl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-sl-sub-sl-gsub-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-sl-sub-sl-gsub-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-sl-gsub-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-ksl-sub",
+      "name": "KSL-SUB",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/sl-series/ksl-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-ksl-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/ksl-sub/01-dbaudio-ksl-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksl-sub/02-dbaudio-ksl-sub-subwoofer-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksl-sub/03-csm_dbaudio-ksl-sub-subwoofer-th_6363abf69f.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-gsl-ksl-1.16-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-ksl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5731-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-ksl-sub-ksl-gsub-1.3-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-ksl-sub-ksl-gsub-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ksl-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksl-gsub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksl-sub-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ksl-gsub",
+      "name": "KSL-GSUB",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/sl-series/ksl-gsub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-ksl-gsub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/ksl-gsub/01-dbaudio-ksl-gsub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksl-gsub/02-dbaudio-ksl-gsub-subwoofer-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksl-gsub/03-csm_dbaudio-ksl-gsub-subwoofer-th_36530d08c0.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-gsl-ksl-1.16-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-ksl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5731-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-ksl-sub-ksl-gsub-1.3-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-ksl-sub-ksl-gsub-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksl-gsub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksl-sub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ksli-gsub-en.txt",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ksl-gsub-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-xsl-sub",
+      "name": "XSL-SUB",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/sl-series/xsl-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-xsl-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/xsl-sub/01-dbaudio-xsl-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsl-sub/02-dbaudio-xsl-sub-subwoofer-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsl-sub/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsl-sub-xsl-gsub-1.3-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsl-sub-xsl-gsub-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-xsl-gsub",
+      "name": "XSL-GSUB",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/sl-series/xsl-gsub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-xsl-gsub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/xsl-gsub/01-dbaudio-xsl-gsub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsl-gsub/02-dbaudio-xsl-gsub-subwoofer-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsl-gsub/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsl-sub-xsl-gsub-1.3-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsl-sub-xsl-gsub-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ksli8",
+      "name": "KSLi8",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/sl-series/ksli8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-ksli8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/ksli8/01-dbaudio-loudspeakers-ksli8-12-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksli8/02-dbaudio-loudspeakers-ksli8-12-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksli8/03-csm_dbaudio-loudspeakers-ksli8-12-teaser_25fb90807a.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ksli8-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksli8-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-ksli8-ksli12-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-ksli-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-ksli-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-ksli-40d-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ksli12",
+      "name": "KSLi12",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/sl-series/ksli12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-ksli12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/ksli12/01-dbaudio-loudspeakers-ksli8-12-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksli12/02-dbaudio-loudspeakers-ksli8-12-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksli12/03-csm_dbaudio-loudspeakers-ksli8-12-teaser_25fb90807a.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-ksli8-ksli12-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-ksli-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-ksli-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-ksli-40d-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ksli12-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksli12-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-xsli8",
+      "name": "XSLi8",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/sl-series/xsli8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-xsli8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/xsli8/01-dbaudio-xsli-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli8/02-dbaudio-xsli-loudspeaker-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli8/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-xsli8-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-xsli8-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsli8-xsli12-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-xsli-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-xsli-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-xsli8-svs-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-xsli8-svs-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-xsli12",
+      "name": "XSLi12",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/sl-series/xsli12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-xsli12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/xsli12/01-dbaudio-xsli-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli12/02-dbaudio-xsli-loudspeaker-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli12/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsli8-xsli12-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-xsli-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-xsli-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-xsli12-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-xsli12-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-xsli12-svs-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-xsli12-svs-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-xsli8-svs",
+      "name": "XSLi8 SVS",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/sl-series/xsli8/",
+      "status": "verified",
+      "officialImageSubstituteFor": "spk-db-xsli8",
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-xsli8-svs.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/xsli8-svs/01-dbaudio-xsli-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli8-svs/02-dbaudio-xsli-loudspeaker-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli8-svs/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-xsli8-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-xsli8-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsli8-xsli12-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-xsli-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-xsli-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-xsli8-svs-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-xsli8-svs-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-xsli12-svs",
+      "name": "XSLi12 SVS",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/sl-series/xsli12/",
+      "status": "verified",
+      "officialImageSubstituteFor": "spk-db-xsli12",
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-xsli12-svs.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/xsli12-svs/01-dbaudio-xsli-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli12-svs/02-dbaudio-xsli-loudspeaker-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli12-svs/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsli8-xsli12-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-xsli-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-xsli-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-xsli12-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-xsli12-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-xsli12-svs-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-xsli12-svs-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-ksli-sub",
+      "name": "KSLi-SUB",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/sl-series/ksli-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-ksli-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/ksli-sub/01-dbaudio-loudspeakers-ksli-sub-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksli-sub/02-dbaudio-loudspeakers-ksli-sub-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksli-sub/03-csm_dbaudio-loudspeakers-ksli-sub-teaser_2a5b980f0b.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-ksli-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-ksli-sub-ksli-gsub-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksli-sub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksli-gsub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ksli-sub-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-ksli-gsub",
+      "name": "KSLi-GSUB",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/sl-series/ksli-gsub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-ksli-gsub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/ksli-gsub/01-dbaudio-loudspeakers-ksli-gsub-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksli-gsub/02-dbaudio-loudspeakers-ksli-gsub-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/ksli-gsub/03-csm_dbaudio-loudspeakers-ksli-gsub-teaser_0a79ee6c2e.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-ksli-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-ksli-sub-ksli-gsub-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksli-sub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-datasheet-ksli-gsub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ksli-sub-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-xsli-sub",
+      "name": "XSLi-SUB",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/sl-series/xsli-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-xsli-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/xsli-sub/01-dbaudio-xsli-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli-sub/02-dbaudio-xsli-sub-subwoofer-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli-sub/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-xsli-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-xsli-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsli-sub-xsli-gsub-1.3-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsli-sub-xsli-gsub-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-xsli-gsub",
+      "name": "XSLi-GSUB",
+      "series": "SL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/sl-series/xsli-gsub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/sl/spk-db-xsli-gsub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/sl-series/xsli-gsub/01-dbaudio-xsli-gsub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli-gsub/02-dbaudio-xsli-gsub-subwoofer-rear.png",
+        "raw-data/raw-assets/db/speakers/sl-series/xsli-gsub/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-sl-series-xsl-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-sl-series-xsli-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsli-sub-xsli-gsub-1.3-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/sl-series/dbaudio-manual-xsli-sub-xsli-gsub-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-v8",
+      "name": "V8",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/v8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-v8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/v8/01-dbaudio-v8-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/v8/02-dbaudio-v8-loudspeaker-front-line-array.png",
+        "raw-data/raw-assets/db/speakers/v-series/v8/03-dbaudio-v8-loudspeaker-back-line-array.png",
+        "raw-data/raw-assets/db/speakers/v-series/v8/04-dbaudio-v8-loudspeaker-front-line-array-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/v8/05-dbaudio-v8-loudspeaker-back-line-array-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/v8/06-dbaudio-v8-loudspeaker-front-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/v8/07-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-v-series-1.12-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-v8-v12-1.8-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-v-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-v8-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-v-series-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-v12",
+      "name": "V12",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/v12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-v12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/v12/01-dbaudio-v12-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/v12/02-dbaudio-v12-loudspeaker-front-line-array.png",
+        "raw-data/raw-assets/db/speakers/v-series/v12/03-dbaudio-v12-loudspeaker-front-line-array-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/v12/04-dbaudio-v12-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-v-series-1.12-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-v8-v12-1.8-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-v-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-v12-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-vi8",
+      "name": "Vi8",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/vi8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-vi8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/vi8/01-dbaudio-vi8-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi8/02-dbaudio-vi8-loudspeaker-front-line-array.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi8/03-dbaudio-vi8-loudspeaker-back-line-array.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi8/04-dbaudio-vi8-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-v-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-vi8-vi12-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-vi-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-vi8-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-vi12",
+      "name": "Vi12",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/vi12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-vi12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/vi12/01-dbaudio-vi12-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi12/02-dbaudio-vi12-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-v-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-vi8-vi12-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-vi-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-vi12-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-v7p",
+      "name": "V7P",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/v7p/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-v7p.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/v7p/01-dbaudio-v7p-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/v7p/02-dbaudio-v7p-loudspeaker-front-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/v7p/03-dbaudio-v7p-loudspeaker-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/v-series/v7p/04-dbaudio-v7p-loudspeaker-with-accessory-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/v7p/05-dbaudio-v7p-loudspeaker-front-3.png",
+        "raw-data/raw-assets/db/speakers/v-series/v7p/06-dbaudio-v7p-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-v-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-v7p-v10p-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-v7p-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-datasheet-v7p-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-v10p",
+      "name": "V10P",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/v10p/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-v10p.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/v10p/01-dbaudio-v10p-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/v10p/02-dbaudio-v10p-loudspeaker-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/v-series/v10p/03-dbaudio-v10p-loudspeaker-with-accessory-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/v10p/04-dbaudio-v10p-loudspeaker-front-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/v10p/05-dbaudio-v10p-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-v-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-v7p-v10p-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-v10p-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-datasheet-v10p-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-v-sub",
+      "name": "V-SUB",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/v-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-v-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/v-sub/01-dbaudio-v-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/v-sub/02-dbaudio-v-sub-subwoofer-front-line-array.png",
+        "raw-data/raw-assets/db/speakers/v-series/v-sub/03-dbaudio-v-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-v-series-1.12-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-v-sub-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-v-sub-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-v-gsub",
+      "name": "V-GSUB",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/v-gsub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-v-gsub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/v-gsub/01-dbaudio-v-gsub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/v-gsub/02-dbaudio-v-gsub-subwoofer-front-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/v-gsub/03-csm_dbaudio-v-gsub-subwoofer-th_f150060c23.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-v-gsub-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-v-gsub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-datasheet-v-gsub-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-vi7p",
+      "name": "Vi7P",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/vi7p/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-vi7p.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/vi7p/01-dbaudio-vi7p-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi7p/02-dbaudio-vi7p-loudspeaker-front-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi7p/03-dbaudio-vi7p-loudspeaker-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi7p/04-dbaudio-vi7p-loudspeaker-with-accessory-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi7p/05-dbaudio-vi7p-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-v-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-vi7p-vi10p-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-vi7p-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-datasheet-vi7p-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-vi10p",
+      "name": "Vi10P",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/vi10p/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-vi10p.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/vi10p/01-dbaudio-vi10p-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi10p/02-dbaudio-vi10p-loudspeaker-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi10p/03-dbaudio-vi10p-loudspeaker-with-accessory-2.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi10p/04-dbaudio-vi10p-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-v-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-vi7p-vi10p-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-vi10p-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-datasheet-vi10p-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-vi-sub",
+      "name": "Vi-SUB",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/vi-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-vi-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/vi-sub/01-dbaudio-vi-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi-sub/02-dbaudio-vi-sub-subwoofer-front-line-array.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi-sub/03-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-vi-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-vi-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-vi-sub-1.4-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-vi-gsub",
+      "name": "Vi-GSUB",
+      "series": "V Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/v-series/vi-gsub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/v/spk-db-vi-gsub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/v-series/vi-gsub/01-dbaudio-vi-gsub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/v-series/vi-gsub/02-dbaudio-vi-gsub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-v-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-vi-gsub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-datasheet-vi-gsub-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/v-series/dbaudio-manual-vi-gsub-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-y8",
+      "name": "Y8",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/y8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-y8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/y8/01-dbaudio-y8-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/y8/02-dbaudio-y8-loudspeaker-front-line-array.png",
+        "raw-data/raw-assets/db/speakers/y-series/y8/03-dbaudio-y8-loudspeaker-back-line-array.png",
+        "raw-data/raw-assets/db/speakers/y-series/y8/04-dbaudio-y8-loudspeaker-side-line-array-on-touring-case.png",
+        "raw-data/raw-assets/db/speakers/y-series/y8/05-dbaudio-y8-loudspeaker-front-line-array-on-touring-case.png",
+        "raw-data/raw-assets/db/speakers/y-series/y8/06-dbaudio-y8-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-y-series-1.6-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-y8-y12-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-y-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-y8-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-y-series-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-y12",
+      "name": "Y12",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/y12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-y12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/y12/01-dbaudio-y12-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/y12/02-dbaudio-y12-loudspeaker-front-line-array.png",
+        "raw-data/raw-assets/db/speakers/y-series/y12/03-dbaudio-y12-loudspeaker-side-line-array-in-touring-case.png",
+        "raw-data/raw-assets/db/speakers/y-series/y12/04-dbaudio-y12-loudspeaker-front-line-array-in-touring-case.png",
+        "raw-data/raw-assets/db/speakers/y-series/y12/05-dbaudio-y12-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-y-series-1.6-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-y8-y12-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-y-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-y12-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-y7p",
+      "name": "Y7P",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/y7p/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-y7p.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/y7p/01-dbaudio-y7p-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/y7p/02-dbaudio-y7p-loudspeaker-front-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/y-series/y7p/03-dbaudio-y7p-loudspeaker-with-accessory-2.png",
+        "raw-data/raw-assets/db/speakers/y-series/y7p/04-dbaudio-y7p-loudspeaker-on-touring-case.png",
+        "raw-data/raw-assets/db/speakers/y-series/y7p/05-dbaudio-y7p-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-y-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-y7p-y10p-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-y7p-y10p-1.3-it.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-y7p-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-y10p",
+      "name": "Y10P",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/y10p/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-y10p.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/y10p/01-dbaudio-y10p-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/y10p/02-dbaudio-y10p-loudspeaker-front-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/y-series/y10p/03-dbaudio-y10p-loudspeaker-front-with-accessory-2.png",
+        "raw-data/raw-assets/db/speakers/y-series/y10p/04-dbaudio-y10p-loudspeaker-front-in-touring-case.png",
+        "raw-data/raw-assets/db/speakers/y-series/y10p/05-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-y-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-y7p-y10p-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-y7p-y10p-1.3-it.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-y10p-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-y-sub",
+      "name": "Y-SUB",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/y-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-y-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/y-sub/01-dbaudio-yi-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/y-sub/02-dbaudio-y-sub-subwoofer-front-line-array.png",
+        "raw-data/raw-assets/db/speakers/y-series/y-sub/03-dbaudio-y-subwoofer-line-array-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/y-sub/04-dbaudio-y-subwoofer-line-array-back.png",
+        "raw-data/raw-assets/db/speakers/y-series/y-sub/05-dbaudio-y-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-y-series-1.6-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-y-sub-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-y-sub-1.3-it.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-y-sub-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-b6-sub",
+      "name": "B6-SUB",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/b6-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-b6-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/b6-sub/01-dbaudio-b6-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/b6-sub/02-dbaudio-b6-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-b6-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-b6-sub-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-yi8",
+      "name": "Yi8",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/yi8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-yi8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/yi8/01-dbaudio-yi8-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi8/02-dbaudio-yi8-loudspeaker-line-array-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi8/03-dbaudio-yi8-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-y-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-yi8-yi12-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-en-54-certified-products-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-coc-uae-yserie-2022.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-coc-en-54-y-series-2022.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-cop-en-54-y-series-2022.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-yi-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-yi8-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-yi12",
+      "name": "Yi12",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/yi12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-yi12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/yi12/01-dbaudio-yi12-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi12/02-dbaudo-yi12-loudspeaker-line-array-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi12/03-dbaudio-yi12-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-y-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-yi8-yi12-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-en-54-certified-products-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-coc-uae-yserie-2022.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-coc-en-54-y-series-2022.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-cop-en-54-y-series-2022.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-yi-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-yi12-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-yi7p",
+      "name": "Yi7P",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/yi7p/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-yi7p.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/yi7p/01-dbaudio-yi7p-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi7p/02-dbaudio-yi7p-loudspeaker-front-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi7p/03-dbaudio-yi7p-loudspeaker-front-with-accessory-2.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi7p/04-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-y-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-datasheet-yi7p-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-yi7p-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-yi7p-yi10p-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-yi10p",
+      "name": "Yi10P",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/yi10p/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-yi10p.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/yi10p/01-dbaudio-yi10p-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi10p/02-dbaudio-yi10p-loudspeaker-front-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi10p/03-dbaudio-yi10p-loudspeaker-front-with-accessory-2.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi10p/04-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-y-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-yi7p-yi10p-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-datasheet-yi10p-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-yi10p-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-yi-sub",
+      "name": "Yi-SUB",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/yi-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-yi-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/yi-sub/01-dbaudio-yi-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi-sub/02-dbaudio-yi-subwoofer-line-array-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/yi-sub/03-dbaudio-yi-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-yi-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-yi-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/y-series/dbaudio-manual-yi-sub-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-bi6-sub",
+      "name": "Bi6-SUB",
+      "series": "Y Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/y-series/bi6-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/y/spk-db-bi6-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/y-series/bi6-sub/01-dbaudio-bi6-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/y-series/bi6-sub/02-dbaudio-bi6-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-bi6-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-bi6-sub-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-t10",
+      "name": "T10",
+      "series": "T Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/t-series/t10/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/t/spk-db-t10.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/t-series/t10/01-dbaudio-t10-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/t-series/t10/02-dbaudio-t10-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/t-series/t10/03-dbaudio-t10-loudspeaker-front-2.png",
+        "raw-data/raw-assets/db/speakers/t-series/t10/04-dbaudio-t10-loudspeaker-front-line-array.png",
+        "raw-data/raw-assets/db/speakers/t-series/t10/05-dbaudio-t10-loudspeaker-back-line-array.png",
+        "raw-data/raw-assets/db/speakers/t-series/t10/06-dbaudio-t10-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-manual-t10-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-t-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-datasheet-t10-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-t-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-t10_en-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-manual-rigging-t-series-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-t-series-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ti10l",
+      "name": "Ti10L",
+      "series": "T Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/t-series/ti10l/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/t/spk-db-ti10l.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/t-series/ti10l/01-dbaudio-ti10l-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/t-series/ti10l/02-dbaudio-ti10l-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-t-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-t-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-datasheet-ti10l-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-datasheet-ti10p-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ti10l-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-manual-ti10-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-manual-rigging-z5374-1.0-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ti10p",
+      "name": "Ti10P",
+      "series": "T Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/t-series/ti10p/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/t/spk-db-ti10p.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/t-series/ti10p/01-dbaudio-ti10p-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/t-series/ti10p/02-dbaudio-ti10p-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-t-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-t-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-datasheet-ti10l-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-datasheet-ti10p-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-manual-ti10-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ti10p-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-t-sub",
+      "name": "T-SUB",
+      "series": "T Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/t-series/t-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/t/spk-db-t-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/t-series/t-sub/01-dbaudio-t-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/t-series/t-sub/02-dbaudio-t-sub-subwoofer-front-line-array.png",
+        "raw-data/raw-assets/db/speakers/t-series/t-sub/03-dbaudio-t-sub-subwoofer-back-line-array.png",
+        "raw-data/raw-assets/db/speakers/t-series/t-sub/04-dbaudio-t-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-t-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-t-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-manual-t-sub-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-datasheet-t-sub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-t-sub-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-ti-sub",
+      "name": "Ti-SUB",
+      "series": "T Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/t-series/ti-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/t/spk-db-ti-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/t-series/ti-sub/01-dbaudio-ti-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/t-series/ti-sub/02-dbaudio-ti-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-t-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-datasheet-ti-sub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ti-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/t-series/dbaudio-manual-ti-sub-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ccl8",
+      "name": "CCL8",
+      "series": "CL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/cl-series/ccl8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/cl/spk-db-ccl8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/cl-series/ccl8/01-dbaudio-ccl8-front.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccl8/02-dbaudio-ccl8-rear.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccl8/03-csm_dbaudio-ccl8-front_0bd42fcd86.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/electronics/dbaudio-manual-arraysight-1.14-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-arch-specs-ccl8-1.3-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-ccl-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-datasheet-ccl8-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-cl-series-ccl-ccli-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-manual-ccl8-ccl12-1.5-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-manual-ccl8-ccl12-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-declaration-of-conformity-ce-cl-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-ccl-system-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-ccl-rigging-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ccl12",
+      "name": "CCL12",
+      "series": "CL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/cl-series/ccl12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/cl/spk-db-ccl12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/cl-series/ccl12/01-csm_dbaudio-ccl12-front_cbad683676.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccl12/02-dbaudio-ccl12-rear.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccl12/03-csm_dbaudio-ccl12-front_3071050ae2.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/electronics/dbaudio-manual-arraysight-1.14-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-ccl-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-cl-series-ccl-ccli-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-manual-ccl8-ccl12-1.5-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-manual-ccl8-ccl12-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-declaration-of-conformity-ce-cl-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-ccl-system-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-ccl-rigging-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-arch-specs-ccl12-1.3-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-datasheet-ccl12-1.5-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ccl-sub",
+      "name": "CCL-SUB",
+      "series": "CL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/cl-series/ccl-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/cl/spk-db-ccl-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/cl-series/ccl-sub/01-dbaudio-ccl-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccl-sub/02-dbaudio-ccl-subwoofer-rear.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccl-sub/03-csm_dbaudio-ccl-subwoofer-front_60379104b9.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/electronics/dbaudio-manual-arraysight-1.14-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-ccl-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-cl-series-ccl-ccli-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-declaration-of-conformity-ce-cl-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-ccl-system-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-ccl-rigging-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-manual-ccl-sub-1.4-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-manual-ccl-sub-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-arch-specs-ccl-sub-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-datasheet-ccl-sub-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-b12-sub",
+      "name": "B12-SUB",
+      "series": "CL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/cl-series/b12-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/cl/spk-db-b12-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/cl-series/b12-sub/01-dbaudio-b12-front.png",
+        "raw-data/raw-assets/db/speakers/cl-series/b12-sub/02-dbaudio-b12-rear.png",
+        "raw-data/raw-assets/db/speakers/cl-series/b12-sub/03-csm_dbaudio-b12-front_b6f6c600d0.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-b12-sub-1.3-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-b12-sub-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-datasheet-b12-sub-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-b12-sub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-b12-sub-1.1-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-ccli8",
+      "name": "CCLi8",
+      "series": "CL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/cl-series/ccli8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/cl/spk-db-ccli8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/cl-series/ccli8/01-dbaudio-ccli-top-front.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccli8/02-dbaudio-ccli-top-rear.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccli8/03-csm_dbaudio-ccli-top-front_2a195b697c.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-cl-series-ccl-ccli-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-ccl-system-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-cl-series-loudspeaker-ccli-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ccli8-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-datasheet-ccli8-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-manual-ccli8-ccli12-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ccli12",
+      "name": "CCLi12",
+      "series": "CL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/cl-series/ccli12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/cl/spk-db-ccli12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/cl-series/ccli12/01-dbaudio-ccli-top-front.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccli12/02-dbaudio-ccli-top-rear.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccli12/03-csm_dbaudio-ccli-top-front_2a195b697c.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/ti/dbaudio-an162-behind-the-screen-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-cl-series-ccl-ccli-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-ccl-system-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-cl-series-loudspeaker-ccli-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-manual-ccli8-ccli12-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ccli12-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-datasheet-ccli12-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ccli-sub",
+      "name": "CCLi-SUB",
+      "series": "CL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/cl-series/ccli-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/cl/spk-db-ccli-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/cl-series/ccli-sub/01-dbaudio-ccli-sub-front.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccli-sub/02-dbaudio-ccli-sub-rear.png",
+        "raw-data/raw-assets/db/speakers/cl-series/ccli-sub/03-csm_dbaudio-ccli-sub-front_e5e6fa2ef5.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-cl-series-ccl-ccli-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-ccl-system-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-rigging-manual-ccli-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-manual-ccli-sub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cl-series/dbaudio-datasheet-ccli-sub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ccli-sub-1.1-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-bi12-sub",
+      "name": "Bi12-SUB",
+      "series": "CL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/cl-series/bi12-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/cl/spk-db-bi12-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/cl-series/bi12-sub/01-dbaudio-bi12-front.png",
+        "raw-data/raw-assets/db/speakers/cl-series/bi12-sub/02-dbaudio-bi12-rear.png",
+        "raw-data/raw-assets/db/speakers/cl-series/bi12-sub/03-csm_dbaudio-bi12-front_9a2b351bc3.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-bi12-sub-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-datasheet-bi12-sub-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-bi12-sub-1.1-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-al60",
+      "name": "AL60",
+      "series": "AL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/a-series/al60/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/a/spk-db-al60.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/a-series/al60/01-dbaudio-al60-front-horizontal.png",
+        "raw-data/raw-assets/db/speakers/a-series/al60/02-dbaudio-al60-front-vertical.png",
+        "raw-data/raw-assets/db/speakers/a-series/al60/03-dbaudio-al60-rear.png",
+        "raw-data/raw-assets/db/speakers/a-series/al60/04-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/a-series/dbaudio-manual-al60-al90-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-a-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-a-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5461-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5455-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5456-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-al60-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5460-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5458-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-a-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/a-series/dbaudio-datasheet-al60-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-al90",
+      "name": "AL90",
+      "series": "AL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/a-series/al90/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/a/spk-db-al90.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/a-series/al90/01-dbaudio-al90-front-horizontal.png",
+        "raw-data/raw-assets/db/speakers/a-series/al90/02-dbaudio-al90-front-vertical.png",
+        "raw-data/raw-assets/db/speakers/a-series/al90/03-dbaudio-al90-rear.png",
+        "raw-data/raw-assets/db/speakers/a-series/al90/04-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/a-series/dbaudio-manual-al60-al90-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-a-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-a-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5461-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5455-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5456-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5460-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5458-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-a-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-al90-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/a-series/dbaudio-datasheet-al90-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ali60",
+      "name": "ALi60",
+      "series": "AL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/a-series/ali60/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/a/spk-db-ali60.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/a-series/ali60/01-dbaudio-ali60-front-horizontal.png",
+        "raw-data/raw-assets/db/speakers/a-series/ali60/02-dbaudio-ali60-front-vertical.png",
+        "raw-data/raw-assets/db/speakers/a-series/ali60/03-dbaudio-ali60-rear.png",
+        "raw-data/raw-assets/db/speakers/a-series/ali60/04-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-en-54-certified-products-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-a-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-a-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5461-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5455-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5456-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5460-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5458-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-a-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/a-series/dbaudio-manual-ali60-ali90-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-coc-uae-aserie-2022.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-cop-en-54-a-series-2022.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-coc-en-54-a-series-2022.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ali60-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/a-series/dbaudio-datasheet-ali60-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-ali90",
+      "name": "ALi90",
+      "series": "AL Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/a-series/ali90/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/a/spk-db-ali90.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/a-series/ali90/01-dbaudio-ali90-front-horizontal.png",
+        "raw-data/raw-assets/db/speakers/a-series/ali90/02-dbaudio-ali90-front-vertical.png",
+        "raw-data/raw-assets/db/speakers/a-series/ali90/03-dbaudio-ali90-rear.png",
+        "raw-data/raw-assets/db/speakers/a-series/ali90/04-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-en-54-certified-products-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-a-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-a-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5461-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5455-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5456-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5460-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-rigging-manual-z5458-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-a-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/a-series/dbaudio-manual-ali60-ali90-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-coc-uae-aserie-2022.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-cop-en-54-a-series-2022.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-coc-en-54-a-series-2022.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-ali90-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/a-series/dbaudio-datasheet-ali90-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-4s",
+      "name": "4S",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/4s/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-4s.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/4s/01-dbaudio-4s-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/4s/02-dbaudio-4s-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/4s/03-dbaudio-4s-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-4s-5s-1.6-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-4s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-5s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-xs-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-4s-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-5s",
+      "name": "5S",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/5s/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-5s.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/5s/01-dbaudio-5s-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/5s/02-dbaudio-5s-loudspeaker-front-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/xs-series/5s/03-dbaudio-5s-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/5s/04-dbaudio-5s-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-4s-5s-1.6-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-4s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-5s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-xs-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-5s-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-8s",
+      "name": "8S",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/8s/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-8s.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/8s/01-dbaudio-8s-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/8s/02-dbaudio-8s-loudspeaker-front-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/xs-series/8s/03-dbaudio-8s-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/8s/04-dbaudio-8s-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-en-54-certified-products-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-xs-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-8s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-coc-uae-8s-2022.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-coc-en-54-8s-2022.pdf",
+        "raw-data/official-docs/db/downloads/legal/certificates/dbaudio-certificate-cop-en-54-8s-2022.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-8s-1.5-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-8s-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-10s",
+      "name": "10S",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/10s/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-10s.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/10s/01-dbaudio-10s-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/10s/02-dbaudio-10s-loudspeaker-front-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/xs-series/10s/03-dbaudio-10s-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/10s/04-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-10s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-10s-d-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-10s-d-en.txt",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-10s-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-10s-10s-d-1.4-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-10s-d",
+      "name": "10S-D",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/10s-d/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-10s-d.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/10s-d/01-dbaudio-10s-d-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/10s-d/02-dbaudio-10s-d-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/10s-d/03-dbaudio-10s-d-loudspeaker-front-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/xs-series/10s-d/04-dbaudio-10s-d-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-10s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-10s-d-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-10s-d-en.txt",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-10s-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-10s-10s-d-1.4-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-12s",
+      "name": "12S",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/12s/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-12s.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/12s/01-dbaudio-12s-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/12s/02-dbaudio-12s-loudspeaker-front-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/xs-series/12s/03-dbaudio-12s-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/12s/04-dbaudio-12s-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-xs-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-12s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-12s-d-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-12s-en.txt",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-12s-d-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-12s-12s-d-1.4-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-12s-d",
+      "name": "12S-D",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/12s-d/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-12s-d.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/12s-d/01-dbaudio-12s-d-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/12s-d/02-dbaudio-12s-d-loudspeaker-front-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/xs-series/12s-d/03-dbaudio-12s-d-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/12s-d/04-dbaudio-12s-d-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-xs-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-12s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-12s-d-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-12s-en.txt",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-12s-d-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-12s-12s-d-1.4-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-24s",
+      "name": "24S",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/24s/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-24s.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/24s/01-dbaudio-24s-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/24s/02-dbaudio-24s-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/24s/03-dbaudio-24s-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-xs-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-24s-24s-d-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-24s-d-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-24s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-24s-en.txt",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-24s-d-en.txt",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-24s-21s-sub-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-24s-d",
+      "name": "24S-D",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/24s-d/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-24s-d.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/24s-d/01-dbaudio-24s-d-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/24s-d/02-dbaudio-24s-d-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/24s-d/03-dbaudio-24s-d-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-xs-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-24s-24s-d-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-24s-d-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-24s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-24s-en.txt",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-24s-d-en.txt",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-24s-21s-sub-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-44s",
+      "name": "44S",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/44s/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-44s.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/44s/01-dbaudio-44s-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/44s/02-dbaudio-44s-loudspeaker-rear.png",
+        "raw-data/raw-assets/db/speakers/xs-series/44s/03-dbaudio-44s-backbox-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/44s/04-dbaudio-44s-backbox-rear.png",
+        "raw-data/raw-assets/db/speakers/xs-series/44s/05-csm_dbaudio-44s-backbox-front-vertical_c606015ec5.png",
+        "raw-data/raw-assets/db/speakers/xs-series/44s/06-csm_dbaudio-44s-backbox-front_bf11303636.jpg",
+        "raw-data/raw-assets/db/speakers/xs-series/44s/07-csm_dbaudio-44s-loudspeaker-cluster_a6643eaeb9.png",
+        "raw-data/raw-assets/db/speakers/xs-series/44s/08-csm_dbaudio-44s-loudspeaker-pole-mount_261a3125e9.png",
+        "raw-data/raw-assets/db/speakers/xs-series/44s/09-csm_dbaudio-44s-loudspeaker-front_20a845e881.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-xs-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-44s-1.2-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-44s-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-44s-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-44s-accessorries-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-44s-en.txt",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-44s-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5427-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-12s-sub",
+      "name": "12S-SUB",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/12s-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-12s-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/12s-sub/01-dbaudio-12s-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/12s-sub/02-dbaudio-12s-sub-subwoofer-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/12s-sub/03-dbaudio-12s-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-12s-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-12s-sub-1.6-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-18s-sub",
+      "name": "18S-SUB",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/18s-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-18s-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/18s-sub/01-dbaudio-18s-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/18s-sub/02-dbaudio-18s-sub-subwoofer-front-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/xs-series/18s-sub/03-dbaudio-18s-sub-subwoofer-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/18s-sub/04-dbaudio-18s-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-18s-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-18s-sub-18a-sub-1.6-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-21s-sub",
+      "name": "21S-SUB",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/21s-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-21s-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/21s-sub/01-dbaudio-21s-sub-subwoofer-front-upright.png",
+        "raw-data/raw-assets/db/speakers/xs-series/21s-sub/02-dbaudio-21s-sub-subwoofer-front-horizontal.png",
+        "raw-data/raw-assets/db/speakers/xs-series/21s-sub/03-dbaudio-21s-sub-subwoofer-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/21s-sub/04-dbaudio-21s-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-24s-21s-sub-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-21s-sub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-21s-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-21s-sub-1.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-27s-sub",
+      "name": "27S-SUB",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/27s-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-27s-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/27s-sub/01-dbaudio-27s-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/27s-sub/02-dbaudio-27s-sub-subwoofer-back.png",
+        "raw-data/raw-assets/db/speakers/xs-series/27s-sub/03-dbaudio-27s-sub-subwoofer-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-27s-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-27s--27a-sub-1.5-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-42s",
+      "name": "42S",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/42s/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-42s.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/42s/01-dbaudio-42S-front-diagonal.png",
+        "raw-data/raw-assets/db/speakers/xs-series/42s/02-dbaudio-42S-rear-digonal.png",
+        "raw-data/raw-assets/db/speakers/xs-series/42s/03-dbaudio-42S-backcase-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/42s/04-dbaudio-42S-backcase-front-diagonal.png",
+        "raw-data/raw-assets/db/speakers/xs-series/42s/05-dbaudio-42S-backcase-rear-diagonal.png",
+        "raw-data/raw-assets/db/speakers/xs-series/42s/06-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-42s-mounting-accessories-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-42s-1.1-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-manual-42s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xs-series/dbaudio-datasheet-42s-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-42s-1.1-en.txt",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-42s-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-bi8-sub",
+      "name": "Bi8-SUB",
+      "series": "xS Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xs-series/bi8-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xs/spk-db-bi8-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xs-series/bi8-sub/01-dbaudio-bi8-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/xs-series/bi8-sub/02-dbaudio-bi8-sub-subwoofer-rear.png",
+        "raw-data/raw-assets/db/speakers/xs-series/bi8-sub/03-dbaudio-bi8-sub-subwoofer-front-hanging-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/xs-series/bi8-sub/04-dbaudio-bi8-sub-subwoofer-front-standing.png",
+        "raw-data/raw-assets/db/speakers/xs-series/bi8-sub/05-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xs-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-bi8-sub-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-datasheet-bi8-sub-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-the-b8-subwoofer-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-bi8-sub-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-16c",
+      "name": "16C",
+      "series": "xC Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xc-series/16c/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xc/spk-db-16c.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xc-series/16c/01-dbaudio-16c-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xc-series/16c/02-dbaudio-16c-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xc-series/16c/03-dbaudio-16c-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/xc-series/dbaudio-manual-16c-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xc-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xc-series/dbaudio-datasheet-16c-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-xc-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-16c-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-24c",
+      "name": "24C",
+      "series": "xC Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xc-series/24c/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xc/spk-db-24c.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xc-series/24c/01-dbaudio-24c-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xc-series/24c/02-dbaudio-24c-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xc-series/24c/03-dbaudio-24c-loudspeaker-back-close-up.png",
+        "raw-data/raw-assets/db/speakers/xc-series/24c/04-dbaudio-24c-loudspeaker-front-2.png",
+        "raw-data/raw-assets/db/speakers/xc-series/24c/05-dbaudio-24c-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xc-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-xc-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xc-series/dbaudio-manual-24c-24c-e-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xc-series/dbaudio-datasheet-24c-e-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xc-series/dbaudio-datasheet-24c-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-24c-en.txt",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-24c-24c-e-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-24c-e",
+      "name": "24C-E",
+      "series": "xC Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/xc-series/24c-e/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/xc/spk-db-24c-e.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/xc-series/24c-e/01-dbaudio-24e-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/xc-series/24c-e/02-dbaudio-24e-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/xc-series/24c-e/03-dbaudio-24e-loudspeaker-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-xc-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-xc-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xc-series/dbaudio-manual-24c-24c-e-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xc-series/dbaudio-datasheet-24c-e-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/xc-series/dbaudio-datasheet-24c-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-24c-e-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-e4",
+      "name": "E4",
+      "series": "E Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/e-series/e4/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/e/spk-db-e4.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/e-series/e4/01-dbaudio-e4-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/e-series/e4/02-dbaudio-e4-loudspeaker-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-e-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-e4-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/e-series/dbaudio-manual-e4-e5-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-e-series-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-e5",
+      "name": "E5",
+      "series": "E Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/e-series/e5/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/e/spk-db-e5.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/e-series/e5/01-dbaudio-e5-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/e-series/e5/02-dbaudio-e5-loudspeaker-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/e-series/dbaudio-manual-e4-e5-1.4-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-e5-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-e6",
+      "name": "E6",
+      "series": "E Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/e-series/e6/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/e/spk-db-e6.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/e-series/e6/01-dbaudio-e6-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/e-series/e6/02-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-e-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-e6-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/e-series/dbaudio-manual-e6-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-e8",
+      "name": "E8",
+      "series": "E Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/e-series/e8/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/e/spk-db-e8.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/e-series/e8/01-dbaudio-e8-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/e-series/e8/02-dbaudio-e8-loudspeaker-back.png",
+        "raw-data/raw-assets/db/speakers/e-series/e8/03-dbaudio-e8-loudspeaker-back-2.png",
+        "raw-data/raw-assets/db/speakers/e-series/e8/04-dbaudio-e8-loudspeaker-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-e-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/e-series/dbaudio-manual-e8-2.4-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-e8-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-e12",
+      "name": "E12",
+      "series": "E Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/e-series/e12/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/e/spk-db-e12.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/e-series/e12/01-dbaudio-e12-loudspeaker-front-upright.png",
+        "raw-data/raw-assets/db/speakers/e-series/e12/02-dbaudio-e12-loudspeaker-back-horizontal.png",
+        "raw-data/raw-assets/db/speakers/e-series/e12/03-dbaudio-e12-loudspeaker-front-horizontal.png",
+        "raw-data/raw-assets/db/speakers/e-series/e12/04-dbaudio-e12-loudspeaker-front-horizontal-2.png",
+        "raw-data/raw-assets/db/speakers/e-series/e12/05-dbaudio-e12-loudspeaker-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-e-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/e-series/dbaudio-manual-e12-e12-d-2.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-e12-d-en.txt",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-e12-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-e12-d",
+      "name": "E12-D",
+      "series": "E Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/e-series/e12-d/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/e/spk-db-e12-d.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/e-series/e12-d/01-dbaudio-e12-d-loudspeaker-front.png",
+        "raw-data/raw-assets/db/speakers/e-series/e12-d/02-dbaudio-e12-d-loudspeaker-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-e-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/e-series/dbaudio-manual-e12-e12-d-2.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-e12-d-en.txt",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-e12-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-e12x-sub",
+      "name": "E12X-SUB",
+      "series": "E Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/e-series/e12x-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/e/spk-db-e12x-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/e-series/e12x-sub/01-dbaudio-e12x-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/e-series/e12x-sub/02-dbaudio-e12x-subwoofer-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-e-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-e12x-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/e-series/dbaudio-manual-e12x-sub-5.3-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-e15x-sub",
+      "name": "E15X-SUB",
+      "series": "E Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/e-series/e15x-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/e/spk-db-e15x-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/e-series/e15x-sub/01-dbaudio-e15x-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/e-series/e15x-sub/02-dbaudio-e15x-subwoofer-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-e-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-e15x-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/e-series/dbaudio-manual-e15x-sub-2.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-b4-sub",
+      "name": "B4-SUB",
+      "series": "E Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/e-series/b4-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/e/spk-db-b4-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/e-series/b4-sub/01-dbaudio-b4-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/e-series/b4-sub/02-dbaudio-b4-subwoofer-back.png",
+        "raw-data/raw-assets/db/speakers/e-series/b4-sub/03-dbaudio-b4-subwoofer-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-subwoofer-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-t-series-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-e-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-e-series-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-b4-sub-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-b4-sub-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-b8-sub",
+      "name": "B8-SUB",
+      "series": "E Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/e-series/b8-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/e/spk-db-b8-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/e-series/b8-sub/01-dbaudio-b8-sub-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/e-series/b8-sub/02-dbaudio-b8-sub-subwoofer-rear.png",
+        "raw-data/raw-assets/db/speakers/e-series/b8-sub/03-dbaudio-b8-sub-subwoofer-front-hanging-with-accessory.png",
+        "raw-data/raw-assets/db/speakers/e-series/b8-sub/04-dbaudio-b8-sub-subwoofer-front-standing.png",
+        "raw-data/raw-assets/db/speakers/e-series/b8-sub/05-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-intro-brochure-the-b8-subwoofer-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-e-series-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-b8-sub-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-datasheet-b8-sub-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-b8-sub-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-u3",
+      "name": "U3",
+      "series": "U Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/u-series/u3/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/u/spk-db-u3.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/u-series/u3/01-dbaudio-u3-front-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u3/02-dbaudio-u3-rear-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u3/03-csm_dbaudio-u3-front-01_6fbb72e24a.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-u-series-passive-loudspeaker-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-u-series-rigging-accessories-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-u3-u5-u7-1.2-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5800-03-06-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-u-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-u3-u5-u7-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-arch-specs-u3-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-datasheet-u3-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-u3n",
+      "name": "U3N",
+      "series": "U Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/u-series/u3n/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/u/spk-db-u3n.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/u-series/u3n/01-dbaudio-u3n-front-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u3n/02-dbaudio-u3n-rear-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u3n/03-csm_dbaudio-u3n-front-01_65d3eefa30.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5800-03-06-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-u-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-u-series-uxn-networked-loudspeaker-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-uxn-b10n-sub-bi10n-sub-1.1-ko.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-uxn-b10n-sub-bi10n-sub-1.1-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-arch-specs-u3n-1.1-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-datasheet-u3n-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-uxn-b10n-sub-bi10n-sub-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-u5",
+      "name": "U5",
+      "series": "U Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/u-series/u5/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/u/spk-db-u5.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/u-series/u5/01-dbaudio-u5-front-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u5/02-dbaudio-u5-rear-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u5/03-csm_dbaudio-u5-front-01_d4e96e7aaa.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-u-series-passive-loudspeaker-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-u-series-rigging-accessories-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-u3-u5-u7-1.2-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5800-03-06-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-u-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-u3-u5-u7-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-arch-specs-u5-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-datasheet-u5-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-u5n",
+      "name": "U5N",
+      "series": "U Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/u-series/u5n/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/u/spk-db-u5n.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/u-series/u5n/01-dbaudio-u5n-front-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u5n/02-dbaudio-u5n-rear-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u5n/03-csm_dbaudio-u5n-front-01_59e24dfb89.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5800-03-06-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-u-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-u-series-uxn-networked-loudspeaker-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-uxn-b10n-sub-bi10n-sub-1.1-ko.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-uxn-b10n-sub-bi10n-sub-1.1-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-uxn-b10n-sub-bi10n-sub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-arch-specs-u5n-1.1-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-datasheet-u5n-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-u7",
+      "name": "U7",
+      "series": "U Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/u-series/u7/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/u/spk-db-u7.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/u-series/u7/01-dbaudio-u7-front-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u7/02-dbaudio-u7-rear-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u7/03-csm_dbaudio-u7-front-01_f36f8866e2.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-u-series-passive-loudspeaker-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-u-series-rigging-accessories-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-u3-u5-u7-1.2-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5800-03-06-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-u-series-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-u3-u5-u7-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-arch-specs-u7-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-datasheet-u7-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-u7n",
+      "name": "U7N",
+      "series": "U Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/u-series/u7n/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/u/spk-db-u7n.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/u-series/u7n/01-dbaudio-u7n-front-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u7n/02-dbaudio-u7n-rear-01.png",
+        "raw-data/raw-assets/db/speakers/u-series/u7n/03-csm_dbaudio-u7n-front-01_fa1c55712d.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5800-03-06-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-brochure-u-series-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-u-series-uxn-networked-loudspeaker-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-uxn-b10n-sub-bi10n-sub-1.1-ko.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-uxn-b10n-sub-bi10n-sub-1.1-it.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-uxn-b10n-sub-bi10n-sub-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-datasheet-u7n-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-arch-specs-u7n-1.1-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-b10-sub",
+      "name": "B10-SUB",
+      "series": "U Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/u-series/b10-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/u/spk-db-b10-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/u-series/b10-sub/01-dbaudio-b10-front.png",
+        "raw-data/raw-assets/db/speakers/u-series/b10-sub/02-dbaudio-b10-rear.png",
+        "raw-data/raw-assets/db/speakers/u-series/b10-sub/03-csm_dbaudio-b10-front_de1f627fa7.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5817-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5816-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-b10-sub-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-datasheet-b10-sub-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-b10n-sub",
+      "name": "B10N-SUB",
+      "series": "U Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/u-series/b10n-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/u/spk-db-b10n-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/u-series/b10n-sub/01-dbaudio-b10n-front.png",
+        "raw-data/raw-assets/db/speakers/u-series/b10n-sub/02-dbaudio-b10n-rear.png",
+        "raw-data/raw-assets/db/speakers/u-series/b10n-sub/03-csm_dbaudio-b10n-front_d54a70c20b.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5816-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-uxn-b10n-sub-bi10n-sub-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-bi10-sub",
+      "name": "Bi10-SUB",
+      "series": "U Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/u-series/bi10-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/u/spk-db-bi10-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/u-series/bi10-sub/01-dbaudio-bi10-front.png",
+        "raw-data/raw-assets/db/speakers/u-series/bi10-sub/02-dbaudio-bi10-rear.png",
+        "raw-data/raw-assets/db/speakers/u-series/bi10-sub/03-csm_dbaudio-b10-front_de1f627fa7.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-datasheet-bi10-sub-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-bi10-sub-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/accessories/dbaudio-mounting-instructions-z5815-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-bi10n-sub",
+      "name": "Bi10N-SUB",
+      "series": "U Series",
+      "productPage": "https://www.dbaudio.com/global/en/products/all/series/u-series/bi10n-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/u/spk-db-bi10n-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/u-series/bi10n-sub/01-dbaudio-bi10n-front.png",
+        "raw-data/raw-assets/db/speakers/u-series/bi10n-sub/02-dbaudio-bi10n-rear.png",
+        "raw-data/raw-assets/db/speakers/u-series/bi10n-sub/03-csm_dbaudio-bi10n-front_03cfc6e320.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/u-series/dbaudio-manual-uxn-b10n-sub-bi10n-sub-1.1-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-m2",
+      "name": "M2",
+      "series": "Monitors",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/monitors/m2/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/monitors/spk-db-m2.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/monitors/m2/01-dbaudio-m2-monitor-front.png",
+        "raw-data/raw-assets/db/speakers/monitors/m2/02-dbaudio-m2-monitors-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/monitors/dbaudio-manual-m2-5.3-en.pdf",
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-stage-monitors-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-monitors-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-m2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-monitors-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-m4",
+      "name": "M4",
+      "series": "Monitors",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/monitors/m4/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/monitors/spk-db-m4.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/monitors/m4/01-dbaudio-m4-monitor-front.png",
+        "raw-data/raw-assets/db/speakers/monitors/m4/02-dbaudio-m4-monitors-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-stage-monitors-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-monitors-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-monitors-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/monitors/dbaudio-manual-m4-2.4-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-m4-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-m6",
+      "name": "M6",
+      "series": "Monitors",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/monitors/m6/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/monitors/spk-db-m6.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/monitors/m6/01-dbaudio-m6-monitor-front.png",
+        "raw-data/raw-assets/db/speakers/monitors/m6/02-dbaudio-m6-monitors-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-stage-monitors-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-monitors-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-monitors-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/monitors/dbaudio-manual-m6-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-m6-en.txt"
+      ]
+    },
+    {
+      "id": "spk-db-max2",
+      "name": "MAX2",
+      "series": "Monitors",
+      "productPage": "https://www.dbaudio.com/global/en/products/series/monitors/max2/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/monitors/spk-db-max2.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/monitors/max2/01-dbaudio-max2-monitor-front.png",
+        "raw-data/raw-assets/db/speakers/monitors/max2/02-dbaudio-max2-monitor-back.png",
+        "raw-data/raw-assets/db/speakers/monitors/max2/03-dbaudio-max2-monitors-front-th.png"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/brochures/dbaudio-system-brochure-stage-monitors-en.pdf",
+        "raw-data/official-docs/db/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-monitors-1.1-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/cabling/dbaudio-cables-and-adapters-monitors-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/monitors/dbaudio-datasheet-max2-1.2-en.pdf",
+        "raw-data/official-docs/db/downloads/architectural-specifications/dbaudio-arch-specs-max2-1.2-en.txt",
+        "raw-data/official-docs/db/downloads/manuals-documentation/monitors/dbaudio-manual-max2-1.2-en.pdf"
+      ]
+    },
+    {
+      "id": "spk-db-b22-sub",
+      "name": "B22-SUB",
+      "series": "Subwoofers",
+      "productPage": "https://www.dbaudio.com/global/en/products/subwoofers/b22-sub/",
+      "status": "verified",
+      "officialImageSubstituteFor": null,
+      "runtimeImage": "public/assets/img/speakers/db/subwoofers/spk-db-b22-sub.png",
+      "images": [
+        "raw-data/raw-assets/db/speakers/subwoofers/b22-sub/01-dbaudio-b22-subwoofer-front.png",
+        "raw-data/raw-assets/db/speakers/subwoofers/b22-sub/02-dbaudio-socials-open-graph.jpg"
+      ],
+      "documents": [
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-manual-b22-sub-1.3-en.pdf",
+        "raw-data/official-docs/db/downloads/manuals-documentation/b-subwoofers/dbaudio-datasheet-b22-sub-en.pdf"
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "stage": "document",
+      "error": "Error: 404 Not Found: https://www.dbaudio.com/assets/products/downloads/legal/declarations/dbaudio-declaration-of-conformity-ce-a-series-1.1-en_01.pdf\n    at fetchBuffer (file:///C:/Dev/manufacturer-research/tmp/db-official-refresh.mjs:57:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Dev/manufacturer-research/tmp/db-official-refresh.mjs:183:18\n    at async run (file:///C:/Dev/manufacturer-research/tmp/db-official-refresh.mjs:68:29)\n    at async Promise.all (index 3)\n    at async mapLimit (file:///C:/Dev/manufacturer-research/tmp/db-official-refresh.mjs:72:3)\n    at async file:///C:/Dev/manufacturer-research/tmp/db-official-refresh.mjs:182:25"
+    },
+    {
+      "stage": "document",
+      "error": "Error: 404 Not Found: https://www.dbaudio.com/assets/products/downloads/legal/declarations/dbaudio-declaration-of-confirmity-ce-e-series-1.1-en.pdf\n    at fetchBuffer (file:///C:/Dev/manufacturer-research/tmp/db-official-refresh.mjs:57:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///C:/Dev/manufacturer-research/tmp/db-official-refresh.mjs:183:18\n    at async run (file:///C:/Dev/manufacturer-research/tmp/db-official-refresh.mjs:68:29)\n    at async Promise.all (index 1)\n    at async mapLimit (file:///C:/Dev/manufacturer-research/tmp/db-official-refresh.mjs:72:3)\n    at async file:///C:/Dev/manufacturer-research/tmp/db-official-refresh.mjs:182:25"
+    }
+  ]
+}

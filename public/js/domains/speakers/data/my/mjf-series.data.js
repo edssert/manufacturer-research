@@ -1,79 +1,75 @@
-// Meyer Sound MJF 스테이지 모니터 데이터 (2개 모델).
-// 스펙 조사 전 — 제조사 공식 이미지만 등록된 상태다(pending: true).
-// 스펙 필드는 전부 null/빈 배열로 두고, 파생 태그(wayCount/network/
-// lowUnitConfig)는 speakers.schema.js 의 normalize* 가 pending 항목을
-// 건너뛰므로 생성되지 않는다. selfPowered 도 null 로 둔다 — Meyer 제품
-// 대부분이 파워드지만 조사 전에 단정하지 않는다.
-// 이미지 출처: OneDrive MR-Raw-Assets/my/speakers/web/<분류>/<모델>/card/
-// 의 카탈로그 썸네일(흰 배경)을 누끼 처리해 투명 PNG 로 변환. 모델 전용
-// 카드가 없는 UP-4slim/MM-4XP 만 제품군 대표 샷을 썼다.
-export const MY_MJF_SERIES = [
-  {
-    "id": "spk-my-mjf-208",
-    "mfr": "Meyer Sound",
-    "mk": "my",
-    "name": "MJF-208",
-    "cardioidCapability": null,
-    "series": "MJF Series",
-    "throwCat": null,
-    "type": null,
-    "throw": null,
-    "lowInch": null,
-    "lowQty": null,
-    "crossover": null,
-    "crossoverTags": [],
-    "spl": null,
-    "cov": null,
-    "freqs": [],
-    "weight": null,
-    "transducers": null,
-    "connectors": null,
-    "ip": null,
-    "dims": null,
-    "amps": [],
-    "selfPowered": null,
-    "ampRaw": null,
-    "img": "public/assets/img/speakers/my/mjf-series/spk-my-mjf-208.png",
-    "relations": {
-      "ampIds": []
-    },
-    "watt": null,
-    "wattByBand": null,
-    "notes": null,
-    "pending": true
+// Meyer Sound MJF self-powered 스테이지 모니터 2개 모델.
+const MJF_SPECS = {
+  "MJF-208": {
+    lowInch: 8,
+    spl: 129,
+    h: "70°",
+    v: "50°",
+    freqs: [
+      { db: "Operating range", lo: "55 Hz", hi: "18 kHz" },
+      { db: "±4 dB", lo: "60 Hz", hi: "18 kHz" },
+    ],
+    weight: 21.3,
+    transducers: "LF: 2 × 8″ high-power cone (4 Ω) · HF: 1 × 3″ diaphragm compression driver (16 Ω)",
+    dims: "474 x 322 x 472 mm",
+    watt: 1770,
+    measurement:
+      "The Linear Peak SPL table footnote specifies free-field at 4 m referred to 1 m; the architectural specification also describes 1 m on-axis typical boundary loading.",
   },
-  {
-    "id": "spk-my-mjf-210",
-    "mfr": "Meyer Sound",
-    "mk": "my",
-    "name": "MJF-210",
-    "cardioidCapability": null,
-    "series": "MJF Series",
-    "throwCat": null,
-    "type": null,
-    "throw": null,
-    "lowInch": null,
-    "lowQty": null,
-    "crossover": null,
-    "crossoverTags": [],
-    "spl": null,
-    "cov": null,
-    "freqs": [],
-    "weight": null,
-    "transducers": null,
-    "connectors": null,
-    "ip": null,
-    "dims": null,
-    "amps": [],
-    "selfPowered": null,
-    "ampRaw": null,
-    "img": "public/assets/img/speakers/my/mjf-series/spk-my-mjf-210.png",
-    "relations": {
-      "ampIds": []
-    },
-    "watt": null,
-    "wattByBand": null,
-    "notes": null,
-    "pending": true
-  }
+  "MJF-210": {
+    lowInch: 10,
+    spl: 134,
+    h: "50°",
+    v: "70°",
+    freqs: [
+      { db: "Operating range", lo: "55 Hz", hi: "18 kHz" },
+      { db: "±4 dB", lo: "60 Hz", hi: "16 kHz" },
+    ],
+    weight: 30.4,
+    transducers: "LF: 2 × 10″ high-power cone (4 Ω) · HF: 1 × 4″ diaphragm compression driver (8 Ω)",
+    dims: "589 x 353 x 531 mm",
+    watt: 1950,
+    measurement: "Linear Peak SPL is measured 1 m on-axis with typical boundary loading.",
+  },
+};
+
+function makeMjf(name, img) {
+  const spec = MJF_SPECS[name];
+  return {
+    id: `spk-my-${name.toLowerCase()}`,
+    mfr: "Meyer Sound",
+    mk: "my",
+    name,
+    cardioidCapability: "No",
+    series: "MJF Series",
+    throwCat: null,
+    type: "Point",
+    throw: "Stage monitor",
+    lowInch: spec.lowInch,
+    lowQty: 2,
+    crossover: "2-way, active",
+    crossoverTags: ["2-way", "active"],
+    spl: spec.spl,
+    cov: { h: spec.h, v: spec.v },
+    freqs: spec.freqs,
+    weight: spec.weight,
+    transducers: spec.transducers,
+    connectors:
+      "Analog: XLR 3-pin female in / male loop out (optional XLR 5-pin audio+RMS) · AC: powerCON 20 in / loop out",
+    ip: null,
+    dims: spec.dims,
+    amps: [],
+    selfPowered: true,
+    ampRaw: null,
+    img,
+    relations: { ampIds: [] },
+    watt: spec.watt,
+    wattByBand: null,
+    notes: `Self-powered 2-way stage monitor with integral 3-channel class-D amplification. Card SPL uses the published ${spec.spl} dB Linear Peak SPL (M-noise) at the onset of limiting. ${spec.measurement}`,
+  };
+}
+
+export const MY_MJF_SERIES = [
+  makeMjf("MJF-208", "public/assets/img/speakers/my/mjf-series/spk-my-mjf-208-official.jpg"),
+  makeMjf("MJF-210", "public/assets/img/speakers/my/mjf-series/spk-my-mjf-210-official.jpg"),
 ];

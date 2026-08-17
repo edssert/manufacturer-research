@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "pk",
+  "scope": "loudspeakers",
+  "files": [
+    {
+      "path": "raw-data/official-docs/pk/datasheets/t10-a4.pdf",
+      "productIds": [
+        "spk-pk-t10"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://pksound.live/product/line-source/t10",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=94.63&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "fe62424e2ff159005dc596e696a6aa2f8ad3308315d954239df76e1c4861ad74",
+      "bytes": 265099,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/datasheets/t18-a4.pdf",
+      "productIds": [
+        "spk-pk-t18"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://pksound.live/product/low-frequency/t18",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=94.85&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e2934828e1c7079eb3b5c6b74af3695a6505704498ccbdc08e5abc2447b7be2b",
+      "bytes": 338703,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/datasheets/t218-a4.pdf",
+      "productIds": [
+        "spk-pk-t218"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://pksound.live/product/low-frequency/t218",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=94.66&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "81e793b40a6b8ae598130a17ea70bf4f6e37037530bf16e93c4c4fe953c0479e",
+      "bytes": 487857,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/datasheets/t8-a4.pdf",
+      "productIds": [
+        "spk-pk-t8"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://pksound.live/product/line-source/t8",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=94.84&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "4f1141e4fcba7fe7abd1ba68fc975562605395040b39a8a67181722c7349cd47",
+      "bytes": 243426,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/datasheets/trinity-black-a4.pdf",
+      "productIds": [
+        "spk-pk-trinity-black"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://pksound.live/product/line-source/trinity",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=94.62&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "061d9c52c782be357d1413467afb794fd0c11af114614b296c29ebe09b0de083",
+      "bytes": 391250,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/datasheets/ts15-a4.pdf",
+      "productIds": [
+        "spk-pk-ts15"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://pksound.live/product/low-frequency/ts15",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=93.88&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "23d197789386d96083030af5b90f1d35b3340dafb4d93d68db8573d007a0b14c",
+      "bytes": 297997,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/datasheets/tx14-a4.pdf",
+      "productIds": [
+        "spk-pk-tx14"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://pksound.live/product/point-source/tx14",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=93.86&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9f3046aefe987e09df94cfe4c467c3625f2c6331e822209f38e7852908753ecb",
+      "bytes": 489059,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/datasheets/tx26-a4.pdf",
+      "productIds": [
+        "spk-pk-tx26"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://pksound.live/product/point-source/tx26",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=93.87&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9015e0b82fe68a0179f0d4a4c69eefcd75aa9d6f72a2ffc699db706a0e548588",
+      "bytes": 719501,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/manuals/t10-user-manual.pdf",
+      "productIds": [
+        "spk-pk-t10"
+      ],
+      "role": "manual",
+      "sourcePage": "https://pksound.live/product/line-source/t10",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=98.63&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "0fefaf7bee7da7dded69deba14830bd0230b472e40a77ec5b5c52a87461f0cce",
+      "bytes": 2779002,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/manuals/t218-user-manual.pdf",
+      "productIds": [
+        "spk-pk-t218"
+      ],
+      "role": "manual",
+      "sourcePage": "https://pksound.live/product/low-frequency/t218",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=95.66&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c21fe8d0b1e7d913d51b757683434d74b3f442ed58d0c03ce90792001b97f888",
+      "bytes": 2158512,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/system-guides/t10-pattern-control.pdf",
+      "productIds": [
+        "spk-pk-t10"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://pksound.live/product/line-source/t10",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=99.63&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d73dd7c2fafa5d66386195a6bb54008084dfb02615750231395872c5b06ce589",
+      "bytes": 1219043,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/system-guides/trinity-black-pattern-control.pdf",
+      "productIds": [
+        "spk-pk-trinity-black"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://pksound.live/product/line-source/trinity",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=97.62&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "4692d22d7420ed62bdb62e20f3b821bc850d1cb1cc9f0e52f672b2fd918872d6",
+      "bytes": 772496,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/pk/system-guides/trinity-range-power-consumption.pdf",
+      "productIds": [
+        "spk-pk-trinity-black",
+        "spk-pk-t10",
+        "spk-pk-t218"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://pksound.live/product/line-source/trinity",
+      "sourceAsset": "https://pksound.live/component/sobipro/?task=download.file&fid=98.62&sid=55",
+      "retrievedAt": "2026-08-18",
+      "sha256": "3f29238abcd7137a19fecf4f16fe29bf619fe9b767b943d407e1542953d9d30a",
+      "bytes": 225099,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t10-array-a.jpg",
+      "productIds": [
+        "spk-pk-t10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/line-source/t10",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/63/img_t10a.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "ce99a39a5bce77f89ffec96f4e0a87c05a47e91c632cbfb20ca5eb24d8aef163",
+      "bytes": 35027,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t10-array-c.jpg",
+      "productIds": [
+        "spk-pk-t10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/line-source/t10",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/63/img_t10c.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "0fcb893172643cb09fd1d10e8af1c1ad5cc8a1a3472981e7a57950e8c229b529",
+      "bytes": 39972,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t10-network.jpg",
+      "productIds": [
+        "spk-pk-t10"
+      ],
+      "role": "technical-document",
+      "sourcePage": "https://pksound.live/product/line-source/t10",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/63/img_t10-network.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "66004f2d4b0836bbfa82f377d47873faade532713f5570f9a1cb105eaeadb9bc",
+      "bytes": 56057,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t10-technical.jpg",
+      "productIds": [
+        "spk-pk-t10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/line-source/t10",
+      "sourceAsset": "https://pksound.live/images/brand/ExpandView/T10_Tech_for_Site2.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "849a0935f107c1d70e0393527b320e460088fed40f56b6013a429b2356330eb0",
+      "bytes": 154141,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t10.jpg",
+      "productIds": [
+        "spk-pk-t10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/line-source/t10",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/63/img_t10.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "cb47e0df671ee2e201ee62260229c3dcb0a56ed82c1574989192592ab41e48bc",
+      "bytes": 30121,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t18.jpg",
+      "productIds": [
+        "spk-pk-t18"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/low-frequency/t18",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/85/img_img_T18%20960x500.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d062b17b4b9b63e1a1cb86944e133d7178748fdefba4017155a5b7b542f2ce5c",
+      "bytes": 39394,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t218-system-2c.jpg",
+      "productIds": [
+        "spk-pk-t10",
+        "spk-pk-t218"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/low-frequency/t218",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/66/img_img_PKSound_T10_2C.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "53527bcf8bd330e45f1596868fdd79995359bd484bde079268b91cba7fa1337b",
+      "bytes": 56110,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t218-system-a.jpg",
+      "productIds": [
+        "spk-pk-t10",
+        "spk-pk-t218"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/low-frequency/t218",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/66/img_img_PKSound_T10_A.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "56f74907a1c13b0f9663749fa1f154f92182dcdc91007d88bc8a4b61b2a842d1",
+      "bytes": 33576,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t218-system-c.jpg",
+      "productIds": [
+        "spk-pk-t10",
+        "spk-pk-t218"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/low-frequency/t218",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/66/img_img_PKSound_T10_C.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "00fc02a5baa80857175c9cf54371de42c1d636e7c5c3ad07cbbda68c7059439e",
+      "bytes": 39141,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t218-technical.jpg",
+      "productIds": [
+        "spk-pk-t218"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/low-frequency/t218",
+      "sourceAsset": "https://pksound.live/images/brand/ExpandView/T218_Tech_Convergence.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7e59217f497006e9b51b0aad0944418b9cdff90d6ee5371f77188274452cf79d",
+      "bytes": 179553,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t218.jpg",
+      "productIds": [
+        "spk-pk-t218"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/low-frequency/t218",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/66/img_t218.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c07a7960a18c57014daa55bebbb3fcfaa9082734cc60b5b38c56809850c1d5ad",
+      "bytes": 60043,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/t8.jpg",
+      "productIds": [
+        "spk-pk-t8"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/line-source/t8",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/84/img_img_T8%20960x500.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "668a8d96659532264bd46ff38d99f2ca4b528f27095676e9a73d862a2535020e",
+      "bytes": 27045,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/trinity-black-technical.jpg",
+      "productIds": [
+        "spk-pk-trinity-black"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/line-source/trinity",
+      "sourceAsset": "https://pksound.live/images/brand/ExpandView/Trinity_Tech_Convergence.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "4ca85495025d9c49a0a9e3bc3acf5f703fa13cdd7c0d8ba167c212affc71d525",
+      "bytes": 190088,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/trinity-black.jpg",
+      "productIds": [
+        "spk-pk-trinity-black"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/line-source/trinity",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/62/img_trinity-thumb.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "dbc1bec079214820c6cd11c02e263f549e939d8c5b7b23d9516ef787e09ca5a6",
+      "bytes": 41165,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/ts15.jpg",
+      "productIds": [
+        "spk-pk-ts15"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/low-frequency/ts15",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/88/img_img_Ts15%20Web.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "ca3efbcb4541a0c8d5db7353512daf1d1dc0bea9f993e5dc6f4521aa599aa888",
+      "bytes": 22375,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/tx14.jpg",
+      "productIds": [
+        "spk-pk-tx14"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/point-source/tx14",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/86/img_img_Tx14%20Website.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "bf21635959b8512dc0f89d0a2c92331951c201e64616ffffcd5561b5388a6455",
+      "bytes": 72182,
+      "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/pk/speakers/tx26.jpg",
+      "productIds": [
+        "spk-pk-tx26"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://pksound.live/product/point-source/tx26",
+      "sourceAsset": "https://pksound.live/images/sobipro/entries/87/img_img_Tx26%20Website.jpg",
+      "retrievedAt": "2026-08-18",
+      "sha256": "457b5d0bc362198ce8ee8973dc505b56f77a8ab47abee0e5538cdece6df95928",
+      "bytes": 51849,
+      "mimeType": "image/jpeg"
+    }
+  ]
+}

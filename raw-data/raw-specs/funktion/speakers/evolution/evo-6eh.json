@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-evo-6eh",
+  "manufacturerId": "funktion",
+  "name": "Evo 6EH",
+  "slug": "evo-6eh",
+  "series": "Evolution",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/evo-6eh/",
+  "rangePage": "https://funktion-one.com/ranges/evolution",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "Evo 6EH - Medium Dispersion, Arrayable Point Source",
+    "technical": {
+      "bandwidth": "200Hz - 18kHz",
+      "weight": "38kg (84lbs)",
+      "dispersion": "50° Horizontal x 25° Vertical",
+      "connectors": "Neutrik NL4 or NL8 option",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 10\" Operating Band 200Hz - 4kHz Sensitivity at 1m 112dB at 4.9V Power (AES) 250W Nominal Impedence 24Ω Driver 1.4\" Operating Band 4kHz - up Sensitivity at 1m 114dB at 5.6V Power (AES) 75W Nominal Impedence 32Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/fb57d5bd-cef7-446b-811e-5b9043552df9_Evo+6EH.png",
+      "https://images.prismic.io/funktion-one/7b118261-99ee-4f22-a9fc-214f309c3fa8_Evo6EH-F1-WD%3DT0024-00.png",
+      "https://images.prismic.io/funktion-one/aiA70geQX7-eWqh7_GK-E67H.png",
+      "https://images.prismic.io/funktion-one/aiA1LgeQX7-eWqbg_YK-SE6H.png",
+      "https://images.prismic.io/funktion-one/aiA4KQeQX7-eWqfN_WB-E67H.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/3cec9b09-09f4-4d76-9c64-82caa0b9d8e7_Funktion-One_Evo6EH_Spec_Sheet.pdf",
+        "label": "3cec9b09-09f4-4d76-9c64-82caa0b9d8e7_Funktion-One_Evo6EH_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/37769703-4028-409d-8c6c-11f90b21fcc2_Evo6EH-F1-TD%3DT0020-00.PDF",
+        "label": "37769703-4028-409d-8c6c-11f90b21fcc2_Evo6EH-F1-TD%3DT0020-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z2VPeZbqstJ98uhk_Evo6EH-F1-DD%3DT0021-00.PDF",
+        "label": "Z2VPeZbqstJ98uhk_Evo6EH-F1-DD%3DT0021-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/b3811688-12ae-4d08-8df9-a4536c94bfb4_Evo+Brochure+2022+HR.pdf",
+        "label": "b3811688-12ae-4d08-8df9-a4536c94bfb4_Evo+Brochure+2022+HR.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/9e3a3ea5-d0d3-44a4-be75-5f00ba9694e0_Evo6EH-F1-2DM%3DT0022-00.dwg",
+        "label": "9e3a3ea5-d0d3-44a4-be75-5f00ba9694e0_Evo6EH-F1-2DM%3DT0022-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0XiLpbqstJ97yJz_Evo6EH-F1-3DM%3DT0023-00.dwg",
+        "label": "Z0XiLpbqstJ97yJz_Evo6EH-F1-3DM%3DT0023-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/1a53548f-5bbd-4a88-a3b5-2d3d0fefb3e1_YK-SE6H-F1-AD%3DT0053-01.pdf",
+        "label": "1a53548f-5bbd-4a88-a3b5-2d3d0fefb3e1_YK-SE6H-F1-AD%3DT0053-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/b9b0be83-4d44-4216-9827-c9cd4a237479_GK-E67H-F1-AD%3DT0009-01.pdf",
+        "label": "b9b0be83-4d44-4216-9827-c9cd4a237479_GK-E67H-F1-AD%3DT0009-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/b14922ea-5b30-40c9-8a7c-0a215d823b8f_WB-E67H-F1-AD%3DT0010-01.pdf",
+        "label": "b14922ea-5b30-40c9-8a7c-0a215d823b8f_WB-E67H-F1-AD%3DT0010-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/41805f7a-6150-4657-a229-97808ec7e646_EVO6EH-V10.gll.zip",
+        "label": "41805f7a-6150-4657-a229-97808ec7e646_EVO6EH-V10.gll.zip"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/fc712f5f-f051-42c3-9722-9505e6a2ed33_Evo+Ground+Stack+System.pdf",
+        "label": "fc712f5f-f051-42c3-9722-9505e6a2ed33_Evo+Ground+Stack+System.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/2a0e358f-788c-42d1-90f4-bcd0ee0a5b1f_New+Ground+Stack+Straps-2.pdf",
+        "label": "2a0e358f-788c-42d1-90f4-bcd0ee0a5b1f_New+Ground+Stack+Straps-2.pdf"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

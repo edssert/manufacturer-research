@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-f118-mkii",
+  "manufacturerId": "funktion",
+  "name": "F118 MkII",
+  "slug": "f118-mkii",
+  "series": "Horn Loaded Bass",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/f118-mk2/",
+  "rangePage": "https://funktion-one.com/ranges/horn-loaded-bass",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "F118 MkII - Well Defined Horn-Loaded Bass",
+    "technical": {
+      "bandwidth": "50 - 200Hz",
+      "weight": "50kg (110lbs)",
+      "dispersion": "Array dependent",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 18\" Operating Band 25Hz - 200Hz Sensitivity at 1m 102dB at 2.8V Power (AES) 450W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/cbac779c-a7ab-40fa-9400-4b5587c85de2_F118MKII_Website_Product.png",
+      "https://images.prismic.io/funktion-one/390e2020-301f-4a78-ab5f-4462025434a0_F118_MK2-F1-WD%3DT0116-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/f7956233-5f45-4677-b3a1-f1779d97b642_Funktion-One_F118MkII_Spec_Sheet.pdf",
+        "label": "f7956233-5f45-4677-b3a1-f1779d97b642_Funktion-One_F118MkII_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/cfc282ad-6e2f-4db9-8050-2ca2a6141dc9_F118_MK2-F1-TD%3DT0204-00.pdf",
+        "label": "cfc282ad-6e2f-4db9-8050-2ca2a6141dc9_F118_MK2-F1-TD%3DT0204-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/1a358475-d8da-43b5-be65-9d5c3ac20688_F118_MK2-F1-DD%3DT0205-00.PDF",
+        "label": "1a358475-d8da-43b5-be65-9d5c3ac20688_F118_MK2-F1-DD%3DT0205-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/be606dc9-b7a4-4b20-b1ad-6300a1ca4d62_1300.pdf",
+        "label": "be606dc9-b7a4-4b20-b1ad-6300a1ca4d62_1300.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/dbff924f-72fd-49d8-9072-967d57eef851_F118_MK2-F1-2DM%3DT0206-00.dwg",
+        "label": "dbff924f-72fd-49d8-9072-967d57eef851_F118_MK2-F1-2DM%3DT0206-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0XlAJbqstJ97yND_F118_MK2-F1-3DM%3DT0207-00.dwg",
+        "label": "Z0XlAJbqstJ97yND_F118_MK2-F1-3DM%3DT0207-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

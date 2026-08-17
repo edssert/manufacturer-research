@@ -1,4 +1,39 @@
-// d&b audiotechnik V 스피커 데이터 (4개 모델: V8, V12, Vi8, Vi12).
+const vAmp = install => [{
+  model: install ? "40D" : "D80",
+  configs: [{ mode: "", perCh: 2, total: null }]
+}];
+
+const vPoint = ({ id, name, horizontal, spl, install = false }) => ({
+  id, mfr: "d&b audiotechnik", mk: "db", name, series: "V Series", throwCat: null,
+  type: "Point", throw: null, lowInch: 10, lowQty: 2, crossover: "3-way passive",
+  crossoverTags: ["passive crossover"], spl, cov: { h: `${horizontal}°`, v: "40°" },
+  freqs: [{ db: "-5 dB", lo: "59 Hz", hi: "18 kHz" }], weight: 33,
+  transducers: "LF: 2 × 10″ · MF: 1 × 8″ · HF: 1 × 1.4″",
+  connectors: install ? "2 x NL4 and screw terminal block" : "2 x NLT4 F/M",
+  ip: null, dims: "308 x 700 x 466 mm", amps: vAmp(install),
+  ampRaw: `${install ? "40D" : "D80"} (2 per channel)`,
+  notes: `Official ${install ? "Installation Solutions" : "Mobile Solutions"} brochure, PDF p.${install ? 45 : 32}.`,
+  img: `public/assets/img/speakers/db/v/${id}.png`,
+  relations: { ampIds: [install ? "amp-db-40d" : "amp-db-d80"] }, watt: 500,
+  mechanicalSafety: null, presets: null, cardioidCapability: "No"
+});
+
+const vSub = ({ id, name, weight, install = false }) => ({
+  id, mfr: "d&b audiotechnik", mk: "db", name, series: "V Series", throwCat: null,
+  type: "Subwoofer", throw: null, lowInch: 18, lowQty: 2, crossover: "passive",
+  crossoverTags: [], spl: 137, cov: { h: "Cardioid" },
+  freqs: [{ db: "-5 dB", lo: "37 Hz", hi: "115 Hz" }], weight,
+  transducers: "LF: 1 × 18″ · LC: 1 × 12″",
+  connectors: install ? "2 x NL4 and screw terminal block" : "2 x NLT4 F/M",
+  ip: null, dims: "700 x 606 x 728 mm", amps: vAmp(install),
+  ampRaw: `${install ? "40D" : "D80"} (2 per channel)`,
+  notes: `Official ${install ? "Installation Solutions" : "Mobile Solutions"} brochure, PDF p.${install ? 45 : 32}.`,
+  img: `public/assets/img/speakers/db/v/${id}.png`,
+  relations: { ampIds: [install ? "amp-db-40d" : "amp-db-d80"] }, watt: 800,
+  mechanicalSafety: null, presets: null, cardioidCapability: "Integrated"
+});
+
+// d&b audiotechnik V 스피커 데이터.
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
 // 기준 자료는 raw-data/raw-specs/db/speakers/v-series/에 둔다.
@@ -16,7 +51,7 @@
 // - throw/ip/img=null: 원문에 스로우 거리·IP 등급 없음, 이미지 미확보. freqs는 원문에 있는 -5dB 기준만
 //   (CUT 모드 응답 100Hz-18kHz는 컨트롤러 설정값이라 미기재).
 // - watt=500: RMS power handling overall (피크 10ms 2000W는 미기재 — sl/cl 파일의 watt와 동일 성격 유지).
-export const DB_V_SERIES = [
+const DB_V_SERIES_RAW = [
 {
   "id": "spk-db-v8",
   "mfr": "d&b audiotechnik",
@@ -820,3 +855,16 @@ export const DB_V_SERIES = [
   "pending": true
 }
 ];
+
+const DB_V_RESEARCHED = new Map([
+  vPoint({ id: "spk-db-v7p", name: "V7P", horizontal: 75, spl: 140 }),
+  vPoint({ id: "spk-db-v10p", name: "V10P", horizontal: 110, spl: 139 }),
+  vSub({ id: "spk-db-v-sub", name: "V-SUB", weight: 64 }),
+  vSub({ id: "spk-db-v-gsub", name: "V-GSUB", weight: 61 }),
+  vPoint({ id: "spk-db-vi7p", name: "Vi7P", horizontal: 75, spl: 140, install: true }),
+  vPoint({ id: "spk-db-vi10p", name: "Vi10P", horizontal: 110, spl: 139, install: true }),
+  vSub({ id: "spk-db-vi-sub", name: "Vi-SUB", weight: 62, install: true }),
+  vSub({ id: "spk-db-vi-gsub", name: "Vi-GSUB", weight: 58, install: true })
+].map(speaker => [speaker.id, speaker]));
+
+export const DB_V_SERIES = DB_V_SERIES_RAW.map(speaker => DB_V_RESEARCHED.get(speaker.id) || speaker);

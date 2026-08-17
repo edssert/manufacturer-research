@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-br115",
+  "manufacturerId": "funktion",
+  "name": "BR115",
+  "slug": "br115",
+  "series": "Bass Reflex",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/br115/",
+  "rangePage": "https://funktion-one.com/ranges/bass",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "BR115 - Lightweight Compact Bass Reflex",
+    "technical": {
+      "bandwidth": "55Hz - 200Hz",
+      "weight": "33kg (73lbs)",
+      "dispersion": "Array dependent",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15” Operating Band 45Hz - 100Hz Sensitivity at 1m 100dB at 2.8V Power (AES) 500W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/df9f1efd-a4bf-4066-98da-e25e84074055_BR115+600x600.jpg",
+      "https://images.prismic.io/funktion-one/d34121c0-76a9-4549-84bf-4dd8c72436ee_BR115-F1-WD%3DT0121-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/e599794d-7122-48a6-b137-258726c4a63d_Funktion-One_BR115_Spec_Sheet.pdf",
+        "label": "e599794d-7122-48a6-b137-258726c4a63d_Funktion-One_BR115_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/eb4ffd85-4eea-4d40-bbba-b73c1ec82b66_BR115-F1-TD%3DT0164-00.pdf",
+        "label": "eb4ffd85-4eea-4d40-bbba-b73c1ec82b66_BR115-F1-TD%3DT0164-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/6d05d4b7-10da-490e-aaeb-c09e1aaa81b1_BR115-F1-DD%3DT0165-00.pdf",
+        "label": "6d05d4b7-10da-490e-aaeb-c09e1aaa81b1_BR115-F1-DD%3DT0165-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/0ba39a7a-f231-46b9-b245-d6144f73db68_BR115-F1-2DM%3DT0166-00.dwg",
+        "label": "0ba39a7a-f231-46b9-b245-d6144f73db68_BR115-F1-2DM%3DT0166-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/ffdaed58-530b-498c-88e2-e93fd965b87a_BR115-F1-3DM%3DT0167-00.dwg",
+        "label": "ffdaed58-530b-498c-88e2-e93fd965b87a_BR115-F1-3DM%3DT0167-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

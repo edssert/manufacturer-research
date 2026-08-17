@@ -1,10 +1,5 @@
-/* ============================================================
-   base.css — 리셋 + 전역 규칙
-   개별 컴포넌트 스타일은 넣지 않는다 (components/ 참조).
-   ============================================================ */
 * { box-sizing: border-box; }
 
-/* 브라우저 네이티브 UI도 단일 저자극 라이트 팔레트에 맞춘다. */
 :root { color-scheme: light; }
 
 html, body { margin: 0; padding: 0; }
@@ -52,13 +47,12 @@ a { color: inherit; }
 
 ::selection { background: var(--accent); color: var(--accent-ink); }
 
-/* 앱 푸터 */
 .app-footer {
   flex: none;
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 24px 40px;
-  color: var(--muted); /* muted-2 는 텍스트 사용 금지(1-2) — 승격 */
+  color: var(--muted);
   font-size: var(--fs-xs);
   letter-spacing: .02em;
   font-weight: 500;

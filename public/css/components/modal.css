@@ -1,11 +1,3 @@
-/* ============================================================
-   modal.css — 카드형 상세 팝업 (모달)
-   BEM 블록: .modal-overlay, .modal
-   동작 제어: js/ui/modal.js (열기/닫기/ESC/배경 클릭)
-   --mfr 변수: 열릴 때 제조사 색상이 인라인으로 주입됨
-   ============================================================ */
-
-/* ---------- 블록: modal-overlay (배경 딤 레이어) ---------- */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -43,10 +35,8 @@
      동작).*/
   overflow: hidden;
 }
-/* 상태 변경자: 열림 (js/ui/modal.js 가 토글) */
 .modal-overlay--open { display: grid; }
 
-/* ---------- 블록: modal (카드형 팝업 본체) ---------- */
 .modal {
   position: relative; /* .modal__scrollbar 오버레이의 기준점 */
   background: var(--panel);
@@ -561,8 +551,6 @@
    떨어지지 않도록 flex-wrap을
    기본값(nowrap)으로 둬 폭이 좁아져도 줄바꿈 대신 버튼 자체가 줄어들게
    한다. */
-/* [복구] 스택 칸을 포함하는 그룹 변형 — 유실됐던 정의 재작성. 스택+가로
-   버튼이 세로 중앙 기준으로 나란히 정렬되게 한다. */
 .modal__view-switch--grouped { align-items: center; }
 .modal__view-switch-stack {
   display: flex;

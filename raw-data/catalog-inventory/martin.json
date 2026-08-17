@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "martin",
+  "scope": "current-professional-loudspeakers",
+  "officialListingSources": [
+    "https://martin-audio.com/products/loudspeakers",
+    "https://martin-audio.com/products/subwoofers",
+    "https://martin-audio.com/products/stage-monitors",
+    "https://martin-audio.com/products/series",
+    "https://static.martin-audio.com/downloads/MartinAudioCatalogue.pdf"
+  ],
+  "retrievedAt": "2026-08-18",
+  "counts": {
+    "complete": 117,
+    "pending": 0,
+    "total": 117
+  },
+  "categories": {
+    "loudspeakers": 82,
+    "subwoofers": 31,
+    "stage-monitors": 4
+  },
+  "pending": [],
+  "excluded": [
+    {
+      "scope": "Product Archive",
+      "source": "https://martin-audio.com/products/archive",
+      "reason": "Not present in current loudspeaker, subwoofer, or stage-monitor listings."
+    }
+  ],
+  "collection": {
+    "productPages": 117,
+    "rawImages": 500,
+    "officialDocuments": 333,
+    "manifestFiles": 950,
+    "rawImageBytes": 69320719,
+    "officialDocumentBytes": 658311151
+  },
+  "validation": {
+    "currentListingCoverage": "117/117",
+    "cardRequiredFields": "117/117",
+    "pending": 0,
+    "coverageAnglesOver180": 0,
+    "officialImagesArchived": "117/117",
+    "sourceManifestOrder": "Unicode code-point ascending by path"
+  }
+}

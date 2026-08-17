@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "co",
+  "sourcePage": "https://www.cohesionaudio.com/all-products",
+  "retrievedAt": "2026-08-18",
+  "seriesOrder": [
+    "CO Series",
+    "CP Series",
+    "CM Series",
+    "CSB Series",
+    "CF Series"
+  ],
+  "basis": "official-products-page"
+}

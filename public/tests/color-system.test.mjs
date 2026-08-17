@@ -9,10 +9,14 @@ const read = path => readFileSync(resolve(ROOT, path), "utf8");
 const tokens = read("public/css/tokens.css");
 const base = read("public/css/base.css");
 const card = read("public/css/components/card.css");
+const refresh = read("public/css/catalog-refresh.css");
 const modal = read("public/css/components/modal.css");
 const nav = read("public/js/ui/nav.js");
 const main = read("public/js/main.js");
 const bootstrap = read("public/js/bootstrap-preferences.js");
+const controllers = ["speakers", "amplifiers", "accessories", "dsps", "software"].map(domain =>
+  read(`public/js/domains/${domain}/${domain}.controller.js`),
+);
 
 function token(name) {
   const value = tokens.match(new RegExp(`--${name}:\\s*(#[0-9a-f]{3,8})`, "i"))?.[1];
@@ -44,9 +48,28 @@ const raised = token("surface-raised");
 assert.equal(token("product-media-surface").toLowerCase(), "#fff", "제품 사진 면은 순백색이어야 합니다.");
 assert.notEqual(token("bg").toLowerCase(), "#fff", "앱 전체 배경은 눈부심을 줄이기 위해 순백색이면 안 됩니다.");
 assert.notEqual(token("panel").toLowerCase(), "#fff", "넓은 정보 패널은 순백색 제품 면과 구분되어야 합니다.");
-for (const name of ["ink", "ink-2", "muted", "accent", "la", "db", "my"]) {
+for (const name of ["ink", "ink-2", "muted", "accent"]) {
   assert(contrast(token(name), panel) >= 4.5, `${name} 토큰은 흰 카드에서 4.5:1 대비가 필요합니다.`);
   assert(contrast(token(name), raised) >= 4.5, `${name} 토큰은 제품 카드에서 4.5:1 대비가 필요합니다.`);
+}
+token("manufacturer");
+for (const name of [
+  "la",
+  "db",
+  "my",
+  "ad",
+  "co",
+  "nexo",
+  "martin",
+  "jbl",
+  "pk",
+  "eaw",
+  "coda",
+  "funktion",
+  "ev",
+  "rcf",
+]) {
+  assert(tokens.includes(`--${name}: var(--manufacturer);`), `${name}는 중립 제조사 토큰을 공유해야 합니다.`);
 }
 
 const themeSurface = [tokens, base, nav, main, bootstrap].join("\n");
@@ -56,11 +79,34 @@ assert(card.includes("box-shadow: var(--shadow-card)"), "카드는 색 변화 �
 assert(card.includes("background: var(--surface-raised)"), "제품 카드는 전용 순백색 표면 토큰을 사용해야 합니다.");
 assert(!/\.card\s*\{[^}]*border-left:/s.test(card), "제조사 색을 카드 전체 테두리에 반복하지 않습니다.");
 assert(
+  /\.card-group__badge::before\s*\{[^}]*display:\s*none/s.test(refresh),
+  "그룹 배지는 무의미한 제조사 색 마커를 숨겨야 합니다.",
+);
+assert(/\.legend__summary\s*\{[^}]*white-space:\s*nowrap/s.test(refresh), "제조사 수 요약은 한 줄을 유지해야 합니다.");
+assert(
+  /\.topbar__sigil-bars i\s*\{[^}]*background:\s*var\(--ink-2\)/s.test(refresh) &&
+    /\.topbar__kicker\s*\{[^}]*color:\s*var\(--ink-2\)/s.test(refresh),
+  "앱 로고와 분류 문구는 특정 제조사를 연상시키는 색 대신 중립색을 사용해야 합니다.",
+);
+assert(
+  /\.topnav__tab--active\s*\{[^}]*color:\s*var\(--ink\)/s.test(refresh) &&
+    /\.topnav__tab--active::after\s*\{[^}]*background:\s*var\(--ink-2\)/s.test(refresh),
+  "상단 도메인 탐색의 현재 위치도 중립색으로 표현해야 합니다.",
+);
+assert(
+  !controllers.some(source => /card-group__badge[^>]*style="[^"]*(?:border-color|(?:^|;)color:)/.test(source)),
+  "그룹 배지의 글자와 테두리에 제조사 색을 직접 주입하지 않습니다.",
+);
+assert(
   tokens.includes("--gauge-spl-start") && tokens.includes("--gauge-spl-end"),
   "SPL 전용 중성 게이지 토큰이 필요합니다.",
 );
 assert(!tokens.includes("--gauge-amber"), "SPL 게이지에 앰버 팔레트를 재사용하지 않습니다.");
-assert(card.includes("var(--gauge-spl-start), var(--gauge-spl-end)"), "SPL 바는 중성 청회색 토큰을 사용해야 합니다.");
+assert(
+  card.includes("var(--gauge-spl-start), var(--gauge-spl-end)"),
+  "SPL 바의 제조사색 미지정 폴백 토큰이 필요합니다.",
+);
+assert(!/\.card\[data-id\^="spk-"\] \.spl-meter__fill/s.test(refresh), "SPL 바를 제조사별 색으로 덮어쓰면 안 됩니다.");
 assert(modal.includes("box-shadow: var(--shadow-modal)"), "모달은 공통 깊이 토큰을 사용해야 합니다.");
 
 console.log("color system tests: PASS");

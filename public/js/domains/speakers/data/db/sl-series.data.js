@@ -1,7 +1,20 @@
-// d&b audiotechnik SL 스피커 데이터 (6개 모델).
+const slSub = ({ id, name, front, rear, spl, lo, hi, weight, dims, sourceNote = null }) => ({
+  id, mfr: "d&b audiotechnik", mk: "db", name, series: "SL Series", throwCat: null,
+  type: "Subwoofer", throw: null, lowInch: front.inch, lowQty: front.qty + rear.qty,
+  crossover: "2-way active", crossoverTags: ["2ch active split"], spl,
+  cov: { h: "Cardioid" }, freqs: [{ db: "-5 dB", lo, hi }], weight,
+  transducers: `LF: ${front.qty} × ${front.inch}″ · LC: ${rear.qty} × ${rear.inch}″`,
+  connectors: "NLT4 F/M", ip: null, dims,
+  amps: [{ model: "D80", configs: [{ mode: "2-Way Active", perCh: 2, total: null }] }],
+  ampRaw: "D80, 2-Way Active", notes: sourceNote || "Official Mobile Solutions brochure, PDF p.38.",
+  img: `public/assets/img/speakers/db/sl/${id}.png`, relations: { ampIds: ["amp-db-d80"] },
+  watt: null, mechanicalSafety: null, presets: null, cardioidCapability: "Integrated"
+});
+
+// d&b audiotechnik SL 스피커 데이터.
 // 필드 스키마 설명은 speakers.schema.js 참조.
 // 파생 필드(wayCount / network / lowUnitConfig)는 로드 시 normalize 함수가 생성하므로 저장하지 않는다.
-export const DB_SL_SERIES = [
+const DB_SL_SERIES_RAW = [
 {
   "id": "spk-db-gsl8",
   "mfr": "d&b audiotechnik",
@@ -875,3 +888,14 @@ export const DB_SL_SERIES = [
   "pending": true
 }
 ];
+
+const DB_SL_RESEARCHED = new Map([
+  slSub({ id: "spk-db-sl-sub", name: "SL-SUB", front: { qty: 2, inch: 21 }, rear: { qty: 1, inch: 21 }, spl: 144, lo: "30 Hz", hi: "84 Hz", weight: 138, dims: "1300 x 585 x 975 mm" }),
+  slSub({ id: "spk-db-sl-gsub", name: "SL-GSUB", front: { qty: 2, inch: 21 }, rear: { qty: 1, inch: 21 }, spl: 144, lo: "30 Hz", hi: "84 Hz", weight: 132, dims: "1300 x 585 x 975 mm" }),
+  slSub({ id: "spk-db-ksl-sub", name: "KSL-SUB", front: { qty: 2, inch: 15 }, rear: { qty: 1, inch: 15 }, spl: 139, lo: "36 Hz", hi: "105 Hz", weight: 82, dims: "1000 x 450 x 900 mm" }),
+  slSub({ id: "spk-db-ksl-gsub", name: "KSL-GSUB", front: { qty: 2, inch: 15 }, rear: { qty: 1, inch: 15 }, spl: 139, lo: "36 Hz", hi: "105 Hz", weight: 78, dims: "1000 x 450 x 900 mm" }),
+  slSub({ id: "spk-db-xsl-sub", name: "XSL-SUB", front: { qty: 1, inch: 18 }, rear: { qty: 1, inch: 12 }, spl: 137, lo: "37 Hz", hi: "110 Hz", weight: 66, dims: "700 x 565 x 773 mm", sourceNote: "Official XSL-SUB/XSL-GSUB Manual 1.3, section 2.4, PDF p.10." }),
+  slSub({ id: "spk-db-xsl-gsub", name: "XSL-GSUB", front: { qty: 1, inch: 18 }, rear: { qty: 1, inch: 12 }, spl: 137, lo: "37 Hz", hi: "110 Hz", weight: 62, dims: "700 x 565 x 773 mm", sourceNote: "Official XSL-SUB/XSL-GSUB Manual 1.3, section 2.4, PDF p.10." })
+].map(speaker => [speaker.id, speaker]));
+
+export const DB_SL_SERIES = DB_SL_SERIES_RAW.map(speaker => DB_SL_RESEARCHED.get(speaker.id) || speaker);

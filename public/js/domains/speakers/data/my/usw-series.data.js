@@ -66,7 +66,7 @@ export const MY_USW_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-112p.png",
+    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-112-family-official.jpg",
     "relations": {
       "ampIds": []
     },
@@ -120,7 +120,7 @@ export const MY_USW_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-112xp.png",
+    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-112-family-official.jpg",
     "relations": {
       "ampIds": []
     },
@@ -174,7 +174,7 @@ export const MY_USW_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-121p.png",
+    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-121p-official.jpg",
     "relations": {
       "ampIds": []
     },
@@ -228,7 +228,7 @@ export const MY_USW_SERIES = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": null,
-    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-210p.png",
+    "img": "public/assets/img/speakers/my/usw-series/spk-my-usw-210p-official.jpg",
     "relations": {
       "ampIds": []
     },

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-f215-mkii",
+  "manufacturerId": "funktion",
+  "name": "F215 MkII",
+  "slug": "f215-mkii",
+  "series": "Horn Loaded Bass",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/f215-mk2/",
+  "rangePage": "https://funktion-one.com/ranges/horn-loaded-bass",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "F215 MkII - Well Defined Compact Mid-Bass",
+    "technical": {
+      "bandwidth": "60Hz - 250Hz",
+      "weight": "63kg (139lbs)",
+      "dispersion": "Array dependent",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 15\" Operating Band 55/85Hz - 250Hz Sensitivity at 1m 102dB at 2V Power (AES) 2 x 400W Nominal Impedence 2 x 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/ajFOoo1P9HI4UkmK_Funktion-OneF215Mk2Edit.jpg",
+      "https://images.prismic.io/funktion-one/d353ee42-a0f3-4a67-ba8e-c06221976cc3_F215_MK2-F1-WD%3DT0114-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/1e2aba1c-5944-4f65-acc6-322af58e6924_Funktion-One_F215MkII_Spec_Sheet.pdf",
+        "label": "1e2aba1c-5944-4f65-acc6-322af58e6924_Funktion-One_F215MkII_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/4fa46433-0401-43e6-a1df-d951f4d791e4_F215_MK2-F1-TD%3DT0200-00.pdf",
+        "label": "4fa46433-0401-43e6-a1df-d951f4d791e4_F215_MK2-F1-TD%3DT0200-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/9d895a12-a219-451c-9620-79ee8e566b0d_F215_MK2-F1-DD%3DT0201-00.PDF",
+        "label": "9d895a12-a219-451c-9620-79ee8e566b0d_F215_MK2-F1-DD%3DT0201-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/317ad88f-01f5-4c53-8571-4d1844bdb213_F215mk2+M10+threaded+inserts.pdf",
+        "label": "317ad88f-01f5-4c53-8571-4d1844bdb213_F215mk2+M10+threaded+inserts.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/bf531523-0a56-4821-9486-590cc68b0b3d_F215_MK2-F1-2DM%3DT0202-00.dwg",
+        "label": "bf531523-0a56-4821-9486-590cc68b0b3d_F215_MK2-F1-2DM%3DT0202-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0XkaZbqstJ97yL__F215_MK2-F1-3DM%3DT0203-00.dwg",
+        "label": "Z0XkaZbqstJ97yL__F215_MK2-F1-3DM%3DT0203-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

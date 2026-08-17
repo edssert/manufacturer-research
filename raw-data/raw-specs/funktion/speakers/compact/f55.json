@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-f55",
+  "manufacturerId": "funktion",
+  "name": "F55",
+  "slug": "f55",
+  "series": "Compact",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/f55/",
+  "rangePage": "https://funktion-one.com/ranges/compact-range",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "F55 - Wide Dispersion and Excellent Imaging",
+    "technical": {
+      "bandwidth": "160Hz - 13kHz",
+      "weight": "3.5kg (7.5lbs)",
+      "dispersion": "90° x 45°",
+      "connectors": "2 x Neutrik NL4 or Phoenix",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 5\" Operating Band 160Hz - 13kHz Sensitivity at 1m 95dB at 2.8V Power (AES) 60W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/ad2d26d0-1581-41fd-a3ca-efbe17ab6974_F55.png",
+      "https://images.prismic.io/funktion-one/da835bde-c223-4e05-bf2c-327656c2630a_F55-F1-WD%3DT0109-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/18ca46ce-3d97-411b-823c-5aa0bf7a6a1d_Funktion-One_F55_Spec_Sheet.pdf",
+        "label": "18ca46ce-3d97-411b-823c-5aa0bf7a6a1d_Funktion-One_F55_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/5e3d5a4c-8d64-4ea7-b4b8-b83e249b0407_F55+User+Guide+v1.1-2.pdf",
+        "label": "5e3d5a4c-8d64-4ea7-b4b8-b83e249b0407_F55+User+Guide+v1.1-2.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/837f9391-fcfb-448c-a4d7-469d631209ef_F55-A-3D-DWG_2106.dwg",
+        "label": "837f9391-fcfb-448c-a4d7-469d631209ef_F55-A-3D-DWG_2106.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/3e7d90eb-3077-49f9-9cf1-5e19ea4eb53f_F55_EaseData.zip",
+        "label": "3e7d90eb-3077-49f9-9cf1-5e19ea4eb53f_F55_EaseData.zip"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/0b46db66-d84e-4afe-af2f-54b6fbd2e7c8_F55-webdxf.dxf",
+        "label": "0b46db66-d84e-4afe-af2f-54b6fbd2e7c8_F55-webdxf.dxf"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

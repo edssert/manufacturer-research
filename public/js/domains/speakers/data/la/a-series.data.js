@@ -130,11 +130,16 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE2/8), LA4X(2/8), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a10-focus-side.png",
+    "img": "public/assets/img/speakers/la/official/a-series/a10-focus/01-l-acoustics-a10-focus-front.runtime.webp",
     "views": [
-      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-focus-side.png" },
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-focus.png" },
-      { "label": "4×A10 Focus + A10-BUMP", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-focus-array.png" }
+      {
+        "label": "A10 Focus Front",
+        "src": "public/assets/img/speakers/la/official/a-series/a10-focus/01-l-acoustics-a10-focus-front.runtime.webp"
+      },
+      {
+        "label": "A10 Focus Side",
+        "src": "public/assets/img/speakers/la/official/a-series/a10-focus/02-l-acoustics-a10-focus-side.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -308,12 +313,20 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE2/8), LA4X(2/8), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a10i-focus.png",
+    "img": "public/assets/img/speakers/la/official/a-series/a10i-focus/01-a10i-focus.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a10i-focus.png" },
-      { "label": "White Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a10i-focus-white-front.png" },
-      { "label": "Array (Vertical Line)", "src": "public/assets/img/speakers/la/a-series/spk-la-a10i-focus-array.png" },
-      { "label": "4×A10i Focus + A10i-Bump", "src": "public/assets/img/speakers/la/a-series/spk-la-a10i-focus-array2.png" }
+      {
+        "label": "A10i Focus",
+        "src": "public/assets/img/speakers/la/official/a-series/a10i-focus/01-a10i-focus.runtime.webp"
+      },
+      {
+        "label": "A10i Focus White",
+        "src": "public/assets/img/speakers/la/official/a-series/a10i-focus/02-a10i-focus-white.runtime.webp"
+      },
+      {
+        "label": "A10i vertical line",
+        "src": "public/assets/img/speakers/la/official/a-series/a10i-focus/03-a10i-vertical-line.runtime.webp"
+      }
     ],
     "notes": "A10 Wide/Focus의 설치용(install) 버전. L-Acoustics preset_guide_EN.pdf(v29.0)에 A10/A10i가 동일 인클로저로 팩토리 프리셋·앰프 매칭을 공유한다고 명시되어 있어 음향 스펙은 A10 Focus와 동일하게 반영. 물리 스펙은 공식 스펙시트(A10i_AE_EN.docx, 2026-07-10 확보)로 채움.",
     "relations": {
@@ -490,11 +503,20 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE2/8), LA4X(2/8), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a10-wide-side.png",
+    "img": "public/assets/img/speakers/la/official/a-series/a10-wide/01-l-acoustics-a10-wide-a10-focus-front.runtime.webp",
     "views": [
-      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-wide-side.png" },
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-wide.png" },
-      { "label": "3×A10 Wide + A10-Lift", "src": "public/assets/img/speakers/la/a-series/spk-la-a10-wide-array.png" }
+      {
+        "label": "A10 Wide A10 Focus Front",
+        "src": "public/assets/img/speakers/la/official/a-series/a10-wide/01-l-acoustics-a10-wide-a10-focus-front.runtime.webp"
+      },
+      {
+        "label": "A10 Wide Front",
+        "src": "public/assets/img/speakers/la/official/a-series/a10-wide/02-l-acoustics-a10-wide-front.runtime.webp"
+      },
+      {
+        "label": "A10 Wide Side",
+        "src": "public/assets/img/speakers/la/official/a-series/a10-wide/03-l-acoustics-a10-wide-side.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -668,12 +690,20 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE2/8), LA4X(2/8), LA7.16(1/16)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a10i-wide.png",
+    "img": "public/assets/img/speakers/la/official/a-series/a10i-wide/01-a10i-wide-radial.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a10i-wide.png" },
-      { "label": "White Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a10i-wide-white-front.png" },
-      { "label": "Array (Radial)", "src": "public/assets/img/speakers/la/a-series/spk-la-a10i-wide-array.png" },
-      { "label": "3×A10i Wide + A10i-Lift (White RAL)", "src": "public/assets/img/speakers/la/a-series/spk-la-a10i-wide-array2.png" }
+      {
+        "label": "A10i Wide Radial",
+        "src": "public/assets/img/speakers/la/official/a-series/a10i-wide/01-a10i-wide-radial.runtime.webp"
+      },
+      {
+        "label": "A10i Wide",
+        "src": "public/assets/img/speakers/la/official/a-series/a10i-wide/02-a10i-wide.runtime.webp"
+      },
+      {
+        "label": "A10i Wide White",
+        "src": "public/assets/img/speakers/la/official/a-series/a10i-wide/03-a10i-wide-white.runtime.webp"
+      }
     ],
     "notes": "A10 Wide/Focus의 설치용(install) 버전. L-Acoustics preset_guide_EN.pdf(v29.0)에 A10/A10i가 동일 인클로저로 팩토리 프리셋·앰프 매칭을 공유한다고 명시되어 있어 음향 스펙은 A10 Wide와 동일하게 반영. 물리 스펙은 공식 스펙시트(A10i_AE_EN.docx, 2026-07-10 확보)로 채움.",
     "relations": {
@@ -850,12 +880,24 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/10)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a15-focus-side.png",
+    "img": "public/assets/img/speakers/la/official/a-series/a15-focus/01-l-acoustics-a15-focus-front-test.jpg",
     "views": [
-      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-focus-side.png" },
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-focus.png" },
-      { "label": "3×A15 Focus + A15 Wide + Bumper", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-focus-array.png" },
-      { "label": "4×A15 Focus + A15-Bump", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-focus-array2.png" }
+      {
+        "label": "A15 Focus Front test",
+        "src": "public/assets/img/speakers/la/official/a-series/a15-focus/01-l-acoustics-a15-focus-front-test.jpg"
+      },
+      {
+        "label": "A15 Focus Front",
+        "src": "public/assets/img/speakers/la/official/a-series/a15-focus/02-l-acoustics-a15-focus-front.runtime.webp"
+      },
+      {
+        "label": "3xA15 Focus+A15 Wide+Bumper",
+        "src": "public/assets/img/speakers/la/official/a-series/a15-focus/03-l-acoustics-3xa15-focus-a15-wide-bumper.runtime.webp"
+      },
+      {
+        "label": "A15 Focus Side",
+        "src": "public/assets/img/speakers/la/official/a-series/a15-focus/04-l-acoustics-a15-focus-side.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -1037,12 +1079,20 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/10)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a15i-focus.png",
+    "img": "public/assets/img/speakers/la/official/a-series/a15i-focus/01-a15i-focus.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a15i-focus.png" },
-      { "label": "White Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a15i-focus-white-front.png" },
-      { "label": "Array (Vertical Line)", "src": "public/assets/img/speakers/la/a-series/spk-la-a15i-focus-array.png" },
-      { "label": "4×A15i Focus + A15i-Bump", "src": "public/assets/img/speakers/la/a-series/spk-la-a15i-focus-array2.png" }
+      {
+        "label": "A15i Focus",
+        "src": "public/assets/img/speakers/la/official/a-series/a15i-focus/01-a15i-focus.runtime.webp"
+      },
+      {
+        "label": "A15i Focus White",
+        "src": "public/assets/img/speakers/la/official/a-series/a15i-focus/02-a15i-focus-white.runtime.webp"
+      },
+      {
+        "label": "A15i vertical line",
+        "src": "public/assets/img/speakers/la/official/a-series/a15i-focus/03-a15i-vertical-line.runtime.webp"
+      }
     ],
     "notes": "A15 Wide/Focus의 설치용(install) 버전. L-Acoustics preset_guide_EN.pdf(v29.0)에 A15/A15i가 동일 인클로저로 팩토리 프리셋·앰프 매칭을 공유한다고 명시되어 있어 음향 스펙은 A15 Focus와 동일하게 반영. 물리 스펙은 공식 스펙시트(A15i_AE_EN.docx, 2026-07-10 확보)로 채움.",
     "relations": {
@@ -1215,11 +1265,24 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/10)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a15-wide-side.png",
+    "img": "public/assets/img/speakers/la/official/a-series/a15-wide/01-l-acoustics-a15-wide-a15-focus-front.runtime.webp",
     "views": [
-      { "label": "Side", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-wide-side.png" },
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-wide.png" },
-      { "label": "3×A15 Wide + A15-Lift", "src": "public/assets/img/speakers/la/a-series/spk-la-a15-wide-array.png" }
+      {
+        "label": "A15 Wide A15 Focus Front",
+        "src": "public/assets/img/speakers/la/official/a-series/a15-wide/01-l-acoustics-a15-wide-a15-focus-front.runtime.webp"
+      },
+      {
+        "label": "A15 Wide Front",
+        "src": "public/assets/img/speakers/la/official/a-series/a15-wide/02-l-acoustics-a15-wide-front.runtime.webp"
+      },
+      {
+        "label": "3xA15 Wide+A15-Lift",
+        "src": "public/assets/img/speakers/la/official/a-series/a15-wide/03-l-acoustics-3xa15-wide-a15-lift.runtime.webp"
+      },
+      {
+        "label": "A15 Wide Side",
+        "src": "public/assets/img/speakers/la/official/a-series/a15-wide/04-l-acoustics-a15-wide-side.runtime.webp"
+      }
     ],
     "relations": {
       "ampIds": []
@@ -1396,12 +1459,20 @@ export const LA_A_SERIES = [
       }
     ],
     "ampRaw": "LA12X(3/12), LA2Xi(BTL1/2), LA2Xi(SE1/4), LA4X(1/4), LA7.16(1/10)",
-    "img": "public/assets/img/speakers/la/a-series/spk-la-a15i-wide.png",
+    "img": "public/assets/img/speakers/la/official/a-series/a15i-wide/01-a15i-wide-radial.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a15i-wide.png" },
-      { "label": "White Front", "src": "public/assets/img/speakers/la/a-series/spk-la-a15i-wide-white-front.png" },
-      { "label": "Array (Radial)", "src": "public/assets/img/speakers/la/a-series/spk-la-a15i-wide-array.png" },
-      { "label": "3×A15i Wide + A15i-Lift (White RAL)", "src": "public/assets/img/speakers/la/a-series/spk-la-a15i-wide-array2.png" }
+      {
+        "label": "A15i Wide radial",
+        "src": "public/assets/img/speakers/la/official/a-series/a15i-wide/01-a15i-wide-radial.runtime.webp"
+      },
+      {
+        "label": "A15i Wide",
+        "src": "public/assets/img/speakers/la/official/a-series/a15i-wide/02-a15i-wide.runtime.webp"
+      },
+      {
+        "label": "A15i Wide White",
+        "src": "public/assets/img/speakers/la/official/a-series/a15i-wide/03-a15i-wide-white.runtime.webp"
+      }
     ],
     "notes": "A15 Wide/Focus의 설치용(install) 버전. L-Acoustics preset_guide_EN.pdf(v29.0)에 A15/A15i가 동일 인클로저로 팩토리 프리셋·앰프 매칭을 공유한다고 명시되어 있어 음향 스펙은 A15 Wide와 동일하게 반영. 물리 스펙은 공식 스펙시트(A15i_AE_EN.docx, 2026-07-10 확보)로 채움.",
     "relations": {

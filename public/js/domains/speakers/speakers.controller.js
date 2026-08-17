@@ -14,55 +14,52 @@ import { createDomainTab } from "../../ui/domain-tab.js";
 import { openDetailModal } from "../../ui/relation-navigation.js";
 
 import { SPEAKER_CATALOG, initSpeakerDetailProvider } from "./speakers.detail.js";
-import { speakersSchema, MFR, MK_ORDER, THROWCAT_ORDER, SERIES_ORDER_OVERRIDE } from "./speakers.schema.js";
+import { speakersSchema, MFR, MK_ORDER, THROWCAT_ORDER, seriesRank } from "./speakers.schema.js";
 import { cardHTML as speakerCardHTML, setSplRange } from "./speakers.view.js";
 
 /** 시리즈 정렬일 때만 제조사>시리즈 2단 그룹핑, 그 외에는 평면 그리드 */
 function speakersGroupBy(state) {
-  return state.sort === "series" ? {
-      order: MK_ORDER,
-      getKey: d => d.mk,
-      subGroupKey: d => d.series,
-      // 시리즈는 throw 등급(Long → Medium → Short) 순으로 배치. throwCat 이
-      // 없는 독립 서브우퍼 시리즈(예: L-Acoustics "Subwoofers")는 맨 뒤로.
-      // d&b CL/SL처럼 throwCat이 둘 다 없으면 SERIES_ORDER_OVERRIDE를 먼저
-      // 적용해 SL을 CL보다 앞에 둔다.
-      subGroupOrder: (sgA, sgB) => {
-        const oa = SERIES_ORDER_OVERRIDE[sgA], ob = SERIES_ORDER_OVERRIDE[sgB];
-        if (oa != null && ob != null) return oa - ob;
-        if (oa != null) return -1;
-        if (ob != null) return 1;
-        const itemA = SPEAKER_CATALOG.find(d => d.series === sgA);
-        const itemB = SPEAKER_CATALOG.find(d => d.series === sgB);
-        const ia = itemA && itemA.throwCat ? THROWCAT_ORDER.indexOf(itemA.throwCat) : -1;
-        const ib = itemB && itemB.throwCat ? THROWCAT_ORDER.indexOf(itemB.throwCat) : -1;
-        const ra = ia === -1 ? THROWCAT_ORDER.length : ia;
-        const rb = ib === -1 ? THROWCAT_ORDER.length : ib;
-        if (ra !== rb) return ra - rb;
-        return String(sgA).localeCompare(String(sgB));
-      },
-      // 시리즈 내부: Subwoofer 타입(K1-SB, CCL-SUB 등)은 항상 뒤로,
-      // 나머지는 저역 드라이버 크기 큰 순 (동률이면 이름순).
-      // S Series에서 Soka 계열은 lowInch와 무관하게 Syva/Syva Low/Syva Sub
-      // 뒤에 오도록 명시적으로
-      // 뒤로 보낸다. Soka 계열 내부는 이름순(Soka → Soka inWall)으로 자연
-      // 정렬.
-      sortWithinGroup: (a, b) => {
-        const sokaA = a.name.startsWith("Soka") ? 1 : 0;
-        const sokaB = b.name.startsWith("Soka") ? 1 : 0;
-        if (sokaA !== sokaB) return sokaA - sokaB;
-        const subA = a.type === "Subwoofer" ? 1 : 0;
-        const subB = b.type === "Subwoofer" ? 1 : 0;
-        if (subA !== subB) return subA - subB;
-        const diA = a.lowInch || 0, diB = b.lowInch || 0;
-        if (diA !== diB) return diB - diA;
-        return a.name.localeCompare(b.name);
-      },
-      headHTML: (mk, series, group) => {
-        const gt = group[0].throwCat ? esc(group[0].throwCat) + ' · ' + esc(series) : esc(series);
-        return `<span class="card-group__badge card-group__badge--name" style="border-color:${MFR[mk].color}55;color:${MFR[mk].color}">${esc(MFR[mk].name)}</span><span class="card-group__title">${gt}</span><span class="card-group__count">${group.length} ea</span>`;
+  return state.sort === "series"
+    ? {
+        order: MK_ORDER,
+        getKey: d => d.mk,
+        subGroupKey: d => d.series,
+        subGroupOrder: (sgA, sgB, mk) => {
+          const rankA = seriesRank(mk, sgA);
+          const rankB = seriesRank(mk, sgB);
+          if (rankA !== rankB) return rankA - rankB;
+          const itemA = SPEAKER_CATALOG.find(d => d.mk === mk && d.series === sgA);
+          const itemB = SPEAKER_CATALOG.find(d => d.mk === mk && d.series === sgB);
+          const ia = itemA && itemA.throwCat ? THROWCAT_ORDER.indexOf(itemA.throwCat) : -1;
+          const ib = itemB && itemB.throwCat ? THROWCAT_ORDER.indexOf(itemB.throwCat) : -1;
+          const ra = ia === -1 ? THROWCAT_ORDER.length : ia;
+          const rb = ib === -1 ? THROWCAT_ORDER.length : ib;
+          if (ra !== rb) return ra - rb;
+          return String(sgA).localeCompare(String(sgB));
+        },
+        // 시리즈 내부: Subwoofer 타입(K1-SB, CCL-SUB 등)은 항상 뒤로,
+        // 나머지는 저역 드라이버 크기 큰 순 (동률이면 이름순).
+        // S Series에서 Soka 계열은 lowInch와 무관하게 Syva/Syva Low/Syva Sub
+        // 뒤에 오도록 명시적으로
+        // 뒤로 보낸다. Soka 계열 내부는 이름순(Soka → Soka inWall)으로 자연
+        // 정렬.
+        sortWithinGroup: (a, b) => {
+          const sokaA = a.name.startsWith("Soka") ? 1 : 0;
+          const sokaB = b.name.startsWith("Soka") ? 1 : 0;
+          if (sokaA !== sokaB) return sokaA - sokaB;
+          const subA = a.type === "Subwoofer" ? 1 : 0;
+          const subB = b.type === "Subwoofer" ? 1 : 0;
+          if (subA !== subB) return subA - subB;
+          const diA = a.lowInch || 0,
+            diB = b.lowInch || 0;
+          if (diA !== diB) return diB - diA;
+          return a.name.localeCompare(b.name);
+        },
+        headHTML: (mk, series, group) => {
+          return `<span class="card-group__badge card-group__badge--name" style="--mfr:${MFR[mk].color}">${esc(MFR[mk].name)}</span><span class="card-group__title">${esc(series)}</span><span class="card-group__count">${group.length} ea</span>`;
+        },
       }
-    } : null;
+    : null;
 }
 
 /**

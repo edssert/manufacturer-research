@@ -1,12 +1,4 @@
-/**
- * @module ui/pane-interactions
- * pane 안 콘텐츠의 상호작용(뷰 전환·단위 토글·사진 확대·접기/펼치기·커스텀
- * 스크롤바·호버 팝오버). 모달 수명주기는 ui/modal.js 담당.
- *
- * 진입점은 wirePaneInteractions(root) 하나 — openModalWith(pane 1)와
- * openSplitPane(pane 2)이 각자의 루트로 호출한다. 하위 배선은 해당 마크업이
- * 없으면 아무 일도 하지 않으므로 어떤 도메인의 pane 에나 안전하다.
- */
+/** @module ui/pane-interactions */
 
 // split-view.js 의 openSplitPane 을 직접 import 하면 순환 import 가 되므로
 // (split-view.js 가 이 모듈을 import) 콜백 슬롯을 두고 그쪽이 등록한다.

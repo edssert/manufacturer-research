@@ -1,0 +1,2467 @@
+﻿{
+    "schemaVersion":  1,
+    "manufacturerId":  "la",
+    "retrievedAt":  "2026-08-18",
+    "assets":  [
+                   {
+                       "productId":  "spk-la-k1",
+                       "role":  "primary",
+                       "label":  "K1 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k1/K1_Visuals/3DR_K1_3_4_Avant_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k1/01-3dr-k1-3-4-avant-catalogue-01.jpg",
+                       "sourceSha256":  "0ca8e0a41b0526419b92b5b65fbf7e22049169821babeb3524ca3f7abb17acf2",
+                       "runtimeSha256":  "0ca8e0a41b0526419b92b5b65fbf7e22049169821babeb3524ca3f7abb17acf2",
+                       "bytes":  2677754,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k1",
+                       "role":  "alternate-view",
+                       "label":  "K1 3 4 Horizontal 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k1/K1_Visuals/3DR_K1_3_4_Horizontal_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k1/02-3dr-k1-3-4-horizontal-01.jpg",
+                       "sourceSha256":  "c3d2d563501be0607db5a22c360a70e68f53c202440afd05a637da87cf4549b9",
+                       "runtimeSha256":  "c3d2d563501be0607db5a22c360a70e68f53c202440afd05a637da87cf4549b9",
+                       "bytes":  7551519,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k1",
+                       "role":  "alternate-view",
+                       "label":  "8xK1+K1-BUMP 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k1/K1_Visuals/3DR_8xK1+K1-BUMP_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k1/03-3dr-8xk1-k1-bump-01.jpg",
+                       "sourceSha256":  "feed78c7cd2ffd3c785c66272a974a5b219e457a463e0dd5a3545b47b404c1e8",
+                       "runtimeSha256":  "feed78c7cd2ffd3c785c66272a974a5b219e457a463e0dd5a3545b47b404c1e8",
+                       "bytes":  3309656,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k2",
+                       "role":  "primary",
+                       "label":  "K2 3 4 Avant Catalogue 03",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k2/Visuals/3DR_K2_3_4_Avant_Catalogue_03.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k2/01-3dr-k2-3-4-avant-catalogue-03.png",
+                       "sourceSha256":  "6bc425bbbd19e7c93b037bac7f4bb7c3091ed28b301290fc8eb5396766b4d33e",
+                       "runtimeSha256":  "6bc425bbbd19e7c93b037bac7f4bb7c3091ed28b301290fc8eb5396766b4d33e",
+                       "bytes":  9426763,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-k2",
+                       "role":  "alternate-view",
+                       "label":  "K2 Perspective 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k2/Visuals/3DR_K2_Perspective_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k2/02-3dr-k2-perspective-01.png",
+                       "sourceSha256":  "e7dc35e1f754ff69677511173dc7792601d8d5a25eda7806c23234f35c9a1e07",
+                       "runtimeSha256":  "e7dc35e1f754ff69677511173dc7792601d8d5a25eda7806c23234f35c9a1e07",
+                       "bytes":  6469273,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-k2",
+                       "role":  "alternate-view",
+                       "label":  "K2 Detail Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k2/Visuals/3DR_K2_Detail_Catalogue_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k2/03-3dr-k2-detail-catalogue-01.png",
+                       "sourceSha256":  "75f86d20ab0b9e7a2b4add532fa4759c032bcabb2f1af52141a1be793d9da45a",
+                       "runtimeSha256":  "75f86d20ab0b9e7a2b4add532fa4759c032bcabb2f1af52141a1be793d9da45a",
+                       "bytes":  13512700,
+                       "dimensions":  [
+                                          4096,
+                                          1862
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-k2",
+                       "role":  "alternate-view",
+                       "label":  "12xK2+K2-BUMP+K2-BAR 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k2/Visuals/3DR_12xK2+K2-BUMP+K2-BAR_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k2/04-3dr-12xk2-k2-bump-k2-bar-01.png",
+                       "sourceSha256":  "efd7bf01b2deed2ee3c4551a6c153db1a6d021904c1142168fce85d7d2b8e038",
+                       "runtimeSha256":  "efd7bf01b2deed2ee3c4551a6c153db1a6d021904c1142168fce85d7d2b8e038",
+                       "bytes":  6751478,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-k2",
+                       "role":  "alternate-view",
+                       "label":  "4xK2+K2-CHARIOT+2xK2-JACK 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k2/Visuals/3DR_4xK2+K2-CHARIOT+2xK2-JACK_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k2/05-3dr-4xk2-k2-chariot-2xk2-jack-01.png",
+                       "sourceSha256":  "728a95ee59dfb34914fcae9fee4d65965217ede8435461918697cf3f62ef709e",
+                       "runtimeSha256":  "728a95ee59dfb34914fcae9fee4d65965217ede8435461918697cf3f62ef709e",
+                       "bytes":  11500794,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-k3",
+                       "role":  "primary",
+                       "label":  "K3 3 4 Front Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k3/Visuals/3DR_K3_3_4_Front_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k3/01-3dr-k3-3-4-front-catalogue-01.jpg",
+                       "sourceSha256":  "f64994b57167a2d335deb89d9285451403142546239133d3c32c64acd17912a0",
+                       "runtimeSha256":  "f64994b57167a2d335deb89d9285451403142546239133d3c32c64acd17912a0",
+                       "bytes":  7194431,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k3",
+                       "role":  "alternate-view",
+                       "label":  "12xK3+K3-BUMP+K3-BAR 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k3/Visuals/3DR_12xK3+K3-BUMP+K3-BAR_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k3/02-3dr-12xk3-k3-bump-k3-bar-01.jpg",
+                       "sourceSha256":  "4b19f1ae4eeeb8ff01ff8186a3fb1bf4237c63b3e592ed0d9f79ca1b8653983f",
+                       "runtimeSha256":  "4b19f1ae4eeeb8ff01ff8186a3fb1bf4237c63b3e592ed0d9f79ca1b8653983f",
+                       "bytes":  3596119,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k3",
+                       "role":  "alternate-view",
+                       "label":  "4xK3+2xKS28+K3-TILT 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k3/Visuals/3DR_4xK3+2xKS28+K3-TILT_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k3/03-3dr-4xk3-2xks28-k3-tilt-01.jpg",
+                       "sourceSha256":  "c94ab95cb51fe040f571d6b70591c0f7a51041f7249146399282d72ea7365a1b",
+                       "runtimeSha256":  "c94ab95cb51fe040f571d6b70591c0f7a51041f7249146399282d72ea7365a1b",
+                       "bytes":  3832699,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k3",
+                       "role":  "alternate-view",
+                       "label":  "8xK3+2xK3-RIGBAR 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k3/Visuals/3DR_8xK3+2xK3-RIGBAR_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k3/04-3dr-8xk3-2xk3-rigbar-01.jpg",
+                       "sourceSha256":  "c6b925c7f8f644e436b772f2a410a6ff3494b8ed33b76970978df786bf01e076",
+                       "runtimeSha256":  "c6b925c7f8f644e436b772f2a410a6ff3494b8ed33b76970978df786bf01e076",
+                       "bytes":  3217927,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k3",
+                       "role":  "alternate-view",
+                       "label":  "4xK3+K3-CHARIOT+K3-CHARIOTCOV+K3-LID 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k3/Visuals/3DR_4xK3+K3-CHARIOT+K3-CHARIOTCOV+K3-LID_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k3/05-3dr-4xk3-k3-chariot-k3-chariotcov-k3-lid-01.jpg",
+                       "sourceSha256":  "4019db703074aaadacd00cfee8c2ee2fdd8d0d6f86defa32102ddc699bab1e61",
+                       "runtimeSha256":  "4019db703074aaadacd00cfee8c2ee2fdd8d0d6f86defa32102ddc699bab1e61",
+                       "bytes":  5823074,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k3i",
+                       "role":  "primary",
+                       "label":  "K3i 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k3i/Visuals/3DR_K3i_3_4_Avant_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k3i/01-3dr-k3i-3-4-avant-catalogue-01.jpg",
+                       "sourceSha256":  "87b4c80650d6985ca7430bf8ca50415473556ce96435e070d33e4925e385ed54",
+                       "runtimeSha256":  "87b4c80650d6985ca7430bf8ca50415473556ce96435e070d33e4925e385ed54",
+                       "bytes":  7676897,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k3i",
+                       "role":  "alternate-view",
+                       "label":  "K3i Perspective 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k3i/Visuals/3DR_K3i_Perspective_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k3i/02-3dr-k3i-perspective-01.jpg",
+                       "sourceSha256":  "e2c17a12bd13e703ee7c4dec884fbb15a4a947f778ea3ea2a5d5dfd514a68c94",
+                       "runtimeSha256":  "e2c17a12bd13e703ee7c4dec884fbb15a4a947f778ea3ea2a5d5dfd514a68c94",
+                       "bytes":  4830929,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k3i",
+                       "role":  "alternate-view",
+                       "label":  "8xK3i 70�+K3i-BUMP+K3i-BAR 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k3i/Visuals/3DR_8xK3i_70�+K3i-BUMP+K3i-BAR_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k3i/03-3dr-8xk3i-70-k3i-bump-k3i-bar-01.jpg",
+                       "sourceSha256":  "dd2921bb9a3a47b75208884f49fe4c22c9a1abc78a3a1c8b4fe9677e7c5e9f65",
+                       "runtimeSha256":  "dd2921bb9a3a47b75208884f49fe4c22c9a1abc78a3a1c8b4fe9677e7c5e9f65",
+                       "bytes":  3038751,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k3i",
+                       "role":  "alternate-view",
+                       "label":  "8xK3i+K3i-BUMP+K3i-SCREENS White RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k3i/Visuals/3DR_8xK3i+K3i-BUMP+K3i-SCREENS_White_RAL_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k3i/04-3dr-8xk3i-k3i-bump-k3i-screens-white-ral-01.jpg",
+                       "sourceSha256":  "93a5fef993e393313f5f3d66eefa019a4b9f0acef5a730a508ea3b17d074e4b4",
+                       "runtimeSha256":  "93a5fef993e393313f5f3d66eefa019a4b9f0acef5a730a508ea3b17d074e4b4",
+                       "bytes":  5922662,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kara-ii",
+                       "role":  "primary",
+                       "label":  "Kara II 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kara-ii/Visuals/3DR_Kara_II_3_4_Avant_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kara-ii/01-3dr-kara-ii-3-4-avant-catalogue-01.jpg",
+                       "sourceSha256":  "77a2c795de32e6487ecff3289311329e38d0adf3c152c518f183b5e71be8c554",
+                       "runtimeSha256":  "77a2c795de32e6487ecff3289311329e38d0adf3c152c518f183b5e71be8c554",
+                       "bytes":  2091450,
+                       "dimensions":  [
+                                          2500,
+                                          2500
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kara-ii",
+                       "role":  "alternate-view",
+                       "label":  "Kara II 3 4 Avant Catalogue 02",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kara-ii/Visuals/3DR_Kara_II_3_4_Avant_Catalogue_02.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kara-ii/02-3dr-kara-ii-3-4-avant-catalogue-02.jpg",
+                       "sourceSha256":  "767501a8a96cf678ea7a13098c229fc7a03051f7644f4a4e783184da49b07da0",
+                       "runtimeSha256":  "767501a8a96cf678ea7a13098c229fc7a03051f7644f4a4e783184da49b07da0",
+                       "bytes":  2089281,
+                       "dimensions":  [
+                                          2500,
+                                          2500
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kara-ii",
+                       "role":  "alternate-view",
+                       "label":  "12xKara II+M-Bump+M-Bar 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kara-ii/Visuals/3DR_12xKara_II+M-Bump+M-Bar_01.JPG",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kara-ii/03-3dr-12xkara-ii-m-bump-m-bar-01.jpg",
+                       "sourceSha256":  "87bac88c3b51c4982f6eeb5b8d3b2efa9057aab4cfc654eda491eaa46af61f92",
+                       "runtimeSha256":  "87bac88c3b51c4982f6eeb5b8d3b2efa9057aab4cfc654eda491eaa46af61f92",
+                       "bytes":  1097321,
+                       "dimensions":  [
+                                          2500,
+                                          2500
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kara-ii",
+                       "role":  "alternate-view",
+                       "label":  "3xSB18+9xKARA II 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kara-ii/Visuals/3DR_3xSB18+9xKARA_II_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kara-ii/04-3dr-3xsb18-9xkara-ii-01.jpg",
+                       "sourceSha256":  "cfcbc5d0d7b57a38ffedb333dc02e815255dc785c3b29abef182b8ecca8fce94",
+                       "runtimeSha256":  "cfcbc5d0d7b57a38ffedb333dc02e815255dc785c3b29abef182b8ecca8fce94",
+                       "bytes":  968395,
+                       "dimensions":  [
+                                          2500,
+                                          2500
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kara-iii",
+                       "role":  "primary",
+                       "label":  "Kara IIi 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kara-iii/3DR_Kara_IIi_3_4_Avant_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kara-iii/01-3dr-kara-iii-3-4-avant-catalogue-01.jpg",
+                       "sourceSha256":  "216afeaebf340be9417d38d33b6dc7afdedb2facdfaaae46634a1a0be40926e6",
+                       "runtimeSha256":  "216afeaebf340be9417d38d33b6dc7afdedb2facdfaaae46634a1a0be40926e6",
+                       "bytes":  8022968,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kara-iii",
+                       "role":  "alternate-view",
+                       "label":  "Kara IIi 3 4 Avant Catalogue Ailettes Fermees 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kara-iii/3DR_Kara_IIi_3_4_Avant_Catalogue_Ailettes_Fermees_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kara-iii/02-3dr-kara-iii-3-4-avant-catalogue-ailettes-fermees-01.jpg",
+                       "sourceSha256":  "cb3caf5fa8cf7a27308a319e48b2a7c7f04cf3f1fb98a6e5a4b92ad6a3406213",
+                       "runtimeSha256":  "cb3caf5fa8cf7a27308a319e48b2a7c7f04cf3f1fb98a6e5a4b92ad6a3406213",
+                       "bytes":  8061179,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kara-iii",
+                       "role":  "alternate-view",
+                       "label":  "3xSB18 IIi+9xKara IIi+KARAIIi-BUMP 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kara-iii/3DR_3xSB18_IIi+9xKara_IIi+KARAIIi-BUMP_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kara-iii/03-3dr-3xsb18-iii-9xkara-iii-karaiii-bump-01.jpg",
+                       "sourceSha256":  "aae8a028a51ee2cb69ce8247b4d00928fd0fea635c1a6b32b8e716c1a9f21b43",
+                       "runtimeSha256":  "aae8a028a51ee2cb69ce8247b4d00928fd0fea635c1a6b32b8e716c1a9f21b43",
+                       "bytes":  3928180,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kara-iii",
+                       "role":  "alternate-view",
+                       "label":  "8xKara IIi+KARAIIi-BUMP+M-BARi 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kara-iii/3DR_8xKara_IIi+KARAIIi-BUMP+M-BARi_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kara-iii/04-3dr-8xkara-iii-karaiii-bump-m-bari-01.jpg",
+                       "sourceSha256":  "f9f296bd14b04d60903473f687cb8f24d702bcfa320c7af650a2b9a6bb832e79",
+                       "runtimeSha256":  "f9f296bd14b04d60903473f687cb8f24d702bcfa320c7af650a2b9a6bb832e79",
+                       "bytes":  5188146,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kiva-ii",
+                       "role":  "primary",
+                       "label":  "KivaII Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kiva-ii/L-Acoustics_KivaII_Front.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kiva-ii/01-l-acoustics-kivaii-front.jpg",
+                       "sourceSha256":  "3f00fd2a1815ead612bfae280a63029f44c206fbad8e5bcae725859b6a2325d5",
+                       "runtimeSha256":  "3f00fd2a1815ead612bfae280a63029f44c206fbad8e5bcae725859b6a2325d5",
+                       "bytes":  207220,
+                       "dimensions":  [
+                                          750,
+                                          750
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kiva-ii",
+                       "role":  "alternate-view",
+                       "label":  "Kiva-II",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kiva-ii/Kiva-II.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kiva-ii/02-kiva-ii.jpg",
+                       "sourceSha256":  "571913a1964ecc8e72bb00842c17d45192f27a5e239eca78c5d3bd17a372ff01",
+                       "runtimeSha256":  "571913a1964ecc8e72bb00842c17d45192f27a5e239eca78c5d3bd17a372ff01",
+                       "bytes":  125569,
+                       "dimensions":  [
+                                          850,
+                                          300
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kiva-ii",
+                       "role":  "alternate-view",
+                       "label":  "KivaII 6",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kiva-ii/L-Acoustics_KivaII_6.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kiva-ii/03-l-acoustics-kivaii-6.jpg",
+                       "sourceSha256":  "130ccefaf7ee09916559b0dc6382dea6511533d91c59fb57e223f7c65c576bd1",
+                       "runtimeSha256":  "130ccefaf7ee09916559b0dc6382dea6511533d91c59fb57e223f7c65c576bd1",
+                       "bytes":  107423,
+                       "dimensions":  [
+                                          567,
+                                          567
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-kiva-ii",
+                       "role":  "alternate-view",
+                       "label":  "KivaII Rear",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/kiva-ii/L-Acoustics_KivaII_Rear.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/kiva-ii/04-l-acoustics-kivaii-rear.jpg",
+                       "sourceSha256":  "2d139b98790c31df10e0f3b4ef0a9f00c4e5ff20f969fc404925f791a6375fcd",
+                       "runtimeSha256":  "2d139b98790c31df10e0f3b4ef0a9f00c4e5ff20f969fc404925f791a6375fcd",
+                       "bytes":  212873,
+                       "dimensions":  [
+                                          750,
+                                          750
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k1-sb",
+                       "role":  "primary",
+                       "label":  "k1-sb-perspective-01-800x400-1",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k1-sb/page-originals/3dr-k1-sb-perspective-01-800x400-1.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k1-sb/01-3dr-k1-sb-perspective-01-800x400-1.png",
+                       "sourceSha256":  "34db6e1826a8cf143a45c2b77e17a4649e116f0cdec438ee200609e98526731d",
+                       "runtimeSha256":  "34db6e1826a8cf143a45c2b77e17a4649e116f0cdec438ee200609e98526731d",
+                       "bytes":  152618,
+                       "dimensions":  [
+                                          800,
+                                          400
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-k1-sb",
+                       "role":  "alternate-view",
+                       "label":  "K1-SB 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k1-sb/K1-SB_Visuals/3DR_K1-SB_3_4_Avant_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k1-sb/02-3dr-k1-sb-3-4-avant-catalogue-01.jpg",
+                       "sourceSha256":  "00c917c0c12ec6fc2d5a31e2ef7f53cea4066086a58bb5bac55f6fbd80a67937",
+                       "runtimeSha256":  "00c917c0c12ec6fc2d5a31e2ef7f53cea4066086a58bb5bac55f6fbd80a67937",
+                       "bytes":  2279762,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k1-sb",
+                       "role":  "alternate-view",
+                       "label":  "K1-SB Perspective 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k1-sb/K1-SB_Visuals/3DR_K1-SB_Perspective_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k1-sb/03-3dr-k1-sb-perspective-01.jpg",
+                       "sourceSha256":  "248a6c99d748b56a35d610388d9c43fb22d56c1a32702cf450283ef743149cbf",
+                       "runtimeSha256":  "248a6c99d748b56a35d610388d9c43fb22d56c1a32702cf450283ef743149cbf",
+                       "bytes":  5012668,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-k1-sb",
+                       "role":  "alternate-view",
+                       "label":  "8xK1-SB+K1-BUMP 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/k-series/k1-sb/K1-SB_Visuals/3DR_8xK1-SB+K1-BUMP_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/k-series/k1-sb/04-3dr-8xk1-sb-k1-bump-01.jpg",
+                       "sourceSha256":  "5c37b770e30faa4789b1892304928eee487c5f6758bd9b7f57b31dd11b06ab00",
+                       "runtimeSha256":  "5c37b770e30faa4789b1892304928eee487c5f6758bd9b7f57b31dd11b06ab00",
+                       "bytes":  4757912,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-l2",
+                       "role":  "primary",
+                       "label":  "L2",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/l-series/l2/L2.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/l-series/l2/01-l2.png",
+                       "sourceSha256":  "e18868aa3d07166f8152b4bd75ec7cac0a5ac6e37e3a9cbede013dbda22b2b3d",
+                       "runtimeSha256":  "e18868aa3d07166f8152b4bd75ec7cac0a5ac6e37e3a9cbede013dbda22b2b3d",
+                       "bytes":  13405997,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-l2",
+                       "role":  "alternate-view",
+                       "label":  "L2 line",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/l-series/l2/L2 line.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/l-series/l2/02-l2-line.png",
+                       "sourceSha256":  "49a7bedaa1ff3772953b11a7358bc6d2ae01b0d66610275709939f2f1447503d",
+                       "runtimeSha256":  "49a7bedaa1ff3772953b11a7358bc6d2ae01b0d66610275709939f2f1447503d",
+                       "bytes":  5545348,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-l2",
+                       "role":  "alternate-view",
+                       "label":  "L2 on Chariot",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/l-series/l2/L2 on Chariot.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/l-series/l2/03-l2-on-chariot.png",
+                       "sourceSha256":  "83752e745db910ef57498a4f666d59e3741e789c0300c3a9b3de1c4a223ca1c6",
+                       "runtimeSha256":  "83752e745db910ef57498a4f666d59e3741e789c0300c3a9b3de1c4a223ca1c6",
+                       "bytes":  8691709,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-l2d",
+                       "role":  "primary",
+                       "label":  "L2D",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/l-series/l2d/L2D.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/l-series/l2d/01-l2d.png",
+                       "sourceSha256":  "30f0daa1a82d16bc4081678174e8fa965a7329698db4975a01697ff95385a613",
+                       "runtimeSha256":  "30f0daa1a82d16bc4081678174e8fa965a7329698db4975a01697ff95385a613",
+                       "bytes":  13802996,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-l1",
+                       "role":  "primary",
+                       "label":  "l1-product-overview-1",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/l-series/l1/page-originals/l1-product-overview-1.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/l-series/l1/01-l1-product-overview-1.jpg",
+                       "sourceSha256":  "5edd00bec3b70d34e2a0f059a4d11a71ba347955264f2253af63c9704b65cc17",
+                       "runtimeSha256":  "5edd00bec3b70d34e2a0f059a4d11a71ba347955264f2253af63c9704b65cc17",
+                       "bytes":  17254,
+                       "dimensions":  [
+                                          610,
+                                          610
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-l1",
+                       "role":  "alternate-view",
+                       "label":  "l1-featured-image",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/l-series/l1/page-originals/l1-featured-image.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/l-series/l1/02-l1-featured-image.png",
+                       "sourceSha256":  "d294f341ef94d6a32531384da89d86db8ee7aa8eeec1abd047d00bd3b7f86a6e",
+                       "runtimeSha256":  "d294f341ef94d6a32531384da89d86db8ee7aa8eeec1abd047d00bd3b7f86a6e",
+                       "bytes":  22487,
+                       "dimensions":  [
+                                          406,
+                                          297
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-l1",
+                       "role":  "alternate-view",
+                       "label":  "l1-product-overview-3",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/l-series/l1/page-originals/l1-product-overview-3.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/l-series/l1/03-l1-product-overview-3.jpg",
+                       "sourceSha256":  "930da38ca1d8e9bbdae5af15ce76d15929f4773c470a47c4920b383a95226ce1",
+                       "runtimeSha256":  "930da38ca1d8e9bbdae5af15ce76d15929f4773c470a47c4920b383a95226ce1",
+                       "bytes":  22815,
+                       "dimensions":  [
+                                          610,
+                                          610
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-l1d",
+                       "role":  "primary",
+                       "label":  "l1-product-overview-2",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/l-series/l1/page-originals/l1-product-overview-2.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/l-series/l1d/01-l1-product-overview-2.jpg",
+                       "sourceSha256":  "fee53bd9b75c38681542bacbd44d25db9b11a5264e91f973eee718b136042d28",
+                       "runtimeSha256":  "fee53bd9b75c38681542bacbd44d25db9b11a5264e91f973eee718b136042d28",
+                       "bytes":  18382,
+                       "dimensions":  [
+                                          610,
+                                          610
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-l1d",
+                       "role":  "alternate-view",
+                       "label":  "l1-product-overview-4",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/l-series/l1/page-originals/l1-product-overview-4.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/l-series/l1d/02-l1-product-overview-4.jpg",
+                       "sourceSha256":  "5f76fb541b4e127c650237a1742a3a528843dbb011b316095de678fb397ffec3",
+                       "runtimeSha256":  "5f76fb541b4e127c650237a1742a3a528843dbb011b316095de678fb397ffec3",
+                       "bytes":  23546,
+                       "dimensions":  [
+                                          610,
+                                          610
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-cs1",
+                       "role":  "primary",
+                       "label":  "cs1-product-thumbnail",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/cs1/page-originals/cs1-product-thumbnail.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/cs1/01-cs1-product-thumbnail.png",
+                       "sourceSha256":  "082f2d23b4eb647fecd3a16d86ff81de265530b995ee2f2e127d81847170909b",
+                       "runtimeSha256":  "082f2d23b4eb647fecd3a16d86ff81de265530b995ee2f2e127d81847170909b",
+                       "bytes":  83524,
+                       "dimensions":  [
+                                          610,
+                                          610
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-cs1",
+                       "role":  "alternate-view",
+                       "label":  "cs1-product-overview-image-1",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/cs1/page-originals/cs1-product-overview-image-1.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/cs1/02-cs1-product-overview-image-1.jpg",
+                       "sourceSha256":  "83c14b126103b4c65f78e84f666d42690ac9eaae2f0023f94cad6e056b38c022",
+                       "runtimeSha256":  "83c14b126103b4c65f78e84f666d42690ac9eaae2f0023f94cad6e056b38c022",
+                       "bytes":  18581,
+                       "dimensions":  [
+                                          610,
+                                          610
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-cs1",
+                       "role":  "alternate-view",
+                       "label":  "cs1-product-overview-image-2",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/cs1/page-originals/cs1-product-overview-image-2.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/cs1/03-cs1-product-overview-image-2.jpg",
+                       "sourceSha256":  "95a53bea5714ad31ac6086bd9c4d05e2dd2e9617acfedebeb9595f91665076f0",
+                       "runtimeSha256":  "95a53bea5714ad31ac6086bd9c4d05e2dd2e9617acfedebeb9595f91665076f0",
+                       "bytes":  20011,
+                       "dimensions":  [
+                                          610,
+                                          610
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-ks28",
+                       "role":  "primary",
+                       "label":  "KS28 Perspective 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/ks28/KS28_Visuals/3DR_KS28_Perspective_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/ks28/01-3dr-ks28-perspective-01.jpg",
+                       "sourceSha256":  "84fa8519651c325c3406c0cc23364fc69d97b2d1c99ede77ace612acd02e3ee6",
+                       "runtimeSha256":  "84fa8519651c325c3406c0cc23364fc69d97b2d1c99ede77ace612acd02e3ee6",
+                       "bytes":  6757047,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-ks28",
+                       "role":  "alternate-view",
+                       "label":  "KS28 Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/ks28/KS28_Visuals/L-Acoustics_KS28_Front.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/ks28/02-l-acoustics-ks28-front.jpg",
+                       "sourceSha256":  "186ed3c34c0ac4ae6f8048efb5871014337c55239afb2468fee43c4475d20575",
+                       "runtimeSha256":  "186ed3c34c0ac4ae6f8048efb5871014337c55239afb2468fee43c4475d20575",
+                       "bytes":  103102,
+                       "dimensions":  [
+                                          567,
+                                          567
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-ks28",
+                       "role":  "alternate-view",
+                       "label":  "KS28 x4 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/ks28/KS28_Visuals/3DR_KS28_x4_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/ks28/03-3dr-ks28-x4-01.jpg",
+                       "sourceSha256":  "8a8d3fc67408fdf2870d45cac6d9858849389ed805ee13056752ae3dcc8a9b32",
+                       "runtimeSha256":  "8a8d3fc67408fdf2870d45cac6d9858849389ed805ee13056752ae3dcc8a9b32",
+                       "bytes":  6819103,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-ks21",
+                       "role":  "primary",
+                       "label":  "KS21 3 4 Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/ks21/ks21_visuals/L-Acoustics_KS21_3_4_Front.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/ks21/01-l-acoustics-ks21-3-4-front.jpg",
+                       "sourceSha256":  "7232284f1c2963a89f48f5a335647e056e7934a28f8146fbc3fd69c4734fdc8a",
+                       "runtimeSha256":  "7232284f1c2963a89f48f5a335647e056e7934a28f8146fbc3fd69c4734fdc8a",
+                       "bytes":  10980160,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-ks21",
+                       "role":  "alternate-view",
+                       "label":  "KS21 Rear",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/ks21/ks21_visuals/L-Acoustics_KS21_Rear.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/ks21/02-l-acoustics-ks21-rear.jpg",
+                       "sourceSha256":  "2f583a6f0f1801d2f8335af0c7cbf590cbaa538d769b5ca77f2ea582d8490bfb",
+                       "runtimeSha256":  "2f583a6f0f1801d2f8335af0c7cbf590cbaa538d769b5ca77f2ea582d8490bfb",
+                       "bytes":  10633662,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-ks21",
+                       "role":  "alternate-view",
+                       "label":  "KS21 Side",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/ks21/ks21_visuals/L-Acoustics_KS21_Side.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/ks21/03-l-acoustics-ks21-side.jpg",
+                       "sourceSha256":  "d83173fe31d5ec7a90ec84f4ff1c92735cfff1c14a1bc7b6ef97860aa180018a",
+                       "runtimeSha256":  "d83173fe31d5ec7a90ec84f4ff1c92735cfff1c14a1bc7b6ef97860aa180018a",
+                       "bytes":  7893663,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-ks21i",
+                       "role":  "primary",
+                       "label":  "ks21i-perspective-01-800x400-1",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/ks21i/page-originals/3dr-ks21i-perspective-01-800x400-1.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/ks21i/01-3dr-ks21i-perspective-01-800x400-1.png",
+                       "sourceSha256":  "e1e60df1c5922874da227ae3847ac5a17e1b20fe5a170f0ad14164fcb82ef3af",
+                       "runtimeSha256":  "e1e60df1c5922874da227ae3847ac5a17e1b20fe5a170f0ad14164fcb82ef3af",
+                       "bytes":  283221,
+                       "dimensions":  [
+                                          1228,
+                                          614
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-ks21i",
+                       "role":  "alternate-view",
+                       "label":  "ks21i-perspective-white-ral-01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/ks21i/page-originals/3dr-ks21i-perspective-white-ral-01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/ks21i/02-3dr-ks21i-perspective-white-ral-01.png",
+                       "sourceSha256":  "50aefae064808944bfb4a792957aa38517d7325a230065591d89524ea3c7b14d",
+                       "runtimeSha256":  "50aefae064808944bfb4a792957aa38517d7325a230065591d89524ea3c7b14d",
+                       "bytes":  311191,
+                       "dimensions":  [
+                                          800,
+                                          800
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb18",
+                       "role":  "primary",
+                       "label":  "SB18 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb18/SB18_Visuals/3DR_SB18_3_4_Avant_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb18/01-3dr-sb18-3-4-avant-catalogue-01.jpg",
+                       "sourceSha256":  "c300ae01892d3f48644f1df4c769c9ecd236b45abb621f665b0b232b4885aa2b",
+                       "runtimeSha256":  "c300ae01892d3f48644f1df4c769c9ecd236b45abb621f665b0b232b4885aa2b",
+                       "bytes":  4207219,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb18",
+                       "role":  "alternate-view",
+                       "label":  "3xSB18 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb18/SB18_Visuals/3DR_3xSB18_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb18/02-3dr-3xsb18-01.jpg",
+                       "sourceSha256":  "abe8c0ca77623ec235d6781cd292a9c87b490185f7cd14d05d6bd2e5d4be90f7",
+                       "runtimeSha256":  "abe8c0ca77623ec235d6781cd292a9c87b490185f7cd14d05d6bd2e5d4be90f7",
+                       "bytes":  4091550,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb18",
+                       "role":  "alternate-view",
+                       "label":  "SB18 Horizontal 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb18/SB18_Visuals/3DR_SB18_Horizontal_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb18/03-3dr-sb18-horizontal-01.jpg",
+                       "sourceSha256":  "21aa07b3e779ed84aba2f74c956d83aace3ba06ff63ab106347ece82617ab3cf",
+                       "runtimeSha256":  "21aa07b3e779ed84aba2f74c956d83aace3ba06ff63ab106347ece82617ab3cf",
+                       "bytes":  10156739,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb18-iii",
+                       "role":  "primary",
+                       "label":  "SB18 IIi 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb18-iii/Visuels SB18 IIi/3DR_SB18_IIi_3_4_Avant_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb18-iii/01-3dr-sb18-iii-3-4-avant-catalogue-01.jpg",
+                       "sourceSha256":  "4a3ea938a62c66ab7a0fbb8b5f2bbd25859e39aef0252f4a5820bd48bd8b7232",
+                       "runtimeSha256":  "4a3ea938a62c66ab7a0fbb8b5f2bbd25859e39aef0252f4a5820bd48bd8b7232",
+                       "bytes":  9648668,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb18-iii",
+                       "role":  "alternate-view",
+                       "label":  "3xSB18 IIi+9xKara IIi+KARAIIi-BUMP 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb18-iii/Visuels SB18 IIi/3DR_3xSB18_IIi+9xKara_IIi+KARAIIi-BUMP_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb18-iii/02-3dr-3xsb18-iii-9xkara-iii-karaiii-bump-01.jpg",
+                       "sourceSha256":  "aae8a028a51ee2cb69ce8247b4d00928fd0fea635c1a6b32b8e716c1a9f21b43",
+                       "runtimeSha256":  "aae8a028a51ee2cb69ce8247b4d00928fd0fea635c1a6b32b8e716c1a9f21b43",
+                       "bytes":  3928180,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb18-iii",
+                       "role":  "alternate-view",
+                       "label":  "4xSB18 IIi+KARAIIi-BUMP 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb18-iii/Visuels SB18 IIi/3DR_4xSB18_IIi+KARAIIi-BUMP_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb18-iii/03-3dr-4xsb18-iii-karaiii-bump-01.jpg",
+                       "sourceSha256":  "83c9fb79fdb62bb832345d7789c5283c9182e035c86b13a41df275eeb82edc27",
+                       "runtimeSha256":  "83c9fb79fdb62bb832345d7789c5283c9182e035c86b13a41df275eeb82edc27",
+                       "bytes":  5822048,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb18-iii",
+                       "role":  "alternate-view",
+                       "label":  "4xSB18 IIi+KARAIIi-BUMP Cardioide 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb18-iii/Visuels SB18 IIi/3DR_4xSB18_IIi+KARAIIi-BUMP_Cardioide_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb18-iii/04-3dr-4xsb18-iii-karaiii-bump-cardioide-01.jpg",
+                       "sourceSha256":  "5993569b0a31eda108b94da55d5b7ff0bfcc0c6f3efb0b020f8445119657fc2a",
+                       "runtimeSha256":  "5993569b0a31eda108b94da55d5b7ff0bfcc0c6f3efb0b020f8445119657fc2a",
+                       "bytes":  5790522,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb15m",
+                       "role":  "primary",
+                       "label":  "SB15M 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb15m/SB15m_Visuals/3DR_SB15M_3_4_Avant_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb15m/01-3dr-sb15m-3-4-avant-catalogue-01.jpg",
+                       "sourceSha256":  "c3237dc5207c99e868f5a9c4b8f3674498395aa4e76f1a0b09b795db1a178e6b",
+                       "runtimeSha256":  "c3237dc5207c99e868f5a9c4b8f3674498395aa4e76f1a0b09b795db1a178e6b",
+                       "bytes":  4592073,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb15m",
+                       "role":  "alternate-view",
+                       "label":  "SB15M 3 4 Avant Catalogue Blanc 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb15m/SB15m_Visuals/3DR_SB15M_3_4_Avant_Catalogue_Blanc_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb15m/02-3dr-sb15m-3-4-avant-catalogue-blanc-01.jpg",
+                       "sourceSha256":  "b8b68666a0477819b40d21e0115fa1d288e54db87592df680db42309083a6e1e",
+                       "runtimeSha256":  "b8b68666a0477819b40d21e0115fa1d288e54db87592df680db42309083a6e1e",
+                       "bytes":  3585342,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb15m",
+                       "role":  "alternate-view",
+                       "label":  "SB15M Horizontal 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb15m/SB15m_Visuals/3DR_SB15M_Horizontal_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb15m/03-3dr-sb15m-horizontal-01.jpg",
+                       "sourceSha256":  "a712ae598dcffeedf5f6fa275cb0c1803f815a6a7276083238ea672ff7816db6",
+                       "runtimeSha256":  "a712ae598dcffeedf5f6fa275cb0c1803f815a6a7276083238ea672ff7816db6",
+                       "bytes":  10681763,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb10r",
+                       "role":  "primary",
+                       "label":  "SB10r inTile Program RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb10r/3DR_SB10r inTile_Program_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb10r/01-3dr-sb10r-intile-program-ral-01.png",
+                       "sourceSha256":  "e38dc859f5a80f37a7c125ff2147ff5ac5cc13020c370d9f82a660580d8a9342",
+                       "runtimeSha256":  "e38dc859f5a80f37a7c125ff2147ff5ac5cc13020c370d9f82a660580d8a9342",
+                       "bytes":  5513650,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb10r",
+                       "role":  "alternate-view",
+                       "label":  "SB10r inTile White RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb10r/3DR_SB10r inTile_White_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb10r/02-3dr-sb10r-intile-white-ral-01.png",
+                       "sourceSha256":  "fff02414398c586f54008e8e9bb52d5ed411d2508be89b78ee67e761cebd5fb7",
+                       "runtimeSha256":  "fff02414398c586f54008e8e9bb52d5ed411d2508be89b78ee67e761cebd5fb7",
+                       "bytes":  4191131,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb10r",
+                       "role":  "alternate-view",
+                       "label":  "SB10r In Ceiling 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb10r/3DR_SB10r_In_Ceiling_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb10r/03-3dr-sb10r-in-ceiling-01.png",
+                       "sourceSha256":  "340372c9867743ab1e948cc4602ba9d0f9008182e56bf8d626621175c4ba9de1",
+                       "runtimeSha256":  "340372c9867743ab1e948cc4602ba9d0f9008182e56bf8d626621175c4ba9de1",
+                       "bytes":  2795537,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb10r",
+                       "role":  "alternate-view",
+                       "label":  "SB10r In Wall 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb10r/3DR_SB10r_In_Wall_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb10r/04-3dr-sb10r-in-wall-01.jpg",
+                       "sourceSha256":  "7c42fed2b5d82baec37b01e924538d726d4692e5c6712966488fe63acfbefa7e",
+                       "runtimeSha256":  "7c42fed2b5d82baec37b01e924538d726d4692e5c6712966488fe63acfbefa7e",
+                       "bytes":  2051489,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb10r",
+                       "role":  "alternate-view",
+                       "label":  "SB10r In Wall 02",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb10r/3DR_SB10r_In_Wall_02.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb10r/05-3dr-sb10r-in-wall-02.png",
+                       "sourceSha256":  "5ad127ee134abbb21a1bd848696f23fe422c9eaa6bb521ec31344db653e4abcd",
+                       "runtimeSha256":  "5ad127ee134abbb21a1bd848696f23fe422c9eaa6bb521ec31344db653e4abcd",
+                       "bytes":  4917614,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb10r",
+                       "role":  "alternate-view",
+                       "label":  "SB10r inWall Program RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb10r/3DR_SB10r inWall_Program_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb10r/06-3dr-sb10r-inwall-program-ral-01.png",
+                       "sourceSha256":  "ce4951e39251ac14045e598eda8e2c88126bbf5bc94adc85c1ad264e2cd398b7",
+                       "runtimeSha256":  "ce4951e39251ac14045e598eda8e2c88126bbf5bc94adc85c1ad264e2cd398b7",
+                       "bytes":  10641188,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb10r",
+                       "role":  "alternate-view",
+                       "label":  "SB10r inWall White RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb10r/3DR_SB10r inWall_White_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb10r/07-3dr-sb10r-inwall-white-ral-01.png",
+                       "sourceSha256":  "bf296af9b8069066c5b40774cb640f636453c4ca928a778a1eafd2c2e5b061ad",
+                       "runtimeSha256":  "bf296af9b8069066c5b40774cb640f636453c4ca928a778a1eafd2c2e5b061ad",
+                       "bytes":  7707160,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb10i",
+                       "role":  "primary",
+                       "label":  "SB10i 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb10i/3DR_SB10i_3_4_Avant_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb10i/01-3dr-sb10i-3-4-avant-catalogue-01.jpg",
+                       "sourceSha256":  "9e3d7294a2c074a87e85c5d79e6de43bc6a0ad95d28ce2ef20d3a918402fd8a9",
+                       "runtimeSha256":  "9e3d7294a2c074a87e85c5d79e6de43bc6a0ad95d28ce2ef20d3a918402fd8a9",
+                       "bytes":  8901909,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb10i",
+                       "role":  "alternate-view",
+                       "label":  "SB10i Perspective 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb10i/3DR_SB10i_Perspective_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb10i/02-3dr-sb10i-perspective-01.jpg",
+                       "sourceSha256":  "9445f59f4c9681b2ebb65ccb9db4ec3dad12dcb5a86062b23924bf782b5ddfe8",
+                       "runtimeSha256":  "9445f59f4c9681b2ebb65ccb9db4ec3dad12dcb5a86062b23924bf782b5ddfe8",
+                       "bytes":  5354228,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb10i",
+                       "role":  "alternate-view",
+                       "label":  "SB10i Publicite 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb10i/3DR_SB10i_Publicite_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb10i/03-3dr-sb10i-publicite-01.jpg",
+                       "sourceSha256":  "fcc9fc499d102d4178f53da1555b6cec39ed748ba8c970af7a77dfdb332fd8c7",
+                       "runtimeSha256":  "fcc9fc499d102d4178f53da1555b6cec39ed748ba8c970af7a77dfdb332fd8c7",
+                       "bytes":  9242581,
+                       "dimensions":  [
+                                          4960,
+                                          7015
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb10i",
+                       "role":  "alternate-view",
+                       "label":  "SB10i On Wall 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb10i/3DR_SB10i_On_Wall_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb10i/04-3dr-sb10i-on-wall-01.jpg",
+                       "sourceSha256":  "a32de8a9c09d0ade834b1b4a690400f9ed92b1ed401ab226752077834c362305",
+                       "runtimeSha256":  "a32de8a9c09d0ade834b1b4a690400f9ed92b1ed401ab226752077834c362305",
+                       "bytes":  3678770,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb6r",
+                       "role":  "primary",
+                       "label":  "SB6r inTile Program RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb6r/3DR_SB6r inTile_Program_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb6r/01-3dr-sb6r-intile-program-ral-01.png",
+                       "sourceSha256":  "94b75d226ecb12aa0bec1d4f065cc372b383338ce4f25995fba4d9515eb060a7",
+                       "runtimeSha256":  "94b75d226ecb12aa0bec1d4f065cc372b383338ce4f25995fba4d9515eb060a7",
+                       "bytes":  4111792,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb6r",
+                       "role":  "alternate-view",
+                       "label":  "SB6r inTile Program RAL 03",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb6r/3DR_SB6r inTile_Program_RAL_03.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb6r/02-3dr-sb6r-intile-program-ral-03.png",
+                       "sourceSha256":  "e5b7250f19c00fadbb18318565e794520476bf6a1e8d63068b08596f8e61536c",
+                       "runtimeSha256":  "e5b7250f19c00fadbb18318565e794520476bf6a1e8d63068b08596f8e61536c",
+                       "bytes":  7679357,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-sb6r",
+                       "role":  "alternate-view",
+                       "label":  "SB6r inTile White RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb6r/3DR_SB6r inTile_White_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb6r/03-3dr-sb6r-intile-white-ral-01.png",
+                       "sourceSha256":  "1732f480e0fa7380c2fa2f24a64939adf40f31407c45b341ad05e84cd380d90a",
+                       "runtimeSha256":  "1732f480e0fa7380c2fa2f24a64939adf40f31407c45b341ad05e84cd380d90a",
+                       "bytes":  3358098,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb6r",
+                       "role":  "alternate-view",
+                       "label":  "SB6r In Ceiling 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb6r/3DR_SB6r_In_Ceiling_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb6r/04-3dr-sb6r-in-ceiling-01.png",
+                       "sourceSha256":  "5cf0c07169880089a0d16a58cdc6cc91cf9f8c545102ae1bb9e4d9c51e71c0ae",
+                       "runtimeSha256":  "5cf0c07169880089a0d16a58cdc6cc91cf9f8c545102ae1bb9e4d9c51e71c0ae",
+                       "bytes":  2763889,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb6r",
+                       "role":  "alternate-view",
+                       "label":  "SB6r In Wall 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb6r/3DR_SB6r_In_Wall_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb6r/05-3dr-sb6r-in-wall-01.png",
+                       "sourceSha256":  "b466c35cb3b55db3aff9358caa8e61edc97a3d980d3bf3dff983137538e1a29e",
+                       "runtimeSha256":  "b466c35cb3b55db3aff9358caa8e61edc97a3d980d3bf3dff983137538e1a29e",
+                       "bytes":  4730046,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb6r",
+                       "role":  "alternate-view",
+                       "label":  "SB6r inWall White RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb6r/3DR_SB6r inWall_White_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb6r/06-3dr-sb6r-inwall-white-ral-01.png",
+                       "sourceSha256":  "c9b80f020bcaeea0f98b36275b96d550b0a2c7d54aa3f6d8287e77a5a639d1f4",
+                       "runtimeSha256":  "c9b80f020bcaeea0f98b36275b96d550b0a2c7d54aa3f6d8287e77a5a639d1f4",
+                       "bytes":  6345161,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb6i",
+                       "role":  "primary",
+                       "label":  "SB6i 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb6i/3DR_SB6i_3_4_Avant_Catalogue_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb6i/01-3dr-sb6i-3-4-avant-catalogue-01.png",
+                       "sourceSha256":  "d3120311be229c7d243a776f1d14c74bfa9b54969261d1f3c06a2eed04862cdf",
+                       "runtimeSha256":  "d3120311be229c7d243a776f1d14c74bfa9b54969261d1f3c06a2eed04862cdf",
+                       "bytes":  12384188,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb6i",
+                       "role":  "alternate-view",
+                       "label":  "SB6i 3 4 Avant Catalogue White 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb6i/3DR_SB6i_3_4_Avant_Catalogue_White_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb6i/02-3dr-sb6i-3-4-avant-catalogue-white-01.png",
+                       "sourceSha256":  "174b193f222eadeb2256f1af5109a7e09aa3229200316d89fdd61eaa7809f1f7",
+                       "runtimeSha256":  "174b193f222eadeb2256f1af5109a7e09aa3229200316d89fdd61eaa7809f1f7",
+                       "bytes":  16199335,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb6i",
+                       "role":  "alternate-view",
+                       "label":  "SB6i Detail Rigging 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb6i/3DR_SB6i_Detail_Rigging_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb6i/03-3dr-sb6i-detail-rigging-01.png",
+                       "sourceSha256":  "fb08684f9e7ff6e99fa42d50278ee907c3099f37753a4828fa3b79d644ac8f52",
+                       "runtimeSha256":  "fb08684f9e7ff6e99fa42d50278ee907c3099f37753a4828fa3b79d644ac8f52",
+                       "bytes":  3748399,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb6i",
+                       "role":  "alternate-view",
+                       "label":  "SB6i On Celing 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb6i/3DR_SB6i_On_Celing_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb6i/04-3dr-sb6i-on-celing-01.png",
+                       "sourceSha256":  "b4875f150829ec02e9b31f905aa2fc312656eee3bb139b0de9c464c1e5c60de8",
+                       "runtimeSha256":  "b4875f150829ec02e9b31f905aa2fc312656eee3bb139b0de9c464c1e5c60de8",
+                       "bytes":  3810918,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-sb6i",
+                       "role":  "alternate-view",
+                       "label":  "SB6i On Wall 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/subwoofers/sb6i/3DR_SB6i_On_Wall_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/subwoofers/sb6i/05-3dr-sb6i-on-wall-01.png",
+                       "sourceSha256":  "998273ea533636e46d9f092c864ef2e89a189622a3b07f41161858446e8bbba9",
+                       "runtimeSha256":  "998273ea533636e46d9f092c864ef2e89a189622a3b07f41161858446e8bbba9",
+                       "bytes":  6322739,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-soka",
+                       "role":  "primary",
+                       "label":  "Soka 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/soka/3DR_Soka_3_4_Avant_Catalogue_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/soka/01-3dr-soka-3-4-avant-catalogue-01.png",
+                       "sourceSha256":  "df945a42a1f6128b7f6c429b66d109ec2b80fcccfdc15ae6d8cc7dd6598c98b9",
+                       "runtimeSha256":  "df945a42a1f6128b7f6c429b66d109ec2b80fcccfdc15ae6d8cc7dd6598c98b9",
+                       "bytes":  3470243,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-soka",
+                       "role":  "alternate-view",
+                       "label":  "Soka Range 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/soka/3DR_Soka_Range_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/soka/02-3dr-soka-range-01.png",
+                       "sourceSha256":  "4c2b7bb0ecfbd8c0bafa15babb1af9de7b16b142f944325166b5b3b2f9dfae89",
+                       "runtimeSha256":  "4c2b7bb0ecfbd8c0bafa15babb1af9de7b16b142f944325166b5b3b2f9dfae89",
+                       "bytes":  16102547,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-soka",
+                       "role":  "alternate-view",
+                       "label":  "Soka In Wall 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/soka/3DR_Soka_In_Wall_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/soka/03-3dr-soka-in-wall-01.png",
+                       "sourceSha256":  "7dc09c5eab49bdcb8814dac16b036bbe803a38cf2bc8f016629fff9903cf20e1",
+                       "runtimeSha256":  "7dc09c5eab49bdcb8814dac16b036bbe803a38cf2bc8f016629fff9903cf20e1",
+                       "bytes":  4790942,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-soka",
+                       "role":  "alternate-view",
+                       "label":  "Soka On Wall 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/soka/3DR_Soka_On_Wall_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/soka/04-3dr-soka-on-wall-01.png",
+                       "sourceSha256":  "7cc45dada3778bf0f1f5bf8e793320a3247167a1abf7ce30c243a8f8aa8654d8",
+                       "runtimeSha256":  "7cc45dada3778bf0f1f5bf8e793320a3247167a1abf7ce30c243a8f8aa8654d8",
+                       "bytes":  4355559,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-soka-inwall",
+                       "role":  "primary",
+                       "label":  "Soka In Wall 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/soka-inwall/3DR_Soka_In_Wall_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/soka-inwall/01-3dr-soka-in-wall-01.png",
+                       "sourceSha256":  "7dc09c5eab49bdcb8814dac16b036bbe803a38cf2bc8f016629fff9903cf20e1",
+                       "runtimeSha256":  "7dc09c5eab49bdcb8814dac16b036bbe803a38cf2bc8f016629fff9903cf20e1",
+                       "bytes":  4790942,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-soka-inwall",
+                       "role":  "alternate-view",
+                       "label":  "Soka inWall Program RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/soka-inwall/3DR_Soka inWall_Program_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/soka-inwall/02-3dr-soka-inwall-program-ral-01.png",
+                       "sourceSha256":  "09fba87a74dd7561b13f2529718bdbc333082e07856ec66cafa59ba335f973b6",
+                       "runtimeSha256":  "09fba87a74dd7561b13f2529718bdbc333082e07856ec66cafa59ba335f973b6",
+                       "bytes":  3577694,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-soka-inwall",
+                       "role":  "alternate-view",
+                       "label":  "Soka inWall White RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/soka-inwall/3DR_Soka inWall_White_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/soka-inwall/03-3dr-soka-inwall-white-ral-01.png",
+                       "sourceSha256":  "b2fb597bfb39694ef2e661eee2f5bcbe9da09050d8fd4e12eb5999918aa28e6b",
+                       "runtimeSha256":  "b2fb597bfb39694ef2e661eee2f5bcbe9da09050d8fd4e12eb5999918aa28e6b",
+                       "bytes":  3162994,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-syva",
+                       "role":  "primary",
+                       "label":  "Syva 3 4 Avant Catalogue 05",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/syva/Syva_Visuals/3DR_Syva_3_4_Avant_Catalogue_05.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/syva/01-3dr-syva-3-4-avant-catalogue-05.jpg",
+                       "sourceSha256":  "482c2e7b146139a80297c635ffa60418203d59688e2469ea85dea834ad82a792",
+                       "runtimeSha256":  "482c2e7b146139a80297c635ffa60418203d59688e2469ea85dea834ad82a792",
+                       "bytes":  2156938,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-syva",
+                       "role":  "alternate-view",
+                       "label":  "Syva 3 4 Avant Catalogue 08",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/syva/Syva_Visuals/3DR_Syva_3_4_Avant_Catalogue_08.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/syva/02-3dr-syva-3-4-avant-catalogue-08.jpg",
+                       "sourceSha256":  "7ca912b8dbbc0735e9a64bbdcc5342559d0eab7a826215d915d01878f8d88096",
+                       "runtimeSha256":  "7ca912b8dbbc0735e9a64bbdcc5342559d0eab7a826215d915d01878f8d88096",
+                       "bytes":  3235380,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-syva",
+                       "role":  "alternate-view",
+                       "label":  "S Series 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/syva/Syva_Visuals/3DR_S_Series_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/syva/03-3dr-s-series-01.jpg",
+                       "sourceSha256":  "96bcc94a8efd682fe7acacbf2d497e3f3551ed464078bee8bcd7fe7d6760e963",
+                       "runtimeSha256":  "96bcc94a8efd682fe7acacbf2d497e3f3551ed464078bee8bcd7fe7d6760e963",
+                       "bytes":  2488822,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-syva-low",
+                       "role":  "primary",
+                       "label":  "syva-low-3-4-avant-catalogue-06-800x400-1",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/syva-low/page-originals/3dr-syva-low-3-4-avant-catalogue-06-800x400-1.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/syva-low/01-3dr-syva-low-3-4-avant-catalogue-06-800x400-1.png",
+                       "sourceSha256":  "b0f0ddd4df2e01d67d85f49a61a126161c0f1667506627777f579cebef0a36ff",
+                       "runtimeSha256":  "b0f0ddd4df2e01d67d85f49a61a126161c0f1667506627777f579cebef0a36ff",
+                       "bytes":  194075,
+                       "dimensions":  [
+                                          1524,
+                                          762
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-syva-low",
+                       "role":  "alternate-view",
+                       "label":  "Syva Syva-Low 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/syva-low/Syva_Visuals/3DR_Syva_Syva-Low_3_4_Avant_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/syva-low/02-3dr-syva-syva-low-3-4-avant-catalogue-01.jpg",
+                       "sourceSha256":  "9d58fcb4fc0da66369d9296cf9ad28c5b0e36150f380cdf0c9a6361c5a389b8d",
+                       "runtimeSha256":  "9d58fcb4fc0da66369d9296cf9ad28c5b0e36150f380cdf0c9a6361c5a389b8d",
+                       "bytes":  3069878,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-syva-sub",
+                       "role":  "primary",
+                       "label":  "syva-sub-perspective-01-800x400-1",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/s-series/syva-sub/page-originals/3dr-syva-sub-perspective-01-800x400-1.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/s-series/syva-sub/01-3dr-syva-sub-perspective-01-800x400-1.png",
+                       "sourceSha256":  "815e6707aae87fe9562c49c740969ed0702b97ccbaac561cbd5a7ece66ce5b35",
+                       "runtimeSha256":  "815e6707aae87fe9562c49c740969ed0702b97ccbaac561cbd5a7ece66ce5b35",
+                       "bytes":  201868,
+                       "dimensions":  [
+                                          790,
+                                          395
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-a10-focus",
+                       "role":  "primary",
+                       "label":  "A10 Focus Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a10-focus/a10_focus_visuals/L-Acoustics_A10_Focus_Front.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a10-focus/01-l-acoustics-a10-focus-front.jpg",
+                       "sourceSha256":  "fe21248fdc312bfe886dae2f577d0287e4dabf1149b00ccb18caf8ee4ff1a0c6",
+                       "runtimeSha256":  "fe21248fdc312bfe886dae2f577d0287e4dabf1149b00ccb18caf8ee4ff1a0c6",
+                       "bytes":  7766180,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a10-focus",
+                       "role":  "alternate-view",
+                       "label":  "A10 Focus Side",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a10-focus/a10_focus_visuals/L-Acoustics_A10_Focus_Side.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a10-focus/02-l-acoustics-a10-focus-side.jpg",
+                       "sourceSha256":  "40e7804c7cb29e75ff43b074c218d77a6e43300aeffe1e3c2692915847bc382c",
+                       "runtimeSha256":  "40e7804c7cb29e75ff43b074c218d77a6e43300aeffe1e3c2692915847bc382c",
+                       "bytes":  7404902,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a10i-focus",
+                       "role":  "primary",
+                       "label":  "A10i Focus",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a10i-focus/A10i/A10i Focus.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a10i-focus/01-a10i-focus.jpg",
+                       "sourceSha256":  "53f1ccc7118a0364c5bb4ea9bd8c61b3cdcb77de2cf3a8e447a8a0f5cd6a7755",
+                       "runtimeSha256":  "53f1ccc7118a0364c5bb4ea9bd8c61b3cdcb77de2cf3a8e447a8a0f5cd6a7755",
+                       "bytes":  7844267,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a10i-focus",
+                       "role":  "alternate-view",
+                       "label":  "A10i Focus White",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a10i-focus/A10i/A10i Focus White.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a10i-focus/02-a10i-focus-white.jpg",
+                       "sourceSha256":  "6ca54b52efcc2f65d08f702eb747bcac949e26858151734a8500cd1dda6cc070",
+                       "runtimeSha256":  "6ca54b52efcc2f65d08f702eb747bcac949e26858151734a8500cd1dda6cc070",
+                       "bytes":  6507219,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a10i-focus",
+                       "role":  "alternate-view",
+                       "label":  "A10i vertical line",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a10i-focus/A10i/A10i vertical line.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a10i-focus/03-a10i-vertical-line.jpg",
+                       "sourceSha256":  "9cbb554f6eed2a817f54d2401e9e9a57d2f4c8facc2ad7fa7a3e0045b837d22b",
+                       "runtimeSha256":  "9cbb554f6eed2a817f54d2401e9e9a57d2f4c8facc2ad7fa7a3e0045b837d22b",
+                       "bytes":  4456720,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a10-wide",
+                       "role":  "primary",
+                       "label":  "A10 Wide A10 Focus Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a10-wide/a10_wide_visuals/L-Acoustics_A10_Wide_A10_Focus_Front.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a10-wide/01-l-acoustics-a10-wide-a10-focus-front.jpg",
+                       "sourceSha256":  "c00fc6a4d5167af6dd15eca97be6fd064d9e3339042588e07a241138ef124f0a",
+                       "runtimeSha256":  "c00fc6a4d5167af6dd15eca97be6fd064d9e3339042588e07a241138ef124f0a",
+                       "bytes":  9109206,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a10-wide",
+                       "role":  "alternate-view",
+                       "label":  "A10 Wide Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a10-wide/a10_wide_visuals/L-Acoustics_A10_Wide_Front.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a10-wide/02-l-acoustics-a10-wide-front.jpg",
+                       "sourceSha256":  "cc319eec89af962a6d9693c2ef07f87a57cac27040532c312f718810f8393049",
+                       "runtimeSha256":  "cc319eec89af962a6d9693c2ef07f87a57cac27040532c312f718810f8393049",
+                       "bytes":  6233537,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a10-wide",
+                       "role":  "alternate-view",
+                       "label":  "A10 Wide Side",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a10-wide/a10_wide_visuals/L-Acoustics_A10_Wide_Side.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a10-wide/03-l-acoustics-a10-wide-side.jpg",
+                       "sourceSha256":  "5d22ecebb9bb042cb67b192c1767311346075370ee775c65ab1b84a78cdaadd2",
+                       "runtimeSha256":  "5d22ecebb9bb042cb67b192c1767311346075370ee775c65ab1b84a78cdaadd2",
+                       "bytes":  6548972,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a10i-wide",
+                       "role":  "primary",
+                       "label":  "A10i Wide Radial",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a10i-wide/A10i/A10i Wide Radial.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a10i-wide/01-a10i-wide-radial.jpg",
+                       "sourceSha256":  "ea25936986a66919affa7bed9f3062aae65f30935470fd8b529d500c10358076",
+                       "runtimeSha256":  "ea25936986a66919affa7bed9f3062aae65f30935470fd8b529d500c10358076",
+                       "bytes":  7433267,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a10i-wide",
+                       "role":  "alternate-view",
+                       "label":  "A10i Wide",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a10i-wide/A10i/A10i Wide.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a10i-wide/02-a10i-wide.jpg",
+                       "sourceSha256":  "b5ac508861e86899dedb2443859e29293db766dc76f936571484933aa0f9d631",
+                       "runtimeSha256":  "b5ac508861e86899dedb2443859e29293db766dc76f936571484933aa0f9d631",
+                       "bytes":  6982294,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a10i-wide",
+                       "role":  "alternate-view",
+                       "label":  "A10i Wide White",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a10i-wide/A10i/A10i Wide White.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a10i-wide/03-a10i-wide-white.jpg",
+                       "sourceSha256":  "5ea18d3382eda4ea945db39360a6e0cd0ca40757745e76c737175f265f0cc46d",
+                       "runtimeSha256":  "5ea18d3382eda4ea945db39360a6e0cd0ca40757745e76c737175f265f0cc46d",
+                       "bytes":  5868370,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15-focus",
+                       "role":  "primary",
+                       "label":  "A15 Focus Front test",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15-focus/a15_focus_visuals/L-Acoustics_A15_Focus_Front_test.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15-focus/01-l-acoustics-a15-focus-front-test.jpg",
+                       "sourceSha256":  "bc91ed1cf468b80d1af381f552e1f48792f195d8a39afbbdf33fb5c580946ddd",
+                       "runtimeSha256":  "bc91ed1cf468b80d1af381f552e1f48792f195d8a39afbbdf33fb5c580946ddd",
+                       "bytes":  813653,
+                       "dimensions":  [
+                                          1500,
+                                          1500
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15-focus",
+                       "role":  "alternate-view",
+                       "label":  "A15 Focus Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15-focus/a15_focus_visuals/L-Acoustics_A15_Focus_Front.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15-focus/02-l-acoustics-a15-focus-front.jpg",
+                       "sourceSha256":  "e1a1e291636535bed6b30cd91f26fab793dd56ab1ef0e163bc21cd142fb9a44b",
+                       "runtimeSha256":  "e1a1e291636535bed6b30cd91f26fab793dd56ab1ef0e163bc21cd142fb9a44b",
+                       "bytes":  8318126,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15-focus",
+                       "role":  "alternate-view",
+                       "label":  "3xA15 Focus+A15 Wide+Bumper",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15-focus/a15_focus_visuals/L-Acoustics_3xA15_Focus+A15_Wide+Bumper.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15-focus/03-l-acoustics-3xa15-focus-a15-wide-bumper.jpg",
+                       "sourceSha256":  "57dc017cb0158b210a4fe934737d97c14797052d1c409f3abeb99a276d03e335",
+                       "runtimeSha256":  "57dc017cb0158b210a4fe934737d97c14797052d1c409f3abeb99a276d03e335",
+                       "bytes":  6139751,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15-focus",
+                       "role":  "alternate-view",
+                       "label":  "A15 Focus Side",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15-focus/a15_focus_visuals/L-Acoustics_A15_Focus_Side.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15-focus/04-l-acoustics-a15-focus-side.jpg",
+                       "sourceSha256":  "cc6e2a161666f7e77739434b93f21044d6feb8bbec3c2ad7c0588e23e902785a",
+                       "runtimeSha256":  "cc6e2a161666f7e77739434b93f21044d6feb8bbec3c2ad7c0588e23e902785a",
+                       "bytes":  6960346,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15i-focus",
+                       "role":  "primary",
+                       "label":  "A15i Focus",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15i-focus/A15i/A15i Focus.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15i-focus/01-a15i-focus.jpg",
+                       "sourceSha256":  "fce4191ddecde0203373a8c26420274094f7d145899e40ca15d997edab4d8266",
+                       "runtimeSha256":  "fce4191ddecde0203373a8c26420274094f7d145899e40ca15d997edab4d8266",
+                       "bytes":  8546671,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15i-focus",
+                       "role":  "alternate-view",
+                       "label":  "A15i Focus White",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15i-focus/A15i/A15i Focus White.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15i-focus/02-a15i-focus-white.jpg",
+                       "sourceSha256":  "cc24b751ca9f89b9662ef9ce14d2cf4e502aba60da942828a9c7f8cb61517dbb",
+                       "runtimeSha256":  "cc24b751ca9f89b9662ef9ce14d2cf4e502aba60da942828a9c7f8cb61517dbb",
+                       "bytes":  6558348,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15i-focus",
+                       "role":  "alternate-view",
+                       "label":  "A15i vertical line",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15i-focus/A15i/A15i vertical line.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15i-focus/03-a15i-vertical-line.jpg",
+                       "sourceSha256":  "8ebcfd93527932b421958bfdf1d6eb5358ad592122de8fdd7e1a4fd79f2f31a4",
+                       "runtimeSha256":  "8ebcfd93527932b421958bfdf1d6eb5358ad592122de8fdd7e1a4fd79f2f31a4",
+                       "bytes":  4564622,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15-wide",
+                       "role":  "primary",
+                       "label":  "A15 Wide A15 Focus Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15-wide/a15_wide_visuals/L-Acoustics_A15_Wide_A15_Focus_Front.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15-wide/01-l-acoustics-a15-wide-a15-focus-front.jpg",
+                       "sourceSha256":  "c52d391a8312e98ce773dc2470366e4ecc3b86baa66065d837b5c01bb4a100b3",
+                       "runtimeSha256":  "c52d391a8312e98ce773dc2470366e4ecc3b86baa66065d837b5c01bb4a100b3",
+                       "bytes":  5120117,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15-wide",
+                       "role":  "alternate-view",
+                       "label":  "A15 Wide Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15-wide/a15_wide_visuals/L-Acoustics_A15_Wide_Front.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15-wide/02-l-acoustics-a15-wide-front.jpg",
+                       "sourceSha256":  "3b505e8d83a6ea59df24c4972d28dfa011b89c077dca76c0470e21f4e9b9e68b",
+                       "runtimeSha256":  "3b505e8d83a6ea59df24c4972d28dfa011b89c077dca76c0470e21f4e9b9e68b",
+                       "bytes":  7262732,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15-wide",
+                       "role":  "alternate-view",
+                       "label":  "3xA15 Wide+A15-Lift",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15-wide/a15_wide_visuals/L-Acoustics_3xA15_Wide+A15-Lift.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15-wide/03-l-acoustics-3xa15-wide-a15-lift.jpg",
+                       "sourceSha256":  "488d93c5b39a4b3c75931ca41e8cde9a922b45dc59812a3ab6e52de8adddce5b",
+                       "runtimeSha256":  "488d93c5b39a4b3c75931ca41e8cde9a922b45dc59812a3ab6e52de8adddce5b",
+                       "bytes":  5147348,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15-wide",
+                       "role":  "alternate-view",
+                       "label":  "A15 Wide Side",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15-wide/a15_wide_visuals/L-Acoustics_A15_Wide_Side.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15-wide/04-l-acoustics-a15-wide-side.jpg",
+                       "sourceSha256":  "313ffdf78e29c078cf4a4c22271a199a17cbe42451abe98a2fae4a876b662e52",
+                       "runtimeSha256":  "313ffdf78e29c078cf4a4c22271a199a17cbe42451abe98a2fae4a876b662e52",
+                       "bytes":  6458733,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15i-wide",
+                       "role":  "primary",
+                       "label":  "A15i Wide radial",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15i-wide/A15i/A15i Wide radial.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15i-wide/01-a15i-wide-radial.jpg",
+                       "sourceSha256":  "c1aa6e30278e0f447af8a51e05dcd7ab2dcef04f8fe387d3852539f03774bc8f",
+                       "runtimeSha256":  "c1aa6e30278e0f447af8a51e05dcd7ab2dcef04f8fe387d3852539f03774bc8f",
+                       "bytes":  8070349,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15i-wide",
+                       "role":  "alternate-view",
+                       "label":  "A15i Wide",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15i-wide/A15i/A15i Wide.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15i-wide/02-a15i-wide.jpg",
+                       "sourceSha256":  "be3ce4d85d0ccb866ef250bc1ab23210d9729289143e0048915ba8858877245b",
+                       "runtimeSha256":  "be3ce4d85d0ccb866ef250bc1ab23210d9729289143e0048915ba8858877245b",
+                       "bytes":  7724440,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-a15i-wide",
+                       "role":  "alternate-view",
+                       "label":  "A15i Wide White",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/a-series/a15i-wide/A15i/A15i Wide White.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/a-series/a15i-wide/03-a15i-wide-white.jpg",
+                       "sourceSha256":  "900340ed49b205f9d0314e8f3e163fadccf3a3e455b9d619787953d6693b2a3e",
+                       "runtimeSha256":  "900340ed49b205f9d0314e8f3e163fadccf3a3e455b9d619787953d6693b2a3e",
+                       "bytes":  6302199,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x15-hiq",
+                       "role":  "primary",
+                       "label":  "L Acoustics Gamme X",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x15-hiq/X15 HiQ/L_Acoustics_Gamme_X.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x15-hiq/01-l-acoustics-gamme-x.jpg",
+                       "sourceSha256":  "6c4349fda6a7974fce351e5afe965ca0c40aec773b4fb0ba342d49604963e04c",
+                       "runtimeSha256":  "6c4349fda6a7974fce351e5afe965ca0c40aec773b4fb0ba342d49604963e04c",
+                       "bytes":  3729123,
+                       "dimensions":  [
+                                          6000,
+                                          2728
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x15-hiq",
+                       "role":  "alternate-view",
+                       "label":  "L Acoustics X15HiQ Blanc",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x15-hiq/X15 HiQ/L_Acoustics_X15HiQ_Blanc.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x15-hiq/02-l-acoustics-x15hiq-blanc.jpg",
+                       "sourceSha256":  "b4a9f925431c1af8108b5b376d1e452cdf84737c13492c098091778c35e67e9f",
+                       "runtimeSha256":  "b4a9f925431c1af8108b5b376d1e452cdf84737c13492c098091778c35e67e9f",
+                       "bytes":  2201806,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x15-hiq",
+                       "role":  "alternate-view",
+                       "label":  "L Acoustics X15HiQ Detail",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x15-hiq/X15 HiQ/L_Acoustics_X15HiQ_Detail.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x15-hiq/03-l-acoustics-x15hiq-detail.jpg",
+                       "sourceSha256":  "d8e7e7c5fd33c769255b9729226abe461269bacd60e91ce4dbd9b86a2d7faee8",
+                       "runtimeSha256":  "d8e7e7c5fd33c769255b9729226abe461269bacd60e91ce4dbd9b86a2d7faee8",
+                       "bytes":  2620346,
+                       "dimensions":  [
+                                          4096,
+                                          1862
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x15-hiq",
+                       "role":  "alternate-view",
+                       "label":  "L Acoustics X15HiQ Horizontal",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x15-hiq/X15 HiQ/L_Acoustics_X15HiQ_Horizontal.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x15-hiq/04-l-acoustics-x15hiq-horizontal.jpg",
+                       "sourceSha256":  "9d311e1f1b41dbdf8ade0bbfd42b8cb7e4513b9e9d08e8ee99fe2e409f7f4046",
+                       "runtimeSha256":  "9d311e1f1b41dbdf8ade0bbfd42b8cb7e4513b9e9d08e8ee99fe2e409f7f4046",
+                       "bytes":  3130377,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x15-hiq",
+                       "role":  "alternate-view",
+                       "label":  "L Acoustics X15HiQ",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x15-hiq/X15 HiQ/L_Acoustics_X15HiQ.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x15-hiq/05-l-acoustics-x15hiq.jpg",
+                       "sourceSha256":  "8f6e894e59a5ceeda105f568f368d04d4ed5802f2477f0e904c9e5ac27a3c170",
+                       "runtimeSha256":  "8f6e894e59a5ceeda105f568f368d04d4ed5802f2477f0e904c9e5ac27a3c170",
+                       "bytes":  4537725,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x12",
+                       "role":  "primary",
+                       "label":  "L Acoustics Gamme X",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x12/X12/L_Acoustics_Gamme_X.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x12/01-l-acoustics-gamme-x.jpg",
+                       "sourceSha256":  "6c4349fda6a7974fce351e5afe965ca0c40aec773b4fb0ba342d49604963e04c",
+                       "runtimeSha256":  "6c4349fda6a7974fce351e5afe965ca0c40aec773b4fb0ba342d49604963e04c",
+                       "bytes":  3729123,
+                       "dimensions":  [
+                                          6000,
+                                          2728
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x12",
+                       "role":  "alternate-view",
+                       "label":  "L Acoustics X12 Blanc",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x12/X12/L_Acoustics_X12_Blanc.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x12/02-l-acoustics-x12-blanc.jpg",
+                       "sourceSha256":  "90d7b8880679d206592d26a0df7101ba8379dcd7c2cdbdf96599fc35c8152831",
+                       "runtimeSha256":  "90d7b8880679d206592d26a0df7101ba8379dcd7c2cdbdf96599fc35c8152831",
+                       "bytes":  2667500,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x12",
+                       "role":  "alternate-view",
+                       "label":  "L Acoustics X12 Horizontal",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x12/X12/L_Acoustics_X12_Horizontal.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x12/03-l-acoustics-x12-horizontal.jpg",
+                       "sourceSha256":  "9b39260b8c35ca2575444b634f65e0bc7e66e6f7eddcb41fba19d23e637b441e",
+                       "runtimeSha256":  "9b39260b8c35ca2575444b634f65e0bc7e66e6f7eddcb41fba19d23e637b441e",
+                       "bytes":  2536045,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x12",
+                       "role":  "alternate-view",
+                       "label":  "L Acoustics X12",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x12/X12/L_Acoustics_X12.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x12/04-l-acoustics-x12.jpg",
+                       "sourceSha256":  "d6be0ca460c20d1c663bbe940c048541d83f0bcbd659252b47d7960157eb0508",
+                       "runtimeSha256":  "d6be0ca460c20d1c663bbe940c048541d83f0bcbd659252b47d7960157eb0508",
+                       "bytes":  4776200,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x8",
+                       "role":  "primary",
+                       "label":  "L Acoustics Gamme X",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x8/X8/L_Acoustics_Gamme_X.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x8/01-l-acoustics-gamme-x.jpg",
+                       "sourceSha256":  "6c4349fda6a7974fce351e5afe965ca0c40aec773b4fb0ba342d49604963e04c",
+                       "runtimeSha256":  "6c4349fda6a7974fce351e5afe965ca0c40aec773b4fb0ba342d49604963e04c",
+                       "bytes":  3729123,
+                       "dimensions":  [
+                                          6000,
+                                          2728
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x8",
+                       "role":  "alternate-view",
+                       "label":  "L Acoustics X8 Blanc",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x8/X8/L_Acoustics_X8_Blanc.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x8/02-l-acoustics-x8-blanc.jpg",
+                       "sourceSha256":  "6831812dd9785a378a95defd44f676b0c48d4b6aa9ad2e55831266c0707bef5f",
+                       "runtimeSha256":  "6831812dd9785a378a95defd44f676b0c48d4b6aa9ad2e55831266c0707bef5f",
+                       "bytes":  2486936,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x8",
+                       "role":  "alternate-view",
+                       "label":  "L Acoustics X8",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x8/X8/L_Acoustics_X8.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x8/03-l-acoustics-x8.jpg",
+                       "sourceSha256":  "07fe893f6bc7754f2e3112a9d762214251888bca2e5c34190f3b958e37e8bbc4",
+                       "runtimeSha256":  "07fe893f6bc7754f2e3112a9d762214251888bca2e5c34190f3b958e37e8bbc4",
+                       "bytes":  3353935,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x8i",
+                       "role":  "primary",
+                       "label":  "X8i Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x8i/X8i_visuals/X8i Front.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x8i/01-x8i-front.png",
+                       "sourceSha256":  "55ebab4f774606a45c73bae803b79fd185f11e0aef6c3b1fd3d70018b3fa5de1",
+                       "runtimeSha256":  "55ebab4f774606a45c73bae803b79fd185f11e0aef6c3b1fd3d70018b3fa5de1",
+                       "bytes":  11502808,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x8i",
+                       "role":  "alternate-view",
+                       "label":  "X8i Front White",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x8i/X8i_visuals/X8i Front White.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x8i/02-x8i-front-white.png",
+                       "sourceSha256":  "9e33a802d3737114083d23cbeecfa869cab067341b7960deb9f7d6480091e650",
+                       "runtimeSha256":  "9e33a802d3737114083d23cbeecfa869cab067341b7960deb9f7d6480091e650",
+                       "bytes":  15999432,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x8i",
+                       "role":  "alternate-view",
+                       "label":  "X8i RAL Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x8i/X8i_visuals/X8i RAL Front.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x8i/03-x8i-ral-front.png",
+                       "sourceSha256":  "5c47a348f19f3273b6d63ecfb83f406209ec42aba24f58e0186de6a96f0990bc",
+                       "runtimeSha256":  "5c47a348f19f3273b6d63ecfb83f406209ec42aba24f58e0186de6a96f0990bc",
+                       "bytes":  19646065,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x8i",
+                       "role":  "alternate-view",
+                       "label":  "X8i Horizontal",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x8i/X8i_visuals/X8i Horizontal.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x8i/04-x8i-horizontal.png",
+                       "sourceSha256":  "6920545f921b42b1258c36f69b3dffa6b77b314becb73296d915d5bb4a289d41",
+                       "runtimeSha256":  "6920545f921b42b1258c36f69b3dffa6b77b314becb73296d915d5bb4a289d41",
+                       "bytes":  12987469,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x8i",
+                       "role":  "alternate-view",
+                       "label":  "X8i RAL Rear",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x8i/X8i_visuals/X8i RAL Rear.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x8i/05-x8i-ral-rear.png",
+                       "sourceSha256":  "95de5117dc0790631f79f83d113475f29db34a5d04c37c7c2e06e2ecc315c341",
+                       "runtimeSha256":  "95de5117dc0790631f79f83d113475f29db34a5d04c37c7c2e06e2ecc315c341",
+                       "bytes":  17795392,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x8i",
+                       "role":  "alternate-view",
+                       "label":  "X8i on wall horizontal",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x8i/X8i_visuals/X8i on wall horizontal.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x8i/06-x8i-on-wall-horizontal.png",
+                       "sourceSha256":  "79b0e24e3e76b5ffc4db688d84bc14187db76088e3a402ada374e71169b0e8ee",
+                       "runtimeSha256":  "79b0e24e3e76b5ffc4db688d84bc14187db76088e3a402ada374e71169b0e8ee",
+                       "bytes":  5839933,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x8i",
+                       "role":  "alternate-view",
+                       "label":  "X8i on wall vertical",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x8i/X8i_visuals/X8i on wall vertical.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x8i/07-x8i-on-wall-vertical.png",
+                       "sourceSha256":  "a8280662f6fcd4c62ba736a05641891e53a58cb62f4b34a5ec63bbcd215c37a0",
+                       "runtimeSha256":  "a8280662f6fcd4c62ba736a05641891e53a58cb62f4b34a5ec63bbcd215c37a0",
+                       "bytes":  5447789,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x6i",
+                       "role":  "primary",
+                       "label":  "X6i Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x6i/X6i_visuals/X6i Front.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x6i/01-x6i-front.png",
+                       "sourceSha256":  "cf5d2d4e604cde50bef4bf5d41373e9b8476b02bff14c4eb32b91f2f55672535",
+                       "runtimeSha256":  "cf5d2d4e604cde50bef4bf5d41373e9b8476b02bff14c4eb32b91f2f55672535",
+                       "bytes":  13280939,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x6i",
+                       "role":  "alternate-view",
+                       "label":  "X6i Front White",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x6i/X6i_visuals/X6i Front White.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x6i/02-x6i-front-white.png",
+                       "sourceSha256":  "9dec800253a7fbfaddebffa30f3f5103cca2aee53d34c511540f18a0b7838eea",
+                       "runtimeSha256":  "9dec800253a7fbfaddebffa30f3f5103cca2aee53d34c511540f18a0b7838eea",
+                       "bytes":  16257120,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x6i",
+                       "role":  "alternate-view",
+                       "label":  "X6i RAL Front",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x6i/X6i_visuals/X6i RAL Front.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x6i/03-x6i-ral-front.png",
+                       "sourceSha256":  "a981e94573717a001840d8765cf3438346d5360421af34e10cd16e8b260be987",
+                       "runtimeSha256":  "a981e94573717a001840d8765cf3438346d5360421af34e10cd16e8b260be987",
+                       "bytes":  12169664,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x6i",
+                       "role":  "alternate-view",
+                       "label":  "X6i Horizontal",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x6i/X6i_visuals/X6i Horizontal.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x6i/04-x6i-horizontal.png",
+                       "sourceSha256":  "d642b939c60a8cc5f5895f9e89beb7b562df5fcd22b66ad6a0252d7ab2bb9ff9",
+                       "runtimeSha256":  "d642b939c60a8cc5f5895f9e89beb7b562df5fcd22b66ad6a0252d7ab2bb9ff9",
+                       "bytes":  11086885,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x6i",
+                       "role":  "alternate-view",
+                       "label":  "X6i RAL Rear",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x6i/X6i_visuals/X6i RAL Rear.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x6i/05-x6i-ral-rear.png",
+                       "sourceSha256":  "1e6ea0e51dc38fa85c77ee78f4a08b1ce8c9208fd5a6deac1d463fa2753b0864",
+                       "runtimeSha256":  "1e6ea0e51dc38fa85c77ee78f4a08b1ce8c9208fd5a6deac1d463fa2753b0864",
+                       "bytes":  11602453,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x6i",
+                       "role":  "alternate-view",
+                       "label":  "X6i on wall horizontal",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x6i/X6i_visuals/X6i on wall horizontal.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x6i/06-x6i-on-wall-horizontal.png",
+                       "sourceSha256":  "b9c7d51aebd48de5d39cf1f5d4a3d6ba37a71513d4ea78e8d0d0821e6ee908ef",
+                       "runtimeSha256":  "b9c7d51aebd48de5d39cf1f5d4a3d6ba37a71513d4ea78e8d0d0821e6ee908ef",
+                       "bytes":  5385273,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x6i",
+                       "role":  "alternate-view",
+                       "label":  "X6i on wall vertical",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x6i/X6i_visuals/X6i on wall vertical.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x6i/07-x6i-on-wall-vertical.png",
+                       "sourceSha256":  "80f6370e9795b8bd0323e582d544ffd97a0afff9fd59ce018274f92b84a9a293",
+                       "runtimeSha256":  "80f6370e9795b8bd0323e582d544ffd97a0afff9fd59ce018274f92b84a9a293",
+                       "bytes":  5439853,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-5xt",
+                       "role":  "primary",
+                       "label":  "5XT 3 4 Avant Catalogue 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/5xt/Visuals/3DR_5XT_3_4_Avant_Catalogue_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/5xt/01-3dr-5xt-3-4-avant-catalogue-01.jpg",
+                       "sourceSha256":  "bb3473a89900957c21cb495ae0fd48f4b6f15c6c0de5304dfef684b616d77618",
+                       "runtimeSha256":  "bb3473a89900957c21cb495ae0fd48f4b6f15c6c0de5304dfef684b616d77618",
+                       "bytes":  4881452,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-5xt",
+                       "role":  "alternate-view",
+                       "label":  "5XT 3 4 Avant Catalogue Blanc 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/5xt/Visuals/3DR_5XT_3_4_Avant_Catalogue_Blanc_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/5xt/02-3dr-5xt-3-4-avant-catalogue-blanc-01.jpg",
+                       "sourceSha256":  "1f6440578f875284d08f72784e051093f0bca1b2e71716f8f670595b5180c872",
+                       "runtimeSha256":  "1f6440578f875284d08f72784e051093f0bca1b2e71716f8f670595b5180c872",
+                       "bytes":  2795922,
+                       "dimensions":  [
+                                          3000,
+                                          3000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-5xt",
+                       "role":  "alternate-view",
+                       "label":  "5XT 3 4 Arriere 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/5xt/Visuals/3DR_5XT_3_4_Arriere_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/5xt/03-3dr-5xt-3-4-arriere-01.jpg",
+                       "sourceSha256":  "8ce6b7cfcbd44acaa1e249a26337fb6c6a721b853d3531ea21c81e35d7508504",
+                       "runtimeSha256":  "8ce6b7cfcbd44acaa1e249a26337fb6c6a721b853d3531ea21c81e35d7508504",
+                       "bytes":  6270059,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-5xt",
+                       "role":  "alternate-view",
+                       "label":  "5XT+5XT-SEALPLATE Rear 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/5xt/Visuals/3DR_5XT+5XT-SEALPLATE_Rear_01.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/5xt/04-3dr-5xt-5xt-sealplate-rear-01.jpg",
+                       "sourceSha256":  "7633704d4bd6330463c5b4762125b6cf4d8c80149e1e38ed398cb120eea72e02",
+                       "runtimeSha256":  "7633704d4bd6330463c5b4762125b6cf4d8c80149e1e38ed398cb120eea72e02",
+                       "bytes":  7325381,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x4i",
+                       "role":  "primary",
+                       "label":  "L Acoustics X series",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x4i/Visuals/L_Acoustics_X_series.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x4i/01-l-acoustics-x-series.jpg",
+                       "sourceSha256":  "9e8510d0401362b587a2eafee4bddd6341552fe4199827b1fa9402951bb54c64",
+                       "runtimeSha256":  "9e8510d0401362b587a2eafee4bddd6341552fe4199827b1fa9402951bb54c64",
+                       "bytes":  4061450,
+                       "dimensions":  [
+                                          7000,
+                                          2728
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x4i",
+                       "role":  "alternate-view",
+                       "label":  "X4i rear",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x4i/Visuals/L-Acoustics_X4i_rear.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x4i/02-l-acoustics-x4i-rear.jpg",
+                       "sourceSha256":  "1ca05594d56e5e96105dad9e936724d8c963fede31f6c6d95dcb079b1f03f9be",
+                       "runtimeSha256":  "1ca05594d56e5e96105dad9e936724d8c963fede31f6c6d95dcb079b1f03f9be",
+                       "bytes":  6134555,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x4i",
+                       "role":  "alternate-view",
+                       "label":  "X4i X-U4i",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x4i/Visuals/L-Acoustics_X4i_X-U4i.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x4i/03-l-acoustics-x4i-x-u4i.jpg",
+                       "sourceSha256":  "8fdd730563efb5947dc7a6e65f421a1ee3f5056d01400314fc955b0eb6b9824d",
+                       "runtimeSha256":  "8fdd730563efb5947dc7a6e65f421a1ee3f5056d01400314fc955b0eb6b9824d",
+                       "bytes":  3809258,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x4i",
+                       "role":  "alternate-view",
+                       "label":  "X4i",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x4i/Visuals/L-Acoustics_X4i.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x4i/04-l-acoustics-x4i.jpg",
+                       "sourceSha256":  "8e54dced8318d091f9fe77635d97ea45ac01e3f933538dbde690806098356113",
+                       "runtimeSha256":  "8e54dced8318d091f9fe77635d97ea45ac01e3f933538dbde690806098356113",
+                       "bytes":  6768279,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x4i",
+                       "role":  "alternate-view",
+                       "label":  "X4i white",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x4i/Visuals/L-Acoustics_X4i_white.jpg",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x4i/05-l-acoustics-x4i-white.jpg",
+                       "sourceSha256":  "e3feee9d2d969f7c054bf380d4ad17591b093ccbd87613b70de6aaa93be41258",
+                       "runtimeSha256":  "e3feee9d2d969f7c054bf380d4ad17591b093ccbd87613b70de6aaa93be41258",
+                       "bytes":  7616506,
+                       "dimensions":  [
+                                          5000,
+                                          5000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x4r",
+                       "role":  "primary",
+                       "label":  "X4r inTile Program RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x4r/3DR_X4r inTile_Program_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x4r/01-3dr-x4r-intile-program-ral-01.png",
+                       "sourceSha256":  "9fa4c3087f09f01cc1d2819d46c24d0744d33981c64cf7dd9b8ee0af51014599",
+                       "runtimeSha256":  "9fa4c3087f09f01cc1d2819d46c24d0744d33981c64cf7dd9b8ee0af51014599",
+                       "bytes":  3738724,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x4r",
+                       "role":  "alternate-view",
+                       "label":  "X4r inTile White RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x4r/3DR_X4r inTile_White_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x4r/02-3dr-x4r-intile-white-ral-01.png",
+                       "sourceSha256":  "a3f5eded5192770b0b6a6b01090a30a73f0a1e365d3699a9d1ac18e4615732d2",
+                       "runtimeSha256":  "a3f5eded5192770b0b6a6b01090a30a73f0a1e365d3699a9d1ac18e4615732d2",
+                       "bytes":  3068154,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x4r",
+                       "role":  "alternate-view",
+                       "label":  "X4i In Ceiling 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x4r/3DR_X4i_In_Ceiling_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x4r/03-3dr-x4i-in-ceiling-01.png",
+                       "sourceSha256":  "f634faf0728986bb768226f9fa5fe6c08faedeb2bfb704926595caf0896223b3",
+                       "runtimeSha256":  "f634faf0728986bb768226f9fa5fe6c08faedeb2bfb704926595caf0896223b3",
+                       "bytes":  2651280,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x4r",
+                       "role":  "alternate-view",
+                       "label":  "X4i In Wall 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x4r/3DR_X4i_In_Wall_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x4r/04-3dr-x4i-in-wall-01.png",
+                       "sourceSha256":  "244aaa03585e3f4126f425b2d6d12c1f1e55a8b5d4252edabd99cb94224cad31",
+                       "runtimeSha256":  "244aaa03585e3f4126f425b2d6d12c1f1e55a8b5d4252edabd99cb94224cad31",
+                       "bytes":  4312129,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   },
+                   {
+                       "productId":  "spk-la-x4r",
+                       "role":  "alternate-view",
+                       "label":  "X4r inWall Program RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x4r/3DR_X4r inWall_Program_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x4r/05-3dr-x4r-inwall-program-ral-01.png",
+                       "sourceSha256":  "43eae007e20d17480f77cb55a6380ce54cd5eccdeab5e0cb3c2bade9e185d8c8",
+                       "runtimeSha256":  "43eae007e20d17480f77cb55a6380ce54cd5eccdeab5e0cb3c2bade9e185d8c8",
+                       "bytes":  7503485,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  false
+                   },
+                   {
+                       "productId":  "spk-la-x4r",
+                       "role":  "alternate-view",
+                       "label":  "X4r inWall White RAL 01",
+                       "sourcePath":  "raw-data/raw-assets/la/speakers/x-series/x4r/3DR_X4r inWall_White_RAL_01.png",
+                       "runtimePath":  "public/assets/img/speakers/la/official/x-series/x4r/06-3dr-x4r-inwall-white-ral-01.png",
+                       "sourceSha256":  "672c5790001e99dd59ec1d947c154b843a2818e398f521e62fa874c27c3edda5",
+                       "runtimeSha256":  "672c5790001e99dd59ec1d947c154b843a2818e398f521e62fa874c27c3edda5",
+                       "bytes":  6550922,
+                       "dimensions":  [
+                                          4000,
+                                          4000
+                                      ],
+                       "hasAlphaChannel":  true
+                   }
+               ]
+}

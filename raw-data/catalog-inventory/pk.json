@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "pk",
+  "scope": "loudspeakers",
+  "inclusion": "Current professional loudspeaker modules listed in the official PK Sound Products navigation. Control hardware, software, accessories and legacy-only products are excluded.",
+  "sourcePages": [
+    "https://pksound.live"
+  ],
+  "retrievedAt": "2026-08-18",
+  "products": [
+    {
+      "id": "spk-pk-trinity-black",
+      "name": "Trinity Black",
+      "series": "Line Source",
+      "productPage": "https://pksound.live/product/line-source/trinity",
+      "status": "verified"
+    },
+    {
+      "id": "spk-pk-t10",
+      "name": "T10",
+      "series": "Line Source",
+      "productPage": "https://pksound.live/product/line-source/t10",
+      "status": "verified"
+    },
+    {
+      "id": "spk-pk-t8",
+      "name": "T8",
+      "series": "Line Source",
+      "productPage": "https://pksound.live/product/line-source/t8",
+      "status": "verified"
+    },
+    {
+      "id": "spk-pk-t218",
+      "name": "T218",
+      "series": "Low Frequency",
+      "productPage": "https://pksound.live/product/low-frequency/t218",
+      "status": "verified"
+    },
+    {
+      "id": "spk-pk-t18",
+      "name": "T18",
+      "series": "Low Frequency",
+      "productPage": "https://pksound.live/product/low-frequency/t18",
+      "status": "verified"
+    },
+    {
+      "id": "spk-pk-ts15",
+      "name": "Ts15",
+      "series": "Low Frequency",
+      "productPage": "https://pksound.live/product/low-frequency/ts15",
+      "status": "verified"
+    },
+    {
+      "id": "spk-pk-tx14",
+      "name": "Tx14",
+      "series": "Point Source",
+      "productPage": "https://pksound.live/product/point-source/tx14",
+      "status": "verified"
+    },
+    {
+      "id": "spk-pk-tx26",
+      "name": "Tx26",
+      "series": "Point Source",
+      "productPage": "https://pksound.live/product/point-source/tx26",
+      "status": "verified"
+    }
+  ],
+  "currentStatus": "complete-official-archive",
+  "verifiedCount": 8,
+  "pendingCount": 0
+}

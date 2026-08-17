@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-evo-7sh",
+  "manufacturerId": "funktion",
+  "name": "Evo 7SH",
+  "slug": "evo-7sh",
+  "series": "Evolution",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/evo-7sh-skeletal/",
+  "rangePage": "https://funktion-one.com/ranges/evolution",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "Evo 7SH - Narrow Dispersion, Lightweight Mid-High Point Source",
+    "technical": {
+      "bandwidth": "200Hz - 18kHz",
+      "weight": "23kg (51lbs)",
+      "dispersion": "40° Horizontal x 20° Vertical",
+      "connectors": "Neutrik NL4 or Junction box option",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 10\" Operating Band 200Hz - 4kHz Sensitivity at 1m 112dB at 4.9V Power (AES) 250W Nominal Impedence 24Ω Driver 1.4\" Operating Band 4kHz - 18kHz Sensitivity at 1m 114dB at 5.6V Power (AES) 75W Nominal Impedence 32Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/9770c7dd-c7b6-4ac5-a88b-bbc10aeeff20_Evo+7SH.png",
+      "https://images.prismic.io/funktion-one/75c73a08-ed60-438a-8863-f77a0c5309aa_Evo7SH-F1-WD%3DT0099-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/c0305dbd-39be-4e84-b359-d6fd40e2e2df_Funktion-One_Evo7SH_Spec_Sheet.pdf",
+        "label": "c0305dbd-39be-4e84-b359-d6fd40e2e2df_Funktion-One_Evo7SH_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/bfab7316-24e4-4db7-8522-73d889621977_Evo7SH-F1-TD%3DT0095-00.PDF",
+        "label": "bfab7316-24e4-4db7-8522-73d889621977_Evo7SH-F1-TD%3DT0095-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z2VOnpbqstJ98ug__Evo7SH-F1-DD%3DT0096-00.pdf",
+        "label": "Z2VOnpbqstJ98ug__Evo7SH-F1-DD%3DT0096-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/a1a5cf78-2314-496a-a1d1-735dfedd8d7d_Evo7SH-F1-2DM%3DT0097-00.dwg",
+        "label": "a1a5cf78-2314-496a-a1d1-735dfedd8d7d_Evo7SH-F1-2DM%3DT0097-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0XjHJbqstJ97yKg_Evo7SH-F1-3DM%3DT0098-00.dwg",
+        "label": "Z0XjHJbqstJ97yKg_Evo7SH-F1-3DM%3DT0098-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/b3811688-12ae-4d08-8df9-a4536c94bfb4_Evo+Brochure+2022+HR.pdf",
+        "label": "b3811688-12ae-4d08-8df9-a4536c94bfb4_Evo+Brochure+2022+HR.pdf"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

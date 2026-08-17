@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-evo-7tl",
+  "manufacturerId": "funktion",
+  "name": "Evo 7TL",
+  "slug": "evo-7tl",
+  "series": "Evolution",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/evo-7tl-215/",
+  "rangePage": "https://funktion-one.com/ranges/evolution",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "Evo 7TL - Evo Touring Mid-Bass with Flying Hardware",
+    "technical": {
+      "bandwidth": "65Hz - 300 Hz",
+      "weight": "61kg (135lbs) without wheelboard",
+      "dispersion": "Array dependent",
+      "connectors": "2 x Neutrik NL8",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 2 x 15\" Operating Band 65Hz - 300Hz Sensitivity at 1m 102dB at 2V Power (AES) 2 x 400W Nominal Impedence 2 x 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/7e995a44-c05a-497c-884c-1dad92e1edff_Evo+7TL-215.png",
+      "https://images.prismic.io/funktion-one/c3babd69-aaac-46c3-90a1-7caf761e5d69_Evo7TL-F1-WD%3DT0102-00.png",
+      "https://images.prismic.io/funktion-one/aiA3qweQX7-eWqep_WB-E67.png",
+      "https://images.prismic.io/funktion-one/aiA2ogeQX7-eWqcx_TSFK-3E7.png",
+      "https://images.prismic.io/funktion-one/aiA81AeQX7-eWqjD_GK-E6.png",
+      "https://images.prismic.io/funktion-one/aiA2YAeQX7-eWqcU_TSFK-2E7.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/37f9ba41-e0da-4c94-95fd-178168c2a177_Funktion-One_Evo7TL_Spec_Sheet.pdf",
+        "label": "37f9ba41-e0da-4c94-95fd-178168c2a177_Funktion-One_Evo7TL_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/9db4c569-317e-40db-a3eb-c5abc354296a_Evo7TL-F1-TD%3DT0158-00.pdf",
+        "label": "9db4c569-317e-40db-a3eb-c5abc354296a_Evo7TL-F1-TD%3DT0158-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/e5b598bf-fcee-4278-bab0-42f069c7fccd_Evo7TL-F1-DD%3DT0159-00.pdf",
+        "label": "e5b598bf-fcee-4278-bab0-42f069c7fccd_Evo7TL-F1-DD%3DT0159-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/892094c6-fa01-4bcb-a395-1231d070d9ef_Evo7TL-F1-3DM%3DT0161-00.dwg",
+        "label": "892094c6-fa01-4bcb-a395-1231d070d9ef_Evo7TL-F1-3DM%3DT0161-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/d6994927-666e-4d28-9b55-873c14bbfb58_Evo7TL-F1-2DM%3DT0160-00.dwg",
+        "label": "d6994927-666e-4d28-9b55-873c14bbfb58_Evo7TL-F1-2DM%3DT0160-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/b3811688-12ae-4d08-8df9-a4536c94bfb4_Evo+Brochure+2022+HR.pdf",
+        "label": "b3811688-12ae-4d08-8df9-a4536c94bfb4_Evo+Brochure+2022+HR.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/ZfgpPcmUzjad_UbC_TSFK-3E7-F1-AD%3DT0163-01.pdf",
+        "label": "ZfgpPcmUzjad_UbC_TSFK-3E7-F1-AD%3DT0163-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aac632ba-5c4c-4066-9606-59965358ea2e_TSFK-2E7-F1-AD%3DT0162-00.pdf",
+        "label": "aac632ba-5c4c-4066-9606-59965358ea2e_TSFK-2E7-F1-AD%3DT0162-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/fc712f5f-f051-42c3-9722-9505e6a2ed33_Evo+Ground+Stack+System.pdf",
+        "label": "fc712f5f-f051-42c3-9722-9505e6a2ed33_Evo+Ground+Stack+System.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/2a0e358f-788c-42d1-90f4-bcd0ee0a5b1f_New+Ground+Stack+Straps-2.pdf",
+        "label": "2a0e358f-788c-42d1-90f4-bcd0ee0a5b1f_New+Ground+Stack+Straps-2.pdf"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl",
+    "coverage"
+  ]
+}

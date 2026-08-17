@@ -1,0 +1,1485 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "eaw",
+  "scope": "loudspeakers",
+  "inclusion": "Current individual professional loudspeaker models published in the official EAW Products archive and assigned to a current loudspeaker series. Amplifiers/processors, software, placeholder posts and series landing records are excluded.",
+  "sourcePages": [
+    "https://eaw.com/products/"
+  ],
+  "retrievedAt": "2026-08-18",
+  "products": [
+    {
+      "id": "spk-eaw-nt116s",
+      "name": "NT116S",
+      "series": "Newport",
+      "productPage": "https://eaw.com/products/nt116s/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/newport/nt116s/NT116S-Front-Right-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt116s/NT116S-Front-Right-scaled-ro2tvwrxk3o2s60huqtl6itzmu80as74a3my4jdurk.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt116s/NT116s-NEW-LABEL-Back-Flat-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt116s/NT116s-NEW-LABEL-Back-Flat-scaled-rr4ikqkgqq53icf1ifrms1ewci4nc044yasyd8x14w.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt116s/NT116S-Front-Flat-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt116s/NT116S-Front-Flat-scaled-ro2tzeqazwfd2q8yr3woefdqgs2seg4s8g2cdp5728.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt116s/NT116S-Front-Left-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt116s/NT116S-Front-Left-scaled-ro2tzjfhy2lsos24znxt8w71fpfmgxnfx3brs2y874.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-nt208l",
+      "name": "NT208L",
+      "series": "Newport",
+      "productPage": "https://eaw.com/products/nt208l/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/newport/nt208l/NT208L-Front-Right-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt208l/NT208L-Front-Right-scaled-ro2u4rf7wxsa3z5n62k45sf90glfs6c4hwsjtc9e68.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt208l/NT208L-Back-Flat-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt208l/NT208L-Back-Flat-scaled-ro2u4jwie9gulwrzpty6jmnjhoq3itjwlwkzx7in0g.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt208l/NT208L-Front-Flat-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt208l/NT208L-Front-Flat-scaled-ro2u2mcgcitmqrl0zzvsf47fj68xp7vrocb2eqdrsw.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt208l/NT208L-Back-Right-Rain-Hood-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt208l/NT208L-Back-Right-Rain-Hood-scaled-ro2u4nnv5llzwcmj3vkotlpdv87kdlytyf6xubd2bk.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-nt206l",
+      "name": "NT206L",
+      "series": "Newport",
+      "productPage": "https://eaw.com/products/nt206l/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Front-Right-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Front-Right-scaled-rodkb0vjb2xnrjcepwf4u3o75k424icsvpzrk98jy8.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Back-Flat-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Back-Flat-scaled-rodkdblc0i1r81bomqtdvb4qnrvye3itc4etqos074.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Panel-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Panel-scaled-rodke4qbwd5n7y5cwletils12pwc0pqhs4mvm9ksu8.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Back-Right-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Back-Right-scaled-rodkdnt8hciheytxne3j9q1qds7q65vbpsw4za9vy8.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Front-Left-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Front-Left-scaled-rodkcyflctjqphusrl4lwegacdotec2kmba10tbim8.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Pullback-Bar.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Soft-Cover.png",
+        "raw-data/raw-assets/eaw/speakers/newport/nt206l/NT206L-Lid.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sbx118f",
+      "name": "SBX118F",
+      "series": "SBX Series",
+      "productPage": "https://eaw.com/products/sbx118f/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-Iso-View-1-1024x761.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-Iso-View-1.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-Iso-View-1-qog2p30psftd7ele1q8v0p5alsqpneni6h7ywlsohs.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-Front.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-Front-qpgqiow4jcbwyhqua3jml3bgshbg21fd611yrhue4g.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-Rear-Panel-Full-scaled.jpg",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-Rear-Panel-Full-scaled-qpgqj21v70txh17q598ejzzx3vil1svlvu6rhdavpc.jpg",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-Rear.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-Rear-qpgqjdbxh19dccrcbe3xdx5g8hyzm64dxe0l8ou5mo.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-on-Cart.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-on-Cart-qpgqjqho4prduw886jspcttwjw64lxkmn75dykan7k.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SB118_SBX118F-dual-cover-rear.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SB118_SBX118F-dual-cover-rear-qvd9f4yx20l3muqz8seco692zfuhp85ba2egrherk0.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SB118_SBX118F-dual-cover-open.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SB118_SBX118F-dual-cover-open-qvd9e9y8shemzq019wznvw2vdq3dn7q65svfxcor9c.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SB118_SBX118F-dual-cover.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SB118_SBX118F-dual-cover-qvd9el8b2hu2v1jng1v6pt8eicjs7kyy7cp9oo816o.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-Single.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx118f/SBX118F-Single-qvd9dexkiy86cl93b1kz3lwns0c9l7b11jcf37yqyo.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sb828",
+      "name": "SB828",
+      "series": "SB Series",
+      "productPage": "https://eaw.com/products/sb828/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828/SB828-NEW-1024x543.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828/SB828-NEW.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828/SB828-NEW-quol2lld2fo6nwy4so9na2b1v6qza2kyk2ju92bqbk.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828/SB828-NEW-quol2lld2fn1qq9k4iwq7un13hukqamld3k6759ts0.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828/SB828-Rear.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828/SB828-Rear-qpgtg2kqqol6kooaxndw4hzublwv0fs0zm1no9lgjk.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828/SB828-Rear-Panel.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828/SB828-Rear-Panel-qpgtfpf03036257f2hp45lbe07pq0obs9swuye4yyo.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828/SB828-Rear-Panel-NEW-scaled.jpg",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828/SB828-Rear-Panel-NEW-scaled-quol2hu0b3hwgaf0qha7xvl6pyd3vi7o0ky8a1fegw.jpg",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828/SB828P_ISO-pt26xgzs07owj8t5hhkpp2bc40pcnqk5k8i9eaf01s.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sb818",
+      "name": "SB818",
+      "series": "SB Series",
+      "productPage": "https://eaw.com/products/sb818-2/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818/SB818-ISO-1024x761.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818/SB818-ISO.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818/SB818-ISO-qpgsl3s5l6890cc6feva1iz6kbfxz6sqlbbgk0ka2o.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818/SB818-front.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818/SB818-front-qpgs9gk4x29892kjr8ar393kurxu2em34pd8gorym8.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818/SB818-Rear-Full.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818/SB818-Rear-Full-qpgsa0aqwl090vrvjytx1m49bv8jk1sg7f2fjhyozk.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818/SB818-Rear-Panel.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818/SB818-Rear-Panel-qpgsacindfgz7ta4km42g1191vkbc44yl3jqs3gkqo.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818/SB-818PFimage-ovnn7h6fjryaufwuifcvfm3v3unvuto63k7oc8uy2o.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd1594",
+      "name": "MKD1594",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd1594/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd1594/MKD1544-ISO-768x1106.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd1564",
+      "name": "MKD1564",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd1564/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd1564/MKD1544-ISO-768x1106.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd1544",
+      "name": "MKD1544",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd1544/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd1544/MKD1544-ISO-768x1106.png",
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd1544/MKD1544-ISO.png",
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd1544/MKD1544-ISO-qbe0c5ssm67b6gqfx1s88xsoek9i24c5y2eowa0ao0.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-la151",
+      "name": "LA151",
+      "series": "LA Series",
+      "productPage": "https://eaw.com/products/la151/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/la-series/la151/LA153-ISO3-768x1093.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-la121",
+      "name": "LA121",
+      "series": "LA Series",
+      "productPage": "https://eaw.com/products/la121/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/la-series/la121/LA123-ISO3-768x1153.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sm12",
+      "name": "SM12",
+      "series": "SM Series",
+      "productPage": "https://eaw.com/products/sm12/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sm-series/sm12/SM12-ISO-for-Spec-1024x954.png",
+        "raw-data/raw-assets/eaw/speakers/sm-series/sm12/SM12-ISO-for-Spec.png",
+        "raw-data/raw-assets/eaw/speakers/sm-series/sm12/SM12-ISO-for-Spec-qbrwh592bno45lhmgax23xywotzhibvnqgttlzu5ts.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd526",
+      "name": "MKD526",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd526/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd526/ISO-Right-2-1024x615.png",
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd526/MKD526-U-Bracket.png",
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd526/MKD526-U-Bracket-150x150.png",
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd526/MKD526-Yoke.png",
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd526/MKD526-Yoke-150x150.png",
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd526/MKD526-WHT-Front.png",
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd526/MKD526-WHT-Front-150x150.png",
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd526/MKD526-WHT-ISO-Left.png",
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd526/MKD526-WHT-ISO-Left-150x150.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sb210",
+      "name": "SB210",
+      "series": "SB Series",
+      "productPage": "https://eaw.com/products/sb210/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb210/SB210-ISO-1-1-Large.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb210/SB210-ISO-1-1-Large-q23xxu31sfuhdb8kqe0qiy16abb5qqk1swyogrrrpc.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkc50",
+      "name": "MKC50",
+      "series": "MKC Series",
+      "productPage": "https://eaw.com/products/mkc50/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc50/MKC50-for-Spec-Large.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc50/MKC50-for-Spec-Large-q23xxd5ydf7bkbx5h6pga2avldmjw6ovql7xtsgutc.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc50/MKC50-WHT-ISO-Left.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc50/MKC50-WHT-ISO-Left-qtobeky1h2olby82ks2pv5g3yao5sjxmwt61nqlkao.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc50/2071584-90-C-LABEL-INPUT-MKC50-CHINA-1-01-1.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc50/2071584-90-C-LABEL-INPUT-MKC50-CHINA-1-01-1-r1exrzyyueckxrvzmw9elzgu3d6fd6rrnadbs3sfeo.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkc60",
+      "name": "MKC60",
+      "series": "MKC Series",
+      "productPage": "https://eaw.com/products/mkc60/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc60/MKC60-for-Spec-2-Large_1.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc60/MKC60-for-Spec-2-Large_1-q23xxgxb4rcgurrov8byk1cpyx40qz3t33tvqwba4g.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc60/MKC60-ISO-Left-2.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc60/MKC60-ISO-Left-2-r1exiqa9g7nsg7core0uito77kv4gmz21eryevj6rk.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc60/MKC60-ISO-Left-WHT.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc60/MKC60-ISO-Left-WHT-qtobf3qt9rebs5grj07990pbu03i2i09ne7r99tou8.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkc80",
+      "name": "MKC80",
+      "series": "MKC Series",
+      "productPage": "https://eaw.com/products/mkc80/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc80/MKC80-for-Spec-Large.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc80/MKC80-for-Spec-Large-q23xxjqtp9gbtlnlerju9in3r2q4e2f03hsc6q73ls.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc80/MKC80-WHT-ISO-Left.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc80/MKC80-WHT-ISO-Left-qtobfhue49xmmawa8oansf58qs609yk8pc01gf8s8w.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc80/MKC80_NG.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc80/MKC80_NG-r1ey5qe2p95eknxtftz61ipak1hhtzakv9iq7nfchs.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc80/2071860-3-LBL-INPUT-MKC80-CHINA-01-02-01.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc80/2071860-3-LBL-INPUT-MKC80-CHINA-01-02-01-r1ey53ty58aiu0ul3k84doe8askop8t0s5v2p0csn4.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkc120",
+      "name": "MKC120",
+      "series": "MKC Series",
+      "productPage": "https://eaw.com/products/mkc120/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc120/MKC120-for-Spec-Large.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc120/MKC120-for-Spec-Large-q23xxmkc9rk6sfjhyarpyzxhj8c815q73vqsmk2x34.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc120/MKC120-WHT-Left-ISO.png",
+        "raw-data/raw-assets/eaw/speakers/mkc-series/mkc120/MKC120-WHT-Left-ISO-qtobfwvt5mi7s2afsusowbcm8y3vp47y3eft4umhhc.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-kf210",
+      "name": "KF210",
+      "series": "KF Series",
+      "productPage": "https://eaw.com/products/kf210/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/kf-series/kf210/Kf210-social-Front-Left-Grill-comp.jpeg",
+        "raw-data/raw-assets/eaw/speakers/kf-series/kf210/KF210-Cart-Graphic.jpeg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-ac6",
+      "name": "AC6",
+      "series": "ADAPTive Series",
+      "productPage": "https://eaw.com/products/ac6/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/ac6/AC6-Pillar-ISO-2.png",
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/ac6/AC6-Front-with-shadow-e1647546954104.png",
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/ac6/AC6-Back-with-shadow-e1647547119579.png",
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/ac6/AC6-ISO-White-2.png",
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/ac6/AC6_back_White-2.png",
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/ac6/AC6-Overlay-with-shadow-e1647547077415.png",
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/ac6/AC6-Outputs.png",
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/ac6/AC6-Back-Panel-Mains-1.jpg",
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/ac6/AC6-AccModule-Video-Overlay.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-la153",
+      "name": "LA153",
+      "series": "LA Series",
+      "productPage": "https://eaw.com/products/la153/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/la-series/la153/LA153-ISO3-768x1093.png",
+        "raw-data/raw-assets/eaw/speakers/la-series/la153/LA153-ISO3.png",
+        "raw-data/raw-assets/eaw/speakers/la-series/la153/LA153-ISO3-pfaeft43054uctks75xbbtwq2qxxpbsjzysn0rswsg.png",
+        "raw-data/raw-assets/eaw/speakers/la-series/la153/LA153-ISO3-pfaeft430549w88hv38usq2powhqfftdehaszt9yio.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-la123",
+      "name": "LA123",
+      "series": "LA Series",
+      "productPage": "https://eaw.com/products/la123/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/la-series/la123/LA123-ISO3-768x1153.png",
+        "raw-data/raw-assets/eaw/speakers/la-series/la123/LA123-ISO3.png",
+        "raw-data/raw-assets/eaw/speakers/la-series/la123/LA123-ISO3-pfadj1gmr29zm76aji0iwll8k6gad6pf5s29qidzpc.png",
+        "raw-data/raw-assets/eaw/speakers/la-series/la123/LA123-ISO3-pfadj1gmr29f5lu07fc2dhr86c033aq8kakfpjv1fk.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sbx218",
+      "name": "SBX218",
+      "series": "SBX Series",
+      "productPage": "https://eaw.com/products/sbx218/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx218/SBX-ISO.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx218/SBX218-Dual-Cover-Rear.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx218/SBX218-Dual-Cover-Rear-qvd9dtyzkasricn8v8307i41a6a50cyqfls6rncg74.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx218/SBX218-Dual-Cover-Open.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx218/SBX218-Dual-Cover-Open-qvd9cjww9f1ppgi5c66abbqg6al5j6vvx9te938qo0.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx218/SBX218-Dual-Cover.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx218/SBX218-Dual-Cover-qvd9cyybarmav7wawcobf7xtogj0ycjlbc95ximfwg.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx218/SBX218-Single.png",
+        "raw-data/raw-assets/eaw/speakers/sbx-series/sbx218/SBX218-Single-qvd9c5tbewievb2mmi2vrxaj9iinbqbwvc141xtn9c.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-ntx210l",
+      "name": "NTX210L",
+      "series": "Newport",
+      "productPage": "https://eaw.com/products/ntx210l/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/newport/ntx210l/NTX-ISO-1-1024x519.png",
+        "raw-data/raw-assets/eaw/speakers/newport/ntx210l/NTX210L-Front-Right-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/ntx210l/NTX210L-Front-Right-scaled-rodk86f4m51em1h8c64ssbiyek51ti225mvu93ggsg.png",
+        "raw-data/raw-assets/eaw/speakers/newport/ntx210l/NTX210L-NG.png",
+        "raw-data/raw-assets/eaw/speakers/newport/ntx210l/NTX210L-NG-p3qhiieq003ufj7ood5lorv6rt4g2mrsdh7zfkxjb4.png",
+        "raw-data/raw-assets/eaw/speakers/newport/ntx210l/NTX210L-Back-Left-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/ntx210l/NTX210L-Back-Left-scaled-ro2uu7vv0elpmlhuufcg4nhnfg7wpag1sxvao7gn40.png",
+        "raw-data/raw-assets/eaw/speakers/newport/ntx210l/NTX210L-Front-Flat-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/ntx210l/NTX210L-Front-Flat-scaled-ro2uv1yp33qvy4a5yscicfwefs3njlrgl2qu1281kw.png",
+        "raw-data/raw-assets/eaw/speakers/newport/ntx210l/NTX210L-Front-Left-scaled.png",
+        "raw-data/raw-assets/eaw/speakers/newport/ntx210l/NTX210L-Front-Left-scaled-ro2ut85zsp8tdexqmzwmhwi4ut3yksi9012ufoxlog.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd1294",
+      "name": "MKD1294",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd1294/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd1294/MKD1200_ISO.2-768x1071.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd1264",
+      "name": "MKD1264",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd1264/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd1264/MKD1200_ISO.2-768x1071.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd864",
+      "name": "MKD864",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd864/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd864/v2_MKD800vertical-768x1206.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd896",
+      "name": "MKD896",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd896/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd896/v2_MKD800vertical-768x1206.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd826",
+      "name": "MKD826",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd826/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd826/v2_MKD800vertical-768x1206.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-anya",
+      "name": "Anya",
+      "series": "ADAPTive Series",
+      "productPage": "https://eaw.com/products/anya/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/anya/Anya-2.jpg",
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/anya/Anya-2-ovnn6rssf904lk9zyp2elecfgal6cvullk3eeqfj0g.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/anya-flybar-drw2d-reva-2/anya_flybar_drw2d_reva-5/",
+        "https://eaw.com/documentation/anya-caster-pallet-drw2d-2/anya_caster_pallet_drw2d-4/"
+      ]
+    },
+    {
+      "id": "spk-eaw-ls432i",
+      "name": "LS432i",
+      "series": "LS Series",
+      "productPage": "https://eaw.com/products/ls432i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/ls-series/ls432i/LS432-1.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-ls832i",
+      "name": "LS832i",
+      "series": "LS Series",
+      "productPage": "https://eaw.com/products/ls832i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/ls-series/ls832i/LS832-1.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-cis400",
+      "name": "CIS400",
+      "series": "CIS Series",
+      "productPage": "https://eaw.com/products/cis400/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/cis-series/cis400/CIS400.jpg",
+        "raw-data/raw-assets/eaw/speakers/cis-series/cis400/CIS400-ovnn6rssf904lk9zyp2elecfgal6cvullk3eeqfj0g.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-cis300",
+      "name": "CIS300",
+      "series": "CIS Series",
+      "productPage": "https://eaw.com/products/cis300/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/cis-series/cis300/CIS300.jpg",
+        "raw-data/raw-assets/eaw/speakers/cis-series/cis300/CIS300-ovnn6rssf904lk9zyp2elecfgal6cvullk3eeqfj0g.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mw8",
+      "name": "MW8",
+      "series": "MW Series",
+      "productPage": "https://eaw.com/products/mw8/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mw-series/mw8/MW8_iso.jpg",
+        "raw-data/raw-assets/eaw/speakers/mw-series/mw8/MW8_iso-ovnn732up9fkgvtm4txxfbhykx1kx93dn3x861ysxs.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mw15",
+      "name": "MW15",
+      "series": "MW Series",
+      "productPage": "https://eaw.com/products/mw15/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mw-series/mw15/MW15_iso.jpg",
+        "raw-data/raw-assets/eaw/speakers/mw-series/mw15/MW15_iso-ovnn732up9fkgvtm4txxfbhykx1kx93dn3x861ysxs.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mw12",
+      "name": "MW12",
+      "series": "MW Series",
+      "productPage": "https://eaw.com/products/mw12/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mw-series/mw12/MW12_iso.jpg",
+        "raw-data/raw-assets/eaw/speakers/mw-series/mw12/MW12_iso-ovnn732up9fkgvtm4txxfbhykx1kx93dn3x861ysxs.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mw10",
+      "name": "MW10",
+      "series": "MW Series",
+      "productPage": "https://eaw.com/products/mw10/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mw-series/mw10/MW10_iso.jpg",
+        "raw-data/raw-assets/eaw/speakers/mw-series/mw10/MW10_iso-ovnn732up9fkgvtm4txxfbhykx1kx93dn3x861ysxs.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sb528z",
+      "name": "SB528z",
+      "series": "SB Series",
+      "productPage": "https://eaw.com/products/sb528z/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb528z/SB528zP_iso.jpg",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb528z/SB528zP_iso-ovnn7i49qm05mn7rp0fyj7pc32zgcer316czuhci68.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sb250z",
+      "name": "SB250z",
+      "series": "SB Series",
+      "productPage": "https://eaw.com/products/sb250z/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb250z/SB250z.jpg",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb250z/SB250z-ovnn7i49qm05mn7rp0fyj7pc32zgcer316czuhci68.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sb180z",
+      "name": "SB180z",
+      "series": "SB Series",
+      "productPage": "https://eaw.com/products/sb180z/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb180z/SB180z.jpg",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb180z/SB180z-ovnn7i49qm05mn7rp0fyj7pc32zgcer316czuhci68.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sb150z",
+      "name": "SB150z",
+      "series": "SB Series",
+      "productPage": "https://eaw.com/products/sb150z/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb150z/SB120z.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sb120z",
+      "name": "SB120z",
+      "series": "SB Series",
+      "productPage": "https://eaw.com/products/sb120z/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb120z/SB120z-1.jpg",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb120z/SB120z-1-ovnn7i49qm05mn7rp0fyj7pc32zgcer316czuhci68.jpg",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb120z/SB120z-ovnn7i49qlzl61vhcxri03vbp8j92irwfov5titjwg.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sb828p",
+      "name": "SB828P",
+      "series": "SB Series",
+      "productPage": "https://eaw.com/products/sb828p/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828p/SB828P_ISO-1024x416.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828p/SB828P_ISO.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828p/SB828P_ISO-pt26xgzs07pgzu5ftk96865chv5jxmjc5q03f8xybk.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828p/SB828P_front.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828p/SB828P_front-pt27593okubs6g5zprz2szsoqzwj3ngzd9f4dscq9s.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828p/SB828P_rear.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb828p/SB828P_rear-pt275jfwo0pxq5qz1efz2f6ra8hkgbm12olgntxedc.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sb825p",
+      "name": "SB825P",
+      "series": "SB Series",
+      "productPage": "https://eaw.com/products/sb825p/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb825p/SB825P_ISO-1024x419.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb825p/SB825P_ISO.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb825p/SB825P_ISO-pt26zxclun2fb6l3hmg3qjuoc32216a3tvbqj9ay2o.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb825p/SB825P_front.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb825p/SB825P_front-pt272l857qoja8199mj4qnzo5p13aiwd02vlfkavwg.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb825p/SB825P_rear.png",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb825p/SB825P_rear-pt272ydvvf6jsri54s7wpko4h388aaclpw0e5frdhc.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-sb818p-f",
+      "name": "SB818P|F",
+      "series": "SB Series",
+      "productPage": "https://eaw.com/products/sb818p-f/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818p-f/SB-818PFimage.jpg",
+        "raw-data/raw-assets/eaw/speakers/sb-series/sb818p-f/SB-818PFimage-ovnn7h6fjryvb194ui1bypxvhp434pncp1pid7dwcg.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/kf810p-adapter-drw2d/kf810p_flybar_drw2d/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd1064",
+      "name": "MKD1064",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd-1064/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd1064/EAW-MKD1000-ON-768x1425.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd1026",
+      "name": "MKD1026",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd-1026/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd1026/EAW-MKD1000-ON-768x1425.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mkd1096",
+      "name": "MKD1096",
+      "series": "MKD Series",
+      "productPage": "https://eaw.com/products/mkd-1096/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mkd-series/mkd1096/EAW-MKD1000-ON-768x1425.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk8196z",
+      "name": "MK8196z",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk8196z/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk8196z/MK81xxi_iso-1.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/mk81xx-ubrkt-revb/mk81xx_ubrkt_revb-2/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk8126i",
+      "name": "MK8126i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk8126i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk8126i/MK81xxi_iso.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/mk81xx-ubrkt-revb/mk81xx_ubrkt_revb-2/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk5399i",
+      "name": "MK5399i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk5399i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk5399i/MK5xxxi_iso-5.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk5396i",
+      "name": "MK5396i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk5396i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk5396i/MK5xxxi_iso-4.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk5394i",
+      "name": "MK5394i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk5394i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk5394i/MK5xxxi_iso-3.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk5366i",
+      "name": "MK5366i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk5366i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk5366i/MK5xxxi_iso-2.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk5364i",
+      "name": "MK5364i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk5364i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk5364i/MK5xxxi_iso-1.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk5326i",
+      "name": "MK5326i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk5326i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk5326i/MK5xxxi_iso.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk2399i",
+      "name": "MK2399i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk2399i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk2399i/MK23xxi_iso-7-scaled.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk2396i",
+      "name": "MK2396i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk2396i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk2396i/MK23xxi_iso-6-scaled.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk2394i",
+      "name": "MK2394i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk2394i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk2394i/MK23xxi_iso-5-scaled.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk2366i",
+      "name": "MK2366i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk2366i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk2366i/MK23xxi_iso-4-scaled.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk2364i",
+      "name": "MK2364i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk2364i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk2364i/MK23xxi_iso-2-scaled.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-mk2326i",
+      "name": "MK2326i",
+      "series": "MK Series",
+      "productPage": "https://eaw.com/products/mk2326i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/mk-series/mk2326i/MK23xxi_iso-scaled.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/0006970-d-wallmount-mk2000-5000/mk2000_5000_u-bracket_drw2d_revb/"
+      ]
+    },
+    {
+      "id": "spk-eaw-qx596i",
+      "name": "QX596i",
+      "series": "QX Series",
+      "productPage": "https://eaw.com/products/qx596i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/qx-series/qx596i/QX5xxi_iso-1-7.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/abqx_drw2d_reva/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/qx_ubkt_drw2d_reva/"
+      ]
+    },
+    {
+      "id": "spk-eaw-qx594i",
+      "name": "QX594i",
+      "series": "QX Series",
+      "productPage": "https://eaw.com/products/qx594i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/qx-series/qx594i/QX5xxi_iso-1-6.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/abqx_drw2d_reva/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/qx_ubkt_drw2d_reva/"
+      ]
+    },
+    {
+      "id": "spk-eaw-qx566i",
+      "name": "QX566i",
+      "series": "QX Series",
+      "productPage": "https://eaw.com/products/qx566i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/qx-series/qx566i/QX5xxi_iso-1-4.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/abqx_drw2d_reva/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/qx_ubkt_drw2d_reva/"
+      ]
+    },
+    {
+      "id": "spk-eaw-qx564i",
+      "name": "QX564i",
+      "series": "QX Series",
+      "productPage": "https://eaw.com/products/qx564i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/qx-series/qx564i/QX5xxi_iso-1-3.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/abqx_drw2d_reva/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/qx_ubkt_drw2d_reva/"
+      ]
+    },
+    {
+      "id": "spk-eaw-qx544i",
+      "name": "QX544i",
+      "series": "QX Series",
+      "productPage": "https://eaw.com/products/qx544i/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/qx-series/qx544i/QX5xxi_iso-1-2.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/abqx_drw2d_reva/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/qx_ubkt_drw2d_reva/"
+      ]
+    },
+    {
+      "id": "spk-eaw-qx399",
+      "name": "QX399",
+      "series": "QX Series",
+      "productPage": "https://eaw.com/products/qx399/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/qx-series/qx399/QX5xxi_iso-1-1.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/abqx-drw2d-reva-2/ubkt_qx3h_drw2d_reva-2/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/abqx_drw2d_reva/"
+      ]
+    },
+    {
+      "id": "spk-eaw-qx396",
+      "name": "QX396",
+      "series": "QX Series",
+      "productPage": "https://eaw.com/products/qx396/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/qx-series/qx396/QX99_iso-3.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/abqx-drw2d-reva-2/ubkt_qx3h_drw2d_reva-2/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/abqx_drw2d_reva/"
+      ]
+    },
+    {
+      "id": "spk-eaw-qx394",
+      "name": "QX394",
+      "series": "QX Series",
+      "productPage": "https://eaw.com/products/qx394/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/qx-series/qx394/QX99_iso-2.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/abqx-drw2d-reva-2/ubkt_qx3h_drw2d_reva-2/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/abqx_drw2d_reva/"
+      ]
+    },
+    {
+      "id": "spk-eaw-qx366",
+      "name": "QX366",
+      "series": "QX Series",
+      "productPage": "https://eaw.com/products/qx366/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/qx-series/qx366/QX99_iso-1.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/abqx-drw2d-reva-2/ubkt_qx3h_drw2d_reva-2/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/abqx_drw2d_reva/"
+      ]
+    },
+    {
+      "id": "spk-eaw-qx364",
+      "name": "QX364",
+      "series": "QX Series",
+      "productPage": "https://eaw.com/products/qx364/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/qx-series/qx364/QX99_iso.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-qx326",
+      "name": "QX326",
+      "series": "QX Series",
+      "productPage": "https://eaw.com/products/qx326/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/qx-series/qx326/QX5xxi_iso-1.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/abqx-drw2d-reva-2/ubkt_qx3h_drw2d_reva-2/",
+        "https://eaw.com/documentation/abqx-drw2d-reva/abqx_drw2d_reva/"
+      ]
+    },
+    {
+      "id": "spk-eaw-kf810p",
+      "name": "KF810P",
+      "series": "KF Series",
+      "productPage": "https://eaw.com/products/kf810p/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/kf-series/kf810p/kl-e1549987509785.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/kf810p-adapter-drw2d/kf810p_flybar_drw2d/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rs118",
+      "name": "RS118",
+      "series": "RS Series",
+      "productPage": "https://eaw.com/products/rs-118/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rs-series/rs118/rs11x-1.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rs153",
+      "name": "RS153",
+      "series": "RS Series",
+      "productPage": "https://eaw.com/products/rs-153/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rs-series/rs153/rs15-2.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rs151",
+      "name": "RS151",
+      "series": "RS Series",
+      "productPage": "https://eaw.com/products/rs-151/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rs-series/rs151/rs15-1.jpg",
+        "raw-data/raw-assets/eaw/speakers/rs-series/rs151/rs15-1-ovnn7tec0mflhyrdv5bhd4uv7pfuwrzv2q6tlsvs3k.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rs123",
+      "name": "RS123",
+      "series": "RS Series",
+      "productPage": "https://eaw.com/products/rs-123/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rs-series/rs123/rs12-1.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rs121",
+      "name": "RS121",
+      "series": "RS Series",
+      "productPage": "https://eaw.com/products/rs-121/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rs-series/rs121/rs12.jpg",
+        "raw-data/raw-assets/eaw/speakers/rs-series/rs121/rs12-1-ovnn7tec0mf11df3j2n0u10utuznmw0oh8ozkuctts.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rsx218",
+      "name": "RSX218",
+      "series": "RSX Series",
+      "productPage": "https://eaw.com/products/rsx218/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx218/RSX218iso.jpg",
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx218/RSX218iso-ovnn7g8lcxxkzfahzzmpe86ewb8px0jmcx20vxfaio.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rsx18f",
+      "name": "RSX18F",
+      "series": "RSX Series",
+      "productPage": "https://eaw.com/products/rsx18f/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx18f/RSX18F-1024x576-1.png",
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx18f/RSX18F-1024x576-1-ovnn7g8lcxxkzfahzzmpe86ewb8px0jmcx20vxfaio.png"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/fbx100-drw2d-reva/fbx200_drw2d-2/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rsx12",
+      "name": "RSX12",
+      "series": "RSX Series",
+      "productPage": "https://eaw.com/products/rsx12/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx12/RSX12.jpg",
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx12/RSX12-ovnn7far63wantbv5h82tqeyaxdcpbfw0sejengoow.jpg",
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx12/RSX129iso-ovnn7far63vq77zktejmamkxx2x5ffgpfawpdoxqf4.jpg",
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx12/RSX12M-iso-ovnn7far63vq77zktejmamkxx2x5ffgpfawpdoxqf4.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rsx12m",
+      "name": "RSX12M",
+      "series": "RSX Series",
+      "productPage": "https://eaw.com/products/rsx12m/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx12m/RSX12M-iso.jpg",
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx12m/RSX12M-iso-ovnn7far63wantbv5h82tqeyaxdcpbfw0sejengoow.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rsx89",
+      "name": "RSX89",
+      "series": "RSX Series",
+      "productPage": "https://eaw.com/products/rsx89/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx89/RSX89iso-2.jpg",
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx89/RSX89iso-2-ovnn7h6fjryvb194ui1bypxvhp434pncp1pid7dwcg.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rsx129",
+      "name": "RSX129",
+      "series": "RSX Series",
+      "productPage": "https://eaw.com/products/rsx129/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx129/RSX129iso.jpg",
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx129/RSX129iso-ovnn7far63wantbv5h82tqeyaxdcpbfw0sejengoow.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rsx212l",
+      "name": "RSX212L",
+      "series": "RSX Series",
+      "productPage": "https://eaw.com/products/rsx212l/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx212l/RSX212L_2.jpg",
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx212l/RSX212L_2-ovnn7g8lcxxkzfahzzmpe86ewb8px0jmcx20vxfaio.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/fbx100-drw2d-reva/fbx200_drw2d-2/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rsx208l",
+      "name": "RSX208L",
+      "series": "RSX Series",
+      "productPage": "https://eaw.com/products/rsx208l/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx208l/RSX208Liso.jpg",
+        "raw-data/raw-assets/eaw/speakers/rsx-series/rsx208l/RSX208Liso-ovnn7g8lcxxkzfahzzmpe86ewb8px0jmcx20vxfaio.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    },
+    {
+      "id": "spk-eaw-otto",
+      "name": "Otto",
+      "series": "ADAPTive Series",
+      "productPage": "https://eaw.com/products/otto/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/otto/Otto10.jpg",
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/otto/Otto10-ovnn74yj2xi543qvtur6kb0vrosbcnaubd874lw0lc.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/adaptive-systems-distro-rack-drw2d-reva-3/otto_flybar_drw2d_revb-7/",
+        "https://eaw.com/documentation/adaptive-systems-distro-rack-drw2d-reva-3/otto_pallet_drw2d_reva-6/"
+      ]
+    },
+    {
+      "id": "spk-eaw-anna",
+      "name": "Anna",
+      "series": "ADAPTive Series",
+      "productPage": "https://eaw.com/products/anna/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/anna/ANNA.jpg",
+        "raw-data/raw-assets/eaw/speakers/adaptive-series/anna/ANNA-ovnn6px41kxjyccq9o95geti9iufxhn4xasfg6ibcw.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/",
+        "https://eaw.com/documentation/anna-caster-pallet-drw2d-2/anna_flybar_drw2d_reva-2/",
+        "https://eaw.com/documentation/anna-caster-pallet-drw2d-2/anna_caster_pallet_drw2d-4/"
+      ]
+    },
+    {
+      "id": "spk-eaw-rs115",
+      "name": "RS115",
+      "series": "RS Series",
+      "productPage": "https://eaw.com/products/rs-115/",
+      "status": "verified",
+      "images": [
+        "raw-data/raw-assets/eaw/speakers/rs-series/rs115/rs11x.jpg"
+      ],
+      "documentationPages": [
+        "https://eaw.com/documentation/"
+      ]
+    }
+  ],
+  "excludedPublishedRecords": [
+    {
+      "name": "UXA4807D",
+      "productPage": "https://eaw.com/products/uxa4807d/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "UXA4416",
+      "productPage": "https://eaw.com/products/uxa4416/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "MKD1500 Series",
+      "productPage": "https://eaw.com/products/mkd1500-series/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "UXA4403",
+      "productPage": "https://eaw.com/products/uxa4403/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "UXA4401",
+      "productPage": "https://eaw.com/products/uxa4401/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "– – – – –",
+      "productPage": "https://eaw.com/products/28951-2/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "MKD800 Series",
+      "productPage": "https://eaw.com/products/mkd800-series/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "MKD1000 Series",
+      "productPage": "https://eaw.com/products/mkd1000-series/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "MKD1200 Series",
+      "productPage": "https://eaw.com/products/mkd1200-series/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "MK5300i Series",
+      "productPage": "https://eaw.com/products/mk5300-series/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "MK2300i Series",
+      "productPage": "https://eaw.com/products/mk2300-series/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "QX500 Series",
+      "productPage": "https://eaw.com/products/qx500-series/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    },
+    {
+      "name": "QX300 Series",
+      "productPage": "https://eaw.com/products/qx300-series/",
+      "reason": "non-loudspeaker, placeholder, or series landing record"
+    }
+  ],
+  "failures": [],
+  "documentationCoverage": {
+    "currentCatalogue": "The official Products index is the current catalogue and is archived as HTML; the Current documentation taxonomy publishes no separate downloadable full-line catalogue.",
+    "currentWhitepapers": "No whitepaper is assigned to the official Current documentation taxonomy as of the retrieval date; the two searchable CSC whitepapers are explicitly Legacy and are excluded.",
+    "currentApplicationGuides": [
+      "https://eaw.com/documentation/newport-series-application-guide/",
+      "https://eaw.com/documentation/install-engineered-solutions-application-guide/",
+      "https://eaw.com/documentation/line-array-application-guide/",
+      "https://eaw.com/documentation/adaptive-systems-application-guide-revc/"
+    ]
+  }
+}

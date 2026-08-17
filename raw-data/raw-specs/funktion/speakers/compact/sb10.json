@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-sb10",
+  "manufacturerId": "funktion",
+  "name": "SB10",
+  "slug": "sb10",
+  "series": "Compact",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/sb10-compact-range/",
+  "rangePage": "https://funktion-one.com/ranges/compact-range",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "SB10 - Powerful Compact Bass Performance",
+    "technical": {
+      "bandwidth": "45Hz - 300Hz",
+      "weight": "19kg (42lbs)",
+      "dispersion": "N/A",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 10” Operating Band 40Hz - 130Hz Sensitivity at 1m 98dB at 2.8V Power (AES) 300W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/834667dd-9884-4cee-b126-beb66f1f956d_Funktion-One+SB10+Bass.jpg",
+      "https://images.prismic.io/funktion-one/ca369c89-c406-4a3f-a0bd-bfc39edc00c0_Funktion-One+SB10+Grid.jpg",
+      "https://images.prismic.io/funktion-one/46e1cf1f-20e5-48e2-a479-ff4d3d53329c_SB10-F1-WD%3DT0079-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/ZiZ0KvPdc1huKraO_SB10-F1-DS%3DD0021-02.pdf",
+        "label": "ZiZ0KvPdc1huKraO_SB10-F1-DS%3DD0021-02.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/8846a8f8-dde4-45ad-86b0-5f980b621a80_SB10A-F1-DS%3DD0066-01.pdf",
+        "label": "8846a8f8-dde4-45ad-86b0-5f980b621a80_SB10A-F1-DS%3DD0066-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z6nou5bqstJ9-bF8_SB10IP-F1-DS%3DD0084-00.pdf",
+        "label": "Z6nou5bqstJ9-bF8_SB10IP-F1-DS%3DD0084-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Zv6dWbVsGrYSwVqO_SB8A_SB10A_User_Guide_V1.2.pdf",
+        "label": "Zv6dWbVsGrYSwVqO_SB8A_SB10A_User_Guide_V1.2.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/9d02c023-26c4-4077-9aea-c76b22b1d5bd_SB10-F1-TD%3DT0075-00.PDF",
+        "label": "9d02c023-26c4-4077-9aea-c76b22b1d5bd_SB10-F1-TD%3DT0075-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/d98950a3-c3c1-4c64-87f6-cfbfea43259f_SB10-F1-DD%3DT0076-00.PDF",
+        "label": "d98950a3-c3c1-4c64-87f6-cfbfea43259f_SB10-F1-DD%3DT0076-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/6335275d-96ea-4132-b35f-e629ef4ed60a_SB10A-F1-TD%3DT0148-00.pdf",
+        "label": "6335275d-96ea-4132-b35f-e629ef4ed60a_SB10A-F1-TD%3DT0148-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/e443f0a4-afcb-4657-8690-beb90ca03d8e_SB10A-F1-DD%3DT0149-00.pdf",
+        "label": "e443f0a4-afcb-4657-8690-beb90ca03d8e_SB10A-F1-DD%3DT0149-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/6063ab52-6285-449a-9f71-0b793fa910ba_SB10-F1-2DM%3DT0077-00.dwg",
+        "label": "6063ab52-6285-449a-9f71-0b793fa910ba_SB10-F1-2DM%3DT0077-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0XkIpbqstJ97yLu_SB10-F1-3DM%3DT0078-00.dwg",
+        "label": "Z0XkIpbqstJ97yLu_SB10-F1-3DM%3DT0078-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

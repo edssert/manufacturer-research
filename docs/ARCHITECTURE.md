@@ -6,7 +6,7 @@
 
 ## 1. 시스템 경계
 
-Manufacturer Research는 정적 단일 페이지 앱이다.
+Sound Systems Index는 정적 단일 페이지 앱이다.
 
 - 브라우저 런타임: Vanilla JavaScript ES modules, HTML, CSS
 - 서버 측 런타임·API·데이터베이스: 없음
@@ -126,6 +126,7 @@ domains/<domain>/
   <domain>.data.js           시리즈/제조사 데이터 barrel
   data/*.data.js             실제 레코드
   <domain>.schema.js         검색·필터·정렬 선언과 순수 파생 함수
+  <domain>.card-model.js     원본 레코드 → 범용 카드 표시 모델 투영
   <domain>.view.js           카드·상세 HTML 생성 함수
   <domain>.detail.js         관계 인덱스 및 상세 provider 등록
   <domain>.controller.js     목록 상태, mount/unmount, route 등록
@@ -143,6 +144,10 @@ Brand처럼 관계 상세 이동이 필요하지 않은 특수 도메인은 `det
 - 원본 배열에 UI 파생 값을 써넣지 않는다. 스피커는
   `createSpeakerCatalog()`가 동결된 런타임 모델을 만들고, 앰프의 매칭 개수는
   `withDerivedSpeakerCount()`가 조회 함수를 통해 계산한다.
+- `speakers.card-model.js`는 198개 런타임 레코드를 버전이 명시된 불변 카드
+  표시 모델로 투영한다. 제조사·제품 형식을 하드코딩하지 않고 대역 수,
+  Max SPL, 외부 앰프·셀프파워드·미확인, verified·pending 상태를 구분한다.
+  전체 Speaker가 같은 렌더러를 사용하며 투영 계약은 전 레코드 단위 테스트를 통과해야 한다.
 
 앰프 상세의 Configuration 표는
 `domains/amplifiers/amplifiers.configurations.js`에 분리되어 있다. 이 순수

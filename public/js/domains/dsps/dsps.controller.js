@@ -22,16 +22,18 @@ const dspCategoryOf = d => d.category || "DSP";
 
 /** 제조사별 정렬일 때만 제조사>카테고리 2단 그룹핑, 그 외에는 평면 그리드 */
 function dspsGroupBy(state) {
-  return state.sort === "category" ? {
-      order: DSP_MK_ORDER,
-      getKey: d => d.mfr,
-      subGroupKey: d => dspCategoryOf(d),
-      subGroupOrder: (sgA, sgB) => sgA.localeCompare(sgB),
-      sortWithinGroup: (a, b) => a.model.localeCompare(b.model),
-      headHTML: (mfr, category, group) => {
-        return `<span class="card-group__badge card-group__badge--name" style="border-color:${DSP_MFR[mfr].color}55;color:${DSP_MFR[mfr].color}">${esc(DSP_MFR[mfr].name)}</span><span class="card-group__title">${esc(category)}</span><span class="card-group__count">${group.length} ea</span>`;
+  return state.sort === "category"
+    ? {
+        order: DSP_MK_ORDER,
+        getKey: d => d.mfr,
+        subGroupKey: d => dspCategoryOf(d),
+        subGroupOrder: (sgA, sgB) => sgA.localeCompare(sgB),
+        sortWithinGroup: (a, b) => a.model.localeCompare(b.model),
+        headHTML: (mfr, category, group) => {
+          return `<span class="card-group__badge card-group__badge--name" style="--mfr:${DSP_MFR[mfr].color}">${esc(DSP_MFR[mfr].name)}</span><span class="card-group__title">${esc(category)}</span><span class="card-group__count">${group.length} ea</span>`;
+        },
       }
-    } : null;
+    : null;
 }
 
 /**

@@ -24,6 +24,7 @@
     "public/js/domains/amplifiers/amplifiers.detail.js",
     "public/js/domains/dsps/dsps.detail.js",
     "public/js/domains/software/software.detail.js",
+    "public/js/domains/speakers/speakers.card-model.js",
     "public/js/domains/speakers/speakers.detail.js",
     "public/js/relationships/cross-ref.js",
     "public/js/relationships/detail-registry.js",
@@ -38,7 +39,8 @@
     "public/tests/amplifier-configurations.test.mjs",
     "public/tests/entity-registry.test.mjs",
     "public/tests/relation-navigation.test.mjs",
-    "public/tests/route-codec.test.mjs"
+    "public/tests/route-codec.test.mjs",
+    "public/tests/speaker-card-model.test.mjs"
   ],
   "exclude": ["dist", "node_modules"]
 }

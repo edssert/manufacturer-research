@@ -1,6 +1,6 @@
-# Manufacturer // Research (MR)
+# Sound Systems Index
 
-L-Acoustics, d&b audiotechnik, Meyer Sound의 스피커·앰프·DSP·소프트웨어·
+L-Acoustics, d&b audiotechnik, Meyer Sound, Adamson, Cohesion의 스피커·앰프·DSP·소프트웨어·
 액세서리 사양을 검색하고 관계를 비교하는 정적 웹 앱이다. 브라우저 런타임은
 프레임워크 없는 Vanilla JavaScript ES modules이며, 서버나 데이터베이스가
 필요하지 않다.

@@ -1,97 +1,84 @@
-/* ============================================================
-   tokens.css — 디자인 토큰 (CSS 변수)
-   모든 색상·서체·라운딩 값은 여기서만 정의한다.
-   다른 CSS 파일과 JS(schema의 color 필드)는 var(--이름)로만 참조.
-
-   단일 저자극 라이트 팔레트. 제품 사진은 순백색을 유지하고 앱 배경은
-   차가운 저채도 중립색으로 낮춰 넓은 화면에서도 눈부심을 줄인다.
-   ============================================================ */
 :root {
-  /* 캔버스와 정보 패널을 분리하고, 제품 카드만 순백색으로 들어 올린다. */
-  --bg: #F1F3F4;
-  --bg-rgb: 241, 243, 244;
-  --panel: #FAFBFB;
-  --panel-2: #F5F7F7;
-  --panel-3: #E9EDEF;
-  --surface-raised: #FFFFFF;
+  --bg: #f4f6f8;
+  --bg-rgb: 244, 246, 248;
+  --panel: #fcfdfe;
+  --panel-2: #f7f9fb;
+  --panel-3: #e9edf2;
+  --surface-raised: #ffffff;
 
-  /* 경계선 */
-  --line: #DDE2E5;
-  --line-2: #C5CDD2;
+  --line: #e4e7ec;
+  --line-2: #d0d5dd;
 
-  /* 텍스트 (진한 순 → 흐린 순) */
-  --ink: #182026;
-  --ink-2: #3F4B52;
-  --muted: #5F6B73;
-  --muted-2: #8B959B;
+  --ink: #101828;
+  --ink-2: #344054;
+  --muted: #667085;
+  --muted-2: #98a2b3;
 
-  /* 포인트 컬러는 장비 UI에 맞춘 절제된 스틸 블루를 사용한다. */
-  --accent: #345E75;
-  --accent-ink: #FFFFFF;
-  --accent-dim: rgba(52, 94, 117, .10);
-  --accent-line: rgba(52, 94, 117, .34);
+  --accent: #175cd3;
+  --accent-ink: #ffffff;
+  --accent-dim: rgba(23, 92, 211, 0.09);
+  --accent-line: rgba(23, 92, 211, 0.42);
 
-  /* 기본 깊이는 경계선으로, 상호작용과 모달만 절제된 그림자로 표현한다. */
-  --shadow-card: 0 1px 2px rgba(24, 32, 38, .035);
-  --shadow-card-hover: 0 8px 22px rgba(24, 32, 38, .085);
-  --shadow-modal: 0 28px 70px rgba(24, 32, 38, .22);
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.03);
+  --shadow-card-hover: 0 10px 28px rgba(16, 24, 40, 0.1);
+  --shadow-modal: 0 28px 70px rgba(16, 24, 40, 0.24);
+  --shadow-control: 0 1px 2px rgba(16, 24, 40, 0.05);
 
-  /* SPL과 Rack 게이지는 중성 청회색 계열 안에서 명도만 구분한다. */
-  --gauge-spl-start: #8CA3AE;
-  --gauge-spl-end: #3E6577;
-  --gauge-rack-start: #7D9CA1;
-  --gauge-rack-end: #386A71;
+  --gauge-spl-start: #667085;
+  --gauge-spl-end: #20262e;
+  --gauge-rack-start: #6ce9a6;
+  --gauge-rack-end: #067647;
 
-  /* 제조사 식별색은 흰 패널에서 텍스트로 쓸 수 있는 대비를 확보한다. */
-  --la: #6B5525;
-  --db: #252A2F;
-  --my: #365B91;
+  --manufacturer: #344054;
+  --la: var(--manufacturer);
+  --db: var(--manufacturer);
+  --my: var(--manufacturer);
+  --ad: var(--manufacturer);
+  --co: var(--manufacturer);
+  --nexo: var(--manufacturer);
+  --martin: var(--manufacturer);
+  --jbl: var(--manufacturer);
+  --pk: var(--manufacturer);
+  --eaw: var(--manufacturer);
+  --coda: var(--manufacturer);
+  --funktion: var(--manufacturer);
+  --ev: var(--manufacturer);
+  --rcf: var(--manufacturer);
 
-  /* 도메인 식별 컬러 */
-  --dsp: #5C4DB8;
+  --dsp: #5c4db8;
   --sw: #167653;
-  --brand: #8F590F;
+  --brand: #8f590f;
 
-  /* 타입 스케일 — 5단 고정 (1-2). 10~20px 사이 ad hoc 크기를 여기로 수렴.
-     최소 텍스트 크기 하한은 11px (--fs-xs). */
-  --fs-xs: 11px;   /* 배지·카운트·각주 (기존 10/10.5/11px → 여기로) */
-  --fs-sm: 12px;   /* 보조 텍스트·eyebrow (기존 12/12.5px) */
-  --fs-md: 13px;   /* 본문·컨트롤 (기존 13px, body 15px은 유지) */
-  --fs-lg: 16px;   /* 그룹 제목·섹션 라벨 */
-  --fs-xl: 20px;   /* 카드 모델명·모달 제목 */
+  --fs-xs: 11px;
+  --fs-sm: 12px;
+  --fs-md: 13px;
+  --fs-lg: 16px;
+  --fs-xl: 20px;
 
-  /* [비율 정리] 컨트롤 바의 검색 입력·정렬 셀렉트·버튼은 원래
-     각자 세로 패딩(11px/10px/10px)으로 높이가 제각각이라 한 줄에 놓였을 때
-     들쭉날쭉했다. 높이를 이 토큰 하나로 고정하고 패딩은 좌우만 준다 —
-     프로 툴들이 쓰는 방식이고, 나중에 밀도를 바꿀 때도 여기 한 곳만 만진다.
-     값은 topnav 의 사진/모션 토글(30px)과 맞췄다 — 상단 두 바의
-     컨트롤이 같은 크기라야 세로로 겹쳐 봤을 때 리듬이 맞는다. */
+  --type-identity: 20px;
+  --type-section: 17px;
+  --type-value: 14px;
+  --type-body: 13px;
+  --type-meta: 11px;
+  --type-micro: 10px;
+
   --control-h: 30px;
 
-  /* 최상단 로고 바 · 도메인 탭 바 · 검색 바 세 줄의 높이를 하나로
-     통일한다. 셋 다 스크롤 고정이라 세로로 붙어 보이는데 높이가 제각각이면
-     계단처럼 어긋나 보인다.
-     이 값은 **바 하나의 총 높이(아래 1px 경계선 포함)** 다 — 셋을 합치면 정확히
-     120px 이 된다(사용자 지정). 각 바의 내용 줄에는 경계선을 뺀
-     calc(var(--bar-h) - 1px) 를 min-height 로 건다. 실제 스크롤 오프셋은
-     sticky-header.js 가 실측한 --topbar-h/--topnav-h 를 쓴다 — 반응형 줄바꿈으로
-     바가 더 높아질 수 있어 계산식으로 고정하지 않는다. */
   --bar-h: 40px;
-  /* 바 안쪽 내용 줄 높이 — 위 --bar-h 에서 경계선 1px 을 뺀 값. */
   --bar-inner-h: calc(var(--bar-h) - 1px);
 
-  /* 공통 형태 */
-  --radius: 12px;
-  --sans: 'Pretendard', 'Pretendard Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --radius-sm: 6px;
+  --radius-control: 8px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --sans: "Pretendard", "Pretendard Variable", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  /* 일반 제품 사진도 흰 카드와 이어지는 아주 옅은 스튜디오 면에 놓는다. */
-  --card-media-start: #FFFFFF;
-  --card-media-bg: linear-gradient(180deg, #FFFFFF 0%, #F3F6F7 100%);
+  --card-media-start: #ffffff;
+  --card-media-bg: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
 
-  /* 제조사 원본의 투명도·내장 그림자 차이를 흡수하는 제품 사진 스테이지. */
   --product-media-surface: #fff;
-  --product-media-ink: #4B5961;
+  --product-media-ink: #4b5961;
   --product-media-ink-strong: #182026;
-  --product-media-accent: #345E75;
-  --product-media-line: #DFE5E8;
+  --product-media-accent: #175cd3;
+  --product-media-line: #eaecf0;
 }

@@ -1,4 +1,4 @@
-/** L-Acoustics K Series 제품 이미지 스테이지 범위 계약. */
+/** 모든 Speaker 제품 이미지의 단일 흰 스테이지 계약. */
 import { readFileSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
@@ -15,25 +15,16 @@ function check(name, condition) {
   console.log(`${condition ? "PASS" : "FAIL"} — ${name}`);
 }
 
-const kSeries = SPEAKERS.filter(speaker => speaker.mk === "la" && speaker.series === "K Series");
-const outsidePilot = SPEAKERS.find(speaker => speaker.mk !== "la" || speaker.series !== "K Series");
-
-check("K Series 파일럿 레코드가 존재함", kSeries.length > 0);
+check("Speaker 레코드가 존재함", SPEAKERS.length > 0);
 check(
-  "모든 K Series 카드가 흰 제품 스테이지 변경자를 가짐",
-  kSeries.every(speaker => cardHTML(speaker).includes('class="card__media product-media--white"')),
+  "모든 Speaker 카드가 흰 제품 스테이지 변경자를 가짐",
+  SPEAKERS.every(speaker => cardHTML(speaker).includes('class="card__media product-media--white"')),
 );
 check(
-  "모든 K Series 상세가 흰 제품 스테이지 변경자를 가짐",
-  kSeries.every(speaker =>
+  "모든 Speaker 상세가 흰 제품 스테이지 변경자를 가짐",
+  SPEAKERS.every(speaker =>
     modalBodyHTML(speaker, null, []).body.includes('class="modal__media-wrap product-media--white"'),
   ),
-);
-check(
-  "파일럿 밖 스피커에는 흰 제품 스테이지를 강제하지 않음",
-  Boolean(outsidePilot) &&
-    !cardHTML(outsidePilot).includes("product-media--white") &&
-    !modalBodyHTML(outsidePilot, null, []).body.includes("product-media--white"),
 );
 
 const tokensCSS = readFileSync(join(ROOT, "public/css/tokens.css"), "utf8");
@@ -44,7 +35,7 @@ check(
   "카드 흰 스테이지가 그라디언트와 인공 그림자를 제거함",
   cardCSS.includes(".card__media.product-media--white") &&
     cardCSS.includes("background-image: none;") &&
-    cardCSS.includes(".card__media.product-media--white img { filter: none; }"),
+    /\.card__media\.product-media--white img\s*\{[^}]*filter:\s*none;/s.test(cardCSS),
 );
 check(
   "상세·확대 흰 스테이지가 같은 표면 토큰을 사용함",

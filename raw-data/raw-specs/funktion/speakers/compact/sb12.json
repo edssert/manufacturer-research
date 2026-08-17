@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-sb12",
+  "manufacturerId": "funktion",
+  "name": "SB12",
+  "slug": "sb12",
+  "series": "Compact",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/sb12-compact-range/",
+  "rangePage": "https://funktion-one.com/ranges/compact-range",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "SB12 - Powerful Compact Bass Performance",
+    "technical": {
+      "bandwidth": "42Hz - 150Hz",
+      "weight": "28kg (62lbs)",
+      "dispersion": "N/A",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 12” Operating Band 35Hz - 150Hz Sensitivity at 1m 97dB at 2.8V Power (AES) 350W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/aWTqdQIvOtkhBTw4_SB12_Website.jpg",
+      "https://images.prismic.io/funktion-one/Z5DnGpbqstJ99uyu_SB12-F1-WD%3DT0310-00_1.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aWToPwIvOtkhBTtK_SB12-F1-DS%3DD0077-05.pdf",
+        "label": "aWToPwIvOtkhBTtK_SB12-F1-DS%3DD0077-05.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5pyxJbqstJ9-Alb_SB12-F1-TD%3DT0306-00.PDF",
+        "label": "Z5pyxJbqstJ9-Alb_SB12-F1-TD%3DT0306-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5pyzJbqstJ9-Ald_SB12-F1-DD%3DT0307-00.PDF",
+        "label": "Z5pyzJbqstJ9-Ald_SB12-F1-DD%3DT0307-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5py1JbqstJ9-Ale_SB12-F1-2DM%3DT0308-00.dwg",
+        "label": "Z5py1JbqstJ9-Ale_SB12-F1-2DM%3DT0308-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5py3JbqstJ9-Alf_SB12-F1-3DM%3DT0309-00.dwg",
+        "label": "Z5py3JbqstJ9-Alf_SB12-F1-3DM%3DT0309-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

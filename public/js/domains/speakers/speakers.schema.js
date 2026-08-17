@@ -11,39 +11,263 @@ import { MANUFACTURERS, MANUFACTURER_ORDER } from "../../core/manufacturers.js";
 
 export const MFR = MANUFACTURERS;
 export const MK_ORDER = MANUFACTURER_ORDER;
-export const TYPE_ORDER = ["Line Array", "Progressive Ultra-Dense Line Source", "Constant Curvature Line", "Point", "Colinear", "Subwoofer"];
+export const TYPE_ORDER = [
+  "Line Array",
+  "Progressive Ultra-Dense Line Source",
+  "Constant Curvature Line",
+  "Point",
+  "Colinear",
+  "Subwoofer",
+];
 // Type 태그가 card__config 줄(전용 한 줄, 공간 여유)로 옮겨간
 // 뒤로는 축약할 필요가 없어져 풀스펠링을 그대로 쓴다 — 매핑은 빈 상태로 유지
 // (필요해지면 TYPE_BADGE_LABEL[v] || v 폴백 그대로 재사용 가능).
 export const TYPE_BADGE_LABEL = {};
-// Controls the order series/subgroups appear in within the "series" sort view.
-// Standalone subwoofer series (no throwCat, e.g. L-Acoustics "Subwoofers") sort
-// after the throw-distance tiers; anything unrecognized falls back after that.
 export const THROWCAT_ORDER = ["Long Throw", "Medium Throw", "Short Throw"];
-// d&b와 Meyer Sound 시리즈는 throwCat이 null이라 THROWCAT_ORDER를 적용할 수
-// 없다. d&b는 SL을 CL보다 먼저, Meyer Sound는 체급 순으로 PANTHER(68kg) >
-// TIGRA(54kg) > LEOPARD(34kg) > LINA(19.5kg)를 명시한다
-// (speakers.controller.js subGroupOrder 참고).
-// 정렬은 제조사(mk) 그룹 안에서만 비교되므로 값은 제조사별 상대 순서만 의미가
-// 있다. d&b: 대형 라인어레이(SL) → V → T → 컬럼(CL) → 증강(AL). Meyer: 라인어레이
-// 4종을 체급 순(PANTHER>TIGRA>LEOPARD>LINA)으로 둔 뒤 포인트소스·모니터
-// (ULTRA-X/UP/Ashby/MJF), 그다음 서브우퍼 계열(MM/LFC/USW/Cinema)을 배치.
-// 값은 제조사 그룹 안에서만 비교되므로 제조사별로 번호 블록을 나눠 둔다
-// (d&b 0번대 / Meyer 100번대) — 서로 다른 제조사끼리 번호가 겹쳐도 정렬에는
-// 영향이 없지만, 블록을 분리해 둬야 시리즈를 추가할 때 남의 번호를 건드리지
-// 않는다. d&b 는 라인어레이 체급 순(SL>V>Y>T) 뒤에 컬럼·설치형·모니터·서브를 둔다.
-export const SERIES_ORDER_OVERRIDE = {
-  "SL Series": 0, "V Series": 1, "Y Series": 2, "T Series": 3, "CL Series": 4,
-  "AL Series": 5, "xS Series": 6, "xC Series": 7, "E Series": 8, "U Series": 9,
-  "Monitors": 10,
-  // "Subwoofers"(d&b B22, L-Acoustics KS/SB 계열)는 일부러 넣지 않는다 —
-  // 시리즈명이 두 제조사에 공통이라 여기 넣으면 L-Acoustics 쪽 "Subwoofers"
-  // 까지 override 를 받아 맨 앞으로 튀어나온다(override 있는 쪽이 항상 우선).
-  // 빼 두면 throwCat 없는 시리즈로 취급돼 양쪽 모두 자연히 맨 뒤로 간다.
-  "PANTHER Series": 100, "TIGRA Series": 101, "LEOPARD Series": 102, "LINA Series": 103,
-  "ULTRA-X Series": 104, "UP Series": 105, "Ashby Series": 106, "MJF Series": 107,
-  "MM Series": 108, "LFC Series": 109, "USW Series": 110, "Cinema Series": 111,
-};
+export const SERIES_ORDER_BY_MANUFACTURER = Object.freeze({
+  la: Object.freeze(["K Series", "L Series", "A Series", "X Series", "S Series", "Subwoofers"]),
+  db: Object.freeze([
+    "SL Series",
+    "V Series",
+    "Y Series",
+    "T Series",
+    "CL Series",
+    "AL Series",
+    "xS Series",
+    "xC Series",
+    "E Series",
+    "U Series",
+    "Monitors",
+    "Subwoofers",
+  ]),
+  my: Object.freeze([
+    "PANTHER Series",
+    "TIGRA Series",
+    "LEOPARD Series",
+    "LINA Series",
+    "ULTRA-X Series",
+    "UP Series",
+    "Ashby Series",
+    "MJF Series",
+    "MM Series",
+    "LFC Series",
+    "USW Series",
+    "Cinema Series",
+  ]),
+  ad: Object.freeze(["Vergence Group", "CS Series", "M Series", "IS Series", "S Series", "E Series"]),
+  co: Object.freeze(["CO Series", "CP Series", "CM Series", "CSB Series", "CF Series"]),
+  nexo: Object.freeze([
+    "Alpha+ Series",
+    "STM",
+    "M28",
+    "GEO M Series",
+    "P+ Series",
+    "ID Series",
+    "ePS Series",
+    "ePS Outdoor",
+    "45N12",
+    "GEO S12",
+    "LS18",
+    "RS",
+  ]),
+  martin: Object.freeze([
+    "Adorn Series",
+    "BlacklineQ",
+    "BlacklineX Powered Series",
+    "CDD/CDD-WR Series",
+    "CDD-LIVE!",
+    "Ceiling Series",
+    "FlexPoint",
+    "LE Stage Monitors",
+    "O-Line",
+    "SX Series",
+    "TH Series",
+    "Torus",
+    "Wavefront Precision",
+    "XE Stage Monitors",
+    "BlacklineX Series",
+    "Blackline3 Series",
+    "DDX Series",
+    "V.Series",
+    "S.Series",
+    "D.Series",
+    "P.I.",
+    "XD Series",
+  ]),
+  jbl: Object.freeze([
+    "LCT Lay-In Ceiling-Tile Speakers",
+    "Control 40 Series Constant-Directivity Ceiling",
+    "CSS Commercial Series Ceiling Speakers-cn",
+    "Control 10 Series Small Format Ceiling",
+    "8100 Series Ceiling with Stylized Grille",
+    "Control 200 Series Medium-Format Ceiling Speakers",
+    "Control 400 Enhanced Coverage Series Ceiling",
+    "Control 300 Series Large-Format Ceiling Speakers",
+    "Control 400 Standard Coverage Series Ceiling",
+    "Control 20 Series Small Format Ceiling",
+    "Control 400 Premium Coverage Series Ceiling",
+    "CBT Series Passive Controlled-Coverage Columns",
+    "COL Slim Column",
+    "PRX400 Series Passive",
+    "Intellivox ADC Digital Directivity Columns",
+    "SRX800 Series Powered",
+    "Installable Portable PA Speakers",
+    "SRX800 Series Passive",
+    "EON700 Series",
+    "Commercial Soundbars",
+    "GSB Garden In-Ground Subwoofers",
+    "Control Contractor 100 Series In-Wall Speakers",
+    "SRX900 Series",
+    "VRX900 Series",
+    "VTX Series A Series",
+    "GSF Garden Full-Range Speakers",
+    "VLA Series Large Format",
+    "Control 80 Series Landscape Speakers",
+    "VTX Series V Series",
+    "VLA Series Compact",
+    "Control 60 Series Pendant Speakers",
+    "PD500 Series Hornloaded Coaxial",
+    "AE Series Entry Level",
+    "AWC Compact & AW Series",
+    "AE Series Compact",
+    "VTX Series F Series",
+    "PD6000 Series Medium-Format",
+    "PD700i Series Large-Format",
+    "Surface Mount Speakers",
+    "SLP Sleek Low-Profile Speakers",
+    "CSS-H Paging Horns",
+    "Control Contractor 20 Series Surface-Mount Speakers",
+    "Control 50 Series Subwoofer/Satellite Speakers",
+    "Control 2P Powered Speaker",
+    "Control 5 Speaker",
+    "Control CRV Architectural Speaker",
+    "VTX Series B Series",
+    "ASB6000",
+    "ASB7000",
+    "EON ONE Series",
+    "IRX ONE",
+    "IRX Series",
+    "JRX200 Series",
+    "PRX900 Series",
+    "VTX M Series",
+    "VTX Subwoofer Series",
+  ]),
+  pk: Object.freeze(["Line Source", "Low Frequency", "Point Source"]),
+  eaw: Object.freeze([
+    "ADAPTive Series",
+    "Newport",
+    "KF Series",
+    "QX Series",
+    "MKD Series",
+    "MK Series",
+    "MKC Series",
+    "RSX Series",
+    "RS Series",
+    "LA Series",
+    "SB Series",
+    "SBX Series",
+    "MW Series",
+    "SM Series",
+    "CIS Series",
+    "LS Series",
+  ]),
+  coda: Object.freeze([
+    "ViFORCE Series",
+    "AiRAY Series",
+    "CiRAY Series",
+    "ViRAY Series",
+    "N-RAY Series",
+    "TiRAY Series",
+    "CoRAY Series",
+    "APS Series",
+    "APSi Series",
+    "N-APS Series",
+    "HOPS Series",
+    "CUE Series",
+    "SC SUB Series",
+    "G Series",
+    "D Series",
+    "Multipurpose Subwoofers",
+    "Special Applications",
+  ]),
+  funktion: Object.freeze([
+    "Vero",
+    "Vero VX",
+    "Evolution",
+    "Compact",
+    "Horn Loaded Bass",
+    "Bass Reflex",
+    "Dance Stack",
+    "Public Address",
+    "Monitor",
+  ]),
+  ev: Object.freeze([
+    "EVERSE",
+    "EKX",
+    "EVC",
+    "EVID ENTRY CEILING",
+    "EVID CEILING G2",
+    "EVOLVE",
+    "EVA",
+    "PXM",
+    "ELX200",
+    "ZLX G2",
+    "EVIVA",
+    "EVF G2",
+    "EVH G2",
+    "LRC",
+    "ETX",
+    "EVID PENDANT",
+    "MTS",
+    "X-Line Advance",
+    "MFX",
+    "EVID SURFACE",
+    "EVID PREMIUM CEILING",
+    "XLE",
+    "XLD",
+    "Other Installed",
+    "EVID CEILING",
+  ]),
+  rcf: Object.freeze([
+    "HDL Series",
+    "HDL Flyable Subwoofers",
+    "KX Series",
+    "NX Column Arrays",
+    "NX 9 Series",
+    "NX Series",
+    "NX Stage Monitors",
+    "SUB 9000",
+    "SUB Series",
+    "ART 9 Series",
+    "ART 7 MK5 Series",
+    "EVOX Systems",
+    "SUB AX Series",
+    "Portable SUB Series",
+    "HL Series",
+    "HVL Series",
+    "X Series",
+    "COMPACT C Series",
+    "COMPACT Series",
+    "COMPACT M Series",
+    "COMPACT A Series",
+    "P Series",
+    "MAX Series",
+    "ART Installed",
+    "Premium Speakers",
+    "Speaker & Ceiling",
+    "VSA Series",
+    "Installed High-Power Subwoofers",
+    "Installed Compact Subwoofers",
+    "Acoustica Subwoofers",
+    "Ultra-Compact Subwoofers",
+  ]),
+});
+
+export function seriesRank(manufacturerId, series) {
+  const order = SERIES_ORDER_BY_MANUFACTURER[manufacturerId];
+  const index = order?.indexOf(series) ?? -1;
+  return index < 0 ? Number.MAX_SAFE_INTEGER : index;
+}
 export const WAY_ORDER = ["2-way", "3-way", "16-channel", "N/A"];
 export const NETWORK_ORDER = ["Active", "Passive", "Hybrid"];
 const WAY_LABEL = { "2-way": "2-Way", "3-way": "3-Way", "16-channel": "16-Channel", "N/A": "Full-range / Sub" };
@@ -96,21 +320,26 @@ export function parseAngleRange(raw) {
   const s = String(raw).trim();
 
   // "A to B" — 진짜 연속 범위 표기
-  const toMatch = s.match(/^([\d.]+)\s*°?\s*to\s*([\d.]+)\s*°?$/i);
+  const toMatch = s.match(/^([\d.]+)\s*°?\s*(?:to|[-–—])\s*([\d.]+)\s*°?$/i);
   if (toMatch) {
-    const a = parseFloat(toMatch[1]), b = parseFloat(toMatch[2]);
+    const a = parseFloat(toMatch[1]),
+      b = parseFloat(toMatch[2]);
     return [Math.min(a, b), Math.max(a, b)];
   }
 
   // 콤마로 여러 그룹(=여러 프리셋/옵션) 분리, 그룹별로 슬래시 결합 규칙 적용
-  const groups = s.split(",").map(g => g.trim()).filter(Boolean);
+  const groups = s
+    .split(",")
+    .map(g => g.trim())
+    .filter(Boolean);
   const values = [];
   groups.forEach(g => {
     const signedNums = g.match(/[+-]?\d+(?:\.\d+)?/g) || [];
     const hasSign = /[+-]/.test(g);
     if (g.includes("/") && hasSign && signedNums.length === 2) {
       // 부호 있는 슬래시("+5°/-21°"): 위/아래 비대칭 틸트 -> 절대 스팬(합계)
-      const a = parseFloat(signedNums[0]), b = parseFloat(signedNums[1]);
+      const a = parseFloat(signedNums[0]),
+        b = parseFloat(signedNums[1]);
       values.push(Math.abs(a - b));
     } else if (g.includes("/")) {
       // 부호 없는 슬래시("55°/35°"): 좌우 대칭 절반 -> 합산 실효각
@@ -130,9 +359,7 @@ function angleRangeFields(speaker) {
   return {
     hRange: coverage ? parseAngleRange(coverage.h) : null,
     vRange: coverage ? parseAngleRange(coverage.v) : null,
-    splayRange: coverage?.splayList?.length
-      ? [Math.min(...coverage.splayList), Math.max(...coverage.splayList)]
-      : null,
+    splayRange: coverage?.splayList?.length ? [Math.min(...coverage.splayList), Math.max(...coverage.splayList)] : null,
   };
 }
 
@@ -145,12 +372,16 @@ function angleRangeFields(speaker) {
  */
 export function createSpeakerCatalog(speakers) {
   if (!Array.isArray(speakers)) throw new TypeError("speakers must be an array");
-  return Object.freeze(speakers.map(speaker => Object.freeze({
-    ...speaker,
-    ...crossoverFields(speaker),
-    lowUnitConfig: lowUnitConfigOf(speaker),
-    ...angleRangeFields(speaker),
-  })));
+  return Object.freeze(
+    speakers.map(speaker =>
+      Object.freeze({
+        ...speaker,
+        ...crossoverFields(speaker),
+        lowUnitConfig: lowUnitConfigOf(speaker),
+        ...angleRangeFields(speaker),
+      }),
+    ),
+  );
 }
 
 export const speakersSchema = {
@@ -162,11 +393,11 @@ export const speakersSchema = {
   // 비교 대상(제조사명)도 같은 함수로 정규화해야 "lacoustics" 등이 매칭된다.
   customSearchMatch: (item, q) => normalizeSearchText(MFR[item.mk].name).includes(q), // also match manufacturer name
   chipFields: [
-    { key: "mk", label: "Manufacturer", order: MK_ORDER, labelFor: (v) => MFR[v].name },
+    { key: "mk", label: "Manufacturer", order: MK_ORDER, labelFor: v => MFR[v].name },
     { key: "type", label: "Type", order: TYPE_ORDER },
-    { key: "lowInch", label: 'Low Driver ″', labelFor: (v) => v + "″" },
+    { key: "lowInch", label: "Low Driver ″", labelFor: v => v + "″" },
     { key: "lowUnitConfig", label: "Low Unit Config", order: LOW_UNIT_CONFIG_ORDER },
-    { key: "wayCount", label: "Way", order: WAY_ORDER, labelFor: (v) => WAY_LABEL[v] || v },
+    { key: "wayCount", label: "Way", order: WAY_ORDER, labelFor: v => WAY_LABEL[v] || v },
     { key: "network", label: "Network", order: NETWORK_ORDER },
   ],
   rangeFields: [

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-sb8",
+  "manufacturerId": "funktion",
+  "name": "SB8",
+  "slug": "sb8",
+  "series": "Compact",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/sb8-compact-range/",
+  "rangePage": "https://funktion-one.com/ranges/compact-range",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "SB8 - Extremely Compact Funktion-One Bass Performance",
+    "technical": {
+      "bandwidth": "50Hz - 300Hz",
+      "weight": "14kg (38.8lbs)",
+      "dispersion": "N/A",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 8” Operating Band 50Hz - 300Hz Sensitivity at 1m 95dB at 2.8V Power (AES) 250W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/b0eab8a2-8f36-4702-a33f-fc42b0a8f257_SB8+New.png",
+      "https://images.prismic.io/funktion-one/b6b93c3f-9e64-44c6-9109-4176110fe1de_Funktion-One+SB8+Grid.jpg",
+      "https://images.prismic.io/funktion-one/4194661e-8e22-4191-9510-e8eb9ef5b7cd_SB8-F1-WD%3DT0074-00.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/46a4e4d3-697f-48aa-88ff-e656c532a379_SB8-F1-DS%3DD0020-01.pdf",
+        "label": "46a4e4d3-697f-48aa-88ff-e656c532a379_SB8-F1-DS%3DD0020-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/700dd7c1-1fe5-43a7-bc59-f49169612e7c_SB8A-F1-DS%3DD0065-01.pdf",
+        "label": "700dd7c1-1fe5-43a7-bc59-f49169612e7c_SB8A-F1-DS%3DD0065-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Zv6dWbVsGrYSwVqO_SB8A_SB10A_User_Guide_V1.2.pdf",
+        "label": "Zv6dWbVsGrYSwVqO_SB8A_SB10A_User_Guide_V1.2.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/9511215d-1376-49c9-b1b9-95ee997dd8fe_SB8-F1-TD%3DT0070-00.PDF",
+        "label": "9511215d-1376-49c9-b1b9-95ee997dd8fe_SB8-F1-TD%3DT0070-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/4bb729b1-bcfc-46ae-b789-39dec69eb229_SB8-F1-DD%3DT0071-00.PDF",
+        "label": "4bb729b1-bcfc-46ae-b789-39dec69eb229_SB8-F1-DD%3DT0071-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/6ebaea9e-7f04-471d-b42e-7b80ddfb87f1_SB8A-F1-TD%3DT0146-00.pdf",
+        "label": "6ebaea9e-7f04-471d-b42e-7b80ddfb87f1_SB8A-F1-TD%3DT0146-00.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/24c34440-ede3-4a66-b09c-0bf08bfb2a77_SB8A-F1-DD%3DT0147-00.PDF",
+        "label": "24c34440-ede3-4a66-b09c-0bf08bfb2a77_SB8A-F1-DD%3DT0147-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/d960ee50-a458-40b8-b9ae-804b6ba798c1_SB8-F1-2DM%3DT0072-00.dwg",
+        "label": "d960ee50-a458-40b8-b9ae-804b6ba798c1_SB8-F1-2DM%3DT0072-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0XkRJbqstJ97yL4_SB8-F1-3DM%3DT0073-00.dwg",
+        "label": "Z0XkRJbqstJ97yL4_SB8-F1-3DM%3DT0073-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

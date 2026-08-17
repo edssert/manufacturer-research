@@ -21,10 +21,13 @@ import { cardHTML as swCardHTML } from "./software.view.js";
 const swTypeOf = s => primaryType(s) || "Software";
 
 /** 섹션에 포함된 제조사를 헤더에 색 마커로 표시 (상단바 범례와 같은 모양) */
-const mfrMarkers = group => SW_MK_ORDER
-  .filter(mk => group.some(g => g.mfr === mk))
-  .map(mk => `<span class="card-group__mfr-dot" style="background:${SW_MFR[mk].color}" title="${esc(SW_MFR[mk].name)}"></span>`)
-  .join("");
+const mfrMarkers = group =>
+  SW_MK_ORDER.filter(mk => group.some(g => g.mfr === mk))
+    .map(
+      mk =>
+        `<span class="card-group__mfr-dot" style="background:${SW_MFR[mk].color}" title="${esc(SW_MFR[mk].name)}"></span>`,
+    )
+    .join("");
 
 /**
  * 보기 방식에 따른 그룹핑 설정.
@@ -59,7 +62,7 @@ function swGroupBy(state) {
       subGroupOrder: (a, b) => SW_TYPE_ORDER.indexOf(a) - SW_TYPE_ORDER.indexOf(b),
       sortWithinGroup: (a, b) => a.name.localeCompare(b.name),
       headHTML: (mfr, type, group) =>
-        `<span class="card-group__badge card-group__badge--name" style="border-color:${SW_MFR[mfr].color}55;color:${SW_MFR[mfr].color}">${esc(SW_MFR[mfr].name)}</span><span class="card-group__title">${esc(type)}</span><span class="card-group__count">${group.length} ea</span>`,
+        `<span class="card-group__badge card-group__badge--name" style="--mfr:${SW_MFR[mfr].color}">${esc(SW_MFR[mfr].name)}</span><span class="card-group__title">${esc(type)}</span><span class="card-group__count">${group.length} ea</span>`,
     };
   }
   return null;

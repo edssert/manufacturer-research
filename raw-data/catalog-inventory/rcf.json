@@ -1,0 +1,1662 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "rcf",
+  "scope": "current professional portable, touring, and installed loudspeakers",
+  "retrievedAt": "2026-08-18",
+  "sourcePage": "https://www.rcf.it/en/catalogs/-/catalogs/826164/English",
+  "sourceCatalogs": [
+    "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0",
+    "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true",
+    "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+  ],
+  "total": 162,
+  "verified": 157,
+  "pending": 5,
+  "dataGaps": [
+    {
+      "productIds": ["spk-rcf-vsa-2050-ii", "spk-rcf-vsa-1250-ii", "spk-rcf-vsa-850-ii"],
+      "field": "maxSplAt1m",
+      "reason": "The official exact-model pages publish maximum SPL at 30 m, not a directly comparable maximum SPL at 1 m; no conversion was inferred."
+    },
+    {
+      "productIds": ["spk-rcf-s-08-a"],
+      "field": "maxSplAt1m",
+      "reason": "The official exact-model page and current Installed catalogue do not publish a maximum SPL value."
+    },
+    {
+      "productIds": ["spk-rcf-dp-5en"],
+      "field": "parserSafeCoverage",
+      "reason": "The official exact-model page publishes a 210° conical coverage angle. It is preserved in raw evidence but left null in the non-subwoofer card field because the shared parser contract requires values at or below 180°."
+    }
+  ],
+  "artifactGaps": [
+    {
+      "productIds": ["spk-rcf-hdl-6-a"],
+      "role": "datasheet",
+      "language": "en",
+      "reason": "No English specs sheet was published in the exact-model page download section at retrieval time; the English user manual and current Touring catalogue were archived instead."
+    }
+  ],
+  "products": [
+    {
+      "id": "spk-rcf-hdl-50-a-4k",
+      "name": "HDL 50-A 4K",
+      "slug": "hdl-50-a-4k",
+      "series": "HDL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hdl-50-a-4k",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-hdl-30-a",
+      "name": "HDL 30-A",
+      "slug": "hdl-30-a",
+      "series": "HDL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hdl-30-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-hdl-28-a",
+      "name": "HDL 28-A",
+      "slug": "hdl-28-a",
+      "series": "HDL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hdl-28-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-hdl-26-a",
+      "name": "HDL 26-A",
+      "slug": "hdl-26-a",
+      "series": "HDL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hdl-26-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-hdl-20-a",
+      "name": "HDL 20-A",
+      "slug": "hdl-20-a",
+      "series": "HDL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hdl-20-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-hdl-10-a",
+      "name": "HDL 10-A",
+      "slug": "hdl-10-a",
+      "series": "HDL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hdl-10-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-hdl-6-a",
+      "name": "HDL 6-A",
+      "slug": "hdl-6-a",
+      "series": "HDL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hdl-6-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-hdl-38-as",
+      "name": "HDL 38-AS",
+      "slug": "hdl-38-as",
+      "series": "HDL Flyable Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hdl-38-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-hdl-36-as",
+      "name": "HDL 36-AS",
+      "slug": "hdl-36-as",
+      "series": "HDL Flyable Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hdl-36-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-hdl-35-as",
+      "name": "HDL 35-AS",
+      "slug": "hdl-35-as",
+      "series": "HDL Flyable Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hdl-35-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-hdl-12-as",
+      "name": "HDL 12-AS",
+      "slug": "hdl-12-as",
+      "series": "HDL Flyable Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hdl-12-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-kxl-4-a",
+      "name": "KXL 4-A",
+      "slug": "kxl-4-a",
+      "series": "KX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/kxl-4-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-kxw-4-a",
+      "name": "KXW 4-A",
+      "slug": "kxw-4-a",
+      "series": "KX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/kxw-4-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-kx-45-a",
+      "name": "KX 45-A",
+      "slug": "kx-45-a",
+      "series": "KX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/kx-45-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-kx-32-a",
+      "name": "KX 32-A",
+      "slug": "kx-32-a",
+      "series": "KX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/kx-32-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-kx-10-a",
+      "name": "KX 10-A",
+      "slug": "kx-10-a",
+      "series": "KX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/kx-10-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-kx-08-a",
+      "name": "KX 08-A",
+      "slug": "kx-08-a",
+      "series": "KX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/kx-08-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-kx-515-a",
+      "name": "KX 515-A",
+      "slug": "kx-515-a",
+      "series": "KX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/kx-515-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-kxm-25-a",
+      "name": "KXM 25-A",
+      "slug": "kxm-25-a",
+      "series": "KX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/kxm-25-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-kxm-20-a",
+      "name": "KXM 20-A",
+      "slug": "kxm-20-a",
+      "series": "KX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/kxm-20-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nxl-44-a-mk2",
+      "name": "NXL 44-A MK2",
+      "slug": "nxl-44-a-mk2",
+      "series": "NX Column Arrays",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nxl-44-a-mk2",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nxw-44-a",
+      "name": "NXW 44-A",
+      "slug": "nxw-44-a",
+      "series": "NX Column Arrays",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nxw-44-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nxl-24-a-mk2",
+      "name": "NXL 24-A MK2",
+      "slug": "nxl-24-a-mk2",
+      "series": "NX Column Arrays",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nxl-24-a-mk2",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nxl-14-a",
+      "name": "NXL 14-A",
+      "slug": "nxl-14-a",
+      "series": "NX Column Arrays",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nxl-14-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nx-985-a",
+      "name": "NX 985-A",
+      "slug": "nx-985-a",
+      "series": "NX 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nx-985-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nx-915-a",
+      "name": "NX 915-A",
+      "slug": "nx-915-a",
+      "series": "NX 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nx-915-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nx-912-a",
+      "name": "NX 912-A",
+      "slug": "nx-912-a",
+      "series": "NX 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nx-912-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nx-910-a",
+      "name": "NX 910-A",
+      "slug": "nx-910-a",
+      "series": "NX 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nx-910-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nx-915-sma",
+      "name": "NX 915-SMA",
+      "slug": "nx-915-sma",
+      "series": "NX 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nx-915-sma",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nx-912-sma",
+      "name": "NX 912-SMA",
+      "slug": "nx-912-sma",
+      "series": "NX 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nx-912-sma",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nx-945-a",
+      "name": "NX 945-A",
+      "slug": "nx-945-a",
+      "series": "NX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nx-945-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nx-932-a",
+      "name": "NX 932-A",
+      "slug": "nx-932-a",
+      "series": "NX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nx-932-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nx-15-sma",
+      "name": "NX 15-SMA",
+      "slug": "nx-15-sma",
+      "series": "NX Stage Monitors",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nx-15-sma",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nx-12-sma",
+      "name": "NX 12-SMA",
+      "slug": "nx-12-sma",
+      "series": "NX Stage Monitors",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nx-12-sma",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-nx-10-sma",
+      "name": "NX 10-SMA",
+      "slug": "nx-10-sma",
+      "series": "NX Stage Monitors",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/nx-10-sma",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-sub-9029-as",
+      "name": "SUB 9029-AS",
+      "slug": "sub-9029-as",
+      "series": "SUB 9000",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-9029-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-sub-9019-as",
+      "name": "SUB 9019-AS",
+      "slug": "sub-9019-as",
+      "series": "SUB 9000",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-9019-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-sub-9016-as",
+      "name": "SUB 9016-AS",
+      "slug": "sub-9016-as",
+      "series": "SUB 9000",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-9016-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-sub-8008-as",
+      "name": "SUB 8008-AS",
+      "slug": "sub-8008-as",
+      "series": "SUB Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-8008-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-sub-8006-as",
+      "name": "SUB 8006-AS",
+      "slug": "sub-8006-as",
+      "series": "SUB Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-8006-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-sub-8004-as",
+      "name": "SUB 8004-AS",
+      "slug": "sub-8004-as",
+      "series": "SUB Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-8004-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-sub-808-as",
+      "name": "SUB 808-AS",
+      "slug": "sub-808-as",
+      "series": "SUB Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-808-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Touring%2BCatalog%2B2026.pdf/b74f028c-39b6-7609-f501-41a4fdf40c45?download=true&t=1782739559907&version=7.0"
+    },
+    {
+      "id": "spk-rcf-art-945-a",
+      "name": "ART 945-A",
+      "slug": "art-945-a",
+      "series": "ART 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-945-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-935-a",
+      "name": "ART 935-A",
+      "slug": "art-935-a",
+      "series": "ART 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-935-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-915-a",
+      "name": "ART 915-A",
+      "slug": "art-915-a",
+      "series": "ART 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-915-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-915-ax",
+      "name": "ART 915-AX",
+      "slug": "art-915-ax",
+      "series": "ART 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-915-ax",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-932-a",
+      "name": "ART 932-A",
+      "slug": "art-932-a",
+      "series": "ART 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-932-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-912-a",
+      "name": "ART 912-A",
+      "slug": "art-912-a",
+      "series": "ART 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-912-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-912-ax",
+      "name": "ART 912-AX",
+      "slug": "art-912-ax",
+      "series": "ART 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-912-ax",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-910-a",
+      "name": "ART 910-A",
+      "slug": "art-910-a",
+      "series": "ART 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-910-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-910-ax",
+      "name": "ART 910-AX",
+      "slug": "art-910-ax",
+      "series": "ART 9 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-910-ax",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-745-a-mk5",
+      "name": "ART 745-A MK5",
+      "slug": "art-745-a-mk5",
+      "series": "ART 7 MK5 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-745-a-mk5",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-735-a-mk5",
+      "name": "ART 735-A MK5",
+      "slug": "art-735-a-mk5",
+      "series": "ART 7 MK5 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-735-a-mk5",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-715-a-mk5",
+      "name": "ART 715-A MK5",
+      "slug": "art-715-a-mk5",
+      "series": "ART 7 MK5 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-715-a-mk5",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-732-a-mk5",
+      "name": "ART 732-A MK5",
+      "slug": "art-732-a-mk5",
+      "series": "ART 7 MK5 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-732-a-mk5",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-712-a-mk5",
+      "name": "ART 712-A MK5",
+      "slug": "art-712-a-mk5",
+      "series": "ART 7 MK5 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-712-a-mk5",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-710-a-mk5",
+      "name": "ART 710-A MK5",
+      "slug": "art-710-a-mk5",
+      "series": "ART 7 MK5 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-710-a-mk5",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-art-708-a-mk5",
+      "name": "ART 708-A MK5",
+      "slug": "art-708-a-mk5",
+      "series": "ART 7 MK5 Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-708-a-mk5",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-evox-j8",
+      "name": "EVOX J8",
+      "slug": "evox-j8",
+      "series": "EVOX Systems",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/evox-j8",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-evox-jmix8",
+      "name": "EVOX JMIX8",
+      "slug": "evox-jmix8",
+      "series": "EVOX Systems",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/evox-jmix8",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-evox-12",
+      "name": "EVOX 12",
+      "slug": "evox-12",
+      "series": "EVOX Systems",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/evox-12",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-sub-18-ax",
+      "name": "SUB 18-AX",
+      "slug": "sub-18-ax",
+      "series": "SUB AX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-18-ax",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-sub-15-ax",
+      "name": "SUB 15-AX",
+      "slug": "sub-15-ax",
+      "series": "SUB AX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-15-ax",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-sub-8003-as-mk3",
+      "name": "SUB 8003-AS MK3",
+      "slug": "sub-8003-as-mk3",
+      "series": "Portable SUB Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-8003-as-mk3",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-sub-905-as-mk3",
+      "name": "SUB 905-AS MK3",
+      "slug": "sub-905-as-mk3",
+      "series": "Portable SUB Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-905-as-mk3",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-sub-708-as-mk3",
+      "name": "SUB 708-AS MK3",
+      "slug": "sub-708-as-mk3",
+      "series": "Portable SUB Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-708-as-mk3",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-sub-705-as-mk3",
+      "name": "SUB 705-AS MK3",
+      "slug": "sub-705-as-mk3",
+      "series": "Portable SUB Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-705-as-mk3",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-sub-702-as-mk3",
+      "name": "SUB 702-AS MK3",
+      "slug": "sub-702-as-mk3",
+      "series": "Portable SUB Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-702-as-mk3",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-sub-18-as",
+      "name": "SUB 18-AS",
+      "slug": "sub-18-as",
+      "series": "Portable SUB Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-18-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-sub-15-as",
+      "name": "SUB 15-AS",
+      "slug": "sub-15-as",
+      "series": "Portable SUB Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/sub-15-as",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Portable+Catalog+RCF+-+EN.pdf/692e8eab-acbc-20dd-8ae7-d57b2d7af4ca?version=5.0&t=1773993768337&download=true"
+    },
+    {
+      "id": "spk-rcf-hl-2290",
+      "name": "HL 2290",
+      "slug": "hl-2290",
+      "series": "HL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hl-2290",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-hl-2260",
+      "name": "HL 2260",
+      "slug": "hl-2260",
+      "series": "HL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hl-2260",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-hl-2240",
+      "name": "HL 2240",
+      "slug": "hl-2240",
+      "series": "HL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hl-2240",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-hl-35-s",
+      "name": "HL 35-S",
+      "slug": "hl-35-s",
+      "series": "HL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hl-35-s",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-hl-6",
+      "name": "HL 6",
+      "slug": "hl-6",
+      "series": "HL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hl-6",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-h-1315-wp",
+      "name": "H 1315 WP",
+      "slug": "h-1315-wp",
+      "series": "HL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/h-1315-wp",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-hvl-15-l",
+      "name": "HVL 15-L",
+      "slug": "hvl-15-l",
+      "series": "HVL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hvl-15-l",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-hvl-15-l1",
+      "name": "HVL 15-L1",
+      "slug": "hvl-15-l1",
+      "series": "HVL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hvl-15-l1",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-hvl-15-p",
+      "name": "HVL 15-P",
+      "slug": "hvl-15-p",
+      "series": "HVL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hvl-15-p",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-hvl-15-p1",
+      "name": "HVL 15-P1",
+      "slug": "hvl-15-p1",
+      "series": "HVL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hvl-15-p1",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-hvl-15-s",
+      "name": "HVL 15-S",
+      "slug": "hvl-15-s",
+      "series": "HVL Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/hvl-15-s",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-x-40",
+      "name": "X 40",
+      "slug": "x-40",
+      "series": "X Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/x-40",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-x-28l",
+      "name": "X 28L",
+      "slug": "x-28l",
+      "series": "X Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/x-28l",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-x-08",
+      "name": "X 08",
+      "slug": "x-08",
+      "series": "X Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/x-08",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-c-45",
+      "name": "COMPACT C 45",
+      "slug": "compact-c-45",
+      "series": "COMPACT C Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-c-45",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-c-45-wp",
+      "name": "COMPACT C 45 WP",
+      "slug": "compact-c-45-wp",
+      "series": "COMPACT C Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-c-45-wp",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-c-32",
+      "name": "COMPACT C 32",
+      "slug": "compact-c-32",
+      "series": "COMPACT C Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-c-32",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-c-32-wp",
+      "name": "COMPACT C 32 WP",
+      "slug": "compact-c-32-wp",
+      "series": "COMPACT C Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-c-32-wp",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-c-5215-w-mkiii",
+      "name": "C 5215-W MKIII",
+      "slug": "c-5215-w-mkiii",
+      "series": "COMPACT Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/c-5215-w-mkiii",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-c-5212-w-mkiii",
+      "name": "C 5212-W MKIII",
+      "slug": "c-5212-w-mkiii",
+      "series": "COMPACT Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/c-5212-w-mkiii",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-c-3110-126",
+      "name": "C 3110-126",
+      "slug": "c-3110-126",
+      "series": "COMPACT Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/c-3110-126",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-c-3110-96",
+      "name": "C 3110-96",
+      "slug": "c-3110-96",
+      "series": "COMPACT Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/c-3110-96",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-c-3108-126",
+      "name": "C 3108-126",
+      "slug": "c-3108-126",
+      "series": "COMPACT Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/c-3108-126",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-c-3108-96",
+      "name": "C 3108-96",
+      "slug": "c-3108-96",
+      "series": "COMPACT Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/c-3108-96",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-m-12",
+      "name": "COMPACT M 12",
+      "slug": "compact-m-12",
+      "series": "COMPACT M Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-m-12",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-m-10",
+      "name": "COMPACT M 10",
+      "slug": "compact-m-10",
+      "series": "COMPACT M Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-m-10",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-m-08",
+      "name": "COMPACT M 08",
+      "slug": "compact-m-08",
+      "series": "COMPACT M Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-m-08",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-m-06",
+      "name": "COMPACT M 06",
+      "slug": "compact-m-06",
+      "series": "COMPACT M Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-m-06",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-m-05",
+      "name": "COMPACT M 05",
+      "slug": "compact-m-05",
+      "series": "COMPACT M Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-m-05",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-m-04",
+      "name": "COMPACT M 04",
+      "slug": "compact-m-04",
+      "series": "COMPACT M Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-m-04",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-a-15",
+      "name": "COMPACT A 15",
+      "slug": "compact-a-15",
+      "series": "COMPACT A Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-a-15",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-a-12",
+      "name": "COMPACT A 12",
+      "slug": "compact-a-12",
+      "series": "COMPACT A Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-a-12",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-compact-a-10",
+      "name": "COMPACT A 10",
+      "slug": "compact-a-10",
+      "series": "COMPACT A Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/compact-a-10",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-p-6215",
+      "name": "P 6215",
+      "slug": "p-6215",
+      "series": "P Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/p-6215",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-p-3115t",
+      "name": "P 3115T",
+      "slug": "p-3115t",
+      "series": "P Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/p-3115t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-p-2110t",
+      "name": "P 2110T",
+      "slug": "p-2110t",
+      "series": "P Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/p-2110t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-p-5228-l",
+      "name": "P 5228-L",
+      "slug": "p-5228-l",
+      "series": "P Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/p-5228-l",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-p-4228",
+      "name": "P 4228",
+      "slug": "p-4228",
+      "series": "P Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/p-4228",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-p-3108",
+      "name": "P 3108",
+      "slug": "p-3108",
+      "series": "P Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/p-3108",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-p-1108t",
+      "name": "P 1108T",
+      "slug": "p-1108t",
+      "series": "P Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/p-1108t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-p-8015s",
+      "name": "P 8015S",
+      "slug": "p-8015s",
+      "series": "P Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/p-8015s",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-x-max-12",
+      "name": "X-MAX 12",
+      "slug": "x-max-12",
+      "series": "MAX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/x-max-12",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-x-max-10",
+      "name": "X-MAX 10",
+      "slug": "x-max-10",
+      "series": "MAX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/x-max-10",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-c-max-4112",
+      "name": "C-MAX 4112",
+      "slug": "c-max-4112",
+      "series": "MAX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/c-max-4112",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-c-max-4110",
+      "name": "C-MAX 4110",
+      "slug": "c-max-4110",
+      "series": "MAX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/c-max-4110",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-g-max-12",
+      "name": "G-MAX 12",
+      "slug": "g-max-12",
+      "series": "MAX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/g-max-12",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-g-max-10",
+      "name": "G-MAX 10",
+      "slug": "g-max-10",
+      "series": "MAX Series",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/g-max-10",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-art-725-mk4",
+      "name": "ART 725 MK4",
+      "slug": "art-725-mk4",
+      "series": "ART Installed",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/art-725-mk4",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-wmr-60t",
+      "name": "WMR 60T",
+      "slug": "wmr-60t",
+      "series": "Premium Speakers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/wmr-60t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-wmr-50t",
+      "name": "WMR 50T",
+      "slug": "wmr-50t",
+      "series": "Premium Speakers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/wmr-50t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-pmr-60t",
+      "name": "PMR 60T",
+      "slug": "pmr-60t",
+      "series": "Premium Speakers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/pmr-60t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-cmr-60t",
+      "name": "CMR 60T",
+      "slug": "cmr-60t",
+      "series": "Premium Speakers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/cmr-60t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-cmr-50t",
+      "name": "CMR 50T",
+      "slug": "cmr-50t",
+      "series": "Premium Speakers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/cmr-50t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-cmr-30",
+      "name": "CMR 30",
+      "slug": "cmr-30",
+      "series": "Premium Speakers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/cmr-30",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-mmr-30t",
+      "name": "MMR 30T",
+      "slug": "mmr-30t",
+      "series": "Premium Speakers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/mmr-30t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-cmr-s-60t",
+      "name": "CMR-S 60T",
+      "slug": "cmr-s-60t",
+      "series": "Premium Speakers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/cmr-s-60t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-mq-50c",
+      "name": "MQ 50C",
+      "slug": "mq-50c",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/mq-50c",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-pl-8x",
+      "name": "PL 8X",
+      "slug": "pl-8x",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/pl-8x",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-pl-6x",
+      "name": "PL 6X",
+      "slug": "pl-6x",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/pl-6x",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-pl-60",
+      "name": "PL 60",
+      "slug": "pl-60",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/pl-60",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-pl-50",
+      "name": "PL 50",
+      "slug": "pl-50",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/pl-50",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-pl-40",
+      "name": "PL 40",
+      "slug": "pl-40",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/pl-40",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-mr-50t",
+      "name": "MR 50T",
+      "slug": "mr-50t",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/mr-50t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-mr-50",
+      "name": "MR 50",
+      "slug": "mr-50",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/mr-50",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-mr-40t",
+      "name": "MR 40T",
+      "slug": "mr-40t",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/mr-40t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-mr-40",
+      "name": "MR 40",
+      "slug": "mr-40",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/mr-40",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-mq-80p",
+      "name": "MQ 80P",
+      "slug": "mq-80p",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/mq-80p",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-dm-61",
+      "name": "DM 61",
+      "slug": "dm-61",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/dm-61",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-dm-41",
+      "name": "DM 41",
+      "slug": "dm-41",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/dm-41",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-l-2406t",
+      "name": "L 2406T",
+      "slug": "l-2406t",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/l-2406t",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-mq-100l",
+      "name": "MQ 100L",
+      "slug": "mq-100l",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/mq-100l",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-cs-3082",
+      "name": "CS 3082",
+      "slug": "cs-3082",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/cs-3082",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-wmf-33en",
+      "name": "WMF 33EN",
+      "slug": "wmf-33en",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/wmf-33en",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-mf-33en",
+      "name": "MF 33EN",
+      "slug": "mf-33en",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/mf-33en",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-dp-5en",
+      "name": "DP 5EN",
+      "slug": "dp-5en",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "pending",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/dp-5en",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-bs-5en",
+      "name": "BS 5EN",
+      "slug": "bs-5en",
+      "series": "Speaker & Ceiling",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/bs-5en",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-vsa-2050-ii",
+      "name": "VSA 2050 II",
+      "slug": "vsa-2050-ii",
+      "series": "VSA Series",
+      "lifecycle": "current",
+      "status": "pending",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/vsa-2050-ii",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-vsa-1250-ii",
+      "name": "VSA 1250 II",
+      "slug": "vsa-1250-ii",
+      "series": "VSA Series",
+      "lifecycle": "current",
+      "status": "pending",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/vsa-1250-ii",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-vsa-850-ii",
+      "name": "VSA 850 II",
+      "slug": "vsa-850-ii",
+      "series": "VSA Series",
+      "lifecycle": "current",
+      "status": "pending",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/vsa-850-ii",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-29",
+      "name": "S 29",
+      "slug": "s-29",
+      "series": "Installed High-Power Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-29",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-29-wp",
+      "name": "S 29 WP",
+      "slug": "s-29-wp",
+      "series": "Installed High-Power Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-29-wp",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-19",
+      "name": "S 19",
+      "slug": "s-19",
+      "series": "Installed High-Power Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-19",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-19-wp",
+      "name": "S 19 WP",
+      "slug": "s-19-wp",
+      "series": "Installed High-Power Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-19-wp",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-15",
+      "name": "S 15",
+      "slug": "s-15",
+      "series": "Installed Compact Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-15",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-12",
+      "name": "S 12",
+      "slug": "s-12",
+      "series": "Installed Compact Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-12",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-10",
+      "name": "S 10",
+      "slug": "s-10",
+      "series": "Installed Compact Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-10",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-8028-ii",
+      "name": "S 8028 II",
+      "slug": "s-8028-ii",
+      "series": "Acoustica Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-8028-ii",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-8018-ii",
+      "name": "S 8018 II",
+      "slug": "s-8018-ii",
+      "series": "Acoustica Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-8018-ii",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-8015-ii",
+      "name": "S 8015 II",
+      "slug": "s-8015-ii",
+      "series": "Acoustica Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-8015-ii",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-8015lp",
+      "name": "S 8015LP",
+      "slug": "s-8015lp",
+      "series": "Acoustica Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-8015lp",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-08-a",
+      "name": "S 08-A",
+      "slug": "s-08-a",
+      "series": "Ultra-Compact Subwoofers",
+      "lifecycle": "current",
+      "status": "pending",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-08-a",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    },
+    {
+      "id": "spk-rcf-s-08",
+      "name": "S 08",
+      "slug": "s-08",
+      "series": "Ultra-Compact Subwoofers",
+      "lifecycle": "current",
+      "status": "verified",
+      "sourcePage": "https://www.rcf.it/en/products/product-detail/s-08",
+      "catalogEvidence": "https://www.rcf.it/documents/20124/825854/Installed+Catalog+2026.pdf/5be54578-2fc6-89f2-18ab-a04bd88c8a08?version=22.0&t=1782207241471&download=true"
+    }
+  ]
+}

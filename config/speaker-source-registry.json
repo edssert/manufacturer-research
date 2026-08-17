@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "retrievalPolicy": {
+    "allowedHosts": ["www.dbaudio.com", "docs.meyersound.com"],
+    "archiveRoot": "raw-data/official-docs",
+    "lockFile": "config/speaker-source-lock.json",
+    "preserveManufacturerOriginals": true,
+    "runtimeAssetsAreDerivatives": true
+  },
+  "sources": [
+    {
+      "id": "db-mobile-solutions-en",
+      "manufacturer": "db",
+      "series": ["V Series", "Y Series", "T Series", "E Series", "Monitors", "Subwoofers"],
+      "kind": "official-brochure",
+      "url": "https://www.dbaudio.com/assets/products/downloads/brochures/dbaudio-brochure-mobile-complete-system-solutions-en.pdf",
+      "localPath": "raw-data/official-docs/db/speakers/references/mobile-complete-system-solutions-en.pdf"
+    },
+    {
+      "id": "db-installation-solutions-en",
+      "manufacturer": "db",
+      "series": ["SL Series", "V Series", "Y Series", "T Series", "CL Series", "xS Series", "xC Series", "E Series"],
+      "kind": "official-brochure",
+      "url": "https://www.dbaudio.com/assets/products/downloads/brochures/dbaudio-brochure-installation-integrated-sound-solutions-en.pdf",
+      "localPath": "raw-data/official-docs/db/speakers/references/installation-integrated-sound-solutions-en.pdf"
+    },
+    {
+      "id": "db-y-series-en",
+      "manufacturer": "db",
+      "series": ["Y Series"],
+      "kind": "official-series-brochure",
+      "url": "https://www.dbaudio.com/assets/products/downloads/brochures/dbaudio-system-brochure-y-series-en.pdf",
+      "localPath": "raw-data/official-docs/db/speakers/y-series/system-brochure-en.pdf"
+    },
+    {
+      "id": "db-u-series-en",
+      "manufacturer": "db",
+      "series": ["U Series"],
+      "kind": "official-series-brochure",
+      "url": "https://www.dbaudio.com/assets/products/downloads/brochures/dbaudio-brochure-u-series-en.pdf",
+      "localPath": "raw-data/official-docs/db/speakers/u-series/system-brochure-en.pdf"
+    },
+    {
+      "id": "my-documentation-index-en",
+      "manufacturer": "my",
+      "series": ["ULTRA-X Series", "UP Series", "Ashby Series", "MJF Series", "MM Series"],
+      "kind": "official-document-index",
+      "url": "https://docs.meyersound.com/products/en/index-en.html",
+      "localPath": "raw-data/official-docs/my/speakers/references/documentation-index-en.html"
+    },
+    {
+      "id": "my-ultra-x20-datasheet",
+      "manufacturer": "my",
+      "series": ["ULTRA-X Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---ultra-x20.html",
+      "localPath": "raw-data/official-docs/my/speakers/ultra-x-series/ultra-x20-datasheet.html"
+    },
+    {
+      "id": "my-ultra-x20xp-datasheet",
+      "manufacturer": "my",
+      "series": ["ULTRA-X Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---ultra-x20xp.html",
+      "localPath": "raw-data/official-docs/my/speakers/ultra-x-series/ultra-x20xp-datasheet.html"
+    },
+    {
+      "id": "my-ultra-x40-datasheet",
+      "manufacturer": "my",
+      "series": ["ULTRA-X Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---ultra-x40.html",
+      "localPath": "raw-data/official-docs/my/speakers/ultra-x-series/ultra-x40-datasheet.html"
+    },
+    {
+      "id": "my-ultra-x80-datasheet",
+      "manufacturer": "my",
+      "series": ["ULTRA-X Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---ultra-x80.html",
+      "localPath": "raw-data/official-docs/my/speakers/ultra-x-series/ultra-x80-datasheet.html"
+    },
+    {
+      "id": "my-upm-1p-datasheet",
+      "manufacturer": "my",
+      "series": ["UP Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---upm-1p.html",
+      "localPath": "raw-data/official-docs/my/speakers/up-series/upm-1p-datasheet.html"
+    },
+    {
+      "id": "my-upm-1xp-datasheet",
+      "manufacturer": "my",
+      "series": ["UP Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---upm-1xp.html",
+      "localPath": "raw-data/official-docs/my/speakers/up-series/upm-1xp-datasheet.html"
+    },
+    {
+      "id": "my-upq-d1-datasheet",
+      "manufacturer": "my",
+      "series": ["UP Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---upq-d1.html",
+      "localPath": "raw-data/official-docs/my/speakers/up-series/upq-d1-datasheet.html"
+    },
+    {
+      "id": "my-upq-d2-datasheet",
+      "manufacturer": "my",
+      "series": ["UP Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---upq-d2.html",
+      "localPath": "raw-data/official-docs/my/speakers/up-series/upq-d2-datasheet.html"
+    },
+    {
+      "id": "my-upq-d3-datasheet",
+      "manufacturer": "my",
+      "series": ["UP Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---upq-d3.html",
+      "localPath": "raw-data/official-docs/my/speakers/up-series/upq-d3-datasheet.html"
+    },
+    {
+      "id": "my-up-4slim-datasheet",
+      "manufacturer": "my",
+      "series": ["UP Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---up-4slim.html",
+      "localPath": "raw-data/official-docs/my/speakers/up-series/up-4slim-datasheet.html"
+    },
+    {
+      "id": "my-ashby-5c-datasheet",
+      "manufacturer": "my",
+      "series": ["Ashby Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---ashby-5c.html",
+      "localPath": "raw-data/official-docs/my/speakers/ashby-series/ashby-5c-datasheet.html"
+    },
+    {
+      "id": "my-ashby-8c-datasheet",
+      "manufacturer": "my",
+      "series": ["Ashby Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---ashby-8c.html",
+      "localPath": "raw-data/official-docs/my/speakers/ashby-series/ashby-8c-datasheet.html"
+    },
+    {
+      "id": "my-mjf-208-datasheet",
+      "manufacturer": "my",
+      "series": ["MJF Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---mjf-208.html",
+      "localPath": "raw-data/official-docs/my/speakers/mjf-series/mjf-208-datasheet.html"
+    },
+    {
+      "id": "my-mjf-210-datasheet",
+      "manufacturer": "my",
+      "series": ["MJF Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---mjf-210.html",
+      "localPath": "raw-data/official-docs/my/speakers/mjf-series/mjf-210-datasheet.html"
+    },
+    {
+      "id": "my-mm-4xp-datasheet",
+      "manufacturer": "my",
+      "series": ["MM Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---mm-4xp.html",
+      "localPath": "raw-data/official-docs/my/speakers/mm-series/mm-4xp-datasheet.html"
+    },
+    {
+      "id": "my-mm-4xpd-datasheet",
+      "manufacturer": "my",
+      "series": ["MM Series"],
+      "kind": "official-datasheet",
+      "url": "https://docs.meyersound.com/products/en/datasheet---mm-4xpd.html",
+      "localPath": "raw-data/official-docs/my/speakers/mm-series/mm-4xpd-datasheet.html"
+    }
+  ]
+}

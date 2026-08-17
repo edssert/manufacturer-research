@@ -1,20 +1,9 @@
-/**
- * @module domains/amplifiers/view
- * 앰프 카드 + 상세 모달 마크업 생성 (순수 함수 모음).
- *
- * 관련 CSS: css/components/card.css, css/components/spec-table.css
- */
+/** @module domains/amplifiers/view */
 import { esc, getViews } from "../../core/dom.js";
 import { configurationsBySpeakerTableHTML } from "./amplifiers.configurations.js";
 import { AMP_MFR } from "./amplifiers.schema.js";
 
-/* ── Total Watt 게이지 스케일 — speakers.view.js 의 SPL_RANGE/setSplRange/
-   splPct 와 동일한 패턴을 재사용해 스피커 탭의 SPL 바와 같은 시각 언어로
-   앰프의 총 출력을 카드에서 한눈에 비교할 수 있게 한다.
-   Rack 앰프(LA-RAK III/II AVB)는 채널당 4Ω 정격이 없어
-   8Ω/2.7Ω 기준 총량(62,400W/40,000W)을 대신 쓰는데, 이 값이 일반 앰프의
-   4Ω 기준 값(최대 17,600W)보다 훨씬 커서 같은 스케일이면 일반 앰프 바가
-   전부 짧아 보인다 — Rack 과 일반 앰프(Standalone)를 별도 스케일로 분리. */
+/* Rack과 standalone 앰프는 출력 기준이 달라 별도 게이지 범위를 사용한다. */
 const WATT_RANGE = { lo: 0, hi: 0 };
 const WATT_RANGE_RACK = { lo: 0, hi: 0 };
 

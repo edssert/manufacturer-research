@@ -7,7 +7,7 @@
 
 ## 이 앱은 무엇인가요?
 
-Manufacturer Research는 L-Acoustics, d&b audiotechnik, Meyer Sound의
+Sound Systems Index는 L-Acoustics, d&b audiotechnik, Meyer Sound, Adamson, Cohesion의
 스피커·앰프·DSP·소프트웨어·액세서리 정보를 한곳에서 검색하고 비교하는
 웹사이트다.
 

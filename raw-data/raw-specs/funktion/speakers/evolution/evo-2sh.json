@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-evo-2sh",
+  "manufacturerId": "funktion",
+  "name": "Evo 2SH",
+  "slug": "evo-2sh",
+  "series": "Evolution",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/evo2sh/",
+  "rangePage": "https://funktion-one.com/ranges/evolution",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "Evo 2SH - Medium Dispersion Lightweight Point Source",
+    "technical": {
+      "bandwidth": "280Hz - 18kHz",
+      "weight": "10kg (22lbs)",
+      "dispersion": "50° Horizontal x 25° Vertical",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 8\" + 1\" Operating Band 280Hz - 18kHz Sensitivity at 1m 111dB at 4V Power (AES) 200W Nominal Impedence 16Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/Z4ZlWJbqstJ99bV3_Evo2SHAngle.jpg",
+      "https://images.prismic.io/funktion-one/Z4ZlkJbqstJ99bV8_Evo2SHFront.jpg",
+      "https://images.prismic.io/funktion-one/Z5DmqJbqstJ99uyh_Evo2SH-F1-WD%3DT0296-00_1.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5pyW5bqstJ9-AlP_Evo2SH-F1-DS%3DD0076-01.pdf",
+        "label": "Z5pyW5bqstJ9-AlP_Evo2SH-F1-DS%3DD0076-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5onB5bqstJ99_Zy_Evo2SH-F1-TD%3DT0289-00.PDF",
+        "label": "Z5onB5bqstJ99_Zy_Evo2SH-F1-TD%3DT0289-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5onDpbqstJ99_Zz_Evo2SH-F1-DD%3DT0290-00.PDF",
+        "label": "Z5onDpbqstJ99_Zz_Evo2SH-F1-DD%3DT0290-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5onF5bqstJ99_Z1_Evo2SH-F1-2DM%3DT0291-00.dwg",
+        "label": "Z5onF5bqstJ99_Z1_Evo2SH-F1-2DM%3DT0291-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5onH5bqstJ99_Z2_Evo2SH-F1-3DM%3DT0292-00.dwg",
+        "label": "Z5onH5bqstJ99_Z2_Evo2SH-F1-3DM%3DT0292-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

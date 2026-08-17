@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-sb212lp",
+  "manufacturerId": "funktion",
+  "name": "SB212LP",
+  "slug": "sb212lp",
+  "series": "Compact",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/sb212lp-compact-range/",
+  "rangePage": "https://funktion-one.com/ranges/compact-range",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "SB212LP - Versatile Compact Bass Performance",
+    "technical": {
+      "bandwidth": "32Hz - 300Hz",
+      "weight": "50kg (110lbs)",
+      "dispersion": "N/A",
+      "connectors": "2 x Neutrik NL4",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 12” Operating Band 32Hz - 150Hz Sensitivity at 1m 100dB at 2V Power (AES) 700W Nominal Impedence 4Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/Z4ZntpbqstJ99bXY_SB212LPWeb.png",
+      "https://images.prismic.io/funktion-one/Z4Zn1ZbqstJ99bXc_SB212FrtVrtangle.jpg",
+      "https://images.prismic.io/funktion-one/Z5DnRpbqstJ99uyz_SB212LP-F1-WD%3DT0230-00_1.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5pyB5bqstJ9-AlE_SB212LP-F1-DS%3DD0073-02.pdf",
+        "label": "Z5pyB5bqstJ9-AlE_SB212LP-F1-DS%3DD0073-02.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5DpFpbqstJ99u0E_SB212LP-F1-TD%3DT0226-00.PDF",
+        "label": "Z5DpFpbqstJ99u0E_SB212LP-F1-TD%3DT0226-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5DpH5bqstJ99u0K_SB212LP-F1-DD%3DT0227-00.PDF",
+        "label": "Z5DpH5bqstJ99u0K_SB212LP-F1-DD%3DT0227-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5DpJpbqstJ99u0P_SB212LP-F1-2DM%3DT0228-00.dwg",
+        "label": "Z5DpJpbqstJ99u0P_SB212LP-F1-2DM%3DT0228-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z5DpLpbqstJ99u0S_SB212LP-F1-3DM%3DT0229-00.dwg",
+        "label": "Z5DpLpbqstJ99u0S_SB212LP-F1-3DM%3DT0229-00.dwg"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl"
+  ]
+}

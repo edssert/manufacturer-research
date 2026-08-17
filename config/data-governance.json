@@ -7,6 +7,13 @@
       "acceptedForCoverage": true,
       "auditSurface": "paths-and-filenames-only"
     },
+    "officialDocuments": {
+      "root": "raw-data/official-docs",
+      "role": "immutable-manufacturer-source",
+      "registry": "config/speaker-source-registry.json",
+      "lock": "config/speaker-source-lock.json",
+      "acceptedForCoverage": false
+    },
     "legacyStaging": {
       "root": "upload",
       "role": "legacy-staging",
@@ -27,9 +34,9 @@
       "directorySegments": ["speakers"],
       "recordIdPrefix": "spk",
       "recordScope": "complete",
-      "versionSuffixPattern": "[_-]v\\d+(?:\\.\\d+)*$",
-      "expectedRecordCount": 93,
-      "expectedDocumentCount": 93
+      "versionSuffixPattern": "_v\\d+(?:\\.\\d+)*$",
+      "expectedRecordCount": 863,
+      "expectedDocumentCount": 1161
     },
     "amplifiers": {
       "mode": "record",
@@ -64,7 +71,7 @@
       "recordIdPrefix": "brand",
       "recordScope": "all",
       "versionSuffixPattern": "[_-]v\\d+(?:\\.\\d+)*$",
-      "expectedRecordCount": 3,
+      "expectedRecordCount": 5,
       "expectedDocumentCount": 0
     },
     "accessories": {
@@ -114,7 +121,14 @@
         "sw-my-nebra",
         "sw-my-spacemap-go"
       ],
-      "brand": ["brand-la", "brand-db", "brand-my"]
+      "brand": ["brand-la", "brand-db", "brand-my", "brand-ad", "brand-co"]
+    },
+    "archivedCanonicalSourceRecordIds": {
+      "speakers": ["spk-coda-pw418"],
+      "amplifiers": [],
+      "dsps": [],
+      "software": [],
+      "brand": []
     },
     "unresolvedSpeakerAmplifierModels": {
       "models": ["D6", "D12", "D20"],

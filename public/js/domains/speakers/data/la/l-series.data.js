@@ -60,11 +60,20 @@ export const LA_L_SERIES = [
       }
     ],
     "ampRaw": "LA7.16(1/1)",
-    "img": "public/assets/img/speakers/la/l-series/spk-la-l2.png",
+    "img": "public/assets/img/speakers/la/official/l-series/l2/01-l2.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/l-series/spk-la-l2.png" },
-      { "label": "Line", "src": "public/assets/img/speakers/la/l-series/spk-la-l2-line.png" },
-      { "label": "Chariot", "src": "public/assets/img/speakers/la/l-series/spk-la-l2-chariot.png" }
+      {
+        "label": "L2",
+        "src": "public/assets/img/speakers/la/official/l-series/l2/01-l2.runtime.webp"
+      },
+      {
+        "label": "L2 line",
+        "src": "public/assets/img/speakers/la/official/l-series/l2/02-l2-line.runtime.webp"
+      },
+      {
+        "label": "L2 on Chariot",
+        "src": "public/assets/img/speakers/la/official/l-series/l2/03-l2-on-chariot.runtime.webp"
+      }
     ],
     "cardHoverView": "Array",
     "relations": {
@@ -171,9 +180,12 @@ export const LA_L_SERIES = [
       }
     ],
     "ampRaw": "LA7.16(1/1)",
-    "img": "public/assets/img/speakers/la/l-series/spk-la-l2d.png",
+    "img": "public/assets/img/speakers/la/official/l-series/l2d/01-l2d.runtime.webp",
     "views": [
-      { "label": "Front", "src": "public/assets/img/speakers/la/l-series/spk-la-l2d.png" }
+      {
+        "label": "L2D",
+        "src": "public/assets/img/speakers/la/official/l-series/l2d/01-l2d.runtime.webp"
+      }
     ],
     "cardHoverView": "Rear",
     "relations": {
@@ -253,19 +265,19 @@ export const LA_L_SERIES = [
     "dims": "1500 x 1005 x 750 mm / 59.1 x 39.6 x 29.5 in",
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/la/l-series/spk-la-l1.png",
+    "img": "public/assets/img/speakers/la/official/l-series/l1/01-l1-product-overview-1.jpg",
     "views": [
       {
-        "label": "Front",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1.png"
+        "label": "l1-product-overview-1",
+        "src": "public/assets/img/speakers/la/official/l-series/l1/01-l1-product-overview-1.jpg"
       },
       {
-        "label": "Rear",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1-rear.png"
+        "label": "l1-featured-image",
+        "src": "public/assets/img/speakers/la/official/l-series/l1/02-l1-featured-image.png"
       },
       {
-        "label": "Array (L1x2 + L1Dx1 + CS1x1)",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1-array.png"
+        "label": "l1-product-overview-3",
+        "src": "public/assets/img/speakers/la/official/l-series/l1/03-l1-product-overview-3.jpg"
       }
     ],
     "cardHoverView": "Array (L1x2 + L1Dx1 + CS1x1)",
@@ -309,20 +321,16 @@ export const LA_L_SERIES = [
     "dims": "1500 x 1167 x 750 mm / 59.1 x 45.9 x 29.5 in",
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/la/l-series/spk-la-l1d.png",
+    "img": "public/assets/img/speakers/la/official/l-series/l1d/01-l1-product-overview-2.jpg",
     "imgBack": "public/assets/img/speakers/la/l-series/spk-la-l1d-rear.png",
     "views": [
       {
-        "label": "Front",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1d.png"
+        "label": "l1-product-overview-2",
+        "src": "public/assets/img/speakers/la/official/l-series/l1d/01-l1-product-overview-2.jpg"
       },
       {
-        "label": "Rear",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1d-rear.png"
-      },
-      {
-        "label": "Array (L1x2 + L1Dx1 + CS1x1)",
-        "src": "public/assets/img/speakers/la/l-series/spk-la-l1-array.png"
+        "label": "l1-product-overview-4",
+        "src": "public/assets/img/speakers/la/official/l-series/l1d/02-l1-product-overview-4.jpg"
       }
     ],
     "cardHoverView": "Rear",

@@ -39,7 +39,14 @@ assert.deepEqual(
   },
 );
 
-const pending = catalog.find(({ id }) => id === "spk-db-sl-sub");
+const [pending] = createSpeakerCatalog([
+  {
+    id: "spk-fixture-pending",
+    name: "Pending fixture",
+    mk: "db",
+    pending: true,
+  },
+]);
 assert.deepEqual(
   [pending.wayCount, pending.network, pending.lowUnitConfig, pending.hRange, pending.vRange, pending.splayRange],
   [null, null, null, null, null, null],

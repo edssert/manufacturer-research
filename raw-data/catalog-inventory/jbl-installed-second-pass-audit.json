@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "jbl",
+  "scope": "installed-loudspeaker-second-pass",
+  "auditedAt": "2026-08-18",
+  "baseline": {
+    "catalogRecords": 270,
+    "complete": 54,
+    "pending": 216
+  },
+  "rules": {
+    "requiredCardFields": [
+      "type",
+      "way",
+      "network",
+      "transducers",
+      "maximum SPL",
+      "coverage",
+      "frequency range",
+      "net weight",
+      "self-powered or external amplification"
+    ],
+    "promotion": "Complete only when every required card field is supported by exact-model official evidence.",
+    "variantSharing": "No value is shared across a generation, color, transformer, life-safety, extension, or system variant unless the official inventory explicitly normalizes that identity.",
+    "derivedValues": "Sensitivity and power are not combined to infer maximum SPL. Product descriptions are not used to infer point-source classification, passive topology, or amplification mode."
+  },
+  "sources": [
+    {
+      "path": "raw-data/official-docs/jbl/speakers/catalogues/jbl-2026-install-full-line-product-catalog.pdf",
+      "sha256": "f1444e0ad0d3641421bf5e7d4a343bbfee04ccafa251ccc4246c3ebb5798e2af",
+      "bytes": 31175069,
+      "pdfPages": 57,
+      "printedPages": 112,
+      "role": "official-install-catalog"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers/product-pages",
+      "archivedHtmlFiles": 12,
+      "role": "exact-product-page-snapshots"
+    },
+    {
+      "path": "raw-data/official-docs/jbl/speakers",
+      "archivedExactModelPdfFiles": 8,
+      "role": "exact-model-specification-sheets"
+    }
+  ],
+  "result": {
+    "installedPendingRecordsReviewed": 182,
+    "seriesReviewed": 36,
+    "promotedToComplete": 0,
+    "completeAfterAudit": 54,
+    "pendingAfterAudit": 216,
+    "reason": "The preserved install catalog establishes many exact identities and partial specifications, but none of the newly reviewed pending models has all required card fields. Maximum SPL and net weight are the dominant blockers; several series are absent from the catalog or represented by a different model family."
+  },
+  "seriesAudit": [
+    {
+      "series": "CSS Commercial Series Ceiling Speakers-cn",
+      "pendingModels": 1,
+      "printedPages": "8-9",
+      "exactArchive": "product-pages/css8006bm-china-only.html",
+      "blockingMissingFields": ["type", "way", "network", "transducers", "maximum SPL", "amplification"]
+    },
+    {
+      "series": "Control 10 Series Small Format Ceiling",
+      "pendingModels": 7,
+      "printedPages": null,
+      "catalogFinding": "The catalog describes Control 400 as the evolution of Control 10 but does not provide exact Control 10 model tables.",
+      "blockingMissingFields": "all required card fields"
+    },
+    {
+      "series": "8100 Series Ceiling with Stylized Grille",
+      "pendingModels": 3,
+      "printedPages": "9",
+      "blockingMissingFields": ["type", "network", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "Control 200 Series Medium-Format Ceiling Speakers",
+      "pendingModels": 3,
+      "printedPages": "18",
+      "blockingMissingFields": ["type", "network", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "Control 300 Series Large-Format Ceiling Speakers",
+      "pendingModels": 7,
+      "printedPages": "19",
+      "blockingMissingFields": ["type", "network", "maximum SPL", "net weight", "amplification", "coverage for Control 312CS"]
+    },
+    {
+      "series": "Control 400 Standard Coverage Series Ceiling",
+      "pendingModels": 9,
+      "printedPages": "10-13",
+      "blockingMissingFields": ["type", "network", "maximum SPL", "coverage", "net weight", "amplification"]
+    },
+    {
+      "series": "Control 400 Enhanced Coverage Series Ceiling",
+      "pendingModels": 6,
+      "printedPages": "14-15",
+      "blockingMissingFields": ["type", "network", "maximum SPL", "coverage", "net weight", "amplification"]
+    },
+    {
+      "series": "Control 400 Premium Coverage Series Ceiling",
+      "pendingModels": 6,
+      "printedPages": "16-17",
+      "blockingMissingFields": ["type", "network", "maximum SPL", "coverage", "net weight", "amplification"]
+    },
+    {
+      "series": "Control 20 Series Small Format Ceiling",
+      "pendingModels": 12,
+      "printedPages": null,
+      "catalogFinding": "No exact Control 20 model specification table is present in the 2026 install catalog.",
+      "blockingMissingFields": "all required card fields"
+    },
+    {
+      "series": "Control Contractor 20 Series Surface-Mount Speakers",
+      "pendingModels": 12,
+      "printedPages": "20-21",
+      "blockingMissingFields": ["network", "transducers", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "Surface Mount Speakers",
+      "pendingModels": 2,
+      "printedPages": "22, 24",
+      "blockingMissingFields": ["coverage for Control 1 Pro", "transducers", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "CSS-H Paging Horns",
+      "pendingModels": 2,
+      "printedPages": "22",
+      "blockingMissingFields": ["type", "way", "network", "transducers", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "Control 50 Series Subwoofer/Satellite Speakers",
+      "pendingModels": 3,
+      "printedPages": "23",
+      "blockingMissingFields": ["type", "way", "network", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "Control 2P Powered Speaker",
+      "pendingModels": 2,
+      "printedPages": "24",
+      "blockingMissingFields": ["transducers", "maximum SPL", "net weight"]
+    },
+    {
+      "series": "Control 5 Speaker",
+      "pendingModels": 1,
+      "printedPages": "24",
+      "blockingMissingFields": ["type", "coverage", "transducers", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "Control CRV Architectural Speaker",
+      "pendingModels": 2,
+      "printedPages": "25",
+      "blockingMissingFields": ["type", "way", "network", "transducers", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "SLP Sleek Low-Profile Speakers",
+      "pendingModels": 2,
+      "printedPages": "27-28",
+      "blockingMissingFields": ["type", "network", "transducers", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "Control 60 Series Pendant Speakers",
+      "pendingModels": 7,
+      "printedPages": "29-30",
+      "blockingMissingFields": ["type", "network", "maximum SPL", "net weight", "amplification", "coverage for subwoofer models"]
+    },
+    {
+      "series": "Control Contractor 100 Series In-Wall Speakers",
+      "pendingModels": 4,
+      "printedPages": "31",
+      "blockingMissingFields": ["type", "way", "network", "coverage", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "Control 80 Series Landscape Speakers",
+      "pendingModels": 3,
+      "printedPages": "32",
+      "blockingMissingFields": ["type", "network", "transducers", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "GSF Garden Full-Range Speakers",
+      "pendingModels": 2,
+      "printedPages": "33",
+      "blockingMissingFields": ["type", "way", "network", "transducers", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "GSB Garden In-Ground Subwoofers",
+      "pendingModels": 2,
+      "printedPages": "34",
+      "blockingMissingFields": ["type", "way", "network", "transducers", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "Commercial Soundbars",
+      "pendingModels": 2,
+      "printedPages": "35",
+      "blockingMissingFields": ["type", "way", "transducers", "maximum SPL", "coverage", "net weight"]
+    },
+    {
+      "series": "CBT Series Passive Controlled-Coverage Columns",
+      "pendingModels": 9,
+      "printedPages": "36-38",
+      "blockingMissingFields": ["network", "maximum SPL", "net weight", "amplification", "coverage for extension and combined-system variants"]
+    },
+    {
+      "series": "COL Slim Column",
+      "pendingModels": 2,
+      "printedPages": "39",
+      "blockingMissingFields": ["network", "net weight", "amplification"]
+    },
+    {
+      "series": "Intellivox ADC Digital Directivity Columns",
+      "pendingModels": 2,
+      "printedPages": "40-43",
+      "catalogFinding": "The catalog enumerates Intellivox DS, DSX and HP-DS models; ADC-H90 Mark II and ADC-V90 Mark II are not exact identities in the preserved catalog.",
+      "blockingMissingFields": "all required card fields"
+    },
+    {
+      "series": "AE Series Entry Level",
+      "pendingModels": 8,
+      "printedPages": "49-50",
+      "blockingMissingFields": ["type", "maximum SPL", "net weight", "amplification", "coverage for subwoofer models"]
+    },
+    {
+      "series": "AE Series Compact",
+      "pendingModels": 8,
+      "printedPages": "51",
+      "blockingMissingFields": ["type", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "AWC Compact & AW Series",
+      "pendingModels": 15,
+      "printedPages": "52-54",
+      "blockingMissingFields": ["type", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "PD500 Series Hornloaded Coaxial",
+      "pendingModels": 5,
+      "printedPages": "56",
+      "blockingMissingFields": ["type", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "PD6000 Series Medium-Format",
+      "pendingModels": 13,
+      "printedPages": "57",
+      "blockingMissingFields": ["type", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "PD700i Series Large-Format",
+      "pendingModels": 4,
+      "printedPages": "58",
+      "blockingMissingFields": ["type", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "VLA Series Large Format",
+      "pendingModels": 6,
+      "printedPages": "59",
+      "blockingMissingFields": ["transducers", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "VLA Series Compact",
+      "pendingModels": 3,
+      "printedPages": "60-61",
+      "blockingMissingFields": ["maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "ASB6000",
+      "pendingModels": 5,
+      "printedPages": "47-48",
+      "blockingMissingFields": ["type", "way", "coverage", "maximum SPL", "net weight", "amplification"]
+    },
+    {
+      "series": "ASB7000",
+      "pendingModels": 2,
+      "printedPages": "49",
+      "blockingMissingFields": ["type", "way", "coverage", "maximum SPL", "net weight", "amplification"]
+    }
+  ],
+  "evidAudit": {
+    "inventoryRecords": 0,
+    "finding": "No EVID loudspeaker record exists in the current JBL canonical inventory, and the preserved catalog does not provide an exact EVID product table. No record was synthesized or imported."
+  },
+  "archivePolicy": {
+    "networkRequestsMade": 0,
+    "rateLimitBypassAttempted": false,
+    "excludedNonSpeakerRecordsRestored": 0
+  }
+}

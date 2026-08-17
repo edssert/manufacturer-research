@@ -1,0 +1,591 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "my",
+  "scope": "loudspeakers",
+  "sourcePages": [
+    "https://meyersound.com/products/",
+    "https://docs.meyersound.com/products/en/index-en.html"
+  ],
+  "retrievedAt": "2026-08-18",
+  "currentProducts": [
+    {
+      "id": "spk-my-panther-l",
+      "name": "PANTHER-L",
+      "series": "PANTHER Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/panther.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/panther-series/panther/uuid-f04d55b6-849d-89ca-93fc-42a3b6d9d984.png",
+      "runtimeImage": "public/assets/img/speakers/my/panther-series/spk-my-panther-official.png",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-panther-l",
+        "spk-my-panther-m",
+        "spk-my-panther-w"
+      ]
+    },
+    {
+      "id": "spk-my-panther-m",
+      "name": "PANTHER-M",
+      "series": "PANTHER Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/panther.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/panther-series/panther/uuid-f04d55b6-849d-89ca-93fc-42a3b6d9d984.png",
+      "runtimeImage": "public/assets/img/speakers/my/panther-series/spk-my-panther-official.png",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-panther-l",
+        "spk-my-panther-m",
+        "spk-my-panther-w"
+      ]
+    },
+    {
+      "id": "spk-my-panther-w",
+      "name": "PANTHER-W",
+      "series": "PANTHER Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/panther.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/panther-series/panther/uuid-f04d55b6-849d-89ca-93fc-42a3b6d9d984.png",
+      "runtimeImage": "public/assets/img/speakers/my/panther-series/spk-my-panther-official.png",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-panther-l",
+        "spk-my-panther-m",
+        "spk-my-panther-w"
+      ]
+    },
+    {
+      "id": "spk-my-leopard",
+      "name": "LEOPARD",
+      "series": "LEOPARD Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/leopard.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/leopard-series/leopard/uuid-9a536422-faa3-4b02-cb43-2eb2ef3a4591.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/leopard-series/spk-my-leopard-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-leopard",
+        "spk-my-leopard-m80"
+      ]
+    },
+    {
+      "id": "spk-my-leopard-m80",
+      "name": "LEOPARD-M80",
+      "series": "LEOPARD Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/leopard.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/leopard-series/leopard/uuid-9a536422-faa3-4b02-cb43-2eb2ef3a4591.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/leopard-series/spk-my-leopard-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-leopard",
+        "spk-my-leopard-m80"
+      ]
+    },
+    {
+      "id": "spk-my-tigra-l",
+      "name": "TIGRA-L",
+      "series": "TIGRA Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/tigra.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/tigra-series/tigra/uuid-de00a069-4fa1-c671-0bda-519d4487dd8c.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/tigra-series/spk-my-tigra-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-tigra-l",
+        "spk-my-tigra-w"
+      ]
+    },
+    {
+      "id": "spk-my-tigra-w",
+      "name": "TIGRA-W",
+      "series": "TIGRA Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/tigra.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/tigra-series/tigra/uuid-de00a069-4fa1-c671-0bda-519d4487dd8c.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/tigra-series/spk-my-tigra-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-tigra-l",
+        "spk-my-tigra-w"
+      ]
+    },
+    {
+      "id": "spk-my-lina",
+      "name": "LINA",
+      "series": "LINA Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/lina.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/lina-series/lina/uuid-1b3a76be-2f45-3a6b-c5ac-44bcfeb3e2fa.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/lina-series/spk-my-lina-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-lina"
+      ]
+    },
+    {
+      "id": "spk-my-ultra-x20",
+      "name": "ULTRA-X20",
+      "series": "ULTRA-X Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/ultra-x20.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ultra-x-series/ultra-x20/uuid-9d18874b-b1fd-4721-95bb-f174f8607131.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ultra-x-series/spk-my-ultra-x20-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ultra-x20",
+        "spk-my-ultra-x20xp",
+        "spk-my-ultra-x22",
+        "spk-my-ultra-x22xp",
+        "spk-my-ultra-x23",
+        "spk-my-ultra-x23xp"
+      ]
+    },
+    {
+      "id": "spk-my-ultra-x20xp",
+      "name": "ULTRA-X20XP",
+      "series": "ULTRA-X Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/ultra-x20.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ultra-x-series/ultra-x20/uuid-9d18874b-b1fd-4721-95bb-f174f8607131.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ultra-x-series/spk-my-ultra-x20-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ultra-x20",
+        "spk-my-ultra-x20xp",
+        "spk-my-ultra-x22",
+        "spk-my-ultra-x22xp",
+        "spk-my-ultra-x23",
+        "spk-my-ultra-x23xp"
+      ]
+    },
+    {
+      "id": "spk-my-ultra-x22",
+      "name": "ULTRA-X22",
+      "series": "ULTRA-X Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/ultra-x20.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ultra-x-series/ultra-x20/uuid-9d18874b-b1fd-4721-95bb-f174f8607131.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ultra-x-series/spk-my-ultra-x20-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ultra-x20",
+        "spk-my-ultra-x20xp",
+        "spk-my-ultra-x22",
+        "spk-my-ultra-x22xp",
+        "spk-my-ultra-x23",
+        "spk-my-ultra-x23xp"
+      ]
+    },
+    {
+      "id": "spk-my-ultra-x22xp",
+      "name": "ULTRA-X22XP",
+      "series": "ULTRA-X Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/ultra-x20.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ultra-x-series/ultra-x20/uuid-9d18874b-b1fd-4721-95bb-f174f8607131.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ultra-x-series/spk-my-ultra-x20-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ultra-x20",
+        "spk-my-ultra-x20xp",
+        "spk-my-ultra-x22",
+        "spk-my-ultra-x22xp",
+        "spk-my-ultra-x23",
+        "spk-my-ultra-x23xp"
+      ]
+    },
+    {
+      "id": "spk-my-ultra-x23",
+      "name": "ULTRA-X23",
+      "series": "ULTRA-X Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/ultra-x20.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ultra-x-series/ultra-x20/uuid-9d18874b-b1fd-4721-95bb-f174f8607131.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ultra-x-series/spk-my-ultra-x20-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ultra-x20",
+        "spk-my-ultra-x20xp",
+        "spk-my-ultra-x22",
+        "spk-my-ultra-x22xp",
+        "spk-my-ultra-x23",
+        "spk-my-ultra-x23xp"
+      ]
+    },
+    {
+      "id": "spk-my-ultra-x23xp",
+      "name": "ULTRA-X23XP",
+      "series": "ULTRA-X Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/ultra-x20.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ultra-x-series/ultra-x20/uuid-9d18874b-b1fd-4721-95bb-f174f8607131.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ultra-x-series/spk-my-ultra-x20-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ultra-x20",
+        "spk-my-ultra-x20xp",
+        "spk-my-ultra-x22",
+        "spk-my-ultra-x22xp",
+        "spk-my-ultra-x23",
+        "spk-my-ultra-x23xp"
+      ]
+    },
+    {
+      "id": "spk-my-ultra-x40",
+      "name": "ULTRA-X40",
+      "series": "ULTRA-X Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/ultra-x40.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ultra-x-series/ultra-x40/uuid-0a4b5572-d264-11c4-cedf-e825438b26c8.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ultra-x-series/spk-my-ultra-x40-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ultra-x40",
+        "spk-my-ultra-x42"
+      ]
+    },
+    {
+      "id": "spk-my-ultra-x42",
+      "name": "ULTRA-X42",
+      "series": "ULTRA-X Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/ultra-x40.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ultra-x-series/ultra-x40/uuid-0a4b5572-d264-11c4-cedf-e825438b26c8.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ultra-x-series/spk-my-ultra-x40-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ultra-x40",
+        "spk-my-ultra-x42"
+      ]
+    },
+    {
+      "id": "spk-my-ultra-x80",
+      "name": "ULTRA-X80",
+      "series": "ULTRA-X Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/ultra-x80.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ultra-x-series/ultra-x80/uuid-b9be58ad-c958-cec5-1886-fbb961ff3510.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ultra-x-series/spk-my-ultra-x80-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ultra-x80",
+        "spk-my-ultra-x82"
+      ]
+    },
+    {
+      "id": "spk-my-ultra-x82",
+      "name": "ULTRA-X82",
+      "series": "ULTRA-X Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/ultra-x80.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ultra-x-series/ultra-x80/uuid-b9be58ad-c958-cec5-1886-fbb961ff3510.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ultra-x-series/spk-my-ultra-x80-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ultra-x80",
+        "spk-my-ultra-x82"
+      ]
+    },
+    {
+      "id": "spk-my-upm-1p",
+      "name": "UPM-1P",
+      "series": "UP Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/datasheet---upm-1p.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/up-series/upm-1p/upm-1p-official.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/up-series/spk-my-upm-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-upm-1p",
+        "spk-my-upm-1xp"
+      ]
+    },
+    {
+      "id": "spk-my-upm-1xp",
+      "name": "UPM-1XP",
+      "series": "UP Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/datasheet---upm-1p.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/up-series/upm-1p/upm-1p-official.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/up-series/spk-my-upm-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-upm-1p",
+        "spk-my-upm-1xp"
+      ]
+    },
+    {
+      "id": "spk-my-upq-d1",
+      "name": "UPQ-D1",
+      "series": "UP Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/datasheet---upq-d1.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/up-series/upq-d/upq-d1-official.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/up-series/spk-my-upq-d-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-upq-d1",
+        "spk-my-upq-d2",
+        "spk-my-upq-d3"
+      ]
+    },
+    {
+      "id": "spk-my-upq-d2",
+      "name": "UPQ-D2",
+      "series": "UP Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/datasheet---upq-d1.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/up-series/upq-d/upq-d1-official.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/up-series/spk-my-upq-d-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-upq-d1",
+        "spk-my-upq-d2",
+        "spk-my-upq-d3"
+      ]
+    },
+    {
+      "id": "spk-my-upq-d3",
+      "name": "UPQ-D3",
+      "series": "UP Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/datasheet---upq-d1.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/up-series/upq-d/upq-d1-official.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/up-series/spk-my-upq-d-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-upq-d1",
+        "spk-my-upq-d2",
+        "spk-my-upq-d3"
+      ]
+    },
+    {
+      "id": "spk-my-up-4slim",
+      "name": "UP-4slim",
+      "series": "UP Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/up-4slim.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/up-series/up-4slim/uuid-6fbc4402-de45-7ff3-c9a1-5054d38a00be.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/up-series/spk-my-up-4slim-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-up-4slim"
+      ]
+    },
+    {
+      "id": "spk-my-ashby-5c",
+      "name": "Ashby-5C",
+      "series": "Ashby Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/datasheet---ashby-5c.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ashby-series/ashby-5c/ashby-5c-official.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ashby-series/spk-my-ashby-5c-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ashby-5c"
+      ]
+    },
+    {
+      "id": "spk-my-ashby-8c",
+      "name": "Ashby-8C",
+      "series": "Ashby Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/datasheet---ashby-8c.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/ashby-series/ashby-8c/ashby-8c-official.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/ashby-series/spk-my-ashby-8c-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-ashby-8c"
+      ]
+    },
+    {
+      "id": "spk-my-mjf-208",
+      "name": "MJF-208",
+      "series": "MJF Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/datasheet---mjf-208.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/mjf-series/mjf-208/mjf-208-official.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/mjf-series/spk-my-mjf-208-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-mjf-208"
+      ]
+    },
+    {
+      "id": "spk-my-mjf-210",
+      "name": "MJF-210",
+      "series": "MJF Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/datasheet---mjf-210.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/mjf-series/mjf-210/mjf-210-official.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/mjf-series/spk-my-mjf-210-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-mjf-210"
+      ]
+    },
+    {
+      "id": "spk-my-mm-10ac",
+      "name": "MM-10AC",
+      "series": "MM Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/mm-10.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/mm-series/mm-10/uuid-2beb31aa-05c0-8690-bbe1-9a76c7a16d01.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/mm-series/spk-my-mm-10-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-mm-10ac",
+        "spk-my-mm-10acx",
+        "spk-my-mm-10xp"
+      ]
+    },
+    {
+      "id": "spk-my-mm-10acx",
+      "name": "MM-10ACX",
+      "series": "MM Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/mm-10.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/mm-series/mm-10/uuid-2beb31aa-05c0-8690-bbe1-9a76c7a16d01.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/mm-series/spk-my-mm-10-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-mm-10ac",
+        "spk-my-mm-10acx",
+        "spk-my-mm-10xp"
+      ]
+    },
+    {
+      "id": "spk-my-mm-10xp",
+      "name": "MM-10XP",
+      "series": "MM Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/mm-10.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/mm-series/mm-10/uuid-2beb31aa-05c0-8690-bbe1-9a76c7a16d01.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/mm-series/spk-my-mm-10-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-mm-10ac",
+        "spk-my-mm-10acx",
+        "spk-my-mm-10xp"
+      ]
+    },
+    {
+      "id": "spk-my-mm-4xp",
+      "name": "MM-4XP",
+      "series": "MM Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/mm-4xp.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/mm-series/mm-4xp/uuid-ecdb0009-f164-c289-91db-c2f098e1ae2a.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/mm-series/spk-my-mm-4xp-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-mm-4xp",
+        "spk-my-mm-4xpd"
+      ]
+    },
+    {
+      "id": "spk-my-mm-4xpd",
+      "name": "MM-4XPD",
+      "series": "MM Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/mm-4xp.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/mm-series/mm-4xp/uuid-ecdb0009-f164-c289-91db-c2f098e1ae2a.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/mm-series/spk-my-mm-4xp-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-mm-4xp",
+        "spk-my-mm-4xpd"
+      ]
+    },
+    {
+      "id": "spk-my-x-400c",
+      "name": "X-400C",
+      "series": "Cinema Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/x-400c.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/cinema-series/x-400c/uuid-0324077b-b5aa-0993-f328-b4112aa41415.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/x-400c/spk-my-x-400c-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-x-400c"
+      ]
+    },
+    {
+      "id": "spk-my-750-lfc",
+      "name": "750-LFC",
+      "series": "LFC Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/750-lfc.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/lfc-series/750-lfc/uuid-3edb2f35-4305-2a6e-871c-51ac1ad9ca5c.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/lfc-series/spk-my-750-lfc-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-750-lfc"
+      ]
+    },
+    {
+      "id": "spk-my-900-lfc",
+      "name": "900-LFC",
+      "series": "LFC Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/900-lfc.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/lfc-series/900-lfc/uuid-5759203f-2694-d60e-36a3-8bc3eedcb805.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/lfc-series/spk-my-900-lfc-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-900-lfc"
+      ]
+    },
+    {
+      "id": "spk-my-1800-lfc",
+      "name": "1800-LFC",
+      "series": "LFC Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/1800-lfc.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/lfc-series/1800-lfc/uuid-c5bccffd-9a72-765b-909b-f297ff877b3a.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/lfc-series/spk-my-1800-lfc-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-1800-lfc"
+      ]
+    },
+    {
+      "id": "spk-my-2100-lfc",
+      "name": "2100-LFC",
+      "series": "LFC Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/2100-lfc.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/lfc-series/2100-lfc/uuid-2c595271-76c9-27ab-6d8a-41a0bff9f465.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/lfc-series/spk-my-2100-lfc-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-2100-lfc"
+      ]
+    },
+    {
+      "id": "spk-my-vlfc",
+      "name": "VLFC",
+      "series": "LFC Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/vlfc.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/lfc-series/vlfc/uuid-39892087-4ac8-a6f1-0660-630448a11690.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/lfc-series/spk-my-vlfc-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-vlfc"
+      ]
+    },
+    {
+      "id": "spk-my-usw-112p",
+      "name": "USW-112P",
+      "series": "USW Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/usw-112p.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/usw-series/usw-112p/uuid-59d933b4-628a-5e46-05cd-49f4c36a0a15.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/usw-series/spk-my-usw-112-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-usw-112p",
+        "spk-my-usw-112xp"
+      ]
+    },
+    {
+      "id": "spk-my-usw-112xp",
+      "name": "USW-112XP",
+      "series": "USW Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/usw-112p.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/usw-series/usw-112p/uuid-59d933b4-628a-5e46-05cd-49f4c36a0a15.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/usw-series/spk-my-usw-112-family-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-usw-112p",
+        "spk-my-usw-112xp"
+      ]
+    },
+    {
+      "id": "spk-my-usw-121p",
+      "name": "USW-121P",
+      "series": "USW Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/usw-121p.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/usw-series/usw-121p/uuid-21256a41-3010-9d76-0510-94139b7c9753.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/usw-series/spk-my-usw-121p-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-usw-121p"
+      ]
+    },
+    {
+      "id": "spk-my-usw-210p",
+      "name": "USW-210P",
+      "series": "USW Series",
+      "status": "verified",
+      "sourcePage": "https://docs.meyersound.com/products/en/usw-210p.html",
+      "rawImage": "raw-data/raw-assets/my/speakers/usw-series/usw-210p/uuid-5717f685-9ace-8ffd-1372-8304738e0052.jpg",
+      "runtimeImage": "public/assets/img/speakers/my/usw-series/spk-my-usw-210p-official.jpg",
+      "sharedOfficialMediaProductIds": [
+        "spk-my-usw-210p"
+      ]
+    }
+  ],
+  "excluded": []
+}

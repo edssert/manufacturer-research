@@ -56,8 +56,8 @@ function bodyClassToggle(btn, key, cls) {
 }
 
 /**
- * 전 탭 카드 사진 숨기기 토글. 저장된 선호의 최초 적용은
- * index.html 인라인 스크립트가 처리한다(사진이 잠깐 보였다 사라지는 것 방지).
+ * 전 탭 카드 사진 숨기기 토글. 저장된 선호는 bootstrap-preferences.js가
+ * CSS 로드 전에 적용한다.
  * @param {HTMLElement} btn #media-toggle
  */
 export function initMediaToggle(btn) {
@@ -66,10 +66,6 @@ export function initMediaToggle(btn) {
 
 /**
  * 전역 애니메이션/트랜지션 끄기 토글.
- * 이전에는 저장만 하고 읽는 쪽(applyStoredMotionPref)을 아무도
- * 호출하지 않아 새로고침하면 설정이 풀렸다 — 모션 차단은 늦게 적용돼도
- * 깜빡임이 없으므로(테마/사진과 달리 index.html 인라인이 필요 없다) 여기서
- * 읽어 적용한다.
  * @param {HTMLElement} btn #motion-toggle
  */
 export function initMotionToggle(btn) {

@@ -1,9 +1,4 @@
-/**
- * @module domains/accessories/view
- * 액세서리 카드 + 상세 모달 마크업 생성 (순수 함수 모음).
- *
- * 관련 CSS: css/components/card.css, css/components/spec-table.css
- */
+/** @module domains/accessories/view */
 import { esc, getViews } from "../../core/dom.js";
 import { ACC_MFR } from "./accessories.schema.js";
 

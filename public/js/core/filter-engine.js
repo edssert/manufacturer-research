@@ -1,18 +1,4 @@
-/**
- * @module core/filter-engine
- * 도메인 비의존 필터링/정렬 로직.
- * "schema" 가 어떤 필드를 검색/칩 필터/범위 필터할지 선언하므로
- * 이 모듈은 "스피커"와 "앰프"의 차이를 전혀 몰라도 된다.
- *
- * schema 형태 (도메인별 정의: domains/<이름>/<이름>.schema.js):
- * {
- *   searchFields: ["name","series"],            // 검색어(state.q) 대조 필드
- *   customSearchMatch: (item, q) => boolean,    // 추가 검색 규칙 (선택)
- *   chipFields: [{ key:"mk", label:"Manufacturer", order:[], labelFor:(v)=>... }],
- *   rangeFields: [{ key:"spl", label:"Max SPL", unit:"dB SPL", step:1 }],
- *   sorters: { series: (a,b)=>..., spl: (a,b)=>... }
- * }
- */
+/** @module core/filter-engine */
 
 /**
  * [검색어 정규화] 검색어와 대상 텍스트를 비교 전에 같은 형태로 만든다 —
@@ -71,6 +57,7 @@ export function passes(item, state, schema, except) {
       const v = resolvePath(item, rf.key);
       if (v == null) continue;
       if (rf.isRange) {
+        if (!Array.isArray(v) || v.length !== 2 || !v.every(Number.isFinite)) continue;
         // 값이 스칼라가 아니라 [min,max] 구간(예: 각도 커버리지 범위)인 필드.
         // 필터 슬라이더 구간 [r.lo,r.hi] 과 항목 구간이 "하나라도 겹치면" 통과
         // — 스피커가 지원하는 각도/스펙 범위 중 일부라도 필터 조건 안에
@@ -78,6 +65,8 @@ export function passes(item, state, schema, except) {
         // 좁아지므로, 겹침 판정이 실사용에 더 적합하다).
         const [vMin, vMax] = v;
         if (vMax < r.lo || vMin > r.hi) return false;
+      } else if (!Number.isFinite(v)) {
+        continue;
       } else if (v < r.lo || v > r.hi) {
         return false;
       }

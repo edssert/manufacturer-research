@@ -1,14 +1,4 @@
-/**
- * @module ui/split-view
- * 나란히 비교(Side-by-Side) Split View.
- *
- * 동작 원리: 열려 있는 모달에 .modal--split 변경자를 토글하고, 기존
- * 모달의 기존 자식 전체를 pane 1 로 감싼 뒤 그 옆에
- * pane 2 를 추가한다. 기존 모달 DOM 은 파괴하지 않으므로 원본 카드의
- * 상태가 그대로 유지된다. 좁은 화면에서는 CSS 가 세로 스택으로 전환.
- *
- * 관련 CSS: css/components/split-view.css (.split-view, .modal--split)
- */
+/** @module ui/split-view */
 import {
   getModalEl,
   closeModal,
@@ -23,8 +13,6 @@ import {
 import { wirePaneInteractions, removeScrollbarTrack, setMediaLightboxOpener } from "./pane-interactions.js";
 import { esc } from "../core/dom.js";
 import { parsePaneSpec } from "../core/route-codec.js";
-// [모달 라우팅] pane2 의 열림/교체/닫힘을 URL 해시 3번째 단에 replaceState 로
-// 반영한다 — 히스토리를 어지럽히지 않고 URL 만으로 복원된다(core/router.js).
 import { setPane2Route, clearPane2Route } from "../core/router.js";
 
 /** @typedef {HTMLElement & {_returnFocus?: HTMLElement|null}} SplitContainer */

@@ -20,487 +20,448 @@
 // - throw/img=null: 원문에 스로우 거리 없음, 이미지 미확보. ip=null: 정식 IP 등급 수치 없음
 //   (WR 옵션은 정성적 서술만). watt=200: RMS power handling overall(피크 10ms 800W는 미기재).
 export const DB_T_SERIES = [
-{
-  "id": "spk-db-t10",
-  "mfr": "d&b audiotechnik",
-  "mk": "db",
-  "name": "T10",
-  "series": "T Series",
-  "throwCat": null,
-  "type": "Line Array",
-  "throw": null,
-  "lowInch": 6.5,
-  "lowQty": 2,
-  "crossover": "2-way, passive",
-  "crossoverTags": [
-    "2-way",
-    "passive"
-  ],
-  "spl": 132,
-  "cov": {
-    "h": "105°,90°",
-    "v": "35°",
-    "splayList": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15
-    ]
-  },
-  "freqs": [
-    {
-      "db": "-5 dB",
-      "lo": "68 Hz",
-      "hi": "18 kHz"
-    }
-  ],
-  "weight": 11,
-  "transducers": "LF: 2 × 6.5″ · HF: 1 × 1.4″",
-  "connectors": "2 x NLT4 F/M",
-  "ip": null,
-  "dims": "470 x 197 x 300 mm / 18.5 x 7.75 x 11.8 in",
-  "amps": [
-    {
-      "model": "D80",
-      "configs": [
-        {
-          "mode": "Line/Arc/PS",
-          "perCh": 4,
-          "total": 16
-        }
-      ]
+  {
+    id: "spk-db-t10",
+    mfr: "d&b audiotechnik",
+    mk: "db",
+    name: "T10",
+    series: "T Series",
+    throwCat: null,
+    type: "Line Array",
+    throw: null,
+    lowInch: 6.5,
+    lowQty: 2,
+    crossover: "2-way, passive",
+    crossoverTags: ["2-way", "passive"],
+    spl: 132,
+    cov: {
+      h: "105°,90°",
+      v: "35°",
+      splayList: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
     },
-    {
-      "model": "D40",
-      "configs": [
-        {
-          "mode": "Line/Arc/PS",
-          "perCh": 4,
-          "total": 16
-        }
-      ]
-    },
-    {
-      "model": "D12",
-      "configs": [
-        {
-          "mode": "Line/Arc/PS",
-          "perCh": 4,
-          "total": 8
-        }
-      ]
-    },
-    {
-      "model": "D20",
-      "configs": [
-        {
-          "mode": "Line/Arc/PS",
-          "perCh": 4,
-          "total": 16
-        }
-      ]
-    },
-    {
-      "model": "D6",
-      "configs": [
-        {
-          "mode": "Line/Arc/PS",
-          "perCh": 4,
-          "total": 8
-        }
-      ]
-    }
-  ],
-  "ampRaw": "D80(4/16), D40(4/16), D12(4/8), D20(4/16), D6(4/8)",
-  "notes": "라인어레이/포인트소스 겸용 — 회전형 웨이브가이드+어쿠스틱 렌즈를 공구 없이 90° 전환 (라인소스 수평 105° / 포인트소스 90°×35°)",
-  "img": "public/assets/img/speakers/db/t/spk-db-t10.png",
-  "relations": {
-    "ampIds": []
-  },
-  "watt": 200,
-  "mechanicalSafety": {
-    "flownRows": [
+    freqs: [
       {
-        "config": "flown (T10 array, no ArrayCalc check required, any splay config)",
-        "accessory": "Z5370 T Flying frame",
-        "safeLimit": "10 T10 cabinets (110 kg / 242 lb total system weight)",
-        "maxLimit": null
+        db: "-5 dB",
+        lo: "68 Hz",
+        hi: "18 kHz",
+      },
+    ],
+    weight: 11,
+    transducers: "LF: 2 × 6.5″ · HF: 1 × 1.4″",
+    connectors: "2 x NLT4 F/M",
+    ip: null,
+    dims: "470 x 197 x 300 mm / 18.5 x 7.75 x 11.8 in",
+    amps: [
+      {
+        model: "D80",
+        configs: [
+          {
+            mode: "Line/Arc/PS",
+            perCh: 4,
+            total: 16,
+          },
+        ],
       },
       {
-        "config": "flown (T10 array, general — ArrayCalc load verification required above 110 kg)",
-        "accessory": "Z5370 T Flying frame",
-        "safeLimit": null,
-        "maxLimit": "20 T10 cabinets maximum (Z5370 frame SWL 250 kg / 550 lb)"
-      }
-    ],
-    "stackedRows": [
-      {
-        "config": "ground stack (T10 only, Flying frame as ground support)",
-        "accessory": "Z5370 T Flying frame",
-        "safeLimit": null,
-        "maxLimit": "6 T10 cabinets"
+        model: "D40",
+        configs: [
+          {
+            mode: "Line/Arc/PS",
+            perCh: 4,
+            total: 16,
+          },
+        ],
       },
       {
-        "config": "ground stack (T-SUB/T10 mixed, Flying frame as ground support)",
-        "accessory": "Z5370 T Flying frame",
-        "safeLimit": null,
-        "maxLimit": "3 T10 cabinets on top of max 2 T-SUB cabinets"
-      }
-    ],
-    "safetyFactor": null,
-    "maxWindLoad": "6 Beaufort(비행 비권장 상한); 8 Beaufort 초과 시 반드시 하강·고정",
-    "notes": [
-      {
-        "text": "Flown 최대 상한은 전용 T-Series Rigging manual의 \"Limitation\"(20대)을 채택. AE Datasheet는 24대로 표기해 문서 간 상충이나, 더 상세·특화된 리깅 매뉴얼을 우선함."
+        model: "D12",
+        configs: [
+          {
+            mode: "Line/Arc/PS",
+            perCh: 4,
+            total: 8,
+          },
+        ],
       },
       {
-        "text": "Safety factor: Rigging manual 전문(44p)에 명시적 비율 수치 없음 — null."
-      }
-    ],
-    "source": "T-Series Rigging manual v1.2 (Chapter 1.1.1 p.4, 4.1.1 p.20, 4.2.1 p.32, 4.2.2 p.34, Chapter 6 Wind loads p.40)"
-  },
-  "presets": null,
-  "cardioidCapability": "No"
-},
-{
-  "id": "spk-db-ti10l",
-  "mfr": "d&b audiotechnik",
-  "mk": "db",
-  "name": "Ti10L",
-  "series": "T Series",
-  "throwCat": null,
-  "type": "Line Array",
-  "throw": null,
-  "lowInch": 6.5,
-  "lowQty": 2,
-  "crossover": "2-way, passive",
-  "crossoverTags": [
-    "2-way",
-    "passive"
-  ],
-  "spl": 132,
-  "cov": {
-    "h": "105°,90°",
-    "v": "35°",
-    "splayList": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15
-    ]
-  },
-  "freqs": [
-    {
-      "db": "-5 dB",
-      "lo": "68 Hz",
-      "hi": "18 kHz"
-    }
-  ],
-  "weight": 11,
-  "transducers": "LF: 2 × 6.5″ · HF: 1 × 1.4″",
-  "connectors": "2 x NL4 M",
-  "ip": null,
-  "dims": "470 x 197 x 300 mm / 18.5 x 7.75 x 11.8 in",
-  "amps": [
-    {
-      "model": "30D",
-      "configs": [
-        {
-          "mode": "Line/Arc",
-          "perCh": 4,
-          "total": 16
-        }
-      ]
-    },
-    {
-      "model": "10D",
-      "configs": [
-        {
-          "mode": "Line/Arc",
-          "perCh": 4,
-          "total": 16
-        }
-      ]
-    },
-    {
-      "model": "D80",
-      "configs": [
-        {
-          "mode": "Line/Arc",
-          "perCh": 4,
-          "total": 16
-        }
-      ]
-    },
-    {
-      "model": "D20",
-      "configs": [
-        {
-          "mode": "Line/Arc",
-          "perCh": 4,
-          "total": 16
-        }
-      ]
-    },
-    {
-      "model": "D12",
-      "configs": [
-        {
-          "mode": "Line/Arc",
-          "perCh": 4,
-          "total": 8
-        }
-      ]
-    },
-    {
-      "model": "D6",
-      "configs": [
-        {
-          "mode": "Line/Arc",
-          "perCh": 4,
-          "total": 8
-        }
-      ]
-    }
-  ],
-  "ampRaw": "30D(4/16), 10D(4/16), D80(4/16), D20(4/16), D12(4/8), D6(4/8)",
-  "notes": "T10의 설치용 라인소스 버전(음향 동일, NL4 M 커넥터, 훅·고정볼트식 어레이 리깅 포함) — 스탠드얼론 사용 시 혼 회전으로 포인트소스(90°×35°) 지향도 가능",
-  "img": "public/assets/img/speakers/db/t/spk-db-ti10l.png",
-  "relations": {
-    "ampIds": []
-  },
-  "watt": 200,
-  "mechanicalSafety": {
-    "flownRows": [
-      {
-        "config": "line array (Z5373 T Cluster bracket, flown or high-stand mounted)",
-        "accessory": "Z5373 T Cluster bracket",
-        "safeLimit": null,
-        "maxLimit": "3 Ti10L cabinets"
+        model: "D20",
+        configs: [
+          {
+            mode: "Line/Arc/PS",
+            perCh: 4,
+            total: 16,
+          },
+        ],
       },
       {
-        "config": "line array (Z5370 T Flying frame, general)",
-        "accessory": "Z5370 T Flying frame",
-        "safeLimit": null,
-        "maxLimit": null
-      }
+        model: "D6",
+        configs: [
+          {
+            mode: "Line/Arc/PS",
+            perCh: 4,
+            total: 8,
+          },
+        ],
+      },
     ],
-    "stackedRows": null,
-    "safetyFactor": null,
-    "maxWindLoad": null,
-    "notes": [
+    ampRaw: "D80(4/16), D40(4/16), D12(4/8), D20(4/16), D6(4/8)",
+    notes:
+      "라인어레이/포인트소스 겸용 — 회전형 웨이브가이드+어쿠스틱 렌즈를 공구 없이 90° 전환 (라인소스 수평 105° / 포인트소스 90°×35°)",
+    img: "public/assets/img/speakers/db/t/spk-db-t10.png",
+    relations: {
+      ampIds: [],
+    },
+    watt: 200,
+    mechanicalSafety: {
+      flownRows: [
+        {
+          config: "flown (T10 array, no ArrayCalc check required, any splay config)",
+          accessory: "Z5370 T Flying frame",
+          safeLimit: "10 T10 cabinets (110 kg / 242 lb total system weight)",
+          maxLimit: null,
+        },
+        {
+          config: "flown (T10 array, general — ArrayCalc load verification required above 110 kg)",
+          accessory: "Z5370 T Flying frame",
+          safeLimit: null,
+          maxLimit: "20 T10 cabinets maximum (Z5370 frame SWL 250 kg / 550 lb)",
+        },
+      ],
+      stackedRows: [
+        {
+          config: "ground stack (T10 only, Flying frame as ground support)",
+          accessory: "Z5370 T Flying frame",
+          safeLimit: null,
+          maxLimit: "6 T10 cabinets",
+        },
+        {
+          config: "ground stack (T-SUB/T10 mixed, Flying frame as ground support)",
+          accessory: "Z5370 T Flying frame",
+          safeLimit: null,
+          maxLimit: "3 T10 cabinets on top of max 2 T-SUB cabinets",
+        },
+      ],
+      safetyFactor: null,
+      maxWindLoad: "6 Beaufort(비행 비권장 상한); 8 Beaufort 초과 시 반드시 하강·고정",
+      notes: [
+        {
+          text: 'Flown 최대 상한은 전용 T-Series Rigging manual의 "Limitation"(20대)을 채택. AE Datasheet는 24대로 표기해 문서 간 상충이나, 더 상세·특화된 리깅 매뉴얼을 우선함.',
+        },
+        {
+          text: "Safety factor: Rigging manual 전문(44p)에 명시적 비율 수치 없음 — null.",
+        },
+      ],
+      source:
+        "T-Series Rigging manual v1.2 (Chapter 1.1.1 p.4, 4.1.1 p.20, 4.2.1 p.32, 4.2.2 p.34, Chapter 6 Wind loads p.40)",
+    },
+    presets: null,
+    cardioidCapability: "No",
+  },
+  {
+    id: "spk-db-ti10l",
+    mfr: "d&b audiotechnik",
+    mk: "db",
+    name: "Ti10L",
+    series: "T Series",
+    throwCat: null,
+    type: "Line Array",
+    throw: null,
+    lowInch: 6.5,
+    lowQty: 2,
+    crossover: "2-way, passive",
+    crossoverTags: ["2-way", "passive"],
+    spl: 132,
+    cov: {
+      h: "105°,90°",
+      v: "35°",
+      splayList: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    },
+    freqs: [
       {
-        "text": "Z5370 T Flying frame 사용 시 절차는 T-Series Rigging manual을 준용하나, EC Declaration이 Ti10L(Z0551)을 열거하지 않아 T10의 수치 상한(10/20대)을 그대로 전재하지 않고 미확인(null) 유지 — 확정 상한은 Z5373 Cluster bracket 3대뿐."
+        db: "-5 dB",
+        lo: "68 Hz",
+        hi: "18 kHz",
+      },
+    ],
+    weight: 11,
+    transducers: "LF: 2 × 6.5″ · HF: 1 × 1.4″",
+    connectors: "2 x NL4 M",
+    ip: null,
+    dims: "470 x 197 x 300 mm / 18.5 x 7.75 x 11.8 in",
+    amps: [
+      {
+        model: "30D",
+        configs: [
+          {
+            mode: "Line/Arc",
+            perCh: 4,
+            total: 16,
+          },
+        ],
       },
       {
-        "text": "Safety factor / max wind load: EC Declaration에 Ti10L 미포함으로 직접 적용을 보류 — null."
-      }
+        model: "10D",
+        configs: [
+          {
+            mode: "Line/Arc",
+            perCh: 4,
+            total: 16,
+          },
+        ],
+      },
+      {
+        model: "D80",
+        configs: [
+          {
+            mode: "Line/Arc",
+            perCh: 4,
+            total: 16,
+          },
+        ],
+      },
+      {
+        model: "D20",
+        configs: [
+          {
+            mode: "Line/Arc",
+            perCh: 4,
+            total: 16,
+          },
+        ],
+      },
+      {
+        model: "D12",
+        configs: [
+          {
+            mode: "Line/Arc",
+            perCh: 4,
+            total: 8,
+          },
+        ],
+      },
+      {
+        model: "D6",
+        configs: [
+          {
+            mode: "Line/Arc",
+            perCh: 4,
+            total: 8,
+          },
+        ],
+      },
     ],
-    "source": "OM Chapter 2.1 p.5, Chapter 3 Ti10L Rigging procedure p.11"
-  },
-  "presets": null,
-  "cardioidCapability": "No"
-},
-{
-  "id": "spk-db-ti10p",
-  "mfr": "d&b audiotechnik",
-  "mk": "db",
-  "name": "Ti10P",
-  "series": "T Series",
-  "throwCat": null,
-  "type": "Point",
-  "throw": null,
-  "lowInch": 6.5,
-  "lowQty": 2,
-  "crossover": "2-way, passive",
-  "crossoverTags": [
-    "2-way",
-    "passive"
-  ],
-  "spl": 130,
-  "cov": {
-    "h": "90°,105°",
-    "v": "35°"
-  },
-  "freqs": [
-    {
-      "db": "-5 dB",
-      "lo": "68 Hz",
-      "hi": "18 kHz"
-    }
-  ],
-  "weight": 10.5,
-  "transducers": "LF: 2 × 6.5″ · HF: 1 × 1.4″",
-  "connectors": "2 x NL4 M",
-  "ip": null,
-  "dims": "470 x 197 x 300 mm / 18.5 x 7.75 x 11.8 in",
-  "amps": [
-    {
-      "model": "30D",
-      "configs": [
-        {
-          "mode": "PS",
-          "perCh": 4,
-          "total": 16
-        }
-      ]
+    ampRaw: "30D(4/16), 10D(4/16), D80(4/16), D20(4/16), D12(4/8), D6(4/8)",
+    notes:
+      "T10의 설치용 라인소스 버전(음향 동일, NL4 M 커넥터, 훅·고정볼트식 어레이 리깅 포함) — 스탠드얼론 사용 시 혼 회전으로 포인트소스(90°×35°) 지향도 가능",
+    img: "public/assets/img/speakers/db/t/spk-db-ti10l.png",
+    relations: {
+      ampIds: [],
     },
-    {
-      "model": "10D",
-      "configs": [
+    watt: 200,
+    mechanicalSafety: {
+      flownRows: [
         {
-          "mode": "PS",
-          "perCh": 4,
-          "total": 16
-        }
-      ]
+          config: "line array (Z5373 T Cluster bracket, flown or high-stand mounted)",
+          accessory: "Z5373 T Cluster bracket",
+          safeLimit: null,
+          maxLimit: "3 Ti10L cabinets",
+        },
+        {
+          config: "line array (Z5370 T Flying frame, general)",
+          accessory: "Z5370 T Flying frame",
+          safeLimit: null,
+          maxLimit: null,
+        },
+      ],
+      stackedRows: null,
+      safetyFactor: null,
+      maxWindLoad: null,
+      notes: [
+        {
+          text: "Z5370 T Flying frame 사용 시 절차는 T-Series Rigging manual을 준용하나, EC Declaration이 Ti10L(Z0551)을 열거하지 않아 T10의 수치 상한(10/20대)을 그대로 전재하지 않고 미확인(null) 유지 — 확정 상한은 Z5373 Cluster bracket 3대뿐.",
+        },
+        {
+          text: "Safety factor / max wind load: EC Declaration에 Ti10L 미포함으로 직접 적용을 보류 — null.",
+        },
+      ],
+      source: "OM Chapter 2.1 p.5, Chapter 3 Ti10L Rigging procedure p.11",
     },
-    {
-      "model": "D80",
-      "configs": [
-        {
-          "mode": "PS",
-          "perCh": 4,
-          "total": 16
-        }
-      ]
-    },
-    {
-      "model": "D20",
-      "configs": [
-        {
-          "mode": "PS",
-          "perCh": 4,
-          "total": 16
-        }
-      ]
-    },
-    {
-      "model": "D12",
-      "configs": [
-        {
-          "mode": "PS",
-          "perCh": 4,
-          "total": 8
-        }
-      ]
-    },
-    {
-      "model": "D6",
-      "configs": [
-        {
-          "mode": "PS",
-          "perCh": 4,
-          "total": 8
-        }
-      ]
-    }
-  ],
-  "ampRaw": "30D(4/16), 10D(4/16), D80(4/16), D20(4/16), D12(4/8), D6(4/8)",
-  "notes": "T10의 설치용 포인트소스 버전(음향 동일, NL4 M 커넥터, 어레이 리깅 없음 — 스탠드얼론 전용) — 혼 회전으로 라인소스(105°) 지향도 가능",
-  "img": "public/assets/img/speakers/db/t/spk-db-ti10p.png",
-  "relations": {
-    "ampIds": []
+    presets: null,
+    cardioidCapability: "No",
   },
-  "watt": 200,
-  "mechanicalSafety": null,
-  "presets": null,
-  "cardioidCapability": "No"
-},
-// ── 아래부터는 스펙 조사 전(pending) — 제조사 공식 이미지만 등록된 항목이다.
-// 스펙 필드는 전부 null/빈 배열이며 파생 태그(wayCount/network/lowUnitConfig)는
-// normalize* 가 pending 을 건너뛰어 생성되지 않는다. 조사가 끝나면 이 주석 위쪽
-// 항목들과 같은 형태로 값을 채우고 pending 플래그를 지운다.
-{
-  "id": "spk-db-t-sub",
-  "mfr": "d&b audiotechnik",
-  "mk": "db",
-  "name": "T-SUB",
-  "series": "T Series",
-  "throwCat": null,
-  "type": null,
-  "throw": null,
-  "lowInch": null,
-  "lowQty": null,
-  "crossover": null,
-  "crossoverTags": [],
-  "spl": null,
-  "cov": null,
-  "freqs": [],
-  "weight": null,
-  "transducers": null,
-  "connectors": null,
-  "ip": null,
-  "dims": null,
-  "amps": [],
-  "ampRaw": null,
-  "notes": null,
-  "img": "public/assets/img/speakers/db/t/spk-db-t-sub.png",
-  "relations": {
-    "ampIds": []
+  {
+    id: "spk-db-ti10p",
+    mfr: "d&b audiotechnik",
+    mk: "db",
+    name: "Ti10P",
+    series: "T Series",
+    throwCat: null,
+    type: "Point",
+    throw: null,
+    lowInch: 6.5,
+    lowQty: 2,
+    crossover: "2-way, passive",
+    crossoverTags: ["2-way", "passive"],
+    spl: 130,
+    cov: {
+      h: "90°,105°",
+      v: "35°",
+    },
+    freqs: [
+      {
+        db: "-5 dB",
+        lo: "68 Hz",
+        hi: "18 kHz",
+      },
+    ],
+    weight: 10.5,
+    transducers: "LF: 2 × 6.5″ · HF: 1 × 1.4″",
+    connectors: "2 x NL4 M",
+    ip: null,
+    dims: "470 x 197 x 300 mm / 18.5 x 7.75 x 11.8 in",
+    amps: [
+      {
+        model: "30D",
+        configs: [
+          {
+            mode: "PS",
+            perCh: 4,
+            total: 16,
+          },
+        ],
+      },
+      {
+        model: "10D",
+        configs: [
+          {
+            mode: "PS",
+            perCh: 4,
+            total: 16,
+          },
+        ],
+      },
+      {
+        model: "D80",
+        configs: [
+          {
+            mode: "PS",
+            perCh: 4,
+            total: 16,
+          },
+        ],
+      },
+      {
+        model: "D20",
+        configs: [
+          {
+            mode: "PS",
+            perCh: 4,
+            total: 16,
+          },
+        ],
+      },
+      {
+        model: "D12",
+        configs: [
+          {
+            mode: "PS",
+            perCh: 4,
+            total: 8,
+          },
+        ],
+      },
+      {
+        model: "D6",
+        configs: [
+          {
+            mode: "PS",
+            perCh: 4,
+            total: 8,
+          },
+        ],
+      },
+    ],
+    ampRaw: "30D(4/16), 10D(4/16), D80(4/16), D20(4/16), D12(4/8), D6(4/8)",
+    notes:
+      "T10의 설치용 포인트소스 버전(음향 동일, NL4 M 커넥터, 어레이 리깅 없음 — 스탠드얼론 전용) — 혼 회전으로 라인소스(105°) 지향도 가능",
+    img: "public/assets/img/speakers/db/t/spk-db-ti10p.png",
+    relations: {
+      ampIds: [],
+    },
+    watt: 200,
+    mechanicalSafety: null,
+    presets: null,
+    cardioidCapability: "No",
   },
-  "watt": null,
-  "mechanicalSafety": null,
-  "presets": null,
-  "cardioidCapability": null,
-  "pending": true
-},
-{
-  "id": "spk-db-ti-sub",
-  "mfr": "d&b audiotechnik",
-  "mk": "db",
-  "name": "Ti-SUB",
-  "series": "T Series",
-  "throwCat": null,
-  "type": null,
-  "throw": null,
-  "lowInch": null,
-  "lowQty": null,
-  "crossover": null,
-  "crossoverTags": [],
-  "spl": null,
-  "cov": null,
-  "freqs": [],
-  "weight": null,
-  "transducers": null,
-  "connectors": null,
-  "ip": null,
-  "dims": null,
-  "amps": [],
-  "ampRaw": null,
-  "notes": null,
-  "img": "public/assets/img/speakers/db/t/spk-db-ti-sub.png",
-  "relations": {
-    "ampIds": []
+  {
+    id: "spk-db-t-sub",
+    mfr: "d&b audiotechnik",
+    mk: "db",
+    name: "T-SUB",
+    series: "T Series",
+    throwCat: null,
+    type: "Subwoofer",
+    throw: null,
+    lowInch: 15,
+    lowQty: 1,
+    crossover: "Subwoofer, passive",
+    crossoverTags: ["passive"],
+    spl: 130,
+    cov: null,
+    freqs: [{ db: "-5 dB", lo: "47 Hz", hi: "140 Hz" }],
+    weight: 17,
+    transducers: "LF: 1 × 15″",
+    connectors: null,
+    ip: null,
+    dims: "431 x 470 x 400 mm / 17 x 18.5 x 15.8 in",
+    amps: [{ model: "D80", configs: [{ mode: "Standard", perCh: 2, total: 8 }] }],
+    ampRaw: "D80 (2 cabinets/channel)",
+    notes: "Passive omnidirectional flyable subwoofer with integrated T-Series rigging.",
+    img: "public/assets/img/speakers/db/t/spk-db-t-sub.png",
+    relations: {
+      ampIds: ["amp-db-d80"],
+    },
+    watt: 300,
+    mechanicalSafety: null,
+    presets: null,
+    cardioidCapability: "No",
   },
-  "watt": null,
-  "mechanicalSafety": null,
-  "presets": null,
-  "cardioidCapability": null,
-  "pending": true
-}
+  {
+    id: "spk-db-ti-sub",
+    mfr: "d&b audiotechnik",
+    mk: "db",
+    name: "Ti-SUB",
+    series: "T Series",
+    throwCat: null,
+    type: "Subwoofer",
+    throw: null,
+    lowInch: 15,
+    lowQty: 1,
+    crossover: "Subwoofer, passive",
+    crossoverTags: ["passive"],
+    spl: 130,
+    cov: null,
+    freqs: [{ db: "-5 dB", lo: "47 Hz", hi: "140 Hz" }],
+    weight: 17,
+    transducers: "LF: 1 × 15″",
+    connectors: null,
+    ip: null,
+    dims: "431 x 470 x 400 mm / 17 x 18.5 x 15.8 in",
+    amps: [
+      { model: "10D", configs: [{ mode: "Standard", perCh: 2, total: 8 }] },
+      { model: "30D", configs: [{ mode: "Standard", perCh: 2, total: 8 }] },
+      { model: "D80", configs: [{ mode: "Standard", perCh: 2, total: 8 }] },
+      { model: "40D", configs: [{ mode: "Standard", perCh: 2, total: 8 }] },
+    ],
+    ampRaw: "10D/30D/D80/40D (2 cabinets/channel)",
+    notes:
+      "Installation-specific passive omnidirectional subwoofer; may be ground stacked or flown above a Ti10L array.",
+    img: "public/assets/img/speakers/db/t/spk-db-ti-sub.png",
+    relations: {
+      ampIds: ["amp-db-10d", "amp-db-30d", "amp-db-d80", "amp-db-40d"],
+    },
+    watt: 300,
+    mechanicalSafety: null,
+    presets: null,
+    cardioidCapability: "No",
+  },
 ];

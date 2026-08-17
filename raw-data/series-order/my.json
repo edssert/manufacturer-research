@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "my",
+  "sourcePage": "https://meyersound.com/products/",
+  "retrievedAt": "2026-08-18",
+  "seriesOrder": [
+    "PANTHER Series",
+    "LEOPARD Series",
+    "TIGRA Series",
+    "LINA Series",
+    "ULTRA-X Series",
+    "UP Series",
+    "Ashby Series",
+    "MJF Series",
+    "MM Series",
+    "Cinema Series",
+    "LFC Series",
+    "USW Series"
+  ],
+  "basis": "official product families, flagship touring systems first, followed by point-source, installation, monitor, cinema, and low-frequency families"
+}

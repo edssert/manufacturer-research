@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-evo-6el",
+  "manufacturerId": "funktion",
+  "name": "Evo 6EL",
+  "slug": "evo-6el",
+  "series": "Evolution",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/evo-6el/",
+  "rangePage": "https://funktion-one.com/ranges/evolution",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "Evo 6EL - Additional Mid-Bass for Evo 6E Systems",
+    "technical": {
+      "bandwidth": "70Hz - 300Hz",
+      "weight": "30kg (66lbs)",
+      "dispersion": "Array dependent",
+      "connectors": "2 x Neutrik NL4 or NL8 option",
+      "driverTable": "Driver OPERATING BAND SENSITIVITY AT 1M POWER (AES) NOMINAL IMPEDANCE Driver 15\" Operating Band 85Hz - 250Hz Sensitivity at 1m 103dB at 2.8V Power (AES) 400W Nominal Impedence 8Ω"
+    },
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/c492e8fb-b14f-46b6-9c59-abc35dd08b22_Evo+6EL.png",
+      "https://images.prismic.io/funktion-one/57b96e2c-1f5c-4cae-9b0a-c08f14f35afa_Evo6EL-F1-WD%3DT0029-00.png",
+      "https://images.prismic.io/funktion-one/aiA3qweQX7-eWqep_WB-E67.png",
+      "https://images.prismic.io/funktion-one/aiA0dAeQX7-eWqa5_CFPK-2E67L.png"
+    ],
+    "downloads": [
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/1b61103a-37ff-4714-9ef2-c3ee8be48092_Funktion-One_Evo6EL_Spec_Sheet.pdf",
+        "label": "1b61103a-37ff-4714-9ef2-c3ee8be48092_Funktion-One_Evo6EL_Spec_Sheet.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/6b9784ae-afec-4808-8891-6d1f9fe82535_Evo6EL-F1-DD%3DT0026-00.PDF",
+        "label": "6b9784ae-afec-4808-8891-6d1f9fe82535_Evo6EL-F1-DD%3DT0026-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/a9441c0b-8643-4286-a367-eea18f19091d_Evo6EL-F1-TD%3DT0025-00.PDF",
+        "label": "a9441c0b-8643-4286-a367-eea18f19091d_Evo6EL-F1-TD%3DT0025-00.PDF"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/32bbac2d-52ff-430c-9469-b9c79f6fee1e_Evo6EL-F1-2DM%3DT0027-00.dwg",
+        "label": "32bbac2d-52ff-430c-9469-b9c79f6fee1e_Evo6EL-F1-2DM%3DT0027-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/Z0XiBJbqstJ97yJp_Evo6EL-F1-3DM%3DT0028-00.dwg",
+        "label": "Z0XiBJbqstJ97yJp_Evo6EL-F1-3DM%3DT0028-00.dwg"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/aeim2sBOoF08xNDo_CFPK-2E67L-F1-AD%3DT0069-01.pdf",
+        "label": "aeim2sBOoF08xNDo_CFPK-2E67L-F1-AD%3DT0069-01.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/fc712f5f-f051-42c3-9722-9505e6a2ed33_Evo+Ground+Stack+System.pdf",
+        "label": "fc712f5f-f051-42c3-9722-9505e6a2ed33_Evo+Ground+Stack+System.pdf"
+      },
+      {
+        "url": "https://funktion-one.cdn.prismic.io/funktion-one/b3811688-12ae-4d08-8df9-a4536c94bfb4_Evo+Brochure+2022+HR.pdf",
+        "label": "b3811688-12ae-4d08-8df9-a4536c94bfb4_Evo+Brochure+2022+HR.pdf"
+      }
+    ]
+  },
+  "evidenceStatus": "verified",
+  "pendingReasons": [
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl",
+    "coverage"
+  ]
+}

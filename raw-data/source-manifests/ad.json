@@ -1,0 +1,2707 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "ad",
+  "scope": "loudspeakers",
+  "files": [
+    {
+      "path": "raw-data/official-docs/ad/204-full-line-brochure.pdf",
+      "productIds": [
+        "spk-ad-vgx",
+        "spk-ad-vgt",
+        "spk-ad-vgd",
+        "spk-ad-vgo",
+        "spk-ad-vgs",
+        "spk-ad-cs10",
+        "spk-ad-cs10n",
+        "spk-ad-cs10p",
+        "spk-ad-cs7",
+        "spk-ad-cs7p",
+        "spk-ad-cs118",
+        "spk-ad-cs119",
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212",
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118",
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p",
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://legacy.adamson.ai/support/downloads-directory",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/204-full-line-brochure/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "f4f6c40fca1c339cc7d7ab25bae2c656eab44b0b77df229c2e181566a54894c8",
+      "bytes": 6497978,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/cs-series/460-cs10-spec-sheet.pdf",
+      "productIds": [
+        "spk-ad-cs10"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/cs-series/cs10/460-cs10-spec-sheet/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7fceb72c2bd5efa041cfde8d998528836472a59ae92bf1a5b5cf54478cec84d5",
+      "bytes": 452359,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/1-e15-technicaldata.pdf",
+      "productIds": [
+        "spk-ad-e15"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/1-e15-technicaldata/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e01fcd0c65ffd4ca2e49ea1b04ef3a46d2b126645fac22eb46475bd61a29758d",
+      "bytes": 435348,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/10-e-series-configurations-brochure-1.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/10-e-series-configurations-brochure-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "370ebee4fbdbd1c247e7095bc7f443db512558b226f61b17aa085f4b298b69d0",
+      "bytes": 7669663,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/11-e-series-full-line-brochure-1.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/11-e-series-full-line-brochure-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "f6878fe6edecd39e8f2d46fab9e028e7f8fa4e905d9a841f4def3a5289ee3d9c",
+      "bytes": 3829130,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/14-e-series-configurations-brochure-2.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/14-e-series-configurations-brochure-2/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "370ebee4fbdbd1c247e7095bc7f443db512558b226f61b17aa085f4b298b69d0",
+      "bytes": 7669663,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/15-e-series-full-line-brochure-3.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/15-e-series-full-line-brochure-3/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "f6878fe6edecd39e8f2d46fab9e028e7f8fa4e905d9a841f4def3a5289ee3d9c",
+      "bytes": 3829130,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/16-e-series-configurations-web-1.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/16-e-series-configurations-web-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "370ebee4fbdbd1c247e7095bc7f443db512558b226f61b17aa085f4b298b69d0",
+      "bytes": 7669663,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/17-e-series-full-line-brochure-4.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/17-e-series-full-line-brochure-4/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "f6878fe6edecd39e8f2d46fab9e028e7f8fa4e905d9a841f4def3a5289ee3d9c",
+      "bytes": 3829130,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/176-e-series-user-manual.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/176-e-series-user-manual/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "16a68deda5c297f3bc7dd42fd9d71b76378b214b11128e07a2b13774709fd05c",
+      "bytes": 10885461,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/182-e-series-user-manual-1.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/182-e-series-user-manual-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "16a68deda5c297f3bc7dd42fd9d71b76378b214b11128e07a2b13774709fd05c",
+      "bytes": 10885461,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/185-e-series-user-manual-2.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/185-e-series-user-manual-2/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "16a68deda5c297f3bc7dd42fd9d71b76378b214b11128e07a2b13774709fd05c",
+      "bytes": 10885461,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/187-e-series-user-manual-3.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/187-e-series-user-manual-3/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "16a68deda5c297f3bc7dd42fd9d71b76378b214b11128e07a2b13774709fd05c",
+      "bytes": 10885461,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/2-e12-technical-data.pdf",
+      "productIds": [
+        "spk-ad-e12"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e12",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e12/2-e12-technical-data/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "68a2516b5bee8d0063ab8c1600c695095f4e6cdb30fdcdd8b39fafc77c84f070",
+      "bytes": 390900,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/20-e-series-3d-cad.zip",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/20-e-series-3d-cad/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7683627708008a1cf7f63580240885411abfe1c438c0bc30a0f0ca151dc64937",
+      "bytes": 4890854,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/25-e12-pin-configuration.pdf",
+      "productIds": [
+        "spk-ad-e12"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e12",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e12/25-e12-pin-configuration/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "4ccc5112c2162457ca7f42e71c317c292a03b523e9006cdf4862ae3a515e51d8",
+      "bytes": 5361015,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/26-e15-pin-configuration.pdf",
+      "productIds": [
+        "spk-ad-e15"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/26-e15-pin-configuration/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "8d5133fb41ffe3bb999b03df339509c9a6b792afdd76d4d4a6b7a8f06490242f",
+      "bytes": 5462373,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/27-e219-sub-pin-configuration.pdf",
+      "productIds": [
+        "spk-ad-e219"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e219",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e219/27-e219-sub-pin-configuration/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "3eef9bcfe23e272b66ce4093de0d8817f7d8338f44afc52c80bc5170b00784df",
+      "bytes": 1803469,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/28-e119-sub-pin-configuration.pdf",
+      "productIds": [
+        "spk-ad-e119"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e119",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e119/28-e119-sub-pin-configuration/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "6efcb00fc4735d4f9c463d5209ea9e19650993ac6cd36182a4c4ef515677999a",
+      "bytes": 5107370,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/3-e119-technical-data.pdf",
+      "productIds": [
+        "spk-ad-e119"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e119",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e119/3-e119-technical-data/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c1a484b5e4bc17ad1df86576f78f8535285eb80078807082474ba9e0821a2002",
+      "bytes": 413470,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/305-e-series-configurations-web-1-1.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/305-e-series-configurations-web-1-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "370ebee4fbdbd1c247e7095bc7f443db512558b226f61b17aa085f4b298b69d0",
+      "bytes": 7669663,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/45-e12-pib-pack.zip",
+      "productIds": [
+        "spk-ad-e12"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e12",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e12/45-e12-pib-pack/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7e0743805949925337a88f202eeaa74119446b152f167bcce22fd3c74b24eea3",
+      "bytes": 1568651,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/46-e15-pib-pack.zip",
+      "productIds": [
+        "spk-ad-e15"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/46-e15-pib-pack/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d51c143ee38a7aa68b4187606d327957e1183160894fb9675ba1eee40c8839f0",
+      "bytes": 1561026,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/47-e219-pib-pack.zip",
+      "productIds": [
+        "spk-ad-e219"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e219",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e219/47-e219-pib-pack/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "89a14a5aa2a1fce8b58291ab419ac1133ba7715177939c08b203c5dbbc884139",
+      "bytes": 1251141,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/5-e219-technical-data.pdf",
+      "productIds": [
+        "spk-ad-e219"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e219",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e219/5-e219-technical-data/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "3db3d3d17c4f60060d0a45320f98e9d79e8f51c197bed669baa31711ece3e8c5",
+      "bytes": 213472,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/79-e-series-3d-cad-1.zip",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/79-e-series-3d-cad-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7683627708008a1cf7f63580240885411abfe1c438c0bc30a0f0ca151dc64937",
+      "bytes": 4890854,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/80-e-series-3d-cad-2.zip",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/80-e-series-3d-cad-2/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7683627708008a1cf7f63580240885411abfe1c438c0bc30a0f0ca151dc64937",
+      "bytes": 4890854,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/81-e-series-3d-cad-3.zip",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/81-e-series-3d-cad-3/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7683627708008a1cf7f63580240885411abfe1c438c0bc30a0f0ca151dc64937",
+      "bytes": 4890854,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/9-e-series-full-line-brochure.pdf",
+      "productIds": [
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/9-e-series-full-line-brochure/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "f6878fe6edecd39e8f2d46fab9e028e7f8fa4e905d9a841f4def3a5289ee3d9c",
+      "bytes": 3829130,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/976-architect-specifications-e12.docx",
+      "productIds": [
+        "spk-ad-e12"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e12",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e12/976-architect-specifications-e12/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7c7b3b6cc79b439f023a3c3711c9afd6398e24a3890c7e6424718748fdae8bbd",
+      "bytes": 2483374,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/977-architect-specifications-e15.docx",
+      "productIds": [
+        "spk-ad-e15"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e15/977-architect-specifications-e15/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "71505870be8ada321da809cba01da4f6032fff4bb5901d0471629ce3176f4186",
+      "bytes": 2483518,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/978-architect-specifications-e119.docx",
+      "productIds": [
+        "spk-ad-e119"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e119",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e119/978-architect-specifications-e119/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "82378c104c85848b6ca80476a780930d31b3850b12314ba38c99b5031dcb7d3e",
+      "bytes": 2483122,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/e-series/979-architect-specifications-e219.docx",
+      "productIds": [
+        "spk-ad-e219"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e219",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/e-series/e219/979-architect-specifications-e219/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e1772d0b71aa7b6504ac820af497cdbe29a8305f09d45fc258182997058bc67b",
+      "bytes": 2482982,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/198-is-series-brochure.pdf",
+      "productIds": [
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/198-is-series-brochure/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "cc1305ab5b003fa21a7609e46469d54ca6505bbb96394c79b5b75ee46233be41",
+      "bytes": 31035731,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/238-is-series-brochure-6.pdf",
+      "productIds": [
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/238-is-series-brochure-6/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "cc1305ab5b003fa21a7609e46469d54ca6505bbb96394c79b5b75ee46233be41",
+      "bytes": 31035731,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/240-is10-user-manual.pdf",
+      "productIds": [
+        "spk-ad-is10"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/240-is10-user-manual/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e7ece9ff8965101247dfcb16be7465e084831ec0b6814c2848e50d06027983d6",
+      "bytes": 11105118,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/346-is-series-line-array-rigging-manual-1.pdf",
+      "productIds": [
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118"
+      ],
+      "role": "rigging-manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/346-is-series-line-array-rigging-manual-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "44f4d251383aefca0ad8584aac995df374e0ac2dff718c1bee9f372bc2c2a7f1",
+      "bytes": 17870180,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/347-is-series-line-array-rigging-manual-1-1.pdf",
+      "productIds": [
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118"
+      ],
+      "role": "rigging-manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/347-is-series-line-array-rigging-manual-1-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "44f4d251383aefca0ad8584aac995df374e0ac2dff718c1bee9f372bc2c2a7f1",
+      "bytes": 17870180,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/354-is-series-cad-3.zip",
+      "productIds": [
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/354-is-series-cad-3/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7b644d9b30e3b656d7ff2f4f8c0a0e6e1d725ca4e822d01d38d21693ff57cf30",
+      "bytes": 61874168,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/355-is-series-cad-4.zip",
+      "productIds": [
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/355-is-series-cad-4/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7b644d9b30e3b656d7ff2f4f8c0a0e6e1d725ca4e822d01d38d21693ff57cf30",
+      "bytes": 61874168,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/375-revit-model-library-4.zip",
+      "productIds": [
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/375-revit-model-library-4/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "1cebfe9b753ecfa01f3b102f0ed9c3ab4299e4bdd17d2e33f8f6b4ea00a68ef9",
+      "bytes": 19216398,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/376-revit-model-library-5.zip",
+      "productIds": [
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/376-revit-model-library-5/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "1cebfe9b753ecfa01f3b102f0ed9c3ab4299e4bdd17d2e33f8f6b4ea00a68ef9",
+      "bytes": 19216398,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/383-sketchup-library-1-1-1.zip",
+      "productIds": [
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/383-sketchup-library-1-1-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9ce52ccd8c49e632c39bb63a2692b0a3cae5b4723421fca33a5bcbec06e24622",
+      "bytes": 79761437,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/584-is10-spec-sheet-v2021-09.pdf",
+      "productIds": [
+        "spk-ad-is10"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/584-is10-spec-sheet-v2021-09/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "97fdff5d101c24c7c2e16764ffbf6bc57b0b485fc319f8f2f88745e877c4e9aa",
+      "bytes": 346990,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/is-series/985-architect-specifications-is10.docx",
+      "productIds": [
+        "spk-ad-is10"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/is-series/is10/985-architect-specifications-is10/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "68ec10ecc26419789c03322868603daf85cdd09634eb78b8afe1743911bac191",
+      "bytes": 2488408,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/library/460-cs10-spec-sheet.pdf",
+      "productIds": [
+        "spk-ad-cs10"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/cs-series/cs10/460-cs10-spec-sheet/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7fceb72c2bd5efa041cfde8d998528836472a59ae92bf1a5b5cf54478cec84d5",
+      "bytes": 452359,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/library/461-cs10n-spec-sheet.pdf",
+      "productIds": [
+        "spk-ad-cs10n"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs10n",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/cs-series/cs10n/461-cs10n-spec-sheet/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "976ce349d03fd2041327f418e7b90a1b90c70e97600a653799fe8652d77adc8c",
+      "bytes": 463810,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/library/462-cs10p-spec-sheet.pdf",
+      "productIds": [
+        "spk-ad-vgx",
+        "spk-ad-vgt",
+        "spk-ad-vgd",
+        "spk-ad-vgo",
+        "spk-ad-vgs",
+        "spk-ad-cs10",
+        "spk-ad-cs10n",
+        "spk-ad-cs10p",
+        "spk-ad-cs7",
+        "spk-ad-cs7p",
+        "spk-ad-cs118",
+        "spk-ad-cs119",
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212",
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118",
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p",
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://legacy.adamson.ai/support/downloads-directory",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9d0d47ee3fe23125d14e882dda6209bcfbd7285460aac6d67022ef669c91654a",
+      "bytes": 465346,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/library/825-adamson-ease-data-v17-5.zip",
+      "productIds": [
+        "spk-ad-vgx",
+        "spk-ad-vgt",
+        "spk-ad-vgd",
+        "spk-ad-vgo",
+        "spk-ad-vgs",
+        "spk-ad-cs10",
+        "spk-ad-cs10n",
+        "spk-ad-cs10p",
+        "spk-ad-cs7",
+        "spk-ad-cs7p",
+        "spk-ad-cs118",
+        "spk-ad-cs119",
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212",
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118",
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p",
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://legacy.adamson.ai/support/downloads-directory",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory",
+      "retrievedAt": "2026-08-18",
+      "sha256": "6ec93ed0ce61c77dc832cbb42b0bc46a95ec790f554310af15daa50f6f553ae5",
+      "bytes": 111203267,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/library/826-adamson-ease-data-v17-6.zip",
+      "productIds": [
+        "spk-ad-vgx",
+        "spk-ad-vgt",
+        "spk-ad-vgd",
+        "spk-ad-vgo",
+        "spk-ad-vgs",
+        "spk-ad-cs10",
+        "spk-ad-cs10n",
+        "spk-ad-cs10p",
+        "spk-ad-cs7",
+        "spk-ad-cs7p",
+        "spk-ad-cs118",
+        "spk-ad-cs119",
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212",
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118",
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p",
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://legacy.adamson.ai/support/downloads-directory",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory",
+      "retrievedAt": "2026-08-18",
+      "sha256": "6ec93ed0ce61c77dc832cbb42b0bc46a95ec790f554310af15daa50f6f553ae5",
+      "bytes": 111203267,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/library/929-adamson-cs10-user-manual.pdf",
+      "productIds": [
+        "spk-ad-cs10"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/cs-series/cs10/929-adamson-cs10-user-manual/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "20d7947411f5170321c2799b10a336553e66d38c2ab5167eea6e8543c7d73d14",
+      "bytes": 3395742,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/library/930-adamson-cs10n-user-manual.pdf",
+      "productIds": [
+        "spk-ad-vgx",
+        "spk-ad-vgt",
+        "spk-ad-vgd",
+        "spk-ad-vgo",
+        "spk-ad-vgs",
+        "spk-ad-cs10",
+        "spk-ad-cs10n",
+        "spk-ad-cs10p",
+        "spk-ad-cs7",
+        "spk-ad-cs7p",
+        "spk-ad-cs118",
+        "spk-ad-cs119",
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212",
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118",
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p",
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "manual",
+      "sourcePage": "https://legacy.adamson.ai/support/downloads-directory",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory",
+      "retrievedAt": "2026-08-18",
+      "sha256": "55094732e2d5c89c7674af05050120532cdda5cb8bf7933c4f98e5867b55b7dd",
+      "bytes": 3197486,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/library/972-architect-specifications-cs10n.docx",
+      "productIds": [
+        "spk-ad-vgx",
+        "spk-ad-vgt",
+        "spk-ad-vgd",
+        "spk-ad-vgo",
+        "spk-ad-vgs",
+        "spk-ad-cs10",
+        "spk-ad-cs10n",
+        "spk-ad-cs10p",
+        "spk-ad-cs7",
+        "spk-ad-cs7p",
+        "spk-ad-cs118",
+        "spk-ad-cs119",
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212",
+        "spk-ad-is10",
+        "spk-ad-is10n",
+        "spk-ad-is10p",
+        "spk-ad-is7",
+        "spk-ad-is7p",
+        "spk-ad-is7px",
+        "spk-ad-is7c",
+        "spk-ad-is5c",
+        "spk-ad-is219",
+        "spk-ad-is119",
+        "spk-ad-is213",
+        "spk-ad-is118",
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p",
+        "spk-ad-e15",
+        "spk-ad-e12",
+        "spk-ad-e219",
+        "spk-ad-e119"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://legacy.adamson.ai/support/downloads-directory",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b2cb233b870eb8bfd7cda0d9d31fb9fac1088b00a9d9ebc2ee481ab153b65778",
+      "bytes": 2484218,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/129-adamson-preset-library-xta-v40-29db-5.zip",
+      "productIds": [
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/mg10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/mg10/129-adamson-preset-library-xta-v40-29db-5/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "bc0228b6ab0c17f93136bc73b02b94c1904c8256991e4a57f4af9bf80bbb2370",
+      "bytes": 1634348,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/130-adamson-preset-library-xta-v40-32db-5.zip",
+      "productIds": [
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/mg10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/mg10/130-adamson-preset-library-xta-v40-32db-5/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "49799a0686dde1833f7da333585d6b945f4689053373e88e437dedffae757214",
+      "bytes": 1634061,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/131-adamson-preset-library-xta-v40-29db-6.zip",
+      "productIds": [
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/mg10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/mg10/131-adamson-preset-library-xta-v40-29db-6/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "bc0228b6ab0c17f93136bc73b02b94c1904c8256991e4a57f4af9bf80bbb2370",
+      "bytes": 1634348,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/132-adamson-preset-library-xta-v40-32db-6.zip",
+      "productIds": [
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/mg10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/mg10/132-adamson-preset-library-xta-v40-32db-6/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "49799a0686dde1833f7da333585d6b945f4689053373e88e437dedffae757214",
+      "bytes": 1634061,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/133-adamson-preset-library-xta-v40-29db-7.zip",
+      "productIds": [
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/mg10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/mg10/133-adamson-preset-library-xta-v40-29db-7/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "bc0228b6ab0c17f93136bc73b02b94c1904c8256991e4a57f4af9bf80bbb2370",
+      "bytes": 1634348,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/134-adamson-preset-library-xta-v40-32db-7.zip",
+      "productIds": [
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/mg10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/mg10/134-adamson-preset-library-xta-v40-32db-7/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "49799a0686dde1833f7da333585d6b945f4689053373e88e437dedffae757214",
+      "bytes": 1634061,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/29-m12-active-pin-configuration.pdf",
+      "productIds": [
+        "spk-ad-m12"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m12",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m12/29-m12-active-pin-configuration/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c111865706865098941da4a8eb95a62ad45c4c33304bcf2f4229a7de88ccab69",
+      "bytes": 4175577,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/30-m12-passive-pin-configuration.pdf",
+      "productIds": [
+        "spk-ad-m12"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m12",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m12/30-m12-passive-pin-configuration/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "2de093319283f6bae257a83194ea38f704f2e1488211404b7668cf9286a2bd1d",
+      "bytes": 4242458,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/31-m15-active-pin-configuration.pdf",
+      "productIds": [
+        "spk-ad-m15"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m15/31-m15-active-pin-configuration/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "1c72c5d81b61737a3448d38ad9d301b4b6d5546f9bb57f2abd80bc7d9c420fd4",
+      "bytes": 4180481,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/32-m15-passive-pin-configuration.pdf",
+      "productIds": [
+        "spk-ad-m15"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m15/32-m15-passive-pin-configuration/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "ddd706e3ce1db19598e372c56ef76cb7c5d152b972538bc83c0c9fb4d574c6a2",
+      "bytes": 4245582,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/465-m12-spec-sheet.pdf",
+      "productIds": [
+        "spk-ad-m12"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m12",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m12/465-m12-spec-sheet/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "aae9f9016ab8e7b955613ece14fc63db6875fe25fb34080dd6e0e36477134032",
+      "bytes": 170264,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/466-m15-spec-sheet.pdf",
+      "productIds": [
+        "spk-ad-m15"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m15/466-m15-spec-sheet/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c20fb28dc91a395eade190625051797a3c4d3a783e84fd6f66857eab2cc66c3e",
+      "bytes": 567396,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/479-3d-cad-drawings.zip",
+      "productIds": [
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/mg10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/mg10/479-3d-cad-drawings/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "34af6d00f151312cbbbe82b18a0db8aabf755f88026997df0c838f68f172f35a",
+      "bytes": 1053930,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/48-m12-pib-pack.zip",
+      "productIds": [
+        "spk-ad-m12"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m12",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m12/48-m12-pib-pack/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "ce9110450332193bad64095fba8794d390ede48d8137b07c6d832a21f853fff4",
+      "bytes": 493002,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/480-3d-cad-drawings-1.zip",
+      "productIds": [
+        "spk-ad-mg10",
+        "spk-ad-m10",
+        "spk-ad-m12",
+        "spk-ad-m15",
+        "spk-ad-m212"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/mg10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/mg10/480-3d-cad-drawings-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "34af6d00f151312cbbbe82b18a0db8aabf755f88026997df0c838f68f172f35a",
+      "bytes": 1053930,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/483-m15-user-manual.pdf",
+      "productIds": [
+        "spk-ad-m15"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m15/483-m15-user-manual/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "047daf6ced41b2b19425b7e53df89c6f4251c83bf1fff9ad85d39f13ab33f10e",
+      "bytes": 5670735,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/49-m15-pib-pack.zip",
+      "productIds": [
+        "spk-ad-m15"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m15/49-m15-pib-pack/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "4c08cecda89174532d7dba33fc7d64f9cadeb0dabcfd56651887b26ecc8c7919",
+      "bytes": 669562,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/57-m12-ap-pib-en-1-3.pdf",
+      "productIds": [
+        "spk-ad-m12"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m12",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m12/57-m12-ap-pib-en-1-3/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "95eb553798dc28301db8e5187c24de75f6114f00a57e12c8bd7388abe0e237e7",
+      "bytes": 335921,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/58-m15-a-pib-en-1-3.pdf",
+      "productIds": [
+        "spk-ad-m15"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m15/58-m15-a-pib-en-1-3/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c2b717ad4f68ecf432bbf1e1a5052685b050d6e471aeda4bab5d0fc90fb88164",
+      "bytes": 304570,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/59-m15-ap-pib-en-1-3.pdf",
+      "productIds": [
+        "spk-ad-m15"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m15/59-m15-ap-pib-en-1-3/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "61656e97843a7414ed3575cdab173c158c336b8676d45e452bd176d2fbad1909",
+      "bytes": 305031,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/60-m15-m-pib-en-1-3.pdf",
+      "productIds": [
+        "spk-ad-m15"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m15/60-m15-m-pib-en-1-3/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "547b2717582947a1778d7abfabb5daf53b46471a5ee8484bdb6c8504d6d12472",
+      "bytes": 331341,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/68-m12-a-pib-en-1-3.pdf",
+      "productIds": [
+        "spk-ad-m12"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m12",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m12/68-m12-a-pib-en-1-3/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "fbc561251178ee5da51a95535716bd556bb6128db0694083210f11e758bf1cff",
+      "bytes": 335741,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/952-m10-spec-sheet.pdf",
+      "productIds": [
+        "spk-ad-m10"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m10/952-m10-spec-sheet/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9132363b485ca313107237bb7aa9a48766b128a961ecd11499d1eba7b6686558",
+      "bytes": 530936,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/992-architect-specifications-m10.docx",
+      "productIds": [
+        "spk-ad-m10"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m10/992-architect-specifications-m10/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a2258f1ba67e4204184816c27a95910f2ddba197fce62a97089f24d068f390bd",
+      "bytes": 2482986,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/993-architect-specifications-m12.docx",
+      "productIds": [
+        "spk-ad-m12"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m12",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m12/993-architect-specifications-m12/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "17f6906f5b8e924433f824e86b8aba227c1e3018b04ed2ed1d54c897ad62689e",
+      "bytes": 2483156,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/m-series/994-architect-specifications-m15.docx",
+      "productIds": [
+        "spk-ad-m15"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m15",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/m-series/m15/994-architect-specifications-m15/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "46f0b61ecfbbde287c7000fbd2a8542b5c74d9ca03e77da04cbd62f3dffa9ece",
+      "bytes": 2486785,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/1000-architect-specifications-s10p.docx",
+      "productIds": [
+        "spk-ad-s10p"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10p",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10p/1000-architect-specifications-s10p/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e9bcee2565f27c71588814d056313b7a0e1ce72cf954f60c96be235087f80d30",
+      "bytes": 2487657,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/1002-architect-specifications-s119.docx",
+      "productIds": [
+        "spk-ad-s119"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s119",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s119/1002-architect-specifications-s119/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d661d8e622a2648aaffac1f09287bc559a2dcfd7fedbc771f9463e8cc3333bfa",
+      "bytes": 2488831,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/179-s-series-user-manual.pdf",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/179-s-series-user-manual/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "30dc89b8abeac63786f855a89f9eec0c4a16ab2f71722185982411a750932d96",
+      "bytes": 5547892,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/18-s-series-configurations.pdf",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/18-s-series-configurations/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "eb05215eae7477b9af30e6ba359a4a48099341d56e42d6cbd557f0dd085ff420",
+      "bytes": 8200102,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/184-s-series-user-manual-1.pdf",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/184-s-series-user-manual-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "30dc89b8abeac63786f855a89f9eec0c4a16ab2f71722185982411a750932d96",
+      "bytes": 5547892,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/19-s-series-configurations-brochure.pdf",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/19-s-series-configurations-brochure/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "eb05215eae7477b9af30e6ba359a4a48099341d56e42d6cbd557f0dd085ff420",
+      "bytes": 8200102,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/196-s-series-3d-cad.zip",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/196-s-series-3d-cad/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "be9a7ed85c2dd332d06863d4952746bbdc31bb8b61920cb1cbe1f8b57d6fcdfb",
+      "bytes": 5965529,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/197-s-series-3d-cad-1.zip",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/197-s-series-3d-cad-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "be9a7ed85c2dd332d06863d4952746bbdc31bb8b61920cb1cbe1f8b57d6fcdfb",
+      "bytes": 5965529,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/228-s7-technicaldata.pdf",
+      "productIds": [
+        "spk-ad-s7"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s7",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s7/228-s7-technicaldata/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "655681d4bc5a55c641bd4bae47e77f595182f2f9e2908d461bd42ba20180b58f",
+      "bytes": 426330,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/229-s10n-technical-data.pdf",
+      "productIds": [
+        "spk-ad-s10n"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10n",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10n/229-s10n-technical-data/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "dfb69a17315753e0823415a14a456706d606de590995f11ae5bf65202fadaef6",
+      "bytes": 433476,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/230-s10p-technicaldata.pdf",
+      "productIds": [
+        "spk-ad-s10p"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10p",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10p/230-s10p-technicaldata/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "1cc45b1c6ad873c1fc742d3b176b3a4166da11f01582708a370c0067f3acce7e",
+      "bytes": 451749,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/231-s118-technicaldata.pdf",
+      "productIds": [
+        "spk-ad-s118"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s118",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s118/231-s118-technicaldata/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "dfeb54abc220172fe1faefab6eb14c933a6a1a234991d00da782bcb07cd96543",
+      "bytes": 581512,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/232-s7p-technicaldata.pdf",
+      "productIds": [
+        "spk-ad-s7p"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s7p",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s7p/232-s7p-technicaldata/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d354bf6b544bbd21b43a145fabbfa138f4b1b5a80bc4cea2e533ba765f9326cc",
+      "bytes": 416575,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/284-s10-technical-data-1.pdf",
+      "productIds": [
+        "spk-ad-s10"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/284-s10-technical-data-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "0e9693ff8b8571bcc795729ae894a2e9f03e07ed1a6782bf2b9777f1e3fd4a71",
+      "bytes": 443664,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/292-s119-spec-sheet.pdf",
+      "productIds": [
+        "spk-ad-s119"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s119",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s119/292-s119-spec-sheet/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "2c3b091a667103eecbbdc47dbf50548a848cfd371cf2e2ad540720803963a64c",
+      "bytes": 516899,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/306-s-series-configurations-1.pdf",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/306-s-series-configurations-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "eb05215eae7477b9af30e6ba359a4a48099341d56e42d6cbd557f0dd085ff420",
+      "bytes": 8200102,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/308-s-series-3d-cad-2.zip",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/308-s-series-3d-cad-2/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "be9a7ed85c2dd332d06863d4952746bbdc31bb8b61920cb1cbe1f8b57d6fcdfb",
+      "bytes": 5965529,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/310-s-series-configurations-1-1.pdf",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/310-s-series-configurations-1-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "eb05215eae7477b9af30e6ba359a4a48099341d56e42d6cbd557f0dd085ff420",
+      "bytes": 8200102,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/311-s-series-3d-cad-2-1.zip",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/311-s-series-3d-cad-2-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "be9a7ed85c2dd332d06863d4952746bbdc31bb8b61920cb1cbe1f8b57d6fcdfb",
+      "bytes": 5965529,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/312-s10-pin-configuration-1.pdf",
+      "productIds": [
+        "spk-ad-s10"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/312-s10-pin-configuration-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "96f7e1aec8e39b82a6f30ec480f12a258802d5efe54de7faf48fadd818ab89eb",
+      "bytes": 2032435,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/313-s-series-user-manual-3.pdf",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/313-s-series-user-manual-3/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "30dc89b8abeac63786f855a89f9eec0c4a16ab2f71722185982411a750932d96",
+      "bytes": 5547892,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/314-s-series-configurations-2.pdf",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/314-s-series-configurations-2/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "eb05215eae7477b9af30e6ba359a4a48099341d56e42d6cbd557f0dd085ff420",
+      "bytes": 8200102,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/315-s-series-3d-cad-3.zip",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/315-s-series-3d-cad-3/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "be9a7ed85c2dd332d06863d4952746bbdc31bb8b61920cb1cbe1f8b57d6fcdfb",
+      "bytes": 5965529,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/320-s-series-configurations-2-2.pdf",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/320-s-series-configurations-2-2/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "eb05215eae7477b9af30e6ba359a4a48099341d56e42d6cbd557f0dd085ff420",
+      "bytes": 8200102,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/321-s-series-3d-cad-3-2.zip",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/321-s-series-3d-cad-3-2/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "be9a7ed85c2dd332d06863d4952746bbdc31bb8b61920cb1cbe1f8b57d6fcdfb",
+      "bytes": 5965529,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/323-s-series-configurations-2-2-1.pdf",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/323-s-series-configurations-2-2-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "eb05215eae7477b9af30e6ba359a4a48099341d56e42d6cbd557f0dd085ff420",
+      "bytes": 8200102,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/324-s-series-3d-cad-3-2-1.zip",
+      "productIds": [
+        "spk-ad-s10",
+        "spk-ad-s10n",
+        "spk-ad-s10p",
+        "spk-ad-s118",
+        "spk-ad-s119",
+        "spk-ad-s7",
+        "spk-ad-s7p"
+      ],
+      "role": "media-archive",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/324-s-series-3d-cad-3-2-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "be9a7ed85c2dd332d06863d4952746bbdc31bb8b61920cb1cbe1f8b57d6fcdfb",
+      "bytes": 5965529,
+      "mimeType": "application/zip"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/43-s10-pin-configuration.pdf",
+      "productIds": [
+        "spk-ad-s10"
+      ],
+      "role": "system-guide",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/43-s10-pin-configuration/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "96f7e1aec8e39b82a6f30ec480f12a258802d5efe54de7faf48fadd818ab89eb",
+      "bytes": 2032435,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/729-s10-user-manual.pdf",
+      "productIds": [
+        "spk-ad-s10"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/729-s10-user-manual/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "2b9b06ca68a9c617e75c22be1683801ec53d62b35ba99a3ecb8affac87cf2ded",
+      "bytes": 7605840,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/730-s10n-user-manual.pdf",
+      "productIds": [
+        "spk-ad-s10n"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10n",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10n/730-s10n-user-manual/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a5bfa78ce4c18f17d391d37fc4c74c29c6c843c902bd7f38697e094715e811d7",
+      "bytes": 7147554,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/731-s10p-user-manual.pdf",
+      "productIds": [
+        "spk-ad-s10p"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10p",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10p/731-s10p-user-manual/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "230ccb4a2339c46ff9bbe7cfd9c99adb90a3c8a8083c82ff696e141206d8907e",
+      "bytes": 4926625,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/732-s118-user-manual.pdf",
+      "productIds": [
+        "spk-ad-s118"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s118",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s118/732-s118-user-manual/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "589d44c1e379c9d168acbbc941ed9e82565d686537bb0882aca71dd43a51a3f4",
+      "bytes": 4096980,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/733-s119-user-manual.pdf",
+      "productIds": [
+        "spk-ad-s119"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s119",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s119/733-s119-user-manual/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "6243fdd6fde5fd47c33c325caa2025992b6488419213d14d785680c06b59939b",
+      "bytes": 3166120,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/734-s7-user-manual-1.pdf",
+      "productIds": [
+        "spk-ad-s7"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s7",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s7/734-s7-user-manual-1/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "527a5b55d6f07175fd215aaebccc4754b7e8351f3430fc49c95330108894f9cc",
+      "bytes": 6215478,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/735-s7p-user-manual.pdf",
+      "productIds": [
+        "spk-ad-s7p"
+      ],
+      "role": "manual",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s7p",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s7p/735-s7p-user-manual/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "4dde8e826ed9fdb517a901da5f32595d83de8cad9e709d635c173242e3af9132",
+      "bytes": 5177347,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/996-architect-specifications-s7.docx",
+      "productIds": [
+        "spk-ad-s7"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s7",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s7/996-architect-specifications-s7/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c1794f6c9f57f8a4e1443848e9504f4f8e12b8a27b0c77ff249a1289d5e12cf6",
+      "bytes": 2486221,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/997-architect-specifications-s7p.docx",
+      "productIds": [
+        "spk-ad-s7p"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s7p",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s7p/997-architect-specifications-s7p/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "fdf64d721bb369e249e05412451651e2570d6428eb38ac4d40fff92f23e8e9b0",
+      "bytes": 2484436,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/998-architect-specifications-s10.docx",
+      "productIds": [
+        "spk-ad-s10"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10/998-architect-specifications-s10/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "48d3d2429b10d1aaab099f536ceb7a75fd558ba83aa599a9dc27970603a6b66e",
+      "bytes": 2487617,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/s-series/999-architect-specifications-s10n.docx",
+      "productIds": [
+        "spk-ad-s10n"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10n",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/s-series/s10n/999-architect-specifications-s10n/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "8e5f90b07d33432e56bb14f10f8dd3b6932aaf2ae8a715ef9d336818770e1120",
+      "bytes": 2484004,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/vergence-group/1003-architect-specifications-vgt.docx",
+      "productIds": [
+        "spk-ad-vgt"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgt",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/vergence-group/vgt/1003-architect-specifications-vgt/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "6a6497a16b7cab6115be753cea2cf22f21a255d9794aee84f93684cd24386846",
+      "bytes": 2485302,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/vergence-group/1004-architect-specifications-vgs.docx",
+      "productIds": [
+        "spk-ad-vgs"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgs",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/vergence-group/vgs/1004-architect-specifications-vgs/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7c8ba66fe98e7464fb013304616ac004ef7991381ed965e224d6aa72a6df673f",
+      "bytes": 2486467,
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+      "path": "raw-data/official-docs/ad/vergence-group/1006-vgd-technical-specifications.pdf",
+      "productIds": [
+        "spk-ad-vgd"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgd",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/vergence-group/vgd/1006-vgd-technical-specifications/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "97ba73683706088125da2efc3d62d392b74821e65d65fc8473043565a28530a3",
+      "bytes": 851356,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/vergence-group/1007-vgo-technical-specifications.pdf",
+      "productIds": [
+        "spk-ad-vgo"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgo",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/vergence-group/vgo/1007-vgo-technical-specifications/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "3bc84afb2692bf340ff900a416a3e6b3ebc37a1c6bcdf428cf9d707d01c21ea1",
+      "bytes": 694569,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/vergence-group/1008-vgx-technical-specifications.pdf",
+      "productIds": [
+        "spk-ad-vgx"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgx",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/vergence-group/vgx/1008-vgx-technical-specifications/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "fef656aa079af410cded9cf14d4373e796d4e6f314014818a5d8aa09744acb74",
+      "bytes": 3059061,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/vergence-group/917-vgt-tech-specs.pdf",
+      "productIds": [
+        "spk-ad-vgt"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgt",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/vergence-group/vgt/917-vgt-tech-specs/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "de44d13eb041c55594c44f76fc2eb8161cd4469d3dc30a87576fab47fc76c6a9",
+      "bytes": 947386,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/vergence-group/918-vgt-brochure.pdf",
+      "productIds": [
+        "spk-ad-vgt"
+      ],
+      "role": "catalogue",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgt",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/vergence-group/vgt/918-vgt-brochure/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d8d3fed9ca997eb8caaf59e8360ee1474ffb5dcad58bc77e73037915b02ba20d",
+      "bytes": 5860983,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/official-docs/ad/vergence-group/947-vgs-tech-specs.pdf",
+      "productIds": [
+        "spk-ad-vgs"
+      ],
+      "role": "datasheet",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgs",
+      "sourceAsset": "https://legacy.adamson.ai/support/downloads-directory/vergence-group/vgs/947-vgs-tech-specs/file",
+      "retrievedAt": "2026-08-18",
+      "sha256": "5d53d08a9e8e723852aeafa4588d514d2bb9bbad6a35123625c14ab55cdd80ea",
+      "bytes": 430376,
+      "mimeType": "application/pdf"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/CS10-1.webp",
+      "productIds": [
+        "spk-ad-cs10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs10",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/CS10-1.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "801d1d68b60af52413c9d62fd1d105319c450f36d9b6a0be7a22d4e703084c1e",
+      "bytes": 186548,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/VGt.webp",
+      "productIds": [
+        "spk-ad-vgt"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgt",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/VGt.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b34e86988b6e3609e87e539450824427503440b82120ee8fb586a5cd080b036c",
+      "bytes": 106386,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/cs-series/cs10-official.webp",
+      "productIds": [
+        "spk-ad-cs10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs10",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/CS10-1.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "801d1d68b60af52413c9d62fd1d105319c450f36d9b6a0be7a22d4e703084c1e",
+      "bytes": 186548,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/cs-series/cs10n-official.webp",
+      "productIds": [
+        "spk-ad-cs10n"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs10n",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/CS10-1.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "801d1d68b60af52413c9d62fd1d105319c450f36d9b6a0be7a22d4e703084c1e",
+      "bytes": 186548,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/cs-series/cs10p-official.webp",
+      "productIds": [
+        "spk-ad-cs10p"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs10p",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/CS10P.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "84638c5dcfeeb380fa4ba393293ceb621189b3c18464433f37c03e8dd7fe85aa",
+      "bytes": 163590,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/cs-series/cs118-official.webp",
+      "productIds": [
+        "spk-ad-cs118"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs118",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/CS118.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7e08092015f5056d10ca6d4c3f04b09265bc3fc4c4cfea2a59ad917318ce72f8",
+      "bytes": 148792,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/cs-series/cs119-official.webp",
+      "productIds": [
+        "spk-ad-cs119"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs119",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/CS119.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "34e3030012b7e3927cecea0ba9aad37d3475a3942f0f10352c3fb3dd28529dcb",
+      "bytes": 197758,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/cs-series/cs7-official.webp",
+      "productIds": [
+        "spk-ad-cs7"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs7",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/CS7.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "1e6110dcc814c4d4912ab687ba068142a2df8d2b11bbc8636d2c67b8aba50c94",
+      "bytes": 117974,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/cs-series/cs7p-official.webp",
+      "productIds": [
+        "spk-ad-cs7p"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/cs-series/cs7p",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/CS7P.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "38d9755300f4380bbf54baa881e6e76d01a8139100565b5624c9ed24c0dcc78e",
+      "bytes": 106758,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/e-series/e119-official.webp",
+      "productIds": [
+        "spk-ad-e119"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e119",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/E119.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e8e4059bf548073fc095b5ab3bfb4ad08a5ae100e2ce712a26b04dbf88e3c07e",
+      "bytes": 91952,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/e-series/e12-official.webp",
+      "productIds": [
+        "spk-ad-e12"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e12",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/E12.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "c6176be73a64e02d65121fcf38147fb6c05dbaa2afb6c35a2cdcced6254aa3f9",
+      "bytes": 86102,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/e-series/e15-official.webp",
+      "productIds": [
+        "spk-ad-e15"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e15",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/E15.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "1bd82eb193dd2e3bc48a5971af1bf811d63610f60c64ccebcb60f78342edb91e",
+      "bytes": 107472,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/e-series/e219-official.webp",
+      "productIds": [
+        "spk-ad-e219"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/e-series/e219",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/E219.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "da44967524dcf916d3907666aa0ec7b8367ddb880a81cd1cb8a939ea6638db1b",
+      "bytes": 184632,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is10-official.webp",
+      "productIds": [
+        "spk-ad-is10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS10.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "360e7e6762434ff96abe76418e1b1db55fdfc64a1adeb09245484074403cd39a",
+      "bytes": 211816,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is10n-official.webp",
+      "productIds": [
+        "spk-ad-is10n"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10n",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS10.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "360e7e6762434ff96abe76418e1b1db55fdfc64a1adeb09245484074403cd39a",
+      "bytes": 211816,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is10p-official.webp",
+      "productIds": [
+        "spk-ad-is10p"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is10p",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS10P.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9ff5258a0b56d4ff56f6cba2f16587ff6717d0e8557033887db258b48b14cfb7",
+      "bytes": 90276,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is118-official.webp",
+      "productIds": [
+        "spk-ad-is118"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is118",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS118.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "13ff2334b5bcc26ade340f659b753bdeec3296509308bcdf3fa4b72cb43ad517",
+      "bytes": 70822,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is119-official.webp",
+      "productIds": [
+        "spk-ad-is119"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is119",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS119.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "af7ef3ccd24774ae8bba781005a38e3571d60f3709a48d58dfdc712503fa7cde",
+      "bytes": 79736,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is213-official.webp",
+      "productIds": [
+        "spk-ad-is213"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is213",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS213.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a5e33d018e3dfbcf7432ebdcf7d12e40efc47c42ce037164c119995c435713c8",
+      "bytes": 68632,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is219-official.webp",
+      "productIds": [
+        "spk-ad-is219"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is219",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS219.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "47fcbf7fdb4bcc54220ff39d6addc69acda5a379d33384c3ac8e4f846327874a",
+      "bytes": 123984,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is5c-official.webp",
+      "productIds": [
+        "spk-ad-is5c"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is5c",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS5C.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b8b392ad60794fafdf84d64c73156bd638782ce3b18446c645a714c2e782e344",
+      "bytes": 35548,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is7-official.webp",
+      "productIds": [
+        "spk-ad-is7"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is7",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS7.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "fc9302f5b4c2a09fed192ee887c3426d0919c23d6dc001b88085b72986d0554c",
+      "bytes": 105482,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is7c-official.webp",
+      "productIds": [
+        "spk-ad-is7c"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is7c",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS7C.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d1c2dacd617e21c606f9ce803185966e3f2333666d1f71c3bafdc4ac3a5ee8c2",
+      "bytes": 45098,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is7p-official.webp",
+      "productIds": [
+        "spk-ad-is7p"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is7p",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS7P-1.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "2d627649950f28dc285100ebf2bd5ef5be2ca6510d694aee05c8a5c8298a8c05",
+      "bytes": 62630,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/is-series/is7px-official.webp",
+      "productIds": [
+        "spk-ad-is7px"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/is-series/is7px",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/IS7P-1.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "2d627649950f28dc285100ebf2bd5ef5be2ca6510d694aee05c8a5c8298a8c05",
+      "bytes": 62630,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/m-series/m10-official.webp",
+      "productIds": [
+        "spk-ad-m10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m10",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/MG10.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e78e8e4ffe0091351ab75dabe354edbd63aceb1635262bd3d7d6cc4779be14ac",
+      "bytes": 62810,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/m-series/m12-official.webp",
+      "productIds": [
+        "spk-ad-m12"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m12",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/M12.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "1bd2027a9f833eef594b06ff08171c64f64fde190684c255cc5f15bd33a49c97",
+      "bytes": 75932,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/m-series/m15-official.webp",
+      "productIds": [
+        "spk-ad-m15"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m15",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/M15.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "7b02ec203f71c6ba138010d7b19db94fd49fb352e5d50a3c53cb95eedbcf62e3",
+      "bytes": 91744,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/m-series/m212-official.webp",
+      "productIds": [
+        "spk-ad-m212"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/m212",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/M212.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "52b39260e8addc1e7a925ea3965f756d3f06d7c21f029b78c660bf29e57ec4bd",
+      "bytes": 72942,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/m-series/mg10-official.webp",
+      "productIds": [
+        "spk-ad-mg10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/m-series/mg10",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/MG10-1.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e78e8e4ffe0091351ab75dabe354edbd63aceb1635262bd3d7d6cc4779be14ac",
+      "bytes": 62810,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/s-series/s10-official.webp",
+      "productIds": [
+        "spk-ad-s10"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/S10-1.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a36c7b5dad1416d8d5b760f2a9be7ebb960be52f04ec040307e05dbc4459411e",
+      "bytes": 167520,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/s-series/s10n-official.webp",
+      "productIds": [
+        "spk-ad-s10n"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10n",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/S10-1.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a36c7b5dad1416d8d5b760f2a9be7ebb960be52f04ec040307e05dbc4459411e",
+      "bytes": 167520,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/s-series/s10p-official.webp",
+      "productIds": [
+        "spk-ad-s10p"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s10p",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/S10P.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "04327d5a04c115237a3ecc589a477ee7fe473fecb1808761b417fab33d34975f",
+      "bytes": 92878,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/s-series/s118-official.webp",
+      "productIds": [
+        "spk-ad-s118"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s118",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/S118.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "ba8a1e9c7fa4b27a6a67016038fb212119f43a36730138aa1df70c0b340f6b4b",
+      "bytes": 72914,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/s-series/s119-official.webp",
+      "productIds": [
+        "spk-ad-s119"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s119",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/S119.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d2d5a1ac112a63395f52abce5388b025e8e67a166167d63d01f152ffdd755658",
+      "bytes": 100330,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/s-series/s7-official.webp",
+      "productIds": [
+        "spk-ad-s7"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s7",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/S7.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b36ad8758d183f7af25b0a1b9a1b971a26f3703abc5e95f8f65a7706976d7b14",
+      "bytes": 111134,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/s-series/s7p-official.webp",
+      "productIds": [
+        "spk-ad-s7p"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/s-series/s7p",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/S7P.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "d0e1729be3e48c22c25ae969c5f9fb2dbbb0adbb4e8c9cefd945d201a38cb86b",
+      "bytes": 69356,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/vergence-group/vgd-official.webp",
+      "productIds": [
+        "spk-ad-vgd"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgd",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/VGd.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "a486a254ead4afd9a871fe6597cf4a48b36de671a4dac7408c0a3729985ce4e3",
+      "bytes": 218642,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/vergence-group/vgo-official.webp",
+      "productIds": [
+        "spk-ad-vgo"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgo",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/VGo.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "5d60c5460158b0e11bc6735b6b8b39c59a80cb68eb6841ff9853fdbf04f8e17f",
+      "bytes": 164046,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/vergence-group/vgs-official.webp",
+      "productIds": [
+        "spk-ad-vgs"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgs",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/VGs.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "70da55105daa4e1640811973aac36d167afa04e1228c57de6a6fa4751172e6cd",
+      "bytes": 103566,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/vergence-group/vgt-official.webp",
+      "productIds": [
+        "spk-ad-vgt"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgt",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/VGt.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "b34e86988b6e3609e87e539450824427503440b82120ee8fb586a5cd080b036c",
+      "bytes": 106386,
+      "mimeType": "image/webp"
+    },
+    {
+      "path": "raw-data/raw-assets/ad/speakers/vergence-group/vgx-official.webp",
+      "productIds": [
+        "spk-ad-vgx"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://adamson.ai/products/loudspeakers/vergence-group/vgx",
+      "sourceAsset": "https://adamson-media-storage-prod.tor1.cdn.digitaloceanspaces.com/media/VGx-1.webp",
+      "retrievedAt": "2026-08-18",
+      "sha256": "057f98c9f300d33b016bbd772467859982ebaf7ef500fbbb5bb065a156253696",
+      "bytes": 154298,
+      "mimeType": "image/webp"
+    }
+  ]
+}
+

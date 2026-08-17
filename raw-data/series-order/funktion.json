@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "funktion",
+  "sourcePage": "https://funktion-one.com/ranges/",
+  "retrievedAt": "2026-08-18",
+  "seriesOrder": [
+    "Vero",
+    "Vero VX",
+    "Evolution",
+    "Compact",
+    "Horn Loaded Bass",
+    "Bass Reflex",
+    "Dance Stack",
+    "Public Address",
+    "Monitor"
+  ],
+  "basis": "official-ranges-page",
+  "notes": "Public Address re-lists four Evolution skeletal products; those products retain one canonical identity under Evolution."
+}

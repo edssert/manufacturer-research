@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "spk-funktion-f5-2",
+  "manufacturerId": "funktion",
+  "name": "F5.2",
+  "slug": "f5-2",
+  "series": "Compact",
+  "lifecycle": "current",
+  "sourcePage": "https://funktion-one.com/product/f5.2/",
+  "rangePage": "https://funktion-one.com/ranges/compact-range",
+  "retrievedAt": "2026-08-18",
+  "raw": {
+    "pageTitle": "F5.2",
+    "technical": {},
+    "imageUrls": [
+      "https://images.prismic.io/funktion-one/1ea9d2aa-87d9-4f2b-aa6c-731207e88bab_F5.2+600x600.jpg"
+    ],
+    "downloads": []
+  },
+  "evidenceStatus": "pending",
+  "pendingReasons": [
+    "usable bandwidth unavailable",
+    "weight unavailable",
+    "dispersion unavailable",
+    "comparable maximum SPL not published on the official source"
+  ],
+  "commonCardStatus": "pending",
+  "pendingFields": [
+    "maxSpl",
+    "transducers",
+    "frequencyRange",
+    "weight",
+    "coverage"
+  ]
+}

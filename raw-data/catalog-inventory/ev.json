@@ -1,0 +1,3705 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "ev",
+  "scope": "loudspeakers",
+  "inclusion": "Current Electro-Voice professional loudspeaker product records exposed by the official products index with active, coming, or expiring lifecycle state. Microphones, amplifiers, software, accessories, carrying cases, covers, dollies, and hidden records are excluded. Regional/color SKUs sharing the same official product identity are grouped into one canonical model record.",
+  "sourcePages": [
+    "https://www.electrovoice.com/products",
+    "https://www.electrovoice.com/tools-resources/product-documents"
+  ],
+  "retrievedAt": "2026-08-18",
+  "products": [
+    {
+      "id": "spk-ev-everse12",
+      "name": "EVERSE12",
+      "series": "EVERSE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "everse12-12-2-way-battery-powered-speaker-v414",
+        "everse12-12-2-way-battery-powered-speaker-546",
+        "everse12-12-2-way-battery-powered-speaker-547",
+        "everse12-12-2-way-battery-powered-speaker-v410",
+        "everse12-12-2-way-battery-powered-speaker-541",
+        "everse12-12-2-way-battery-powered-speaker-540",
+        "everse12-12-2-way-battery-powered-speaker-542"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/everse/spk-ev-everse12.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.553",
+        "Z.01X.002.552"
+      ],
+      "ctns": [
+        "EVERSE12-W",
+        "EVERSE12-EU",
+        "EVERSE12-US"
+      ]
+    },
+    {
+      "id": "spk-ev-everse8-w",
+      "name": "EVERSE8-W",
+      "series": "EVERSE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "everse8-w-8-2-way-speaker-battery-white",
+        "everse8-w-8-2-way-speaker-battery-white-555",
+        "everse8-w-8-2-way-speaker-battery-white-556"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/everse/spk-ev-everse8-w.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.551"
+      ],
+      "ctns": [
+        "EVERSE8-W"
+      ]
+    },
+    {
+      "id": "spk-ev-everse-8",
+      "name": "EVERSE 8",
+      "series": "EVERSE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "everse-8",
+        "everse-8-549",
+        "everse-8-548",
+        "everse-8-550"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/everse/spk-ev-everse-8.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.550"
+      ],
+      "ctns": [
+        "EVERSE8-EU",
+        "EVERSE8-US"
+      ]
+    },
+    {
+      "id": "spk-ev-ekx-18sp",
+      "name": "EKX-18SP",
+      "series": "EKX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "ekx-18sp-powered-18-subwoofer",
+        "ekx-18sp-powered-18-subwoofer-399",
+        "ekx-18sp-powered-18-subwoofer-398",
+        "ekx-18sp-powered-18-subwoofer-397",
+        "ekx-18sp-powered-18-subwoofer-400"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/ekx/spk-ev-ekx-18sp.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.549"
+      ],
+      "ctns": [
+        "EKX-18SP-AP",
+        "EKX-18SP-EU",
+        "EKX-18SP-US"
+      ]
+    },
+    {
+      "id": "spk-ev-ekx-15sp",
+      "name": "EKX-15SP",
+      "series": "EKX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "ekx-15sp-powered-15-subwoofer",
+        "ekx-15sp-powered-15-subwoofer-394",
+        "ekx-15sp-powered-15-subwoofer-393",
+        "ekx-15sp-powered-15-subwoofer-392",
+        "ekx-15sp-powered-15-subwoofer-395"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/ekx/spk-ev-ekx-15sp.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.548"
+      ],
+      "ctns": [
+        "EKX-15SP-AP",
+        "EKX-15SP-EU",
+        "EKX-15SP-US"
+      ]
+    },
+    {
+      "id": "spk-ev-ekx-15p",
+      "name": "EKX-15P",
+      "series": "EKX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "ekx-15p-15-2-way-powered-speaker",
+        "ekx-15p-15-2-way-powered-speaker-389",
+        "ekx-15p-15-2-way-powered-speaker-388",
+        "ekx-15p-15-2-way-powered-speaker-387",
+        "ekx-15p-15-2-way-powered-speaker-390"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/ekx/spk-ev-ekx-15p.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.547"
+      ],
+      "ctns": [
+        "EKX-15P-AP",
+        "EKX-15P-EU",
+        "EKX-15P-US"
+      ]
+    },
+    {
+      "id": "spk-ev-ekx-12p",
+      "name": "EKX-12P",
+      "series": "EKX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "ekx-12p-12-2-way-powered-speaker",
+        "ekx-12p-12-2-way-powered-speaker-384",
+        "ekx-12p-12-2-way-powered-speaker-383",
+        "ekx-12p-12-2-way-powered-speaker-382",
+        "ekx-12p-12-2-way-powered-speaker-385"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/ekx/spk-ev-ekx-12p.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.546"
+      ],
+      "ctns": [
+        "EKX-12P-AP",
+        "EKX-12P-EU",
+        "EKX-12P-US"
+      ]
+    },
+    {
+      "id": "spk-ev-evc-1122-viwten54-12",
+      "name": "EVC-1122-VIWTEN54 12",
+      "series": "EVC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evc-1122-viwten54-12-speaker-vi-xfrm-white-en54-datasheet",
+        "evc-1122-viwten54-12-speaker-vi-xfrm-white-en54-datasheet-509",
+        "evc-1122-viwten54-12-speaker-vi-xfrm-white-en54-datasheet-510"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evc/spk-ev-evc-1122-viwten54-12.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.231"
+      ],
+      "ctns": [
+        "EVC-1122-VIWTEN54"
+      ]
+    },
+    {
+      "id": "spk-ev-evc-1181s",
+      "name": "EVC-1181S",
+      "series": "EVC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evc-1181s-18-subwoofer-v397",
+        "evc-1181s-18-subwoofer-525",
+        "evc-1181s-18-subwoofer-526",
+        "evc-1181s-18-subwoofer-v398",
+        "evc-1181s-18-subwoofer-527",
+        "evc-1181s-18-subwoofer-528",
+        "evc-1181s-18-subwoofer-v396",
+        "evc-1181s-18-subwoofer-524",
+        "evc-1181s-18-subwoofer-v395",
+        "evc-1181s-18-subwoofer-523"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "max SPL",
+        "frequency",
+        "weight"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evc/spk-ev-evc-1181s.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.230",
+        "Z.01X.002.229",
+        "F.01U.329.304",
+        "F.01U.329.302"
+      ],
+      "ctns": [
+        "EVC-1181S-PIW",
+        "EVC-1181S-W",
+        "EVC-1181S-PIB",
+        "EVC-1181S-B"
+      ]
+    },
+    {
+      "id": "spk-ev-evc-1152-95",
+      "name": "EVC-1152-95",
+      "series": "EVC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evc-1152-95-15-speaker-90x55-v393",
+        "evc-1152-95-15-speaker-90x55-519",
+        "evc-1152-95-15-speaker-90x55-520",
+        "evc-1152-95-15-speaker-90x55-v392",
+        "evc-1152-95-15-speaker-90x55-518"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evc/spk-ev-evc-1152-95.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.228",
+        "F.01U.329.297"
+      ],
+      "ctns": [
+        "EVC-1152-95PIW",
+        "EVC-1152-95PIB"
+      ]
+    },
+    {
+      "id": "spk-ev-evc-1152-64",
+      "name": "EVC-1152-64",
+      "series": "EVC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evc-1152-64-15-speaker-60x45-v394",
+        "evc-1152-64-15-speaker-60x45-521",
+        "evc-1152-64-15-speaker-60x45-522",
+        "evc-1152-64-15-speaker-60x45-v389",
+        "evc-1152-64-15-speaker-60x45-513",
+        "evc-1152-64-15-speaker-60x45-514",
+        "evc-1152-64-15-speaker-60x45-v390",
+        "evc-1152-64-15-speaker-60x45-515",
+        "evc-1152-64-15-speaker-60x45-516",
+        "evc-1152-64-15-speaker-60x45-v391",
+        "evc-1152-64-15-speaker-60x45-517",
+        "evc-1152-64-15-speaker-60x45-v388",
+        "evc-1152-64-15-speaker-60x45-512",
+        "evc-1152-64-15-speaker-60x45-v387",
+        "evc-1152-64-15-speaker-60x45-511"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evc/spk-ev-evc-1152-64.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.227",
+        "Z.01X.002.226",
+        "Z.01X.002.225",
+        "F.01U.329.295",
+        "F.01U.329.293",
+        "F.01U.329.291"
+      ],
+      "ctns": [
+        "EVC-1152-95W",
+        "EVC-1152-64PIW",
+        "EVC-1152-64W",
+        "EVC-1152-95B",
+        "EVC-1152-64PIB",
+        "EVC-1152-64B"
+      ]
+    },
+    {
+      "id": "spk-ev-evc-1122-64",
+      "name": "EVC-1122-64",
+      "series": "EVC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evc-1122-64-12-speaker-60x45-v385",
+        "evc-1122-64-12-speaker-60x45-507",
+        "evc-1122-64-12-speaker-60x45-508",
+        "evc-1122-64-12-speaker-60x45-v382",
+        "evc-1122-64-12-speaker-60x45-503",
+        "evc-1122-64-12-speaker-60x45-504",
+        "evc-1122-64-12-speaker-60x45-v383",
+        "evc-1122-64-12-speaker-60x45-505"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evc/spk-ev-evc-1122-64.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.224",
+        "Z.01X.002.222",
+        "F.01U.329.289"
+      ],
+      "ctns": [
+        "EVC-1122-VIW",
+        "EVC-1122-95W",
+        "EVC-1122-VIB"
+      ]
+    },
+    {
+      "id": "spk-ev-evc-1122-95",
+      "name": "EVC-1122-95",
+      "series": "EVC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evc-1122-95-12-speaker-90x55-v381",
+        "evc-1122-95-12-speaker-90x55-501",
+        "evc-1122-95-12-speaker-90x55-502"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evc/spk-ev-evc-1122-95.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.223"
+      ],
+      "ctns": [
+        "EVC-1122-95PIW"
+      ]
+    },
+    {
+      "id": "spk-ev-evc-1082-00",
+      "name": "EVC-1082-00",
+      "series": "EVC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evc-1082-00-8-speaker-100x100-v373",
+        "evc-1082-00-8-speaker-100x100-489",
+        "evc-1082-00-8-speaker-100x100-490",
+        "evc-1082-00-8-speaker-100x100-v374",
+        "evc-1082-00-8-speaker-100x100-491",
+        "evc-1082-00-8-speaker-100x100-492",
+        "evc-1082-00-8-speaker-100x100-v378",
+        "evc-1082-00-8-speaker-100x100-497",
+        "evc-1082-00-8-speaker-100x100-498",
+        "evc-1082-00-8-speaker-100x100-v372",
+        "evc-1082-00-8-speaker-100x100-488",
+        "evc-1082-00-8-speaker-100x100-v371",
+        "evc-1082-00-8-speaker-100x100-487",
+        "evc-1082-00-8-speaker-100x100-v375",
+        "evc-1082-00-8-speaker-100x100-493"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evc/spk-ev-evc-1082-00.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.219",
+        "Z.01X.002.218",
+        "Z.01X.002.216",
+        "F.01U.329.279",
+        "F.01U.329.277",
+        "F.01U.329.268"
+      ],
+      "ctns": [
+        "EVC-1082-00PIW",
+        "EVC-1082-00W",
+        "EVC-1082-96W",
+        "EVC-1082-00PIB",
+        "EVC-1082-00B",
+        "EVC-1082-96B"
+      ]
+    },
+    {
+      "id": "spk-ev-evc-1082-96",
+      "name": "EVC-1082-96",
+      "series": "EVC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evc-1082-96-8-speaker-90x60-v377",
+        "evc-1082-96-8-speaker-90x60-495",
+        "evc-1082-96-8-speaker-90x60-496",
+        "evc-1082-96-8-speaker-90x60-v376",
+        "evc-1082-96-8-speaker-90x60-494"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evc/spk-ev-evc-1082-96.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.217",
+        "F.01U.329.275"
+      ],
+      "ctns": [
+        "EVC-1082-96PIW",
+        "EVC-1082-96PIB"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-ec8-2",
+      "name": "EVID-EC8.2",
+      "series": "EVID ENTRY CEILING",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-ec82-ceiling-speaker-8-70-100v-white",
+        "evid-ec82-ceiling-speaker-8-70-100v-white-657",
+        "evid-ec82-ceiling-speaker-8-70-100v-white-656"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-entry-ceiling/spk-ev-evid-ec8-2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.058"
+      ],
+      "ctns": [
+        "EVID-EC8.2"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-ec6-2e",
+      "name": "EVID-EC6.2E",
+      "series": "EVID ENTRY CEILING",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-ec62e-ceiling-speaker-65-evac-white",
+        "evid-ec62e-ceiling-speaker-65-evac-white-655",
+        "evid-ec62e-ceiling-speaker-65-evac-white-654"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-entry-ceiling/spk-ev-evid-ec6-2e.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.057"
+      ],
+      "ctns": [
+        "EVID-EC6.2E"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-ec6-2",
+      "name": "EVID-EC6.2",
+      "series": "EVID ENTRY CEILING",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-ec62-ceiling-speaker-65-70-100v-white",
+        "evid-ec62-ceiling-speaker-65-70-100v-white-653",
+        "evid-ec62-ceiling-speaker-65-70-100v-white-652"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-entry-ceiling/spk-ev-evid-ec6-2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.056"
+      ],
+      "ctns": [
+        "EVID-EC6.2"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-ec4-2",
+      "name": "EVID-EC4.2",
+      "series": "EVID ENTRY CEILING",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-ec42-ceiling-speaker-4-70-100v-white",
+        "evid-ec42-ceiling-speaker-4-70-100v-white-651",
+        "evid-ec42-ceiling-speaker-4-70-100v-white-650"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-entry-ceiling/spk-ev-evid-ec4-2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.055"
+      ],
+      "ctns": [
+        "EVID-EC4.2"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-ec3-1",
+      "name": "EVID-EC3.1",
+      "series": "EVID ENTRY CEILING",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-ec31-ceiling-speaker-3-70-100v-white",
+        "evid-ec31-ceiling-speaker-3-70-100v-white-649",
+        "evid-ec31-ceiling-speaker-3-70-100v-white-648"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-entry-ceiling/spk-ev-evid-ec3-1.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.054"
+      ],
+      "ctns": [
+        "EVID-EC3.1"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-c8-1s-g2",
+      "name": "EVID-C8.1S-G2",
+      "series": "EVID CEILING G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-c81s-g2-ceiling-subwoofer-8-white",
+        "evid-c81s-g2-ceiling-subwoofer-8-white-643",
+        "evid-c81s-g2-ceiling-subwoofer-8-white-642"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-ceiling-g2/spk-ev-evid-c8-1s-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.053"
+      ],
+      "ctns": [
+        "EVID-C8.1S-G2"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-c8-2hc-g2",
+      "name": "EVID-C8.2HC-G2",
+      "series": "EVID CEILING G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-c82hc-g2-ceiling-speaker-8-high-ceiling-white",
+        "evid-c82hc-g2-ceiling-speaker-8-high-ceiling-white-647",
+        "evid-c82hc-g2-ceiling-speaker-8-high-ceiling-white-646"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-ceiling-g2/spk-ev-evid-c8-2hc-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.052"
+      ],
+      "ctns": [
+        "EVID-C8.2HC-G2"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-c8-2-g2",
+      "name": "EVID-C8.2-G2",
+      "series": "EVID CEILING G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-c82-g2-ceiling-speaker-8-70-100v-white",
+        "evid-c82-g2-ceiling-speaker-8-70-100v-white-645",
+        "evid-c82-g2-ceiling-speaker-8-70-100v-white-644"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-ceiling-g2/spk-ev-evid-c8-2-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.051"
+      ],
+      "ctns": [
+        "EVID-C8.2-G2"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-c6-2lp-g2",
+      "name": "EVID-C6.2LP-G2",
+      "series": "EVID CEILING G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-c62lp-g2-ceiling-speaker-65-low-profile-white",
+        "evid-c62lp-g2-ceiling-speaker-65-low-profile-white-641",
+        "evid-c62lp-g2-ceiling-speaker-65-low-profile-white-640"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-ceiling-g2/spk-ev-evid-c6-2lp-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.050"
+      ],
+      "ctns": [
+        "EVID-C6.2LP-G2"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-c6-2-g2",
+      "name": "EVID-C6.2-G2",
+      "series": "EVID CEILING G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-c62-g2-ceiling-speaker-65-70-100v-white",
+        "evid-c62-g2-ceiling-speaker-65-70-100v-white-639",
+        "evid-c62-g2-ceiling-speaker-65-70-100v-white-638"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-ceiling-g2/spk-ev-evid-c6-2-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.049"
+      ],
+      "ctns": [
+        "EVID-C6.2-G2"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-c4-2lp-g2",
+      "name": "EVID-C4.2LP-G2",
+      "series": "EVID CEILING G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-c42lp-g2-ceiling-speaker-4-low-profile-white",
+        "evid-c42lp-g2-ceiling-speaker-4-low-profile-white-637",
+        "evid-c42lp-g2-ceiling-speaker-4-low-profile-white-636"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-ceiling-g2/spk-ev-evid-c4-2lp-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.048"
+      ],
+      "ctns": [
+        "EVID-C4.2LP-G2"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-c4-2-g2",
+      "name": "EVID-C4.2-G2",
+      "series": "EVID CEILING G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-c42-g2-ceiling-speaker-4-70-100v-white",
+        "evid-c42-g2-ceiling-speaker-4-70-100v-white-635",
+        "evid-c42-g2-ceiling-speaker-4-70-100v-white-634"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-ceiling-g2/spk-ev-evid-c4-2-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.002.047"
+      ],
+      "ctns": [
+        "EVID-C4.2-G2"
+      ]
+    },
+    {
+      "id": "spk-ev-evolve-90",
+      "name": "EVOLVE 90",
+      "series": "EVOLVE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evolve-90-column-loudspeaker-system-v540",
+        "evolve-90-column-loudspeaker-system-710",
+        "evolve-90-column-loudspeaker-system-709",
+        "evolve-90-column-loudspeaker-system-v539",
+        "evolve-90-column-loudspeaker-system-708",
+        "evolve-90-column-loudspeaker-system-706",
+        "evolve-90-column-loudspeaker-system-707"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evolve/spk-ev-evolve-90.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.001.798",
+        "Z.01X.001.797"
+      ],
+      "ctns": [
+        "EVOLVE90-SW",
+        "EVOLVE90-SB-EU",
+        "EVOLVE90-SB-US"
+      ]
+    },
+    {
+      "id": "spk-ev-evolve-70",
+      "name": "EVOLVE 70",
+      "series": "EVOLVE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evolve-70-column-loudspeaker-system-v535",
+        "evolve-70-column-loudspeaker-system-701",
+        "evolve-70-column-loudspeaker-system-699",
+        "evolve-70-column-loudspeaker-system-700",
+        "evolve-70-column-loudspeaker-system-v532",
+        "evolve-70-column-loudspeaker-system-696",
+        "evolve-70-column-loudspeaker-system-v531",
+        "evolve-70-column-loudspeaker-system-695"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evolve/spk-ev-evolve-70.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.001.795",
+        "F.01U.426.439",
+        "F.01U.426.438"
+      ],
+      "ctns": [
+        "EVOLVE70-SB-EU",
+        "EVOLVE70-SB-US",
+        "EVOLVE70-90-TW",
+        "EVOLVE70-90-TB"
+      ]
+    },
+    {
+      "id": "spk-ev-eva-2082s-1220-wht",
+      "name": "EVA-2082S/1220-WHT",
+      "series": "EVA",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "eva-2082s-1220-wht",
+        "eva-2082s-1220-wht-478",
+        "eva-2082s-1220-wht-479"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL",
+        "coverage",
+        "frequency",
+        "weight"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/eva/spk-ev-eva-2082s-1220-wht.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.001.510"
+      ],
+      "ctns": [
+        "EVA-2082S/1220-WHT"
+      ]
+    },
+    {
+      "id": "spk-ev-pxm-12mp",
+      "name": "PXM-12MP",
+      "series": "PXM",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "pxm-12mp-12-powered-coaxial-monitor-black",
+        "pxm-12mp-12-powered-coaxial-monitor-black-761",
+        "pxm-12mp-12-powered-coaxial-monitor-black-760",
+        "pxm-12mp-12-powered-coaxial-monitor-black-762"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/pxm/spk-ev-pxm-12mp.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.000.326"
+      ],
+      "ctns": [
+        "PXM-12MP-EU",
+        "PXM-12MP-US"
+      ]
+    },
+    {
+      "id": "spk-ev-elx200-15p",
+      "name": "ELX200-15P",
+      "series": "ELX200",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "elx200-15p-15-2-way-powered-speaker-v337",
+        "elx200-15p-15-2-way-powered-speaker-439",
+        "elx200-15p-15-2-way-powered-speaker-440",
+        "elx200-15p-15-2-way-powered-speaker-v336",
+        "elx200-15p-15-2-way-powered-speaker-437",
+        "elx200-15p-15-2-way-powered-speaker-436",
+        "elx200-15p-15-2-way-powered-speaker-435",
+        "elx200-15p-15-2-way-powered-speaker-438",
+        "elx200-15p-15-2-way-powered-speaker",
+        "elx200-15p-15-2-way-powered-speaker-179"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/elx200/spk-ev-elx200-15p.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.000.120",
+        "Z.01X.000.113",
+        "F.01U.334.025"
+      ],
+      "ctns": [
+        "ELX200-15P-W",
+        "ELX200-15P-AP",
+        "ELX200-15P-EU",
+        "ELX200-15P-US",
+        "ELX200-15P-GL"
+      ]
+    },
+    {
+      "id": "spk-ev-elx200-12p",
+      "name": "ELX200-12P",
+      "series": "ELX200",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "elx200-12p-12-2-way-powered-speaker-v331",
+        "elx200-12p-12-2-way-powered-speaker-422",
+        "elx200-12p-12-2-way-powered-speaker-423",
+        "elx200-12p-12-2-way-powered-speaker-v330",
+        "elx200-12p-12-2-way-powered-speaker-420",
+        "elx200-12p-12-2-way-powered-speaker-419",
+        "elx200-12p-12-2-way-powered-speaker-418",
+        "elx200-12p-12-2-way-powered-speaker-421",
+        "elx200-12p-12-2-way-powered-speaker",
+        "elx200-12p-12-2-way-powered-speaker-177"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/elx200/spk-ev-elx200-12p.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.000.119",
+        "Z.01X.000.112",
+        "F.01U.334.024"
+      ],
+      "ctns": [
+        "ELX200-12P-W",
+        "ELX200-12P-AP",
+        "ELX200-12P-EU",
+        "ELX200-12P-US",
+        "ELX200-12P-GL"
+      ]
+    },
+    {
+      "id": "spk-ev-elx200-10p",
+      "name": "ELX200-10P",
+      "series": "ELX200",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "elx200-10p-10-2-way-powered-speaker-v328",
+        "elx200-10p-10-2-way-powered-speaker-414",
+        "elx200-10p-10-2-way-powered-speaker-415",
+        "elx200-10p-10-2-way-powered-speaker-v327",
+        "elx200-10p-10-2-way-powered-speaker-412",
+        "elx200-10p-10-2-way-powered-speaker-411",
+        "elx200-10p-10-2-way-powered-speaker-410",
+        "elx200-10p-10-2-way-powered-speaker-413",
+        "elx200-10p-10-2-way-powered-speaker",
+        "elx200-10p-10-2-way-powered-speaker-176"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/elx200/spk-ev-elx200-10p.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.000.118",
+        "Z.01X.000.111",
+        "F.01U.334.023"
+      ],
+      "ctns": [
+        "ELX200-10P-W",
+        "ELX200-10P-AP",
+        "ELX200-10P-EU",
+        "ELX200-10P-US",
+        "ELX200-10P-GL"
+      ]
+    },
+    {
+      "id": "spk-ev-elx200-18sp",
+      "name": "ELX200-18SP",
+      "series": "ELX200",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "elx200-18sp-v340",
+        "elx200-18sp-448",
+        "elx200-18sp-449",
+        "elx200-18sp-v339",
+        "elx200-18sp-444",
+        "elx200-18sp-446",
+        "elx200-18sp-445",
+        "elx200-18sp-443",
+        "elx200-18sp-447",
+        "elx200-18sp-v117",
+        "elx200-18sp-180"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/elx200/spk-ev-elx200-18sp.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.000.117",
+        "Z.01X.000.115",
+        "F.01U.351.459"
+      ],
+      "ctns": [
+        "ELX200-18SP-W",
+        "ELX200-18SP-AP",
+        "ELX200-18SP-EU",
+        "ELX200-18SP-US",
+        "ELX200-18SP-GL"
+      ]
+    },
+    {
+      "id": "spk-ev-elx200-12sp",
+      "name": "ELX200-12SP",
+      "series": "ELX200",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "elx200-12sp-v334",
+        "elx200-12sp-431",
+        "elx200-12sp-432",
+        "elx200-12sp",
+        "elx200-12sp-427",
+        "elx200-12sp-429",
+        "elx200-12sp-428",
+        "elx200-12sp-426",
+        "elx200-12sp-430",
+        "elx200-12sp-v115",
+        "elx200-12sp-178"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/elx200/spk-ev-elx200-12sp.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.000.116",
+        "Z.01X.000.114",
+        "F.01U.351.458"
+      ],
+      "ctns": [
+        "ELX200-12SP-W",
+        "ELX200-12SP-AP",
+        "ELX200-12SP-EU",
+        "ELX200-12SP-US",
+        "ELX200-12SP-GL"
+      ]
+    },
+    {
+      "id": "spk-ev-zlx-15p-g2",
+      "name": "ZLX-15P-G2",
+      "series": "ZLX G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "zlx-15p-g2-15-two-way-powered-loudspeaker-v19",
+        "zlx-15p-g2-15-two-way-powered-loudspeaker-24",
+        "zlx-15p-g2-15-two-way-powered-loudspeaker-23",
+        "zlx-15p-g2-15-two-way-powered-loudspeaker-v18",
+        "zlx-15p-g2-15-two-way-powered-loudspeaker-22"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/zlx-g2/spk-ev-zlx-15p-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.000.110",
+        "F.01U.385.529"
+      ],
+      "ctns": [
+        "ZLX-15P-G2-US",
+        "ZLX-15P-G2-EU"
+      ]
+    },
+    {
+      "id": "spk-ev-zlx-12p-g2",
+      "name": "ZLX-12P-G2",
+      "series": "ZLX G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "zlx-12p-g2-12-two-way-powered-loudspeaker",
+        "zlx-12p-g2-12-two-way-powered-loudspeaker-13",
+        "zlx-12p-g2-12-two-way-powered-loudspeaker-12",
+        "zlx-12p-g2-12-two-way-powered-loudspeaker-14"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/zlx-g2/spk-ev-zlx-12p-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.000.109"
+      ],
+      "ctns": [
+        "ZLX-12P-G2-EU",
+        "ZLX-12P-G2-US"
+      ]
+    },
+    {
+      "id": "spk-ev-zlx-8p-g2",
+      "name": "ZLX-8P-G2",
+      "series": "ZLX G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "zlx-8p-g2-8-two-way-powered-loudspeaker",
+        "zlx-8p-g2-8-two-way-powered-loudspeaker-30",
+        "zlx-8p-g2-8-two-way-powered-loudspeaker-28",
+        "zlx-8p-g2-8-two-way-powered-loudspeaker-29"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/zlx-g2/spk-ev-zlx-8p-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "Z.01X.000.108"
+      ],
+      "ctns": [
+        "ZLX-8P-G2-EU",
+        "ZLX-8P-G2-US"
+      ]
+    },
+    {
+      "id": "spk-ev-eviva-15p",
+      "name": "EVIVA 15P",
+      "series": "EVIVA",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "eviva-15p-15-2-way-powered-speaker",
+        "eviva-15p-15-2-way-powered-speaker-375"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "weight"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/eviva/spk-ev-eviva-15p.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.431.862"
+      ],
+      "ctns": [
+        "EVIVA15P-VN"
+      ]
+    },
+    {
+      "id": "spk-ev-eviva-12p",
+      "name": "EVIVA 12P",
+      "series": "EVIVA",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "eviva-12p-12-2-way-powered-speaker-v523",
+        "eviva-12p-12-2-way-powered-speaker-681"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/eviva/spk-ev-eviva-12p.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.426.606"
+      ],
+      "ctns": [
+        "EVIVA12P-BR",
+        "EVIVA12P-EU",
+        "EVIVA12P-IN",
+        "EVIVA12P-US"
+      ]
+    },
+    {
+      "id": "spk-ev-eviva-18sp",
+      "name": "EVIVA 18SP",
+      "series": "EVIVA",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "eviva-18sp-18-powered-subwoofer-v527",
+        "eviva-18sp-18-powered-subwoofer-691"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/eviva/spk-ev-eviva-18sp.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.426.601"
+      ],
+      "ctns": [
+        "EVIVA18SP-BR",
+        "EVIVA18SP-EU",
+        "EVIVA18SP-IN",
+        "EVIVA18SP-US"
+      ]
+    },
+    {
+      "id": "spk-ev-evf-215s-g2",
+      "name": "EVF-215S G2",
+      "series": "EVF G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evf-g2-dual-15-subwoofer-v460",
+        "evf-g2-dual-15-subwoofer-596",
+        "evf-g2-dual-15-subwoofer-v458",
+        "evf-g2-dual-15-subwoofer-594",
+        "evf-g2-dual-15-subwoofer-v459",
+        "evf-g2-dual-15-subwoofer-595",
+        "evf-g2-dual-15-subwoofer-v457",
+        "evf-g2-dual-15-subwoofer-593"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evf-g2/spk-ev-evf-215s-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.417.991",
+        "F.01U.417.990",
+        "F.01U.417.989",
+        "F.01U.417.988"
+      ],
+      "ctns": [
+        "EVF-215S-WFW",
+        "EVF-215S-BFW",
+        "EVF-215S-W",
+        "EVF-215S-B"
+      ]
+    },
+    {
+      "id": "spk-ev-evh-15-g2",
+      "name": "EVH-15 G2",
+      "series": "EVH G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evh-g2-horn-load-15-v482",
+        "evh-g2-horn-load-15-622"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "max SPL"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evh-g2/spk-ev-evh-15-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.417.982"
+      ],
+      "ctns": [
+        "EVH-15/99-BFW"
+      ]
+    },
+    {
+      "id": "spk-ev-evf-15-g2",
+      "name": "EVF-15 G2",
+      "series": "EVF G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evf-g2-front-load-15-v456",
+        "evf-g2-front-load-15-592",
+        "evf-g2-front-load-15-v454",
+        "evf-g2-front-load-15-590"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "max SPL"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evf-g2/spk-ev-evf-15-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.417.963",
+        "F.01U.417.962"
+      ],
+      "ctns": [
+        "EVF-15/99-WFW",
+        "EVF-15/99-BFW",
+        "EVF-15/64-W"
+      ]
+    },
+    {
+      "id": "spk-ev-evf-12-g2",
+      "name": "EVF-12 G2",
+      "series": "EVF G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evf-g2-front-load-12-v422",
+        "evf-g2-front-load-12-558"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evf-g2/spk-ev-evf-12-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.417.925"
+      ],
+      "ctns": [
+        "EVF-12/126-BFW"
+      ]
+    },
+    {
+      "id": "spk-ev-lrc-1100",
+      "name": "LRC-1100",
+      "series": "LRC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "lrc-1100-column-speaker-100cm-en54-v3",
+        "lrc-1100-column-speaker-100cm-en54-3",
+        "lrc-1100-column-speaker-100cm-en54-v4",
+        "lrc-1100-column-speaker-100cm-en54-4"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "frequency"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/lrc/spk-ev-lrc-1100.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.417.804",
+        "F.01U.417.799"
+      ],
+      "ctns": [
+        "LRC-1100-B",
+        "LRC-1100-W"
+      ]
+    },
+    {
+      "id": "spk-ev-lrc-2100",
+      "name": "LRC-2100",
+      "series": "LRC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "lrc-2100-column-speaker-2-way-1m-v5",
+        "lrc-2100-column-speaker-2-way-1m-5"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "frequency"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/lrc/spk-ev-lrc-2100.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.417.802"
+      ],
+      "ctns": [
+        "LRC-2100-B"
+      ]
+    },
+    {
+      "id": "spk-ev-lrc-1060",
+      "name": "LRC-1060",
+      "series": "LRC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "lrc-1060-column-speaker-60cm-en54-v2",
+        "lrc-1060-column-speaker-60cm-en54-2",
+        "lrc-1060-column-speaker-60cm-en54-v1",
+        "lrc-1060-column-speaker-60cm-en54-1"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/lrc/spk-ev-lrc-1060.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.417.795",
+        "F.01U.417.794"
+      ],
+      "ctns": [
+        "LRC-1060-W",
+        "LRC-1060-B"
+      ]
+    },
+    {
+      "id": "spk-ev-etx-10p-2-way",
+      "name": "ETX-10P 2-Way",
+      "series": "ETX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "etx-10p-2-way-powered-speaker-v348",
+        "etx-10p-2-way-powered-speaker-457"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/etx/spk-ev-etx-10p-2-way.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.396.748"
+      ],
+      "ctns": [
+        "ETX-10P-EU"
+      ]
+    },
+    {
+      "id": "spk-ev-etx-18sp",
+      "name": "ETX-18SP",
+      "series": "ETX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "etx-18sp-powered-subwoofer-v352",
+        "etx-18sp-powered-subwoofer-464",
+        "etx-18sp-powered-subwoofer-465",
+        "etx-18sp-powered-subwoofer-463"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/etx/spk-ev-etx-18sp.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.396.745"
+      ],
+      "ctns": [
+        "ETX-18SP-EU",
+        "ETX-18SP-US"
+      ]
+    },
+    {
+      "id": "spk-ev-etx-15sp",
+      "name": "ETX-15SP",
+      "series": "ETX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "etx-15sp-powered-subwoofer-v351",
+        "etx-15sp-powered-subwoofer-461",
+        "etx-15sp-powered-subwoofer-462",
+        "etx-15sp-powered-subwoofer-460"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/etx/spk-ev-etx-15sp.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.396.744"
+      ],
+      "ctns": [
+        "ETX-15SP-EU",
+        "ETX-15SP-US"
+      ]
+    },
+    {
+      "id": "spk-ev-etx-35p",
+      "name": "ETX-35P",
+      "series": "ETX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "etx-35p-15-3-way-powered-speaker",
+        "etx-35p-15-3-way-powered-speaker-466"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/etx/spk-ev-etx-35p.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.396.743"
+      ],
+      "ctns": [
+        "ETX-35P-EU"
+      ]
+    },
+    {
+      "id": "spk-ev-etx-15p-2-way",
+      "name": "ETX-15P 2-Way",
+      "series": "ETX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "etx-15p-2-way-powered-speaker-v350",
+        "etx-15p-2-way-powered-speaker-459"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/etx/spk-ev-etx-15p-2-way.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.396.742"
+      ],
+      "ctns": [
+        "ETX-15P-EU"
+      ]
+    },
+    {
+      "id": "spk-ev-etx-12p-2-way",
+      "name": "ETX-12P 2-Way",
+      "series": "ETX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "etx-12p-2-way-powered-speaker-v349",
+        "etx-12p-2-way-powered-speaker-458"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/etx/spk-ev-etx-12p-2-way.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.396.737"
+      ],
+      "ctns": [
+        "ETX-12P-EU"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-p6-2uw",
+      "name": "EVID-P6.2UW",
+      "series": "EVID PENDANT",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-p62uw-65-inch-two-way-weatherized-pendant-speaker-white"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "max SPL",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-pendant/spk-ev-evid-p6-2uw.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.388.770"
+      ],
+      "ctns": [
+        "EVID-P6.2W"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-6154-64cfww",
+      "name": "MTS-6154-64CFWW",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-6154-64cfww-loudspeaker-cardioid-60x40-fw-wht",
+        "mts-6154-64cfww-loudspeaker-cardioid-60x40-fw-wht-359"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-6154-64cfww.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.409"
+      ],
+      "ctns": [
+        "MTS-6154-64CFWW"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-6154-64cfwb",
+      "name": "MTS-6154-64CFWB",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-6154-64cfwb-loudspeaker-cardioid-60x40-fw-blk",
+        "mts-6154-64cfwb-loudspeaker-cardioid-60x40-fw-blk-740"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-6154-64cfwb.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.408"
+      ],
+      "ctns": [
+        "MTS-6154-64CFWB"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-4153-64fww",
+      "name": "MTS-4153-64FWW",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-4153-64fww-loudspeaker-high-output-60x40-fw-wht",
+        "mts-4153-64fww-loudspeaker-high-output-60x40-fw-wht-356"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-4153-64fww.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.407"
+      ],
+      "ctns": [
+        "MTS-4153-64FWW"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-4153-64fwb",
+      "name": "MTS-4153-64FWB",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-4153-64fwb-loudspeaker-high-output-60x40-fw-blk",
+        "mts-4153-64fwb-loudspeaker-high-output-60x40-fw-blk-735"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-4153-64fwb.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.406"
+      ],
+      "ctns": [
+        "MTS-4153-64FWB"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-6154-64cpww",
+      "name": "MTS-6154-64CPWW",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-6154-64cpww-loudspeaker-cardioid-60x40-pw-wht",
+        "mts-6154-64cpww-loudspeaker-cardioid-60x40-pw-wht-360"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-6154-64cpww.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.405"
+      ],
+      "ctns": [
+        "MTS-6154-64CPWW"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-6154-64cpwb",
+      "name": "MTS-6154-64CPWB",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-6154-64cpwb-loudspeaker-cardioid-60x40-pw-blk",
+        "mts-6154-64cpwb-loudspeaker-cardioid-60x40-pw-blk-741"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-6154-64cpwb.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.404"
+      ],
+      "ctns": [
+        "MTS-6154-64CPWB"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-4153-64pww",
+      "name": "MTS-4153-64PWW",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-4153-64pww-loudspeaker-high-output-60x40-pw-wht",
+        "mts-4153-64pww-loudspeaker-high-output-60x40-pw-wht-357"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-4153-64pww.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.403"
+      ],
+      "ctns": [
+        "MTS-4153-64PWW"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-4153-64pwb",
+      "name": "MTS-4153-64PWB",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-4153-64pwb-loudspeaker-high-output-60x40-pw-blk",
+        "mts-4153-64pwb-loudspeaker-high-output-60x40-pw-blk-736"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-4153-64pwb.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.402"
+      ],
+      "ctns": [
+        "MTS-4153-64PWB"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-6154-43cfww",
+      "name": "MTS-6154-43CFWW",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-6154-43cfww-loudspeaker-cardioid-40x30-fw-wht",
+        "mts-6154-43cfww-loudspeaker-cardioid-40x30-fw-wht-738"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-6154-43cfww.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.401"
+      ],
+      "ctns": [
+        "MTS-6154-43CFWW"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-6154-43cfwb",
+      "name": "MTS-6154-43CFWB",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-6154-43cfwb-loudspeaker-cardioid-40x30-fw-blk",
+        "mts-6154-43cfwb-loudspeaker-cardioid-40x30-fw-blk-737"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-6154-43cfwb.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.400"
+      ],
+      "ctns": [
+        "MTS-6154-43CFWB"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-4153-43fww",
+      "name": "MTS-4153-43FWW",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-4153-43fww-loudspeaker-high-output-40x30-fw-wht",
+        "mts-4153-43fww-loudspeaker-high-output-40x30-fw-wht-354"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-4153-43fww.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.399"
+      ],
+      "ctns": [
+        "MTS-4153-43FWW"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-4153-43fwb",
+      "name": "MTS-4153-43FWB",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-4153-43fwb-loudspeaker-high-output-40x30-fw-blk",
+        "mts-4153-43fwb-loudspeaker-high-output-40x30-fw-blk-733"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-4153-43fwb.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.398"
+      ],
+      "ctns": [
+        "MTS-4153-43FWB"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-6154-43cpww",
+      "name": "MTS-6154-43CPWW",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-6154-43cpww-loudspeaker-cardioid-40x30-pw-wht",
+        "mts-6154-43cpww-loudspeaker-cardioid-40x30-pw-wht-358"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-6154-43cpww.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.397"
+      ],
+      "ctns": [
+        "MTS-6154-43CPWW"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-6154-43cpwb",
+      "name": "MTS-6154-43CPWB",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-6154-43cpwb-loudspeaker-cardioid-40x30-pw-blk",
+        "mts-6154-43cpwb-loudspeaker-cardioid-40x30-pw-blk-739"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-6154-43cpwb.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.396"
+      ],
+      "ctns": [
+        "MTS-6154-43CPWB"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-4153-43pww",
+      "name": "MTS-4153-43PWW",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-4153-43pww-loudspeaker-high-output-40x30-pw-wht",
+        "mts-4153-43pww-loudspeaker-high-output-40x30-pw-wht-355"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-4153-43pww.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.395"
+      ],
+      "ctns": [
+        "MTS-4153-43PWW"
+      ]
+    },
+    {
+      "id": "spk-ev-mts-4153-43pwb",
+      "name": "MTS-4153-43PWB",
+      "series": "MTS",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mts-4153-43pwb-loudspeaker-high-output-40x30-pw-blk",
+        "mts-4153-43pwb-loudspeaker-high-output-40x30-pw-blk-734"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mts/spk-ev-mts-4153-43pwb.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.386.394"
+      ],
+      "ctns": [
+        "MTS-4153-43PWB"
+      ]
+    },
+    {
+      "id": "spk-ev-zlx-15-g2",
+      "name": "ZLX-15-G2",
+      "series": "ZLX G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "zlx-15-g2-15-two-way-passive-loudspeaker",
+        "zlx-15-g2-15-two-way-passive-loudspeaker-17"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/zlx-g2/spk-ev-zlx-15-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.385.532"
+      ],
+      "ctns": [
+        "ZLX-15-G2"
+      ]
+    },
+    {
+      "id": "spk-ev-zlx-12-g2",
+      "name": "ZLX-12-G2",
+      "series": "ZLX G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "zlx-12-g2-12-two-way-passive-loudspeaker",
+        "zlx-12-g2-12-two-way-passive-loudspeaker-7"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/zlx-g2/spk-ev-zlx-12-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.385.531"
+      ],
+      "ctns": [
+        "ZLX-12-G2"
+      ]
+    },
+    {
+      "id": "spk-ev-zlx-8-g2",
+      "name": "ZLX-8-G2",
+      "series": "ZLX G2",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "zlx-8-g2-8-two-way-passive-loudspeaker",
+        "zlx-8-g2-8-two-way-passive-loudspeaker-26"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/zlx-g2/spk-ev-zlx-8-g2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.385.530"
+      ],
+      "ctns": [
+        "ZLX-8-G2"
+      ]
+    },
+    {
+      "id": "spk-ev-evolve-50m",
+      "name": "EVOLVE 50M",
+      "series": "EVOLVE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evolve-50m-v280",
+        "evolve-50m",
+        "evolve-50m-v279",
+        "evolve-50m-349",
+        "evolve-50m-348"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers",
+        "max SPL",
+        "frequency",
+        "weight"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evolve/spk-ev-evolve-50m.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.384.342",
+        "F.01U.384.341"
+      ],
+      "ctns": [
+        "EVOLVE50M-SW",
+        "EVOLVE50M-SB-EU",
+        "EVOLVE50M-SB-US"
+      ]
+    },
+    {
+      "id": "spk-ev-evc-1122-vibten54-12",
+      "name": "EVC-1122-VIBTEN54 12",
+      "series": "EVC",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evc-1122-vibten54-12-speaker-vi-xfrm-black-en54-datasheet",
+        "evc-1122-vibten54-12-speaker-vi-xfrm-black-en54-datasheet-506"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evc/spk-ev-evc-1122-vibten54-12.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.375.013"
+      ],
+      "ctns": [
+        "EVC-1122-VIBTEN54"
+      ]
+    },
+    {
+      "id": "spk-ev-evolve-30m",
+      "name": "EVOLVE 30M",
+      "series": "EVOLVE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evolve-30m-portable-powered-column-v273",
+        "evolve-30m-portable-powered-column-340",
+        "evolve-30m-portable-powered-column-v272",
+        "evolve-30m-portable-powered-column-339",
+        "evolve-30m-portable-powered-column-338"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "weight"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evolve/spk-ev-evolve-30m.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.366.322",
+        "F.01U.366.320"
+      ],
+      "ctns": [
+        "EVOLVE30M-W",
+        "EVOLVE30M-EU",
+        "EVOLVE30M-US"
+      ]
+    },
+    {
+      "id": "spk-ev-elx200-15",
+      "name": "ELX200-15",
+      "series": "ELX200",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "elx200-15-15-2-way-passive-speaker",
+        "elx200-15-15-2-way-passive-speaker-433",
+        "elx200-15-15-2-way-passive-speaker-434"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/elx200/spk-ev-elx200-15.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.361.348"
+      ],
+      "ctns": [
+        "ELX200-15",
+        "ELX200-15-W"
+      ]
+    },
+    {
+      "id": "spk-ev-elx200-12",
+      "name": "ELX200-12",
+      "series": "ELX200",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "elx200-12-12-2-way-passive-speaker-v329",
+        "elx200-12-12-2-way-passive-speaker-416",
+        "elx200-12-12-2-way-passive-speaker-417"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/elx200/spk-ev-elx200-12.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.361.347"
+      ],
+      "ctns": [
+        "ELX200-12",
+        "ELX200-12-W"
+      ]
+    },
+    {
+      "id": "spk-ev-elx200-10",
+      "name": "ELX200-10",
+      "series": "ELX200",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "elx200-10-10-2-way-passive-speaker-v326",
+        "elx200-10-10-2-way-passive-speaker-408",
+        "elx200-10-10-2-way-passive-speaker-409"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/elx200/spk-ev-elx200-10.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.361.346"
+      ],
+      "ctns": [
+        "ELX200-10",
+        "ELX200-10-W"
+      ]
+    },
+    {
+      "id": "spk-ev-elx200-18s",
+      "name": "ELX200-18S",
+      "series": "ELX200",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "elx200-18s-18-passive-subwoofer",
+        "elx200-18s-18-passive-subwoofer-441",
+        "elx200-18s-18-passive-subwoofer-442"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/elx200/spk-ev-elx200-18s.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.361.345"
+      ],
+      "ctns": [
+        "ELX200-18S",
+        "ELX200-18S-W"
+      ]
+    },
+    {
+      "id": "spk-ev-elx200-12s",
+      "name": "ELX200-12S",
+      "series": "ELX200",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "elx200-12s-12-passive-subwoofer-v332",
+        "elx200-12s-12-passive-subwoofer-424",
+        "elx200-12s-12-passive-subwoofer-425"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/elx200/spk-ev-elx200-12s.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.361.344"
+      ],
+      "ctns": [
+        "ELX200-12S",
+        "ELX200-12S-W"
+      ]
+    },
+    {
+      "id": "spk-ev-x12i-128-fgw-dual-18-install",
+      "name": "X12i-128-FGW Dual 18 Install",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x12i-128-fgw-dual-18-install-subwoofer"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x12i-128-fgw-dual-18-install.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.968"
+      ],
+      "ctns": [
+        "X12-128"
+      ]
+    },
+    {
+      "id": "spk-ev-x12i-128-fgb-dual-18-install",
+      "name": "X12i-128-FGB Dual 18 Install",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x12i-128-fgb-dual-18-install-subwoofer"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x12i-128-fgb-dual-18-install.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.967"
+      ],
+      "ctns": [
+        "X12-128"
+      ]
+    },
+    {
+      "id": "spk-ev-x12i-128-w-dual-18-install",
+      "name": "X12i-128-W Dual 18 Install",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x12i-128-w-dual-18-install-subwoofer"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x12i-128-w-dual-18-install.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.966"
+      ],
+      "ctns": [
+        "X12-128"
+      ]
+    },
+    {
+      "id": "spk-ev-x12i-128-b-dual-18-install",
+      "name": "X12i-128-B Dual 18 Install",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x12i-128-b-dual-18-install-subwoofer"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x12i-128-b-dual-18-install.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.965"
+      ],
+      "ctns": [
+        "X12-128"
+      ]
+    },
+    {
+      "id": "spk-ev-x2i-212-120-fgw-2-way-install-line-array-element",
+      "name": "X2i-212/120-FGW 2-Way Install Line-Array Element",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x2i-212-120-fgw-2-way-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x2i-212-120-fgw-2-way-install-line-array-element.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.964"
+      ],
+      "ctns": [
+        "X2-212/90"
+      ]
+    },
+    {
+      "id": "spk-ev-x2i-212-120-fgb-2-way-install-line-array-element",
+      "name": "X2i-212/120-FGB 2-Way Install Line-Array Element",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x2i-212-120-fgb-2-way-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x2i-212-120-fgb-2-way-install-line-array-element.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.963"
+      ],
+      "ctns": [
+        "X2-212/90"
+      ]
+    },
+    {
+      "id": "spk-ev-x2i-212-120-w-2-way-install-line-array-element",
+      "name": "X2i-212/120-W 2-Way Install Line-Array Element",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x2i-212-120-w-2-way-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x2i-212-120-w-2-way-install-line-array-element.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.962"
+      ],
+      "ctns": [
+        "X2-212/90"
+      ]
+    },
+    {
+      "id": "spk-ev-x2i-212-120-b-2-way-install-line-array-element",
+      "name": "X2i-212/120-B 2-Way Install Line-Array Element",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x2i-212-120-b-2-way-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x2i-212-120-b-2-way-install-line-array-element.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.961"
+      ],
+      "ctns": [
+        "X2-212/90"
+      ]
+    },
+    {
+      "id": "spk-ev-x2i-212-90-fgw-2-way-install-line-array-element",
+      "name": "X2i-212/90-FGW 2-Way Install Line-Array Element",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x2i-212-90-fgw-2-way-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x2i-212-90-fgw-2-way-install-line-array-element.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.960"
+      ],
+      "ctns": [
+        "X2-212/90"
+      ]
+    },
+    {
+      "id": "spk-ev-x2i-212-90-fgb-2-way-install-line-array-element",
+      "name": "X2i-212/90-FGB 2-Way Install Line-Array Element",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x2i-212-90-fgb-2-way-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x2i-212-90-fgb-2-way-install-line-array-element.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.959"
+      ],
+      "ctns": [
+        "X2-212/90"
+      ]
+    },
+    {
+      "id": "spk-ev-x2i-212-90-w-2-way-install-line-array-element",
+      "name": "X2i-212/90-W 2-Way Install Line-Array Element",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x2i-212-90-w-2-way-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x2i-212-90-w-2-way-install-line-array-element.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.958"
+      ],
+      "ctns": [
+        "X2-212/90"
+      ]
+    },
+    {
+      "id": "spk-ev-x2i-212-90-b-2-way-install-line-array-element",
+      "name": "X2i-212/90-B 2-Way Install Line-Array Element",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x2i-212-90-b-2-way-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x2i-212-90-b-2-way-install-line-array-element.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.957"
+      ],
+      "ctns": [
+        "X2-212/90"
+      ]
+    },
+    {
+      "id": "spk-ev-x1i-212-120-fgw",
+      "name": "X1i-212/120-FGW",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x1i-212-120-fgw-passive-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x1i-212-120-fgw.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.956"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-x1i-212-120-fgb",
+      "name": "X1i-212/120-FGB",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x1i-212-120-fgb-passive-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x1i-212-120-fgb.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.955"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-x1i-212-120-w",
+      "name": "X1i-212/120-W",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x1i-212-120-w-passive-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x1i-212-120-w.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.954"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-x1i-212-120-b",
+      "name": "X1i-212/120-B",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x1i-212-120-b-passive-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x1i-212-120-b.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.953"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-x1i-212-90-fgw",
+      "name": "X1i-212/90-FGW",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x1i-212-90-fgw-passive-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x1i-212-90-fgw.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.952"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-x1i-212-90-fgb",
+      "name": "X1i-212/90-FGB",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x1i-212-90-fgb-passive-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x1i-212-90-fgb.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.951"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-x1i-212-90-w",
+      "name": "X1i-212/90-W",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x1i-212-90-w-passive-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x1i-212-90-w.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.950"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-x1i-212-90-b",
+      "name": "X1i-212/90-B",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x1i-212-90-b-passive-install-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x1i-212-90-b.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.949"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-mfx-15mc",
+      "name": "MFX-15MC",
+      "series": "MFX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mfx-15mc-15-multi-use-coax-monitor-v557",
+        "mfx-15mc-15-multi-use-coax-monitor-728",
+        "mfx-15mc-15-multi-use-coax-monitor-v556",
+        "mfx-15mc-15-multi-use-coax-monitor-727"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL",
+        "weight"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mfx/spk-ev-mfx-15mc.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.530",
+        "F.01U.360.529"
+      ],
+      "ctns": [
+        "MFX-15MC-W",
+        "MFX-15MC-B"
+      ]
+    },
+    {
+      "id": "spk-ev-mfx-12mc",
+      "name": "MFX-12MC",
+      "series": "MFX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "mfx-12mc-12-multi-use-coax-monitor-v555",
+        "mfx-12mc-12-multi-use-coax-monitor-726",
+        "mfx-12mc-12-multi-use-coax-monitor-v554",
+        "mfx-12mc-12-multi-use-coax-monitor-725"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL",
+        "weight"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/mfx/spk-ev-mfx-12mc.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.360.528",
+        "F.01U.360.527"
+      ],
+      "ctns": [
+        "MFX-12MC-W",
+        "MFX-12MC-B"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-p6-2w",
+      "name": "EVID-P6.2W",
+      "series": "EVID PENDANT",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-p62w-65-inch-two-way-pendant-speaker-white"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "max SPL",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-pendant/spk-ev-evid-p6-2w.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.351.203"
+      ],
+      "ctns": [
+        "EVID-P6.2B"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-p6-2b",
+      "name": "EVID-P6.2B",
+      "series": "EVID PENDANT",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-p62b-65-inch-two-way-pendant-speaker-black"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "max SPL",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-pendant/spk-ev-evid-p6-2b.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.351.202"
+      ],
+      "ctns": [
+        "EVID-P6.2W"
+      ]
+    },
+    {
+      "id": "spk-ev-evolve-50",
+      "name": "EVOLVE 50",
+      "series": "EVOLVE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evolve-50",
+        "evolve-50-343",
+        "evolve-50-342",
+        "evolve-50-341"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "transducers",
+        "max SPL",
+        "coverage",
+        "frequency",
+        "weight"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evolve/spk-ev-evolve-50.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.335.097"
+      ],
+      "ctns": [
+        "EVOLVE50-SB-AP",
+        "EVOLVE50-SB-EU",
+        "EVOLVE50-SB-US"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-s12-1",
+      "name": "EVID-S12.1",
+      "series": "EVID SURFACE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-s121-subwoofer-12-cabinet-v508",
+        "evid-s121-subwoofer-12-cabinet-663",
+        "evid-s121-subwoofer-12-cabinet",
+        "evid-s121-subwoofer-12-cabinet-662"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-surface/spk-ev-evid-s12-1.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.332.747",
+        "F.01U.332.746"
+      ],
+      "ctns": [
+        "EVID-S12.1W",
+        "EVID-S12.1B"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-s10-1d",
+      "name": "EVID-S10.1D",
+      "series": "EVID SURFACE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-s101d-subwoofer-2x10-cabinet-v506",
+        "evid-s101d-subwoofer-2x10-cabinet",
+        "evid-s101d-subwoofer-2x10-cabinet-v505",
+        "evid-s101d-subwoofer-2x10-cabinet-660"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers",
+        "max SPL",
+        "frequency",
+        "weight"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-surface/spk-ev-evid-s10-1d.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.332.745",
+        "F.01U.332.744"
+      ],
+      "ctns": [
+        "EVID-S10.1DW",
+        "EVID-S10.1DB"
+      ]
+    },
+    {
+      "id": "spk-ev-x2-212-120",
+      "name": "X2-212/120",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x2-212-120-high-performance-touring-line-array-element"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "max SPL"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x2-212-120.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.315.553"
+      ],
+      "ctns": [
+        "X2-212/120"
+      ]
+    },
+    {
+      "id": "spk-ev-x1-212-120",
+      "name": "X1-212/120",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x1-212-120-compact-touring-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x1-212-120.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.315.552"
+      ],
+      "ctns": [
+        "X1-212/120"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-pc8-2",
+      "name": "EVID-PC8.2",
+      "series": "EVID PREMIUM CEILING",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-pc82-8-ceiling-speaker-system-100w",
+        "8-ceiling-speaker-system-100w-659"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-premium-ceiling/spk-ev-evid-pc8-2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.306.456"
+      ],
+      "ctns": [
+        "EVID-PC8.2"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-pc6-2",
+      "name": "EVID-PC6.2",
+      "series": "EVID PREMIUM CEILING",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-pc62-6-ceiling-speaker-system-100w",
+        "6-ceiling-speaker-system-100w-658"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-premium-ceiling/spk-ev-evid-pc6-2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.306.455"
+      ],
+      "ctns": [
+        "EVID-PC6.2"
+      ]
+    },
+    {
+      "id": "spk-ev-ekx-15",
+      "name": "EKX-15",
+      "series": "EKX",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "ekx-15-passive-15-2-way-speaker-v317",
+        "ekx-15-passive-15-2-way-speaker-396",
+        "ekx-15-passive-15-2-way-speaker-v315",
+        "ekx-15-passive-15-2-way-speaker-391",
+        "ekx-15-passive-15-2-way-speaker-v313",
+        "ekx-15-passive-15-2-way-speaker-386",
+        "ekx-15-passive-15-2-way-speaker-v311",
+        "ekx-15-passive-15-2-way-speaker-381"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "transducers"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/ekx/spk-ev-ekx-15.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.303.367",
+        "F.01U.303.366",
+        "F.01U.303.365",
+        "F.01U.303.364"
+      ],
+      "ctns": [
+        "EKX-18S",
+        "EKX-15S",
+        "EKX-15",
+        "EKX-12"
+      ]
+    },
+    {
+      "id": "spk-ev-x2-212-90",
+      "name": "X2-212/90",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x2-212-90-high-performance-touring-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x2-212-90.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.302.586"
+      ],
+      "ctns": [
+        "X2-212/90"
+      ]
+    },
+    {
+      "id": "spk-ev-x12-128-dual-18-touring",
+      "name": "X12-128 Dual 18 Touring",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x12-128-dual-18-touring-subwoofer"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x12-128-dual-18-touring.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.302.585"
+      ],
+      "ctns": [
+        "X12-128"
+      ]
+    },
+    {
+      "id": "spk-ev-x1-212-90",
+      "name": "X1-212/90",
+      "series": "X-Line Advance",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "x1-212-90-compact-touring-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/x-line-advance/spk-ev-x1-212-90.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.302.583"
+      ],
+      "ctns": [
+        "X1-212/90"
+      ]
+    },
+    {
+      "id": "spk-ev-xle191-fgw-2-way-very",
+      "name": "XLE191-FGW 2-Way Very",
+      "series": "XLE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xle191-fgw-2-way-very-compact-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xle/spk-ev-xle191-fgw-2-way-very.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.286.129"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-xle191-fgb-2-way-very",
+      "name": "XLE191-FGB 2-Way Very",
+      "series": "XLE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xle191-fgb-2-way-very-compact-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xle/spk-ev-xle191-fgb-2-way-very.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.286.128"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-xle181-fgw-2-way-very",
+      "name": "XLE181-FGW 2-Way Very",
+      "series": "XLE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xle181-fgw-2-way-very-compact-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xle/spk-ev-xle181-fgw-2-way-very.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.286.127"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-xle181-fgb-2-way-very",
+      "name": "XLE181-FGB 2-Way Very",
+      "series": "XLE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xle181-fgb-2-way-very-compact-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xle/spk-ev-xle181-fgb-2-way-very.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.286.126"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-xld291-fgw-3-way",
+      "name": "XLD291-FGW 3-Way",
+      "series": "XLD",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xld291-fgw-3-way-compact-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xld/spk-ev-xld291-fgw-3-way.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.286.125"
+      ],
+      "ctns": [
+        "XLD291-FGW"
+      ]
+    },
+    {
+      "id": "spk-ev-xld291-fgb-3-way",
+      "name": "XLD291-FGB 3-Way",
+      "series": "XLD",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xld291-fgb-3-way-compact-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xld/spk-ev-xld291-fgb-3-way.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.286.124"
+      ],
+      "ctns": [
+        "XLD291-FGB"
+      ]
+    },
+    {
+      "id": "spk-ev-xld281-fgw-3-way",
+      "name": "XLD281-FGW 3-Way",
+      "series": "XLD",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xld281-fgw-3-way-compact-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xld/spk-ev-xld281-fgw-3-way.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.286.123"
+      ],
+      "ctns": [
+        "XLD281-FGW"
+      ]
+    },
+    {
+      "id": "spk-ev-xld281-fgb-3-way",
+      "name": "XLD281-FGB 3-Way",
+      "series": "XLD",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xld281-fgb-3-way-compact-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xld/spk-ev-xld281-fgb-3-way.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.286.122"
+      ],
+      "ctns": [
+        "XLD281-FGB"
+      ]
+    },
+    {
+      "id": "spk-ev-xcs312-fgw-cardioid-bass-element",
+      "name": "XCS312-FGW Cardioid Bass Element",
+      "series": "XLD",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xcs312-fgw-cardioid-bass-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xld/spk-ev-xcs312-fgw-cardioid-bass-element.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.286.111"
+      ],
+      "ctns": [
+        "XCS312-FGW"
+      ]
+    },
+    {
+      "id": "spk-ev-xcs312-fgb-cardioid-bass-element",
+      "name": "XCS312-FGB Cardioid Bass Element",
+      "series": "XLD",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xcs312-fgb-cardioid-bass-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xld/spk-ev-xcs312-fgb-cardioid-bass-element.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.286.110"
+      ],
+      "ctns": [
+        "XCS312-FGB"
+      ]
+    },
+    {
+      "id": "spk-ev-xcs312-blk-cardioid-bass-element",
+      "name": "XCS312-BLK Cardioid Bass Element",
+      "series": "XLD",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xcs312-blk-cardioid-bass-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xld/spk-ev-xcs312-blk-cardioid-bass-element.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.272.899"
+      ],
+      "ctns": [
+        "XCS312-BLK"
+      ]
+    },
+    {
+      "id": "spk-ev-tss-1",
+      "name": "TSS-1",
+      "series": "Other Installed",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "tss-1",
+        "tss-1-983"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "max SPL",
+        "weight"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/other-installed/spk-ev-tss-1.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.144.916"
+      ],
+      "ctns": [
+        "TSS-1"
+      ]
+    },
+    {
+      "id": "spk-ev-evid-c12-2",
+      "name": "EVID C12.2",
+      "series": "EVID CEILING",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "evid-c122-ceiling-speaker-12-white",
+        "evid-c122-ceiling-speaker-12-white-909"
+      ],
+      "status": "pending",
+      "pendingFields": [
+        "way/network",
+        "coverage"
+      ],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/evid-ceiling/spk-ev-evid-c12-2.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.117.807"
+      ],
+      "ctns": [
+        "EVID C12.2"
+      ]
+    },
+    {
+      "id": "spk-ev-xle181-2-way-very",
+      "name": "XLE181 2-Way Very",
+      "series": "XLE",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xle181-2-way-very-compact-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xle/spk-ev-xle181-2-way-very.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.101.244"
+      ],
+      "ctns": []
+    },
+    {
+      "id": "spk-ev-xld281-3-way",
+      "name": "XLD281 3-Way",
+      "series": "XLD",
+      "productPage": "https://www.electrovoice.com/products",
+      "catalogSlugs": [
+        "xld281-3-way-compact-line-array-element"
+      ],
+      "status": "verified",
+      "pendingFields": [],
+      "images": [
+        "raw-data/raw-assets/ev/speakers/xld/spk-ev-xld281-3-way.png"
+      ],
+      "documentationPages": [
+        "https://www.electrovoice.com/tools-resources/product-documents"
+      ],
+      "partNumbers": [
+        "F.01U.101.242"
+      ],
+      "ctns": [
+        "XLD281"
+      ]
+    }
+  ],
+  "discontinuedProducts": [],
+  "discontinuedBasis": "The official public product index returned only active lifecycle records on 2026-08-18. Archived/hidden stories are not promoted into the current catalogue without explicit lifecycle evidence.",
+  "exclusions": {
+    "productSkusOutsideLoudspeakerCategories": 95,
+    "nonProductAccessoryFalsePositives": [
+      "EVOLVE50-CASE"
+    ]
+  }
+}

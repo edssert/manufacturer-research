@@ -1,83 +1,88 @@
 <!doctype html>
 <html lang="ko">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'none'; form-action 'none'" />
-<title>Manufacturer Research</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; media-src 'none'; object-src 'none'; worker-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Sound Systems Index — Professional Audio Systems Database</title>
 
-<!-- 검색 결과와 링크 공유에 사용할 기본 메타데이터 -->
-<meta name="description" content="L-Acoustics · d&b audiotechnik · Meyer Sound 스피커/앰프/DSP/소프트웨어 사양 비교 및 앰프 매칭 리서치 도구" />
-<meta name="theme-color" content="#EEF1F4" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Manufacturer Research" />
-<meta property="og:description" content="L-Acoustics · d&b audiotechnik · Meyer Sound 스피커/앰프/DSP/소프트웨어 사양 비교 및 앰프 매칭 리서치 도구" />
-<meta property="og:locale" content="ko_KR" />
-<!-- favicon은 별도 요청 없이 표시되도록 로고 사이글을 인라인 SVG로 제공한다. -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FFFFFF' stroke='%23CBD2DA'/%3E%3Cg fill='%239A5200'%3E%3Crect x='5' y='18' width='4' height='8' rx='1'/%3E%3Crect x='11' y='9' width='4' height='17' rx='1'/%3E%3Crect x='17' y='14' width='4' height='12' rx='1'/%3E%3Crect x='23' y='6' width='4' height='20' rx='1'/%3E%3C/g%3E%3C/svg%3E" />
+    <meta
+      name="description"
+      content="L-Acoustics, d&b audiotechnik, Meyer Sound, Adamson, Cohesion의 제품 사양과 호환 관계를 탐색하는 프로 오디오 시스템 데이터베이스"
+    />
+    <meta name="theme-color" content="#F4F6F8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sound Systems Index — Professional Audio Systems Database" />
+    <meta
+      property="og:description"
+      content="L-Acoustics, d&b audiotechnik, Meyer Sound, Adamson, Cohesion의 제품 사양과 호환 관계를 탐색하는 프로 오디오 시스템 데이터베이스"
+    />
+    <meta property="og:locale" content="ko_KR" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FFFFFF' stroke='%23D0D5DD'/%3E%3Cg fill='%23175CD3'%3E%3Crect x='5' y='18' width='4' height='8' rx='1'/%3E%3Crect x='11' y='9' width='4' height='17' rx='1'/%3E%3Crect x='17' y='14' width='4' height='12' rx='1'/%3E%3Crect x='23' y='6' width='4' height='20' rx='1'/%3E%3C/g%3E%3C/svg%3E"
+    />
 
-<!-- 저장된 사진 표시 선호를 CSS보다 먼저 적용한다. 외부 스크립트로 유지해
+    <!-- 저장된 사진 표시 선호를 CSS보다 먼저 적용한다. 외부 스크립트로 유지해
      CSP가 인라인 실행을 허용하지 않아도 초기 표시 상태가 깜빡이지 않는다. -->
-<script src="public/js/bootstrap-preferences.js"></script>
+    <script src="public/js/bootstrap-preferences.js"></script>
 
-<!-- [성능] 본문 폰트 선로딩 — CSS 파싱을 기다리지 않고 곧바로 받아
+    <!-- [성능] 본문 폰트 선로딩 — CSS 파싱을 기다리지 않고 곧바로 받아
      FOUT(폰트 교체 깜빡임) 구간을 줄인다. 가장 많이 쓰이는 두 웨이트만. -->
-<link rel="preload" href="public/assets/fonts/Pretendard-Regular.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="public/assets/fonts/Pretendard-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="public/assets/fonts/Pretendard-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="public/assets/fonts/Pretendard-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
 
-<!-- CSS 로드 순서: 토큰(변수) → 폰트 → 리셋 → 레이아웃 → 컴포넌트 -->
-<!-- 정적 자산은 public/ 아래에 있고 문서 진입점은 저장소 루트에 둔다. -->
-<link rel="stylesheet" href="public/css/tokens.css" />
-<link rel="stylesheet" href="public/css/fonts.css" />
-<link rel="stylesheet" href="public/css/base.css" />
-<link rel="stylesheet" href="public/css/layout.css" />
-<link rel="stylesheet" href="public/css/nav.css" />
-<link rel="stylesheet" href="public/css/components/controls.css" />
-<link rel="stylesheet" href="public/css/components/card.css" />
-<link rel="stylesheet" href="public/css/components/section-nav.css" />
-<link rel="stylesheet" href="public/css/components/spec-table.css" />
-<link rel="stylesheet" href="public/css/components/modal.css" />
-<link rel="stylesheet" href="public/css/components/split-view.css" />
-<link rel="stylesheet" href="public/css/components/brand.css" />
-</head>
-<body>
-
-<!-- 상단바: 로고 + 부제(브랜드 목록, JS 주입) + 범례/카운트 -->
-<header class="topbar" id="topbar">
-  <div class="topbar__inner">
-    <div class="topbar__brand">
-      <div class="topbar__sigil"><div class="topbar__sigil-bars"><i></i><i></i><i></i><i></i></div></div>
-      <div>
-        <h1 class="topbar__title">Manufacturer <span>//</span> Research</h1>
-        <div class="topbar__subtitle" id="brand-subtitle"></div>
+    <link rel="stylesheet" href="public/css/tokens.css" />
+    <link rel="stylesheet" href="public/css/fonts.css" />
+    <link rel="stylesheet" href="public/css/base.css" />
+    <link rel="stylesheet" href="public/css/layout.css" />
+    <link rel="stylesheet" href="public/css/nav.css" />
+    <link rel="stylesheet" href="public/css/components/controls.css" />
+    <link rel="stylesheet" href="public/css/components/card.css" />
+    <link rel="stylesheet" href="public/css/components/section-nav.css" />
+    <link rel="stylesheet" href="public/css/components/spec-table.css" />
+    <link rel="stylesheet" href="public/css/components/modal.css" />
+    <link rel="stylesheet" href="public/css/components/split-view.css" />
+    <link rel="stylesheet" href="public/css/components/brand.css" />
+    <link rel="stylesheet" href="public/css/catalog-refresh.css" />
+  </head>
+  <body>
+    <header class="topbar" id="topbar">
+      <div class="topbar__inner">
+        <div class="topbar__brand">
+          <div class="topbar__sigil" aria-hidden="true">
+            <div class="topbar__sigil-bars"><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div>
+            <div class="topbar__kicker">PROFESSIONAL AUDIO SYSTEMS DATABASE</div>
+            <h1 class="topbar__title">Sound Systems Index</h1>
+          </div>
+        </div>
+        <div class="topbar__meta">
+          <div class="legend" id="legend"></div>
+          <div class="topbar__count" id="count"></div>
+        </div>
       </div>
-    </div>
-    <div class="topbar__meta">
-      <div class="legend" id="legend"></div>
-      <div class="topbar__count" id="count"></div>
-    </div>
-  </div>
-</header>
-<!-- 사진 숨기기와 테마 토글 마크업은 js/ui/nav.js renderNav()가 생성한다. -->
+    </header>
+    <nav class="topnav" id="topnav" aria-label="제품 분류"></nav>
 
-<!-- 도메인 탭 (js/ui/nav.js 가 렌더링) -->
-<nav class="topnav" id="topnav" aria-label="제품 분류"></nav>
+    <main id="domain-views">
+      <div id="view-speakers" role="tabpanel" aria-labelledby="nav-tab-speakers" hidden></div>
+      <div id="view-amplifiers" role="tabpanel" aria-labelledby="nav-tab-amplifiers" hidden></div>
+      <div id="view-dsps" role="tabpanel" aria-labelledby="nav-tab-dsps" hidden></div>
+      <div id="view-software" role="tabpanel" aria-labelledby="nav-tab-software" hidden></div>
+      <div id="view-accessories" role="tabpanel" aria-labelledby="nav-tab-accessories" hidden></div>
+      <div id="view-brand" role="tabpanel" aria-labelledby="nav-tab-brand" hidden></div>
+    </main>
 
-<!-- 도메인별 뷰 컨테이너: 각 controller 가 자기 뷰를 1회 빌드 후 hidden 토글 -->
-<main id="domain-views">
-  <div id="view-speakers" role="tabpanel" aria-labelledby="nav-tab-speakers" hidden></div>
-  <div id="view-amplifiers" role="tabpanel" aria-labelledby="nav-tab-amplifiers" hidden></div>
-  <div id="view-dsps" role="tabpanel" aria-labelledby="nav-tab-dsps" hidden></div>
-  <div id="view-software" role="tabpanel" aria-labelledby="nav-tab-software" hidden></div>
-  <div id="view-accessories" role="tabpanel" aria-labelledby="nav-tab-accessories" hidden></div>
-  <div id="view-brand" role="tabpanel" aria-labelledby="nav-tab-brand" hidden></div>
-</main>
+    <footer class="app-footer">Sound Systems Index &nbsp;·&nbsp; Professional Audio Systems Database</footer>
 
-<footer class="app-footer">Manufacturer // Research &nbsp;·&nbsp; Speakers · Amplifiers · DSPs · Software · Accessories</footer>
+    <div class="modal-overlay" id="modalbg" aria-hidden="true"><div class="modal" id="modal" tabindex="-1"></div></div>
 
-<!-- 카드형 상세 모달 (js/ui/modal.js 가 제어) -->
-<div class="modal-overlay" id="modalbg" aria-hidden="true"><div class="modal" id="modal" tabindex="-1"></div></div>
-
-<script type="module" src="public/js/main.js"></script>
-</body>
+    <script type="module" src="public/js/main.js"></script>
+  </body>
 </html>
