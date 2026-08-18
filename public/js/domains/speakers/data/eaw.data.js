@@ -20,7 +20,7 @@ const EAW_MODELS = [
     "dims": "Height: 21.6 Width: 21.5 Depth: 25.6in",
     "operatingMode": "Single Amp VLF DSP w/ EAW DynO",
     "selfPowered": true,
-    "img": "public/assets/img/speakers/eaw/newport/spk-eaw-nt116s.runtime.webp",
+    "img": "public/assets/img/speakers/eaw/newport/spk-eaw-nt116s.png",
     "sourcePage": "https://eaw.com/products/nt116s/"
   },
   {
@@ -44,7 +44,7 @@ const EAW_MODELS = [
     "dims": "Height: 10.3in (261mm) Width: 28.4in (722mm) Depth: 18.7in (474mm)",
     "operatingMode": "2-Way, Bi-Amp (LF, HF)",
     "selfPowered": true,
-    "img": "public/assets/img/speakers/eaw/newport/spk-eaw-nt208l.runtime.webp",
+    "img": "public/assets/img/speakers/eaw/newport/spk-eaw-nt208l.png",
     "sourcePage": "https://eaw.com/products/nt208l/"
   },
   {
@@ -68,7 +68,7 @@ const EAW_MODELS = [
     "dims": "8.4in X 21.0in X 14.9in (213mm X 533mm X 379mm)",
     "operatingMode": "Bi-amp LF,HF",
     "selfPowered": true,
-    "img": "public/assets/img/speakers/eaw/newport/spk-eaw-nt206l.runtime.webp",
+    "img": "public/assets/img/speakers/eaw/newport/spk-eaw-nt206l.png",
     "sourcePage": "https://eaw.com/products/nt206l/"
   },
   {
@@ -1388,7 +1388,7 @@ const EAW_MODELS = [
     "dims": "Height: 30 in (762 mm) Width: 15.54 in (394.7 mm) Depth: 14.75 in (374.7 mm)",
     "operatingMode": "Amplifier Channels: Single-amp LF/HF; Bi-amp LF, HF External Signal Processing: High pass filter; DSP w/2-way filters",
     "selfPowered": false,
-    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2399i.runtime.webp",
+    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2399i.jpg",
     "sourcePage": "https://eaw.com/products/mk2399i/"
   },
   {
@@ -1412,7 +1412,7 @@ const EAW_MODELS = [
     "dims": "Height: 30 in (762 mm) Width: 15.54 in (394.7 mm) Depth: 14.75 in (374.7 mm)",
     "operatingMode": "Amplifier Channels: Single-amp LF/HF; Bi-amp LF, HF External Signal Processing: High pass filter; DSP w/2-way filters",
     "selfPowered": false,
-    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2396i.runtime.webp",
+    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2396i.jpg",
     "sourcePage": "https://eaw.com/products/mk2396i/"
   },
   {
@@ -1436,7 +1436,7 @@ const EAW_MODELS = [
     "dims": "Height: 30 in (762 mm) Width: 15.54 in (394.7 mm) Depth: 14.75 in (374.7 mm)",
     "operatingMode": "Amplifier Channels: Single-amp LF/HF; Bi-amp LF, HF External Signal Processing: High pass filter; DSP w/2-way filters",
     "selfPowered": false,
-    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2394i.runtime.webp",
+    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2394i.jpg",
     "sourcePage": "https://eaw.com/products/mk2394i/"
   },
   {
@@ -1460,7 +1460,7 @@ const EAW_MODELS = [
     "dims": "Height: 30 in (762 mm) Width: 15.54 in (394.7 mm) Depth: 14.75 in (374.7 mm)",
     "operatingMode": "Amplifier Channels: Single-amp LF/HF; Bi-amp LF, HF External Signal Processing: High pass filter; DSP w/2-way filters",
     "selfPowered": false,
-    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2366i.runtime.webp",
+    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2366i.jpg",
     "sourcePage": "https://eaw.com/products/mk2366i/"
   },
   {
@@ -1484,7 +1484,7 @@ const EAW_MODELS = [
     "dims": "Height: 30 in (762 mm) Width: 15.54 in (394.7 mm) Depth: 14.75 in (374.7 mm)",
     "operatingMode": "Amplifier Channels: Single-amp LF/HF; Bi-amp LF, HF External Signal Processing: High pass filter; DSP w/2-way filters",
     "selfPowered": false,
-    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2364i.runtime.webp",
+    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2364i.jpg",
     "sourcePage": "https://eaw.com/products/mk2364i/"
   },
   {
@@ -1508,7 +1508,7 @@ const EAW_MODELS = [
     "dims": "Height: 30 in (762 mm) Width: 15.54 in (394.7 mm) Depth: 14.75 in (374.7 mm)",
     "operatingMode": "Amplifier Channels: Single-amp LF/HF; Bi-amp LF, HF External Signal Processing: High pass filter; DSP w/2-way filters",
     "selfPowered": false,
-    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2326i.runtime.webp",
+    "img": "public/assets/img/speakers/eaw/mk-series/spk-eaw-mk2326i.jpg",
     "sourcePage": "https://eaw.com/products/mk2326i/"
   },
   {

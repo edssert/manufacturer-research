@@ -125,7 +125,7 @@ const speakerGrid = catalogRules.find(
 );
 const speakerGroup = catalogRules.find(rule => rule.selector === "#spk-results .card-group");
 const speakerHead = catalogRules.find(
-  rule => rule.selector === "#spk-results .card-group__head" && rule.declarations.includes("--group-card-count"),
+  rule => rule.selector === "#spk-results .card-group__head" && rule.declarations.includes("width: 100%;"),
 );
 const speakerHeadSpacing = catalogRules.find(
   rule => rule.selector === "#spk-results .card-group__head" && rule.declarations.includes("--catalog-gap"),
@@ -150,8 +150,8 @@ check(
     speakerGroup?.declarations.includes("margin-left: auto;"),
 );
 check(
-  "섹션 헤더와 카드 목록은 실제 카드 수만큼만 늘어나고 공통 좌측선에서 시작함",
-  speakerHead?.declarations.includes("width: min(100%, calc(min(var(--group-card-count), 4) * 304px - 16px));") &&
+  "섹션 헤더는 공통 프레임 전체를 쓰고 카드 목록만 실제 카드 수만큼 늘어남",
+  speakerHead?.declarations.includes("width: 100%;") &&
     speakerGridWidth?.declarations.includes("width: min(100%, calc(min(var(--group-card-count), 4) * 304px - 16px));"),
 );
 check(

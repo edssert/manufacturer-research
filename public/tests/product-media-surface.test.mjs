@@ -18,7 +18,7 @@ function check(name, condition) {
 check("Speaker 레코드가 존재함", SPEAKERS.length > 0);
 check(
   "모든 Speaker 카드가 흰 제품 스테이지 변경자를 가짐",
-  SPEAKERS.every(speaker => cardHTML(speaker).includes('class="card__media product-media--white"')),
+  SPEAKERS.every(speaker => cardHTML(speaker).includes("product-media--white")),
 );
 check(
   "모든 Speaker 상세가 흰 제품 스테이지 변경자를 가짐",
@@ -30,6 +30,13 @@ check(
 const tokensCSS = readFileSync(join(ROOT, "public/css/tokens.css"), "utf8");
 const cardCSS = readFileSync(join(ROOT, "public/css/components/card.css"), "utf8");
 const modalCSS = readFileSync(join(ROOT, "public/css/components/modal.css"), "utf8");
+check(
+  "배경 사진 카드가 미디어 프레임을 채움",
+  ["spk-ad-vgx", "spk-ad-vgt"].every(id => {
+    const speaker = SPEAKERS.find(item => item.id === id);
+    return speaker && cardHTML(speaker).includes("card__media--cover");
+  }) && /\.card__media\.card__media--cover img\s*\{[^}]*object-fit:\s*cover;/s.test(cardCSS),
+);
 check("제품 이미지 스테이지의 단일 흰색 토큰이 정의됨", tokensCSS.includes("--product-media-surface: #fff;"));
 check(
   "카드 흰 스테이지가 그라디언트와 인공 그림자를 제거함",

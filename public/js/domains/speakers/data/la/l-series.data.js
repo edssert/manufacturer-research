@@ -60,19 +60,19 @@ export const LA_L_SERIES = [
       }
     ],
     "ampRaw": "LA7.16(1/1)",
-    "img": "public/assets/img/speakers/la/official/l-series/l2/01-l2.runtime.webp",
+    "img": "public/assets/img/speakers/la/official/l-series/l2/01-l2.png",
     "views": [
       {
         "label": "L2",
-        "src": "public/assets/img/speakers/la/official/l-series/l2/01-l2.runtime.webp"
+        "src": "public/assets/img/speakers/la/official/l-series/l2/01-l2.png"
       },
       {
         "label": "L2 line",
-        "src": "public/assets/img/speakers/la/official/l-series/l2/02-l2-line.runtime.webp"
+        "src": "public/assets/img/speakers/la/official/l-series/l2/02-l2-line.png"
       },
       {
         "label": "L2 on Chariot",
-        "src": "public/assets/img/speakers/la/official/l-series/l2/03-l2-on-chariot.runtime.webp"
+        "src": "public/assets/img/speakers/la/official/l-series/l2/03-l2-on-chariot.png"
       }
     ],
     "cardHoverView": "Array",
@@ -180,11 +180,11 @@ export const LA_L_SERIES = [
       }
     ],
     "ampRaw": "LA7.16(1/1)",
-    "img": "public/assets/img/speakers/la/official/l-series/l2d/01-l2d.runtime.webp",
+    "img": "public/assets/img/speakers/la/official/l-series/l2d/01-l2d.png",
     "views": [
       {
         "label": "L2D",
-        "src": "public/assets/img/speakers/la/official/l-series/l2d/01-l2d.runtime.webp"
+        "src": "public/assets/img/speakers/la/official/l-series/l2d/01-l2d.png"
       }
     ],
     "cardHoverView": "Rear",
@@ -322,7 +322,6 @@ export const LA_L_SERIES = [
     "amps": [],
     "ampRaw": null,
     "img": "public/assets/img/speakers/la/official/l-series/l1d/01-l1-product-overview-2.jpg",
-    "imgBack": "public/assets/img/speakers/la/l-series/spk-la-l1d-rear.png",
     "views": [
       {
         "label": "l1-product-overview-2",
@@ -333,7 +332,6 @@ export const LA_L_SERIES = [
         "src": "public/assets/img/speakers/la/official/l-series/l1d/02-l1-product-overview-4.jpg"
       }
     ],
-    "cardHoverView": "Rear",
     "relations": {
       "ampIds": []
     },

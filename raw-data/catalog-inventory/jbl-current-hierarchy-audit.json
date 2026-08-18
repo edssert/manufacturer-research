@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "jbl",
+  "scope": "current-loudspeaker-lifecycle-and-vtx-display-hierarchy",
+  "auditedAt": "2026-08-18",
+  "method": {
+    "primaryEvidenceRule": "A model is not legacy-only when JBL lists it on a current product-family page, even if its exact name is absent from the 2026 install catalog. An extant exact-model page alone is insufficient because JBL retains legacy pages.",
+    "catalogRule": "The 2026 Install Full Line Product Catalog is positive current evidence, not an exhaustive list of every current Tour Sound SKU.",
+    "displayRule": "Use JBL's current top-level Tour Sound family sequence for role hierarchy, then apply an explicit flagship/scale-first order inside each role. Preserve JBL's exact series names separately from the display hierarchy."
+  },
+  "primarySources": [
+    {
+      "kind": "official-current-products-index",
+      "url": "https://jblpro.com/en-US/product_families",
+      "finding": "Tour Sound lists VTX A-Series, VTX V Series, VTX F Series, VTX M Series, and VTX Subwoofer Series in that order. Legacy Products is a separate section."
+    },
+    {
+      "kind": "official-current-installed-index",
+      "url": "https://jblpro.com/en-US/product_families/installed.html",
+      "finding": "The current Installed page lists VTX A and V under Line Source, VTX F under Point Source, and VTX B under Subwoofers."
+    },
+    {
+      "kind": "official-current-family",
+      "url": "https://jblpro.com/en-US/product_families/vtx-series-a-series-models",
+      "finding": "Lists A6, A8, A12, and A12W; calls A-Series JBL's next-generation tour sound solution and states that all four models share the core platform."
+    },
+    {
+      "kind": "official-current-family",
+      "url": "https://jblpro.com/en-US/product_families/jbl-professional-vtx-v-series",
+      "finding": "Lists V25-II, V25-II-CS, V20, S25, and S28. The current top-level products index also links VTX V Series."
+    },
+    {
+      "kind": "official-current-family",
+      "url": "https://jblpro.com/en-US/product_families/vtx-series-f-series-models",
+      "finding": "Lists F12, F15, F35/64, F35/95, and F18S."
+    },
+    {
+      "kind": "official-current-family",
+      "url": "https://jblpro.com/en-US/product_families/vtx-m-series.html",
+      "finding": "Lists M20 and M22."
+    },
+    {
+      "kind": "official-current-family",
+      "url": "https://jblpro.com/en-US/product_families/vtx-series-b-series-models",
+      "finding": "Lists B15, B15G, B18, and B28."
+    },
+    {
+      "kind": "official-current-family",
+      "url": "https://jblpro.com/en-US/product_families/vtx-subwoofer-series.html",
+      "finding": "Lists B35, B35G, B15, B15G, B18, B28, S25, and S28."
+    },
+    {
+      "kind": "official-2026-catalog",
+      "path": "raw-data/official-docs/jbl/speakers/catalogues/jbl-2026-install-full-line-product-catalog.pdf",
+      "sha256": "f1444e0ad0d3641421bf5e7d4a343bbfee04ccafa251ccc4246c3ebb5798e2af",
+      "bytes": 31175069,
+      "pdfPages": 57,
+      "printedPages": "64-71",
+      "finding": "Presents VTX in the sequence A-Series, V-Series, F Series/M Series, then Subwoofer Series. It explicitly calls A6/A8/A12/A12W one four-model A-Series platform and includes all runtime VTX models except B15G, B35, and B35G."
+    }
+  ],
+  "runtimeInventoryAudit": {
+    "runtimeProductCount": 270,
+    "runtimeSeriesCount": 55,
+    "currentOfficialFamilyMembershipBasis": "All runtime series are sourced from JBL's current product-family/Installed/Live Portable indexes recorded in raw-data/series-order/jbl.json; exact-model legacy pages were not used to add a separate legacy-only series.",
+    "legacyOnlyRuntimeIds": [],
+    "deletionIds": [],
+    "conclusion": "No exact runtime ID has enough official evidence to classify it as legacy-only. Absence from the install catalog is not deletion evidence when the current JBL family page still lists the model.",
+    "limitation": "This is a family-membership lifecycle audit, not a claim that every one of the 270 SKUs appears by exact name in the install catalog. Future deletion requires an explicit JBL legacy placement, discontinued notice, or removal from every applicable current official family/index."
+  },
+  "vtxAudit": {
+    "runtimeCount": 22,
+    "currentFamilyListedCount": 22,
+    "catalogAndCurrentFamilyCount": 19,
+    "currentFamilyOnlyCount": 3,
+    "legacyOnlyCount": 0,
+    "currentFamilyOnlyIds": [
+      "spk-jbl-vtx-b15g",
+      "spk-jbl-vtx-b35",
+      "spk-jbl-vtx-b35g"
+    ],
+    "legacyOnlyIds": [],
+    "products": [
+      { "id": "spk-jbl-vtx-a12", "name": "VTX A12", "roleFamily": "A", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-a12w", "name": "VTX A12W", "roleFamily": "A", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-a8", "name": "VTX A8", "roleFamily": "A", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-a6", "name": "VTX A6", "roleFamily": "A", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-v25-ii", "name": "VTX V25-II", "roleFamily": "V", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-v25-ii-cs", "name": "VTX V25-II-CS", "roleFamily": "V", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-v20", "name": "VTX V20", "roleFamily": "V", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-f35-95", "name": "VTX F35/95", "roleFamily": "F", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-f35-64", "name": "VTX F35/64", "roleFamily": "F", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-f15", "name": "VTX F15", "roleFamily": "F", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-f12", "name": "VTX F12", "roleFamily": "F", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-f18s", "name": "VTX F18S", "roleFamily": "F", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-m22", "name": "VTX M22", "roleFamily": "M", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-m20", "name": "VTX M20", "roleFamily": "M", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-b35", "name": "VTX B35", "roleFamily": "B", "lifecycle": "current-family-only" },
+      { "id": "spk-jbl-vtx-b35g", "name": "VTX B35G", "roleFamily": "B", "lifecycle": "current-family-only" },
+      { "id": "spk-jbl-vtx-b28", "name": "VTX B28", "roleFamily": "B", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-b18", "name": "VTX B18", "roleFamily": "B", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-b15", "name": "VTX B15", "roleFamily": "B", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-b15g", "name": "VTX B15G", "roleFamily": "B", "lifecycle": "current-family-only" },
+      { "id": "spk-jbl-vtx-s28", "name": "VTX S28", "roleFamily": "S", "lifecycle": "current-catalog-and-family" },
+      { "id": "spk-jbl-vtx-s25", "name": "VTX S25", "roleFamily": "S", "lifecycle": "current-catalog-and-family" }
+    ]
+  },
+  "displayHierarchy": {
+    "manufacturerFamilyPriority": ["A", "V", "F", "M", "B", "S"],
+    "recommendedRuntimeOrder": [
+      "VTX A12",
+      "VTX A12W",
+      "VTX A8",
+      "VTX A6",
+      "VTX V25-II",
+      "VTX V25-II-CS",
+      "VTX V20",
+      "VTX F35/95",
+      "VTX F35/64",
+      "VTX F15",
+      "VTX F12",
+      "VTX F18S",
+      "VTX M22",
+      "VTX M20",
+      "VTX B35",
+      "VTX B35G",
+      "VTX B28",
+      "VTX B18",
+      "VTX B15",
+      "VTX B15G",
+      "VTX S28",
+      "VTX S25"
+    ],
+    "aSeries": {
+      "manufacturerNativeGridOrder": ["VTX A6", "VTX A8", "VTX A12", "VTX A12W"],
+      "recommendedFlagshipFirstDisplayOrder": ["VTX A12", "VTX A12W", "VTX A8", "VTX A6"],
+      "reason": "JBL calls A-Series its next-generation/flagship VTX platform. For this catalog's flagship-first convention, the dual-12 full-size pair precedes compact A8 and sub-compact A6. This is an explicit presentation transform, not a claim that JBL's web grid uses that order."
+    },
+    "doNotUse": ["A", "B", "F", "M", "V", "S"],
+    "doNotUseReason": "Putting all B subwoofers immediately after A moves the still-current V-Series full-range line arrays below a support-product family and contradicts JBL's current top-level Tour Sound order and 2026 catalog sequence."
+  },
+  "handoff": {
+    "deleteRuntimeIds": [],
+    "setVtxOrderTo": [
+      "VTX A12", "VTX A12W", "VTX A8", "VTX A6",
+      "VTX V25-II", "VTX V25-II-CS", "VTX V20",
+      "VTX F35/95", "VTX F35/64", "VTX F15", "VTX F12", "VTX F18S",
+      "VTX M22", "VTX M20",
+      "VTX B35", "VTX B35G", "VTX B28", "VTX B18", "VTX B15", "VTX B15G",
+      "VTX S28", "VTX S25"
+    ]
+  }
+}

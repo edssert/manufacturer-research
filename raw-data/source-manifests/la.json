@@ -4904,6 +4904,19 @@
       "mimeType": "image/jpeg"
     },
     {
+      "path": "raw-data/raw-assets/la/speakers/k-series/kiva-ii/3DR_Kiva_II_Perspective_01-800x400-1.png",
+      "productIds": [
+        "spk-la-kiva-ii"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.l-acoustics.com/products/KIVA-II/",
+      "sourceAsset": "https://www.l-acoustics.com/wp-content/uploads/2021/04/3DR_Kiva_II_Perspective_01-800x400-1.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "e68d3d72484c31ac637cf5044b3f5eedb4eaa748b47d45d604656fed74849c03",
+      "bytes": 149870,
+      "mimeType": "image/png"
+    },
+    {
       "path": "raw-data/raw-assets/la/speakers/k-series/kiva-ii/Kiva-II.jpg",
       "productIds": [
         "spk-la-kiva-ii"
@@ -6014,6 +6027,19 @@
       "mimeType": "image/jpeg"
     },
     {
+      "path": "raw-data/raw-assets/la/speakers/x-series/5xt/official-page/3DR_5XT_3_4_Avant_Catalogue_01.png",
+      "productIds": [
+        "spk-la-5xt"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.l-acoustics.com/products/5XT/",
+      "sourceAsset": "https://www.l-acoustics.com/wp-content/uploads/2021/02/3DR_5XT_3_4_Avant_Catalogue_01.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "771a94f1bed525cb66d32543ae05aaddd8119809074b9b31b3bda0bf7f59e8d7",
+      "bytes": 273466,
+      "mimeType": "image/png"
+    },
+    {
       "path": "raw-data/raw-assets/la/speakers/x-series/x12/X12/L_Acoustics_Gamme_X.jpg",
       "productIds": [
         "spk-la-x12"
@@ -6064,6 +6090,19 @@
       "sha256": "9b39260b8c35ca2575444b634f65e0bc7e66e6f7eddcb41fba19d23e637b441e",
       "bytes": 2536045,
       "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/la/speakers/x-series/x12/official-page/3DR_X12_3_4_Avant_Catalogue_01.png",
+      "productIds": [
+        "spk-la-x12"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.l-acoustics.com/products/X12/",
+      "sourceAsset": "https://www.l-acoustics.com/wp-content/uploads/2020/12/3DR_X12_3_4_Avant_Catalogue_01.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "9f37bcc0f2170468763873bbc94e74924c092128767d8b8b4679aec46d1c67f7",
+      "bytes": 272423,
+      "mimeType": "image/png"
     },
     {
       "path": "raw-data/raw-assets/la/speakers/x-series/x15-hiq/X15 HiQ/L_Acoustics_Gamme_X.jpg",
@@ -6131,6 +6170,19 @@
       "mimeType": "image/jpeg"
     },
     {
+      "path": "raw-data/raw-assets/la/speakers/x-series/x15-hiq/official-page/3DR_X15HiQ_Perspective_01.png",
+      "productIds": [
+        "spk-la-x15-hiq"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.l-acoustics.com/products/X15-HiQ/",
+      "sourceAsset": "https://www.l-acoustics.com/wp-content/uploads/2020/12/3DR_X15HiQ_Perspective_01.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "97c686160fa2b2817241dec8792d5b9a6ec4e9aa957ccfa70244ac9c66ce464d",
+      "bytes": 139735,
+      "mimeType": "image/png"
+    },
+    {
       "path": "raw-data/raw-assets/la/speakers/x-series/x4i/Visuals/L-Acoustics_X4i.jpg",
       "productIds": [
         "spk-la-x4i"
@@ -6194,6 +6246,19 @@
       "sha256": "9e8510d0401362b587a2eafee4bddd6341552fe4199827b1fa9402951bb54c64",
       "bytes": 4061450,
       "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/la/speakers/x-series/x4i/official-page/3DR_X4i_3_4_Avant_Catalogue_01.png",
+      "productIds": [
+        "spk-la-x4i"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.l-acoustics.com/products/X4i/",
+      "sourceAsset": "https://www.l-acoustics.com/wp-content/uploads/2020/12/3DR_X4i_3_4_Avant_Catalogue_01.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "8b7e0dd991bb5bd1d1f681f62bc091ba5eea4a19062e726c699350d0e548671e",
+      "bytes": 249301,
+      "mimeType": "image/png"
     },
     {
       "path": "raw-data/raw-assets/la/speakers/x-series/x4r/3DR_X4i_In_Ceiling_01.png",
@@ -6271,6 +6336,19 @@
       "retrievedAt": "2026-08-18",
       "sha256": "672c5790001e99dd59ec1d947c154b843a2818e398f521e62fa874c27c3edda5",
       "bytes": 6550922,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/la/speakers/x-series/x4r/official-page/3DR_X4r-inWall_White_RAL_800x800_01.png",
+      "productIds": [
+        "spk-la-x4r"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.l-acoustics.com/products/X4r/",
+      "sourceAsset": "https://www.l-acoustics.com/wp-content/uploads/2023/07/3DR_X4r-inWall_White_RAL_800x800_01.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "65adde01822333815bacd80336ff028106783e111a12d3d978a6001f887fa759",
+      "bytes": 167490,
       "mimeType": "image/png"
     },
     {
@@ -6365,6 +6443,19 @@
       "mimeType": "image/png"
     },
     {
+      "path": "raw-data/raw-assets/la/speakers/x-series/x6i/official-page/x6i.png",
+      "productIds": [
+        "spk-la-x6i"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.l-acoustics.com/products/X6i/",
+      "sourceAsset": "https://www.l-acoustics.com/wp-content/uploads/2023/12/x6i.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "98569c63f976450ec0a9192203f97a5cb5a0c97cdc12a0569b9529cb22eff0e9",
+      "bytes": 215409,
+      "mimeType": "image/png"
+    },
+    {
       "path": "raw-data/raw-assets/la/speakers/x-series/x8/X8/L_Acoustics_Gamme_X.jpg",
       "productIds": [
         "spk-la-x8"
@@ -6402,6 +6493,19 @@
       "sha256": "6831812dd9785a378a95defd44f676b0c48d4b6aa9ad2e55831266c0707bef5f",
       "bytes": 2486936,
       "mimeType": "image/jpeg"
+    },
+    {
+      "path": "raw-data/raw-assets/la/speakers/x-series/x8/official-page/3DR_X8_3_4_Avant_Catalogue_01.png",
+      "productIds": [
+        "spk-la-x8"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.l-acoustics.com/products/X8/",
+      "sourceAsset": "https://www.l-acoustics.com/wp-content/uploads/2020/12/3DR_X8_3_4_Avant_Catalogue_01.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "4fda3d3815b19765d5e8cd5b93d5ec3acb96bb2b57b909df5a04ecca7be1a454",
+      "bytes": 247753,
+      "mimeType": "image/png"
     },
     {
       "path": "raw-data/raw-assets/la/speakers/x-series/x8i/X8i_visuals/X8i Front White.png",
@@ -6492,6 +6596,19 @@
       "retrievedAt": "2026-08-18",
       "sha256": "a8280662f6fcd4c62ba736a05641891e53a58cb62f4b34a5ec63bbcd215c37a0",
       "bytes": 5447789,
+      "mimeType": "image/png"
+    },
+    {
+      "path": "raw-data/raw-assets/la/speakers/x-series/x8i/official-page/x8i.png",
+      "productIds": [
+        "spk-la-x8i"
+      ],
+      "role": "product-image",
+      "sourcePage": "https://www.l-acoustics.com/products/X8i/",
+      "sourceAsset": "https://www.l-acoustics.com/wp-content/uploads/2022/12/x8i.png",
+      "retrievedAt": "2026-08-18",
+      "sha256": "99fca0ccc14d5d92ea7dab2aab28bb031d38d5adf79ed1cd5c88f255c0384ed3",
+      "bytes": 196291,
       "mimeType": "image/png"
     }
   ]

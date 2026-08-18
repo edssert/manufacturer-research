@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "ev",
+  "auditedAt": "2026-08-18",
+  "scope": "전체 runtime speaker 데이터의 lowInch 이상치와 Electro-Voice 원문 필드 대조",
+  "scan": {
+    "dataset": "public/js/domains/speakers/speakers.data.js",
+    "rule": "Number.isFinite(lowInch) && lowInch > 36",
+    "resultCount": 3,
+    "allValuesAbove24": [
+      {
+        "value": 32,
+        "productId": "spk-funktion-f132",
+        "status": "valid"
+      },
+      {
+        "value": 165,
+        "productId": "spk-ev-evid-pc6-2",
+        "status": "invalid"
+      },
+      {
+        "value": 200,
+        "productId": "spk-ev-evid-pc8-2",
+        "status": "invalid"
+      },
+      {
+        "value": 920,
+        "productId": "spk-ev-evid-c12-2",
+        "status": "invalid"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "productId": "spk-ev-evid-pc6-2",
+      "name": "EVID-PC6.2",
+      "runtimeLocation": "public/js/domains/speakers/data/ev.data.js:5573",
+      "runtimeLowInch": 165,
+      "runtimeTransducers": "LF: 1 × 165″",
+      "rawDocument": "raw-data/official-docs/ev/catalog/products-index-2026-08-18.json",
+      "rawField": "parametricFilters.lf_transducer_size_in[0]",
+      "rawValue": "165 mm (6.5 in)",
+      "officialProductPage": "https://products.electrovoice.com/na/en/evid-pc62",
+      "correctLowInch": 6.5,
+      "correctTransducers": "LF: 1 × 6.5″ (165 mm)",
+      "classification": "unit-parsing-error",
+      "cause": "괄호 안 in 값을 선택하지 않고 문자열의 첫 숫자 165를 inch로 사용했다."
+    },
+    {
+      "productId": "spk-ev-evid-pc8-2",
+      "name": "EVID-PC8.2",
+      "runtimeLocation": "public/js/domains/speakers/data/ev.data.js:5522",
+      "runtimeLowInch": 200,
+      "runtimeTransducers": "LF: 1 × 200″",
+      "rawDocument": "raw-data/official-docs/ev/catalog/products-index-2026-08-18.json",
+      "rawField": "parametricFilters.lf_transducer_size_in[0]",
+      "rawValue": "200 mm (8 in)",
+      "officialProductPage": "https://products.electrovoice.com/na/en/evid-pc82",
+      "correctLowInch": 8,
+      "correctTransducers": "LF: 1 × 8″ (200 mm)",
+      "classification": "unit-parsing-error",
+      "cause": "괄호 안 in 값을 선택하지 않고 문자열의 첫 숫자 200을 inch로 사용했다."
+    },
+    {
+      "productId": "spk-ev-evid-c12-2",
+      "name": "EVID C12.2",
+      "runtimeLocation": "public/js/domains/speakers/data/ev.data.js:6400",
+      "runtimeLowInch": 920,
+      "runtimeTransducers": "LF: 1 × 920″",
+      "rawDocument": "raw-data/official-docs/ev/catalog/products-index-2026-08-18.json",
+      "rawField": "parametricFilters.lf_transducer_size_in[0]",
+      "rawValue": "920-8B,12 in.(305 mm)High- Efficiency Coaxial Driver",
+      "officialProductPage": "https://products.electrovoice.com/na/en/evid-c122",
+      "correctLowInch": 12,
+      "correctTransducers": "LF: 1 × 12″ EVID 920-8B coaxial driver",
+      "classification": "model-number-parsing-error",
+      "cause": "드라이버 모델명 920-8B의 선행 숫자 920을 크기로 오인했고 뒤따르는 명시 단위 값 12 in을 사용하지 않았다."
+    }
+  ],
+  "filterPropagation": {
+    "schemaLocation": "public/js/domains/speakers/speakers.schema.js",
+    "field": "chipFields.lowInch",
+    "uiLocation": "public/js/ui/filters.js",
+    "cause": "lowInch chip에는 고정 order 또는 유효 범위가 없어 runtime 데이터의 모든 고유 숫자가 그대로 정렬ㆍ노출된다.",
+    "observedInvalidChips": [
+      "165″",
+      "200″",
+      "920″"
+    ]
+  },
+  "recommendedPatch": [
+    {
+      "file": "public/js/domains/speakers/data/ev.data.js",
+      "changes": [
+        "spk-ev-evid-pc6-2: lowInch 165→6.5, transducers를 LF: 1 × 6.5″ (165 mm)로 수정",
+        "spk-ev-evid-pc8-2: lowInch 200→8, transducers를 LF: 1 × 8″ (200 mm)로 수정",
+        "spk-ev-evid-c12-2: lowInch 920→12, transducers를 LF: 1 × 12″ EVID 920-8B coaxial driver로 수정"
+      ]
+    },
+    {
+      "file": "수집/생성 파서",
+      "changes": [
+        "lowInch 추출 시 `<number> in`, `<number>-inch`, `<number>″`처럼 inch 단위에 직접 결합된 숫자만 채택",
+        "`mm (N in)` 형식은 괄호 안 inch 값을 우선하고 mm만 있으면 25.4로 나눠 표준 호칭값에 매핑",
+        "920-8B 같은 모델 번호와 W, Hz, mm 숫자는 inch 후보에서 제외",
+        "명시적인 inch 단위가 없거나 다중 후보가 모순되면 null/pending으로 남기고 자동 추정하지 않음"
+      ]
+    }
+  ],
+  "regressionTests": [
+    {
+      "target": "public/tests/data-contracts.test.mjs 또는 speaker-driver-values.test.mjs",
+      "assertion": "모든 finite lowInch는 1 이상 36 이하이며 lowQty는 양의 정수여야 한다.",
+      "negativeFixture": "lowInch=200 레코드를 주입하면 invalid-driver-inch 오류가 발생해야 한다."
+    },
+    {
+      "target": "public/tests/speaker-driver-values.test.mjs",
+      "assertion": "세 제품 ID의 lowInch가 각각 6.5, 8, 12이고 transducers 문자열에도 같은 inch 값이 존재해야 한다."
+    },
+    {
+      "target": "파서 단위 테스트",
+      "fixtures": [
+        {
+          "input": "165 mm (6.5 in)",
+          "expected": 6.5
+        },
+        {
+          "input": "200 mm (8 in)",
+          "expected": 8
+        },
+        {
+          "input": "920-8B,12 in.(305 mm)High- Efficiency Coaxial Driver",
+          "expected": 12
+        },
+        {
+          "input": "920-8B",
+          "expected": null
+        }
+      ]
+    },
+    {
+      "target": "필터 회귀 테스트",
+      "assertion": "Low Driver chip의 숫자 목록에 36보다 큰 값이 없고 6.5″, 8″, 12″가 존재해야 한다."
+    }
+  ]
+}

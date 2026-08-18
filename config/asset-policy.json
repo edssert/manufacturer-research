@@ -35,13 +35,41 @@
     "whiteBorderThreshold": 0.9,
     "opaquePhotosAreCutoutCandidates": false,
     "officialShadowCompositionIsPreserved": true,
-    "sourcedAssetsRequireHashManifest": true
+    "sourcedAssetsRequireHashManifest": true,
+    "interactiveImageSurface": {
+      "contract": "official-original-bytes",
+      "htmlImgSrcMustResolveToRawByteIdenticalPublicCopy": true,
+      "preserveSourceFormat": true,
+      "preserveSourceDimensions": true,
+      "preserveSourceMetadata": true,
+      "derivedImagesAllowedAsImgSrc": false,
+      "rightClickOpenImageMustReturnOriginal": true,
+      "provenanceManifest": "config/runtime-media-manifest.json"
+    },
+    "representativeMedia": {
+      "prohibitedContent": [
+        "award-badge",
+        "promotional-mark",
+        "text-overlay",
+        "feature-callout",
+        "unrelated-series-artwork"
+      ],
+      "selectionOrder": ["clean-official-view", "official-manufacturer-variant-alias", "documented-local-mask"],
+      "localMaskRequires": [
+        "immutable-raw-source",
+        "source-and-output-sha256",
+        "declared-edit-bounds",
+        "pixel-diff-contained-in-bounds",
+        "product-pixels-unchanged"
+      ],
+      "provenanceManifest": "config/runtime-media-overrides.json"
+    }
   },
   "knownExactDuplicates": {
     "reviewStatus": "reviewed-same-brand-variant-aliases",
-    "groups": 105,
+    "groups": 107,
     "files": 270,
-    "recoverableBytes": 141615065,
+    "recoverableBytes": 578634953,
     "automaticDeletionAllowed": false,
     "historyRewriteRequiresSeparateApproval": true
   }

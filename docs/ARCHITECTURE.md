@@ -4,9 +4,18 @@
 작업 규칙은 [루트 README](../README.md), 비개발자용 설명은
 [쉬운 구조 안내](ARCHITECTURE_GUIDE.md)를 참고한다.
 
+이 시스템이 해결해야 하는 제조사별 시스템 학습과 설계·입찰 요구조건 기반 탐색은
+[제품 비전](PRODUCT_VISION.md)이 정의한다. 아래 정적 구조는 현재 기준선이며,
+복수 관리자와 요구조건 평가를 위한 목표 서비스 경계는 ADR-0006이 정의한다.
+
+구조를 이렇게 정한 근거는 [ADR](adr/)에, 실제 작업 절차는 [SOP](sop/)에, 검증
+명령이 지키는 계약은 [품질 게이트](quality-gates.md)에 있다. 제품 수·결손 목록 같은
+변동 수치는 이 문서에 복제하지 않고 `config/*.json`을 링크한다
+([ADR-0003](adr/0003-baseline-json-source-of-truth.md)).
+
 ## 1. 시스템 경계
 
-Sound Systems Index는 정적 단일 페이지 앱이다.
+현재 Sound Systems Index 공개 기준선은 정적 단일 페이지 앱이다.
 
 - 브라우저 런타임: Vanilla JavaScript ES modules, HTML, CSS
 - 서버 측 런타임·API·데이터베이스: 없음
@@ -23,12 +32,26 @@ artifact를 만드는 것이다.
 
 ```text
 index.html
-config/
-  asset-policy.json          런타임 자산과 중복 baseline
+config/                      기계 판독 기준선 (ADR-0003)
+  asset-policy.json          런타임 자산 정책, 원본 아카이브 위치, 중복 baseline
   data-governance.json       출처 coverage와 허용된 데이터 공백
+  media-sources.json         공식 출처가 확인된 런타임 이미지
+  runtime-media-manifest.json 적용된 런타임 파생 계획
+  runtime-media-overrides.json 대표 이미지 예외 provenance
+  speaker-research.json      스피커 카드 조사 인벤토리
+  speaker-source-registry.json 수집 대상 공식 원문 목록
+  speaker-source-lock.json   수집된 원문의 고정 해시
 docs/
-raw-data/
-  raw-specs/                 canonical 원문 사양
+  adr/                       아키텍처 결정 기록
+  sop/                       표준 작업 절차
+raw-data/                    증거 계층 (ADR-0002); 배포 제외
+  official-docs/             제조사 공식 문서 원본 (Git LFS)
+  raw-assets/                제조사 원본 미디어 (Git LFS)
+  raw-specs/                 canonical 원문 사양 노트
+  research-gaps/             완료할 수 없는 레코드의 검토 기록
+  source-manifests/          원본 provenance
+  series-order/              공식 시리즈 순서 근거 (ADR-0005)
+  catalog-inventory/         현행/레거시 판정 감사
 public/
   assets/
     fonts/
@@ -49,20 +72,29 @@ public/
     ui/
   tests/
 scripts/
-  audit-assets.mjs
-  build.mjs
-  build.test.mjs
-  serve.mjs
-  serve.test.mjs
-  verify-dist.mjs
-  normalize_images.py
-  montage_check.py
+  build.mjs                  배포 artifact 생성
+  build.test.mjs             그래프 거부 사례와 빌드 결정성
+  verify-dist.mjs            dist 경계·해시·그래프 검증
+  serve.mjs                  경계가 제한된 로컬 preview 서버
+  serve.test.mjs             preview 서버 경계 테스트
+  audit-assets.mjs           자산 참조·고아·중복 baseline
+  audit-media-sources.mjs    공식 출처 런타임 이미지 검증
+  audit-source-manifests.mjs 원본 provenance 전수 대조
+  audit-speaker-research.mjs 조사 인벤토리 재계산
+  fetch-speaker-sources.mjs  공식 원문 수집과 lock 검증
+  runtime-media-pipeline.mjs 런타임 파생 dry-run/apply/verify
+  normalize_images.py        투명 렌더 여백 정규화 (기본 dry)
+  montage_check.py           육안 검수용 썸네일 그리드
 dist/                        빌드 생성물
 ```
 
+`fetch-jbl-product-media.mjs`, `build-meyer-provenance.mjs`,
+`import-meyer-*.ps1`처럼 제조사별 일회성 수집·정리에 쓰는 도구도 `scripts/`에 있다.
+이들은 `npm run verify` 경로에 포함되지 않는다.
+
 경계는 다음과 같다.
 
-- `raw-data/raw-specs/`는 출처 보관 영역이며 브라우저와 배포 artifact에
+- `raw-data/` 전체는 증거 보관 영역이며 브라우저와 배포 artifact에
   포함되지 않는다.
 - `public/tests/`, `docs/`, `config/`, 개발 스크립트와 package 파일도
   배포하지 않는다.
@@ -144,7 +176,7 @@ Brand처럼 관계 상세 이동이 필요하지 않은 특수 도메인은 `det
 - 원본 배열에 UI 파생 값을 써넣지 않는다. 스피커는
   `createSpeakerCatalog()`가 동결된 런타임 모델을 만들고, 앰프의 매칭 개수는
   `withDerivedSpeakerCount()`가 조회 함수를 통해 계산한다.
-- `speakers.card-model.js`는 198개 런타임 레코드를 버전이 명시된 불변 카드
+- `speakers.card-model.js`는 등록된 모든 런타임 레코드를 버전이 명시된 불변 카드
   표시 모델로 투영한다. 제조사·제품 형식을 하드코딩하지 않고 대역 수,
   Max SPL, 외부 앰프·셀프파워드·미확인, verified·pending 상태를 구분한다.
   전체 Speaker가 같은 렌더러를 사용하며 투영 계약은 전 레코드 단위 테스트를 통과해야 한다.
@@ -350,30 +382,47 @@ JS/HTML과 CSS 사이에서 대조하며, `css-layout-contract.test.mjs`는 중�
 
 현재 결손과 예외는 문서에 별도 복제하지 않는다. 변경 시
 `config/data-governance.json`을 근거와 함께 갱신하고 `npm run test:data`로
-baseline을 확인한다.
+baseline을 확인한다([ADR-0003](adr/0003-baseline-json-source-of-truth.md)).
+
+원문 확보부터 데이터 반영까지의 절차는
+[원문 수집 SOP](sop/source-intake.md)에 있다.
 
 ## 10. 자산 거버넌스
 
+증거 계층과 런타임 계층의 분리 근거는
+[ADR-0002](adr/0002-source-and-runtime-layers.md)에, 대표 이미지 콘텐츠 정책은
+[ADR-0004](adr/0004-runtime-image-content-policy.md)에 있다.
+
 `config/asset-policy.json`이 런타임 자산 루트, 허용 확장자, 누락·고아 허용량,
-원본 아카이브 위치, 정규화 정책, 완전 중복 baseline을 정의한다.
+원본 아카이브 위치와 저장 방식, 정규화 정책, 대표 이미지 선택 순서, 완전 중복
+baseline을 정의한다.
 
-`scripts/audit-assets.mjs`는 다음을 수행한다.
+자산 감사는 네 층으로 나뉜다.
 
-- HTML, CSS, JavaScript에서 `public/assets/` 참조 수집
-- 런타임 파일과 참조의 누락·고아 양방향 대조
-- 파일별 SHA-256과 바이트 수 계산
-- 완전 중복 그룹과 회수 가능 바이트를 정책 baseline과 비교
+| 스크립트                        | 확인 대상                                                             |
+| ------------------------------- | --------------------------------------------------------------------- |
+| `scripts/audit-assets.mjs`      | HTML/CSS/JS의 `public/assets/` 참조 수집, 누락·고아 양방향 대조, 파일별 SHA-256·바이트, 완전 중복 그룹과 회수 가능 바이트의 baseline 비교 |
+| `scripts/audit-media-sources.mjs` | 공식 출처가 확인된 런타임 이미지의 해시·해상도, HTTPS와 승인 호스트, 보존 원본 존재 |
+| `scripts/audit-source-manifests.mjs` | `raw-data/source-manifests/`의 전 항목과 실제 파일의 경로·해시·바이트, 역할 어휘, 제품 ID 유효성 |
+| `public/tests/runtime-media-manifest.test.mjs` | 적용된 런타임 파생 manifest의 계약                        |
 
 중복은 내용이 같은 파일일 뿐 의미상 같은 제품 자산이라는 보장이 없으므로
 자동 삭제하지 않는다.
 
-`scripts/normalize_images.py`는 PNG/JPEG/WebP를 확장자 그대로 처리한다.
-기본 `dry` 모드는 원본과 예상 출력의 크기·해상도·알파·SHA-256 manifest를
-만들 뿐 파일을 바꾸지 않는다. `apply`는 현재 재계산 결과가 검토한 dry-run
-manifest와 완전히 같을 때만 모든 검증을 먼저 끝낸 뒤 파일별 원자 교체를
-수행한다. 무알파, 전체 프레임 알파, 명시적 제외 이미지는 자동 적용하지
-않는다. `montage_check.py`는 수동 육안 검수용 생성물을 만들며 그 결과는
-런타임 자산으로 커밋하지 않는다.
+`scripts/runtime-media-pipeline.mjs`가 런타임 파생의 단일 경로다. `dry-run`은
+참조·해시·해상도·원본 대응을 계산해 계획만 만들고, `apply`는 그 계획이 그대로
+재현될 때만 실행되며 알파·치수·가시 픽셀 차이를 검사한 뒤 데이터 경로를 갱신한다.
+`verify`는 적용된 manifest와 실제 파일을 다시 대조한다. 정책 값과 대상·제외 브랜드는
+`config/runtime-media-manifest.json`이 원본이다.
+
+`scripts/normalize_images.py`는 투명 제품 렌더의 여백 정규화 도구다. 기본 `dry`
+모드는 manifest만 만들고, `apply`는 검토한 dry-run과 완전히 같을 때만 원자 교체를
+수행한다. 무알파, 전체 프레임 알파, 명시적 제외 이미지는 자동 적용하지 않는다.
+`montage_check.py`는 육안 검수용 생성물을 만들며 그 결과는 런타임 자산으로
+커밋하지 않는다.
+
+실행 절차는 [런타임 미디어 SOP](sop/runtime-media.md)와
+[육안 검수 SOP](sop/visual-review.md)에 있다.
 
 ## 11. 빌드 artifact
 
@@ -406,50 +455,51 @@ SHA-256을 기록한 `asset-manifest.json`을 만든다. `verify-dist.mjs`는 �
 
 ## 12. 검증 계층
 
-`npm run verify`의 순서는 다음과 같다.
+`npm run verify`는 정적 검사(lint, 형식, 타입) → 전체 테스트(`npm test`) →
+빌드 결정성(`npm run test:build`) → 최종 `dist/` 검증(`npm run verify:dist`) 순으로
+실행된다. `npm test`는 단위, 데이터, 앰프 관계, 감사, 보안, UI 하위 게이트를 이
+순서로 묶는다.
 
-1. ESLint
-2. Prettier 형식 검사
-3. TypeScript `checkJs`
-4. 단위 테스트: route codec, 제조사, entity registry, 데이터 계약,
-   speaker catalog 순수성
-5. 데이터 테스트: 전체 데이터 감사, 출처 거버넌스
-6. amplifier 관계 무결성, 파생 순수성, Configuration 그룹화·렌더링 계약
-7. 감사: CSS 클래스, 주석, CSS layout, 자산
-8. 보안: CSP 정책, 경계가 제한된 preview server
-9. UI: 전체 부팅 smoke, 회귀, 접근성, 관계 이동
-10. import graph와 반복 빌드 결정성
-11. 최종 `dist/` 검증
+각 게이트가 어떤 계약을 지키는지와 파이프라인 밖에서 실행하는 검사는
+[품질 게이트](quality-gates.md)에 정리되어 있다. 명령 정의의 단일 원본은
+[`package.json`](../package.json)의 `scripts`다.
 
 jsdom 테스트는 실제 브라우저 API 중 필요한 부분을 stub하고, UI의 DOM 계약과
-상태 전이를 검증한다. 배포 전에는 필요에 따라 실제 브라우저에서 데스크톱과
-모바일 레이아웃, 키보드 흐름, 콘솔·네트워크 오류도 확인한다.
+상태 전이를 검증한다. 실제 렌더링·확대·터치는 검증하지 않으므로 화면 변경은
+[브라우저 검수 SOP](sop/browser-review.md)로 보완한다.
 
 ## 13. GitHub Actions 배포
 
 `.github/workflows/ci-pages.yml`은 pull request와 모든 push에서 verify job을
-실행한다. Node 24 환경에서 `npm ci`, `npm run verify`, `npm run build`가
-성공해야 한다.
+실행한다. Node 버전은 `.node-version`에서 읽으며 `npm ci`, `npm run verify`,
+`npm run build`가 성공해야 한다.
 
 `main` push일 때만 verify job이 `dist/`를 GitHub Pages artifact로
 업로드하고, 별도 deploy job이 그 artifact를 배포한다. 소스 저장소 전체나
 브랜치 루트를 Pages에 직접 노출하지 않는다. 저장소의 Pages source는
 워크플로와 별개인 GitHub 설정이므로 **GitHub Actions**로 선택해야 한다.
 
+`.github/workflows/security.yml`은 pull request의 의존성 변경 검토와
+JavaScript·Python CodeQL 분석을 실행하고 주 1회 예약 실행도 한다.
 `.github/dependabot.yml`은 npm과 GitHub Actions 의존성을 정기 검사한다.
 자동 업데이트가 들어와도 같은 verify 경계를 통과해야 한다.
+
+배포 전 확인 순서는 [릴리스 체크리스트](release-checklist.md)에 있다.
 
 ## 14. 확장 절차
 
 ### 제품 추가
 
-1. canonical 원문을 `raw-data/raw-specs/`의 제조사·도메인 구조에 보존한다.
+1. 공식 원본을 `raw-data/`에 보존하고 source manifest에 등록한다. 세부 절차는
+   [원문 수집 SOP](sop/source-intake.md)를 따른다.
 2. 해당 `data/*.data.js`에 안정적인 prefix ID를 가진 레코드를 추가한다.
 3. 관계는 등록된 ID만 사용하고, 한쪽을 원본으로 삼는 관계는 역방향 값을
    중복 저장하지 않는다.
-4. 런타임 자산은 `public/assets/`에 추가하고 코드의 참조 경로와 실제
-   확장자를 일치시킨다.
-5. `npm run verify`를 실행한다.
+4. 시리즈와 제품의 표시 순서는 공식 근거를 따른다
+   ([ADR-0005](adr/0005-official-series-order.md)).
+5. 런타임 이미지는 [런타임 미디어 SOP](sop/runtime-media.md)로 만들고 코드의 참조
+   경로와 실제 확장자를 일치시킨다.
+6. `npm run verify`를 실행한다.
 
 ### 도메인 추가
 

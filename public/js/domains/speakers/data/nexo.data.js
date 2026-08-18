@@ -3232,11 +3232,11 @@ const NEXO_SOURCE_SPEAKERS = [
     dims: "344 x 675 x 378 mm (13 1/2” x 26 1/2” x 14 7/8”) excluding accessories · Rigging axis to axis height: 345mm (13 1/2”)",
     amps: [],
     ampRaw: null,
-    img: "public/assets/img/speakers/nexo/geo-s12/spk-nexo-geo-s1210-st.runtime.webp",
+    img: "public/assets/img/speakers/nexo/geo-s12/spk-nexo-geo-s1210-st.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/nexo/geo-s12/spk-nexo-geo-s1210-st.runtime.webp",
+        src: "public/assets/img/speakers/nexo/geo-s12/spk-nexo-geo-s1210-st.jpg",
       },
     ],
     relations: {
@@ -3431,11 +3431,11 @@ const NEXO_SOURCE_SPEAKERS = [
     dims: "344 x 675 x 400 mm (13 1/2” x 26 1/2” x 15 1/2”) excluding accessories · Rigging axis to axis height: 345mm (13 1/2”)",
     amps: [],
     ampRaw: null,
-    img: "public/assets/img/speakers/nexo/geo-s12/spk-nexo-geo-s12030-st.runtime.webp",
+    img: "public/assets/img/speakers/nexo/geo-s12/spk-nexo-geo-s12030-st.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/nexo/geo-s12/spk-nexo-geo-s12030-st.runtime.webp",
+        src: "public/assets/img/speakers/nexo/geo-s12/spk-nexo-geo-s12030-st.jpg",
       },
     ],
     relations: {
@@ -3663,11 +3663,11 @@ const NEXO_SOURCE_SPEAKERS = [
     dims: '520 x 1403 x 732mm (20.46" x 55.24" x 28.81") with handles (touring version) · 520 x 1238 x 732mm (20.46" x 48.75" x 28.81") without handles (install version)',
     amps: [],
     ampRaw: null,
-    img: "public/assets/img/speakers/nexo/rs/spk-nexo-rs18.runtime.webp",
+    img: "public/assets/img/speakers/nexo/rs/spk-nexo-rs18.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/nexo/rs/spk-nexo-rs18.runtime.webp",
+        src: "public/assets/img/speakers/nexo/rs/spk-nexo-rs18.jpg",
       },
     ],
     relations: {

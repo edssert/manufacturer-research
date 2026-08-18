@@ -222,7 +222,9 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-#spk-results .card-group__head,
+#spk-results .card-group__head {
+  width: 100%;
+}
 #spk-results .card-grid {
   width: min(100%, calc(min(var(--group-card-count), 4) * 304px - 16px));
 }
@@ -243,7 +245,6 @@ body {
   #spk-results .card-group {
     width: min(100%, 896px);
   }
-  #spk-results .card-group__head,
   #spk-results .card-grid {
     width: min(100%, calc(min(var(--group-card-count), 3) * 304px - 16px));
   }
@@ -253,7 +254,6 @@ body {
   #spk-results .card-group {
     width: min(100%, 592px);
   }
-  #spk-results .card-group__head,
   #spk-results .card-grid {
     width: min(100%, calc(min(var(--group-card-count), 2) * 304px - 16px));
   }

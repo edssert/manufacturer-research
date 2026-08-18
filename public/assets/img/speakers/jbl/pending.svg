@@ -1,9 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title description">
-  <title id="title">JBL Professional image pending</title>
-  <desc id="description">Neutral placeholder used only where the official product image has not yet been archived.</desc>
-  <rect width="640" height="480" fill="#fff"/>
-  <rect x="248" y="112" width="144" height="256" rx="12" fill="#f5f6f7" stroke="#c9ced4" stroke-width="2"/>
-  <circle cx="320" cy="190" r="30" fill="#dfe3e7" stroke="#aeb5bd" stroke-width="2"/>
-  <circle cx="320" cy="290" r="54" fill="#dfe3e7" stroke="#aeb5bd" stroke-width="2"/>
-  <text x="320" y="422" fill="#69727c" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">OFFICIAL IMAGE PENDING</text>
-</svg>
+version https://git-lfs.github.com/spec/v1
+oid sha256:e918ffbd4f919955ad46c9e2d04998f7d455cf25d08fe6daf40a0887b345b26b
+size 762

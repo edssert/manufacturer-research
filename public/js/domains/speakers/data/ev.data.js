@@ -31,11 +31,11 @@ export const EV_SPEAKERS = [
     dims: "597 mm x 345 mm x 347 mm",
     amps: [],
     ampRaw: "Integrated, 400 W",
-    img: "public/assets/img/speakers/ev/everse/spk-ev-everse12.runtime.webp",
+    img: "public/assets/img/speakers/ev/everse/spk-ev-everse12.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/everse/spk-ev-everse12.runtime.webp",
+        src: "public/assets/img/speakers/ev/everse/spk-ev-everse12.png",
       },
     ],
     relations: {
@@ -80,11 +80,11 @@ export const EV_SPEAKERS = [
     dims: "400 mm x 275 mm x 272 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/everse/spk-ev-everse8-w.runtime.webp",
+    img: "public/assets/img/speakers/ev/everse/spk-ev-everse8-w.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/everse/spk-ev-everse8-w.runtime.webp",
+        src: "public/assets/img/speakers/ev/everse/spk-ev-everse8-w.png",
       },
     ],
     relations: {
@@ -129,11 +129,11 @@ export const EV_SPEAKERS = [
     dims: "400 mm x 275 mm x 272 mm",
     amps: [],
     ampRaw: "Integrated, 400 W",
-    img: "public/assets/img/speakers/ev/everse/spk-ev-everse-8.runtime.webp",
+    img: "public/assets/img/speakers/ev/everse/spk-ev-everse-8.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/everse/spk-ev-everse-8.runtime.webp",
+        src: "public/assets/img/speakers/ev/everse/spk-ev-everse-8.png",
       },
     ],
     relations: {
@@ -177,11 +177,11 @@ export const EV_SPEAKERS = [
     dims: "520 mm x 606 mm x 612 mm",
     amps: [],
     ampRaw: "Integrated, 1300 W",
-    img: "public/assets/img/speakers/ev/ekx/spk-ev-ekx-18sp.runtime.webp",
+    img: "public/assets/img/speakers/ev/ekx/spk-ev-ekx-18sp.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/ekx/spk-ev-ekx-18sp.runtime.webp",
+        src: "public/assets/img/speakers/ev/ekx/spk-ev-ekx-18sp.png",
       },
     ],
     relations: {
@@ -375,11 +375,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-viwten54-12.runtime.webp",
+    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-viwten54-12.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-viwten54-12.runtime.webp",
+        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-viwten54-12.png",
       },
     ],
     relations: {
@@ -417,11 +417,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1181s.runtime.webp",
+    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1181s.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1181s.runtime.webp",
+        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1181s.png",
       },
     ],
     relations: {
@@ -468,11 +468,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1152-95.runtime.webp",
+    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1152-95.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1152-95.runtime.webp",
+        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1152-95.png",
       },
     ],
     relations: {
@@ -519,11 +519,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1152-64.runtime.webp",
+    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1152-64.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1152-64.runtime.webp",
+        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1152-64.png",
       },
     ],
     relations: {
@@ -570,11 +570,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-64.runtime.webp",
+    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-64.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-64.runtime.webp",
+        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-64.png",
       },
     ],
     relations: {
@@ -621,11 +621,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-95.runtime.webp",
+    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-95.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-95.runtime.webp",
+        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-95.png",
       },
     ],
     relations: {
@@ -672,11 +672,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1082-00.runtime.webp",
+    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1082-00.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1082-00.runtime.webp",
+        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1082-00.png",
       },
     ],
     relations: {
@@ -723,11 +723,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1082-96.runtime.webp",
+    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1082-96.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1082-96.runtime.webp",
+        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1082-96.png",
       },
     ],
     relations: {
@@ -774,11 +774,11 @@ export const EV_SPEAKERS = [
     dims: "302 mm x 198.8 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec8-2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec8-2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec8-2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec8-2.png",
       },
     ],
     relations: {
@@ -825,11 +825,11 @@ export const EV_SPEAKERS = [
     dims: "308 mm x 153.80 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec6-2e.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec6-2e.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec6-2e.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec6-2e.png",
       },
     ],
     relations: {
@@ -876,11 +876,11 @@ export const EV_SPEAKERS = [
     dims: "302 mm x 153.8 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec6-2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec6-2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec6-2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec6-2.png",
       },
     ],
     relations: {
@@ -927,11 +927,11 @@ export const EV_SPEAKERS = [
     dims: "212 mm x 163.4 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec4-2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec4-2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec4-2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec4-2.png",
       },
     ],
     relations: {
@@ -978,11 +978,11 @@ export const EV_SPEAKERS = [
     dims: "212 mm x 98.3 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec3-1.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec3-1.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec3-1.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-entry-ceiling/spk-ev-evid-ec3-1.png",
       },
     ],
     relations: {
@@ -1029,11 +1029,11 @@ export const EV_SPEAKERS = [
     dims: "353 mm x 250.7 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-1s-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-1s-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-1s-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-1s-g2.png",
       },
     ],
     relations: {
@@ -1078,11 +1078,11 @@ export const EV_SPEAKERS = [
     dims: "353 mm x 250.7 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-2hc-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-2hc-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-2hc-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-2hc-g2.png",
       },
     ],
     relations: {
@@ -1129,11 +1129,11 @@ export const EV_SPEAKERS = [
     dims: "302 mm x 249.2 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-2-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-2-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-2-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c8-2-g2.png",
       },
     ],
     relations: {
@@ -1180,11 +1180,11 @@ export const EV_SPEAKERS = [
     dims: "353 mm x 133.1 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c6-2lp-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c6-2lp-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c6-2lp-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c6-2lp-g2.png",
       },
     ],
     relations: {
@@ -1231,11 +1231,11 @@ export const EV_SPEAKERS = [
     dims: "302 mm x 153.8 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c6-2-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c6-2-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c6-2-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c6-2-g2.png",
       },
     ],
     relations: {
@@ -1282,11 +1282,11 @@ export const EV_SPEAKERS = [
     dims: "302 mm x 91 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c4-2lp-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c4-2lp-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c4-2lp-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c4-2lp-g2.png",
       },
     ],
     relations: {
@@ -1333,11 +1333,11 @@ export const EV_SPEAKERS = [
     dims: "212 mm x 163.6 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c4-2-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c4-2-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c4-2-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-ceiling-g2/spk-ev-evid-c4-2-g2.png",
       },
     ],
     relations: {
@@ -1385,11 +1385,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "Integrated, 2000 W",
-    img: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-90.runtime.webp",
+    img: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-90.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-90.runtime.webp",
+        src: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-90.png",
       },
     ],
     relations: {
@@ -1434,11 +1434,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-70.runtime.webp",
+    img: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-70.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-70.runtime.webp",
+        src: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-70.png",
       },
     ],
     relations: {
@@ -1476,11 +1476,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/eva/spk-ev-eva-2082s-1220-wht.runtime.webp",
+    img: "public/assets/img/speakers/ev/eva/spk-ev-eva-2082s-1220-wht.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/eva/spk-ev-eva-2082s-1220-wht.runtime.webp",
+        src: "public/assets/img/speakers/ev/eva/spk-ev-eva-2082s-1220-wht.png",
       },
     ],
     relations: {
@@ -1527,11 +1527,11 @@ export const EV_SPEAKERS = [
     dims: "334 mm x 409 mm x 484 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/pxm/spk-ev-pxm-12mp.runtime.webp",
+    img: "public/assets/img/speakers/ev/pxm/spk-ev-pxm-12mp.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/pxm/spk-ev-pxm-12mp.runtime.webp",
+        src: "public/assets/img/speakers/ev/pxm/spk-ev-pxm-12mp.png",
       },
     ],
     relations: {
@@ -1578,11 +1578,11 @@ export const EV_SPEAKERS = [
     dims: "710 mm x 423 mm x 384 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-15p.runtime.webp",
+    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-15p.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-15p.runtime.webp",
+        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-15p.png",
       },
     ],
     relations: {
@@ -1627,11 +1627,11 @@ export const EV_SPEAKERS = [
     dims: "629 mm x 363 mm x 344 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12p.runtime.webp",
+    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12p.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12p.runtime.webp",
+        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12p.png",
       },
     ],
     relations: {
@@ -1676,11 +1676,11 @@ export const EV_SPEAKERS = [
     dims: "531 mm x 330 mm x 319 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-10p.runtime.webp",
+    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-10p.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-10p.runtime.webp",
+        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-10p.png",
       },
     ],
     relations: {
@@ -1722,11 +1722,11 @@ export const EV_SPEAKERS = [
     dims: "600 mm x 507 mm x 574 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-18sp.runtime.webp",
+    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-18sp.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-18sp.runtime.webp",
+        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-18sp.png",
       },
     ],
     relations: {
@@ -1770,11 +1770,11 @@ export const EV_SPEAKERS = [
     dims: "397 mm x 445 mm x 457 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12sp.runtime.webp",
+    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12sp.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12sp.runtime.webp",
+        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12sp.png",
       },
     ],
     relations: {
@@ -1821,11 +1821,11 @@ export const EV_SPEAKERS = [
     dims: "697.6 x 422.8 x 383.1",
     amps: [],
     ampRaw: "Integrated, 1000",
-    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-15p-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-15p-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-15p-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-15p-g2.png",
       },
     ],
     relations: {
@@ -1870,11 +1870,11 @@ export const EV_SPEAKERS = [
     dims: "621.1 x 356.2 x 356",
     amps: [],
     ampRaw: "Integrated, 1000",
-    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-12p-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-12p-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-12p-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-12p-g2.png",
       },
     ],
     relations: {
@@ -1919,11 +1919,11 @@ export const EV_SPEAKERS = [
     dims: "459.6 x 289.9 x 280.5",
     amps: [],
     ampRaw: "Integrated, 1000",
-    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-8p-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-8p-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-8p-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-8p-g2.png",
       },
     ],
     relations: {
@@ -1968,11 +1968,11 @@ export const EV_SPEAKERS = [
     dims: "725 mm x 426 mm x 402 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-15p.runtime.webp",
+    img: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-15p.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-15p.runtime.webp",
+        src: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-15p.png",
       },
     ],
     relations: {
@@ -2019,11 +2019,11 @@ export const EV_SPEAKERS = [
     dims: "603 mm x 353 mm x 352 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-12p.runtime.webp",
+    img: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-12p.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-12p.runtime.webp",
+        src: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-12p.png",
       },
     ],
     relations: {
@@ -2065,11 +2065,11 @@ export const EV_SPEAKERS = [
     dims: "597 mm x 520 mm x 620 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-18sp.runtime.webp",
+    img: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-18sp.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-18sp.runtime.webp",
+        src: "public/assets/img/speakers/ev/eviva/spk-ev-eviva-18sp.png",
       },
     ],
     relations: {
@@ -2114,11 +2114,11 @@ export const EV_SPEAKERS = [
     dims: "30.3 in x 26.5 in x 28.6 in",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-215s-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-215s-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-215s-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-215s-g2.png",
       },
     ],
     relations: {
@@ -2165,11 +2165,11 @@ export const EV_SPEAKERS = [
     dims: "769 mm x 769 mm x 681 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evh-g2/spk-ev-evh-15-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evh-g2/spk-ev-evh-15-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evh-g2/spk-ev-evh-15-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evh-g2/spk-ev-evh-15-g2.png",
       },
     ],
     relations: {
@@ -2216,11 +2216,11 @@ export const EV_SPEAKERS = [
     dims: "769 mm x 470 mm x 518 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-15-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-15-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-15-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-15-g2.png",
       },
     ],
     relations: {
@@ -2267,11 +2267,11 @@ export const EV_SPEAKERS = [
     dims: "769 mm x 407 mm x 417 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-12-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-12-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-12-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evf-g2/spk-ev-evf-12-g2.png",
       },
     ],
     relations: {
@@ -2312,11 +2312,11 @@ export const EV_SPEAKERS = [
     dims: "950 mm x 110 mm x 150 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-1100.runtime.webp",
+    img: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-1100.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-1100.runtime.webp",
+        src: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-1100.png",
       },
     ],
     relations: {
@@ -2357,11 +2357,11 @@ export const EV_SPEAKERS = [
     dims: "950 mm x 185 mm x 250 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-2100.runtime.webp",
+    img: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-2100.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-2100.runtime.webp",
+        src: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-2100.png",
       },
     ],
     relations: {
@@ -2408,11 +2408,11 @@ export const EV_SPEAKERS = [
     dims: "580 mm x 105 mm x 144 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-1060.runtime.webp",
+    img: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-1060.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-1060.runtime.webp",
+        src: "public/assets/img/speakers/ev/lrc/spk-ev-lrc-1060.png",
       },
     ],
     relations: {
@@ -2459,11 +2459,11 @@ export const EV_SPEAKERS = [
     dims: "526 mm x 330 mm x 365 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-10p-2-way.runtime.webp",
+    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-10p-2-way.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-10p-2-way.runtime.webp",
+        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-10p-2-way.png",
       },
     ],
     relations: {
@@ -2505,11 +2505,11 @@ export const EV_SPEAKERS = [
     dims: "550 mm x 675 mm x 910 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-18sp.runtime.webp",
+    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-18sp.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-18sp.runtime.webp",
+        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-18sp.png",
       },
     ],
     relations: {
@@ -2553,11 +2553,11 @@ export const EV_SPEAKERS = [
     dims: "471 mm x 576 mm x 825 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-15sp.runtime.webp",
+    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-15sp.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-15sp.runtime.webp",
+        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-15sp.png",
       },
     ],
     relations: {
@@ -2604,11 +2604,11 @@ export const EV_SPEAKERS = [
     dims: "1023 mm x 469 mm x 426 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-35p.runtime.webp",
+    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-35p.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-35p.runtime.webp",
+        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-35p.png",
       },
     ],
     relations: {
@@ -2653,11 +2653,11 @@ export const EV_SPEAKERS = [
     dims: "691 mm x 431 mm x 447 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-15p-2-way.runtime.webp",
+    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-15p-2-way.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-15p-2-way.runtime.webp",
+        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-15p-2-way.png",
       },
     ],
     relations: {
@@ -2702,11 +2702,11 @@ export const EV_SPEAKERS = [
     dims: "613 mm x 381 mm x 400 mm",
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-12p-2-way.runtime.webp",
+    img: "public/assets/img/speakers/ev/etx/spk-ev-etx-12p-2-way.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-12p-2-way.runtime.webp",
+        src: "public/assets/img/speakers/ev/etx/spk-ev-etx-12p-2-way.png",
       },
     ],
     relations: {
@@ -2748,11 +2748,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2uw.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2uw.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2uw.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2uw.png",
       },
     ],
     relations: {
@@ -2799,11 +2799,11 @@ export const EV_SPEAKERS = [
     dims: "1092 mm x 1092 mm x 1191 mm (43.0 in x 43.0 in x 46.9 in)",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cfww.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cfww.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cfww.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cfww.png",
       },
     ],
     relations: {
@@ -2850,11 +2850,11 @@ export const EV_SPEAKERS = [
     dims: "1092 x 1092 x 1191",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cfwb.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cfwb.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cfwb.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cfwb.png",
       },
     ],
     relations: {
@@ -2901,11 +2901,11 @@ export const EV_SPEAKERS = [
     dims: "1092 mm x 1092 mm x 1096 mm (43.0 in x 43.0 in x 43.1 in)",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64fww.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64fww.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64fww.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64fww.png",
       },
     ],
     relations: {
@@ -2952,11 +2952,11 @@ export const EV_SPEAKERS = [
     dims: "1092 x 1092 x 1096",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64fwb.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64fwb.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64fwb.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64fwb.png",
       },
     ],
     relations: {
@@ -3003,11 +3003,11 @@ export const EV_SPEAKERS = [
     dims: "1092 mm x 1092 mm x 1191 mm (43.0 in x 43.0 in x 46.9 in)",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cpww.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cpww.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cpww.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cpww.png",
       },
     ],
     relations: {
@@ -3054,11 +3054,11 @@ export const EV_SPEAKERS = [
     dims: "1092 x 1092 x 1191",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cpwb.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cpwb.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cpwb.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-64cpwb.png",
       },
     ],
     relations: {
@@ -3105,11 +3105,11 @@ export const EV_SPEAKERS = [
     dims: "1092 mm x 1092 mm x 1096 mm (43.0 in x 43.0 in x 43.1 in)",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64pww.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64pww.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64pww.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64pww.png",
       },
     ],
     relations: {
@@ -3156,11 +3156,11 @@ export const EV_SPEAKERS = [
     dims: "1092 x 1092 x 1096",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64pwb.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64pwb.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64pwb.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-64pwb.png",
       },
     ],
     relations: {
@@ -3207,11 +3207,11 @@ export const EV_SPEAKERS = [
     dims: "1092 x 1092 x 1494",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cfww.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cfww.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cfww.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cfww.png",
       },
     ],
     relations: {
@@ -3258,11 +3258,11 @@ export const EV_SPEAKERS = [
     dims: "1092 x 1092 x 1494",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cfwb.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cfwb.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cfwb.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cfwb.png",
       },
     ],
     relations: {
@@ -3309,11 +3309,11 @@ export const EV_SPEAKERS = [
     dims: "1092 mm x 1092 mm x 1491 mm (43.0 in x 43.0 in x 58.7 in)",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43fww.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43fww.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43fww.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43fww.png",
       },
     ],
     relations: {
@@ -3360,11 +3360,11 @@ export const EV_SPEAKERS = [
     dims: "1092 x 1092 x 1491",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43fwb.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43fwb.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43fwb.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43fwb.png",
       },
     ],
     relations: {
@@ -3411,11 +3411,11 @@ export const EV_SPEAKERS = [
     dims: "1092 mm x 1092 mm x 1494 mm (43.0 in x 43.0 in x 58.8 in)",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cpww.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cpww.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cpww.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cpww.png",
       },
     ],
     relations: {
@@ -3462,11 +3462,11 @@ export const EV_SPEAKERS = [
     dims: "1092 x 1092 x 1494",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cpwb.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cpwb.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cpwb.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-6154-43cpwb.png",
       },
     ],
     relations: {
@@ -3513,11 +3513,11 @@ export const EV_SPEAKERS = [
     dims: "1092 mm x 1092 mm x 1491 mm (43.0 in x 43.0 in x 58.7 in)",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43pww.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43pww.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43pww.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43pww.png",
       },
     ],
     relations: {
@@ -3564,11 +3564,11 @@ export const EV_SPEAKERS = [
     dims: "1092 x 1092 x 1491",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43pwb.runtime.webp",
+    img: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43pwb.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43pwb.runtime.webp",
+        src: "public/assets/img/speakers/ev/mts/spk-ev-mts-4153-43pwb.png",
       },
     ],
     relations: {
@@ -3615,11 +3615,11 @@ export const EV_SPEAKERS = [
     dims: "697.6 x 422.8 x 383.1",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-15-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-15-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-15-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-15-g2.png",
       },
     ],
     relations: {
@@ -3664,11 +3664,11 @@ export const EV_SPEAKERS = [
     dims: "621.1 x 356.2 x 356",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-12-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-12-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-12-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-12-g2.png",
       },
     ],
     relations: {
@@ -3713,11 +3713,11 @@ export const EV_SPEAKERS = [
     dims: "459.6 x 289.9 x 280.5",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-8-g2.runtime.webp",
+    img: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-8-g2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-8-g2.runtime.webp",
+        src: "public/assets/img/speakers/ev/zlx-g2/spk-ev-zlx-8-g2.png",
       },
     ],
     relations: {
@@ -3753,11 +3753,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-50m.runtime.webp",
+    img: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-50m.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-50m.runtime.webp",
+        src: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-50m.png",
       },
     ],
     relations: {
@@ -3801,11 +3801,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-vibten54-12.runtime.webp",
+    img: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-vibten54-12.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-vibten54-12.runtime.webp",
+        src: "public/assets/img/speakers/ev/evc/spk-ev-evc-1122-vibten54-12.png",
       },
     ],
     relations: {
@@ -3852,11 +3852,11 @@ export const EV_SPEAKERS = [
     dims: "Sub: 448 x 332 x 432 (17.6 x 13.1 x",
     amps: [],
     ampRaw: "Integrated, 1000 W",
-    img: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-30m.runtime.webp",
+    img: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-30m.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-30m.runtime.webp",
+        src: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-30m.png",
       },
     ],
     relations: {
@@ -3903,11 +3903,11 @@ export const EV_SPEAKERS = [
     dims: "710 mm x 423 mm x 384 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-15.runtime.webp",
+    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-15.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-15.runtime.webp",
+        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-15.png",
       },
     ],
     relations: {
@@ -3952,11 +3952,11 @@ export const EV_SPEAKERS = [
     dims: "629 mm x 363 mm x 344 mm tro-Voice products should be suspended with certi-",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12.runtime.webp",
+    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12.runtime.webp",
+        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12.png",
       },
     ],
     relations: {
@@ -4001,11 +4001,11 @@ export const EV_SPEAKERS = [
     dims: "531 mm x 330 mm x 319 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-10.runtime.webp",
+    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-10.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-10.runtime.webp",
+        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-10.png",
       },
     ],
     relations: {
@@ -4047,11 +4047,11 @@ export const EV_SPEAKERS = [
     dims: "600 × 507 × 574",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-18s.runtime.webp",
+    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-18s.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-18s.runtime.webp",
+        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-18s.png",
       },
     ],
     relations: {
@@ -4095,11 +4095,11 @@ export const EV_SPEAKERS = [
     dims: "397 × 445 × 457",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12s.runtime.webp",
+    img: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12s.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12s.runtime.webp",
+        src: "public/assets/img/speakers/ev/elx200/spk-ev-elx200-12s.png",
       },
     ],
     relations: {
@@ -5114,11 +5114,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mfx/spk-ev-mfx-15mc.runtime.webp",
+    img: "public/assets/img/speakers/ev/mfx/spk-ev-mfx-15mc.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mfx/spk-ev-mfx-15mc.runtime.webp",
+        src: "public/assets/img/speakers/ev/mfx/spk-ev-mfx-15mc.png",
       },
     ],
     relations: {
@@ -5165,11 +5165,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/mfx/spk-ev-mfx-12mc.runtime.webp",
+    img: "public/assets/img/speakers/ev/mfx/spk-ev-mfx-12mc.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/mfx/spk-ev-mfx-12mc.runtime.webp",
+        src: "public/assets/img/speakers/ev/mfx/spk-ev-mfx-12mc.png",
       },
     ],
     relations: {
@@ -5213,11 +5213,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2w.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2w.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2w.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2w.png",
       },
     ],
     relations: {
@@ -5261,11 +5261,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2b.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2b.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2b.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-pendant/spk-ev-evid-p6-2b.png",
       },
     ],
     relations: {
@@ -5303,11 +5303,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "Integrated, official rating not published",
-    img: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-50.runtime.webp",
+    img: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-50.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-50.runtime.webp",
+        src: "public/assets/img/speakers/ev/evolve/spk-ev-evolve-50.png",
       },
     ],
     relations: {
@@ -5351,11 +5351,11 @@ export const EV_SPEAKERS = [
     dims: "413 x 584 x 303",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-surface/spk-ev-evid-s12-1.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-surface/spk-ev-evid-s12-1.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-surface/spk-ev-evid-s12-1.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-surface/spk-ev-evid-s12-1.png",
       },
     ],
     relations: {
@@ -5391,11 +5391,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-surface/spk-ev-evid-s10-1d.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-surface/spk-ev-evid-s10-1d.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-surface/spk-ev-evid-s10-1d.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-surface/spk-ev-evid-s10-1d.png",
       },
     ],
     relations: {
@@ -5519,7 +5519,7 @@ export const EV_SPEAKERS = [
     throwCat: null,
     type: "Point",
     throw: "Point source",
-    lowInch: 200,
+    lowInch: 8,
     lowQty: 1,
     crossover: null,
     crossoverTags: [],
@@ -5536,17 +5536,17 @@ export const EV_SPEAKERS = [
       },
     ],
     weight: 8,
-    transducers: "LF: 1 × 200″",
+    transducers: "LF: 1 × 8″ (200 mm)",
     connectors: "Removable locking 4-Pin (Phoenix) 2.5 mm (12 AWG) max wire size",
     ip: "No",
     dims: "324",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-premium-ceiling/spk-ev-evid-pc8-2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-premium-ceiling/spk-ev-evid-pc8-2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-premium-ceiling/spk-ev-evid-pc8-2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-premium-ceiling/spk-ev-evid-pc8-2.png",
       },
     ],
     relations: {
@@ -5570,7 +5570,7 @@ export const EV_SPEAKERS = [
     throwCat: null,
     type: "Point",
     throw: "Point source",
-    lowInch: 165,
+    lowInch: 6.5,
     lowQty: 1,
     crossover: null,
     crossoverTags: [],
@@ -5587,17 +5587,17 @@ export const EV_SPEAKERS = [
       },
     ],
     weight: 7,
-    transducers: "LF: 1 × 165″",
+    transducers: "LF: 1 × 6.5″ (165 mm)",
     connectors: "Removable locking 4-pin (Phoenix) 2.5 mm (12 AWG) max wire size",
     ip: null,
     dims: "260 mm x 280 mm (10.2 in x 11.0in)",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/evid-premium-ceiling/spk-ev-evid-pc6-2.runtime.webp",
+    img: "public/assets/img/speakers/ev/evid-premium-ceiling/spk-ev-evid-pc6-2.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/evid-premium-ceiling/spk-ev-evid-pc6-2.runtime.webp",
+        src: "public/assets/img/speakers/ev/evid-premium-ceiling/spk-ev-evid-pc6-2.png",
       },
     ],
     relations: {
@@ -5644,11 +5644,11 @@ export const EV_SPEAKERS = [
     dims: "685 mm x 432 mm x 429 mm",
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/ekx/spk-ev-ekx-15.runtime.webp",
+    img: "public/assets/img/speakers/ev/ekx/spk-ev-ekx-15.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/ekx/spk-ev-ekx-15.runtime.webp",
+        src: "public/assets/img/speakers/ev/ekx/spk-ev-ekx-15.png",
       },
     ],
     relations: {
@@ -6369,11 +6369,11 @@ export const EV_SPEAKERS = [
     dims: null,
     amps: [],
     ampRaw: "External amplification",
-    img: "public/assets/img/speakers/ev/other-installed/spk-ev-tss-1.runtime.webp",
+    img: "public/assets/img/speakers/ev/other-installed/spk-ev-tss-1.png",
     views: [
       {
         label: "Official product image",
-        src: "public/assets/img/speakers/ev/other-installed/spk-ev-tss-1.runtime.webp",
+        src: "public/assets/img/speakers/ev/other-installed/spk-ev-tss-1.png",
       },
     ],
     relations: {
@@ -6397,7 +6397,7 @@ export const EV_SPEAKERS = [
     throwCat: null,
     type: "Point",
     throw: "Point source",
-    lowInch: 920,
+    lowInch: 12,
     lowQty: 1,
     crossover: null,
     crossoverTags: [],
@@ -6411,7 +6411,7 @@ export const EV_SPEAKERS = [
       },
     ],
     weight: 29.3,
-    transducers: "LF: 1 × 920″",
+    transducers: "LF: 1 × 12″ EVID 920-8B coaxial driver",
     connectors: 'Phoenixtyperemovable,withscrew terminalsand"loop-thru",accepts 12AWGwire',
     ip: null,
     dims: null,

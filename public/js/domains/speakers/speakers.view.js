@@ -175,6 +175,7 @@ export function cardHTML(d) {
   // 순서는 그대로 두면서 카드만 다른 뷰를 쓰고 싶을 때). 없으면 views[1].
   const views = getViews(d);
   const mediaClass = productMediaClass();
+  const fitClass = d.cardMediaFit === "cover" ? " card__media--cover" : "";
   const hoverView = (d.cardHoverView && views.find(v => v.label === d.cardHoverView)) || views[1];
   const media = views.length
     ? views.length > 1 && hoverView
@@ -183,7 +184,7 @@ export function cardHTML(d) {
     : `<div class="card__noimg">◢</div>`;
   const body = speakerCardBodyHTML(d);
   return `<article class="card card--info-pilot" style="--mfr:${color}" tabindex="0" data-id="${d.id}" role="button" aria-label="${esc(d.name)} 상세">
-    <div class="card__media${mediaClass}">${media}</div>
+    <div class="card__media${mediaClass}${fitClass}">${media}</div>
     ${body}
   </article>`;
 }

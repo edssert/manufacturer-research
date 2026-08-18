@@ -34,11 +34,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/viforce-series/spk-coda-viforce.runtime.webp",
+    img: "public/assets/img/speakers/coda/viforce-series/spk-coda-viforce.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/viforce-series/spk-coda-viforce.runtime.webp",
+        src: "public/assets/img/speakers/coda/viforce-series/spk-coda-viforce.jpg",
       },
     ],
     relations: {
@@ -83,11 +83,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/viforce-series/spk-coda-sub-force-35.runtime.webp",
+    img: "public/assets/img/speakers/coda/viforce-series/spk-coda-sub-force-35.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/viforce-series/spk-coda-sub-force-35.runtime.webp",
+        src: "public/assets/img/speakers/coda/viforce-series/spk-coda-sub-force-35.jpg",
       },
     ],
     relations: {
@@ -133,11 +133,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/airay-series/spk-coda-airay.runtime.webp",
+    img: "public/assets/img/speakers/coda/airay-series/spk-coda-airay.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/airay-series/spk-coda-airay.runtime.webp",
+        src: "public/assets/img/speakers/coda/airay-series/spk-coda-airay.jpg",
       },
     ],
     relations: {
@@ -182,11 +182,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/ciray-series/spk-coda-ciray.runtime.webp",
+    img: "public/assets/img/speakers/coda/ciray-series/spk-coda-ciray.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/ciray-series/spk-coda-ciray.runtime.webp",
+        src: "public/assets/img/speakers/coda/ciray-series/spk-coda-ciray.jpg",
       },
     ],
     relations: {
@@ -280,11 +280,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/n-ray-series/spk-coda-n-ray.runtime.webp",
+    img: "public/assets/img/speakers/coda/n-ray-series/spk-coda-n-ray.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/n-ray-series/spk-coda-n-ray.runtime.webp",
+        src: "public/assets/img/speakers/coda/n-ray-series/spk-coda-n-ray.jpg",
       },
     ],
     relations: {
@@ -329,11 +329,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/tiray-series/spk-coda-tiray.runtime.webp",
+    img: "public/assets/img/speakers/coda/tiray-series/spk-coda-tiray.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/tiray-series/spk-coda-tiray.runtime.webp",
+        src: "public/assets/img/speakers/coda/tiray-series/spk-coda-tiray.jpg",
       },
     ],
     relations: {
@@ -377,11 +377,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/tiray-series/spk-coda-tilow.runtime.webp",
+    img: "public/assets/img/speakers/coda/tiray-series/spk-coda-tilow.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/tiray-series/spk-coda-tilow.runtime.webp",
+        src: "public/assets/img/speakers/coda/tiray-series/spk-coda-tilow.jpg",
       },
     ],
     relations: {
@@ -426,11 +426,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/coray-series/spk-coda-coray4.runtime.webp",
+    img: "public/assets/img/speakers/coda/coray-series/spk-coda-coray4.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/coray-series/spk-coda-coray4.runtime.webp",
+        src: "public/assets/img/speakers/coda/coray-series/spk-coda-coray4.jpg",
       },
     ],
     relations: {
@@ -474,11 +474,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/coray-series/spk-coda-coray4l.runtime.webp",
+    img: "public/assets/img/speakers/coda/coray-series/spk-coda-coray4l.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/coray-series/spk-coda-coray4l.runtime.webp",
+        src: "public/assets/img/speakers/coda/coray-series/spk-coda-coray4l.jpg",
       },
     ],
     relations: {
@@ -523,11 +523,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/aps-series/spk-coda-aps.runtime.webp",
+    img: "public/assets/img/speakers/coda/aps-series/spk-coda-aps.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/aps-series/spk-coda-aps.runtime.webp",
+        src: "public/assets/img/speakers/coda/aps-series/spk-coda-aps.jpg",
       },
     ],
     relations: {
@@ -572,11 +572,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-pro-d.runtime.webp",
+    img: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-pro-d.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-pro-d.runtime.webp",
+        src: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-pro-d.jpg",
       },
     ],
     relations: {
@@ -621,11 +621,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-pro-s.runtime.webp",
+    img: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-pro-s.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-pro-s.runtime.webp",
+        src: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-pro-s.jpg",
       },
     ],
     relations: {
@@ -669,11 +669,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-sub.runtime.webp",
+    img: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-sub.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-sub.runtime.webp",
+        src: "public/assets/img/speakers/coda/aps-series/spk-coda-aps-sub.jpg",
       },
     ],
     relations: {
@@ -718,11 +718,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-pro-d.runtime.webp",
+    img: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-pro-d.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-pro-d.runtime.webp",
+        src: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-pro-d.jpg",
       },
     ],
     relations: {
@@ -767,11 +767,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-pro-s.runtime.webp",
+    img: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-pro-s.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-pro-s.runtime.webp",
+        src: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-pro-s.jpg",
       },
     ],
     relations: {
@@ -815,11 +815,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-sub.runtime.webp",
+    img: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-sub.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-sub.runtime.webp",
+        src: "public/assets/img/speakers/coda/apsi-series/spk-coda-apsi-sub.jpg",
       },
     ],
     relations: {
@@ -864,11 +864,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/n-aps-series/spk-coda-n-aps.runtime.webp",
+    img: "public/assets/img/speakers/coda/n-aps-series/spk-coda-n-aps.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/n-aps-series/spk-coda-n-aps.runtime.webp",
+        src: "public/assets/img/speakers/coda/n-aps-series/spk-coda-n-aps.jpg",
       },
     ],
     relations: {
@@ -912,11 +912,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/n-aps-series/spk-coda-n-sub.runtime.webp",
+    img: "public/assets/img/speakers/coda/n-aps-series/spk-coda-n-sub.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/n-aps-series/spk-coda-n-sub.runtime.webp",
+        src: "public/assets/img/speakers/coda/n-aps-series/spk-coda-n-sub.jpg",
       },
     ],
     relations: {
@@ -961,11 +961,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops5.runtime.webp",
+    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops5.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops5.runtime.webp",
+        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops5.jpg",
       },
     ],
     relations: {
@@ -1010,11 +1010,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops7-pro.runtime.webp",
+    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops7-pro.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops7-pro.runtime.webp",
+        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops7-pro.jpg",
       },
     ],
     relations: {
@@ -1059,11 +1059,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops8i.runtime.webp",
+    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops8i.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops8i.runtime.webp",
+        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops8i.jpg",
       },
     ],
     relations: {
@@ -1108,11 +1108,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops8t.runtime.webp",
+    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops8t.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops8t.runtime.webp",
+        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops8t.jpg",
       },
     ],
     relations: {
@@ -1157,11 +1157,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops10i-pro.runtime.webp",
+    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops10i-pro.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops10i-pro.runtime.webp",
+        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops10i-pro.jpg",
       },
     ],
     relations: {
@@ -1207,11 +1207,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops10t-pro.runtime.webp",
+    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops10t-pro.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops10t-pro.runtime.webp",
+        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops10t-pro.jpg",
       },
     ],
     relations: {
@@ -1256,11 +1256,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops12i.runtime.webp",
+    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops12i.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops12i.runtime.webp",
+        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops12i.jpg",
       },
     ],
     relations: {
@@ -1305,11 +1305,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops12t.runtime.webp",
+    img: "public/assets/img/speakers/coda/hops-series/spk-coda-hops12t.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops12t.runtime.webp",
+        src: "public/assets/img/speakers/coda/hops-series/spk-coda-hops12t.jpg",
       },
     ],
     relations: {
@@ -1354,11 +1354,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-one.runtime.webp",
+    img: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-one.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-one.runtime.webp",
+        src: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-one.jpg",
       },
     ],
     relations: {
@@ -1403,11 +1403,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-two.runtime.webp",
+    img: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-two.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-two.runtime.webp",
+        src: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-two.jpg",
       },
     ],
     relations: {
@@ -1452,11 +1452,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-four.runtime.webp",
+    img: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-four.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-four.runtime.webp",
+        src: "public/assets/img/speakers/coda/cue-series/spk-coda-cue-four.jpg",
       },
     ],
     relations: {
@@ -1501,11 +1501,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-sc2-f.runtime.webp",
+    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-sc2-f.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-sc2-f.runtime.webp",
+        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-sc2-f.jpg",
       },
     ],
     relations: {
@@ -1549,11 +1549,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scv-f.runtime.webp",
+    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scv-f.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scv-f.runtime.webp",
+        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scv-f.jpg",
       },
     ],
     relations: {
@@ -1598,11 +1598,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scp-f.runtime.webp",
+    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scp-f.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scp-f.runtime.webp",
+        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scp-f.jpg",
       },
     ],
     relations: {
@@ -1647,11 +1647,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scn-f.runtime.webp",
+    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scn-f.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scn-f.runtime.webp",
+        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scn-f.jpg",
       },
     ],
     relations: {
@@ -1696,11 +1696,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scp.runtime.webp",
+    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scp.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scp.runtime.webp",
+        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-scp.jpg",
       },
     ],
     relations: {
@@ -1745,11 +1745,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-sc8.runtime.webp",
+    img: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-sc8.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-sc8.runtime.webp",
+        src: "public/assets/img/speakers/coda/sc-sub-series/spk-coda-sc8.jpg",
       },
     ],
     relations: {
@@ -1794,11 +1794,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/g-series/spk-coda-g308-pro.runtime.webp",
+    img: "public/assets/img/speakers/coda/g-series/spk-coda-g308-pro.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/g-series/spk-coda-g308-pro.runtime.webp",
+        src: "public/assets/img/speakers/coda/g-series/spk-coda-g308-pro.jpg",
       },
     ],
     relations: {
@@ -1843,11 +1843,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/g-series/spk-coda-g512-pro.runtime.webp",
+    img: "public/assets/img/speakers/coda/g-series/spk-coda-g512-pro.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/g-series/spk-coda-g512-pro.runtime.webp",
+        src: "public/assets/img/speakers/coda/g-series/spk-coda-g512-pro.jpg",
       },
     ],
     relations: {
@@ -1892,11 +1892,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/g-series/spk-coda-g515-pro.runtime.webp",
+    img: "public/assets/img/speakers/coda/g-series/spk-coda-g515-pro.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/g-series/spk-coda-g515-pro.runtime.webp",
+        src: "public/assets/img/speakers/coda/g-series/spk-coda-g515-pro.jpg",
       },
     ],
     relations: {
@@ -1941,11 +1941,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/g-series/spk-coda-g712-pro.runtime.webp",
+    img: "public/assets/img/speakers/coda/g-series/spk-coda-g712-pro.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/g-series/spk-coda-g712-pro.runtime.webp",
+        src: "public/assets/img/speakers/coda/g-series/spk-coda-g712-pro.jpg",
       },
     ],
     relations: {
@@ -1990,11 +1990,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/g-series/spk-coda-g715-pro.runtime.webp",
+    img: "public/assets/img/speakers/coda/g-series/spk-coda-g715-pro.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/g-series/spk-coda-g715-pro.runtime.webp",
+        src: "public/assets/img/speakers/coda/g-series/spk-coda-g715-pro.jpg",
       },
     ],
     relations: {
@@ -2038,11 +2038,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/g-series/spk-coda-g15-sub.runtime.webp",
+    img: "public/assets/img/speakers/coda/g-series/spk-coda-g15-sub.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/g-series/spk-coda-g15-sub.runtime.webp",
+        src: "public/assets/img/speakers/coda/g-series/spk-coda-g15-sub.jpg",
       },
     ],
     relations: {
@@ -2086,11 +2086,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/g-series/spk-coda-g18-sub.runtime.webp",
+    img: "public/assets/img/speakers/coda/g-series/spk-coda-g18-sub.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/g-series/spk-coda-g18-sub.runtime.webp",
+        src: "public/assets/img/speakers/coda/g-series/spk-coda-g18-sub.jpg",
       },
     ],
     relations: {
@@ -2134,11 +2134,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/d-series/spk-coda-d5-cube.runtime.webp",
+    img: "public/assets/img/speakers/coda/d-series/spk-coda-d5-cube.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/d-series/spk-coda-d5-cube.runtime.webp",
+        src: "public/assets/img/speakers/coda/d-series/spk-coda-d5-cube.jpg",
       },
     ],
     relations: {
@@ -2182,11 +2182,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/d-series/spk-coda-d5-tube.runtime.webp",
+    img: "public/assets/img/speakers/coda/d-series/spk-coda-d5-tube.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/d-series/spk-coda-d5-tube.runtime.webp",
+        src: "public/assets/img/speakers/coda/d-series/spk-coda-d5-tube.jpg",
       },
     ],
     relations: {
@@ -2230,11 +2230,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/d-series/spk-coda-d5-ceiling.runtime.webp",
+    img: "public/assets/img/speakers/coda/d-series/spk-coda-d5-ceiling.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/d-series/spk-coda-d5-ceiling.runtime.webp",
+        src: "public/assets/img/speakers/coda/d-series/spk-coda-d5-ceiling.jpg",
       },
     ],
     relations: {
@@ -2278,11 +2278,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/d-series/spk-coda-d8.runtime.webp",
+    img: "public/assets/img/speakers/coda/d-series/spk-coda-d8.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/d-series/spk-coda-d8.runtime.webp",
+        src: "public/assets/img/speakers/coda/d-series/spk-coda-d8.jpg",
       },
     ],
     relations: {
@@ -2327,11 +2327,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/d-series/spk-coda-d12.runtime.webp",
+    img: "public/assets/img/speakers/coda/d-series/spk-coda-d12.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/d-series/spk-coda-d12.runtime.webp",
+        src: "public/assets/img/speakers/coda/d-series/spk-coda-d12.jpg",
       },
     ],
     relations: {
@@ -2376,11 +2376,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/d-series/spk-coda-d20.runtime.webp",
+    img: "public/assets/img/speakers/coda/d-series/spk-coda-d20.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/d-series/spk-coda-d20.runtime.webp",
+        src: "public/assets/img/speakers/coda/d-series/spk-coda-d20.jpg",
       },
     ],
     relations: {
@@ -2424,11 +2424,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u12-sub.runtime.webp",
+    img: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u12-sub.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u12-sub.runtime.webp",
+        src: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u12-sub.jpg",
       },
     ],
     relations: {
@@ -2472,11 +2472,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u12i-sub.runtime.webp",
+    img: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u12i-sub.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u12i-sub.runtime.webp",
+        src: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u12i-sub.jpg",
       },
     ],
     relations: {
@@ -2520,11 +2520,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u15-sub.runtime.webp",
+    img: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u15-sub.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u15-sub.runtime.webp",
+        src: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u15-sub.jpg",
       },
     ],
     relations: {
@@ -2568,11 +2568,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u4-sub.runtime.webp",
+    img: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u4-sub.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u4-sub.runtime.webp",
+        src: "public/assets/img/speakers/coda/multipurpose-subwoofers/spk-coda-u4-sub.jpg",
       },
     ],
     relations: {
@@ -2616,11 +2616,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/special-applications/spk-coda-omnio5.runtime.webp",
+    img: "public/assets/img/speakers/coda/special-applications/spk-coda-omnio5.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/special-applications/spk-coda-omnio5.runtime.webp",
+        src: "public/assets/img/speakers/coda/special-applications/spk-coda-omnio5.jpg",
       },
     ],
     relations: {
@@ -2664,11 +2664,11 @@ export const CODA_SPEAKERS = [
     selfPowered: false,
     ampRaw:
       "CODA Audio LINUS loudspeaker management amplification; see official product page for model and cabinet-count limits",
-    img: "public/assets/img/speakers/coda/special-applications/spk-coda-ktv-soundbar.runtime.webp",
+    img: "public/assets/img/speakers/coda/special-applications/spk-coda-ktv-soundbar.jpg",
     views: [
       {
         label: "Official",
-        src: "public/assets/img/speakers/coda/special-applications/spk-coda-ktv-soundbar.runtime.webp",
+        src: "public/assets/img/speakers/coda/special-applications/spk-coda-ktv-soundbar.jpg",
       },
     ],
     relations: {

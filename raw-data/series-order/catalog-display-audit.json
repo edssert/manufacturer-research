@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-08-18",
+  "scope": "JBL을 제외한 등록 제조사의 시리즈 및 시리즈 내부 표시 순서 감사",
+  "policy": {
+    "series": "제조사의 현행 공식 제품군 메뉴 또는 카탈로그 위계를 우선한다. 명시적인 공식 위계가 없을 때만 편집 표시 순서를 별도로 기록한다.",
+    "products": "시리즈 페이지가 제시하는 제품 순서를 우선하며, 드라이버 크기ㆍ제품명ㆍ타입으로 추정 정렬하지 않는다.",
+    "lifecycle": "현행 공식 제품군 페이지에 존재하는 항목만 current로 판정한다. 문서 다운로드만 남아 있는 항목은 current로 추정하지 않는다."
+  },
+  "summary": {
+    "seriesOrderManifestMatchesRuntime": [
+      "ad",
+      "co",
+      "coda",
+      "db",
+      "eaw",
+      "ev",
+      "funktion",
+      "martin",
+      "nexo",
+      "pk",
+      "rcf"
+    ],
+    "seriesOrderManifestDiffersFromRuntime": [
+      "la",
+      "my"
+    ],
+    "confirmedRuntimePatches": [
+      "EAW ADAPTive Series 제품 순서를 Anya, Anna, AC6, Otto로 수정",
+      "EAW Newport 제품 순서를 NT206L, NT208L, NTX210L, NT116S로 명시",
+      "Martin Audio 제품 내부 순서를 일반 lowInch/type 정렬이 아니라 시리즈별 명시 순서로 전환"
+    ],
+    "confirmedEvidencePatches": [
+      "martin.json의 Torus modelIds를 T820, T1215, T1230 순으로 갱신",
+      "martin.json의 TH Series modelIds를 THS, THH, THV 순으로 갱신",
+      "my.json seriesOrder를 현행 공식 Current Products 순서에 맞춰 PANTHER, TIGRA, LEOPARD, LINA 순으로 갱신하고 Cinema를 저역 제품군 뒤로 이동"
+    ]
+  },
+  "priorityAudits": [
+    {
+      "manufacturerId": "martin",
+      "seriesOrderStatus": "accepted-editorial-hierarchy",
+      "seriesOrderFinding": "현재 런타임의 Wavefront Precision, Torus, FlexPoint 선두 배치는 Martin Audio가 FlexPoint 페이지에서 세 제품군을 premium trio로 함께 규정하는 근거와 부합한다. 다만 공식 Products by Series 페이지 자체는 알파벳/콘텐츠 순서이므로 displaySeriesOrder는 source order가 아니라 편집 위계임을 계속 명시해야 한다.",
+      "currentLegacyFinding": "런타임 22개 시리즈는 2026-08-18 공식 Products by Series 페이지에 모두 노출된다. 확인된 legacy 혼입은 없다. V.Series, S.Series, D.Series, P.I., XD Series는 지역 제품군이지만 공식 현행 페이지에 있으므로 legacy로 제거하지 않는다.",
+      "productOrderFinding": "현재 공통 sortWithinGroup의 subwoofer-last, lowInch-desc, name 규칙은 공식 제품 순서를 보존하지 않는다. 예: Wavefront Precision은 공식 WPM, WPS, WPC, WPL인데 현재 계산 결과는 WPL, WPC, WPS, WPM이다. FlexPoint도 공식 FP4, FP6, FP8, FP12, FP15인데 현재 계산 결과는 역순이다.",
+      "confirmedProductOrders": {
+        "Wavefront Precision": [
+          "WPM",
+          "WPS",
+          "WPC",
+          "WPL"
+        ],
+        "FlexPoint": [
+          "FlexPoint FP4",
+          "FlexPoint FP6",
+          "FlexPoint FP8",
+          "FlexPoint FP12",
+          "FlexPoint FP15"
+        ],
+        "Torus": [
+          "TORUS T820",
+          "TORUS T1215",
+          "TORUS T1230"
+        ],
+        "TH Series": [
+          "THS",
+          "THH",
+          "THV"
+        ]
+      },
+      "recommendedPatch": [
+        "PRODUCT_ORDER_BY_SERIES에 martin 시리즈별 공식 순서를 추가하거나, 검증된 raw-data/series-order/martin.json modelIds를 이름 순위 맵으로 빌드한다.",
+        "martin.json의 Torus와 TH Series modelIds를 위 confirmedProductOrders와 일치시킨 뒤 나머지 series modelIds도 각 공식 시리즈 페이지와 재동기화한다.",
+        "제품 순위가 없는 Martin 항목을 일반 lowInch-desc로 자동 추론하지 말고 manifest 순서를 안정적 fallback으로 사용한다."
+      ],
+      "sources": [
+        {
+          "url": "https://martin-audio.com/products/series",
+          "supports": "현행 22개 시리즈 목록과 current/legacy 판정"
+        },
+        {
+          "url": "https://martin-audio.com/products/series/flexpoint",
+          "supports": "Wavefront Precision, TORUS, FlexPoint premium trio 문구 및 FP4→FP15 제품 순서"
+        },
+        {
+          "url": "https://martin-audio.com/products/series/wavefront-precision",
+          "supports": "WPM→WPS→WPC→WPL 제품 순서와 Mini→Small→Compact→Large 체급"
+        },
+        {
+          "url": "https://martin-audio.com/products/series/torus",
+          "supports": "T820→T1215→T1230 현행 Series links 순서"
+        },
+        {
+          "url": "https://martin-audio.com/products/series/th",
+          "supports": "THS→THH→THV 현행 시리즈 페이지 순서"
+        },
+        {
+          "url": "https://martin-audio.com/downloads/MartinAudioCatalogue.pdf",
+          "pages": [
+            6
+          ],
+          "supports": "Wavefront Precision 계열과 WPM/WPS/WPC/WPL 구성"
+        }
+      ]
+    },
+    {
+      "manufacturerId": "eaw",
+      "seriesOrderStatus": "confirmed",
+      "seriesOrderFinding": "현재 런타임의 ADAPTive, Newport, KF, QX, MKD, MK, MKC, RSX, RS, LA, SB, SBX, MW, SM, CIS, LS 순서는 공식 Products By Series 메뉴의 Professional→Engineered→Portable→Subwoofers→Monitors→Utility 위계와 정확히 일치한다.",
+      "currentLegacyFinding": "16개 시리즈 모두 공식 현행 Products By Series 메뉴에 노출된다. 확인된 legacy 시리즈 혼입은 없다.",
+      "productOrderFinding": "ADAPTive의 현재 명시 순서 Anya, Anna, Otto, AC6는 공식 현재 시리즈 페이지 Anya, Anna, AC6, Otto와 다르다. Newport는 순위가 없어 공통 정렬 결과 NTX210L, NT206L, NT208L, NT116S가 되지만 공식 Series Range는 NT206L, NT208L, NTX210L, NT116S다.",
+      "confirmedProductOrders": {
+        "ADAPTive Series": [
+          "Anya",
+          "Anna",
+          "AC6",
+          "Otto"
+        ],
+        "Newport": [
+          "NT206L",
+          "NT208L",
+          "NTX210L",
+          "NT116S"
+        ],
+        "KF Series": [
+          "KF210",
+          "KF810P"
+        ]
+      },
+      "inventoryGap": "2026 Newport Series Application Guide의 호환성 표에는 NT119S와 NT219S가 있으나 현재 Newport 제품 페이지의 Series Range와 런타임에는 없다. 문서 표만으로 current 제품을 추가하지 말고 공식 제품 페이지 출시 여부를 별도 확인한다.",
+      "recommendedPatch": [
+        "PRODUCT_ORDER_BY_SERIES의 eaw::ADAPTive Series를 Anya, Anna, AC6, Otto로 수정한다.",
+        "eaw::Newport 순위를 NT206L, NT208L, NTX210L, NT116S로 추가한다.",
+        "eaw.json에 series별 productIds 또는 productNames를 추가해 나머지 EAW 제품 내부 순서도 공통 lowInch-desc 규칙에서 분리한다."
+      ],
+      "sources": [
+        {
+          "url": "https://eaw.com/products/",
+          "supports": "Products By Series 공식 메뉴 위계"
+        },
+        {
+          "url": "https://eaw.com/products-series/adaptive-systems/",
+          "supports": "Anya→Anna→AC6→Otto 순서"
+        },
+        {
+          "url": "https://eaw.com/products-series/nt-series/products-series/newport/",
+          "supports": "NT206L→NT208L→NTX210L→NT116S Series Range 순서"
+        },
+        {
+          "url": "https://eaw.com/products-series/kf-series/",
+          "supports": "KF210→KF810P 순서"
+        },
+        {
+          "url": "https://eaw.com/wp-content/uploads/2026/06/Newport-Series-Application-Guide-V5_260616.pdf",
+          "pages": [
+            23
+          ],
+          "supports": "NT119S와 NT219S 문서 등장; current 판정 보류용"
+        }
+      ]
+    }
+  ],
+  "otherManufacturers": [
+    {
+      "manufacturerId": "my",
+      "status": "runtime-preferred-evidence-stale",
+      "finding": "런타임의 PANTHER→TIGRA→LEOPARD→LINA는 현행 공식 Current Products 페이지와 일치한다. my.json은 TIGRA와 LEOPARD가 뒤바뀐 구순서이며 Cinema가 저역 제품군보다 앞선다.",
+      "recommendedPatch": "런타임은 유지하고 my.json seriesOrder를 런타임 순서로 갱신한다.",
+      "source": "https://meyersound.com/products/"
+    },
+    {
+      "manufacturerId": "la",
+      "status": "evidence-conflict-needs-primary-recheck",
+      "finding": "la.json은 K, L, Subwoofers, S, A, X이고 런타임은 K, L, A, X, S, Subwoofers다. manifest basis가 existing-catalog-order-validated-against-official-product-families여서 공식 페이지의 실제 표시 순서를 증명하지 못한다.",
+      "recommendedPatch": "둘 중 하나를 추정 채택하지 말고 현행 공식 loudspeakers 페이지 또는 최신 full-line catalogue의 섹션 순서를 캡처한 뒤 la.json과 런타임을 함께 맞춘다.",
+      "source": "https://www.l-acoustics.com/loudspeakers/"
+    },
+    {
+      "manufacturerIds": [
+        "ad",
+        "co",
+        "coda",
+        "db",
+        "ev",
+        "funktion",
+        "nexo",
+        "pk",
+        "rcf"
+      ],
+      "status": "series-order-manifest-aligned",
+      "finding": "각 runtime seriesOrder는 대응 raw-data/series-order manifest와 바이트 순서 기준으로 일치한다. 이번 우선 감사에서는 공식 페이지와의 독립 재수집 및 모든 시리즈 내부 제품 순서 검증까지 완료하지 않았으므로 verified-current로 승격하지 않는다.",
+      "recommendedPatch": "공통 lowInch-desc/name fallback을 공식 순서로 간주하지 말고, 제품 내부 순서 근거가 있는 manifest부터 명시적 product order로 옮긴다."
+    }
+  ],
+  "implementationNotes": [
+    "SERIES_ORDER_BY_MANUFACTURER와 raw manifest의 일치만으로 내부 카드 순서는 보장되지 않는다.",
+    "productRank 미등록 제품을 MAX_SAFE_INTEGER로 묶은 뒤 lowInch/type/name으로 정렬하면 공식 source order가 사라진다.",
+    "권장 구조는 raw series manifest의 productIds를 표시 순위의 단일 근거로 사용하고 런타임에는 생성된 rank map만 배포하는 방식이다."
+  ]
+}

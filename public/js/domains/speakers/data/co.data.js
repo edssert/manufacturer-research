@@ -15,7 +15,7 @@ const COHESION_MODELS = [
     dims: "228.6 × 668.3 × 471.9 mm",
     transducers: "LF/LMF: 2 × 8″ cone · HF: 1 × 1.75″ compression",
     connectors: "2 × EP-8 (1 male, 1 female)",
-    img: "public/assets/img/speakers/co/co-series/spk-co-co8.runtime.webp",
+    img: "public/assets/img/speakers/co/co-series/spk-co-co8.webp",
     notes: "Standard horizontal coverage is 120°; 80° and 160° waveguide options are available.",
   },
   {
@@ -34,7 +34,7 @@ const COHESION_MODELS = [
     dims: "285.8 × 905.1 × 560.5 mm",
     transducers: "LF/LMF: 2 × 10″ cone · MF: 1 × 3.5″ compression · HF: 1 × 1.75″ compression",
     connectors: "2 × EP-8 (1 male, 1 female)",
-    img: "public/assets/img/speakers/co/co-series/spk-co-co10.runtime.webp",
+    img: "public/assets/img/speakers/co/co-series/spk-co-co10.webp",
     notes: "Standard horizontal coverage is 80°; a 120° waveguide option is available.",
   },
   {
@@ -53,7 +53,7 @@ const COHESION_MODELS = [
     dims: "355.6 × 1143 × 558.8 mm",
     transducers: "LF/LMF: 2 × 12″ cone · MF: 2 × 3.5″ compression · HF: 2 × 1.75″ compression",
     connectors: "1 × EP-8 male",
-    img: "public/assets/img/speakers/co/co-series/spk-co-co12.runtime.webp",
+    img: "public/assets/img/speakers/co/co-series/spk-co-co12.webp",
     notes: "Standard horizontal coverage is 80°; a 120° waveguide option is available.",
   },
   {
@@ -146,7 +146,7 @@ const COHESION_MODELS = [
     dims: "762 × 330.2 × 352.6 mm",
     transducers: "LF: 1 × 12″ cone",
     connectors: "2 × NL4 · 1 × 4-pin terminal block",
-    img: "public/assets/img/speakers/co/cf-series/spk-co-cf-sub.runtime.webp",
+    img: "public/assets/img/speakers/co/cf-series/spk-co-cf-sub.png",
   },
   {
     name: "CP6+",
@@ -167,7 +167,7 @@ const COHESION_MODELS = [
     transducers: "LF/LMF: 2 × 6.5″ cone · HF: 1 × 1.75″ compression",
     connectors: "2 × XLR3 (1 male, 1 female) · powerCON TRUE1 in/link",
     selfPowered: true,
-    img: "public/assets/img/speakers/co/cp-series/spk-co-cp6-plus.runtime.webp",
+    img: "public/assets/img/speakers/co/cp-series/spk-co-cp6-plus.webp",
   },
   {
     name: "CP118+",
@@ -187,7 +187,7 @@ const COHESION_MODELS = [
     selfPowered: true,
     watt: 5000,
     cardioidCapability: "Array + preset",
-    img: "public/assets/img/speakers/co/cp-series/spk-co-cp118-plus.runtime.webp",
+    img: "public/assets/img/speakers/co/cp-series/spk-co-cp118-plus.webp",
   },
   {
     name: "CP218 II+",
@@ -207,7 +207,7 @@ const COHESION_MODELS = [
     selfPowered: true,
     watt: 9000,
     cardioidCapability: "Array + preset",
-    img: "public/assets/img/speakers/co/cp-series/spk-co-cp218-ii-plus.runtime.webp",
+    img: "public/assets/img/speakers/co/cp-series/spk-co-cp218-ii-plus.webp",
     notes: "Card values use Standard DSP mode; ULF mode extends the -10 dB range to 26 Hz and ±3 dB response to 28 Hz.",
   },
   {
@@ -226,7 +226,7 @@ const COHESION_MODELS = [
     dims: "349.3 × 558.8 × 546.1 mm",
     transducers: "LF: 1 × 14″ cone · HF: 1 × 3″ compression",
     connectors: "2 × EP-4 (1 male, 1 female)",
-    img: "public/assets/img/speakers/co/cm-series/spk-co-cm14.runtime.webp",
+    img: "public/assets/img/speakers/co/cm-series/spk-co-cm14.webp",
   },
   {
     name: "CM22",
@@ -244,7 +244,7 @@ const COHESION_MODELS = [
     dims: "414.6 × 711.2 × 638.8 mm",
     transducers: "LF: 2 × 12″ cone · HF: 1 × 4″ compression",
     connectors: "2 × EP-4 (1 male, 1 female)",
-    img: "public/assets/img/speakers/co/cm-series/spk-co-cm22.runtime.webp",
+    img: "public/assets/img/speakers/co/cm-series/spk-co-cm22.webp",
   },
   {
     name: "CSB218i",
@@ -261,7 +261,7 @@ const COHESION_MODELS = [
     transducers: "LF: 2 × 18″ cone",
     connectors: "1 × NL4 · 1 × 2-pin terminal block",
     cardioidCapability: "Array + preset",
-    img: "public/assets/img/speakers/co/csb-series/spk-co-csb218i.runtime.webp",
+    img: "public/assets/img/speakers/co/csb-series/spk-co-csb218i.webp",
     notes: "Card values use Standard DSP mode; ULF mode extends the -10 dB range to 26 Hz and ±3 dB response to 28 Hz.",
   },
 ];

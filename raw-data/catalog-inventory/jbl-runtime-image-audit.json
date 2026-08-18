@@ -1,0 +1,1223 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "jbl",
+  "scope": "runtime-primary-image-integrity-and-representativeness",
+  "auditedAt": "2026-08-18",
+  "snapshot": {
+    "runtimeData": "public/js/domains/speakers/data/jbl.data.js",
+    "note": "Read after the active Control 40 Series and VTX A12W/M22 replacements present in the shared worktree."
+  },
+  "method": {
+    "automated": [
+      "runtime img path existence",
+      "decode and dimensions",
+      "byte SHA-256 exact duplicates",
+      "placeholder path/hash grouping"
+    ],
+    "visual": "All 55 non-placeholder runtime primary images were reviewed in contact sheets; VTX A8 was additionally inspected at original resolution.",
+    "limitation": "Visual review does not prove exact-SKU identity without source-manifest provenance."
+  },
+  "summary": {
+    "runtimeProducts": 270,
+    "existingPaths": 270,
+    "missingPaths": 0,
+    "decodableImages": 270,
+    "realProductImages": 55,
+    "placeholderImages": 215,
+    "realImageCoveragePercent": 20.37,
+    "exactDuplicateRealImageGroups": 5,
+    "confirmedAwardBadgeImages": 1,
+    "accessoryOnlyOrBracketOnlyImages": 0,
+    "below700x460RealImages": 0
+  },
+  "sourceManifestAudit": {
+    "manifest": "raw-data/source-manifests/jbl.json",
+    "manifestFileRecords": 478,
+    "productImageRecords": 405,
+    "realRuntimeImagesWithLinkedProductImageEvidence": 55,
+    "realRuntimeImagesWithoutLinkedProductImageEvidence": 0,
+    "note": "Manifest product-image records preserve raw official assets rather than duplicating runtime output paths; linkage was checked through productIds."
+  },
+  "criticalFindings": [
+    {
+      "priority": "P0",
+      "id": "spk-jbl-vtx-a8",
+      "path": "public/assets/img/speakers/jbl/vtx-series-a-series/spk-jbl-vtx-a8.webp",
+      "dimensions": {
+        "width": 4096,
+        "height": 2692
+      },
+      "issue": "NAMM TEC Winner badge is visibly embedded below the product.",
+      "action": "Replace with a clean official A8 product view; prefer a clean preserved official original over cropping."
+    }
+  ],
+  "placeholderAudit": {
+    "path": "public/assets/img/speakers/jbl/pending.svg",
+    "sha256": "e918ffbd4f919955ad46c9e2d04998f7d455cf25d08fe6daf40a0887b345b26b",
+    "count": 215,
+    "bySeries": [
+      {
+        "series": "Control 10 Series Small Format Ceiling",
+        "count": 7,
+        "ids": [
+          "spk-jbl-control-12c-t",
+          "spk-jbl-control-14c-t",
+          "spk-jbl-control-16c-t",
+          "spk-jbl-control-18c-t",
+          "spk-jbl-control-12c-va",
+          "spk-jbl-control-14c-va",
+          "spk-jbl-control-16c-va"
+        ]
+      },
+      {
+        "series": "8100 Series Ceiling with Stylized Grille",
+        "count": 3,
+        "ids": [
+          "spk-jbl-8124",
+          "spk-jbl-8128",
+          "spk-jbl-8138"
+        ]
+      },
+      {
+        "series": "Control 200 Series Medium-Format Ceiling Speakers",
+        "count": 3,
+        "ids": [
+          "spk-jbl-control-226c-t",
+          "spk-jbl-control-227c",
+          "spk-jbl-control-227ct"
+        ]
+      },
+      {
+        "series": "Control 300 Series Large-Format Ceiling Speakers",
+        "count": 7,
+        "ids": [
+          "spk-jbl-control-312cs",
+          "spk-jbl-control-321c",
+          "spk-jbl-control-321ct",
+          "spk-jbl-control-322c",
+          "spk-jbl-control-322ct",
+          "spk-jbl-control-328c",
+          "spk-jbl-control-328ct"
+        ]
+      },
+      {
+        "series": "Control 20 Series Small Format Ceiling",
+        "count": 12,
+        "ids": [
+          "spk-jbl-control-24c-micro",
+          "spk-jbl-control-24ct-micro",
+          "spk-jbl-control-24ct-micro-plus",
+          "spk-jbl-control-24c",
+          "spk-jbl-control-24ct",
+          "spk-jbl-control-24ct-bk",
+          "spk-jbl-control-26c",
+          "spk-jbl-control-26ct",
+          "spk-jbl-control-26ct-ls",
+          "spk-jbl-control-26-dt",
+          "spk-jbl-control-19cs",
+          "spk-jbl-control-19cst"
+        ]
+      },
+      {
+        "series": "CBT Series Passive Controlled-Coverage Columns",
+        "count": 9,
+        "ids": [
+          "spk-jbl-cbt-50la-1",
+          "spk-jbl-cbt-50la-ls",
+          "spk-jbl-cbt-100la-1",
+          "spk-jbl-cbt-100la-ls",
+          "spk-jbl-cbt-70j-1",
+          "spk-jbl-cbt-70j-1-70je-1-system",
+          "spk-jbl-cbt-200la-1",
+          "spk-jbl-cbt-1000",
+          "spk-jbl-cbt-1000-cbt-1000e-system"
+        ]
+      },
+      {
+        "series": "COL Slim Column",
+        "count": 2,
+        "ids": [
+          "spk-jbl-col600",
+          "spk-jbl-col800"
+        ]
+      },
+      {
+        "series": "PRX400 Series Passive",
+        "count": 6,
+        "ids": [
+          "spk-jbl-prx412m",
+          "spk-jbl-prx415m",
+          "spk-jbl-prx418",
+          "spk-jbl-prx425",
+          "spk-jbl-prx412m-wh",
+          "spk-jbl-prx415m-wh"
+        ]
+      },
+      {
+        "series": "Intellivox ADC Digital Directivity Columns",
+        "count": 2,
+        "ids": [
+          "spk-jbl-adc-h90-mark-ii",
+          "spk-jbl-adc-v90-mark-ii"
+        ]
+      },
+      {
+        "series": "SRX800 Series Powered",
+        "count": 5,
+        "ids": [
+          "spk-jbl-srx812p",
+          "spk-jbl-srx815p",
+          "spk-jbl-srx835p",
+          "spk-jbl-srx818sp",
+          "spk-jbl-srx828sp"
+        ]
+      },
+      {
+        "series": "Installable Portable PA Speakers",
+        "count": 1,
+        "ids": [
+          "spk-jbl-prx-one-all-in-one-powered-column-pa-system-with-app-control"
+        ]
+      },
+      {
+        "series": "SRX800 Series Passive",
+        "count": 5,
+        "ids": [
+          "spk-jbl-srx812",
+          "spk-jbl-srx815",
+          "spk-jbl-srx835",
+          "spk-jbl-srx818s",
+          "spk-jbl-srx828s"
+        ]
+      },
+      {
+        "series": "EON700 Series",
+        "count": 5,
+        "ids": [
+          "spk-jbl-jbl-eon710",
+          "spk-jbl-jbl-eon712",
+          "spk-jbl-jbl-eon715",
+          "spk-jbl-jbl-eon718s",
+          "spk-jbl-eon208p"
+        ]
+      },
+      {
+        "series": "Commercial Soundbars",
+        "count": 2,
+        "ids": [
+          "spk-jbl-psb-1-pro-soundbar-pro-soundbar-psb-1",
+          "spk-jbl-psb-2-pro-soundbar-pro-soundbar-psb-2"
+        ]
+      },
+      {
+        "series": "GSB Garden In-Ground Subwoofers",
+        "count": 2,
+        "ids": [
+          "spk-jbl-gsb8",
+          "spk-jbl-gsb12"
+        ]
+      },
+      {
+        "series": "Control Contractor 100 Series In-Wall Speakers",
+        "count": 4,
+        "ids": [
+          "spk-jbl-control-126-w",
+          "spk-jbl-control-126-wt",
+          "spk-jbl-control-128-w",
+          "spk-jbl-control-128-wt"
+        ]
+      },
+      {
+        "series": "SRX900 Series",
+        "count": 9,
+        "ids": [
+          "spk-jbl-srx906la",
+          "spk-jbl-srx910la",
+          "spk-jbl-srx918s",
+          "spk-jbl-srx928s",
+          "spk-jbl-srx915sf",
+          "spk-jbl-srx918sf",
+          "spk-jbl-srx912m",
+          "spk-jbl-srx915m",
+          "spk-jbl-srx922"
+        ]
+      },
+      {
+        "series": "VRX900 Series",
+        "count": 7,
+        "ids": [
+          "spk-jbl-vrx932lap",
+          "spk-jbl-vrx918sp",
+          "spk-jbl-vrx928la",
+          "spk-jbl-vrx932la-1",
+          "spk-jbl-vrx915s",
+          "spk-jbl-vrx918s",
+          "spk-jbl-vrx915m"
+        ]
+      },
+      {
+        "series": "GSF Garden Full-Range Speakers",
+        "count": 2,
+        "ids": [
+          "spk-jbl-gsf3",
+          "spk-jbl-gsf6"
+        ]
+      },
+      {
+        "series": "VLA Series Large Format",
+        "count": 6,
+        "ids": [
+          "spk-jbl-vla301i",
+          "spk-jbl-vla601i",
+          "spk-jbl-vla901i",
+          "spk-jbl-vla301hi",
+          "spk-jbl-vla601hi",
+          "spk-jbl-vla901hi"
+        ]
+      },
+      {
+        "series": "Control 80 Series Landscape Speakers",
+        "count": 3,
+        "ids": [
+          "spk-jbl-control-85m",
+          "spk-jbl-control-88m",
+          "spk-jbl-control-89ms"
+        ]
+      },
+      {
+        "series": "VLA Series Compact",
+        "count": 3,
+        "ids": [
+          "spk-jbl-vla-c2100",
+          "spk-jbl-vla-c265",
+          "spk-jbl-vla-c125s"
+        ]
+      },
+      {
+        "series": "Control 60 Series Pendant Speakers",
+        "count": 7,
+        "ids": [
+          "spk-jbl-control-60ps-t",
+          "spk-jbl-control-62p",
+          "spk-jbl-control-64p-t",
+          "spk-jbl-control-65-p-t",
+          "spk-jbl-control-67-p-t",
+          "spk-jbl-control-67-hc-t",
+          "spk-jbl-control-68hp"
+        ]
+      },
+      {
+        "series": "PD500 Series Hornloaded Coaxial",
+        "count": 5,
+        "ids": [
+          "spk-jbl-pd544",
+          "spk-jbl-pd564",
+          "spk-jbl-pd566",
+          "spk-jbl-pd595",
+          "spk-jbl-pd525s"
+        ]
+      },
+      {
+        "series": "AE Series Entry Level",
+        "count": 8,
+        "ids": [
+          "spk-jbl-ac895",
+          "spk-jbl-ac195",
+          "spk-jbl-ac266",
+          "spk-jbl-ac299",
+          "spk-jbl-ac566",
+          "spk-jbl-ac599",
+          "spk-jbl-ac115s",
+          "spk-jbl-ac118s"
+        ]
+      },
+      {
+        "series": "AWC Compact & AW Series",
+        "count": 15,
+        "ids": [
+          "spk-jbl-awc62",
+          "spk-jbl-awc82",
+          "spk-jbl-awc129",
+          "spk-jbl-awc159",
+          "spk-jbl-awc15lf",
+          "spk-jbl-aw266",
+          "spk-jbl-aw266-ls",
+          "spk-jbl-aw295",
+          "spk-jbl-aw295-ls",
+          "spk-jbl-aw526",
+          "spk-jbl-aw526-ls",
+          "spk-jbl-aw566",
+          "spk-jbl-aw566-ls",
+          "spk-jbl-aw595",
+          "spk-jbl-aw595-ls"
+        ]
+      },
+      {
+        "series": "AE Series Compact",
+        "count": 8,
+        "ids": [
+          "spk-jbl-ac15",
+          "spk-jbl-ac25",
+          "spk-jbl-ac16",
+          "spk-jbl-ac26",
+          "spk-jbl-ac18-26",
+          "spk-jbl-ac18-95",
+          "spk-jbl-ac28-26",
+          "spk-jbl-ac28-95"
+        ]
+      },
+      {
+        "series": "PD6000 Series Medium-Format",
+        "count": 13,
+        "ids": [
+          "spk-jbl-pd6200-43",
+          "spk-jbl-pd6200-64",
+          "spk-jbl-pd6200-66",
+          "spk-jbl-pd6200-95",
+          "spk-jbl-pd6212-43",
+          "spk-jbl-pd6212-64",
+          "spk-jbl-pd6212-66",
+          "spk-jbl-pd6212-95",
+          "spk-jbl-pd6322-43",
+          "spk-jbl-pd6322-64",
+          "spk-jbl-pd6322-66",
+          "spk-jbl-pd6322-95",
+          "spk-jbl-pd5122"
+        ]
+      },
+      {
+        "series": "PD700i Series Large-Format",
+        "count": 4,
+        "ids": [
+          "spk-jbl-pd743i",
+          "spk-jbl-pd764i",
+          "spk-jbl-pd743i-215",
+          "spk-jbl-pd764i-215"
+        ]
+      },
+      {
+        "series": "Surface Mount Speakers",
+        "count": 2,
+        "ids": [
+          "spk-jbl-css-commercial-series-surface-mount-speakers-the-jbl-css-commercial-series-surface-mount-speaker-is-versatile-able-to-operate-with-100v-or-70",
+          "spk-jbl-control-1-pro-speaker-control-1-pro"
+        ]
+      },
+      {
+        "series": "SLP Sleek Low-Profile Speakers",
+        "count": 2,
+        "ids": [
+          "spk-jbl-slp12-t",
+          "spk-jbl-slp14-t"
+        ]
+      },
+      {
+        "series": "CSS-H Paging Horns",
+        "count": 2,
+        "ids": [
+          "spk-jbl-css-h15",
+          "spk-jbl-css-h30"
+        ]
+      },
+      {
+        "series": "Control Contractor 20 Series Surface-Mount Speakers",
+        "count": 12,
+        "ids": [
+          "spk-jbl-control-23-1",
+          "spk-jbl-control-23-1l",
+          "spk-jbl-control-25-1",
+          "spk-jbl-control-25-1l",
+          "spk-jbl-control-25av",
+          "spk-jbl-control-25av-ls",
+          "spk-jbl-control-28-1",
+          "spk-jbl-control-28-1l",
+          "spk-jbl-control-29av-1",
+          "spk-jbl-control-30",
+          "spk-jbl-control-31",
+          "spk-jbl-control-sb2210"
+        ]
+      },
+      {
+        "series": "Control 50 Series Subwoofer/Satellite Speakers",
+        "count": 3,
+        "ids": [
+          "spk-jbl-control-52",
+          "spk-jbl-control-50s-t",
+          "spk-jbl-c50pack"
+        ]
+      },
+      {
+        "series": "Control 2P Powered Speaker",
+        "count": 2,
+        "ids": [
+          "spk-jbl-c2ps",
+          "spk-jbl-c2pm"
+        ]
+      },
+      {
+        "series": "Control 5 Speaker",
+        "count": 1,
+        "ids": [
+          "spk-jbl-control-5"
+        ]
+      },
+      {
+        "series": "Control CRV Architectural Speaker",
+        "count": 2,
+        "ids": [
+          "spk-jbl-crv-black",
+          "spk-jbl-crv-white"
+        ]
+      },
+      {
+        "series": "ASB6000",
+        "count": 5,
+        "ids": [
+          "spk-jbl-asb6112",
+          "spk-jbl-asb6115",
+          "spk-jbl-asb6118",
+          "spk-jbl-asb6125",
+          "spk-jbl-asb6128"
+        ]
+      },
+      {
+        "series": "ASB7000",
+        "count": 2,
+        "ids": [
+          "spk-jbl-asb7118",
+          "spk-jbl-asb7128"
+        ]
+      },
+      {
+        "series": "EON ONE Series",
+        "count": 2,
+        "ids": [
+          "spk-jbl-eon-one-compact",
+          "spk-jbl-eon-one-mk2"
+        ]
+      },
+      {
+        "series": "IRX ONE",
+        "count": 1,
+        "ids": [
+          "spk-jbl-irx-one"
+        ]
+      },
+      {
+        "series": "IRX Series",
+        "count": 3,
+        "ids": [
+          "spk-jbl-irx108bt",
+          "spk-jbl-irx112bt",
+          "spk-jbl-irx115s"
+        ]
+      },
+      {
+        "series": "JRX200 Series",
+        "count": 4,
+        "ids": [
+          "spk-jbl-jrx212",
+          "spk-jbl-jrx215",
+          "spk-jbl-jrx218s",
+          "spk-jbl-jrx225"
+        ]
+      },
+      {
+        "series": "PRX900 Series",
+        "count": 7,
+        "ids": [
+          "spk-jbl-prx908",
+          "spk-jbl-prx912",
+          "spk-jbl-prx915",
+          "spk-jbl-prx915xlf",
+          "spk-jbl-prx918xlf",
+          "spk-jbl-prx925",
+          "spk-jbl-prx935"
+        ]
+      }
+    ]
+  },
+  "exactDuplicateRealImages": [
+    {
+      "sha256": "9ae56d05a606310695e4323860728fc215a18519e7cbcefb80af7d2d9f7f56f4",
+      "ids": [
+        "spk-jbl-lct-81c-t",
+        "spk-jbl-lct-81c-tm"
+      ],
+      "paths": [
+        "public/assets/img/speakers/jbl/lct-lay-in-ceiling-tile-speakers/spk-jbl-lct-81c-t.webp",
+        "public/assets/img/speakers/jbl/lct-lay-in-ceiling-tile-speakers/spk-jbl-lct-81c-tm.webp"
+      ],
+      "assessment": "Closely related tile-size variants; shared appearance may be legitimate, but exact-model provenance remains required."
+    },
+    {
+      "sha256": "6511adc93508b819656a5131f495d53854bc03dd6f93d52cb802fd3a4dae5e3c",
+      "ids": [
+        "spk-jbl-control-426c-t",
+        "spk-jbl-control-426c-t-ls"
+      ],
+      "paths": [
+        "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-426c-t.webp",
+        "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-426c-t-ls.webp"
+      ],
+      "assessment": "Life-safety variant shares the standard image; confirm whether the exact LS product has a distinct label or termination."
+    },
+    {
+      "sha256": "002303d9ec125487b01cd24589341e41172267225b652b2fd3bfe49ab599981c",
+      "ids": [
+        "spk-jbl-control-412c-t",
+        "spk-jbl-control-412c-t-va"
+      ],
+      "paths": [
+        "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-412c-t.webp",
+        "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-412c-t-va.webp"
+      ],
+      "assessment": "VA variant shares the standard image; confirm exact-model official media before accepting reuse."
+    },
+    {
+      "sha256": "d5b1a31975ea4cfed00d4d9f75743a71779621ecc6e990a6f4f08350db30863e",
+      "ids": [
+        "spk-jbl-control-416c-t",
+        "spk-jbl-control-416c-t-va"
+      ],
+      "paths": [
+        "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-416c-t.webp",
+        "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-416c-t-va.webp"
+      ],
+      "assessment": "VA variant shares the standard image; confirm exact-model official media before accepting reuse."
+    },
+    {
+      "sha256": "d0042f321f9336308a00088a7fa2a3c63c11113c2e98255c368e0e539c20b83a",
+      "ids": [
+        "spk-jbl-vtx-f35-64",
+        "spk-jbl-vtx-f35-95"
+      ],
+      "paths": [
+        "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f35-64.webp",
+        "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f35-95.webp"
+      ],
+      "assessment": "Coverage variants share the same enclosure image; likely acceptable externally, but the image cannot communicate horn-pattern differences."
+    }
+  ],
+  "manualRepresentativenessReview": {
+    "passedLatestReplacements": [
+      "spk-jbl-control-40cs-t",
+      "spk-jbl-control-42c",
+      "spk-jbl-control-45c-t",
+      "spk-jbl-control-47hc",
+      "spk-jbl-control-47lp",
+      "spk-jbl-vtx-a12w",
+      "spk-jbl-vtx-m22"
+    ],
+    "accessoryOnlyCandidateIds": [],
+    "bracketOnlyCandidateIds": [],
+    "confirmedBadgeIds": [
+      "spk-jbl-vtx-a8"
+    ],
+    "polishCandidates": [
+      {
+        "ids": [
+          "spk-jbl-vtx-f12",
+          "spk-jbl-vtx-f15",
+          "spk-jbl-vtx-f18s"
+        ],
+        "issue": "Smallest real rasters are 700x460; usable at current card size, but replace if higher-resolution official originals exist."
+      },
+      {
+        "ids": [
+          "spk-jbl-css8008",
+          "spk-jbl-css8018"
+        ],
+        "issue": "Narrow side-biased views are less immediately identifiable than a three-quarter or grille-forward hero."
+      }
+    ]
+  },
+  "priorityQueue": [
+    {
+      "priority": "P0",
+      "label": "Remove prohibited promotional mark",
+      "count": 1,
+      "ids": [
+        "spk-jbl-vtx-a8"
+      ]
+    },
+    {
+      "priority": "P1",
+      "label": "Replace touring/live/portable placeholders",
+      "count": 55,
+      "groups": [
+        {
+          "series": "PRX400 Series Passive",
+          "count": 6,
+          "ids": [
+            "spk-jbl-prx412m",
+            "spk-jbl-prx415m",
+            "spk-jbl-prx418",
+            "spk-jbl-prx425",
+            "spk-jbl-prx412m-wh",
+            "spk-jbl-prx415m-wh"
+          ]
+        },
+        {
+          "series": "SRX800 Series Powered",
+          "count": 5,
+          "ids": [
+            "spk-jbl-srx812p",
+            "spk-jbl-srx815p",
+            "spk-jbl-srx835p",
+            "spk-jbl-srx818sp",
+            "spk-jbl-srx828sp"
+          ]
+        },
+        {
+          "series": "Installable Portable PA Speakers",
+          "count": 1,
+          "ids": [
+            "spk-jbl-prx-one-all-in-one-powered-column-pa-system-with-app-control"
+          ]
+        },
+        {
+          "series": "SRX800 Series Passive",
+          "count": 5,
+          "ids": [
+            "spk-jbl-srx812",
+            "spk-jbl-srx815",
+            "spk-jbl-srx835",
+            "spk-jbl-srx818s",
+            "spk-jbl-srx828s"
+          ]
+        },
+        {
+          "series": "EON700 Series",
+          "count": 5,
+          "ids": [
+            "spk-jbl-jbl-eon710",
+            "spk-jbl-jbl-eon712",
+            "spk-jbl-jbl-eon715",
+            "spk-jbl-jbl-eon718s",
+            "spk-jbl-eon208p"
+          ]
+        },
+        {
+          "series": "SRX900 Series",
+          "count": 9,
+          "ids": [
+            "spk-jbl-srx906la",
+            "spk-jbl-srx910la",
+            "spk-jbl-srx918s",
+            "spk-jbl-srx928s",
+            "spk-jbl-srx915sf",
+            "spk-jbl-srx918sf",
+            "spk-jbl-srx912m",
+            "spk-jbl-srx915m",
+            "spk-jbl-srx922"
+          ]
+        },
+        {
+          "series": "VRX900 Series",
+          "count": 7,
+          "ids": [
+            "spk-jbl-vrx932lap",
+            "spk-jbl-vrx918sp",
+            "spk-jbl-vrx928la",
+            "spk-jbl-vrx932la-1",
+            "spk-jbl-vrx915s",
+            "spk-jbl-vrx918s",
+            "spk-jbl-vrx915m"
+          ]
+        },
+        {
+          "series": "EON ONE Series",
+          "count": 2,
+          "ids": [
+            "spk-jbl-eon-one-compact",
+            "spk-jbl-eon-one-mk2"
+          ]
+        },
+        {
+          "series": "IRX ONE",
+          "count": 1,
+          "ids": [
+            "spk-jbl-irx-one"
+          ]
+        },
+        {
+          "series": "IRX Series",
+          "count": 3,
+          "ids": [
+            "spk-jbl-irx108bt",
+            "spk-jbl-irx112bt",
+            "spk-jbl-irx115s"
+          ]
+        },
+        {
+          "series": "JRX200 Series",
+          "count": 4,
+          "ids": [
+            "spk-jbl-jrx212",
+            "spk-jbl-jrx215",
+            "spk-jbl-jrx218s",
+            "spk-jbl-jrx225"
+          ]
+        },
+        {
+          "series": "PRX900 Series",
+          "count": 7,
+          "ids": [
+            "spk-jbl-prx908",
+            "spk-jbl-prx912",
+            "spk-jbl-prx915",
+            "spk-jbl-prx915xlf",
+            "spk-jbl-prx918xlf",
+            "spk-jbl-prx925",
+            "spk-jbl-prx935"
+          ]
+        }
+      ]
+    },
+    {
+      "priority": "P2",
+      "label": "Replace remaining installed-product placeholders",
+      "count": 160,
+      "groups": [
+        {
+          "series": "Control 10 Series Small Format Ceiling",
+          "count": 7,
+          "ids": [
+            "spk-jbl-control-12c-t",
+            "spk-jbl-control-14c-t",
+            "spk-jbl-control-16c-t",
+            "spk-jbl-control-18c-t",
+            "spk-jbl-control-12c-va",
+            "spk-jbl-control-14c-va",
+            "spk-jbl-control-16c-va"
+          ]
+        },
+        {
+          "series": "8100 Series Ceiling with Stylized Grille",
+          "count": 3,
+          "ids": [
+            "spk-jbl-8124",
+            "spk-jbl-8128",
+            "spk-jbl-8138"
+          ]
+        },
+        {
+          "series": "Control 200 Series Medium-Format Ceiling Speakers",
+          "count": 3,
+          "ids": [
+            "spk-jbl-control-226c-t",
+            "spk-jbl-control-227c",
+            "spk-jbl-control-227ct"
+          ]
+        },
+        {
+          "series": "Control 300 Series Large-Format Ceiling Speakers",
+          "count": 7,
+          "ids": [
+            "spk-jbl-control-312cs",
+            "spk-jbl-control-321c",
+            "spk-jbl-control-321ct",
+            "spk-jbl-control-322c",
+            "spk-jbl-control-322ct",
+            "spk-jbl-control-328c",
+            "spk-jbl-control-328ct"
+          ]
+        },
+        {
+          "series": "Control 20 Series Small Format Ceiling",
+          "count": 12,
+          "ids": [
+            "spk-jbl-control-24c-micro",
+            "spk-jbl-control-24ct-micro",
+            "spk-jbl-control-24ct-micro-plus",
+            "spk-jbl-control-24c",
+            "spk-jbl-control-24ct",
+            "spk-jbl-control-24ct-bk",
+            "spk-jbl-control-26c",
+            "spk-jbl-control-26ct",
+            "spk-jbl-control-26ct-ls",
+            "spk-jbl-control-26-dt",
+            "spk-jbl-control-19cs",
+            "spk-jbl-control-19cst"
+          ]
+        },
+        {
+          "series": "CBT Series Passive Controlled-Coverage Columns",
+          "count": 9,
+          "ids": [
+            "spk-jbl-cbt-50la-1",
+            "spk-jbl-cbt-50la-ls",
+            "spk-jbl-cbt-100la-1",
+            "spk-jbl-cbt-100la-ls",
+            "spk-jbl-cbt-70j-1",
+            "spk-jbl-cbt-70j-1-70je-1-system",
+            "spk-jbl-cbt-200la-1",
+            "spk-jbl-cbt-1000",
+            "spk-jbl-cbt-1000-cbt-1000e-system"
+          ]
+        },
+        {
+          "series": "COL Slim Column",
+          "count": 2,
+          "ids": [
+            "spk-jbl-col600",
+            "spk-jbl-col800"
+          ]
+        },
+        {
+          "series": "Intellivox ADC Digital Directivity Columns",
+          "count": 2,
+          "ids": [
+            "spk-jbl-adc-h90-mark-ii",
+            "spk-jbl-adc-v90-mark-ii"
+          ]
+        },
+        {
+          "series": "Commercial Soundbars",
+          "count": 2,
+          "ids": [
+            "spk-jbl-psb-1-pro-soundbar-pro-soundbar-psb-1",
+            "spk-jbl-psb-2-pro-soundbar-pro-soundbar-psb-2"
+          ]
+        },
+        {
+          "series": "GSB Garden In-Ground Subwoofers",
+          "count": 2,
+          "ids": [
+            "spk-jbl-gsb8",
+            "spk-jbl-gsb12"
+          ]
+        },
+        {
+          "series": "Control Contractor 100 Series In-Wall Speakers",
+          "count": 4,
+          "ids": [
+            "spk-jbl-control-126-w",
+            "spk-jbl-control-126-wt",
+            "spk-jbl-control-128-w",
+            "spk-jbl-control-128-wt"
+          ]
+        },
+        {
+          "series": "GSF Garden Full-Range Speakers",
+          "count": 2,
+          "ids": [
+            "spk-jbl-gsf3",
+            "spk-jbl-gsf6"
+          ]
+        },
+        {
+          "series": "VLA Series Large Format",
+          "count": 6,
+          "ids": [
+            "spk-jbl-vla301i",
+            "spk-jbl-vla601i",
+            "spk-jbl-vla901i",
+            "spk-jbl-vla301hi",
+            "spk-jbl-vla601hi",
+            "spk-jbl-vla901hi"
+          ]
+        },
+        {
+          "series": "Control 80 Series Landscape Speakers",
+          "count": 3,
+          "ids": [
+            "spk-jbl-control-85m",
+            "spk-jbl-control-88m",
+            "spk-jbl-control-89ms"
+          ]
+        },
+        {
+          "series": "VLA Series Compact",
+          "count": 3,
+          "ids": [
+            "spk-jbl-vla-c2100",
+            "spk-jbl-vla-c265",
+            "spk-jbl-vla-c125s"
+          ]
+        },
+        {
+          "series": "Control 60 Series Pendant Speakers",
+          "count": 7,
+          "ids": [
+            "spk-jbl-control-60ps-t",
+            "spk-jbl-control-62p",
+            "spk-jbl-control-64p-t",
+            "spk-jbl-control-65-p-t",
+            "spk-jbl-control-67-p-t",
+            "spk-jbl-control-67-hc-t",
+            "spk-jbl-control-68hp"
+          ]
+        },
+        {
+          "series": "PD500 Series Hornloaded Coaxial",
+          "count": 5,
+          "ids": [
+            "spk-jbl-pd544",
+            "spk-jbl-pd564",
+            "spk-jbl-pd566",
+            "spk-jbl-pd595",
+            "spk-jbl-pd525s"
+          ]
+        },
+        {
+          "series": "AE Series Entry Level",
+          "count": 8,
+          "ids": [
+            "spk-jbl-ac895",
+            "spk-jbl-ac195",
+            "spk-jbl-ac266",
+            "spk-jbl-ac299",
+            "spk-jbl-ac566",
+            "spk-jbl-ac599",
+            "spk-jbl-ac115s",
+            "spk-jbl-ac118s"
+          ]
+        },
+        {
+          "series": "AWC Compact & AW Series",
+          "count": 15,
+          "ids": [
+            "spk-jbl-awc62",
+            "spk-jbl-awc82",
+            "spk-jbl-awc129",
+            "spk-jbl-awc159",
+            "spk-jbl-awc15lf",
+            "spk-jbl-aw266",
+            "spk-jbl-aw266-ls",
+            "spk-jbl-aw295",
+            "spk-jbl-aw295-ls",
+            "spk-jbl-aw526",
+            "spk-jbl-aw526-ls",
+            "spk-jbl-aw566",
+            "spk-jbl-aw566-ls",
+            "spk-jbl-aw595",
+            "spk-jbl-aw595-ls"
+          ]
+        },
+        {
+          "series": "AE Series Compact",
+          "count": 8,
+          "ids": [
+            "spk-jbl-ac15",
+            "spk-jbl-ac25",
+            "spk-jbl-ac16",
+            "spk-jbl-ac26",
+            "spk-jbl-ac18-26",
+            "spk-jbl-ac18-95",
+            "spk-jbl-ac28-26",
+            "spk-jbl-ac28-95"
+          ]
+        },
+        {
+          "series": "PD6000 Series Medium-Format",
+          "count": 13,
+          "ids": [
+            "spk-jbl-pd6200-43",
+            "spk-jbl-pd6200-64",
+            "spk-jbl-pd6200-66",
+            "spk-jbl-pd6200-95",
+            "spk-jbl-pd6212-43",
+            "spk-jbl-pd6212-64",
+            "spk-jbl-pd6212-66",
+            "spk-jbl-pd6212-95",
+            "spk-jbl-pd6322-43",
+            "spk-jbl-pd6322-64",
+            "spk-jbl-pd6322-66",
+            "spk-jbl-pd6322-95",
+            "spk-jbl-pd5122"
+          ]
+        },
+        {
+          "series": "PD700i Series Large-Format",
+          "count": 4,
+          "ids": [
+            "spk-jbl-pd743i",
+            "spk-jbl-pd764i",
+            "spk-jbl-pd743i-215",
+            "spk-jbl-pd764i-215"
+          ]
+        },
+        {
+          "series": "Surface Mount Speakers",
+          "count": 2,
+          "ids": [
+            "spk-jbl-css-commercial-series-surface-mount-speakers-the-jbl-css-commercial-series-surface-mount-speaker-is-versatile-able-to-operate-with-100v-or-70",
+            "spk-jbl-control-1-pro-speaker-control-1-pro"
+          ]
+        },
+        {
+          "series": "SLP Sleek Low-Profile Speakers",
+          "count": 2,
+          "ids": [
+            "spk-jbl-slp12-t",
+            "spk-jbl-slp14-t"
+          ]
+        },
+        {
+          "series": "CSS-H Paging Horns",
+          "count": 2,
+          "ids": [
+            "spk-jbl-css-h15",
+            "spk-jbl-css-h30"
+          ]
+        },
+        {
+          "series": "Control Contractor 20 Series Surface-Mount Speakers",
+          "count": 12,
+          "ids": [
+            "spk-jbl-control-23-1",
+            "spk-jbl-control-23-1l",
+            "spk-jbl-control-25-1",
+            "spk-jbl-control-25-1l",
+            "spk-jbl-control-25av",
+            "spk-jbl-control-25av-ls",
+            "spk-jbl-control-28-1",
+            "spk-jbl-control-28-1l",
+            "spk-jbl-control-29av-1",
+            "spk-jbl-control-30",
+            "spk-jbl-control-31",
+            "spk-jbl-control-sb2210"
+          ]
+        },
+        {
+          "series": "Control 50 Series Subwoofer/Satellite Speakers",
+          "count": 3,
+          "ids": [
+            "spk-jbl-control-52",
+            "spk-jbl-control-50s-t",
+            "spk-jbl-c50pack"
+          ]
+        },
+        {
+          "series": "Control 2P Powered Speaker",
+          "count": 2,
+          "ids": [
+            "spk-jbl-c2ps",
+            "spk-jbl-c2pm"
+          ]
+        },
+        {
+          "series": "Control 5 Speaker",
+          "count": 1,
+          "ids": [
+            "spk-jbl-control-5"
+          ]
+        },
+        {
+          "series": "Control CRV Architectural Speaker",
+          "count": 2,
+          "ids": [
+            "spk-jbl-crv-black",
+            "spk-jbl-crv-white"
+          ]
+        },
+        {
+          "series": "ASB6000",
+          "count": 5,
+          "ids": [
+            "spk-jbl-asb6112",
+            "spk-jbl-asb6115",
+            "spk-jbl-asb6118",
+            "spk-jbl-asb6125",
+            "spk-jbl-asb6128"
+          ]
+        },
+        {
+          "series": "ASB7000",
+          "count": 2,
+          "ids": [
+            "spk-jbl-asb7118",
+            "spk-jbl-asb7128"
+          ]
+        }
+      ]
+    },
+    {
+      "priority": "P3",
+      "label": "Resolve or document exact duplicate real images",
+      "count": 5,
+      "groups": [
+        {
+          "sha256": "9ae56d05a606310695e4323860728fc215a18519e7cbcefb80af7d2d9f7f56f4",
+          "ids": [
+            "spk-jbl-lct-81c-t",
+            "spk-jbl-lct-81c-tm"
+          ],
+          "paths": [
+            "public/assets/img/speakers/jbl/lct-lay-in-ceiling-tile-speakers/spk-jbl-lct-81c-t.webp",
+            "public/assets/img/speakers/jbl/lct-lay-in-ceiling-tile-speakers/spk-jbl-lct-81c-tm.webp"
+          ],
+          "assessment": "Closely related tile-size variants; shared appearance may be legitimate, but exact-model provenance remains required."
+        },
+        {
+          "sha256": "6511adc93508b819656a5131f495d53854bc03dd6f93d52cb802fd3a4dae5e3c",
+          "ids": [
+            "spk-jbl-control-426c-t",
+            "spk-jbl-control-426c-t-ls"
+          ],
+          "paths": [
+            "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-426c-t.webp",
+            "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-426c-t-ls.webp"
+          ],
+          "assessment": "Life-safety variant shares the standard image; confirm whether the exact LS product has a distinct label or termination."
+        },
+        {
+          "sha256": "002303d9ec125487b01cd24589341e41172267225b652b2fd3bfe49ab599981c",
+          "ids": [
+            "spk-jbl-control-412c-t",
+            "spk-jbl-control-412c-t-va"
+          ],
+          "paths": [
+            "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-412c-t.webp",
+            "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-412c-t-va.webp"
+          ],
+          "assessment": "VA variant shares the standard image; confirm exact-model official media before accepting reuse."
+        },
+        {
+          "sha256": "d5b1a31975ea4cfed00d4d9f75743a71779621ecc6e990a6f4f08350db30863e",
+          "ids": [
+            "spk-jbl-control-416c-t",
+            "spk-jbl-control-416c-t-va"
+          ],
+          "paths": [
+            "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-416c-t.webp",
+            "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-416c-t-va.webp"
+          ],
+          "assessment": "VA variant shares the standard image; confirm exact-model official media before accepting reuse."
+        },
+        {
+          "sha256": "d0042f321f9336308a00088a7fa2a3c63c11113c2e98255c368e0e539c20b83a",
+          "ids": [
+            "spk-jbl-vtx-f35-64",
+            "spk-jbl-vtx-f35-95"
+          ],
+          "paths": [
+            "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f35-64.webp",
+            "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f35-95.webp"
+          ],
+          "assessment": "Coverage variants share the same enclosure image; likely acceptable externally, but the image cannot communicate horn-pattern differences."
+        }
+      ]
+    },
+    {
+      "priority": "P4",
+      "label": "Improve usable but weaker hero images",
+      "count": 5,
+      "ids": [
+        "spk-jbl-vtx-f12",
+        "spk-jbl-vtx-f15",
+        "spk-jbl-vtx-f18s",
+        "spk-jbl-css8008",
+        "spk-jbl-css8018"
+      ]
+    }
+  ],
+  "invariantsForFixes": [
+    "Keep official downloaded originals unchanged under raw-data.",
+    "Use exact-model product views, not award badges, accessories, brackets, rails, packaging, or series-only images.",
+    "Record source URL, retrieval date, SHA-256, bytes, MIME, and linked product in the source manifest.",
+    "Visually verify detail, crop, background, and product identity; dimensions alone are not a pass."
+  ]
+}

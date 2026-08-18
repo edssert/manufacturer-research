@@ -4,6 +4,31 @@
   "basis": "Martin Audio official Products by Series page order; models retain official category-list order within each series.",
   "source": "https://martin-audio.com/products/series",
   "retrievedAt": "2026-08-18",
+  "displayPolicy": "The source-order inventory below is preserved as evidence. The application presents current product families by system hierarchy: Martin Audio's official premium trio (Wavefront Precision, TORUS, FlexPoint), then specialist live systems, general-purpose systems, installation systems, subwoofers, and remaining regional families.",
+  "displaySeriesOrder": [
+    "Wavefront Precision",
+    "Torus",
+    "FlexPoint",
+    "TH Series",
+    "XE Stage Monitors",
+    "CDD-LIVE!",
+    "O-Line",
+    "BlacklineQ",
+    "BlacklineX Powered Series",
+    "BlacklineX Series",
+    "CDD/CDD-WR Series",
+    "Adorn Series",
+    "Ceiling Series",
+    "SX Series",
+    "LE Stage Monitors",
+    "Blackline3 Series",
+    "DDX Series",
+    "V.Series",
+    "S.Series",
+    "D.Series",
+    "P.I.",
+    "XD Series"
+  ],
   "series": [
     {
       "rank": 1,
@@ -138,18 +163,18 @@
       "rank": 11,
       "series": "TH Series",
       "modelIds": [
+        "spk-martin-ths",
         "spk-martin-thh",
-        "spk-martin-thv",
-        "spk-martin-ths"
+        "spk-martin-thv"
       ]
     },
     {
       "rank": 12,
       "series": "Torus",
       "modelIds": [
+        "spk-martin-torus-t820",
         "spk-martin-torus-t1215",
-        "spk-martin-torus-t1230",
-        "spk-martin-torus-t820"
+        "spk-martin-torus-t1230"
       ]
     },
     {

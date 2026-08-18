@@ -14,7 +14,7 @@ import { createDomainTab } from "../../ui/domain-tab.js";
 import { openDetailModal } from "../../ui/relation-navigation.js";
 
 import { SPEAKER_CATALOG, initSpeakerDetailProvider } from "./speakers.detail.js";
-import { speakersSchema, MFR, MK_ORDER, THROWCAT_ORDER, seriesRank } from "./speakers.schema.js";
+import { speakersSchema, MFR, MK_ORDER, THROWCAT_ORDER, seriesRank, productRank } from "./speakers.schema.js";
 import { cardHTML as speakerCardHTML, setSplRange } from "./speakers.view.js";
 
 /** 시리즈 정렬일 때만 제조사>시리즈 2단 그룹핑, 그 외에는 평면 그리드 */
@@ -23,13 +23,13 @@ function speakersGroupBy(state) {
     ? {
         order: MK_ORDER,
         getKey: d => d.mk,
-        subGroupKey: d => d.series,
+        subGroupKey: d => d.catalogGroup || d.series,
         subGroupOrder: (sgA, sgB, mk) => {
           const rankA = seriesRank(mk, sgA);
           const rankB = seriesRank(mk, sgB);
           if (rankA !== rankB) return rankA - rankB;
-          const itemA = SPEAKER_CATALOG.find(d => d.mk === mk && d.series === sgA);
-          const itemB = SPEAKER_CATALOG.find(d => d.mk === mk && d.series === sgB);
+          const itemA = SPEAKER_CATALOG.find(d => d.mk === mk && (d.catalogGroup || d.series) === sgA);
+          const itemB = SPEAKER_CATALOG.find(d => d.mk === mk && (d.catalogGroup || d.series) === sgB);
           const ia = itemA && itemA.throwCat ? THROWCAT_ORDER.indexOf(itemA.throwCat) : -1;
           const ib = itemB && itemB.throwCat ? THROWCAT_ORDER.indexOf(itemB.throwCat) : -1;
           const ra = ia === -1 ? THROWCAT_ORDER.length : ia;
@@ -44,6 +44,13 @@ function speakersGroupBy(state) {
         // 뒤로 보낸다. Soka 계열 내부는 이름순(Soka → Soka inWall)으로 자연
         // 정렬.
         sortWithinGroup: (a, b) => {
+          const productRankA = productRank(a.mk, a.catalogGroup || a.series, a.name);
+          const productRankB = productRank(b.mk, b.catalogGroup || b.series, b.name);
+          if (productRankA !== productRankB) return productRankA - productRankB;
+          if (a.mk === "martin" && b.mk === "martin") {
+            const sourceOrder = SPEAKER_CATALOG.indexOf(a) - SPEAKER_CATALOG.indexOf(b);
+            if (sourceOrder) return sourceOrder;
+          }
           const sokaA = a.name.startsWith("Soka") ? 1 : 0;
           const sokaB = b.name.startsWith("Soka") ? 1 : 0;
           if (sokaA !== sokaB) return sokaA - sokaB;

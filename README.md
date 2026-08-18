@@ -1,9 +1,18 @@
 # Sound Systems Index
 
-L-Acoustics, d&b audiotechnik, Meyer Sound, Adamson, Cohesion의 스피커·앰프·DSP·소프트웨어·
-액세서리 사양을 검색하고 관계를 비교하는 정적 웹 앱이다. 브라우저 런타임은
-프레임워크 없는 Vanilla JavaScript ES modules이며, 서버나 데이터베이스가
-필요하지 않다.
+프로 오디오 제조사의 스피커·앰프·DSP·소프트웨어·액세서리 사양과 시스템 관계를
+학습하고, 설계도서·시방서·조달·입찰 문서의 요구조건에 맞는 제품과 시스템 후보를
+공식 근거로 탐색하기 위한 제품 정보 시스템이다. 현재 공개 기준선은 프레임워크 없는
+Vanilla JavaScript ES modules 정적 앱이며, 서비스형 데이터베이스로 단계적으로
+전환한다. 제품 목적과 평가 경계는 [제품 비전](docs/PRODUCT_VISION.md)에 있다.
+
+현재 다루는 제조사 목록의 단일 원본은
+[`public/js/core/manufacturers.js`](public/js/core/manufacturers.js)의
+`MANUFACTURER_ORDER`다. 제품 수와 조사 현황은
+[`config/speaker-research.json`](config/speaker-research.json)과
+[`config/data-governance.json`](config/data-governance.json)이 관리한다. 변동 수치를
+문서에 복제하지 않는 이유는 [ADR-0003](docs/adr/0003-baseline-json-source-of-truth.md)에
+있다.
 
 배포 전에는 빌드 단계가 있다. 이 단계는 소스를 번들링·변환·축소하지 않고,
 `index.html`의 스크립트 엔트리에서 도달 가능한 모듈과 허용된 정적 자산만
@@ -11,7 +20,9 @@ L-Acoustics, d&b audiotechnik, Meyer Sound, Adamson, Cohesion의 스피커·앰�
 
 ## 빠른 시작
 
-필요 환경은 Node.js `24.18 이상, 25 미만`과 npm `11.16 이상, 12 미만`이다. CI의 정확한 Node.js 버전은 [`.node-version`](./.node-version)에 고정되어 있다.
+필요한 Node.js·npm 버전은 [`package.json`](package.json)의 `engines`와
+`packageManager`가 정한다. CI가 쓰는 정확한 Node.js 버전은
+[`.node-version`](./.node-version)에 고정되어 있다.
 
 ```powershell
 npm ci
@@ -38,13 +49,23 @@ npm run preview
 | `npm run verify:dist`       | 기존 `dist/`의 경계·파일·해시·import 그래프 검사                 |
 | `npm run verify`            | lint, 형식, 타입, 전체 테스트, 반복 빌드, `dist/` 검증 통합 실행 |
 
+전체 명령의 단일 원본은 [`package.json`](package.json)의 `scripts`다. 각 게이트가
+무엇을 지키는지는 [품질 게이트](docs/quality-gates.md)에 있다.
+
 ## 구조 요약
 
 ```text
 index.html                   앱 셸, CSP, CSS/JavaScript 엔트리
-config/                      데이터·자산 거버넌스의 기계 판독 설정
-docs/                        아키텍처와 사용 안내
-raw-data/raw-specs/          제조사 원문 사양의 canonical 아카이브
+config/                      데이터·자산 거버넌스의 기계 판독 기준선
+docs/                        아키텍처, ADR, SOP, 품질 게이트, 릴리스 절차
+raw-data/
+  official-docs/             내려받은 제조사 공식 문서(Git LFS)
+  raw-assets/                가공 전 제조사 원본 미디어(Git LFS)
+  raw-specs/                 완료 레코드의 canonical 근거 노트
+  research-gaps/             공식 사양이 없어 미완료로 남긴 검토 기록
+  source-manifests/          원본 provenance(URL·수집일·SHA-256·바이트·MIME)
+  series-order/              공식 시리즈 순서 근거
+  catalog-inventory/         현행/레거시 판정과 카탈로그 대조 감사
 public/
   assets/                    배포되는 폰트와 가공 이미지
   css/                       토큰·레이아웃·컴포넌트 스타일
@@ -58,9 +79,11 @@ scripts/                     빌드·배포 검증·미리보기·자산 도구
 dist/                        생성되는 배포 artifact; 직접 편집하지 않음
 ```
 
+제품의 사용자 목표와 요구조건 매칭 범위는 [제품 비전](docs/PRODUCT_VISION.md)을,
 자세한 의존성, 데이터 흐름, URL 계약은
 [기술 아키텍처](docs/ARCHITECTURE.md)를, 쉬운 설명은
-[구조 안내](docs/ARCHITECTURE_GUIDE.md)를 참고한다.
+[구조 안내](docs/ARCHITECTURE_GUIDE.md)를, 되돌리기 어려운 구조적 결정은
+[ADR](docs/adr/)을 참고한다.
 
 ## 런타임 아키텍처
 
@@ -87,43 +110,36 @@ dist/                        생성되는 배포 artifact; 직접 편집하지 �
 
 ## 데이터와 출처
 
-데이터 변경은 구조화 데이터와 근거 문서를 함께 다룬다.
+근거 계층과 런타임 계층은 분리되어 있다. 공식 원본은 `raw-data/` 아래에 수정 없이
+보존하고, 화면이 읽는 값은 `public/js/domains/<도메인>/data/`에 구조화한다. 결정 근거는
+[ADR-0002](docs/adr/0002-source-and-runtime-layers.md)에, 실제 절차는
+[원문 수집 SOP](docs/sop/source-intake.md)에 있다.
 
-1. 제조사 원문 사양은 `raw-data/raw-specs/` 아래에 보존한다. 원본
-   PDF/DOCX가 있으면 Markdown과 같은 제품 폴더에 보관한다.
-2. 해당 도메인의 `public/js/domains/<도메인>/data/`에 구조화 데이터를
-   반영한다.
-3. 확인이 끝나지 않은 레코드는 `pending: true`를 사용한다. `pending`이
-   없으면 완료 레코드로 간주하며, 완료 레코드는 canonical 출처가 필요하다.
-4. `npm run test:data`와 `npm run verify`를 실행한다.
-
-출처 coverage, 허용된 결손, 비대칭 관계의 현재 기준은
-[`config/data-governance.json`](config/data-governance.json)이 단일 참조점이다.
-감사는 canonical Markdown의 경로와 파일명만 확인하며 PDF/DOCX 본문을
-자동 해석하지 않는다. 수동으로 적은 개수나 과거 결손 목록 대신 이 설정과
-`public/tests/provenance-audit.mjs`의 결과를 따른다.
+- 확인이 끝나지 않은 레코드는 `pending: true`를 사용한다. `pending`이 없으면 완료
+  레코드로 간주하며, 완료 레코드는 canonical 출처가 필요하다.
+- 누락 스펙을 유사 제품 값으로 추정하지 않는다.
+- 출처 coverage, 허용된 결손, 비대칭 관계의 현재 기준은
+  [`config/data-governance.json`](config/data-governance.json)이 단일 참조점이다.
+- 감사는 canonical Markdown의 경로와 파일명만 확인하며 PDF/DOCX 본문을 자동
+  해석하지 않는다.
 
 ## 이미지와 정적 자산
 
-- 제품 사진 원본 아카이브는 저장소 밖
-  `OneDrive/03.Resources/MR-Raw-Assets`에 둔다. 저장소에는 런타임에 쓰는
-  가공본만 `public/assets/img/`에 둔다.
-- 런타임 이미지는 PNG, JPEG, WebP 등 실제 확장자를 유지한다. 처리 규칙은
-  [`config/asset-policy.json`](config/asset-policy.json)과
+- 제조사 공식 원본은 저장소 안 `raw-data/raw-assets/`와 `raw-data/official-docs/`에
+  Git LFS로 보존한다. 제품 화면에서 직접 여는 동일 바이트 사본은 `public/assets/img/`에 둔다. 보관 위치의
+  단일 원본은 [`config/asset-policy.json`](config/asset-policy.json)의
+  `originalArchive`다.
+- 런타임 이미지는 PNG, JPEG, WebP 등 실제 확장자를 유지한다. 폴더·파일명 규칙은
   [`public/assets/img/README.md`](public/assets/img/README.md)를 따른다.
-- `npm run test:audit:assets`는 코드/CSS의 참조와 실제 파일을 대조하고,
-  SHA-256으로 완전 중복 baseline을 확인한다. 누락과 고아 파일은 허용하지
-  않는다.
-- 정규화는 먼저 아래처럼 변경 없는 dry-run manifest를 만든다.
-
-  ```powershell
-  python scripts/normalize_images.py dry --manifest image-normalize-plan.json
-  ```
-
-- `apply`는 검토한 동일 manifest를 `--approved-manifest`로 전달한 경우에만
-  실행된다. 알파 채널이 없거나 전체 프레임이 불투명한 이미지는 자동 적용
-  대상이 아니라 수동 검수 대상이다. 완전 중복 파일도 의미 검수 없이 자동
-  삭제하지 않으며 Git 이력 재작성은 별도 승인 범위다.
+- 대표 이미지는 제품 본체를 보여야 한다. 금지 콘텐츠와 예외 provenance 규칙은
+  [ADR-0004](docs/adr/0004-runtime-image-content-policy.md)에 있다.
+- 공개 원본 동기화와 예외 파생 검증은 dry-run → apply → verify 3단계로만 수행한다. 상세 절차는
+  [런타임 미디어 SOP](docs/sop/runtime-media.md), 육안 판정 기준은
+  [육안 검수 SOP](docs/sop/visual-review.md)를 따른다.
+- `npm run test:audit:assets`는 코드/CSS의 참조와 실제 파일을 대조하고, SHA-256으로
+  완전 중복 baseline과 원본 provenance를 확인한다. 누락과 고아 파일은 허용하지 않는다.
+- 완전 중복 파일은 의미 검수 없이 자동 삭제하지 않으며 Git 이력 재작성은 별도 승인
+  범위다.
 
 ## 빌드와 GitHub Pages
 
@@ -137,13 +153,17 @@ dist/                        생성되는 배포 artifact; 직접 편집하지 �
 - 파일 경로·크기·SHA-256을 정렬한 `dist/asset-manifest.json` 생성
 - 같은 입력을 두 번 빌드했을 때 동일 manifest가 나오는지 테스트
 
+배포 경계를 이렇게 정한 근거는
+[ADR-0001](docs/adr/0001-static-deployment-boundary.md)에 있다.
+
 [`CI and Pages`](.github/workflows/ci-pages.yml)는 pull request와 push에서
 검증을 실행한다. `main` push가 통과하면 오직 `dist/`만 Pages artifact로
 업로드하고 GitHub Pages에 배포한다. 저장소의 Pages 소스 설정도
 **GitHub Actions**로 선택되어 있어야 이 워크플로가 실제 배포 경로가 된다.
-의존성 업데이트 감시는
-[`dependabot.yml`](.github/dependabot.yml)이 npm과 GitHub Actions를 대상으로
-수행한다.
+[`security.yml`](.github/workflows/security.yml)은 의존성 변경 검토와 CodeQL 분석을,
+[`dependabot.yml`](.github/dependabot.yml)은 npm과 GitHub Actions 의존성 업데이트
+감시를 담당한다. 릴리스 전 확인 순서는
+[릴리스 체크리스트](docs/release-checklist.md)에 있다.
 
 ## 코드 변경 원칙
 
@@ -161,9 +181,19 @@ dist/                        생성되는 배포 artifact; 직접 편집하지 �
 
 ## 문서 지도
 
-| 문서                                         | 역할                                 |
-| -------------------------------------------- | ------------------------------------ |
-| [README](README.md)                          | 실행, 규칙, 현재 운영 경계           |
-| [기술 아키텍처](docs/ARCHITECTURE.md)        | 모듈·라우팅·빌드·데이터 설계 상세    |
-| [쉬운 구조 안내](docs/ARCHITECTURE_GUIDE.md) | 비개발자용 구조와 작업 흐름          |
-| [CLAUDE.md](CLAUDE.md)                       | 저장소 작업 시 지켜야 할 핵심 불변식 |
+| 문서                                            | 역할                                  |
+| ----------------------------------------------- | ------------------------------------- |
+| [AGENTS.md](AGENTS.md)                          | 저장소 작업 규칙의 단일 원본          |
+| [README](README.md)                             | 실행, 규칙, 현재 운영 경계            |
+| [제품 비전](docs/PRODUCT_VISION.md)             | 학습·설계·입찰 탐색 목표와 평가 경계  |
+| [DESIGN.md](DESIGN.md)                          | 시각·상호작용 계약과 디자인 토큰      |
+| [기술 아키텍처](docs/ARCHITECTURE.md)           | 모듈·라우팅·빌드·데이터 설계 상세     |
+| [쉬운 구조 안내](docs/ARCHITECTURE_GUIDE.md)    | 비개발자용 구조와 작업 흐름           |
+| [ADR](docs/adr/)                                | 되돌리기 어려운 구조적 결정과 그 근거 |
+| [원문 수집 SOP](docs/sop/source-intake.md)      | 공식 자료 확보부터 데이터 반영까지    |
+| [런타임 미디어 SOP](docs/sop/runtime-media.md)  | 대표 이미지 선택과 파생 파이프라인    |
+| [육안 검수 SOP](docs/sop/visual-review.md)      | 자동 검사가 못 보는 이미지 품질 판정  |
+| [브라우저 검수 SOP](docs/sop/browser-review.md) | 실제 브라우저에서의 화면·접근성 확인  |
+| [품질 게이트](docs/quality-gates.md)            | 각 검증 명령이 지키는 계약            |
+| [릴리스 체크리스트](docs/release-checklist.md)  | 배포 전 확인 순서                     |
+| [CLAUDE.md](CLAUDE.md)                          | Claude 계열 에이전트용 호환 안내      |

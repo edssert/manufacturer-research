@@ -1,0 +1,1897 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-08-18",
+  "auditType": "read-only-runtime-primary-and-view-order-audit",
+  "scope": {
+    "manufacturer": "L-Acoustics",
+    "series": [
+      "A Series",
+      "K Series"
+    ],
+    "products": 16,
+    "catalogFiles": [
+      "public/js/domains/speakers/data/la/a-series.data.js",
+      "public/js/domains/speakers/data/la/k-series.data.js"
+    ],
+    "sourceManifest": "raw-data/source-manifests/la.json",
+    "runtimeMediaManifest": "config/runtime-media-manifest.json"
+  },
+  "policy": {
+    "aSeries": "Prefer a clean official single-cabinet side view. For i installation models, prefer the official white single-cabinet view when available. Preserve Focus and Wide as distinct products and never use a combined Focus/Wide image as primary.",
+    "kSeries": "Prefer an official single-cabinet horizontal or perspective/three-quarter view. Keep arrays, rigging, rear, detail, transport, and context visuals secondary.",
+    "evidence": "Runtime candidate hashes were independently recomputed from the working-tree files. Runtime dimensions/format/alpha were independently read with sharp. The 28 unique connected raw candidate sources were also independently checked against config/runtime-media-manifest.json for hash, dimensions, format, and alpha."
+  },
+  "summary": {
+    "changePrimary": 12,
+    "keepPrimary": 4,
+    "missingRuntimeManifestConnections": 0,
+    "missingOfficialArchiveConnections": 0,
+    "uniqueRawCandidateSourcesChecked": 28,
+    "rawSourceHashMismatches": 0,
+    "rawSourceMetadataMismatches": 0
+  },
+  "invariants": {
+    "preserveDistinctProducts": [
+      "A10 Focus",
+      "A10 Wide",
+      "A10i Focus",
+      "A10i Wide",
+      "A15 Focus",
+      "A15 Wide",
+      "A15i Focus",
+      "A15i Wide"
+    ],
+    "noSharedFocusWidePrimaryRecommended": true,
+    "rawOfficialAssetsModified": false,
+    "runtimeAssetsModified": false,
+    "catalogDataModified": false
+  },
+  "products": [
+    {
+      "id": "spk-la-a10-focus",
+      "name": "A10 Focus",
+      "series": "A Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/a-series/a10-focus/01-l-acoustics-a10-focus-front.runtime.webp",
+        "sha256": "0393f5b8bd4a3ec678bea8c630df1b55205350906431e2bc7a31a0eb9b6d8ea4",
+        "bytes": 1302028,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/a-series/a10-focus/a10_focus_visuals/L-Acoustics_A10_Focus_Front.jpg",
+            "sha256": "fe21248fdc312bfe886dae2f577d0287e4dabf1149b00ccb18caf8ee4ff1a0c6",
+            "bytes": 7766180,
+            "dimensions": [
+              5000,
+              5000
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official single-cabinet side profile; matches the requested A Series side-first convention.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/a-series/a10-focus/02-l-acoustics-a10-focus-side.jpg",
+          "sha256": "40e7804c7cb29e75ff43b074c218d77a6e43300aeffe1e3c2692915847bc382c",
+          "bytes": 7404902,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/a-series/a10-focus/a10_focus_visuals/L-Acoustics_A10_Focus_Side.jpg",
+              "sha256": "40e7804c7cb29e75ff43b074c218d77a6e43300aeffe1e3c2692915847bc382c",
+              "bytes": 7404902,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/a-series/a10-focus/01-l-acoustics-a10-focus-front.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/a-series/a10-focus/02-l-acoustics-a10-focus-side.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/a-series/a10-focus/02-l-acoustics-a10-focus-side.jpg",
+            "semanticClass": "single-cabinet-side-or-perspective"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/a-series/a10-focus/01-l-acoustics-a10-focus-front.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/a10-focus.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/A10-Focus/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/A10 Focus/EN/Product Visuals/a10_focus_visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "15274899725d5aeed16f3fc100adf7dafc37a564bfedddda58de0f899a66486a",
+        "bytes": 12910153,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-a10i-focus",
+      "name": "A10i Focus",
+      "series": "A Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/a-series/a10i-focus/01-a10i-focus.runtime.webp",
+        "sha256": "fc4928c921019a545433eff2e508152560ff0deee7b662874ad6ed17c2b0da7e",
+        "bytes": 1315344,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/a-series/a10i-focus/A10i/A10i Focus.jpg",
+            "sha256": "53f1ccc7118a0364c5bb4ea9bd8c61b3cdcb77de2cf3a8e447a8a0f5cd6a7755",
+            "bytes": 7844267,
+            "dimensions": [
+              5000,
+              5000
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official white single-cabinet three-quarter product view; visually distinguishes the installation variant.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/a-series/a10i-focus/02-a10i-focus-white.jpg",
+          "sha256": "6ca54b52efcc2f65d08f702eb747bcac949e26858151734a8500cd1dda6cc070",
+          "bytes": 6507219,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/a-series/a10i-focus/A10i/A10i Focus White.jpg",
+              "sha256": "6ca54b52efcc2f65d08f702eb747bcac949e26858151734a8500cd1dda6cc070",
+              "bytes": 6507219,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/a-series/a10i-focus/01-a10i-focus.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/a-series/a10i-focus/02-a10i-focus-white.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/a-series/a10i-focus/02-a10i-focus-white.jpg",
+            "semanticClass": "single-cabinet-white"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/a-series/a10i-focus/01-a10i-focus.jpg",
+            "semanticClass": "single-cabinet-product-view"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/a-series/a10i-focus/03-a10i-vertical-line.jpg",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/a10i-focus.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/A10i-Focus/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/A10i Focus/EN/Product Visuals/A10i_Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "5e6450a16ddb283a56c9e31bacc410682ddc2fa8901b15e4e4ce9c1f0cc74349",
+        "bytes": 34313016,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-a10-wide",
+      "name": "A10 Wide",
+      "series": "A Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/a-series/a10-wide/01-l-acoustics-a10-wide-a10-focus-front.runtime.webp",
+        "sha256": "df867f8c3a2a52451cf585c0e44c10502074a5d218707de1b8b336009501b474",
+        "bytes": 2140418,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/a-series/a10-wide/a10_wide_visuals/L-Acoustics_A10_Wide_A10_Focus_Front.jpg",
+            "sha256": "c00fc6a4d5167af6dd15eca97be6fd064d9e3339042588e07a241138ef124f0a",
+            "bytes": 9109206,
+            "dimensions": [
+              5000,
+              5000
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official single-cabinet side profile; removes the current mixed Focus/Wide two-cabinet hero.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/a-series/a10-wide/03-l-acoustics-a10-wide-side.jpg",
+          "sha256": "5d22ecebb9bb042cb67b192c1767311346075370ee775c65ab1b84a78cdaadd2",
+          "bytes": 6548972,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/a-series/a10-wide/a10_wide_visuals/L-Acoustics_A10_Wide_Side.jpg",
+              "sha256": "5d22ecebb9bb042cb67b192c1767311346075370ee775c65ab1b84a78cdaadd2",
+              "bytes": 6548972,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/a-series/a10-wide/01-l-acoustics-a10-wide-a10-focus-front.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/a-series/a10-wide/03-l-acoustics-a10-wide-side.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/a-series/a10-wide/03-l-acoustics-a10-wide-side.jpg",
+            "semanticClass": "single-cabinet-side-or-perspective"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/a-series/a10-wide/02-l-acoustics-a10-wide-front.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/a-series/a10-wide/01-l-acoustics-a10-wide-a10-focus-front.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/a10-wide.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/A10-Wide/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/A10 Wide/EN/Product Visuals/a10_wide_visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "837f00ea2fef5f7f4eea6053357a33d43603be5ca64cb8c0a8c6225b585bb232",
+        "bytes": 19633415,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-a10i-wide",
+      "name": "A10i Wide",
+      "series": "A Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/a-series/a10i-wide/01-a10i-wide-radial.runtime.webp",
+        "sha256": "6d78d7b18edec3793a90328ae1377af24924bfdf472ca0c16c1e75eb36a8be4b",
+        "bytes": 1237828,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/a-series/a10i-focus/A10i/A10i Wide Radial.jpg",
+            "sha256": "ea25936986a66919affa7bed9f3062aae65f30935470fd8b529d500c10358076",
+            "bytes": 7433267,
+            "dimensions": [
+              5000,
+              5000
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official white single-cabinet three-quarter product view; replaces the current rigged radial array.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/a-series/a10i-wide/03-a10i-wide-white.jpg",
+          "sha256": "5ea18d3382eda4ea945db39360a6e0cd0ca40757745e76c737175f265f0cc46d",
+          "bytes": 5868370,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/a-series/a10i-focus/A10i/A10i Wide White.jpg",
+              "sha256": "5ea18d3382eda4ea945db39360a6e0cd0ca40757745e76c737175f265f0cc46d",
+              "bytes": 5868370,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/a-series/a10i-wide/01-a10i-wide-radial.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/a-series/a10i-wide/03-a10i-wide-white.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/a-series/a10i-wide/03-a10i-wide-white.jpg",
+            "semanticClass": "single-cabinet-white"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/a-series/a10i-wide/02-a10i-wide.jpg",
+            "semanticClass": "single-cabinet-product-view"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/a-series/a10i-wide/01-a10i-wide-radial.jpg",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/a10i-wide.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/A10i-Wide/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/A10i Wide/EN/Product Visuals/A10i_Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "5e6450a16ddb283a56c9e31bacc410682ddc2fa8901b15e4e4ce9c1f0cc74349",
+        "bytes": 34313016,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-a15-focus",
+      "name": "A15 Focus",
+      "series": "A Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/a-series/a15-focus/01-l-acoustics-a15-focus-front-test.jpg",
+        "sha256": "bc91ed1cf468b80d1af381f552e1f48792f195d8a39afbbdf33fb5c580946ddd",
+        "bytes": 813653,
+        "dimensions": [
+          1500,
+          1500
+        ],
+        "format": "jpeg",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "preserve",
+          "reason": "within-runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/a-series/a15-focus/a15_focus_visuals/L-Acoustics_A15_Focus_Front_test.jpg",
+            "sha256": "bc91ed1cf468b80d1af381f552e1f48792f195d8a39afbbdf33fb5c580946ddd",
+            "bytes": 813653,
+            "dimensions": [
+              1500,
+              1500
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "none"
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official single-cabinet side profile; replaces the front-test derivative as primary.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/a-series/a15-focus/04-l-acoustics-a15-focus-side.jpg",
+          "sha256": "cc6e2a161666f7e77739434b93f21044d6feb8bbec3c2ad7c0588e23e902785a",
+          "bytes": 6960346,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/a-series/a15-focus/a15_focus_visuals/L-Acoustics_A15_Focus_Side.jpg",
+              "sha256": "cc6e2a161666f7e77739434b93f21044d6feb8bbec3c2ad7c0588e23e902785a",
+              "bytes": 6960346,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/a-series/a15-focus/01-l-acoustics-a15-focus-front-test.jpg",
+          "new": "public/assets/img/speakers/la/official/a-series/a15-focus/04-l-acoustics-a15-focus-side.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/a-series/a15-focus/04-l-acoustics-a15-focus-side.jpg",
+            "semanticClass": "single-cabinet-side-or-perspective"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/a-series/a15-focus/02-l-acoustics-a15-focus-front.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/a-series/a15-focus/01-l-acoustics-a15-focus-front-test.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 4,
+            "path": "public/assets/img/speakers/la/official/a-series/a15-focus/03-l-acoustics-3xa15-focus-a15-wide-bumper.jpg",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/a15-focus.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/A15-Focus/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/A15 Focus/EN/Product Visuals/a15_focus_visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "12bd85bc055f15ba3ae6309726f426a55f22f1aa54e55fcd702eb669b46e3f10",
+        "bytes": 18620005,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-a15i-focus",
+      "name": "A15i Focus",
+      "series": "A Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/a-series/a15i-focus/01-a15i-focus.runtime.webp",
+        "sha256": "f57c651714ce658243066a8dcca15e41733c32a52f3450cc9c2b80bdf3cf5d58",
+        "bytes": 1396264,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/a-series/a15i-focus/A15i/A15i Focus.jpg",
+            "sha256": "fce4191ddecde0203373a8c26420274094f7d145899e40ca15d997edab4d8266",
+            "bytes": 8546671,
+            "dimensions": [
+              5000,
+              5000
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official white single-cabinet three-quarter product view; visually distinguishes the installation variant.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/a-series/a15i-focus/02-a15i-focus-white.jpg",
+          "sha256": "cc24b751ca9f89b9662ef9ce14d2cf4e502aba60da942828a9c7f8cb61517dbb",
+          "bytes": 6558348,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/a-series/a15i-focus/A15i/A15i Focus White.jpg",
+              "sha256": "cc24b751ca9f89b9662ef9ce14d2cf4e502aba60da942828a9c7f8cb61517dbb",
+              "bytes": 6558348,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/a-series/a15i-focus/01-a15i-focus.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/a-series/a15i-focus/02-a15i-focus-white.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/a-series/a15i-focus/02-a15i-focus-white.jpg",
+            "semanticClass": "single-cabinet-white"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/a-series/a15i-focus/01-a15i-focus.jpg",
+            "semanticClass": "single-cabinet-product-view"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/a-series/a15i-focus/03-a15i-vertical-line.jpg",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/a15i-focus.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/A15i-Focus/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/A15i Focus/EN/Product Visuals/A15i_Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "3f2742fc989fd25faafa4a7070572e0312212b821f13b00a2d23e36e9c121379",
+        "bytes": 37606767,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-a15-wide",
+      "name": "A15 Wide",
+      "series": "A Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/a-series/a15-wide/01-l-acoustics-a15-wide-a15-focus-front.runtime.webp",
+        "sha256": "a181ecf952f62c7be4fe59c63950122847adb711a57a740e50d33933225a331b",
+        "bytes": 1572416,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/a-series/a15-wide/a15_wide_visuals/L-Acoustics_A15_Wide_A15_Focus_Front.jpg",
+            "sha256": "c52d391a8312e98ce773dc2470366e4ecc3b86baa66065d837b5c01bb4a100b3",
+            "bytes": 5120117,
+            "dimensions": [
+              4000,
+              4000
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official single-cabinet side profile; removes the current mixed Focus/Wide two-cabinet hero.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/a-series/a15-wide/04-l-acoustics-a15-wide-side.jpg",
+          "sha256": "313ffdf78e29c078cf4a4c22271a199a17cbe42451abe98a2fae4a876b662e52",
+          "bytes": 6458733,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/a-series/a15-wide/a15_wide_visuals/L-Acoustics_A15_Wide_Side.jpg",
+              "sha256": "313ffdf78e29c078cf4a4c22271a199a17cbe42451abe98a2fae4a876b662e52",
+              "bytes": 6458733,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/a-series/a15-wide/01-l-acoustics-a15-wide-a15-focus-front.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/a-series/a15-wide/04-l-acoustics-a15-wide-side.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/a-series/a15-wide/04-l-acoustics-a15-wide-side.jpg",
+            "semanticClass": "single-cabinet-side-or-perspective"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/a-series/a15-wide/02-l-acoustics-a15-wide-front.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/a-series/a15-wide/01-l-acoustics-a15-wide-a15-focus-front.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 4,
+            "path": "public/assets/img/speakers/la/official/a-series/a15-wide/03-l-acoustics-3xa15-wide-a15-lift.jpg",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/a15-wide.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/A15-Wide/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/A15 Wide/EN/Product Visuals/a15_wide_visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "511fbdfdc0243fba91ae9b26c338fbcd1cc80f2845b06dd016b5e0f39b28bfc2",
+        "bytes": 20770102,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-a15i-wide",
+      "name": "A15i Wide",
+      "series": "A Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/a-series/a15i-wide/01-a15i-wide-radial.runtime.webp",
+        "sha256": "253e1a78f804309212159d8d379bb3ad4ff5ced2853ccffb63a65414df521585",
+        "bytes": 1317230,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/a-series/a15i-focus/A15i/A15i Wide radial.jpg",
+            "sha256": "c1aa6e30278e0f447af8a51e05dcd7ab2dcef04f8fe387d3852539f03774bc8f",
+            "bytes": 8070349,
+            "dimensions": [
+              5000,
+              5000
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official white single-cabinet three-quarter product view; replaces the current rigged radial array.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/a-series/a15i-wide/03-a15i-wide-white.jpg",
+          "sha256": "900340ed49b205f9d0314e8f3e163fadccf3a3e455b9d619787953d6693b2a3e",
+          "bytes": 6302199,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/a-series/a15i-focus/A15i/A15i Wide White.jpg",
+              "sha256": "900340ed49b205f9d0314e8f3e163fadccf3a3e455b9d619787953d6693b2a3e",
+              "bytes": 6302199,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/a-series/a15i-wide/01-a15i-wide-radial.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/a-series/a15i-wide/03-a15i-wide-white.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/a-series/a15i-wide/03-a15i-wide-white.jpg",
+            "semanticClass": "single-cabinet-white"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/a-series/a15i-wide/02-a15i-wide.jpg",
+            "semanticClass": "single-cabinet-product-view"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/a-series/a15i-wide/01-a15i-wide-radial.jpg",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/a15i-wide.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/A15i-Wide/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/A15i Wide/EN/Product Visuals/A15i_Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "3f2742fc989fd25faafa4a7070572e0312212b821f13b00a2d23e36e9c121379",
+        "bytes": 37606767,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-k1",
+      "name": "K1",
+      "series": "K Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/k-series/k1/01-3dr-k1-3-4-avant-catalogue-01.runtime.webp",
+        "sha256": "bf608bfbaedf0a8b49abbe648b29d3cf41e0261804fb5c7919de0035af2ba806",
+        "bytes": 1071782,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/k-series/k1/K1_Visuals/3DR_K1_3_4_Avant_Catalogue_01.jpg",
+            "sha256": "0ca8e0a41b0526419b92b5b65fbf7e22049169821babeb3524ca3f7abb17acf2",
+            "bytes": 2677754,
+            "dimensions": [
+              3000,
+              3000
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official single-cabinet horizontal three-quarter view is more identifiable in a wide card frame.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/k-series/k1/02-3dr-k1-3-4-horizontal-01.jpg",
+          "sha256": "c3d2d563501be0607db5a22c360a70e68f53c202440afd05a637da87cf4549b9",
+          "bytes": 7551519,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/k-series/k1/K1_Visuals/3DR_K1_3_4_Horizontal_01.jpg",
+              "sha256": "c3d2d563501be0607db5a22c360a70e68f53c202440afd05a637da87cf4549b9",
+              "bytes": 7551519,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/k-series/k1/01-3dr-k1-3-4-avant-catalogue-01.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/k-series/k1/02-3dr-k1-3-4-horizontal-01.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/k-series/k1/02-3dr-k1-3-4-horizontal-01.jpg",
+            "semanticClass": "single-cabinet-side-or-perspective"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/k-series/k1/01-3dr-k1-3-4-avant-catalogue-01.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/k-series/k1/03-3dr-8xk1-k1-bump-01.jpg",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/k1.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/K1/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/K1/EN/Product Visuals/K1_Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "35e566a23756b70ed6f2ece047c43bfff427bcef0d53df90d6b09df8862ce06f",
+        "bytes": 11808848,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-k2",
+      "name": "K2",
+      "series": "K Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/k-series/k2/01-3dr-k2-3-4-avant-catalogue-03.runtime.webp",
+        "sha256": "0345811dad5281be42cf416ccec8751e3a48090f16ea7d8e1ddde8dcb268004b",
+        "bytes": 852560,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": true,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/k-series/k2/Visuals/3DR_K2_3_4_Avant_Catalogue_03.png",
+            "sha256": "6bc425bbbd19e7c93b037bac7f4bb7c3091ed28b301290fc8eb5396766b4d33e",
+            "bytes": 9426763,
+            "dimensions": [
+              5000,
+              5000
+            ],
+            "format": "png",
+            "hasAlpha": true,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official single-cabinet perspective view is preferred over the upright catalogue angle.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/k-series/k2/02-3dr-k2-perspective-01.png",
+          "sha256": "e7dc35e1f754ff69677511173dc7792601d8d5a25eda7806c23234f35c9a1e07",
+          "bytes": 6469273,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "png",
+          "hasAlpha": true,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/k-series/k2/Visuals/3DR_K2_Perspective_01.png",
+              "sha256": "e7dc35e1f754ff69677511173dc7792601d8d5a25eda7806c23234f35c9a1e07",
+              "bytes": 6469273,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": true,
+              "format": "png",
+              "orientation": null,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/k-series/k2/01-3dr-k2-3-4-avant-catalogue-03.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/k-series/k2/02-3dr-k2-perspective-01.png"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/k-series/k2/02-3dr-k2-perspective-01.png",
+            "semanticClass": "single-cabinet-side-or-perspective"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/k-series/k2/01-3dr-k2-3-4-avant-catalogue-03.png",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/k-series/k2/03-3dr-k2-detail-catalogue-01.png",
+            "semanticClass": "detail"
+          },
+          {
+            "priority": 4,
+            "path": "public/assets/img/speakers/la/official/k-series/k2/04-3dr-12xk2-k2-bump-k2-bar-01.png",
+            "semanticClass": "array-rigging-or-system"
+          },
+          {
+            "priority": 5,
+            "path": "public/assets/img/speakers/la/official/k-series/k2/05-3dr-4xk2-k2-chariot-2xk2-jack-01.png",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/k2.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/K2/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/K2/EN/Product Visuals/Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "c5e42749cccd85d6dae4a4bdee76f69ebe3a38b1ed2738685c8da28e62b9a292",
+        "bytes": 46112295,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-k3",
+      "name": "K3",
+      "series": "K Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/k-series/k3/01-3dr-k3-3-4-front-catalogue-01.runtime.webp",
+        "sha256": "7e34df643bf5fdc71c645fa0306603f7f443ac5b86d42708ba45e2dfed1face5",
+        "bytes": 1082058,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/k-series/k3/Visuals/3DR_K3_3_4_Front_Catalogue_01.jpg",
+            "sha256": "f64994b57167a2d335deb89d9285451403142546239133d3c32c64acd17912a0",
+            "bytes": 7194431,
+            "dimensions": [
+              5000,
+              5000
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "keep",
+        "rationale": "No alternate single-cabinet horizontal/perspective visual exists in the archived official Product Visuals; keep the current three-quarter front.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/k-series/k3/01-3dr-k3-3-4-front-catalogue-01.jpg",
+          "sha256": "f64994b57167a2d335deb89d9285451403142546239133d3c32c64acd17912a0",
+          "bytes": 7194431,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/k-series/k3/Visuals/3DR_K3_3_4_Front_Catalogue_01.jpg",
+              "sha256": "f64994b57167a2d335deb89d9285451403142546239133d3c32c64acd17912a0",
+              "bytes": 7194431,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/k-series/k3/01-3dr-k3-3-4-front-catalogue-01.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/k-series/k3/01-3dr-k3-3-4-front-catalogue-01.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/k-series/k3/01-3dr-k3-3-4-front-catalogue-01.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/k-series/k3/02-3dr-12xk3-k3-bump-k3-bar-01.jpg",
+            "semanticClass": "array-rigging-or-system"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/k-series/k3/03-3dr-4xk3-2xks28-k3-tilt-01.jpg",
+            "semanticClass": "array-rigging-or-system"
+          },
+          {
+            "priority": 4,
+            "path": "public/assets/img/speakers/la/official/k-series/k3/04-3dr-8xk3-2xk3-rigbar-01.jpg",
+            "semanticClass": "array-rigging-or-system"
+          },
+          {
+            "priority": 5,
+            "path": "public/assets/img/speakers/la/official/k-series/k3/05-3dr-4xk3-k3-chariot-k3-chariotcov-k3-lid-01.jpg",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/k3.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/K3/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/K3/EN/Product Visuals/K3_Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "1d8435c0e95d7331232933310c1de6fab85b0b9df8e41a94f1f5f278361f7236",
+        "bytes": 18197360,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-k3i",
+      "name": "K3i",
+      "series": "K Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/k-series/k3i/01-3dr-k3i-3-4-avant-catalogue-01.runtime.webp",
+        "sha256": "2c16120416097bba36bc0399fc853bd561bacd91b5db6f0e11da3dd094192cea",
+        "bytes": 1176456,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/k-series/k3i/Visuals/3DR_K3i_3_4_Avant_Catalogue_01.jpg",
+            "sha256": "87b4c80650d6985ca7430bf8ca50415473556ce96435e070d33e4925e385ed54",
+            "bytes": 7676897,
+            "dimensions": [
+              5000,
+              5000
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official single-cabinet perspective view is preferred over the upright catalogue angle.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/k-series/k3i/02-3dr-k3i-perspective-01.jpg",
+          "sha256": "e2c17a12bd13e703ee7c4dec884fbb15a4a947f778ea3ea2a5d5dfd514a68c94",
+          "bytes": 4830929,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/k-series/k3i/Visuals/3DR_K3i_Perspective_01.jpg",
+              "sha256": "e2c17a12bd13e703ee7c4dec884fbb15a4a947f778ea3ea2a5d5dfd514a68c94",
+              "bytes": 4830929,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/k-series/k3i/01-3dr-k3i-3-4-avant-catalogue-01.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/k-series/k3i/02-3dr-k3i-perspective-01.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/k-series/k3i/02-3dr-k3i-perspective-01.jpg",
+            "semanticClass": "single-cabinet-side-or-perspective"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/k-series/k3i/01-3dr-k3i-3-4-avant-catalogue-01.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/k-series/k3i/03-3dr-8xk3i-70-k3i-bump-k3i-bar-01.jpg",
+            "semanticClass": "array-rigging-or-system"
+          },
+          {
+            "priority": 4,
+            "path": "public/assets/img/speakers/la/official/k-series/k3i/04-3dr-8xk3i-k3i-bump-k3i-screens-white-ral-01.jpg",
+            "semanticClass": "single-cabinet-white"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/k3i.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/K3i/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/K3i/EN/Product Visuals/K3i_Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "a6bca25f41577f6992582e806e20e2ea22bb2dcf33c4a2db9005594afc4bd1c6",
+        "bytes": 18750832,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-kara-ii",
+      "name": "Kara II",
+      "series": "K Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/k-series/kara-ii/01-3dr-kara-ii-3-4-avant-catalogue-01.runtime.webp",
+        "sha256": "66e9618184ed6eea264878a53d906b650860a38e006803a203867514a9c570bc",
+        "bytes": 1265888,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/k-series/kara-ii/Visuals/3DR_Kara_II_3_4_Avant_Catalogue_01.jpg",
+            "sha256": "77a2c795de32e6487ecff3289311329e38d0adf3c152c518f183b5e71be8c554",
+            "bytes": 2091450,
+            "dimensions": [
+              2500,
+              2500
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "keep",
+        "rationale": "Current first view is already the strongest official single-cabinet three-quarter view.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/k-series/kara-ii/01-3dr-kara-ii-3-4-avant-catalogue-01.jpg",
+          "sha256": "77a2c795de32e6487ecff3289311329e38d0adf3c152c518f183b5e71be8c554",
+          "bytes": 2091450,
+          "dimensions": [
+            2500,
+            2500
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/k-series/kara-ii/Visuals/3DR_Kara_II_3_4_Avant_Catalogue_01.jpg",
+              "sha256": "77a2c795de32e6487ecff3289311329e38d0adf3c152c518f183b5e71be8c554",
+              "bytes": 2091450,
+              "dimensions": [
+                2500,
+                2500
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/k-series/kara-ii/01-3dr-kara-ii-3-4-avant-catalogue-01.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/k-series/kara-ii/01-3dr-kara-ii-3-4-avant-catalogue-01.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/k-series/kara-ii/01-3dr-kara-ii-3-4-avant-catalogue-01.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/k-series/kara-ii/02-3dr-kara-ii-3-4-avant-catalogue-02.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/k-series/kara-ii/03-3dr-12xkara-ii-m-bump-m-bar-01.jpg",
+            "semanticClass": "array-rigging-or-system"
+          },
+          {
+            "priority": 4,
+            "path": "public/assets/img/speakers/la/official/k-series/kara-ii/04-3dr-3xsb18-9xkara-ii-01.jpg",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/kara-ii.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/KARA-II/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/KARA II/EN/Product Visuals/Kara II_Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "dfb41e147720db2ad51b866d1640ebb6775a06a120a89efd7d9e96304e172b8e",
+        "bytes": 4941517,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-kara-iii",
+      "name": "Kara IIi",
+      "series": "K Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/k-series/kara-iii/01-3dr-kara-iii-3-4-avant-catalogue-01.runtime.webp",
+        "sha256": "df3c3e69d5138c70c1c68d832992b1773638c9e8b23b23b6e13cd8208f9f918a",
+        "bytes": 1232254,
+        "dimensions": [
+          2200,
+          2200
+        ],
+        "format": "webp",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "derive",
+          "reason": "runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/k-series/kara-iii/3DR_Kara_IIi_3_4_Avant_Catalogue_01.jpg",
+            "sha256": "216afeaebf340be9417d38d33b6dc7afdedb2facdfaaae46634a1a0be40926e6",
+            "bytes": 8022968,
+            "dimensions": [
+              5000,
+              5000
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "proportional-resize-and-lossless-reencode",
+            "crop": false,
+            "backgroundChange": false,
+            "alphaChange": false,
+            "colorAdjustment": false
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "keep",
+        "rationale": "Current first view is already the strongest official single-cabinet three-quarter view.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/k-series/kara-iii/01-3dr-kara-iii-3-4-avant-catalogue-01.jpg",
+          "sha256": "216afeaebf340be9417d38d33b6dc7afdedb2facdfaaae46634a1a0be40926e6",
+          "bytes": 8022968,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/k-series/kara-iii/3DR_Kara_IIi_3_4_Avant_Catalogue_01.jpg",
+              "sha256": "216afeaebf340be9417d38d33b6dc7afdedb2facdfaaae46634a1a0be40926e6",
+              "bytes": 8022968,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/k-series/kara-iii/01-3dr-kara-iii-3-4-avant-catalogue-01.runtime.webp",
+          "new": "public/assets/img/speakers/la/official/k-series/kara-iii/01-3dr-kara-iii-3-4-avant-catalogue-01.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/k-series/kara-iii/01-3dr-kara-iii-3-4-avant-catalogue-01.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/k-series/kara-iii/02-3dr-kara-iii-3-4-avant-catalogue-ailettes-fermees-01.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/k-series/kara-iii/03-3dr-3xsb18-iii-9xkara-iii-karaiii-bump-01.jpg",
+            "semanticClass": "array-rigging-or-system"
+          },
+          {
+            "priority": 4,
+            "path": "public/assets/img/speakers/la/official/k-series/kara-iii/04-3dr-8xkara-iii-karaiii-bump-m-bari-01.jpg",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/kara-iii.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/KARA-IIi/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/KARA IIi/EN/Product Visuals/Kara IIi_Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "5923912ce6f634e759a42a317b3e4883655339e43af3923615c58a75a26a15a4",
+        "bytes": 20116945,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-kiva-ii",
+      "name": "KIVA II",
+      "series": "K Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/k-series/kiva-ii/01-l-acoustics-kivaii-front.jpg",
+        "sha256": "3f00fd2a1815ead612bfae280a63029f44c206fbad8e5bcae725859b6a2325d5",
+        "bytes": 207220,
+        "dimensions": [
+          750,
+          750
+        ],
+        "format": "jpeg",
+        "hasAlpha": false,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "preserve",
+          "reason": "within-runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/k-series/kiva-ii/L-Acoustics_KivaII_Front.jpg",
+            "sha256": "3f00fd2a1815ead612bfae280a63029f44c206fbad8e5bcae725859b6a2325d5",
+            "bytes": 207220,
+            "dimensions": [
+              750,
+              750
+            ],
+            "format": "jpeg",
+            "hasAlpha": false,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "none"
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "keep",
+        "rationale": "Current first view is the only clean official single-cabinet front/three-quarter product visual; rear, array, and architectural context remain secondary.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/k-series/kiva-ii/01-l-acoustics-kivaii-front.jpg",
+          "sha256": "3f00fd2a1815ead612bfae280a63029f44c206fbad8e5bcae725859b6a2325d5",
+          "bytes": 207220,
+          "dimensions": [
+            750,
+            750
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/k-series/kiva-ii/L-Acoustics_KivaII_Front.jpg",
+              "sha256": "3f00fd2a1815ead612bfae280a63029f44c206fbad8e5bcae725859b6a2325d5",
+              "bytes": 207220,
+              "dimensions": [
+                750,
+                750
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/k-series/kiva-ii/01-l-acoustics-kivaii-front.jpg",
+          "new": "public/assets/img/speakers/la/official/k-series/kiva-ii/01-l-acoustics-kivaii-front.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/k-series/kiva-ii/01-l-acoustics-kivaii-front.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/k-series/kiva-ii/04-l-acoustics-kivaii-rear.jpg",
+            "semanticClass": "rear"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/k-series/kiva-ii/03-l-acoustics-kivaii-6.jpg",
+            "semanticClass": "array-rigging-or-system"
+          },
+          {
+            "priority": 4,
+            "path": "public/assets/img/speakers/la/official/k-series/kiva-ii/02-kiva-ii.jpg",
+            "semanticClass": "page-or-context-image"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/kiva-ii.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/KIVA-II/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/KIVA II/EN/Product Visuals/Kiva II_Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "5c0ede44f1ade5a521cd00cbdbe78daefe6b20ca6d87f5d769afa7e44e047b34",
+        "bytes": 565405,
+        "mimeType": "application/zip"
+      }
+    },
+    {
+      "id": "spk-la-k1-sb",
+      "name": "K1-SB",
+      "series": "K Series",
+      "currentPrimary": {
+        "path": "public/assets/img/speakers/la/official/k-series/k1-sb/01-3dr-k1-sb-perspective-01-800x400-1.png",
+        "sha256": "34db6e1826a8cf143a45c2b77e17a4649e116f0cdec438ee200609e98526731d",
+        "bytes": 152618,
+        "dimensions": [
+          800,
+          400
+        ],
+        "format": "png",
+        "hasAlpha": true,
+        "runtimeManifest": {
+          "connected": true,
+          "action": "preserve",
+          "reason": "within-runtime-budget",
+          "outputHashMatchesManifest": true,
+          "source": {
+            "path": "raw-data/raw-assets/la/speakers/k-series/k1-sb/page-originals/3dr-k1-sb-perspective-01-800x400-1.png",
+            "sha256": "34db6e1826a8cf143a45c2b77e17a4649e116f0cdec438ee200609e98526731d",
+            "bytes": 152618,
+            "dimensions": [
+              800,
+              400
+            ],
+            "format": "png",
+            "hasAlpha": true,
+            "verifiedRawCopy": true
+          },
+          "transform": {
+            "type": "none"
+          }
+        }
+      },
+      "recommendation": {
+        "decision": "change",
+        "rationale": "Official high-resolution single-cabinet perspective view supersedes the 800x400 page-original crop.",
+        "recommendedPrimary": {
+          "path": "public/assets/img/speakers/la/official/k-series/k1-sb/03-3dr-k1-sb-perspective-01.jpg",
+          "sha256": "248a6c99d748b56a35d610388d9c43fb22d56c1a32702cf450283ef743149cbf",
+          "bytes": 5012668,
+          "dimensions": [
+            5000,
+            5000
+          ],
+          "format": "jpeg",
+          "hasAlpha": false,
+          "runtimeManifest": {
+            "connected": true,
+            "schemaVersion": 2,
+            "action": "preserve-original",
+            "reason": "already-byte-identical-to-raw",
+            "outputHashMatchesManifest": true,
+            "source": {
+              "path": "raw-data/raw-assets/la/speakers/k-series/k1-sb/K1-SB_Visuals/3DR_K1-SB_Perspective_01.jpg",
+              "sha256": "248a6c99d748b56a35d610388d9c43fb22d56c1a32702cf450283ef743149cbf",
+              "bytes": 5012668,
+              "dimensions": [
+                5000,
+                5000
+              ],
+              "hasAlpha": false,
+              "format": "jpeg",
+              "orientation": 1,
+              "space": "srgb",
+              "verifiedRawCopy": true
+            },
+            "transform": {
+              "type": "none",
+              "operation": "none"
+            }
+          }
+        },
+        "oldToNew": {
+          "old": "public/assets/img/speakers/la/official/k-series/k1-sb/01-3dr-k1-sb-perspective-01-800x400-1.png",
+          "new": "public/assets/img/speakers/la/official/k-series/k1-sb/03-3dr-k1-sb-perspective-01.jpg"
+        },
+        "recommendedViewOrder": [
+          {
+            "priority": 1,
+            "path": "public/assets/img/speakers/la/official/k-series/k1-sb/03-3dr-k1-sb-perspective-01.jpg",
+            "semanticClass": "single-cabinet-side-or-perspective"
+          },
+          {
+            "priority": 2,
+            "path": "public/assets/img/speakers/la/official/k-series/k1-sb/02-3dr-k1-sb-3-4-avant-catalogue-01.jpg",
+            "semanticClass": "single-cabinet-front-or-three-quarter"
+          },
+          {
+            "priority": 3,
+            "path": "public/assets/img/speakers/la/official/k-series/k1-sb/01-3dr-k1-sb-perspective-01-800x400-1.png",
+            "semanticClass": "single-cabinet-side-or-perspective"
+          },
+          {
+            "priority": 4,
+            "path": "public/assets/img/speakers/la/official/k-series/k1-sb/04-3dr-8xk1-sb-k1-bump-01.jpg",
+            "semanticClass": "array-rigging-or-system"
+          }
+        ]
+      },
+      "officialProductVisualsArchive": {
+        "connected": true,
+        "manifestPath": "raw-data/source-manifests/la.json",
+        "path": "raw-data/official-docs/la/product-visuals/k1-sb.zip",
+        "sourcePage": "https://www.l-acoustics.com/products/K1-SB/",
+        "sourceAsset": "https://prdstglaxxwe001.blob.core.windows.net/webapp-lacoustics/documentation/LOUDSPEAKERS/K1-SB/EN/Product Visuals/K1-SB_Visuals.zip",
+        "retrievedAt": "2026-08-18",
+        "sha256": "0fe45ec1dc87e91211efb0da09911b6d4de51c14fce825d0602210228eed2337",
+        "bytes": 10498600,
+        "mimeType": "application/zip"
+      }
+    }
+  ]
+}

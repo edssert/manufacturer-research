@@ -1,4 +1,64 @@
-export const JBL_SPEAKERS = [
+const JBL_CATALOG_GROUP_BY_SERIES = new Map([
+  ["VTX Series A Series", "VTX Touring Systems"],
+  ["VTX Series V Series", "VTX Touring Systems"],
+  ["VTX Series F Series", "VTX Touring Systems"],
+  ["VTX M Series", "VTX Touring Systems"],
+  ["VTX Series B Series", "VTX Touring Systems"],
+  ["VTX Subwoofer Series", "VTX Touring Systems"],
+  ["SRX900 Series", "SRX Touring Systems"],
+  ["SRX800 Series Powered", "SRX Touring Systems"],
+  ["SRX800 Series Passive", "SRX Touring Systems"],
+  ["VLA Series Large Format", "VLA & VRX Line Arrays"],
+  ["VLA Series Compact", "VLA & VRX Line Arrays"],
+  ["VRX900 Series", "VLA & VRX Line Arrays"],
+  ["PRX900 Series", "Portable Powered Systems"],
+  ["EON700 Series", "Portable Powered Systems"],
+  ["EON ONE Series", "Portable Powered Systems"],
+  ["IRX ONE", "Portable Powered Systems"],
+  ["IRX Series", "Portable Powered Systems"],
+  ["Installable Portable PA Speakers", "Portable Powered Systems"],
+  ["PRX400 Series Passive", "Portable Passive Systems"],
+  ["JRX200 Series", "Portable Passive Systems"],
+  ["PD500 Series Hornloaded Coaxial", "Installed High-Output Systems"],
+  ["PD6000 Series Medium-Format", "Installed High-Output Systems"],
+  ["PD700i Series Large-Format", "Installed High-Output Systems"],
+  ["AE Series Entry Level", "Installed High-Output Systems"],
+  ["AE Series Compact", "Installed High-Output Systems"],
+  ["AWC Compact & AW Series", "Installed High-Output Systems"],
+  ["ASB6000", "Installed High-Output Systems"],
+  ["ASB7000", "Installed High-Output Systems"],
+  ["CBT Series Passive Controlled-Coverage Columns", "Installed Columns & Distributed"],
+  ["COL Slim Column", "Installed Columns & Distributed"],
+  ["Intellivox ADC Digital Directivity Columns", "Installed Columns & Distributed"],
+  ["Control 60 Series Pendant Speakers", "Installed Columns & Distributed"],
+  ["Commercial Soundbars", "Installed Columns & Distributed"],
+  ["SLP Sleek Low-Profile Speakers", "Installed Columns & Distributed"],
+  ["Control CRV Architectural Speaker", "Installed Columns & Distributed"],
+  ["LCT Lay-In Ceiling-Tile Speakers", "Installed Ceiling Systems"],
+  ["CSS Commercial Series Ceiling Speakers", "Installed Ceiling Systems"],
+  ["CSS Commercial Series Ceiling Speakers-cn", "Installed Ceiling Systems"],
+  ["Control 10 Series Small Format Ceiling", "Installed Ceiling Systems"],
+  ["Control 20 Series Small Format Ceiling", "Installed Ceiling Systems"],
+  ["Control 40 Series Constant-Directivity Ceiling", "Installed Ceiling Systems"],
+  ["Control 200 Series Medium-Format Ceiling Speakers", "Installed Ceiling Systems"],
+  ["Control 300 Series Large-Format Ceiling Speakers", "Installed Ceiling Systems"],
+  ["Control 400 Enhanced Coverage Series Ceiling", "Installed Ceiling Systems"],
+  ["Control 400 Standard Coverage Series Ceiling", "Installed Ceiling Systems"],
+  ["Control 400 Premium Coverage Series Ceiling", "Installed Ceiling Systems"],
+  ["8100 Series Ceiling with Stylized Grille", "Installed Ceiling Systems"],
+  ["Surface Mount Speakers", "Installed Surface & Architectural"],
+  ["Control Contractor 20 Series Surface-Mount Speakers", "Installed Surface & Architectural"],
+  ["Control Contractor 100 Series In-Wall Speakers", "Installed Surface & Architectural"],
+  ["Control 50 Series Subwoofer/Satellite Speakers", "Installed Surface & Architectural"],
+  ["Control 2P Powered Speaker", "Installed Surface & Architectural"],
+  ["Control 5 Speaker", "Installed Surface & Architectural"],
+  ["GSB Garden In-Ground Subwoofers", "Landscape & Paging"],
+  ["GSF Garden Full-Range Speakers", "Landscape & Paging"],
+  ["Control 80 Series Landscape Speakers", "Landscape & Paging"],
+  ["CSS-H Paging Horns", "Landscape & Paging"],
+]);
+
+const JBL_SPEAKER_RECORDS = [
   {
     "id": "spk-jbl-lct-81c-t",
     "mfr": "JBL Professional",
@@ -136,11 +196,11 @@ export const JBL_SPEAKERS = [
     "dims": "305mm Diameter x 259mm Diameter Depth (12.0 in x 10.2 in)",
     "amps": [],
     "ampRaw": "External amplification",
-    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47c-t.jpg",
+    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47c-t.webp",
     "views": [
       {
         "label": "front",
-        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47c-t.jpg"
+        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47c-t.webp"
       }
     ],
     "relations": {
@@ -189,11 +249,11 @@ export const JBL_SPEAKERS = [
     "dims": "305mm Diameter x 142mm Diameter Depth (12.0 in x 5.6 in)",
     "amps": [],
     "ampRaw": "External amplification",
-    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47lp.jpg",
+    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47lp.webp",
     "views": [
       {
         "label": "front",
-        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47lp.jpg"
+        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47lp.webp"
       }
     ],
     "relations": {
@@ -242,11 +302,11 @@ export const JBL_SPEAKERS = [
     "dims": "332mm Diameter x 351mm Diameter Depth (13.1 in x 13.8 in)",
     "amps": [],
     "ampRaw": "External amplification",
-    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47hc.jpg",
+    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47hc.webp",
     "views": [
       {
         "label": "front",
-        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47hc.jpg"
+        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-47hc.webp"
       }
     ],
     "relations": {
@@ -292,11 +352,11 @@ export const JBL_SPEAKERS = [
     "dims": "332mm Diameter x 338mm Diameter Depth (13.1 in x 13.3 in)",
     "amps": [],
     "ampRaw": "External amplification",
-    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-40cs-t.jpg",
+    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-40cs-t.webp",
     "views": [
       {
         "label": "front",
-        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-40cs-t.jpg"
+        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-40cs-t.webp"
       }
     ],
     "relations": {
@@ -345,11 +405,11 @@ export const JBL_SPEAKERS = [
     "dims": "127mm Diameter x 94mm Diameter Depth (5.0 in x 4.2 in)",
     "amps": [],
     "ampRaw": "External amplification",
-    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-42c.jpg",
+    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-42c.webp",
     "views": [
       {
         "label": "front",
-        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-42c.jpg"
+        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-42c.webp"
       }
     ],
     "relations": {
@@ -403,15 +463,11 @@ export const JBL_SPEAKERS = [
     "dims": "250 mm (9.9 in) diameter, 239 mm (9.4 in) mounting depth",
     "amps": [],
     "ampRaw": "External amplification",
-    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-45c-t.webp",
+    "img": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-45c-t.jpg",
     "views": [
       {
         "label": "front",
-        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-45c-t.webp"
-      },
-      {
-        "label": "side",
-        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-45c-t-side.webp"
+        "src": "public/assets/img/speakers/jbl/control-40-series-constant-directivity-ceiling/spk-jbl-control-45c-t.jpg"
       }
     ],
     "relations": {
@@ -1337,11 +1393,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-424c-t.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-424c-t.webp"
       }
     ],
     "relations": {
@@ -1389,11 +1445,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-424lp.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-424lp.webp"
       }
     ],
     "relations": {
@@ -1441,11 +1497,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-426c-t.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-426c-t.webp"
       }
     ],
     "relations": {
@@ -1493,11 +1549,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-426lp.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-426lp.webp"
       }
     ],
     "relations": {
@@ -1545,11 +1601,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-426c-t-ls.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-426c-t-ls.webp"
       }
     ],
     "relations": {
@@ -1597,11 +1653,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-419cs-t.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-enhanced-coverage-series-ceiling/spk-jbl-control-419cs-t.webp"
       }
     ],
     "relations": {
@@ -2013,11 +2069,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-412c-t.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-412c-t.webp"
       }
     ],
     "relations": {
@@ -2065,11 +2121,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-412c-t-va.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-412c-t-va.webp"
       }
     ],
     "relations": {
@@ -2117,11 +2173,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-414c-t.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-414c-t.webp"
       }
     ],
     "relations": {
@@ -2169,11 +2225,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-414c-t-va.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-414c-t-va.webp"
       }
     ],
     "relations": {
@@ -2221,11 +2277,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-416c-t.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-416c-t.webp"
       }
     ],
     "relations": {
@@ -2273,11 +2329,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-416c-t-va.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-416c-t-va.webp"
       }
     ],
     "relations": {
@@ -2325,11 +2381,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-418c-t.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-418c-t.webp"
       }
     ],
     "relations": {
@@ -2377,11 +2433,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-414c-t-micro.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-414c-t-micro.webp"
       }
     ],
     "relations": {
@@ -2429,11 +2485,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-414ct-micro-plus.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-standard-coverage-series-ceiling/spk-jbl-control-414ct-micro-plus.webp"
       }
     ],
     "relations": {
@@ -3105,11 +3161,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-442c-t.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-442c-t.webp"
       }
     ],
     "relations": {
@@ -3157,11 +3213,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-445c-t.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-445c-t.webp"
       }
     ],
     "relations": {
@@ -3209,11 +3265,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-447c-t.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-447c-t.webp"
       }
     ],
     "relations": {
@@ -3261,11 +3317,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-447lp.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-447lp.webp"
       }
     ],
     "relations": {
@@ -3313,11 +3369,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-447hc.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-447hc.webp"
       }
     ],
     "relations": {
@@ -3365,11 +3421,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-440cs-t.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/control-400-premium-coverage-series-ceiling/spk-jbl-control-440cs-t.webp"
       }
     ],
     "relations": {
@@ -6287,11 +6343,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-a-series/spk-jbl-vtx-a6.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-a-series/spk-jbl-vtx-a6.webp"
       }
     ],
     "relations": {
@@ -6340,11 +6396,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-a-series/spk-jbl-vtx-a8.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-a-series/spk-jbl-vtx-a8.webp"
       }
     ],
     "relations": {
@@ -6395,11 +6451,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-a-series/spk-jbl-vtx-a12.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-a-series/spk-jbl-vtx-a12.webp"
       }
     ],
     "relations": {
@@ -6450,11 +6506,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-a-series/spk-jbl-vtx-a12w.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-a-series/spk-jbl-vtx-a12w.webp"
       }
     ],
     "relations": {
@@ -7065,11 +7121,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-v25-ii.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-v25-ii.webp"
       }
     ],
     "relations": {
@@ -7117,11 +7173,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-v25-ii-cs.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-v25-ii-cs.webp"
       }
     ],
     "relations": {
@@ -7169,11 +7225,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-v20.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-v20.webp"
       }
     ],
     "relations": {
@@ -7221,11 +7277,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-s25.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-s25.webp"
       }
     ],
     "relations": {
@@ -7273,11 +7329,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-s28.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-s28.webp"
       }
     ],
     "relations": {
@@ -7325,11 +7381,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-b28.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-v-series/spk-jbl-vtx-b28.webp"
       }
     ],
     "relations": {
@@ -9781,11 +9837,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f12.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f12.webp"
       }
     ],
     "relations": {
@@ -9834,11 +9890,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f15.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f15.webp"
       }
     ],
     "relations": {
@@ -9887,11 +9943,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f35-64.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f35-64.webp"
       }
     ],
     "relations": {
@@ -9942,11 +9998,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f35-95.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f35-95.webp"
       }
     ],
     "relations": {
@@ -9994,11 +10050,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f18s.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-f-series/spk-jbl-vtx-f18s.webp"
       }
     ],
     "relations": {
@@ -12280,11 +12336,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-b-series/spk-jbl-vtx-b15.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-b-series/spk-jbl-vtx-b15.webp"
       }
     ],
     "relations": {
@@ -12330,11 +12386,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-b-series/spk-jbl-vtx-b15g.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-b-series/spk-jbl-vtx-b15g.webp"
       }
     ],
     "relations": {
@@ -12380,11 +12436,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-series-b-series/spk-jbl-vtx-b18.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-series-b-series/spk-jbl-vtx-b18.webp"
       }
     ],
     "relations": {
@@ -13902,11 +13958,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "External Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-m-series/spk-jbl-vtx-m20.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-m-series/spk-jbl-vtx-m20.webp"
       }
     ],
     "relations": {
@@ -13956,11 +14012,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "External Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-m-series/spk-jbl-vtx-m22.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-m-series/spk-jbl-vtx-m22.webp"
       }
     ],
     "relations": {
@@ -14006,11 +14062,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-subwoofer-series/spk-jbl-vtx-b35.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-subwoofer-series/spk-jbl-vtx-b35.webp"
       }
     ],
     "relations": {
@@ -14056,11 +14112,11 @@ export const JBL_SPEAKERS = [
     "dims": null,
     "amps": [],
     "ampRaw": "Crown I-Tech HD",
-    "img": "public/assets/img/speakers/jbl/pending.svg",
+    "img": "public/assets/img/speakers/jbl/vtx-subwoofer-series/spk-jbl-vtx-b35g.webp",
     "views": [
       {
-        "label": "Pending",
-        "src": "public/assets/img/speakers/jbl/pending.svg"
+        "label": "front",
+        "src": "public/assets/img/speakers/jbl/vtx-subwoofer-series/spk-jbl-vtx-b35g.webp"
       }
     ],
     "relations": {
@@ -14075,3 +14131,8 @@ export const JBL_SPEAKERS = [
     "highQty": null
   }
 ];
+
+export const JBL_SPEAKERS = JBL_SPEAKER_RECORDS.map(speaker => ({
+  ...speaker,
+  catalogGroup: JBL_CATALOG_GROUP_BY_SERIES.get(speaker.series) || speaker.series,
+}));

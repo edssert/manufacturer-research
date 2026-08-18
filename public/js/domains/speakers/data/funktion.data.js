@@ -464,11 +464,11 @@ export const FUNKTION_SPEAKERS = [
     "amps": [],
     "selfPowered": false,
     "ampRaw": "External Funktion-One amplification and processing",
-    "img": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-2sh.runtime.webp",
+    "img": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-2sh.jpg",
     "views": [
       {
         "label": "Official",
-        "src": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-2sh.runtime.webp"
+        "src": "public/assets/img/speakers/funktion/evolution/spk-funktion-evo-2sh.jpg"
       }
     ],
     "relations": {
@@ -1169,11 +1169,11 @@ export const FUNKTION_SPEAKERS = [
     "amps": [],
     "selfPowered": false,
     "ampRaw": "External Funktion-One amplification and processing",
-    "img": "public/assets/img/speakers/funktion/evolution/spk-funktion-evolution-xsh.runtime.webp",
+    "img": "public/assets/img/speakers/funktion/evolution/spk-funktion-evolution-xsh.jpg",
     "views": [
       {
         "label": "Official",
-        "src": "public/assets/img/speakers/funktion/evolution/spk-funktion-evolution-xsh.runtime.webp"
+        "src": "public/assets/img/speakers/funktion/evolution/spk-funktion-evolution-xsh.jpg"
       }
     ],
     "relations": {
@@ -1329,11 +1329,11 @@ export const FUNKTION_SPEAKERS = [
     "amps": [],
     "selfPowered": false,
     "ampRaw": "External Funktion-One amplification and processing",
-    "img": "public/assets/img/speakers/funktion/compact/spk-funktion-f61.runtime.webp",
+    "img": "public/assets/img/speakers/funktion/compact/spk-funktion-f61.jpg",
     "views": [
       {
         "label": "Official",
-        "src": "public/assets/img/speakers/funktion/compact/spk-funktion-f61.runtime.webp"
+        "src": "public/assets/img/speakers/funktion/compact/spk-funktion-f61.jpg"
       }
     ],
     "relations": {
@@ -1755,11 +1755,11 @@ export const FUNKTION_SPEAKERS = [
     "amps": [],
     "selfPowered": false,
     "ampRaw": "External Funktion-One amplification and processing",
-    "img": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-ds15.runtime.webp",
+    "img": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-ds15.jpg",
     "views": [
       {
         "label": "Official",
-        "src": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-ds15.runtime.webp"
+        "src": "public/assets/img/speakers/funktion/horn-loaded-bass/spk-funktion-ds15.jpg"
       }
     ],
     "relations": {
@@ -2448,11 +2448,11 @@ export const FUNKTION_SPEAKERS = [
     "amps": [],
     "selfPowered": true,
     "ampRaw": "Integrated amplification stated by the official product page",
-    "img": "public/assets/img/speakers/funktion/bass-reflex/spk-funktion-br132.runtime.webp",
+    "img": "public/assets/img/speakers/funktion/bass-reflex/spk-funktion-br132.jpg",
     "views": [
       {
         "label": "Official",
-        "src": "public/assets/img/speakers/funktion/bass-reflex/spk-funktion-br132.runtime.webp"
+        "src": "public/assets/img/speakers/funktion/bass-reflex/spk-funktion-br132.jpg"
       }
     ],
     "relations": {

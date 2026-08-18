@@ -9,6 +9,7 @@ import { SPEAKERS } from "../public/js/domains/speakers/speakers.data.js";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const MANIFEST_ROOT = resolve(ROOT, "raw-data/source-manifests");
 const ROLES = new Set([
+  "accessory-image",
   "product-image",
   "list-image",
   "datasheet",

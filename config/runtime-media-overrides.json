@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "scope": "speaker-representative-media",
+  "reviewedAt": "2026-08-18",
+  "maskedDerivatives": [
+    {
+      "productIds": ["spk-db-ksl12", "spk-db-ksl8"],
+      "sourcePath": "raw-data/raw-assets/db/speakers/sl-series/ksl12/01-dbaudio-ksl12-loudspeaker-front-reddot-award.png",
+      "sourceSha256": "a97d3be908547bbb0f37d3f017c32e0b0f23d270391f16f3b6110886f191c19c",
+      "outputPaths": [
+        "public/assets/img/speakers/db/sl/spk-db-ksl12.png",
+        "public/assets/img/speakers/db/sl/spk-db-ksl8.png"
+      ],
+      "outputSha256": "7ea7081925c29ac811bb840da1232c8b7476b8f5d61ce5be0fe6b5e6acfa215b",
+      "dimensions": [1200, 1200],
+      "transform": {
+        "type": "local-background-mask",
+        "reason": "detached Red Dot award mark",
+        "editBoundsInclusive": [772, 46, 1193, 377],
+        "changedPixels": 11511,
+        "productPixelsChanged": false,
+        "generativeEditing": false
+      }
+    }
+  ],
+  "officialSubstitutions": [
+    {
+      "productId": "spk-martin-cdd5tx-wr",
+      "retiredRuntimePath": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd5tx-wr.jpg",
+      "rejectedSourcePath": "raw-data/raw-assets/martin/speakers/cdd-cdd-wr-series/cdd5tx-wr/01-cdd5tx-wr-loudspeaker.jpg",
+      "rejectedSha256": "37df7a4486538b791651afd3cca7b1f4c04369ec09a6b11c747035b231c75d50",
+      "runtimePath": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd5.jpg",
+      "runtimeSha256": "825eafa1557bfaa094dde18164fdecf1445766c251d7ba6f8827173709ae00c6",
+      "reason": "official manufacturer series thumbnail alias avoids transformer-tap feature callout",
+      "evidencePath": "raw-data/official-docs/martin/product-pages/loudspeakers--cdd5tx-wr.html"
+    },
+    {
+      "productId": "spk-martin-cdd6tx-wr",
+      "retiredRuntimePath": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd6tx-wr.jpg",
+      "rejectedSourcePath": "raw-data/raw-assets/martin/speakers/cdd-cdd-wr-series/cdd6tx-wr/01-cdd6-front-white.jpg",
+      "rejectedSha256": "ea9562ef9561f1e8e546c1eb9ff9822c6d87ab80bf75a78b9a5f751b704b4ce4",
+      "runtimePath": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd6.jpg",
+      "runtimeSha256": "72e29eb4db1d0135a0b16459b17d0a44f11528038e9f760c98a090cfa5bafc78",
+      "reason": "official manufacturer series thumbnail alias avoids transformer-tap feature callout",
+      "evidencePath": "raw-data/official-docs/martin/product-pages/loudspeakers--cdd6tx-wr.html"
+    }
+  ]
+}

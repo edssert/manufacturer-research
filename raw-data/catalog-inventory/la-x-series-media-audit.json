@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "manufacturerId": "la",
+  "series": "X Series",
+  "auditedAt": "2026-08-18",
+  "scope": "card representative media and gallery priority",
+  "policy": {
+    "primary": "official single-product view",
+    "installationPrimary": "official white single-product view",
+    "disallowedPrimary": [
+      "family or group image",
+      "accessory composition",
+      "callout or annotated image",
+      "rear-only view"
+    ]
+  },
+  "products": [
+    {
+      "id": "spk-la-x15-hiq",
+      "name": "X15 HiQ",
+      "representativeRawPath": "raw-data/raw-assets/la/speakers/x-series/x15-hiq/X15 HiQ/L_Acoustics_X15HiQ.jpg",
+      "officialPageHeroRawPath": "raw-data/raw-assets/la/speakers/x-series/x15-hiq/official-page/3DR_X15HiQ_Perspective_01.png",
+      "recommendedPrimary": "public/assets/img/speakers/la/official/x-series/x15-hiq/L-Acoustics_X15HiQ_Front_Black.jpg",
+      "recommendedViewOrder": [
+        "public/assets/img/speakers/la/official/x-series/x15-hiq/L-Acoustics_X15HiQ_Front_Black.jpg",
+        "public/assets/img/speakers/la/official/x-series/x15-hiq/02-l-acoustics-x15hiq-blanc.jpg",
+        "public/assets/img/speakers/la/official/x-series/x15-hiq/03-l-acoustics-x15hiq-detail.jpg"
+      ],
+      "decision": "Use the user-approved official single-cabinet view; exclude the low-quality horizontal view and shared family image from the public gallery."
+    },
+    {
+      "id": "spk-la-x12",
+      "name": "X12",
+      "representativeRawPath": "raw-data/raw-assets/la/speakers/x-series/x12/X12/L_Acoustics_X12.jpg",
+      "officialPageHeroRawPath": "raw-data/raw-assets/la/speakers/x-series/x12/official-page/3DR_X12_3_4_Avant_Catalogue_01.png",
+      "recommendedPrimary": "public/assets/img/speakers/la/official/x-series/x12/04-l-acoustics-x12.jpg",
+      "recommendedViewOrder": [
+        "public/assets/img/speakers/la/official/x-series/x12/04-l-acoustics-x12.jpg",
+        "public/assets/img/speakers/la/official/x-series/x12/02-l-acoustics-x12-blanc.jpg",
+        "public/assets/img/speakers/la/official/x-series/x12/03-l-acoustics-x12-horizontal.jpg"
+      ],
+      "decision": "Use the official single black cabinet; demote the shared family image and orientation callout."
+    },
+    {
+      "id": "spk-la-x8",
+      "name": "X8",
+      "representativeRawPath": "raw-data/raw-assets/la/speakers/x-series/x8/X8/L_Acoustics_X8.jpg",
+      "officialPageHeroRawPath": "raw-data/raw-assets/la/speakers/x-series/x8/official-page/3DR_X8_3_4_Avant_Catalogue_01.png",
+      "recommendedPrimary": "public/assets/img/speakers/la/official/x-series/x8/03-l-acoustics-x8.jpg",
+      "recommendedViewOrder": [
+        "public/assets/img/speakers/la/official/x-series/x8/03-l-acoustics-x8.jpg",
+        "public/assets/img/speakers/la/official/x-series/x8/02-l-acoustics-x8-blanc.jpg"
+      ],
+      "decision": "Use the official single black cabinet; demote the shared family image."
+    },
+    {
+      "id": "spk-la-x8i",
+      "name": "X8i",
+      "representativeRawPath": "raw-data/raw-assets/la/speakers/x-series/x8i/X8i_visuals/X8i Front White.png",
+      "officialPageHeroRawPath": "raw-data/raw-assets/la/speakers/x-series/x8i/official-page/x8i.png",
+      "recommendedPrimary": "public/assets/img/speakers/la/official/x-series/x8i/02-x8i-front-white.png",
+      "recommendedViewOrder": [
+        "public/assets/img/speakers/la/official/x-series/x8i/02-x8i-front-white.png",
+        "public/assets/img/speakers/la/official/x-series/x8i/01-x8i-front.png",
+        "public/assets/img/speakers/la/official/x-series/x8i/04-x8i-horizontal.png",
+        "public/assets/img/speakers/la/official/x-series/x8i/06-x8i-on-wall-horizontal.png",
+        "public/assets/img/speakers/la/official/x-series/x8i/07-x8i-on-wall-vertical.png"
+      ],
+      "decision": "Use the official white installation finish first."
+    },
+    {
+      "id": "spk-la-x6i",
+      "name": "X6i",
+      "representativeRawPath": "raw-data/raw-assets/la/speakers/x-series/x6i/X6i_visuals/X6i Front White.png",
+      "officialPageHeroRawPath": "raw-data/raw-assets/la/speakers/x-series/x6i/official-page/x6i.png",
+      "recommendedPrimary": "public/assets/img/speakers/la/official/x-series/x6i/02-x6i-front-white.png",
+      "recommendedViewOrder": [
+        "public/assets/img/speakers/la/official/x-series/x6i/02-x6i-front-white.png",
+        "public/assets/img/speakers/la/official/x-series/x6i/01-x6i-front.png",
+        "public/assets/img/speakers/la/official/x-series/x6i/03-x6i-ral-front.png",
+        "public/assets/img/speakers/la/official/x-series/x6i/04-x6i-horizontal.png",
+        "public/assets/img/speakers/la/official/x-series/x6i/05-x6i-ral-rear.png",
+        "public/assets/img/speakers/la/official/x-series/x6i/06-x6i-on-wall-horizontal.png",
+        "public/assets/img/speakers/la/official/x-series/x6i/07-x6i-on-wall-vertical.png"
+      ],
+      "decision": "Use the official white installation finish first."
+    },
+    {
+      "id": "spk-la-5xt",
+      "name": "5XT",
+      "representativeRawPath": "raw-data/raw-assets/la/speakers/x-series/5xt/Visuals/3DR_5XT_3_4_Avant_Catalogue_01.jpg",
+      "officialPageHeroRawPath": "raw-data/raw-assets/la/speakers/x-series/5xt/official-page/3DR_5XT_3_4_Avant_Catalogue_01.png",
+      "recommendedPrimary": "public/assets/img/speakers/la/official/x-series/5xt/01-3dr-5xt-3-4-avant-catalogue-01.jpg",
+      "recommendedViewOrder": [
+        "public/assets/img/speakers/la/official/x-series/5xt/01-3dr-5xt-3-4-avant-catalogue-01.jpg",
+        "public/assets/img/speakers/la/official/x-series/5xt/02-3dr-5xt-3-4-avant-catalogue-blanc-01.jpg",
+        "public/assets/img/speakers/la/official/x-series/5xt/03-3dr-5xt-3-4-arriere-01.jpg",
+        "public/assets/img/speakers/la/official/x-series/5xt/04-3dr-5xt-5xt-sealplate-rear-01.jpg"
+      ],
+      "decision": "Keep the existing official high-resolution single-product perspective."
+    },
+    {
+      "id": "spk-la-x4i",
+      "name": "X4i",
+      "representativeRawPath": "raw-data/raw-assets/la/speakers/x-series/x4i/Visuals/L-Acoustics_X4i_white.jpg",
+      "officialPageHeroRawPath": "raw-data/raw-assets/la/speakers/x-series/x4i/official-page/3DR_X4i_3_4_Avant_Catalogue_01.png",
+      "recommendedPrimary": "public/assets/img/speakers/la/official/x-series/x4i/05-l-acoustics-x4i-white.jpg",
+      "recommendedViewOrder": [
+        "public/assets/img/speakers/la/official/x-series/x4i/05-l-acoustics-x4i-white.jpg",
+        "public/assets/img/speakers/la/official/x-series/x4i/04-l-acoustics-x4i.jpg",
+        "public/assets/img/speakers/la/official/x-series/x4i/02-l-acoustics-x4i-rear.jpg",
+        "public/assets/img/speakers/la/official/x-series/x4i/03-l-acoustics-x4i-x-u4i.jpg"
+      ],
+      "decision": "Use the official white installation finish; exclude the family image from the public gallery."
+    },
+    {
+      "id": "spk-la-x4r",
+      "name": "X4r",
+      "representativeRawPath": "raw-data/raw-assets/la/speakers/x-series/x4r/3DR_X4r inTile_White_RAL_01.png",
+      "officialPageHeroRawPath": "raw-data/raw-assets/la/speakers/x-series/x4r/official-page/3DR_X4r-inWall_White_RAL_800x800_01.png",
+      "recommendedPrimary": "public/assets/img/speakers/la/official/x-series/x4r/02-3dr-x4r-intile-white-ral-01.png",
+      "recommendedViewOrder": [
+        "public/assets/img/speakers/la/official/x-series/x4r/02-3dr-x4r-intile-white-ral-01.png",
+        "public/assets/img/speakers/la/official/x-series/x4r/06-3dr-x4r-inwall-white-ral-01.png",
+        "public/assets/img/speakers/la/official/x-series/x4r/01-3dr-x4r-intile-program-ral-01.png",
+        "public/assets/img/speakers/la/official/x-series/x4r/03-3dr-x4i-in-ceiling-01.png",
+        "public/assets/img/speakers/la/official/x-series/x4r/04-3dr-x4i-in-wall-01.png",
+        "public/assets/img/speakers/la/official/x-series/x4r/05-3dr-x4r-inwall-program-ral-01.png"
+      ],
+      "decision": "Use the official white in-tile installation view and place the white in-wall view second."
+    }
+  ]
+}

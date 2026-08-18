@@ -283,11 +283,11 @@ export const MARTIN_SPEAKERS = [
     "dims": "(OD) 221mm x (D) Back Can 97mm, (D) Inc. Grille 115mm (OD) 8.7in x (D) Back Can 3.81in, (D) Inc. Grille 4.51in",
     "amps": [],
     "ampRaw": "VIA2004 (for low-impedance operation)",
-    "img": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-40ts.runtime.webp",
+    "img": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-40ts.jpg",
     "views": [
       {
         "label": "Official",
-        "src": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-40ts.runtime.webp"
+        "src": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-40ts.jpg"
       }
     ],
     "relations": {
@@ -333,11 +333,11 @@ export const MARTIN_SPEAKERS = [
     "dims": "(OD) 245mm x (D) Back Can 100mm, (D) Inc. Grille 118mm (OD) 9.7in x (D) Back Can 3.95in, (D) Inc. Grille 4.65in",
     "amps": [],
     "ampRaw": "VIA2004 (for low-impedance operation)",
-    "img": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-55ts.runtime.webp",
+    "img": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-55ts.jpg",
     "views": [
       {
         "label": "Official",
-        "src": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-55ts.runtime.webp"
+        "src": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-55ts.jpg"
       }
     ],
     "relations": {
@@ -383,11 +383,11 @@ export const MARTIN_SPEAKERS = [
     "dims": "(OD) 245mm x (D) Back Can 192mm, (D) Inc. Grille 209mm (OD) 9.7in x (D) Back Can 7.55in, (D) Inc. Grille 8.23in",
     "amps": [],
     "ampRaw": "VIA2004 (for low-impedance operation)",
-    "img": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-55t.runtime.webp",
+    "img": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-55t.jpg",
     "views": [
       {
         "label": "Official",
-        "src": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-55t.runtime.webp"
+        "src": "public/assets/img/speakers/martin/adorn-series/spk-martin-acs-55t.jpg"
       }
     ],
     "relations": {
@@ -1238,11 +1238,11 @@ export const MARTIN_SPEAKERS = [
     "dims": "(W) 160mm x (H) 230mm x (D) 149mm · (W) 6.3ins x (H) 9.1 ins x (D) 5.9 ins",
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd5tx-wr.jpg",
+    "img": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd5.jpg",
     "views": [
       {
         "label": "Official",
-        "src": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd5tx-wr.jpg"
+        "src": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd5.jpg"
       }
     ],
     "relations": {
@@ -1338,11 +1338,11 @@ export const MARTIN_SPEAKERS = [
     "dims": "(W) 210mm x (H) 325mm x (D) 210mm · (W) 8.3ins x (H) 12.8ins x (D) 8.3ins",
     "amps": [],
     "ampRaw": null,
-    "img": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd6tx-wr.jpg",
+    "img": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd6.jpg",
     "views": [
       {
         "label": "Official",
-        "src": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd6tx-wr.jpg"
+        "src": "public/assets/img/speakers/martin/cdd-cdd-wr-series/spk-martin-cdd6.jpg"
       }
     ],
     "relations": {

@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { lstat, mkdir, readFile, readdir, rename, rm, writeFile } from "node:fs/promises";
+import { copyFile, lstat, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { dirname, extname, isAbsolute, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -11,26 +11,51 @@ const PUBLIC_ROOT = resolve(PROJECT_ROOT, "public", "assets", "img", "speakers")
 const RAW_ROOTS = [resolve(PROJECT_ROOT, "raw-data", "raw-assets"), resolve(PROJECT_ROOT, "raw-data", "official-docs")];
 const SOURCE_MANIFEST_ROOT = resolve(PROJECT_ROOT, "raw-data", "source-manifests");
 const MANIFEST_PATH = resolve(PROJECT_ROOT, "config", "runtime-media-manifest.json");
-const SUPPORTED_BRANDS = ["ad", "co", "nexo", "martin", "jbl", "pk", "eaw", "coda", "funktion", "ev", "rcf", "la"];
-const DEFAULT_TARGET_BRANDS = ["ad", "co", "nexo", "martin", "pk", "eaw", "coda", "funktion", "ev", "rcf", "la"];
-const EXCLUDED_BRANDS = new Set(["db", "my"]);
+const OVERRIDES_PATH = resolve(PROJECT_ROOT, "config", "runtime-media-overrides.json");
+const MEDIA_SOURCES_PATH = resolve(PROJECT_ROOT, "config", "media-sources.json");
+const LA_X_MEDIA_AUDIT_PATH = resolve(PROJECT_ROOT, "raw-data", "catalog-inventory", "la-x-series-media-audit.json");
+const LA_A_K_MEDIA_AUDIT_PATH = resolve(
+  PROJECT_ROOT,
+  "raw-data",
+  "catalog-inventory",
+  "la-a-k-series-media-audit.json",
+);
+const SUPPORTED_BRANDS = [
+  "ad",
+  "co",
+  "db",
+  "nexo",
+  "martin",
+  "jbl",
+  "my",
+  "pk",
+  "eaw",
+  "coda",
+  "funktion",
+  "ev",
+  "rcf",
+  "la",
+];
+const DEFAULT_TARGET_BRANDS = [...SUPPORTED_BRANDS];
 const IMAGE_EXTENSIONS = new Set([".avif", ".jpeg", ".jpg", ".png", ".webp"]);
 const REFERENCE_PATTERN =
   /public\/assets\/img\/speakers\/([a-z0-9-]+)\/[A-Za-z0-9_./+@%() -]+?\.(?:avif|jpe?g|png|webp)/gi;
 const POLICY = Object.freeze({
-  maxDimension: 2200,
-  deriveAboveBytes: 2 * 1024 * 1024,
-  maxOutputBytes: 12 * 1024 * 1024,
-  encoder: "webp-lossless",
-  lossless: true,
-  effort: 4,
-  resizeKernel: "lanczos3",
-  preserveMetadata: false,
-  crop: false,
-  backgroundChange: false,
-  alphaChange: false,
-  colorAdjustment: false,
+  interactiveImageSurface: "official-original-bytes",
+  browserImageSource: "public-byte-identical-copy-of-raw",
+  preserveOriginalFormat: true,
+  preserveOriginalDimensions: true,
+  preserveOriginalMetadata: true,
+  transformsAllowed: false,
+  derivedInteractiveSourcesAllowed: false,
+  applyRequiresReviewedDryRun: true,
 });
+const PUBLIC_PATH_OVERRIDES = new Map([
+  [
+    "raw-data/raw-assets/la/speakers/x-series/x15-hiq/X15 HiQ/L_Acoustics_X15HiQ.jpg",
+    "public/assets/img/speakers/la/official/x-series/x15-hiq/L-Acoustics_X15HiQ_Front_Black.jpg",
+  ],
+]);
 
 function toPosix(path) {
   return path.split(sep).join("/");
@@ -91,6 +116,15 @@ async function listFiles(root, extensions = null) {
   return files;
 }
 
+async function readJson(path, fallback = null) {
+  try {
+    return JSON.parse((await readFile(path, "utf8")).replace(/^\uFEFF/, ""));
+  } catch (error) {
+    if (fallback !== null && error?.code === "ENOENT") return fallback;
+    throw error;
+  }
+}
+
 async function sha256File(path) {
   const bytes = await readFile(path);
   return { sha256: createHash("sha256").update(bytes).digest("hex"), bytes: bytes.length };
@@ -108,35 +142,14 @@ async function inspectImage(path) {
   };
 }
 
-/** @param {[number, number]} dimensions @returns {[number, number]} */
-function expectedDimensions([width, height]) {
-  const longest = Math.max(width, height);
-  if (longest <= POLICY.maxDimension) return [width, height];
-  const scale = POLICY.maxDimension / longest;
-  return [Math.round(width * scale), Math.round(height * scale)];
-}
-
-function derivativePath(sourcePath) {
-  const extension = extname(sourcePath);
-  return `${sourcePath.slice(0, -extension.length)}.runtime.webp`;
-}
-
 async function collectReferences(targetBrands) {
-  const sources = (await listFiles(DATA_ROOT, new Set([".js"]))).filter(path => {
-    const normalized = toPosix(relative(DATA_ROOT, path));
-    return (
-      !normalized.startsWith("db/") &&
-      !normalized.startsWith("my/") &&
-      normalized !== "db.data.js" &&
-      normalized !== "my.data.js"
-    );
-  });
+  const sources = await listFiles(DATA_ROOT, new Set([".js"]));
   const references = new Map();
   for (const sourceFile of sources) {
     const content = await readFile(sourceFile, "utf8");
     for (const match of content.matchAll(REFERENCE_PATTERN)) {
       const brand = match[1].toLowerCase();
-      if (!targetBrands.includes(brand) || EXCLUDED_BRANDS.has(brand)) continue;
+      if (!targetBrands.includes(brand)) continue;
       const assetPath = match[0].replaceAll("\\", "/");
       if (!references.has(assetPath)) references.set(assetPath, new Set());
       references.get(assetPath).add(toPosix(relative(PROJECT_ROOT, sourceFile)));
@@ -145,180 +158,176 @@ async function collectReferences(targetBrands) {
   return references;
 }
 
-async function rawIndex() {
-  const index = new Map();
+function addSourcePath(index, sourcePath) {
+  if (typeof sourcePath !== "string" || !IMAGE_EXTENSIONS.has(extname(sourcePath).toLowerCase())) return;
+  const absolute = resolve(PROJECT_ROOT, sourcePath);
+  if (!RAW_ROOTS.some(root => isWithin(root, absolute))) return;
+  index.add(sourcePath.replaceAll("\\", "/"));
+}
+
+async function trustedRawIndex() {
+  const trustedPaths = new Set();
   for (const manifestPath of await listFiles(SOURCE_MANIFEST_ROOT, new Set([".json"]))) {
-    const manifest = JSON.parse((await readFile(manifestPath, "utf8")).replace(/^\uFEFF/, ""));
-    for (const file of manifest.files ?? []) {
-      if (!IMAGE_EXTENSIONS.has(extname(file.path).toLowerCase()) || !file.sha256) continue;
-      const absolute = resolve(PROJECT_ROOT, file.path);
-      if (!RAW_ROOTS.some(root => isWithin(root, absolute))) continue;
-      if (!index.has(file.sha256)) index.set(file.sha256, []);
-      index.get(file.sha256).push({ path: file.path.replaceAll("\\", "/"), bytes: file.bytes });
+    const manifest = await readJson(manifestPath);
+    for (const file of manifest.files ?? []) addSourcePath(trustedPaths, file.path);
+  }
+  const overrides = await readJson(OVERRIDES_PATH, { maskedDerivatives: [] });
+  for (const record of overrides.maskedDerivatives ?? []) addSourcePath(trustedPaths, record.sourcePath);
+  const mediaSources = await readJson(MEDIA_SOURCES_PATH, { assets: [] });
+  for (const record of mediaSources.assets ?? []) addSourcePath(trustedPaths, record.originalPath);
+
+  const byHash = new Map();
+  const byPath = new Map();
+  for (const sourcePath of [...trustedPaths].sort(compareText)) {
+    const absolute = await resolveSafe(PROJECT_ROOT, sourcePath);
+    const hashed = await sha256File(absolute);
+    const source = { path: sourcePath, ...hashed };
+    byPath.set(sourcePath, source);
+    if (!byHash.has(hashed.sha256)) byHash.set(hashed.sha256, []);
+    byHash.get(hashed.sha256).push(source);
+  }
+  return { byHash, byPath };
+}
+
+function legacySourceMap(manifest) {
+  const byOutput = new Map();
+  if (manifest?.schemaVersion !== 1) return byOutput;
+  for (const record of manifest.records ?? []) {
+    if (record.source?.verifiedRawCopy) byOutput.set(record.output.path, record);
+  }
+  return byOutput;
+}
+
+async function overrideSourceMap() {
+  const overrides = await readJson(OVERRIDES_PATH, { maskedDerivatives: [] });
+  const byOutput = new Map();
+  for (const record of overrides.maskedDerivatives ?? []) {
+    for (const outputPath of record.outputPaths ?? []) {
+      byOutput.set(outputPath, {
+        sourcePath: record.sourcePath,
+        originalRuntimePath: outputPath,
+        outputSha256: record.outputSha256,
+        transform: record.transform,
+      });
     }
   }
-  for (const sources of index.values()) sources.sort((a, b) => compareText(a.path, b.path));
-  return index;
+  return byOutput;
 }
 
-async function visualFingerprint(path, width, height) {
-  const resized = sharp(path, { failOn: "error", limitInputPixels: false })
-    .toColourspace("srgb")
-    .resize({ width, height, fit: "fill", kernel: POLICY.resizeKernel })
-    .ensureAlpha();
-  const [{ data, info }, alpha] = await Promise.all([
-    resized
-      .clone()
-      .flatten({ background: { r: 255, g: 255, b: 255 } })
-      .removeAlpha()
-      .raw()
-      .toBuffer({ resolveWithObject: true }),
-    resized.clone().extractChannel("alpha").raw().toBuffer(),
-  ]);
-  return {
-    data,
-    alpha,
-    visualSha256: createHash("sha256").update(data).digest("hex"),
-    alphaSha256: createHash("sha256").update(alpha).digest("hex"),
-    dimensions: [info.width, info.height],
-    channels: info.channels,
-    comparisonSurface: "white",
-  };
-}
-
-function compareFingerprints(expected, actual) {
-  if (expected.alphaSha256 !== actual.alphaSha256) throw new Error("alpha 채널이 달라졌습니다.");
-  if (expected.data.length !== actual.data.length) throw new Error("visible 픽셀 길이가 달라졌습니다.");
-  let sumAbsolute = 0;
-  let sumSquared = 0;
-  let maxChannelDelta = 0;
-  let changedChannels = 0;
-  for (let index = 0; index < expected.data.length; index++) {
-    const delta = Math.abs(expected.data[index] - actual.data[index]);
-    sumAbsolute += delta;
-    sumSquared += delta * delta;
-    maxChannelDelta = Math.max(maxChannelDelta, delta);
-    if (delta) changedChannels++;
+function originalRuntimePath(runtimePath, sourcePath) {
+  const sourceExtension = extname(sourcePath).toLowerCase();
+  if (runtimePath.toLowerCase().endsWith(".runtime.webp")) {
+    return `${runtimePath.slice(0, -".runtime.webp".length)}${sourceExtension}`;
   }
-  const meanAbsolute = sumAbsolute / expected.data.length;
-  const meanSquared = sumSquared / expected.data.length;
-  const psnrDb = meanSquared === 0 ? null : 10 * Math.log10((255 * 255) / meanSquared);
-  if (meanAbsolute > 0.5 || (psnrDb !== null && psnrDb < 50)) {
-    throw new Error(`visible 픽셀 허용 오차 초과: MAE ${meanAbsolute}, PSNR ${psnrDb}`);
-  }
-  return {
-    comparisonSurface: "white",
-    alphaExact: true,
-    meanAbsolute: Number(meanAbsolute.toFixed(8)),
-    maxChannelDelta,
-    changedChannelRatio: Number((changedChannels / expected.data.length).toFixed(8)),
-    psnrDb: psnrDb === null ? null : Number(psnrDb.toFixed(4)),
-  };
-}
-
-async function createDerivative(sourcePath, outputPath, dimensions) {
-  const [width, height] = dimensions;
-  let pipeline = sharp(sourcePath, { failOn: "error", limitInputPixels: false }).toColourspace("srgb").resize({
-    width,
-    height,
-    fit: "fill",
-    kernel: POLICY.resizeKernel,
-  });
-  if (POLICY.preserveMetadata) pipeline = pipeline.keepMetadata();
-  await mkdir(dirname(outputPath), { recursive: true });
-  const temporary = `${outputPath}.tmp-${process.pid}`;
-  try {
-    await pipeline.webp({ lossless: true, effort: POLICY.effort }).toFile(temporary);
-    await rename(temporary, outputPath);
-  } finally {
-    await rm(temporary, { force: true });
-  }
+  const runtimeExtension = extname(runtimePath);
+  return runtimeExtension.toLowerCase() === sourceExtension
+    ? runtimePath
+    : `${runtimePath.slice(0, -runtimeExtension.length)}${sourceExtension}`;
 }
 
 async function buildPlan(targetBrands) {
   const references = await collectReferences(targetBrands);
-  const sourcesByHash = await rawIndex();
+  const trusted = await trustedRawIndex();
+  const previousManifest = await readJson(MANIFEST_PATH, {});
+  const legacyByOutput = legacySourceMap(previousManifest);
+  const overrideByOutput = await overrideSourceMap();
   const records = [];
+  const unresolved = [];
+
   for (const [runtimePath, referencedBySet] of [...references.entries()].sort(([a], [b]) => compareText(a, b))) {
     const brand = runtimePath.split("/")[4];
-    const absolute = await resolveSafe(resolve(PUBLIC_ROOT, brand), runtimePath);
-    const hashed = await sha256File(absolute);
-    const image = await inspectImage(absolute);
-    const sources = sourcesByHash.get(hashed.sha256) ?? [];
-    const shouldDerive = Math.max(...image.dimensions) > POLICY.maxDimension || hashed.bytes > POLICY.deriveAboveBytes;
-    const action = shouldDerive && sources.length ? "derive" : "preserve";
-    const outputPath = action === "derive" ? derivativePath(runtimePath) : runtimePath;
+    const runtimeAbsolute = await resolveSafe(resolve(PUBLIC_ROOT, brand), runtimePath);
+    const runtimeHash = await sha256File(runtimeAbsolute);
+    const directSource = trusted.byHash.get(runtimeHash.sha256)?.[0];
+    const legacy = legacyByOutput.get(runtimePath);
+    const override = overrideByOutput.get(runtimePath);
+    const linkedPath = legacy?.source?.path ?? override?.sourcePath;
+    const linkedSource = linkedPath ? trusted.byPath.get(linkedPath) : null;
+    const source = directSource ?? linkedSource;
+    if (!source) {
+      unresolved.push(runtimePath);
+      continue;
+    }
+
+    const sourceAbsolute = await resolveSafe(PROJECT_ROOT, source.path);
+    const [sourceImage, runtimeImage] = await Promise.all([
+      inspectImage(sourceAbsolute),
+      inspectImage(runtimeAbsolute),
+    ]);
+    const outputPath =
+      PUBLIC_PATH_OVERRIDES.get(source.path) ??
+      (directSource
+        ? runtimePath
+        : (legacy?.runtimePath ?? override?.originalRuntimePath ?? originalRuntimePath(runtimePath, source.path)));
+    if (override && runtimeHash.sha256 !== override.outputSha256) {
+      throw new Error(`문서화된 로컬 마스크 해시가 다릅니다: ${runtimePath}`);
+    }
+    const action = override
+      ? "preserve-documented-mask"
+      : outputPath === runtimePath && source.sha256 === runtimeHash.sha256
+        ? "preserve-original"
+        : "restore-original";
     records.push({
       brand,
       runtimePath,
       action,
       reason:
-        action === "derive" ? "runtime-budget" : shouldDerive ? "raw-byte-match-unavailable" : "within-runtime-budget",
-      source: {
-        path: sources[0]?.path ?? runtimePath,
-        sha256: hashed.sha256,
-        bytes: hashed.bytes,
-        ...image,
-        verifiedRawCopy: sources.length > 0,
-      },
-      output: {
-        path: outputPath,
-        sha256: action === "preserve" ? hashed.sha256 : null,
-        bytes: action === "preserve" ? hashed.bytes : null,
-        dimensions: action === "preserve" ? image.dimensions : expectedDimensions(image.dimensions),
-        hasAlpha: image.hasAlpha,
-        format: action === "preserve" ? image.format : "webp",
-        visualSha256: null,
-        sourceVisualSha256: null,
-        alphaSha256: null,
-        visualComparison: null,
-      },
-      transform:
-        action === "derive"
-          ? {
-              type: "proportional-resize-and-lossless-reencode",
-              maxDimension: POLICY.maxDimension,
-              kernel: POLICY.resizeKernel,
-              encoder: POLICY.encoder,
-              lossless: POLICY.lossless,
-              effort: POLICY.effort,
-              preserveMetadata: POLICY.preserveMetadata,
-              outputColorSpace: "srgb",
-              colorProfileConversion: image.space === "srgb" ? "none" : "icc-aware-to-srgb",
-              crop: POLICY.crop,
-              backgroundChange: POLICY.backgroundChange,
-              alphaChange: POLICY.alphaChange,
-              colorAdjustment: POLICY.colorAdjustment,
-            }
-          : { type: "none" },
+        action === "preserve-documented-mask"
+          ? "reviewed-content-removal-with-pixel-bounds"
+          : action === "preserve-original"
+            ? "already-byte-identical-to-raw"
+            : "replace-derived-interactive-source",
+      source: { ...source, ...sourceImage, verifiedRawCopy: true },
+      runtimeBefore: { path: runtimePath, ...runtimeHash, ...runtimeImage },
+      output: override
+        ? { path: outputPath, ...runtimeHash, ...runtimeImage }
+        : { path: outputPath, sha256: source.sha256, bytes: source.bytes, ...sourceImage },
+      transform: override
+        ? { ...override.transform, type: "documented-local-mask", operation: override.transform.type }
+        : { type: "none", operation: action === "preserve-original" ? "none" : "byte-for-byte-copy" },
+      retiredPath: outputPath === runtimePath ? null : runtimePath,
       referencedBy: [...referencedBySet].sort(compareText),
     });
+  }
+
+  if (unresolved.length) {
+    throw new Error(
+      `공식 raw 원본과 연결되지 않은 제품 이미지가 ${unresolved.length}개입니다:\n${unresolved.map(path => `- ${path}`).join("\n")}`,
+    );
+  }
+
+  const outputs = new Map();
+  for (const record of records) {
+    const existing = outputs.get(record.output.path);
+    if (existing && existing !== record.source.sha256) {
+      throw new Error(`서로 다른 원본이 같은 public 경로를 요구합니다: ${record.output.path}`);
+    }
+    outputs.set(record.output.path, record.source.sha256);
   }
   return records;
 }
 
 function manifestPayload(mode, records, targetBrands) {
-  const inputBytes = records.reduce((sum, record) => sum + record.source.bytes, 0);
-  const outputBytes = records.reduce((sum, record) => sum + (record.output.bytes ?? 0), 0);
+  const inputBytes = records.reduce((sum, record) => sum + record.runtimeBefore.bytes, 0);
+  const outputBytes = records.reduce((sum, record) => sum + record.output.bytes, 0);
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     mode,
     roots: {
       raw: RAW_ROOTS.map(path => toPosix(relative(PROJECT_ROOT, path))),
       runtime: toPosix(relative(PROJECT_ROOT, PUBLIC_ROOT)),
     },
-    excludedBrands: [...EXCLUDED_BRANDS].sort(compareText),
     supportedBrands: [...SUPPORTED_BRANDS],
     targetBrands: [...targetBrands],
     policy: POLICY,
     totals: {
       records: records.length,
-      derived: records.filter(record => record.action === "derive").length,
-      preserved: records.filter(record => record.action === "preserve").length,
-      unmatchedOversize: records.filter(record => record.reason === "raw-byte-match-unavailable").length,
+      restoredOriginals: records.filter(record => record.action === "restore-original").length,
+      preservedOriginals: records.filter(record => record.action === "preserve-original").length,
+      retiredDerivatives: records.filter(record => record.retiredPath).length,
       inputBytes,
       outputBytes,
-      savedBytes: inputBytes - outputBytes,
+      byteDelta: outputBytes - inputBytes,
     },
     records,
   };
@@ -330,80 +339,135 @@ async function writeJson(path, payload) {
   await writeFile(path, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
 }
 
+async function copyOriginal(sourcePath, outputPath) {
+  await mkdir(dirname(outputPath), { recursive: true });
+  await copyFile(sourcePath, outputPath);
+}
+
+async function syncMediaAuditContracts(records) {
+  const recordByOldPath = new Map(records.map(record => [record.runtimePath, record]));
+  const recordBySourcePath = new Map(records.map(record => [record.source.path, record]));
+  const mapPath = path => recordByOldPath.get(path)?.output.path ?? path;
+
+  const mediaSources = await readJson(MEDIA_SOURCES_PATH, { assets: [] });
+  for (const asset of mediaSources.assets ?? []) {
+    const record = recordBySourcePath.get(asset.originalPath);
+    if (!record) continue;
+    asset.runtimePath = record.output.path;
+    asset.sha256 = record.output.sha256;
+    asset.bytes = record.output.bytes;
+    asset.dimensions = record.output.dimensions;
+  }
+  await writeJson(MEDIA_SOURCES_PATH, mediaSources);
+
+  const xAudit = await readJson(LA_X_MEDIA_AUDIT_PATH, { products: [] });
+  for (const product of xAudit.products ?? []) {
+    product.recommendedPrimary = mapPath(product.recommendedPrimary);
+    product.recommendedViewOrder = (product.recommendedViewOrder ?? []).map(mapPath);
+  }
+  await writeJson(LA_X_MEDIA_AUDIT_PATH, xAudit);
+
+  const akAudit = await readJson(LA_A_K_MEDIA_AUDIT_PATH, { products: [] });
+  for (const product of akAudit.products ?? []) {
+    const recommendation = product.recommendation;
+    if (!recommendation) continue;
+    const previousRecommendedPath = recommendation.recommendedPrimary?.path;
+    const record = recordByOldPath.get(previousRecommendedPath);
+    if (record) {
+      recommendation.recommendedPrimary = {
+        path: record.output.path,
+        sha256: record.output.sha256,
+        bytes: record.output.bytes,
+        dimensions: record.output.dimensions,
+        format: record.output.format,
+        hasAlpha: record.output.hasAlpha,
+        runtimeManifest: {
+          connected: true,
+          schemaVersion: 2,
+          action: record.action,
+          reason: record.reason,
+          outputHashMatchesManifest: true,
+          source: record.source,
+          transform: record.transform,
+        },
+      };
+    }
+    if (recommendation.oldToNew?.new) recommendation.oldToNew.new = mapPath(recommendation.oldToNew.new);
+    for (const view of recommendation.recommendedViewOrder ?? []) view.path = mapPath(view.path);
+  }
+  await writeJson(LA_A_K_MEDIA_AUDIT_PATH, akAudit);
+}
+
 async function applyPlan(approvedPath) {
-  const approved = JSON.parse(await readFile(approvedPath, "utf8"));
-  const current = manifestPayload("dry-run", await buildPlan(approved.targetBrands), approved.targetBrands);
+  const approved = await readJson(approvedPath);
+  let current = manifestPayload("dry-run", await buildPlan(approved.targetBrands), approved.targetBrands);
   if (JSON.stringify(approved) !== JSON.stringify(current)) {
-    throw new Error("승인된 dry-run 이후 참조 또는 이미지가 바뀌었습니다. dry-run부터 다시 실행하세요.");
+    const references = await collectReferences(approved.targetBrands);
+    const approvedOutputs = new Set(approved.records.map(record => record.output.path));
+    const isInterruptedApply = [...references.keys()].every(reference => approvedOutputs.has(reference));
+    if (!isInterruptedApply) {
+      throw new Error("승인된 dry-run 이후 참조 또는 이미지가 바뀌었습니다. dry-run부터 다시 실행하세요.");
+    }
+    current = approved;
   }
 
-  for (const record of current.records.filter(item => item.action === "derive")) {
-    if (!record.source.verifiedRawCopy) throw new Error(`raw 원본이 검증되지 않았습니다: ${record.source.path}`);
-    const rawPath = await resolveSafe(PROJECT_ROOT, record.source.path);
+  for (const record of current.records.filter(item => item.action === "restore-original")) {
+    const sourcePath = await resolveSafe(PROJECT_ROOT, record.source.path);
     const outputPath = await resolveSafe(resolve(PUBLIC_ROOT, record.brand), record.output.path);
-    await createDerivative(rawPath, outputPath, record.output.dimensions);
+    await copyOriginal(sourcePath, outputPath);
     const outputHash = await sha256File(outputPath);
-    const outputImage = await inspectImage(outputPath);
-    if (outputImage.hasAlpha !== record.source.hasAlpha) throw new Error(`알파 불변식 위반: ${record.output.path}`);
-    if (JSON.stringify(outputImage.dimensions) !== JSON.stringify(record.output.dimensions)) {
-      throw new Error(`치수 불변식 위반: ${record.output.path}`);
+    if (outputHash.sha256 !== record.source.sha256 || outputHash.bytes !== record.source.bytes) {
+      throw new Error(`원본 바이트 복사 검증 실패: ${record.output.path}`);
     }
-    const expectedPixels = await visualFingerprint(rawPath, ...record.output.dimensions);
-    const actualPixels = await visualFingerprint(outputPath, ...record.output.dimensions);
-    const visualComparison = compareFingerprints(expectedPixels, actualPixels);
-    record.output.sha256 = outputHash.sha256;
-    record.output.bytes = outputHash.bytes;
-    record.output.visualSha256 = actualPixels.visualSha256;
-    record.output.sourceVisualSha256 = expectedPixels.visualSha256;
-    record.output.alphaSha256 = actualPixels.alphaSha256;
-    record.output.visualComparison = visualComparison;
   }
 
   const pathMap = new Map(
-    current.records.filter(item => item.action === "derive").map(item => [item.runtimePath, item.output.path]),
+    current.records
+      .filter(item => item.runtimePath !== item.output.path)
+      .map(item => [item.runtimePath, item.output.path]),
   );
-  const dataFiles = await listFiles(DATA_ROOT, new Set([".js"]));
-  for (const dataFile of dataFiles) {
-    const normalized = toPosix(relative(DATA_ROOT, dataFile));
-    if (
-      normalized.startsWith("db/") ||
-      normalized.startsWith("my/") ||
-      normalized === "db.data.js" ||
-      normalized === "my.data.js"
-    )
-      continue;
+  for (const dataFile of await listFiles(DATA_ROOT, new Set([".js"]))) {
     const before = await readFile(dataFile, "utf8");
     let after = before;
     for (const [oldPath, newPath] of pathMap) after = after.replaceAll(oldPath, newPath);
     if (after !== before) await writeFile(dataFile, after, "utf8");
   }
+  await syncMediaAuditContracts(current.records);
 
-  for (const record of current.records.filter(item => item.action === "derive")) {
-    const oldAbsolute = await resolveSafe(resolve(PUBLIC_ROOT, record.brand), record.runtimePath);
-    const oldHash = await sha256File(oldAbsolute);
-    if (oldHash.sha256 !== record.source.sha256)
-      throw new Error(`삭제 전 raw-copy 해시가 달라졌습니다: ${record.runtimePath}`);
-    await rm(oldAbsolute);
+  const referencesAfter = await collectReferences(current.targetBrands);
+  for (const record of current.records.filter(item => item.retiredPath)) {
+    if (referencesAfter.has(record.retiredPath)) throw new Error(`파생본 참조가 남아 있습니다: ${record.retiredPath}`);
+    const retired = await resolveSafe(resolve(PUBLIC_ROOT, record.brand), record.retiredPath);
+    let retiredHash;
+    try {
+      retiredHash = await sha256File(retired);
+    } catch (error) {
+      if (error?.code === "ENOENT") continue;
+      throw error;
+    }
+    if (retiredHash.sha256 !== record.runtimeBefore.sha256)
+      throw new Error(`retired 파일 해시 변경: ${record.retiredPath}`);
+    await rm(retired, { force: true, maxRetries: 8, retryDelay: 250 });
   }
 
   current.mode = "applied";
-  current.totals.outputBytes = current.records.reduce((sum, record) => sum + record.output.bytes, 0);
-  current.totals.savedBytes = current.totals.inputBytes - current.totals.outputBytes;
   await writeJson(MANIFEST_PATH, current);
   return current;
 }
 
 export async function verifyManifest() {
-  const manifest = JSON.parse(await readFile(MANIFEST_PATH, "utf8"));
-  if (manifest.schemaVersion !== 1 || manifest.mode !== "applied")
-    throw new Error("적용된 runtime media manifest가 아닙니다.");
+  const manifest = await readJson(MANIFEST_PATH);
+  if (manifest.schemaVersion !== 2 || manifest.mode !== "applied") {
+    throw new Error("원본 표면 계약이 적용된 runtime media manifest가 아닙니다.");
+  }
   const references = await collectReferences(manifest.targetBrands);
-  const outputPaths = new Set(manifest.records.map(record => record.output.path));
+  const byOutput = new Map(manifest.records.map(record => [record.output.path, record]));
   for (const reference of references.keys()) {
-    if (!outputPaths.has(reference)) throw new Error(`manifest에 없는 runtime 참조: ${reference}`);
+    if (!byOutput.has(reference)) throw new Error(`manifest에 없는 runtime 참조: ${reference}`);
+    if (reference.toLowerCase().endsWith(".runtime.webp"))
+      throw new Error(`파생본이 img src에 남아 있습니다: ${reference}`);
   }
   for (const record of manifest.records) {
-    if (EXCLUDED_BRANDS.has(record.brand)) throw new Error(`제외 브랜드가 manifest에 포함되었습니다: ${record.brand}`);
     const sourcePath = await resolveSafe(PROJECT_ROOT, record.source.path);
     const outputPath = await resolveSafe(resolve(PUBLIC_ROOT, record.brand), record.output.path);
     const [sourceHash, outputHash, sourceImage, outputImage] = await Promise.all([
@@ -415,29 +479,16 @@ export async function verifyManifest() {
     if (sourceHash.sha256 !== record.source.sha256 || outputHash.sha256 !== record.output.sha256) {
       throw new Error(`해시 검증 실패: ${record.output.path}`);
     }
-    if (JSON.stringify(sourceImage.dimensions) !== JSON.stringify(record.source.dimensions))
-      throw new Error(`source 치수 변경: ${record.source.path}`);
-    if (JSON.stringify(outputImage.dimensions) !== JSON.stringify(record.output.dimensions))
-      throw new Error(`output 치수 변경: ${record.output.path}`);
-    if (sourceImage.hasAlpha !== record.source.hasAlpha || outputImage.hasAlpha !== record.output.hasAlpha)
-      throw new Error(`알파 검증 실패: ${record.output.path}`);
-    if (record.action === "derive") {
-      if (!record.source.verifiedRawCopy) throw new Error(`raw 근거가 없는 파생본: ${record.output.path}`);
-      if (Math.max(...outputImage.dimensions) > POLICY.maxDimension)
-        throw new Error(`최대 치수 초과: ${record.output.path}`);
-      if (outputHash.bytes > POLICY.maxOutputBytes) throw new Error(`최대 파일 크기 초과: ${record.output.path}`);
-      const [expectedVisual, outputVisual] = await Promise.all([
-        visualFingerprint(sourcePath, ...outputImage.dimensions),
-        visualFingerprint(outputPath, ...outputImage.dimensions),
-      ]);
-      const comparison = compareFingerprints(expectedVisual, outputVisual);
-      if (
-        outputVisual.visualSha256 !== record.output.visualSha256 ||
-        expectedVisual.visualSha256 !== record.output.sourceVisualSha256 ||
-        outputVisual.alphaSha256 !== record.output.alphaSha256 ||
-        JSON.stringify(comparison) !== JSON.stringify(record.output.visualComparison)
-      )
-        throw new Error(`visible-pixel 또는 alpha 해시 검증 실패: ${record.output.path}`);
+    const documentedMask = record.transform.type === "documented-local-mask";
+    if (!documentedMask && (sourceHash.sha256 !== outputHash.sha256 || sourceHash.bytes !== outputHash.bytes)) {
+      throw new Error(`public img src가 raw 원본과 byte-identical하지 않습니다: ${record.output.path}`);
+    }
+    if (
+      JSON.stringify(sourceImage.dimensions) !== JSON.stringify(outputImage.dimensions) ||
+      sourceImage.format !== outputImage.format ||
+      sourceImage.hasAlpha !== outputImage.hasAlpha
+    ) {
+      throw new Error(`원본 이미지 형식/치수 불변식 위반: ${record.output.path}`);
     }
   }
   return manifest;
@@ -458,8 +509,8 @@ function parseArguments(argv) {
         .split(",")
         .map(value => value.trim().toLowerCase())
         .filter(Boolean);
-      const invalid = targetBrands.filter(brand => !SUPPORTED_BRANDS.includes(brand) || EXCLUDED_BRANDS.has(brand));
-      if (invalid.length) throw new Error(`지원하지 않거나 제외된 브랜드: ${invalid.join(", ")}`);
+      const invalid = targetBrands.filter(brand => !SUPPORTED_BRANDS.includes(brand));
+      if (invalid.length) throw new Error(`지원하지 않는 브랜드: ${invalid.join(", ")}`);
     } else throw new Error(`알 수 없는 인자: ${argument}`);
   }
   if (command === "apply" && !approved) throw new Error("apply에는 --approved-manifest가 필요합니다.");

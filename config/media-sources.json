@@ -20,7 +20,7 @@
       "backgroundTreatment": "official-alpha-with-floor-shadow"
     },
     {
-      "runtimePath": "public/assets/img/speakers/co/co-series/spk-co-co12.runtime.webp",
+      "runtimePath": "public/assets/img/speakers/co/co-series/spk-co-co12.webp",
       "productId": "spk-co-co12",
       "role": "primary",
       "sourceType": "official-product-page",
@@ -30,9 +30,9 @@
       "originalPath": "raw-data/raw-assets/co/speakers/co-series/co12/cohesion-co12-frontright-2k.webp",
       "originalSha256": "e1a397574201e2495823c3049c8274f52ae559f6a3b89c3b6fabac31b74aa9b7",
       "originalBytes": 152302,
-      "sha256": "90486157437dc143b9021851d1319fa809eb175e4a4c19c2f116e0abf835d0b4",
-      "bytes": 364890,
-      "dimensions": [2200, 1238],
+      "sha256": "e1a397574201e2495823c3049c8274f52ae559f6a3b89c3b6fabac31b74aa9b7",
+      "bytes": 152302,
+      "dimensions": [2560, 1440],
       "backgroundTreatment": "official-alpha-original"
     },
     {
