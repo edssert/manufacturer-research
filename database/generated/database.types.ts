@@ -465,6 +465,42 @@ export type Database = {
           },
         ]
       }
+      import_run: {
+        Row: {
+          completed_at: string | null
+          evidence_sha256: string
+          id: string
+          importer_version: number
+          result_json: Json
+          source_sha256: string
+          stable_key: string
+          started_at: string
+          status: string
+        }
+        Insert: {
+          completed_at?: string | null
+          evidence_sha256: string
+          id?: string
+          importer_version: number
+          result_json?: Json
+          source_sha256: string
+          stable_key: string
+          started_at?: string
+          status: string
+        }
+        Update: {
+          completed_at?: string | null
+          evidence_sha256?: string
+          id?: string
+          importer_version?: number
+          result_json?: Json
+          source_sha256?: string
+          stable_key?: string
+          started_at?: string
+          status?: string
+        }
+        Relationships: []
+      }
       manufacturer: {
         Row: {
           created_at: string
@@ -561,6 +597,7 @@ export type Database = {
         Row: {
           alt_text: string
           created_at: string
+          delivery_path: string
           download_filename: string
           focal_point: Json | null
           id: string
@@ -573,6 +610,7 @@ export type Database = {
         Insert: {
           alt_text: string
           created_at?: string
+          delivery_path: string
           download_filename: string
           focal_point?: Json | null
           id?: string
@@ -585,6 +623,7 @@ export type Database = {
         Update: {
           alt_text?: string
           created_at?: string
+          delivery_path?: string
           download_filename?: string
           focal_point?: Json | null
           id?: string
@@ -616,6 +655,7 @@ export type Database = {
           created_at: string
           discontinued_on: string | null
           display_name: string
+          display_order: number | null
           family_id: string
           first_published_on: string | null
           group_id: string | null
@@ -634,6 +674,7 @@ export type Database = {
           created_at?: string
           discontinued_on?: string | null
           display_name: string
+          display_order?: number | null
           family_id: string
           first_published_on?: string | null
           group_id?: string | null
@@ -652,6 +693,7 @@ export type Database = {
           created_at?: string
           discontinued_on?: string | null
           display_name?: string
+          display_order?: number | null
           family_id?: string
           first_published_on?: string | null
           group_id?: string | null

@@ -33,6 +33,8 @@
 - `20260818000200_supabase_auth.sql`은 Supabase Auth identity 경계를 적용한다.
 - `20260818000300_workflow_guards.sql`은 상태 기계, 자기 승인 차단, audit 불변성, RPC,
   UUID evidence junction을 적용한다.
+- `20260818000400_vertical_slice_support.sql`은 원본 media와 정적 delivery path를 분리하고
+  재실행 가능한 importer의 입력 hash·결과를 기록한다.
 - `npm run db:reset`은 빈 로컬 DB를 재구성한다.
 - `npm run db:test:integration`은 pgTAP 음성 테스트와 generated type drift를 검사한다.
 - `database/generated/database.types.ts`는 `catalog`과 `api`의 재현 가능한 TypeScript 계약이다.

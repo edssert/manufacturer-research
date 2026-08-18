@@ -12,6 +12,7 @@ const appliedFiles = [
   "20260818000100_catalog_core.sql",
   "20260818000200_supabase_auth.sql",
   "20260818000300_workflow_guards.sql",
+  "20260818000400_vertical_slice_support.sql",
 ];
 const appliedMigrations = await Promise.all(
   appliedFiles.map(async file => ({
@@ -75,6 +76,9 @@ assert.match(appliedCombined, /change_operation_source_locator/, "applied eviden
 assert.match(appliedCombined, /assertion_exactly_one_entity/, "applied assertion foreign-key policy");
 assert.match(appliedCombined, /service_role/, "applied service role direct-access revocation");
 assert.match(appliedCombined, /api\.create_change_request/, "applied idempotent RPC");
+assert.match(appliedCombined, /media_placement_delivery_path_relative/, "media delivery path boundary");
+assert.match(appliedCombined, /source_sha256 text NOT NULL/, "import source hash contract");
+assert.match(appliedCombined, /CREATE TABLE catalog\.import_run\s*\(/, "applied import run table");
 assert.match(
   await readFile(resolve(root, "database/generated/database.types.ts"), "utf8"),
   /change_operation_source_locator/,
