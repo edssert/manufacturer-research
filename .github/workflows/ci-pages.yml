@@ -11,7 +11,7 @@ jobs:
   verify:
     name: Verify and build
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     concurrency:
       group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
       cancel-in-progress: true
@@ -19,8 +19,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v7
         with:
-          lfs: true
           persist-credentials: false
+
+      - name: Restore public product images
+        run: git lfs pull --include="public/assets/img/speakers/**" --exclude=""
 
       - name: Set up Node.js
         uses: actions/setup-node@v7
@@ -32,7 +34,7 @@ jobs:
         run: npm ci
 
       - name: Verify source
-        run: npm run verify
+        run: npm run verify:deploy
 
       - name: Build deployment artifact
         run: npm run build

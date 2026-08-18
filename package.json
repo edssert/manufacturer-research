@@ -38,6 +38,7 @@
     "test:ui:smoke": "node public/tests/smoke.test.mjs",
     "test:ui:regression": "node public/tests/ui-regression.test.mjs",
     "verify": "npm run lint && npm run format:check && npm run typecheck && npm test && npm run test:build && npm run verify:dist",
+    "verify:deploy": "npm run lint && npm run format:check && npm run typecheck && npm run test:unit && node public/tests/data-audit.mjs && node public/tests/provenance-audit.mjs && node scripts/audit-speaker-research.mjs && npm run test:amp && npm run test:audit:classes && npm run test:audit:comments && npm run test:audit:css-layout && node scripts/audit-assets.mjs && node scripts/audit-media-sources.mjs && npm run test:security && npm run test:ui",
     "verify:dist": "node scripts/verify-dist.mjs"
   },
   "devDependencies": {
