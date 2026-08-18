@@ -13,6 +13,7 @@ npm run verify
 ├── npm run format:check    Prettier 형식 검사
 ├── npm run typecheck       TypeScript checkJs
 ├── npm test
+│   ├── test:database       SQL 설계 초안의 최소 문자열 계약; Phase 1에서 실제 DB 검증으로 교체
 │   ├── test:unit           런타임 순수 모듈과 데이터 투영 계약
 │   ├── test:data           데이터·출처 거버넌스와 원본 lock
 │   ├── test:amp            앰프 관계 무결성과 configuration 렌더링
@@ -139,3 +140,18 @@ Actions 의존성을 정기 검사하고, 업데이트도 같은 게이트를 �
 - baseline이 바뀐 이유를 확인한 뒤 해당 `config/*.json`을 근거와 함께 갱신한다.
 - 실패가 화면 계약에서 왔다면 [브라우저 검수 SOP](sop/browser-review.md)로 재현 조건을
   확인하고, 고정 가능한 계약이면 회귀 테스트로 남긴다.
+
+## 목표 서비스의 예정 게이트
+
+현재 `npm run verify`가 아래 항목을 검사하는 것처럼 오해해서는 안 된다. 서비스 전환은
+[서비스 이행 계획](SERVICE_DELIVERY_PLAN.md)의 Phase별로 다음 게이트를 추가한 뒤 진행한다.
+
+- Supabase CLI local stack의 migration reset
+- 역할별 canonical 직접 접근 거부
+- 자기 승인·불법 상태 전이·감사 변경 거부
+- legacy source → DB → projection 3자 diff
+- R2 임시 업로드·hash·MIME·승격·고아 object
+- extraction runner의 최대 표본 resource·retry·결정성
+- hosted Auth·RPC·backup restore·projection rollback
+
+구현되지 않은 예정 게이트를 통과했다고 보고하지 않는다.

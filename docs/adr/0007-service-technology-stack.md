@@ -1,8 +1,11 @@
 # ADR-0007: 서비스 기술 스택과 단계적 전환
 
-- **상태**: 채택
+- **상태**: 대체됨 — [ADR-0008](0008-supabase-minimum-service-baseline.md)
 - **날짜**: 2026-08-18
 - **관련**: [ADR-0001](0001-static-deployment-boundary.md), [ADR-0002](0002-source-and-runtime-layers.md), [ADR-0006](0006-service-catalog-and-admin-authoring.md)
+
+> 이 결정은 서비스형 전환 방향은 유지하지만 Workers·Hyperdrive를 초기 필수 경계로
+> 둔 점과 관리자 UI를 실험 없이 확정한 점 때문에 ADR-0008로 대체됐다.
 
 ## 맥락
 

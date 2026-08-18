@@ -2,7 +2,7 @@
 
 - **상태**: 채택
 - **날짜**: 2026-08-18
-- **관련**: [ADR-0001](0001-static-deployment-boundary.md), [ADR-0002](0002-source-and-runtime-layers.md), [ADR-0007](0007-service-technology-stack.md)
+- **관련**: [ADR-0001](0001-static-deployment-boundary.md), [ADR-0002](0002-source-and-runtime-layers.md), [ADR-0008](0008-supabase-minimum-service-baseline.md)
 
 ## 맥락
 
@@ -18,7 +18,7 @@ GitHub Pages는 정적 호스팅이고 Git LFS 자산을 직접 제공하지 못
 
 공개 읽기 화면은 CDN 캐시를 유지하되 데이터와 관리 기능은 서비스 계층으로 이행한다.
 
-- 구체적인 공급자와 런타임 조합은 [ADR-0007](0007-service-technology-stack.md)을 따른다.
+- 구체적인 공급자와 런타임 조합은 [ADR-0008](0008-supabase-minimum-service-baseline.md)을 따른다.
 - PostgreSQL을 우선 canonical write model로 사용해 제품·속성·관계·미디어 배치,
   프로젝트·요구조건·조건별 평가, 역할·승인·감사 로그를 트랜잭션으로 관리한다.
 - R2 또는 동등한 객체 저장소가 공식 원본 이미지와 문서를 해시 기반으로 보존·전송한다.

@@ -212,6 +212,22 @@ npm run verify:dist
 
 쓸 수 있는 명령의 전체 목록은 [`package.json`](../package.json)의 `scripts`에 있다.
 
+## 앞으로 서비스형으로 바뀌면 무엇이 달라지나요?
+
+현재 사이트는 계속 공개 비교 기준선으로 유지한다. 여러 관리자가 제품과 사진을 직접
+편집하는 기능은 정적 페이지 안에 비밀번호를 넣는 방식으로 만들지 않는다.
+
+- 제품 사실·관계·승인 기록은 Supabase PostgreSQL이 관리한다.
+- 로그인은 Supabase Auth가 담당하지만 실제 앱 역할은 DB가 다시 확인한다.
+- 원본 이미지와 문서는 Cloudflare R2에 보존한다.
+- 공개 사이트는 DB를 매번 조회하지 않고 검증된 JSON 묶음을 받아 현재 UI로 보여준다.
+- 큰 PDF·ZIP·OCR 작업은 웹 요청과 분리된 처리 프로그램이 실행한다.
+- Cloudflare Workers와 Hyperdrive는 처음부터 넣지 않고 실제 성능 문제가 확인될 때만 검토한다.
+
+이 구조는 아직 운영 중인 기능이 아니다. 목표 경계는 [서비스 설계도](SERVICE_BLUEPRINT.md),
+보안 규칙은 [서비스 보안 설계](SERVICE_SECURITY.md), 실제 진행 순서는
+[서비스 이행 계획](SERVICE_DELIVERY_PLAN.md)에 있다.
+
 ## 제품을 추가할 때의 순서
 
 1. 제조사 공식 자료 원본을 `raw-data/`의 알맞은 폴더에 보존하고 출처 기록을

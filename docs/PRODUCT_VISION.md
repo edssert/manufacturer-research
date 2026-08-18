@@ -96,7 +96,7 @@ Sound Systems Index는 제품 목록을 전시하는 사이트가 아니라, 프
 - `venue`, `venue_space`, `application_case`, `system_deployment`, `deployed_component`
 - `technology_concept`, `manufacturer_technology`, `technology_support`, `technology_evidence`
 - `organization_event`, `product_event`, `technology_event`, `event_evidence`
-- `user`, `role`, `change_request`, `approval`, `audit_log`
+- `app_user`, `role`, `change_request`, `approval`, `audit_log`
 
 요구조건 원문, 정규화한 연산자·값·단위, 적용 범위, 필수 여부와 평가 근거를 각각
 보존한다. `unknown`은 `false`와 다르며, `not applicable`과 빈 값도 구분한다.
@@ -127,9 +127,10 @@ Sound Systems Index는 제품 목록을 전시하는 사이트가 아니라, 프
 저장소에 두고 해시·권리·출처 메타데이터만 데이터베이스에서 관리한다. Git은 코드,
 스키마 migration, 검증 규칙과 재현 가능한 snapshot을 보존한다.
 
-현재 정적 앱은 폐기 대상이 아니라 새 API가 만드는 read projection과 결과를 검증하는
-기준선이다. 전환은 [ADR-0006](adr/0006-service-catalog-and-admin-authoring.md)과
-[기술 아키텍처](ARCHITECTURE.md)의 현재/목표 경계를 따라 단계적으로 진행한다.
+현재 정적 앱은 폐기 대상이 아니라 새 canonical 데이터가 만드는 read projection과 결과를
+검증하는 기준선이다. 전환은 [ADR-0008](adr/0008-supabase-minimum-service-baseline.md),
+[목표 서비스 설계도](SERVICE_BLUEPRINT.md), [서비스 이행 계획](SERVICE_DELIVERY_PLAN.md)의
+게이트를 따라 단계적으로 진행한다.
 
 ## 6. 성공 기준
 

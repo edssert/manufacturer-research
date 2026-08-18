@@ -18,7 +18,8 @@
 | [ADR-0004](0004-runtime-image-content-policy.md) | 런타임 이미지 금지 콘텐츠와 예외 provenance | 채택 | 2026-08-18 |
 | [ADR-0005](0005-official-series-order.md)      | 공식 시리즈 순서 우선            | 채택 | 2026-08-18 |
 | [ADR-0006](0006-service-catalog-and-admin-authoring.md) | 서비스형 카탈로그와 복수 관리자 편집 | 채택 | 2026-08-18 |
-| [ADR-0007](0007-service-technology-stack.md) | 서비스 기술 스택과 단계적 전환 | 채택 | 2026-08-18 |
+| [ADR-0007](0007-service-technology-stack.md) | 서비스 기술 스택과 단계적 전환 | 대체됨 | 2026-08-18 |
+| [ADR-0008](0008-supabase-minimum-service-baseline.md) | Supabase 최소 서비스 기준선과 측정 후 확장 | 채택 | 2026-08-18 |
 
 ## 작성 규칙
 

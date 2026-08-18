@@ -6,7 +6,10 @@
 
 이 시스템이 해결해야 하는 제조사별 시스템 학습과 설계·입찰 요구조건 기반 탐색은
 [제품 비전](PRODUCT_VISION.md)이 정의한다. 아래 정적 구조는 현재 기준선이며,
-복수 관리자와 요구조건 평가를 위한 목표 서비스 경계는 ADR-0006이 정의한다.
+복수 관리자와 요구조건 평가를 위한 목표 서비스 경계는
+[ADR-0008](adr/0008-supabase-minimum-service-baseline.md)과
+[목표 서비스 설계도](SERVICE_BLUEPRINT.md)가 정의한다. 현재 구현과 목표 시스템을 섞어
+설명하지 않으며, 전환 순서는 [서비스 이행 계획](SERVICE_DELIVERY_PLAN.md)을 따른다.
 
 구조를 이렇게 정한 근거는 [ADR](adr/)에, 실제 작업 절차는 [SOP](sop/)에, 검증
 명령이 지키는 계약은 [품질 게이트](quality-gates.md)에 있다. 제품 수·결손 목록 같은
@@ -457,8 +460,9 @@ SHA-256을 기록한 `asset-manifest.json`을 만든다. `verify-dist.mjs`는 �
 
 `npm run verify`는 정적 검사(lint, 형식, 타입) → 전체 테스트(`npm test`) →
 빌드 결정성(`npm run test:build`) → 최종 `dist/` 검증(`npm run verify:dist`) 순으로
-실행된다. `npm test`는 단위, 데이터, 앰프 관계, 감사, 보안, UI 하위 게이트를 이
-순서로 묶는다.
+실행된다. `npm test`는 SQL 설계 초안의 최소 문자열 계약(`test:database`) 뒤에 단위,
+데이터, 앰프 관계, 감사, 보안, UI 하위 게이트를 이 순서로 묶는다. `test:database`는 아직
+SQL을 실제 DB에 적용하지 않으며 Phase 1에서 Supabase local stack 검증으로 교체한다.
 
 각 게이트가 어떤 계약을 지키는지와 파이프라인 밖에서 실행하는 검사는
 [품질 게이트](quality-gates.md)에 정리되어 있다. 명령 정의의 단일 원본은

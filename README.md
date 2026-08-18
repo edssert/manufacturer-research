@@ -181,19 +181,22 @@ dist/                        생성되는 배포 artifact; 직접 편집하지 �
 
 ## 문서 지도
 
-| 문서                                            | 역할                                  |
-| ----------------------------------------------- | ------------------------------------- |
-| [AGENTS.md](AGENTS.md)                          | 저장소 작업 규칙의 단일 원본          |
-| [README](README.md)                             | 실행, 규칙, 현재 운영 경계            |
-| [제품 비전](docs/PRODUCT_VISION.md)             | 학습·설계·입찰 탐색 목표와 평가 경계  |
-| [DESIGN.md](DESIGN.md)                          | 시각·상호작용 계약과 디자인 토큰      |
-| [기술 아키텍처](docs/ARCHITECTURE.md)           | 모듈·라우팅·빌드·데이터 설계 상세     |
-| [쉬운 구조 안내](docs/ARCHITECTURE_GUIDE.md)    | 비개발자용 구조와 작업 흐름           |
-| [ADR](docs/adr/)                                | 되돌리기 어려운 구조적 결정과 그 근거 |
-| [원문 수집 SOP](docs/sop/source-intake.md)      | 공식 자료 확보부터 데이터 반영까지    |
-| [런타임 미디어 SOP](docs/sop/runtime-media.md)  | 대표 이미지 선택과 파생 파이프라인    |
-| [육안 검수 SOP](docs/sop/visual-review.md)      | 자동 검사가 못 보는 이미지 품질 판정  |
-| [브라우저 검수 SOP](docs/sop/browser-review.md) | 실제 브라우저에서의 화면·접근성 확인  |
-| [품질 게이트](docs/quality-gates.md)            | 각 검증 명령이 지키는 계약            |
-| [릴리스 체크리스트](docs/release-checklist.md)  | 배포 전 확인 순서                     |
-| [CLAUDE.md](CLAUDE.md)                          | Claude 계열 에이전트용 호환 안내      |
+| 문서                                              | 역할                                  |
+| ------------------------------------------------- | ------------------------------------- |
+| [AGENTS.md](AGENTS.md)                            | 저장소 작업 규칙의 단일 원본          |
+| [README](README.md)                               | 실행, 규칙, 현재 운영 경계            |
+| [제품 비전](docs/PRODUCT_VISION.md)               | 학습·설계·입찰 탐색 목표와 평가 경계  |
+| [DESIGN.md](DESIGN.md)                            | 시각·상호작용 계약과 디자인 토큰      |
+| [기술 아키텍처](docs/ARCHITECTURE.md)             | 모듈·라우팅·빌드·데이터 설계 상세     |
+| [목표 서비스 설계도](docs/SERVICE_BLUEPRINT.md)   | Supabase·R2·projection 목표 경계      |
+| [서비스 보안 설계](docs/SERVICE_SECURITY.md)      | 인증·승인·감사·미디어 위협 통제       |
+| [서비스 이행 계획](docs/SERVICE_DELIVERY_PLAN.md) | 70→90 검증 단계와 exit gate           |
+| [쉬운 구조 안내](docs/ARCHITECTURE_GUIDE.md)      | 비개발자용 구조와 작업 흐름           |
+| [ADR](docs/adr/)                                  | 되돌리기 어려운 구조적 결정과 그 근거 |
+| [원문 수집 SOP](docs/sop/source-intake.md)        | 공식 자료 확보부터 데이터 반영까지    |
+| [런타임 미디어 SOP](docs/sop/runtime-media.md)    | 대표 이미지 선택과 파생 파이프라인    |
+| [육안 검수 SOP](docs/sop/visual-review.md)        | 자동 검사가 못 보는 이미지 품질 판정  |
+| [브라우저 검수 SOP](docs/sop/browser-review.md)   | 실제 브라우저에서의 화면·접근성 확인  |
+| [품질 게이트](docs/quality-gates.md)              | 각 검증 명령이 지키는 계약            |
+| [릴리스 체크리스트](docs/release-checklist.md)    | 배포 전 확인 순서                     |
+| [CLAUDE.md](CLAUDE.md)                            | Claude 계열 에이전트용 호환 안내      |
