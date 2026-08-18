@@ -23,6 +23,15 @@
 | 5 | hosted staging | Auth, R2, RPC, backup restore | 한국 p95·보안·비용·복구 통과 | 92 |
 | 6 | pilot 운영 | 실제 관리자와 제한 제품군 | 한 달 오류·비용·생산성 목표 | 95 |
 
+### 현재 진행 상태 — 2026-08-18
+
+| Phase | 상태 | 실행 증거 |
+| --- | --- | --- |
+| 0 | 완료 | 문서 상충 0, 독립 재검수 PASS, 전체 저장소 verify 통과 |
+| 1 | 로컬 완료·CI 대기 | Supabase CLI 2.114.0, PostgreSQL 17 local reset 반복 성공, pgTAP 20개 통과, generated type hash 재현 |
+| 2 | 다음 | 대표 제품군 importer·projection vertical slice |
+| 3–6 | 대기 | 앞 phase exit gate 이후 시작 |
+
 ## 3. Phase 0 — 설계도서
 
 ### 작업

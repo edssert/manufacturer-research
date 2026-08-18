@@ -8,6 +8,18 @@ const migrations = await Promise.all(
   files.map(async file => ({ file, sql: await readFile(resolve(root, "database/migrations", file), "utf8") })),
 );
 const combined = migrations.map(({ sql }) => sql).join("\n");
+const appliedFiles = [
+  "20260818000100_catalog_core.sql",
+  "20260818000200_supabase_auth.sql",
+  "20260818000300_workflow_guards.sql",
+];
+const appliedMigrations = await Promise.all(
+  appliedFiles.map(async file => ({
+    file,
+    sql: await readFile(resolve(root, "supabase/migrations", file), "utf8"),
+  })),
+);
+const appliedCombined = appliedMigrations.map(({ sql }) => sql).join("\n");
 
 for (const { file, sql } of migrations) {
   assert.match(sql, /^BEGIN;/m, `${file}: transaction start`);
@@ -56,5 +68,19 @@ assert.match(combined, /date_precision catalog\.date_precision NOT NULL/, "timel
 assert.match(combined, /auth_subject uuid NOT NULL UNIQUE/, "Supabase UUID identity contract");
 assert.match(combined, /REFERENCES auth\.users\(id\)/, "Supabase Auth identity foreign key");
 assert.match(combined, /REVOKE ALL ON SCHEMA catalog FROM PUBLIC, anon, authenticated/, "private catalog schema");
+assert.match(appliedCombined, /change_request_legal_transition/, "applied legal transition trigger");
+assert.match(appliedCombined, /approval_separation/, "applied self-approval guard");
+assert.match(appliedCombined, /audit_log_no_truncate/, "applied audit truncate guard");
+assert.match(appliedCombined, /change_operation_source_locator/, "applied evidence junction");
+assert.match(appliedCombined, /assertion_exactly_one_entity/, "applied assertion foreign-key policy");
+assert.match(appliedCombined, /service_role/, "applied service role direct-access revocation");
+assert.match(appliedCombined, /api\.create_change_request/, "applied idempotent RPC");
+assert.match(
+  await readFile(resolve(root, "database/generated/database.types.ts"), "utf8"),
+  /change_operation_source_locator/,
+  "generated database types",
+);
 
-console.log(`database schema: PASS (${requiredTables.length} required tables, ${files.length} migrations)`);
+console.log(
+  `database schema: PASS (${requiredTables.length} required tables, ${appliedFiles.length} applied migrations)`,
+);

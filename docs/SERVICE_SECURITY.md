@@ -67,6 +67,8 @@ audit insert를 같은 transaction에서 성공시켰을 때만 가능하다. �
 - UPDATE, DELETE, TRUNCATE를 trigger와 DB grant로 차단한다.
 - canonical mutation 함수가 before/after·actor·request·timestamp·context를 자동 기록한다.
 - UI나 runner가 임의 audit payload를 작성하지 않는다.
+- canonical assertion은 product·manufacturer·relation·media의 명시적 FK 중 정확히 하나를
+  사용한다. audit와 미적용 change operation의 typed key는 적용 함수가 사전 검증한다.
 - DB owner가 수행한 비상 작업은 별도 외부 운영 로그와 incident ID를 남긴다.
 - 정기적으로 audit chain 개수·연속성·change request 연결을 검사한다.
 

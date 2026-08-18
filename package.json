@@ -11,6 +11,12 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "db:start": "supabase start",
+    "db:stop": "supabase stop",
+    "db:reset": "supabase db reset",
+    "db:test:integration": "supabase test db && npm run db:types:check",
+    "db:types": "node scripts/generate-database-types.mjs",
+    "db:types:check": "node scripts/generate-database-types.mjs --check",
     "preview": "node scripts/serve.mjs --root dist --base /manufacturer-research/ --port 4173",
     "lint": "eslint . --max-warnings=0",
     "format:check": "prettier --check package.json eslint.config.js jsconfig.json .prettierrc.json \"config/*.json\" \".github/**/*.yml\" \"public/js/core/{data-contracts,manufacturers,route-codec}.js\" \"public/js/relationships/*.js\" \"public/js/domains/*/*.detail.js\" public/js/domains/amplifiers/amplifiers.configurations.js public/js/domains/speakers/speakers.card-model.js public/js/ui/relation-navigation.js \"scripts/*.mjs\"",

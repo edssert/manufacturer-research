@@ -1,0 +1,1 @@
+-- Production catalog data is imported through reviewed change requests, not local seeds.
